@@ -1,0 +1,667 @@
+<!--@+leo-ver=4-->
+<!--@+node:@file widgetcheckboxtree.htm-->
+<!--@@language html-->
+
+<!-- This page is HEAVILY documented in LEO. For documentation for this page, see the LEO source file. 
+     This page was created from a LEO source file named "widgets.leo".
+-->
+
+<html>
+<head>
+<!--@<< head >>-->
+<!--@+node:<< head >>-->
+<title>CheckboxTree Demo</title>
+
+<!--@<< CSS >>-->
+<!--@+node:<< CSS >>-->
+<!--@@code-->
+
+<style type="text/css">
+
+BODY        {font-family:Arial,sans-serif; font-size:8pt; font-weight:100;}
+TD          {font-family:Arial,sans-serif; font-size:8pt; font-weight:100; text-transform:capitalize;}
+SELECT      {font-family:Arial,sans-serif; font-size:12px; font-weight:normal}
+OPTION      {font-family:Arial,sans-serif; font-size:12px; font-weight:normal}
+TH          {font-family:Arial,sans-serif; font-size:12px; font-weight:bold; text-align:left}
+BUTTON      {font-size:14; font-weight:bold; width:30; text-align:center}
+INPUT       {font-family:Arial; font-size:10pt;}
+.treeSelect {}
+.line1      {background-color:red; line-height:1px;}
+.spacer1    {background-color:white; line-height:4px;}
+.spacerCell {width:40}
+.topicLine  {background-color:"yellow"} // #B1CCCE}
+.nodeButton {font-family:Arial,sans-serif;font-size:16px; width=14; line-height:12px; text-align:center; cursor:hand} 
+.nodeButtonImage {cursor:hand;}
+
+</style>
+<!--@nonl-->
+<!--@-node:<< CSS >>-->
+<!--@nl-->
+
+<script>
+<!--@+others-->
+<!--@+node:Checkbox Tree Functions-->
+<!--@@language java-->
+
+// a function which serves as an associative array to hold the data
+function items() {
+}
+var myItems = new items();
+var myItemsArray = new Array();
+
+<!--@<< data >>-->
+<!--@+node:<< data >>-->
+// load the data into the associative array
+myItems["170,171"] = "INFLATION;NOTE;VARIABLE";
+myItems["168,169"] = "INFLATION;TREASURY;BOND";
+myItems["114,115,177"] = "LONG TERM;AGENCY;BOND";
+myItems["116"] = "LONG TERM;AGENCY;ZERO";
+myItems["1,39,70,75,137,138,139,172,175,211,212,213,214,215,216,217"] = "LONG TERM;CORP;BOND";
+myItems["8,174,224"] = "LONG TERM;CORP;MTN";
+myItems["173,225"] = "LONG TERM;CORP;MTN NO-EOM";
+myItems["17,30,31,32,33,34,35,36,42,43,44,45,46,47,48,49"] = "LONG TERM;EURO;BOND";
+myItems["9,14"] = "LONG TERM;TREASURY;BOND";
+myItems["10,11,15"] = "LONG TERM;TREASURY;NOTE";
+myItems["77"] = "LONG TERM;TREASURY;ZERO";
+myItems["203,204,205,206"] = "MUNICIPAL;CD;INT AT MAT";
+myItems["197"] = "MUNICIPAL;CP;DISCOUNT";
+myItems["198"] = "MUNICIPAL;CP;INT AT MAT";
+myItems["210"] = "MUNICIPAL;NOTE;MTN AT MAT";
+myItems["207,208,209"] = "MUNICIPAL;NOTE;VAR AT MAT";
+myItems["81"] = "OTHER;LTD PARTNR;LTD";
+myItems["83"] = "OTHER;REV CREDIT;REV";
+myItems["78"] = "OTHER;STOCK;COMMON";
+myItems["118,119,120,121"] = "OTHER;STOCK;PREFERRED";
+myItems["132"] = "OTHER;WARRANT;BOND";
+myItems["80"] = "OTHER;WARRANT;COMMON";
+myItems["105"] = "SHORT TERM;ABS;DISCOUNT";
+myItems["104"] = "SHORT TERM;ABS;INT AT MAT";
+myItems["112"] = "SHORT TERM;ABS;TERM";
+myItems["128"] = "SHORT TERM;AGENCY;BOND";
+myItems["12,13"] = "SHORT TERM;AGENCY;DISCOUNT";
+myItems["65"] = "SHORT TERM;BA;DISCOUNT";
+myItems["21,22,23,41"] = "SHORT TERM;CD;DISCOUNT";
+myItems["190"] = "SHORT TERM;CD;EUEU CD";
+myItems["196"] = "SHORT TERM;CD;EURO CD";
+myItems["193"] = "SHORT TERM;CD;EURYEN CD";
+myItems["20,24,25,26"] = "SHORT TERM;CD;INT AT MAT";
+myItems["189"] = "SHORT TERM;CD;STERLG. CD";
+myItems["19,27,28,29,38"] = "SHORT TERM;CD;TERM";
+myItems["192"] = "SHORT TERM;CD;YENYEN CD";
+myItems["63"] = "SHORT TERM;CP;DISCOUNT";
+myItems["195"] = "SHORT TERM;CP;EURYEN CP";
+myItems["64"] = "SHORT TERM;CP;INT AT MAT";
+myItems["194"] = "SHORT TERM;CP;YENYEN CP";
+myItems["102"] = "SHORT TERM;LOAN PART;INT AT MAT";
+myItems["106"] = "SHORT TERM;LOC;DISCOUNT";
+myItems["99,100"] = "SHORT TERM;NOTE;BANK NOTE";
+myItems["113"] = "SHORT TERM;NOTE;BOND";
+myItems["107,122,123,124,133,134,145,146,147"] = "SHORT TERM;NOTE;FLOATER";
+myItems["160,163,166"] = "SHORT TERM;NOTE;FLT AT MAT";
+myItems["101,140,176"] = "SHORT TERM;NOTE;MTN";
+myItems["167"] = "SHORT TERM;NOTE;MTN AT MAT";
+myItems["150,153,157"] = "SHORT TERM;NOTE;VAR AT MAT";
+myItems["108,125,126,127,135,136,141,142,143,144"] = "SHORT TERM;NOTE;VARIABLE";
+myItems["103"] = "SHORT TERM;REPO;INT AT MAT";
+myItems["98"] = "SHORT TERM;TIME DEPO;INT AT MAT";
+myItems["129"] = "SHORT TERM;TREASURY;BOND";
+myItems["187"] = "SHORT TERM;TREASURY;BTBILL";
+myItems["188"] = "SHORT TERM;TREASURY;FTBILL";
+myItems["185"] = "SHORT TERM;TREASURY;GTBILL";
+myItems["184"] = "SHORT TERM;TREASURY;ITBILL";
+myItems["182"] = "SHORT TERM;TREASURY;JTBILL";
+myItems["130"] = "SHORT TERM;TREASURY;NOTE";
+myItems["191"] = "SHORT TERM;TREASURY;NTBILL";
+myItems["16,131"] = "SHORT TERM;TREASURY;TBILL";
+myItems["183"] = "SHORT TERM;TREASURY;UTBILL";
+myItems["66,67,84,109,110,111,178,218,219,220"] = "STRUCTURED;MULTI;ABS";
+myItems["68,69,74"] = "STRUCTURED;MULTI;CMO";
+myItems["89,90,91"] = "STRUCTURED;MULTI;MPT";
+myItems["92,93,94,95,96,97,179,180,181"] = "STRUCTURED;SINGLE;ABS";
+myItems["55,221,222,223"] = "STRUCTURED;SINGLE;MBS";
+myItems["85,86,87,88"] = "STRUCTURED;SINGLE;PRJCT LOAN";
+myItems["59"] = "STRUCTURED;SINGLE;TBA - MBS";
+<!--@-node:<< data >>-->
+<!--@nl-->
+
+<!--@+others-->
+<!--@+node:clsCheckboxTree-->
+/**
+ * clsCheckboxTree: Constructor for tree select object
+ *
+ * @treeData   an object container the tree data as an associative array
+ * @container  the id of the div tag (or other element) in which the checkbox tree 
+ *             widget will be drawn.
+ * @collapsible       if true, nodes will open and close
+ * @hasBorder  if true, component will have an outside border
+ *
+**/
+function clsCheckboxTree(treeData, container, collapsible, hasBorder) {
+
+  this.items = treeData;
+  this.container = container;
+  this.itemsID = container + 'Items';
+
+  // can open and close nodes?
+  this.collapsible = collapsible;
+
+  // display in scrolling window in window?
+  this.hasBorder = hasBorder;
+  
+  // use text +/- button instead of graphic?
+  this.textButton = false;
+}
+<!--@nonl-->
+<!--@-node:clsCheckboxTree-->
+<!--@+node:drawCheckboxTree-->
+// function to draw the CheckboxTree html
+
+function drawCheckboxTree() {
+  var cells;                   // will hold one row of data
+  var oldCells = new Array();  // will remember data from last row for this cell
+  var cellKey;
+  var cellValue;               
+  var cellCode;
+  var dhtmlCheckbox;           
+    
+  var dhtmlCheckboxTree = '<table border="0" cellpadding="1" width="300" align="center" cellspacing="1" bgcolor="white">';
+
+  // find out the number of columns by extracting the columns of the first item
+  for (rowKey in this.items) {
+    cells = this.items[rowKey].split(";"); 
+	break;
+  }
+  numCols = cells.length;
+
+  // oldCells remembers what was in a given column in the last row.
+  // initialize this to a value that should never match. We need to
+  // initialize this so that the oldCells array has the same number
+  // of columns as does the data
+  for (c = 0; c < numCols; c++) oldCells[c] = "no way jose"; 
+  
+    var c;     // cell (column) index
+    var r = 0; // row index
+    for (rowKey in this.items) { 
+      cells = this.items[rowKey].split(";");    
+      for (c = 0; c < numCols; c++) {
+	    cellValue = cells[c].toLowerCase(); 
+
+        // skip cells that have repeat info for the column
+        if (oldCells[c] == cellValue && c < numCols -1) {
+          oldCells[c] = cellValue;   // save it
+	      continue;
+        }
+        oldCells[c] = cellValue;     // save it
+ 	
+		<!--@        << figure out the styling >>-->
+		<!--@+node:<< Figure out the Styling >>-->
+		switch (c) {
+			case 0:  cellClass = "topicLine"; break;
+			default: cellClass = "";
+		}
+		<!--@nonl-->
+		<!--@-node:<< Figure out the Styling >>-->
+		<!--@nl-->
+		<!--@        << create the checkbox html >>-->
+		<!--@+node:<< Create the Checkbox Html >>-->
+		strJS = 'onclick="toggleTree(this);"';
+		cellKey = rowKey;
+		
+		// if this isn't a bottom level node (leaf node), we don't want it to
+		// submit a value, so erase the key
+		if (c != numCols - 1) cellKey = "";
+		
+		dhtmlCheckbox = '<input type="checkbox" '
+			+ 'id="' + this.itemsID + '" ' 
+			+ 'name="' + this.itemsID + '" '
+			+ 'cvalue="' + cellValue + '" ' 
+			+ 'ccode="' + cellKey + '" ' 
+			+ 'rowIndex = "' + r + '" '
+			+ 'colIndex = "' + c + '" '
+			+ strJS 
+			+ '>';
+		<!--@nonl-->
+		<!--@-node:<< Create the Checkbox Html >>-->
+		<!--@nl-->
+	  
+       // if the checkbox tree is supposed to be collapsible, add a +/- button
+       // We have to give this an attribute called "linkedID" that indicates which
+       // checkbox collection this button is linked to. We also have to give it
+       // rowIndex and colIndex attributes, just like the checkbox elements.
+       if (this.collapsible && c < numCols - 1) {  
+		 <!--@	     << create the button html >>-->
+		 <!--@+node:<< Create the Button Html >>-->
+		 if (this.textButton) {
+		 	// the + or - text character will be used for the button
+			 <!--@	<< create text button >>-->
+			 <!--@+node:<< create text button >>-->
+			 buttonHTML = 
+			 	' <table align="left" ' 
+			 	+ 'style="border:1px solid #000000; height:14px; cursor:hand" bgcolor="gainsboro" cellspacing="0"'
+			 	+ ' cellpadding="0">'
+			 	+ ' <tr>'
+			 	+ ' <td align="center"' 
+			 	  +  ' class="nodeButton"'  
+			 	  +  ' rowIndex = "' + r + '" '
+			 	  +  ' colIndex = "' + c + '" '
+			 	  +  ' linkedID="' + this.itemsID + '"' 
+			 	  +  ' onclick="toggleNodeOpen(this)">'
+			 	+ '&#8722;' // this is a unicode minus sign
+			 	+ ' </td>'
+			 	+ '</tr>'
+			 	+ '</table>';
+			 <!--@nonl-->
+			 <!--@-node:<< create text button >>-->
+			 <!--@nl-->
+		 } else {
+			 <!--@	<< create image button >>-->
+			 <!--@+node:<< create image button >>-->
+			 buttonHTML = 
+			 	   ' <img src="minus.gif"' 
+			 	+  ' class="nodeButtonImage" '  
+			 	+  ' rowIndex = "' + r + '" '
+			 	+  ' colIndex = "' + c + '" '
+			 	+  ' linkedID="' + this.itemsID + '"' 
+			 	+  ' onclick="toggleNodeOpen(this)">';
+			 	+  ' >';
+			 <!--@nonl-->
+			 <!--@-node:<< create image button >>-->
+			 <!--@nl-->
+		 }
+		 
+		 dhtmlCheckbox = buttonHTML + dhtmlCheckbox;
+		 <!--@nonl-->
+		 <!--@-node:<< Create the Button Html >>-->
+		 <!--@nl-->
+	   }  
+
+       // If we've found a cell that we are going to write out, make a row
+       // for it, with the TD colspan equal to the number of remaining cols
+       // and with TD elements preceding it equal in number to c (the col index)	  
+	   <!--@       << add the HTML for the row >>-->
+	   <!--@+node:<< Add the Html for the Row >>-->
+	   r++;
+	   dhtmlCheckboxTree += '<tr class="' + cellClass + '">';
+	   for (i = 0; i < c; i++)
+	   	dhtmlCheckboxTree += '<td class="spacerCell">&nbsp;</td>';
+	   
+	   dhtmlCheckboxTree += 
+	   	'<td colspan="' + (numCols - c) + '">' 
+	   	+ dhtmlCheckbox 
+	   	+ cellValue 
+	   	+ '</td>';
+	   
+	   dhtmlCheckboxTree += '</tr>';
+	   <!--@nonl-->
+	   <!--@-node:<< Add the Html for the Row >>-->
+	   <!--@nl-->
+	}		
+  }
+  dhtmlCheckboxTree += '</table>';
+
+  <!--@  << add border >>-->
+  <!--@+node:<< Add Border >>-->
+  // add a border by putting the table in a table if this was chosen in the constructor.
+  
+  if (this.hasBorder) {
+  	dhtmlCheckboxTree = 
+  	   '<table align="center" cellpadding=0 cellpadding=0 bgcolor="#B1CCCE"><tr><td>' 
+  	  + dhtmlCheckboxTree 
+  	  + '</td></tr></table>';
+  }
+  <!--@nonl-->
+  <!--@-node:<< Add Border >>-->
+  <!--@nl-->
+
+  // we've got the table built, now stick it in the DIV or other tag that
+  // was specified when this object was constructed.
+  eval('var ' + this.container + ' = document.getElementById("' + this.container + '")');
+  eval(this.container + ".innerHTML = dhtmlCheckboxTree;");  
+}
+<!--@-node:drawCheckboxTree-->
+<!--@+node:toggleTree-->
+// function to handle turning checkboxes on and off
+
+/** toggleTree  Set all checkboxes of a given branch.
+ *  @me  the checkbox element that was clicked on. All descendant and ancestor
+ *       nodes will be set accordingly. For more documentation, see the LEO file.
+ */
+function toggleTree (me) {
+
+  flagIt(me, me.checked);
+  toggleChildren(me, me.checked);
+  toggleParents(me, me.checked);   
+}
+<!--@nonl-->
+<!--@-node:toggleTree-->
+<!--@+node:flagIt-->
+/**
+ * flagIt  check or uncheck a checkbox and add a style.
+ *
+ * @me         the checkbox to be marked.
+ * @markValue  true or false: whether to check the box 
+ *
+ **/
+function flagIt(me, markValue) {
+
+   me.checked = markValue;
+  
+  // Following block is for highlighting the cell which contains the selected checkbox.
+  //if (markValue) {
+  //  if (me.colIndex == 2) me.parentElement.style.backgroundColor = 'aquamarine';
+  //} else {
+  // // TODO: save and restore the existing style
+  //  if (me.colIndex != 0) me.parentElement.style.backgroundColor = 'white';
+  //  //if (me.colIndex == 0) me.parentElement.style.backgroundColor = "#B1CCCE";
+  //}
+  
+}
+<!--@nonl-->
+<!--@-node:flagIt-->
+<!--@+node:toggleChildren-->
+/**
+ * toggleChildren  This is a recursive function that uses getChildren to get a list
+ * of children checkboxes and then sets their values to checked or unchecked.
+ *
+ * @me            item (an element with colIndex and rowIndex attributes)
+ * @checkValue    true or false: set checkbox value
+ *
+ * For more documentation, see the LEO file for this program. 
+ */
+ 
+function toggleChildren(me, checkValue) {
+  
+   var i = 0; 
+   var children = getChildren(me);
+
+   if (children.length == 0) return;
+
+   for (i = 0; i < children.length; i++) {
+     flagIt(children[i], checkValue);
+
+	 //recurse
+	 toggleChildren(children[i], checkValue);
+
+   }  
+}
+<!--@-node:toggleChildren-->
+<!--@+node:toggleParents-->
+/**
+ * toggleParents  turn all ancestor checkboxes on or off (recursive).
+ * of children checkboxes and then sets their values to checked or unchecked.
+ *
+ * @me            item (an element with colIndex and rowIndex attributes)
+ * @checkValue    true or false: set checkbox value
+ */
+function toggleParents(me, checkValue) {
+
+  var i = 0;
+   
+  // If we are turning the checkbox off, we need to first
+  // check and see if there are any siblings besides the current item
+  // that are checked on. If there are, we don't.
+  if (! checkValue) {
+    var siblings = getSiblings(me);
+    var rowIndex = me.rowIndex;
+    for (i = 0; i < siblings.length; i++) {
+      if (siblings[i].checked != checkValue && siblings[i].getAttribute('rowIndex') != rowIndex) return;
+    }
+  } 
+  
+  // get the parent, if there is one, flag it 
+  var parent = getParent(me);
+  if (parent == undefined) return;
+  flagIt(parent, checkValue);
+
+  // recurse
+  toggleParents(parent, checkValue);
+  
+}
+<!--@nonl-->
+<!--@-node:toggleParents-->
+<!--@+node:getSiblings-->
+function getSiblings(me) {
+
+   var siblings = new Array();
+   siblings = getChildren(getParent(me));
+   return siblings;
+   
+}
+<!--@nonl-->
+<!--@-node:getSiblings-->
+<!--@+node:getParent-->
+// get parent  of item that was clicked on. 
+
+function getParent(me) {
+
+  var r = me.getAttribute('rowIndex') / 1;
+
+  if (me.colIndex == 0) return;
+  
+  eval("var startColIndex = " + me.id + "[r].getAttribute('colIndex');");
+ 
+  startColIndex = startColIndex / 1;
+
+  var parent;
+  for (i = r - 1; i >= 0; i--) {
+    eval ("if (" + me.id + "[i].getAttribute('colIndex') < startColIndex) parent = " + me.id + "[i];");
+	if (parent != undefined) return parent;
+  }
+
+}
+<!--@nonl-->
+<!--@-node:getParent-->
+<!--@+node:getChildren-->
+// getChildren  get the immediate descendant items of the current item
+// For more documentation, see the LEO file for this program
+function getChildren(me) {
+
+  var i = 0;
+
+  // return an empty array if there are no children
+  if (me == undefined) return new Array();
+
+  var r = me.getAttribute("rowIndex") / 1;  
+  
+  // Loop thru the item collection. For comments on this, see the getParent function.
+  eval("var startColIndex = " + me.id + "[r].getAttribute('colIndex');");
+
+  startColIndex = startColIndex / 1;
+  var children = new Array();
+  var colIndex;
+  eval (
+      "for (i = r + 1; i < " + me.id + ".length; i++) {"
+    + "  colIndex = " + me.id + "[i].getAttribute('colIndex');"
+	+ "  if (colIndex <= startColIndex) break;"
+    + "  if (colIndex == startColIndex + 1) children.push(" + me.id + "[i]);"
+    + "}" 
+  );
+  return children;
+  
+}
+<!--@-node:getChildren-->
+<!--@+node:toggleNodeOpen-->
+// close or open all lower nodes
+// @me   element (+/- node button) that was clicked
+function toggleNodeOpen(me) {
+  
+  // Figure out whether to close or open this node.
+  var display;
+  
+  if (me.tagName == 'TD') {
+	<!--@    << handle text button >>-->
+	<!--@+node:<< handle text button >>-->
+	if (me.innerHTML == '+') {
+		// The minus sign is unicode 8722. This
+		// is different than the keyboard hyphen (-).
+		me.innerHTML = "&#8722;";
+		display = 'block';
+	} else {
+		me.innerHTML = "+";
+		display = 'none';
+	}
+	<!--@nonl-->
+	<!--@-node:<< handle text button >>-->
+	<!--@nl-->
+  } else {
+	<!--@  	<< handle image button >>-->
+	<!--@+node:<< handle image button >>-->
+	var src = me.src;
+	if (src.search(/plus/) != -1) {
+		// The minus sign is unicode 8722. This
+		// is different than the keyboard hyphen (-).
+		me.src = src.replace(/plus/, 'minus');
+		display = 'block';
+	} else {
+		me.src = src.replace(/minus/, 'plus');
+		display = 'none';
+	}
+	<!--@nonl-->
+	<!--@-node:<< handle image button >>-->
+	<!--@nl-->
+  }
+
+  eval ('var maxR = ' + me.linkedID + '.length');
+  var rowIndex = me.rowIndex / 1;
+  var colIndex = me.colIndex;
+
+  // Loop through the elements either hiding or showing. When we
+  // get to an element that is "higher" in the tree, i.e. has a lower
+  // column number than the element that was clicked on, exit the loop.
+  eval ( 
+      "for (r = rowIndex + 1; r < maxR; r++) {"
+    + "  if (" + me.linkedID + "(r).colIndex <= colIndex) break;"
+	+    me.linkedID + "(r).parentElement.parentElement.style.display = '" + display + "';"
+    + "}"   
+  ); 
+}
+<!--@nonl-->
+<!--@-node:toggleNodeOpen-->
+<!--@+node:collapse (not used)-->
+// Used when attaching a collapse behavior to a checkbox.
+
+function collapse(colIndex, itemsID) {
+  
+  if (colIndex == undefined) colIndex = 0;
+  var r = 0;
+  var children;
+  eval (
+    "do {"
+  + "  if (" + itemsID + "(r).colIndex == colIndex) {"
+  + "    display = 'none';"
+  + "    if (" + itemsID + "(r).checked) display = 'block';"
+  + "    r++;"  
+  + "    do {"
+  + "     " + itemsID + "(r).parentElement.parentElement.style.display = display;"
+  + "      r++;"
+  + "      if (r >= " + itemsID + ".length) break;"
+  + "    } while (" + itemsID + "(r).colIndex > colIndex);"
+  + "  } else {"
+  + "  r++;"
+  + "  }"
+  + "} while (r < " + itemsID + ".length);"
+  );
+  
+}
+<!--@nonl-->
+<!--@-node:collapse (not used)-->
+<!--@-others-->
+
+// Only the drawCheckboxTree gets attached to the 
+// object, because the checkbox and collapse
+// functions are not methods but rather functions
+// that operate on collections of nodes. Each of
+// these nodes knows which DOM collection it is a
+// member of, and this is all that is needed to
+// make them operate in synch. For more information,
+// see the LEO documentation.
+
+clsCheckboxTree.prototype.draw = drawCheckboxTree;
+<!--@nonl-->
+<!--@-node:Checkbox Tree Functions-->
+<!--@+node:Other Functions-->
+<!--@@language java-->
+
+var myCheckboxTree = new clsCheckboxTree(myItems, "CheckboxTree", true, false);
+
+<!--@+others-->
+<!--@+node:onload-->
+var CheckboxTreeItems;
+
+function window_onload() {
+
+ // draw the checkboxtree
+ myCheckboxTree.draw();
+
+ // loop thru the checkboxes and set the ones that have been
+ var r = 0;
+ var ccode = "";
+ var item;
+ CheckboxTreeItems =document.getElementsByName("CheckboxTreeItems");
+
+ for (r = 0; r < CheckboxTreeItems.length; r++) {
+
+   // get next checkbox
+   item = CheckboxTreeItems[r];
+   
+   // if the ccode attribute is blank, it means the checkbox isn't a leaf
+   // node checkbox, i.e. it doesn't have any data value
+   if (item.ccode == "") continue;
+
+ }
+
+ // set the focus to the first checkbox, bc otherwise it will
+ // get set to one of the submit buttons, which looks ugly
+ //CheckboxTreeItems[0].focus();
+
+}
+<!--@-node:onload-->
+<!--@-others-->
+<!--@nonl-->
+<!--@-node:Other Functions-->
+<!--@-others-->
+</script>
+<!--@-node:<< head >>-->
+<!--@nl-->
+</head>
+
+<body 
+  bgcolor="gainsboro"
+  topmargin="2" 
+  leftmargin="2" 
+  marginheight="2" 
+  marginwidth="2" 
+  onload="window_onload()"
+>
+
+<!--@<< body >>-->
+<!--@+node:<< body >>-->
+<script>
+  var CheckboxTreeItemsCollapseFlag;
+</script>
+
+<br>
+
+<div 
+  id="CheckboxTree" 
+  style="position:absolute; top: 0; width:316; height:440 ; overflow-y:scroll">
+</div>
+
+<form name="submitForm" action="wherever.jsp" method="post" >
+   <input type=hidden name=data>
+   <input type=hidden name=action>
+</form>
+
+<div style="position:absolute; width:316; top:460">
+
+</div>
+
+<p>Edward</p>
+<!--@nonl-->
+<!--@-node:<< body >>-->
+<!--@nl-->
+</body>
+</html>
+<!--@nonl-->
+<!--@-node:@file widgetcheckboxtree.htm-->
+<!--@-leo-->

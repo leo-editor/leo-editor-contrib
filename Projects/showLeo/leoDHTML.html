@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC -//W3C//DTD HTML 4.0 Frameset//EN http://www.w3.org/TR/REC-html40/frameset.dtd>
+<html>
+<head>
+<title>leoDHTML.html</title>
+<link rel="StyleSheet" href="dtree.css" type="text/css" />
+<script type="text/javascript" src="dtree.js"></script>
+</head>
+<h2>leoDHTML.html</h2>
+<div class="dtree">
+<p>
+<a href="javascript: d.openAll();">open all</a> |
+<a href="javascript: d.closeAll();">close all</a>
+</p>
+<p>Notes...<br>
+- This page & scripts have been tested only on IE 6 running on XP.<br>
+- This demo does not support syntax coloring. The real Leo does.<br>
+- Use UTF-8 encoding in the browser to view all special characters.<br>
+- To do: put outline in an iFrame element so its size won't change.</p>
+<script type="text/javascript">
+d = new dTree("d")
+d.addv(0,-1,-1,"root","root body","c:/prog/showLeo/leoDHTML.html",null,false)
+d.addv(1,0,2,"@url http://www.destroydrop.com/javascripts/tree/","@nocolor"+
+"\n"+
+"\nThis is the url from which I downloaded dtree.*"+
+"\n"+
+"\nI (Edward K. Ream) made the following minor modifications to the dtree routines:"+
+"\n"+
+"\n- added the body ivar."+
+"\n- added a textarea to dtree.toString routine."+
+"\n- replaced the root icon with the Leo icon."+
+"\n- removed lots of redundant semicolons."+
+"\n- clarified code by creating sections."+
+"\n- Replaced str + by array join in addNode."+
+"\n"+
+"\n/*--------------------------------------------------|"+
+"\n| dTree 2.05 | www.destroydrop.com/javascript/tree/ |"+
+"\n|---------------------------------------------------|"+
+"\n| Copyright (c) 2002-2003 Geir Landrö               |"+
+"\n|                                                   |"+
+"\n| This script can be used freely as long as all     |"+
+"\n| copyright messages are intact.                    |"+
+"\n|                                                   |"+
+"\n| Updated: 17.04.2003                               |"+
+"\n|--------------------------------------------------*/","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(2,0,3,"dtree.css",".dtree {"+
+"\n    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;"+
+"\n    font-size: 11px;"+
+"\n    color: #666;"+
+"\n    white-space: nowrap;"+
+"\n}"+
+"\n.dtree img {"+
+"\n    border: 0px;"+
+"\n    vertical-align: middle;"+
+"\n}"+
+"\n.dtree a {"+
+"\n    color: #333;"+
+"\n    text-decoration: none;"+
+"\n}"+
+"\n.dtree a.node, .dtree a.nodeSel {"+
+"\n    white-space: nowrap;"+
+"\n    padding: 1px 2px 1px 2px;"+
+"\n}"+
+"\n.dtree a.node:hover, .dtree a.nodeSel:hover {"+
+"\n    color: #333;"+
+"\n    text-decoration: underline;"+
+"\n}"+
+"\n.dtree a.nodeSel {"+
+"\n    background-color: #c0d2ec;"+
+"\n}"+
+"\n.dtree .clip {"+
+"\n    overflow: hidden;"+
+"\n}"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(3,0,4,"To do","@nocolor"+
+"\n"+
+"\n- Put tree in a scrolling frame."+
+"\n"+
+"\n    '&lt;IFRAME TITLE=&quot;Outline Pane&quot;>'"+
+"\n"+
+"\n** Speed up dtree widget using n_pid (pid of next sibling)","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(4,0,37,"@file dtree.js","@language java"+
+"\n@tabwidth 4"+
+"\n"+
+"\n&lt;&lt; copyright >>"+
+"\n"+
+"\n@others"+
+"\n"+
+"\n// If Push and pop is not implemented by the browser"+
+"\nif (!Array.prototype.push) {"+
+"\n    Array.prototype.push = function array_push() {"+
+"\n        for(var i=0;i&lt;arguments.length;i++)"+
+"\n            this[this.length]=arguments[i]"+
+"\n        return this.length"+
+"\n    }"+
+"\n}"+
+"\n"+
+"\nif (!Array.prototype.pop) {"+
+"\n    Array.prototype.pop = function array_pop() {"+
+"\n        lastElement = this[this.length-1]"+
+"\n        this.length = Math.max(this.length-1,0)"+
+"\n        return lastElement"+
+"\n    }"+
+"\n}"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(5,4,6,"&lt;&lt; copyright >>","/*--------------------------------------------------|"+
+"\n| dTree 2.05 | www.destroydrop.com/javascript/tree/ |"+
+"\n|---------------------------------------------------|"+
+"\n| Copyright (c) 2002-2003 Geir Landrö               |"+
+"\n|                                                   |"+
+"\n| This script can be used freely as long as all     |"+
+"\n| copyright messages are intact.                    |"+
+"\n|                                                   |"+
+"\n| Updated: 17.04.2003                               |"+
+"\n|--------------------------------------------------*/","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(6,4,16,"ctor...","","c:/prog/showLeo/leoDHTML.html","icons/box00.GIF",0)
+d.addv(7,6,8," dTree (ctor)","function dTree(objName) {"+
+"\n    this.config = {"+
+"\n        target         : null,"+
+"\n        folderLinks    : true,"+
+"\n        useSelection   : true,"+
+"\n        useCookies     : true,"+
+"\n        useLines       : true,"+
+"\n        useIcons       : true,"+
+"\n        useStatusText  : false,"+
+"\n        closeSameLevel : false,"+
+"\n        inOrder        : false"+
+"\n    }"+
+"\n    this.icon = {"+
+"\n        root        : 'LeoWin.gif', // 'img/base.gif'"+
+"\n        folder      : 'folder.gif',"+
+"\n        folderOpen  : 'folderopen.gif',"+
+"\n        node        : 'page.gif',"+
+"\n        empty       : 'empty.gif',"+
+"\n        line        : 'line.gif',"+
+"\n        join        : 'join.gif',"+
+"\n        joinBottom  : 'joinbottom.gif',"+
+"\n        plus        : 'plus.gif',"+
+"\n        plusBottom  : 'plusbottom.gif',"+
+"\n        minus       : 'minus.gif',"+
+"\n        minusBottom : 'minusbottom.gif',"+
+"\n        nlPlus      : 'nolines_plus.gif',"+
+"\n        nlMinus     : 'nolines_minus.gif'"+
+"\n    };"+
+"\n    this.obj = objName"+
+"\n    this.aNodes = []"+
+"\n    this.aIndent = []"+
+"\n    this.root = new Node(-1)"+
+"\n    this.selectedNode = null"+
+"\n    this.selectedFound = false"+
+"\n    this.completed = false"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(8,6,9,"addv (EKR: called by statically generated html file)","// dTree.prototype.add = function(id, pid, name, body, url, title, target, icon, iconOpen, open)"+
+"\n"+
+"\ndTree.prototype.addv = function(id,pid,npid,head,body,gFile,icon,expanded)"+
+"\n{"+
+"\n    // npid not used at present."+
+"\n    this.add(id,pid,head,body,gFile,&quot;&quot;,&quot;&quot;,icon,icon,expanded)"+
+"\n}"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(9,6,10,"add (called by init once for every vnode)","// Adds a new node to the node array."+
+"\n"+
+"\n// id       Number Unique identity number. "+
+"\n// pid      Number Number refering to the parent node. The value for the root node has to be -1. "+
+"\n// name     String Text label for the node. "+
+"\n// url      String Url for the node. "+
+"\n// title    String Title for the node. "+
+"\n// target   String Target for the node. "+
+"\n// icon     String Image file to use as the icon. Uses default if not specified. "+
+"\n// iconOpen String Image file to use as the open icon. Uses default if not specified. "+
+"\n// open     Boolean Is the node open."+
+"\n"+
+"\ndTree.prototype.add = function(id, pid, name, body, url, title, target, icon, iconOpen, open)"+
+"\n{"+
+"\n    this.aNodes[this.aNodes.length] ="+
+"\n        new Node(id, pid, name, body, url, title, target, icon, iconOpen, open)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(10,6,11,"addNode (use arr)(called by toString)","// Creates the tree structure"+
+"\ndTree.prototype.addNode = function(pNode)"+
+"\n{"+
+"\n    var arr = new Array()"+
+"\n    var n=0"+
+"\n    if (this.config.inOrder) n = pNode._ai"+
+"\n    for (n; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n].pid == pNode.id) {"+
+"\n            var cn = this.aNodes[n]"+
+"\n            cn._p = pNode"+
+"\n            cn._ai = n"+
+"\n            this.setCS(cn) // This might also be pretty slow."+
+"\n            if (!cn.target &amp;&amp; this.config.target)"+
+"\n                cn.target = this.config.target"+
+"\n            if (cn._hc &amp;&amp; !cn._io &amp;&amp; this.config.useCookies)"+
+"\n                cn._io = this.isOpen(cn.id)"+
+"\n            if (!this.config.folderLinks &amp;&amp; cn._hc)"+
+"\n                cn.url = null"+
+"\n            if (this.config.useSelection &amp;&amp; cn.id == this.selectedNode &amp;&amp; !this.selectedFound) {"+
+"\n                cn._is = true"+
+"\n                this.selectedNode = n"+
+"\n                this.selectedFound = true"+
+"\n            }"+
+"\n            arr.push(this.node(cn, n)) // EKR: A big speedup."+
+"\n            if (cn._ls) break"+
+"\n        }"+
+"\n    }"+
+"\n    return arr.join(' ')"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(11,6,12,"Node","// Node object."+
+"\n"+
+"\n// id       Number Unique identity number. "+
+"\n// pid      Number Number refering to the parent node. The value for the root node has to be -1. "+
+"\n// name     String Text label for the node. "+
+"\n// url      String Url for the node. "+
+"\n// title    String Title for the node. "+
+"\n// target   String Target for the node. "+
+"\n// icon     String Image file to use as the icon. Uses default if not specified. "+
+"\n// iconOpen String Image file to use as the open icon. Uses default if not specified. "+
+"\n// open     Boolean Is the node open."+
+"\n"+
+"\nfunction Node(id, pid, name, body, url, title, target, icon, iconOpen, open) {"+
+"\n    this.id = id"+
+"\n    this.pid = pid"+
+"\n    this.name = name"+
+"\n    this.body = body // ekr"+
+"\n    this.url = url"+
+"\n    this.title = title"+
+"\n    this.target = target"+
+"\n    this.icon = icon"+
+"\n    this.iconOpen = iconOpen"+
+"\n    this._io = open || false"+
+"\n    this._is = false"+
+"\n    this._ls = false"+
+"\n    this._hc = false"+
+"\n    this._ai = 0"+
+"\n    this._p"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(12,6,-1,"node (creates HTML, possibly bad recursion)","// Creates the node icon, url and text"+
+"\ndTree.prototype.node = function(node, nodeId)"+
+"\n{"+
+"\n    var arr = new Array()"+
+"\n"+
+"\n    arr.push('&lt;div class=&quot;dTreeNode&quot;>' + this.indent(node, nodeId))"+
+"\n"+
+"\n    if (this.config.useIcons) {"+
+"\n        &lt;&lt; configure for icons >>"+
+"\n    }"+
+"\n"+
+"\n    if (node.url) {"+
+"\n        &lt;&lt; configure for url >>"+
+"\n    }"+
+"\n    else if ((!this.config.folderLinks || !node.url) &amp;&amp; node._hc &amp;&amp; node.pid != this.root.id)"+
+"\n        arr.push('&lt;a href=&quot;javascript: ' + this.obj + '.o(' + nodeId + ');&quot; class=&quot;node&quot;>')"+
+"\n"+
+"\n    arr.push(node.name)"+
+"\n    "+
+"\n    if (node.url || ((!this.config.folderLinks || !node.url) &amp;&amp; node._hc))"+
+"\n        arr.push('&lt;/a>')"+
+"\n        "+
+"\n    arr.push('&lt;/div>')"+
+"\n    "+
+"\n    if (node._hc) {"+
+"\n        &lt;&lt; configure for children >>"+
+"\n    }"+
+"\n    this.aIndent.pop()"+
+"\n    return arr.join(' ')"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box03.GIF",0)
+d.addv(13,12,14,"&lt;&lt; configure for icons >>","if (!node.icon) node.icon ="+
+"\n    (this.root.id == node.pid) ?"+
+"\n    this.icon.root :"+
+"\n    ((node._hc) ? this.icon.folder : this.icon.node);"+
+"\n"+
+"\nif (!node.iconOpen)"+
+"\n    node.iconOpen = (node._hc) ? this.icon.folderOpen : this.icon.node;"+
+"\n"+
+"\nif (this.root.id == node.pid) {"+
+"\n    node.icon = this.icon.root;"+
+"\n    node.iconOpen = this.icon.root;"+
+"\n}"+
+"\n"+
+"\narr.push("+
+"\n    '&lt;img id=&quot;i' + this.obj + nodeId"+
+"\n    + '&quot; src=&quot;'"+
+"\n    + ((node._io) ? node.iconOpen : node.icon)"+
+"\n    + '&quot; alt=&quot;&quot; />')","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(14,12,15,"&lt;&lt; configure for url >>","arr.push('&lt;a id=&quot;s' + this.obj + nodeId + '&quot; class=&quot;' +"+
+"\n    ((this.config.useSelection) ? ((node._is ? 'nodeSel' : 'node')) : 'node')"+
+"\n    + '&quot; href=&quot;' + node.url + '&quot;')"+
+"\n"+
+"\nif (node.title)"+
+"\n    arr.push(str += ' title=&quot;' + node.title + '&quot;')"+
+"\n"+
+"\nif (node.target)"+
+"\n    arr.push(' target=&quot;' + node.target + '&quot;')"+
+"\n"+
+"\nif (this.config.useStatusText)"+
+"\n    arr.push(' onmouseover=&quot;window.status=\\''"+
+"\n    + node.name"+
+"\n    + '\\';return true;&quot; onmouseout=&quot;window.status=\\'\\';return true;&quot; ')"+
+"\n"+
+"\nif (this.config.useSelection &amp;&amp; ((node._hc &amp;&amp; this.config.folderLinks) || !node._hc))"+
+"\n    arr.push(' onclick=&quot;javascript: ' + this.obj + '.s(' + nodeId + ');&quot;')"+
+"\n"+
+"\narr.push('>')","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(15,12,-1,"&lt;&lt; configure for children >> (bad recursion)","arr.push('&lt;div id=&quot;d' + this.obj"+
+"\n    + nodeId + '&quot; class=&quot;clip&quot; style=&quot;display:'"+
+"\n    + ((this.root.id == node.pid || node._io) ? 'block' : 'none')"+
+"\n    + ';&quot;>')"+
+"\n    "+
+"\n// EKR: this recursion could be very slow."+
+"\narr.push(this.addNode(node))"+
+"\narr.push('&lt;/div>')"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(16,4,17,"toString (EKR: added textarea)","// Output the tree to the page."+
+"\n"+
+"\ndTree.prototype.toString = function()"+
+"\n{"+
+"\n    var str = ''"+
+"\n    str += '&lt;div class=&quot;dtree&quot;>\\n'"+
+"\n"+
+"\n    if (document.getElementById) {"+
+"\n        if (this.config.useCookies)"+
+"\n            this.selectedNode = this.getSelected()"+
+"\n        str += this.addNode(this.root)"+
+"\n    }"+
+"\n    else"+
+"\n        str += 'Browser not supported.'"+
+"\n        "+
+"\n    if (1) { // Added by EKR"+
+"\n        if (this.selectedNode==null || this.selectedNode==undefined)"+
+"\n            body = &quot;&quot;"+
+"\n        else"+
+"\n            body = this.aNodes[this.selectedNode].body"+
+"\n        "+
+"\n        str += '&lt;TEXTAREA name=&quot;bodyPane&quot; ROWS=&quot;15&quot; COLS=&quot;90&quot; WRAP=&quot;OFF&quot;>'"+
+"\n            + body"+
+"\n            + '&lt;/TEXTAREA>'"+
+"\n    }"+
+"\n"+
+"\n    str += '&lt;/div>'"+
+"\n"+
+"\n    if (!this.selectedFound) this.selectedNode = null"+
+"\n    this.completed = true"+
+"\n    return str"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(17,4,20,"indent","// Adds the empty and line icons."+
+"\n"+
+"\ndTree.prototype.indent = function(node, nodeId)"+
+"\n{"+
+"\n    var str = ''"+
+"\n    if (this.root.id != node.pid) {"+
+"\n        for (var n=0; n&lt;this.aIndent.length; n++)"+
+"\n            str += '&lt;img src=&quot;'"+
+"\n            + ((this.aIndent[n] == 1 &amp;&amp; this.config.useLines) ? this.icon.line : this.icon.empty)"+
+"\n            + '&quot; alt=&quot;&quot; />'"+
+"\n"+
+"\n        this.aIndent.push(node._ls ? 0 : 1)"+
+"\n    "+
+"\n        if (node._hc) {"+
+"\n            &lt;&lt; add child line >>"+
+"\n        }"+
+"\n        else {"+
+"\n            &lt;&lt; add image line >>"+
+"\n        }"+
+"\n    }"+
+"\n    return str"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(18,17,19,"&lt;&lt; add child line >>","str += '&lt;a href=&quot;javascript: '"+
+"\n+ this.obj + '.o(' + nodeId + ');&quot;>'"+
+"\n+ '&lt;img id=&quot;j' + this.obj + nodeId"+
+"\n+ '&quot; src=&quot;';"+
+"\nif (!this.config.useLines)"+
+"\n    str += (node._io) ? this.icon.nlMinus : this.icon.nlPlus;"+
+"\nelse"+
+"\n    str += ("+
+"\n        (node._io) ?"+
+"\n        ((node._ls &amp;&amp; this.config.useLines) ? this.icon.minusBottom : this.icon.minus) :"+
+"\n        ((node._ls &amp;&amp; this.config.useLines) ? this.icon.plusBottom : this.icon.plus ) );"+
+"\nstr += '&quot; alt=&quot;&quot; />&lt;/a>';","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(19,17,-1,"&lt;&lt; add image line >>","str += '&lt;img src=&quot;'"+
+"\n    + ((this.config.useLines) ?"+
+"\n        ((node._ls) ? this.icon.joinBottom : this.icon.join ) :"+
+"\n        this.icon.empty)"+
+"\n    + '&quot; alt=&quot;&quot; />'","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(20,4,21,"setCS","// Sets node._ls if node is the last sibling."+
+"\n"+
+"\ndTree.prototype.setCS = function(node)"+
+"\n{"+
+"\n    var lastId"+
+"\n"+
+"\n    for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n].pid == node.id) node._hc = true"+
+"\n        if (this.aNodes[n].pid == node.pid) lastId = this.aNodes[n].id"+
+"\n    }"+
+"\n"+
+"\n    if (lastId==node.id) node._ls = true"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(21,4,22,"getSelected","// Returns the selected node."+
+"\n"+
+"\ndTree.prototype.getSelected = function()"+
+"\n{"+
+"\n    var sn = this.getCookie('cs' + this.obj)"+
+"\n    "+
+"\n    return (sn) ? sn : null"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(22,4,23,"s (highlight selected node)","// Highlights the selected node."+
+"\n"+
+"\ndTree.prototype.s = function(id)"+
+"\n{"+
+"\n    if (!this.config.useSelection) return;"+
+"\n    "+
+"\n    var cn = this.aNodes[id]"+
+"\n    "+
+"\n    if (cn._hc &amp;&amp; !this.config.folderLinks) return;"+
+"\n"+
+"\n    if (this.selectedNode != id) {"+
+"\n        if (this.selectedNode || this.selectedNode==0) {"+
+"\n            eOld = document.getElementById(&quot;s&quot; + this.obj + this.selectedNode)"+
+"\n            eOld.className = &quot;node&quot;"+
+"\n        }"+
+"\n"+
+"\n        eNew = document.getElementById(&quot;s&quot; + this.obj + id)"+
+"\n        eNew.className = &quot;nodeSel&quot;"+
+"\n        this.selectedNode = id"+
+"\n"+
+"\n        if (this.config.useCookies)"+
+"\n            this.setCookie('cs' + this.obj, cn.id)"+
+"\n    }"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(23,4,31,"open/close...","","c:/prog/showLeo/leoDHTML.html","icons/box00.GIF",0)
+d.addv(24,23,25,"openAll &amp; closeAll","// Open/close all nodes"+
+"\ndTree.prototype.openAll = function() {"+
+"\n    this.oAll(true);"+
+"\n};"+
+"\n"+
+"\ndTree.prototype.closeAll = function() {"+
+"\n    this.oAll(false);"+
+"\n};","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(25,23,26,"o","// Toggle Open or close"+
+"\n"+
+"\ndTree.prototype.o = function(id)"+
+"\n{"+
+"\n    var cn = this.aNodes[id]"+
+"\n    "+
+"\n    this.nodeStatus(!cn._io, id, cn._ls);"+
+"\n    cn._io = !cn._io"+
+"\n    "+
+"\n    if (this.config.closeSameLevel)"+
+"\n        this.closeLevel(cn)"+
+"\n    if (this.config.useCookies)"+
+"\n        this.updateCookie()"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(26,23,27,"oAll","// Open or close all nodes"+
+"\ndTree.prototype.oAll = function(status) {"+
+"\n    for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n]._hc &amp;&amp; this.aNodes[n].pid != this.root.id) {"+
+"\n            this.nodeStatus(status, n, this.aNodes[n]._ls)"+
+"\n            this.aNodes[n]._io = status"+
+"\n        }"+
+"\n    }"+
+"\n    if (this.config.useCookies)"+
+"\n        this.updateCookie()"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(27,23,28,"openTo","// Opens the tree to a specific node"+
+"\ndTree.prototype.openTo = function(nId, bSelect, bFirst) {"+
+"\n    if (!bFirst) {"+
+"\n        for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n            if (this.aNodes[n].id == nId) {"+
+"\n                nId=n;"+
+"\n                break;"+
+"\n            }"+
+"\n        }"+
+"\n    }"+
+"\n    var cn=this.aNodes[nId];"+
+"\n    if (cn.pid==this.root.id || !cn._p) return;"+
+"\n    cn._io = true;"+
+"\n    cn._is = bSelect;"+
+"\n    if (this.completed &amp;&amp; cn._hc) this.nodeStatus(true, cn._ai, cn._ls);"+
+"\n    if (this.completed &amp;&amp; bSelect) this.s(cn._ai);"+
+"\n    else if (bSelect) this._sn=cn._ai;"+
+"\n    this.openTo(cn._p._ai, false, true);"+
+"\n};"+
+"\n"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(28,23,29,"closeLevel","// Closes all nodes on the same level as certain node"+
+"\ndTree.prototype.closeLevel = function(node)"+
+"\n{"+
+"\n    for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n].pid == node.pid &amp;&amp; this.aNodes[n].id != node.id &amp;&amp; this.aNodes[n]._hc) {"+
+"\n            this.nodeStatus(false, n, this.aNodes[n]._ls);"+
+"\n            this.aNodes[n]._io = false;"+
+"\n            this.closeAllChildren(this.aNodes[n]);"+
+"\n        }"+
+"\n    }"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(29,23,30,"closeAllChildren","// Closes all children of a node"+
+"\ndTree.prototype.closeAllChildren = function(node) {"+
+"\n    for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n].pid == node.id &amp;&amp; this.aNodes[n]._hc) {"+
+"\n            if (this.aNodes[n]._io) this.nodeStatus(false, n, this.aNodes[n]._ls);"+
+"\n            this.aNodes[n]._io = false;"+
+"\n            this.closeAllChildren(this.aNodes[n]);        "+
+"\n        }"+
+"\n    }"+
+"\n}"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(30,23,-1,"nodeStatus","// Change the status of a node(open or closed)."+
+"\n"+
+"\ndTree.prototype.nodeStatus = function(status, id, bottom)"+
+"\n{"+
+"\n    eDiv     = document.getElementById('d' + this.obj + id)"+
+"\n    eJoin    = document.getElementById('j' + this.obj + id)"+
+"\n"+
+"\n    if (this.config.useIcons) {"+
+"\n        eIcon    = document.getElementById('i' + this.obj + id)"+
+"\n        eIcon.src = (status) ? this.aNodes[id].iconOpen : this.aNodes[id].icon"+
+"\n    }"+
+"\n"+
+"\n    eJoin.src = (this.config.useLines)?"+
+"\n        ((status)?"+
+"\n         ((bottom)?this.icon.minusBottom : this.icon.minus):"+
+"\n         ((bottom)?this.icon.plusBottom  : this.icon.plus)"+
+"\n        )"+
+"\n        :"+
+"\n        ((status)?this.icon.nlMinus:this.icon.nlPlus)"+
+"\n"+
+"\n    eDiv.style.display = (status) ? 'block': 'none'"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(31,4,-1,"Cookies...","","c:/prog/showLeo/leoDHTML.html","icons/box00.GIF",0)
+d.addv(32,31,33,"clearCookie","// [Cookie] Clears a cookie"+
+"\ndTree.prototype.clearCookie = function()"+
+"\n{"+
+"\n    var now = new Date()"+
+"\n    var yesterday = new Date(now.getTime() - 1000 * 60 * 60 * 24)"+
+"\n"+
+"\n    this.setCookie('co'+this.obj, 'cookieValue', yesterday)"+
+"\n    this.setCookie('cs'+this.obj, 'cookieValue', yesterday)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(33,31,34,"setCookie","// [Cookie] Sets value in a cookie"+
+"\ndTree.prototype.setCookie = function(cookieName, cookieValue, expires, path, domain, secure)"+
+"\n{"+
+"\n    document.cookie ="+
+"\n        escape(cookieName) + '=' + escape(cookieValue)"+
+"\n        + (expires ? '; expires=' + expires.toGMTString() : '')"+
+"\n        + (path ? '; path=' + path : '')"+
+"\n        + (domain ? '; domain=' + domain : '')"+
+"\n        + (secure ? '; secure' : '')"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(34,31,35,"getCookie","// [Cookie] Gets a value from a cookie."+
+"\n"+
+"\ndTree.prototype.getCookie = function(cookieName)"+
+"\n{"+
+"\n    var cookieValue = ''"+
+"\n    var posName = document.cookie.indexOf(escape(cookieName) + '=')"+
+"\n"+
+"\n    if (posName != -1) {"+
+"\n        var posValue = posName + (escape(cookieName) + '=').length"+
+"\n        var endPos   = document.cookie.indexOf(';', posValue)"+
+"\n"+
+"\n        if (endPos != -1)"+
+"\n            cookieValue = unescape(document.cookie.substring(posValue, endPos))"+
+"\n        else"+
+"\n            cookieValue = unescape(document.cookie.substring(posValue))"+
+"\n    }"+
+"\n"+
+"\n    return (cookieValue);"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(35,31,36,"updateCookie","// [Cookie] Returns ids of open nodes as a string."+
+"\n"+
+"\ndTree.prototype.updateCookie = function()"+
+"\n{"+
+"\n    var str = ''"+
+"\n"+
+"\n    for (var n=0; n&lt;this.aNodes.length; n++) {"+
+"\n        if (this.aNodes[n]._io &amp;&amp; this.aNodes[n].pid != this.root.id) {"+
+"\n            if (str) str += '.'"+
+"\n            str += this.aNodes[n].id"+
+"\n        }"+
+"\n    }"+
+"\n    this.setCookie('co' + this.obj, str)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(36,31,-1,"isOpen","// [Cookie] Checks if a node id is in a cookie."+
+"\n"+
+"\ndTree.prototype.isOpen = function(id)"+
+"\n{"+
+"\n    var aOpen = this.getCookie('co' + this.obj).split('.');"+
+"\n    for (var n=0; n&lt;aOpen.length; n++)"+
+"\n        if (aOpen[n] == id) return true;"+
+"\n    return false;"+
+"\n};","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(37,0,53,"leoDHTML.html (works only on desktop)","@language html"+
+"\n@tabwidth 4"+
+"\n"+
+"\n&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;>"+
+"\n"+
+"\n&lt;html>"+
+"\n"+
+"\n@others"+
+"\n"+
+"\n&lt;/html>"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(38,37,-1,"html  (body sets onLoad)","@comment //"+
+"\n"+
+"\n&lt;head>"+
+"\n&lt;&lt; head >>"+
+"\n&lt;/head>"+
+"\n"+
+"\n&lt;body>"+
+"\n&lt;&lt; body >>"+
+"\n&lt;/body>","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(39,38,52,"&lt;&lt; head >>","&lt;title>leoDHTML.leo&lt;/title>"+
+"\n"+
+"\n&lt;link rel=&quot;StyleSheet&quot; href=&quot;dtree.css&quot; type=&quot;text/css&quot; />"+
+"\n"+
+"\n&lt;script type=&quot;text/javascript&quot; src=&quot;dtree.js&quot;>&lt;/script>"+
+"\n"+
+"\n&lt;script type=&quot;text/javascript&quot;>"+
+"\n"+
+"\n    var xmldoc=null"+
+"\n    var gUrl=null"+
+"\n    var gFile=null"+
+"\n    var txArr=null"+
+"\n    var vnodes=null"+
+"\n    var tnodes=null"+
+"\n    "+
+"\n    // Define all methods"+
+"\n    @others"+
+"\n"+
+"\n&lt;/script>","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(40,39,-1,"ekr functions","@comment //","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(41,40,42,"createStaticOutline","function createStaticOutline(file)"+
+"\n{"+
+"\n    // alert(&quot;createStaticOutline&quot;)"+
+"\n    gFile = file"+
+"\n"+
+"\n    var icon = 'box01.GIF'"+
+"\n    var body = &quot;node body&quot;"+
+"\n"+
+"\n    d = new dTree('d')"+
+"\n    "+
+"\n    d.add(0,-1,'EKR example tree',body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(1,0,'Node 1',           body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(2,0,'Node 2',           body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(3,1,'Node 1.1',         body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(4,0,'Node 3',           body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(5,3,'Node 1.1.1',       body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(6,5,'Node 1.1.1.1',     body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(7,0,'Node 4',           body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n    d.add(8,1,'Node 1.2',         body,gFile,&quot;&quot;,&quot;&quot;,icon,icon)"+
+"\n"+
+"\n    document.write(d)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(42,40,44,"createOutline","function createOutline()"+
+"\n{"+
+"\n    var id=0 ; var level=0 ; var vLevel=0"+
+"\n    var isOpen=true ; var icon=null"+
+"\n    var parent=new Array() ; var p=0"+
+"\n    "+
+"\n    d = new dTree('d')"+
+"\n    parent[level] = 0"+
+"\n    d.add(id++,-1,gUrl,&quot;&quot;,gFile,&quot;&quot;,&quot;&quot;,icon,icon,isOpen)"+
+"\n    for (i=0;i&lt;vnodes.length;i++) {"+
+"\n        &lt;&lt; compute v,vLevel,h,t,tx,a >>"+
+"\n        if (0) {"+
+"\n            vLevel++ // The outer item is level 0."+
+"\n            p = parent[vLevel-1]"+
+"\n            level = vLevel"+
+"\n            parent[vLevel]=id // Set the new parent at this level"+
+"\n            isOpen = (a &amp;&amp; a.indexOf(&quot;E&quot;) != -1)"+
+"\n            body = t.text"+
+"\n            icon = (body!=null &amp;&amp; body.length > 0) ? 'box01.GIF' : 'box00.GIF'"+
+"\n            d.add(id++,p,h,body,gFile,&quot;&quot;,&quot;&quot;,icon,icon,isOpen)"+
+"\n        }"+
+"\n        else {"+
+"\n            body = t.text"+
+"\n            icon = (body!=null &amp;&amp; body.length > 0) ? 'box01.GIF' : 'box00.GIF'"+
+"\n            d.add(id++,0,h,body,gFile,&quot;&quot;,&quot;&quot;,icon,icon,isOpen)  // All at same level"+
+"\n        }"+
+"\n    }"+
+"\n    document.write(d)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(43,42,-1,"&lt;&lt; compute v,vLevel,h,t,tx,a >>","var v = vnodes[i]"+
+"\nvar vLevel = vnodeLevel(v)"+
+"\nvar headlines = v.getElementsByTagName(&quot;vh&quot;)"+
+"\nvar h = headlines[0].text"+
+"\nvar tx = v.getAttribute(&quot;t&quot;)"+
+"\nvar t = txArr[tx]"+
+"\nvar a = v.getAttribute(&quot;a&quot;)","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(44,40,45,"createTable","function createTable()"+
+"\n{"+
+"\n    // var vnodesElement = xmldoc.getElementsByTagName(&quot;vnodes&quot;)"+
+"\n    vnodes = xmldoc.getElementsByTagName(&quot;v&quot;)"+
+"\n    tnodes = xmldoc.getElementsByTagName(&quot;t&quot;)"+
+"\n    "+
+"\n    // Remember all tnode indices."+
+"\n    txArr = new Array()"+
+"\n    for (i=0;i&lt;tnodes.length;i++) {"+
+"\n        var t = tnodes[i]"+
+"\n        var tx = t.getAttribute(&quot;tx&quot;)"+
+"\n        txArr[tx] = t"+
+"\n    }"+
+"\n    "+
+"\n    if (0)"+
+"\n        dumpTable()"+
+"\n    else"+
+"\n        createOutline()"+
+"\n}"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(45,40,48,"dumpTable","function dumpTable()"+
+"\n{"+
+"\n    &lt;&lt; dump global info >>"+
+"\n    "+
+"\n    var tnodeCounts = new Array() // to detect joined nodes."+
+"\n    var level = 0 ; var vLevel = 0"+
+"\n    "+
+"\n    for (i=0;i&lt;vnodes.length;i++) {"+
+"\n        var v = vnodes[i]"+
+"\n        var headlines = v.getElementsByTagName(&quot;vh&quot;)"+
+"\n        var h = headlines[0]"+
+"\n        var tx = v.getAttribute(&quot;t&quot;)"+
+"\n        var t = txArr[tx]"+
+"\n        var a = v.getAttribute(&quot;a&quot;)"+
+"\n        &lt;&lt; dump info >>"+
+"\n    }"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(46,45,47,"&lt;&lt; dump global info >>","para()"+
+"\nwrite(vnodes.length + &quot; vnodes, &quot;)"+
+"\nwrite(tnodes.length + &quot; tnodes&quot;)"+
+"\nendp()","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(47,45,-1,"&lt;&lt; dump info >>",""+
+"\npara()"+
+"\nif (0) {"+
+"\n    // Probably detecting clones should be left to the xml to xml translator."+
+"\n    // Dectecting clones is easy inside Leo, hard here."+
+"\n    var prevT = tnodeCounts[tx]"+
+"\n    if (prevT!=undefined) write(&quot;join: &quot; + tx)"+
+"\n    tnodeCounts[tx]=tx"+
+"\n}"+
+"\nvLevel = vnodeLevel(v)"+
+"\nwrite(&quot;level: &quot; + vLevel)"+
+"\nwrite(&quot;, delta: &quot; + (vLevel-level))"+
+"\nlevel = vLevel"+
+"\nwrite(&quot;, v.h: &quot; + h.text)"+
+"\nwrite(&quot;, v.tx: &quot; + tx)"+
+"\nif (a) write(&quot;, attr=&quot; + a)"+
+"\nwrite(&quot;, v.t: &quot; + t.text.length)"+
+"\nendp()"+
+"\n"+
+"\nif (0) { // doesn't work yet"+
+"\n    para()"+
+"\n    allChildren = v.childNodes"+
+"\n    for (j=0;j&lt;allChildren.length;j++) {"+
+"\n        vChildren = allChildren[j].getElementsByTagName(&quot;v&quot;)"+
+"\n        n = vChildren.length"+
+"\n        // write(n)"+
+"\n        if (n!=undefined &amp;&amp; n > 0) {"+
+"\n            write(n + &quot; children&quot;) ; break"+
+"\n        }"+
+"\n    }"+
+"\n    endp()"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(48,40,49,"loadxml","function loadxml(url,file)"+
+"\n{"+
+"\n    gUrl = url"+
+"\n    gFile = file"+
+"\n    if (document.implementation &amp;&amp; document.implementation.createDocument) {"+
+"\n        xmldoc = document.implementation.createDocument(&quot;&quot;,&quot;&quot;,none)"+
+"\n        xmldoc.onload = createTable"+
+"\n        xmldoc.load(url)"+
+"\n    }"+
+"\n    else if (typeof ActiveXObject != &quot;undefined&quot;) {"+
+"\n        xmldoc = new ActiveXObject(&quot;Msxml.DOMDocument&quot;)"+
+"\n        xmldoc.onreadystatechange = function () {"+
+"\n            if (xmldoc.readyState == 4) createTable()"+
+"\n        }"+
+"\n        xmldoc.load(url)"+
+"\n    }"+
+"\n    else alert(&quot;This browser can not load xml file&quot;)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(49,40,50,"onLoad (not used)","function onLoad(file) {"+
+"\n    loadxml(file)"+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(50,40,51,"vnodeLevel","function vnodeLevel(v)"+
+"\n{"+
+"\n    var level = -1"+
+"\n    while (v.parentNode!=null) {"+
+"\n        v = v.parentNode"+
+"\n        level += 1"+
+"\n    }"+
+"\n    return level - 2 // adjust for vnode &amp; document nodes."+
+"\n}","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(51,40,-1,"dump utils","function para() { write(&quot;&lt;p>&quot;) }"+
+"\nfunction endp() { write(&quot;&lt;/p>&quot;) }"+
+"\nfunction write(s) { document.write(s) }","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(52,38,-1,"&lt;&lt; body >> specify load file","@comment //"+
+"\n"+
+"\n&lt;h2>leoDHTML.leo&lt;/h2>"+
+"\n"+
+"\n&lt;div class=&quot;dtree&quot;>"+
+"\n"+
+"\n    &lt;p>"+
+"\n    &lt;a href=&quot;javascript: d.openAll();&quot;>open all&lt;/a> |"+
+"\n    &lt;a href=&quot;javascript: d.closeAll();&quot;>close all&lt;/a>"+
+"\n    &lt;/p>"+
+"\n"+
+"\n    &lt;script type=&quot;text/javascript&quot;>"+
+"\n    // This is executed _before_ the onLoad routine!"+
+"\n    file = 'c:/prog/showLeo/leoDHTML.html'"+
+"\n    webFile = &quot;http://webpages.charter.net/edreamleo/leoDHTML.html&quot;"+
+"\n    if (0)"+
+"\n        loadxml('c:/prog/showLeo/demo.leo',file)"+
+"\n    else if (0)"+
+"\n        loadxml('c:/prog/showLeo/leoDHTML.leo',file)"+
+"\n    else if (0)"+
+"\n        loadxml(&quot;http://webpages.charter.net/edreamleo/leoDHTML.leo&quot;,webFile)"+
+"\n    else"+
+"\n        createStaticOutline(file)"+
+"\n    &lt;/script>"+
+"\n"+
+"\n&lt;/div>"+
+"\n"+
+"\n"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(53,0,-1,"script to create leoDHTM.html","@language python"+
+"\n"+
+"\nfrom leoGlobals import *"+
+"\n"+
+"\nglobal f,fileName"+
+"\n"+
+"\nf = None"+
+"\nfileName =&quot;c:/prog/showLeo/leoDHTML.html&quot;"+
+"\n"+
+"\n@others"+
+"\n"+
+"\ncreateHTML()"+
+"\n"+
+"\nes(&quot;wrote: &quot; + shortFileName(fileName),color=&quot;blue&quot;)"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",1)
+d.addv(54,53,55,"chooseIcon","def chooseIcon(v):"+
+"\n    "+
+"\n    import leoNodes"+
+"\n"+
+"\n    val = v.computeIcon()"+
+"\n    assert(0 &lt;= val &lt;= 15)"+
+"\n    return '&quot;icons/box%02d.GIF&quot;' % val","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(55,53,56,"createHTML","def createHTML():"+
+"\n    "+
+"\n    global f,fileName"+
+"\n    try:"+
+"\n        f = open(fileName,'w')"+
+"\n    except:"+
+"\n        f = None"+
+"\n        "+
+"\n    if f is None:"+
+"\n        es(&quot;can not open: &quot; + fileName)"+
+"\n        return"+
+"\n        "+
+"\n    if 1: # allow framesets."+
+"\n        write('&lt;!DOCTYPE html PUBLIC %s %s>' % ("+
+"\n            &quot;-//W3C//DTD HTML 4.0 Frameset//EN&quot;,"+
+"\n            &quot;http://www.w3.org/TR/REC-html40/frameset.dtd&quot;))"+
+"\n    else: # strict."+
+"\n        write('&lt;!DOCTYPE html PUBLIC %s %s>' % ("+
+"\n            &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;,"+
+"\n            &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;))"+
+"\n        "+
+"\n    "+
+"\n    write('&lt;html>')"+
+"\n    writeHead()"+
+"\n    writeBody()"+
+"\n    write('&lt;/html>')"+
+"\n"+
+"\n    f.close()","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(56,53,57,"escape","@"+
+"\nEscapes backslash, single and double quotes and '&lt;'."+
+"\nThe '%' character is not esacped at present."+
+"\nControl characters are not escaped at present."+
+"\n"+
+"\nThis routine is itself a good test of whether escape sequences are handled correctly."+
+"\n@c"+
+"\n    "+
+"\ndef escape(s):"+
+"\n    "+
+"\n    &quot;&quot;&quot;Perform javascript and html escapes on sting s.&quot;&quot;&quot;"+
+"\n"+
+"\n    newline = ("+
+"\n        '&quot;'  + # end the string contant"+
+"\n        '+'  + # javascript plus"+
+"\n        '\\n' + # go to next line"+
+"\n        '&quot;'  + # start next string"+
+"\n        '\\\\n') # newline in string"+
+"\n"+
+"\n    s = s.replace('&amp;',&quot;&amp;amp;&quot;) # Do this first so inserted '&amp;' don't get replaced."+
+"\n    s = s.replace('&quot;',&quot;&amp;quot;&quot;) # No trailing e!"+
+"\n    s = s.replace('&lt;',&quot;&amp;lt;&quot;)"+
+"\n    s = s.replace('\\\\',&quot;\\\\\\\\&quot;)"+
+"\n    s = s.replace('\\n',newline)"+
+"\n    s = s.replace('\\t',&quot; &quot;*4) # 4-space tabs"+
+"\n    "+
+"\n    return '&quot;%s&quot;' % s # Enclose everything in double quotes."+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(57,53,58,"writeHead","def writeHead():"+
+"\n"+
+"\n    global fileName"+
+"\n"+
+"\n    write('&lt;head>')"+
+"\n    write('&lt;title>%s&lt;/title>' % shortFileName(fileName))"+
+"\n    write('&lt;link rel=&quot;StyleSheet&quot; href=&quot;dtree.css&quot; type=&quot;text/css&quot; />')"+
+"\n    write('&lt;script type=&quot;text/javascript&quot; src=&quot;dtree.js&quot;>&lt;/script>')"+
+"\n    write('&lt;/head>')","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(58,53,59,"writeBody","def writeBody():"+
+"\n    "+
+"\n    global fileName"+
+"\n"+
+"\n    write('&lt;h2>%s&lt;/h2>' % shortFileName(fileName))"+
+"\n    "+
+"\n    write('&lt;div class=&quot;dtree&quot;>')"+
+"\n    write('&lt;p>')"+
+"\n    write('&lt;a href=&quot;javascript: d.openAll();&quot;>open all&lt;/a> |')"+
+"\n    write('&lt;a href=&quot;javascript: d.closeAll();&quot;>close all&lt;/a>')"+
+"\n    write('&lt;/p>')"+
+"\n"+
+"\n    write('&lt;p>Notes...&lt;br>')"+
+"\n    write('- This page &amp; scripts have been tested only on IE 6 running on XP.&lt;br>')"+
+"\n    write('- This demo does not support syntax coloring. The real Leo does.&lt;br>')"+
+"\n    write(&quot;- Use UTF-8 encoding in the browser to view all special characters.&lt;br>&quot;)"+
+"\n    write(&quot;- To do: put outline in an iFrame element so its size won't change.&lt;/p>&quot;)"+
+"\n    "+
+"\n    write('&lt;script type=&quot;text/javascript&quot;>')"+
+"\n    writeOutlineDef()"+
+"\n    write('&lt;/script>')"+
+"\n    "+
+"\n    write('&lt;/div>')"+
+"\n"+
+"\n","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(59,53,61,"writeOutlineDef","def writeOutlineDef():"+
+"\n    "+
+"\n    c = top()"+
+"\n"+
+"\n    # Assign pid's."+
+"\n    v = c.rootVnode()"+
+"\n    id = 1 # The dummy root has id 0."+
+"\n    while (v):"+
+"\n        v.pid = id ; id += 1"+
+"\n        v = v.threadNext()"+
+"\n    "+
+"\n    write('d = new dTree(&quot;d&quot;)')"+
+"\n    "+
+"\n    url = escape(fileName)"+
+"\n"+
+"\n    # Write the dummy root."+
+"\n    write('d.addv(%s,%s,%s,%s,%s,%s,%s,%s)' % ("+
+"\n        0,-1,-1,'&quot;root&quot;','&quot;root body&quot;',url,&quot;null&quot;,&quot;false&quot;))"+
+"\n"+
+"\n    v = c.rootVnode()"+
+"\n    while(v):"+
+"\n        &lt;&lt; generate a call to d.addv to describe v >>"+
+"\n        v = v.threadNext()"+
+"\n"+
+"\n    write('document.write(d)')","c:/prog/showLeo/leoDHTML.html","icons/box03.GIF",1)
+d.addv(60,59,-1,"&lt;&lt; generate a call to d.addv to describe v >>","@"+
+"\nRather than trying to generate data from the actual .leo file"+
+"\nthis code simply generates calls to d.addv by brute force."+
+"\n@c"+
+"\n"+
+"\np = v.parent() ; n = v.next()"+
+"\np_pid, n_pid = 0,-1 # Use dummy root for the parent by default."+
+"\nif p: p_pid = p.pid"+
+"\nif n: n_pid = n.pid"+
+"\nhead = escape(v.headString())"+
+"\nbody = escape(v.bodyString())"+
+"\nicon = chooseIcon(v)"+
+"\nexpanded=choose(v.isExpanded(),'1','0')"+
+"\nwrite('d.addv(%s,%s,%s,%s,%s,%s,%s,%s)' % ("+
+"\n    v.pid,p_pid,n_pid,head,body,url,icon,expanded))","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+d.addv(61,53,-1,"write","def write(s):"+
+"\n    "+
+"\n    global f"+
+"\n"+
+"\n    s = toEncodedString(s,&quot;UTF-8&quot;) # app.config.default_derived_file_encoding)"+
+"\n    f.write(s + '\\n')","c:/prog/showLeo/leoDHTML.html","icons/box01.GIF",0)
+document.write(d)
+</script>
+</div>
+</html>

@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.3.10: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*ORIGINAL GOODGER + changes; up to line 224 it's standard reST stylesheet
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:date: $Date: 2004/07/09 14:03:05 $
+:version: $Revision: 1.1 $
+:copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+*/
+
+.first {
+  margin-top: 0 }
+
+.last {
+  margin-bottom: 0 }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+dd {
+  margin-bottom: 0.5em }
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.attention, div.caution, div.danger, div.error, div.hint,
+div.important, div.note, div.tip, div.warning, div.admonition {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.hint p.admonition-title, div.important p.admonition-title,
+div.note p.admonition-title, div.tip p.admonition-title,
+div.admonition p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em }
+
+div.footer, div.header {
+  font-size: smaller }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 0em 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.line-block {
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;}
+  /*background-color: #eeeeee }*/
+  /*for some reason i can't overide in an import*/
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.option-argument {
+  font-style: italic }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+table {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.citation {
+  border-left: solid thin gray ;
+  padding-left: 0.5ex }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.footnote {
+  border-left: solid thin black ;
+  padding-left: 0.5ex }
+
+td, th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+th.docinfo-name, th.field-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap }
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+  font-size: 100% }
+
+/*for some reason, the following isn't being overridden by the imports
+at the end of this style sheet so I've commented it out*/
+/*tt {
+  background-color: #eeeeee }*/
+
+ul.auto-toc {
+  list-style-type: none }
+  
+hr { /* EKR */
+  width: 100%;
+  height: 1pt;
+  color: gray;
+}
+  
+@import url(leo_rst.css);
+@import url(silver_city.css);
+
+
+</style>
+</head>
+<body>
+<div class="document">
+<!-- rst3: filename: html\customizing.html -->
+<p><a class="reference" href="scripting.html"><img alt="back" src="arrow_lt.gif" /></a> <a class="reference" href="front.html"><img alt="leo" src="leo.gif" /></a> <a class="reference" href="history.html"><img alt="next" src="arrow_rt.gif" /></a></p>
+<div class="section" id="chapter-8-customizing-leo">
+<h1><a class="toc-backref" href="#id1" name="chapter-8-customizing-leo">Chapter 8: Customizing Leo</a></h1>
+<p>This chapter discusses how to customize Leo using the plugins and other means.
+See <a class="reference" href="commands.html#specifying-settings">Specifying settings</a> for a description of how to change Leo's settings.
+The scripting plugin (<tt class="docutils literal"><span class="pre">mod_scripting.py</span></tt>) deserves special mention. This
+plugin lets you create <strong>script buttons</strong> in a matter of seconds. See <a class="reference" href="#creating-script-buttons">Creating
+script buttons</a>. Script buttons are extraordinarily useful. Try them, you'll be
+instantly hooked.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#chapter-8-customizing-leo" id="id1" name="id1">Chapter 8: Customizing Leo</a><ul>
+<li><a class="reference" href="#overview" id="id2" name="id2">Overview</a></li>
+<li><a class="reference" href="#creating-script-buttons" id="id3" name="id3">Creating script buttons</a></li>
+<li><a class="reference" href="#test-and-suite-nodes" id="id4" name="id4">&#64;test and &#64;suite nodes</a></li>
+<li><a class="reference" href="#important-security-warnings" id="id5" name="id5">Important security warnings</a></li>
+<li><a class="reference" href="#writing-plugins-and-hooks" id="id6" name="id6">Writing plugins and hooks</a></li>
+<li><a class="reference" href="#summary-of-hooks" id="id7" name="id7">Summary of hooks</a></li>
+<li><a class="reference" href="#convenience-routines-for-plugins" id="id8" name="id8">Convenience routines for plugins</a></li>
+<li><a class="reference" href="#support-for-unit-testing" id="id9" name="id9">Support for unit testing</a></li>
+<li><a class="reference" href="#adding-extensible-attributes-to-nodes-and-leo-files" id="id10" name="id10">Adding extensible attributes to nodes and .leo files</a></li>
+<li><a class="reference" href="#how-to-make-operations-undoable" id="id11" name="id11">How to make operations undoable</a></li>
+<li><a class="reference" href="#specifying-tk-options-using-leo-xresources" id="id12" name="id12">Specifying Tk options using .leo_xresources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- WARNING: image targets may not have upper case letters! -->
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id2" name="overview">Overview</a></h2>
+<p>A <strong>plugin</strong> is a Python file that appears in Leo's plugin directory. Plugins
+are a powerful way of enhancing and customizing Leo. The file
+<tt class="docutils literal"><span class="pre">pluginsManager.txt</span></tt> in the plugins directory controls tells which plugins are
+enabled. Midway during startup, Leo imports all enabled plugins. Plugins can
+register functions called <strong>hooks</strong> that are to be run at specified times.
+Plugins can:</p>
+<ul class="simple">
+<li>add new commands</li>
+<li>modify how existing commands work</li>
+<li>add new menus or customize existing menus.</li>
+<li>override any of Leo's core code&gt;</li>
+</ul>
+<p>Here are some important features of plugins:</p>
+<ul class="simple">
+<li>Plugins can use any of Leo's source code for their own use.
+Doing so is easy: after importing one of Leo's modules the plugin can call any routine in that module.
+This documentation describes <strong>convenience methods</strong> in Leo's core that were created the use of plugins.</li>
+<li>Plugins are permanent: they will not go away when Leo is updated.</li>
+<li>Leo loads plugins in the order in which they appear in <tt class="docutils literal"><span class="pre">pluginsManager.txt.</span></tt>
+Leo disables all plugins if <tt class="docutils literal"><span class="pre">pluginsManager.txt</span></tt> does not exist in the plugins directory.</li>
+</ul>
+</div>
+<div class="section" id="creating-script-buttons">
+<h2><a class="toc-backref" href="#id3" name="creating-script-buttons">Creating script buttons</a></h2>
+<p>Creating a script button should be your first thought whenever you want to
+automate any task. The scripting plugin, <tt class="docutils literal"><span class="pre">mod_scripting.py</span></tt>, puts two buttons
+in the icon menu, a pink <tt class="docutils literal"><span class="pre">Run</span> <span class="pre">Script</span></tt> button and a yellow <tt class="docutils literal"><span class="pre">Script</span> <span class="pre">Button</span></tt>
+button. The <tt class="docutils literal"><span class="pre">Run</span> <span class="pre">Script</span></tt> button does the same thing as the <tt class="docutils literal"><span class="pre">Execute</span> <span class="pre">Script</span></tt>
+command. The <tt class="docutils literal"><span class="pre">Script</span> <span class="pre">Button</span></tt> button is the interesting one. It creates a
+button, confusingly called a <strong>script button</strong> in the icon area. A script button
+executes a script when you push it.</p>
+<p>Suppose node N is selected. When you press the <tt class="docutils literal"><span class="pre">Script</span> <span class="pre">Button</span></tt> button a new
+(pink) script button is created. The name of the new button is N's headline
+text. The script associated with the new button is N's body text. Now whenever
+you press the new button, N's script is executed on the <strong>presently</strong> selected
+node. Script buttons are extraordinarily useful. In effect, each script button
+defines an instant command! For example, sometimes my fingers get tired of
+saving a file. I simply put <tt class="docutils literal"><span class="pre">Save</span></tt> in a node's headline and <tt class="docutils literal"><span class="pre">c.save()</span></tt> in
+the body text. I hit the <tt class="docutils literal"><span class="pre">Script</span> <span class="pre">Button</span></tt> button and I get a new button called
+<tt class="docutils literal"><span class="pre">Save</span></tt> that will save the outline when I press it.</p>
+<p>Here's a more interesting example. The following script searches the present node
+and its ancestors looking for an <tt class="docutils literal"><span class="pre">&#64;rst</span></tt> node. When such a node is found the
+script calls the <a class="reference" href="glossary.html#rst3-plugin">rst3 plugin</a> to format it. I don't have to select the actual
+<tt class="docutils literal"><span class="pre">&#64;rst</span></tt> node; I can select any of its children:</p>
+<pre class="literal-block">
+import leoPlugins
+rst3 = leoPlugins.getPluginModule('rst3')
+if rst3: # already loaded.
+    controller = rst3.controllers.get(c)
+    if controller:
+        for p in p.self_and_parents_iter():
+            if p.headString().startswith('&#64;rst '):
+                controller.processTree(p)
+                break
+else: # Just load the plugin.
+    rst3 = leoPlugins.loadOnePlugin('rst3',verbose=True)
+    if rst3:
+        g.es('rst3 loaded')
+        rst3.onCreate('tag',{'c':c})
+    else:
+        # Ask to be removed.
+        g.app.scriptDict['removeMe'] = True
+</pre>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li>The scripting plugin pre-defines the <tt class="docutils literal"><span class="pre">c</span></tt>, <tt class="docutils literal"><span class="pre">g</span></tt> and <tt class="docutils literal"><span class="pre">p</span></tt> symbols
+just as the <tt class="docutils literal"><span class="pre">Execute</span> <span class="pre">Script</span></tt> command does.</li>
+<li>By default a script button executes the <strong>present</strong> body text of the node that original created the script button.
+This is very handy: you can modify a script button's script at any time without having to recreate the script button.</li>
+<li>You can delete any script button by right-clicking on it.</li>
+<li>On startup, the scripting plugin scans the entire .leo file and creates a script button
+for every node whose headline starts with <tt class="docutils literal"><span class="pre">&#64;button</span> <span class="pre">scriptName</span></tt>.
+<strong>Warning</strong>: this is indeed a security risk of the kind discussed later.
+This feature can be disabled by setting <tt class="docutils literal"><span class="pre">atButtonNodes</span> <span class="pre">=</span> <span class="pre">True</span></tt> at the start of <tt class="docutils literal"><span class="pre">mod_scripting.py</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="test-and-suite-nodes">
+<h2><a class="toc-backref" href="#id4" name="test-and-suite-nodes">&#64;test and &#64;suite nodes</a></h2>
+<p><tt class="docutils literal"><span class="pre">&#64;test</span></tt> and <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes are a major advance in unit testing. Such nodes
+have headlines that start with <tt class="docutils literal"><span class="pre">&#64;test</span></tt> or <tt class="docutils literal"><span class="pre">&#64;suite</span></tt>. The file <tt class="docutils literal"><span class="pre">test.leo</span></tt>
+contains many examples of <tt class="docutils literal"><span class="pre">&#64;test</span></tt> and <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes. <tt class="docutils literal"><span class="pre">&#64;test</span></tt> and
+<tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes are a direct outgrowth of script buttons. The <tt class="docutils literal"><span class="pre">unit</span> <span class="pre">test</span></tt>
+script button in <tt class="docutils literal"><span class="pre">test.leo</span></tt> scans the selected outline, creating one unit test
+for each <tt class="docutils literal"><span class="pre">test</span></tt> node and zero or more unit tests for each <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> node. The
+<tt class="docutils literal"><span class="pre">unit</span> <span class="pre">test</span></tt> script then runs all the selected unit tests.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes</dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes create a single unit test from the script in its body
+<strong>without having to create a subclass of unittest.TestCase</strong>.
+For example, here is a complete unit test.  The headline is:</p>
+<pre class="literal-block">
+&#64;test p.t == p.v.t
+</pre>
+<p>The body text is:</p>
+<pre class="literal-block">
+# NOTE: p.__getattr__ must be enabled for this test to work.
+root = c.rootPosition()
+for p in root.allNodes_iter():
+    assert(p.t == p.v.t)
+</pre>
+<p><strong>That's all!</strong> The headline marks the node as containing a unit test.
+The body text contains the meat of the test.  No cruft at all!</p>
+<p class="last"><strong>Notes</strong>: The unit tests created from <tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes define <tt class="docutils literal"><span class="pre">setUp</span></tt> and
+<tt class="docutils literal"><span class="pre">tearDown</span></tt> methods. These methods ensure that the script being executed is
+the presently selected node. The scripts in <tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes can not override
+the <tt class="docutils literal"><span class="pre">setUp</span></tt> and <tt class="docutils literal"><span class="pre">tearDown</span></tt> methods. In practice, this is not a problem
+because the scripts in <tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes are typically very simple. Such
+scripts can use try/finally if they need to clean up after themselves.
+Scripts in <tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes often assume that descendant nodes hold test
+data. Scripts in <tt class="docutils literal"><span class="pre">&#64;test</span></tt> nodes can generally define and use sections, but
+scripts may not use the <tt class="docutils literal"><span class="pre">&#64;others</span></tt> directive if descendant nodes hold
+data.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes</dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">&#64;suite</span></tt> are an easy way to run legacy unit tests. The <tt class="docutils literal"><span class="pre">Unit</span> <span class="pre">Test</span></tt>
+button assumes that the body text of an <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> node is a script that
+creates a test suite and leaves the result in <tt class="docutils literal"><span class="pre">g.app.scriptDict['suite']</span></tt>.
+<tt class="docutils literal"><span class="pre">test.leo</span></tt> several examples of <tt class="docutils literal"><span class="pre">&#64;suite</span> <span class="pre">nodes</span></tt>.
+Here is an <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> node that executes all doctests in Leo's sources.
+The headline is:</p>
+<pre class="literal-block">
+&#64;suite run all doctests
+</pre>
+<p>The body text is:</p>
+<pre class="literal-block">
+import unittest
+import leoTest
+import sys
+
+# DocTestSuite exists in Python 2.3 and above.
+if g.CheckVersion(sys.version, &quot;2.3&quot;):
+    path = g.os_path_join(g.app.loadDir,&quot;..&quot;,&quot;src&quot;)
+    modules = leoTest.importAllModulesInPath(path)
+    suite = leoTest.createUnitTestsFromDoctests(modules)                     
+    if suite:
+        g.app.scriptDict['suite'] = suite
+else:
+    # Create an empty suite to suppress a warning.
+    g.app.scriptDict['suite'] = unittest.TestSuite()
+    print &quot;Can't create unit tests from doctests&quot;
+    print &quot;doctest.DocTestSuite requires Python 2.3 or above.&quot;
+</pre>
+<p>The real work of creating the test suites is done by
+<tt class="docutils literal"><span class="pre">leoTest.createUnitTestsFromDoctests</span></tt>.
+<strong>Important</strong>: if the suite was created successfully, the script must pass the suite
+to script in the <tt class="docutils literal"><span class="pre">unit</span> <span class="pre">test</span></tt> script button by as follows:</p>
+<pre class="last literal-block">
+g.app.scriptDict['suite'] = suite
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">&#64;button</span> <span class="pre">unit</span> <span class="pre">test</span></tt></dt>
+<dd><p class="first">The script in the <tt class="docutils literal"><span class="pre">Unit</span> <span class="pre">Test</span></tt> script button in <tt class="docutils literal"><span class="pre">test.leo</span></tt> is just:</p>
+<pre class="literal-block">
+import leoTest
+leoTest.doTests(all=False)
+</pre>
+<p class="last"><tt class="docutils literal"><span class="pre">test.leo</span></tt> defines the <tt class="docutils literal"><span class="pre">leoTest</span></tt> module. The <tt class="docutils literal"><span class="pre">doTests</span></tt> function is the
+code that supports <tt class="docutils literal"><span class="pre">&#64;test</span></tt> and <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes. <strong>Important</strong>: you could
+customize how <tt class="docutils literal"><span class="pre">&#64;test</span></tt> and <tt class="docutils literal"><span class="pre">&#64;suite</span></tt> nodes work by using your own script
+in the <tt class="docutils literal"><span class="pre">&#64;button</span> <span class="pre">unit</span> <span class="pre">test</span></tt> node.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="important-security-warnings">
+<h2><a class="toc-backref" href="#id5" name="important-security-warnings">Important security warnings</a></h2>
+<p>Naively using plugins can expose you and your .leo files to malicious attacks.
+The fundamental principles are:</p>
+<pre class="literal-block">
+Scripts and plugins must never blindly execute code from untrusted sources.
+</pre>
+<p>and:</p>
+<pre class="literal-block">
+.leo files obtained from other people may potentially contain hostile code.
+</pre>
+<p>Stephen Schaefer summarizes the danger this way:</p>
+<pre class="literal-block">
+I foresee a future in which the majority of leo projects come from
+marginally trusted sources...a world of leo documents sent hither and yon -
+resumes, project proposals, textbooks, magazines, contracts - and as a race
+of Pandora's, we cannot resist wanting to see &quot;What's in the box?&quot; And are
+we going to fire up a text editor to make a detailed examination of the
+ASCII XML? Never! We're going to double click on the cute leo file icon, and
+leo will fire up in all its raging glory. Just like Word (and its macros) or
+Excel (and its macros).
+</pre>
+<p>In other words:</p>
+<pre class="literal-block">
+When we share &quot;our&quot; .leo files we can NOT assume that
+we know what is in our &quot;own&quot; documents!
+</pre>
+<p>Not all environments are untrustworthy. Code in a commercial cvs repository is
+probably trustworthy: employees might be terminated for posting malicious code.
+Still, the potential for abuse exists anywhere.</p>
+<p>In Python it is very easy to write a script that will blindly execute other scripts:</p>
+<pre class="literal-block">
+# Warning: extremely dangerous code
+
+# Execute the body text of all nodes that start with `&#64;script`.
+def onLoadFile():
+    for p in c.allNodes_iter():
+        h = p.headString().lower()
+        if g.match_word(h,0,&quot;&#64;script&quot;):
+            s = p.bodyString()
+            if s and len(s) &gt; 0:
+                try: # SECURITY BREACH: s may be malicious!
+                    exec(s + '\n')
+                except:
+                    es_exception()
+</pre>
+<p>Executing this kind of code is typically an intolerable security risk.
+<strong>Important</strong>: rexec provides <em>no protection whatever</em>.
+Leo is a repository of source code, so any text operation is potentially malicious.
+For example, consider the following script, which is valid in rexec mode:</p>
+<pre class="literal-block">
+badNode = c.currentPosition()
+for p in c.allNodes_iter():
+    &lt;&lt; change `rexec` to `exec` in p's body &gt;&gt;
+&lt;&lt; delete badNode &gt;&gt;
+&lt;&lt; clear the undo stack &gt;&gt;
+</pre>
+<p>This script will introduce a security hole the .leo file without doing anything
+prohibited by rexec, and without leaving any traces of the perpetrating script
+behind. The damage will become permanent <em>outside</em> this script when the user
+saves the .leo file.</p>
+</div>
+<div class="section" id="writing-plugins-and-hooks">
+<h2><a class="toc-backref" href="#id6" name="writing-plugins-and-hooks">Writing plugins and hooks</a></h2>
+<p><tt class="docutils literal"><span class="pre">leoPlugins.leo</span></tt> contains all of Leo's official hooks. Studying this file is
+the best way to learn how to write plugins.  This section discusses just a few details.</p>
+<p>Leo attempts to import all enabled plugins at startup time.
+Plugins register hooks with code such as:</p>
+<pre class="literal-block">
+leoPlugins.registerHandler(&quot;after-create-leo-frame&quot;,onCreate)
+leoPlugins.registerHandler(&quot;idle&quot;, on_idle) 
+leoPlugins.registerHandler((&quot;start2&quot;,&quot;open2&quot;,&quot;command2&quot;), create_open_with_menu) 
+</pre>
+<p>As shown above, a plugin may register one or more hooks with a single call to
+<tt class="docutils literal"><span class="pre">leoPlugins.registerHandler</span></tt>. Once a hook is registered, Leo will call the
+registered function' at the named <strong>hook time</strong>. For example:</p>
+<pre class="literal-block">
+leoPlugins.registerHandler(&quot;idle&quot;, on_idle)
+</pre>
+<p>causes Leo to call <tt class="docutils literal"><span class="pre">on_idle</span></tt> at &quot;idle&quot; time.</p>
+<p>Hook functions must have the following signature:</p>
+<pre class="literal-block">
+def myHook (tag, keywords):
+    whatever
+</pre>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">tag</span></tt> is the name of the hook (a string).</li>
+<li><tt class="docutils literal"><span class="pre">keywords</span></tt> is a Python dictionary containing additional information.
+The following section describes the contents of the <tt class="docutils literal"><span class="pre">keywords</span></tt> dictionary in detail.</li>
+</ul>
+<p><strong>Important</strong>: hooks should get the proper commander this way:</p>
+<pre class="literal-block">
+c = keywords.get('c')
+</pre>
+<p>In particular, using <tt class="docutils literal"><span class="pre">g.top</span></tt> to get the commander is wrong;
+the proper commander may not be the topmost window!</p>
+</div>
+<div class="section" id="summary-of-hooks">
+<h2><a class="toc-backref" href="#id7" name="summary-of-hooks">Summary of hooks</a></h2>
+<p>Leo's core defines hook times using in many places. The following table tell all
+about each hook: its name, when it is called, and the additional arguments
+passed to the hook in the <tt class="docutils literal"><span class="pre">keywords</span></tt> dictionary. For some kind of hooks, Leo
+will skip its own normal processing if the hook returns anything <em>other</em> than
+None. The table indicates such hooks with 'yes' in the 'Stop?' column.</p>
+<p><strong>Important</strong>: Ever since Leo 4.2, the <tt class="docutils literal"><span class="pre">v</span></tt>, <tt class="docutils literal"><span class="pre">old_v</span></tt> and <tt class="docutils literal"><span class="pre">new_v</span></tt> keys in
+the keyword dictionary contain <em>positions</em>, not vnodes. These keys are
+deprecated. The <tt class="docutils literal"><span class="pre">new_c</span></tt> key is also deprecated. Plugins should use the <tt class="docutils literal"><span class="pre">c</span></tt> key instead.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="7%" />
+<col width="30%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Hook name (tag argument)</th>
+<th class="head">Stop?</th>
+<th class="head">When called</th>
+<th class="head">Keys in keywords dict</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>'after-create-leo-frame'</td>
+<td>&nbsp;</td>
+<td>after creating any frame</td>
+<td>c</td>
+</tr>
+<tr><td>'after-redraw-outline'</td>
+<td>&nbsp;</td>
+<td>end of tree.redraw</td>
+<td>c (note 6)</td>
+</tr>
+<tr><td>'before-create-leo-frame'</td>
+<td>&nbsp;</td>
+<td>before frame.finishCreate</td>
+<td>c</td>
+</tr>
+<tr><td>'bodyclick1'</td>
+<td>yes</td>
+<td>before normal click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'bodyclick2'</td>
+<td>&nbsp;</td>
+<td>after normal click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'bodydclick1'</td>
+<td>yes</td>
+<td>before double click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'bodydclick2'</td>
+<td>&nbsp;</td>
+<td>after  double click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'bodykey1'</td>
+<td>yes</td>
+<td>before body keystrokes</td>
+<td>c,p,v,ch,oldSel,undoType</td>
+</tr>
+<tr><td>'bodykey2'</td>
+<td>&nbsp;</td>
+<td>after  body keystrokes</td>
+<td>c,p,v,ch,oldSel,undoType</td>
+</tr>
+<tr><td>'bodyrclick1'</td>
+<td>yes</td>
+<td>before right click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'bodyrclick2'</td>
+<td>&nbsp;</td>
+<td>after  right click in body</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'boxclick1'</td>
+<td>yes</td>
+<td>before click in +- box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'boxclick2'</td>
+<td>&nbsp;</td>
+<td>after  click in +- box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'clear-mark'</td>
+<td>&nbsp;</td>
+<td>when mark is set</td>
+<td>c,p,v</td>
+</tr>
+<tr><td>'close-frame'</td>
+<td>&nbsp;</td>
+<td>in app.closeLeoWindow</td>
+<td>c</td>
+</tr>
+<tr><td>'color-optional-markup'</td>
+<td>yes *</td>
+<td>(note 7)</td>
+<td>colorer,p,v,s,i,j,colortag (note 7)</td>
+</tr>
+<tr><td>'command1'</td>
+<td>yes</td>
+<td>before each command</td>
+<td>c,p,v,label (note 2)</td>
+</tr>
+<tr><td>'command2'</td>
+<td>&nbsp;</td>
+<td>after  each command</td>
+<td>c,p,v,label (note 2)</td>
+</tr>
+<tr><td>'create-optional-menus'</td>
+<td>&nbsp;</td>
+<td>(note 8)</td>
+<td>c (note 8)</td>
+</tr>
+<tr><td>'create-popup-menu-items'</td>
+<td>&nbsp;</td>
+<td>in tree.OnPopup</td>
+<td>c,p,v,event (new)</td>
+</tr>
+<tr><td>'destroy-all-global-windows'</td>
+<td>&nbsp;</td>
+<td>(note 12)</td>
+<td>None</td>
+</tr>
+<tr><td>'draw-outline-box'</td>
+<td>yes</td>
+<td>when drawing +- box</td>
+<td>tree,p,v,x,y</td>
+</tr>
+<tr><td>'draw-outline-icon'</td>
+<td>yes</td>
+<td>when drawing icon</td>
+<td>tree,p,v,x,y</td>
+</tr>
+<tr><td>'draw-outline-node'</td>
+<td>yes</td>
+<td>when drawing node</td>
+<td>tree,p,v,x,y</td>
+</tr>
+<tr><td>'draw-outline-text-box'</td>
+<td>yes</td>
+<td>when drawing headline</td>
+<td>tree,p,v,x,y</td>
+</tr>
+<tr><td>'drag1'</td>
+<td>yes</td>
+<td>before start of drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'drag2'</td>
+<td>&nbsp;</td>
+<td>after  start of drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'dragging1'</td>
+<td>yes</td>
+<td>before continuing to drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'dragging2'</td>
+<td>&nbsp;</td>
+<td>after  continuing to drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'enable-popup-menu-items'</td>
+<td>&nbsp;</td>
+<td>in tree.OnPopup</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'end1'</td>
+<td>&nbsp;</td>
+<td>start of app.quit()</td>
+<td>None</td>
+</tr>
+<tr><td>'enddrag1'</td>
+<td>yes</td>
+<td>before end of drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'enddrag2'</td>
+<td>&nbsp;</td>
+<td>after  end of drag</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'headclick1'</td>
+<td>yes</td>
+<td>before normal click in headline</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'headclick2'</td>
+<td>&nbsp;</td>
+<td>after  normal click in headline</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'headrclick1'</td>
+<td>yes</td>
+<td>before right click in headline</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'headrclick2'</td>
+<td>&nbsp;</td>
+<td>after  right click in headline</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'headkey1'</td>
+<td>yes</td>
+<td>before headline keystrokes</td>
+<td>c,p,v,ch</td>
+</tr>
+<tr><td>'headkey2'</td>
+<td>&nbsp;</td>
+<td>after  headline keystrokes</td>
+<td>c,p,v,ch</td>
+</tr>
+<tr><td>'hypercclick1'</td>
+<td>yes</td>
+<td>before control click in hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'hypercclick2'</td>
+<td>&nbsp;</td>
+<td>after  control click in hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'hyperenter1'</td>
+<td>yes</td>
+<td>before entering hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'hyperenter2'</td>
+<td>&nbsp;</td>
+<td>after  entering hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'hyperleave1'</td>
+<td>yes</td>
+<td>before leaving  hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'hyperleave2'</td>
+<td>&nbsp;</td>
+<td>after  leaving  hyperlink</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'iconclick1'</td>
+<td>yes</td>
+<td>before single click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'iconclick2'</td>
+<td>&nbsp;</td>
+<td>after  single click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'iconrclick1'</td>
+<td>yes</td>
+<td>before right click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'iconrclick2'</td>
+<td>&nbsp;</td>
+<td>after  right click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'icondclick1'</td>
+<td>yes</td>
+<td>before double click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'icondclick2'</td>
+<td>&nbsp;</td>
+<td>after  double click in icon box</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'idle'</td>
+<td>&nbsp;</td>
+<td>periodically (at idle time)</td>
+<td>c</td>
+</tr>
+<tr><td>'init-color-markup'</td>
+<td>&nbsp;</td>
+<td>(note 7)</td>
+<td>colorer,p,v (note 7)</td>
+</tr>
+<tr><td>'menu1'</td>
+<td>yes</td>
+<td>before creating menus</td>
+<td>c,p,v (note 3)</td>
+</tr>
+<tr><td>'menu2'</td>
+<td>yes</td>
+<td>before updating menus</td>
+<td>c,p,v</td>
+</tr>
+<tr><td>'new'</td>
+<td>&nbsp;</td>
+<td>start of New command</td>
+<td>c,old_c,new_c (note 9)</td>
+</tr>
+<tr><td>'open1'</td>
+<td>yes</td>
+<td>before opening any file</td>
+<td>c,old_c,new_c,fileName (note 4)</td>
+</tr>
+<tr><td>'open2'</td>
+<td>&nbsp;</td>
+<td>after  opening any file</td>
+<td>c,old_c,new_c,fileName (note 4)</td>
+</tr>
+<tr><td>'openwith1'</td>
+<td>yes</td>
+<td>before Open With command</td>
+<td>c,p,v,openType,arg,ext</td>
+</tr>
+<tr><td>'openwith2'</td>
+<td>&nbsp;</td>
+<td>after  Open With command</td>
+<td>c,p,v,openType,arg,ext</td>
+</tr>
+<tr><td>'recentfiles1'</td>
+<td>yes</td>
+<td>before Recent Files command</td>
+<td>c,p,v,fileName,closeFlag</td>
+</tr>
+<tr><td>'recentfiles2'</td>
+<td>&nbsp;</td>
+<td>after  Recent Files command</td>
+<td>c,p,v,fileName,closeFlag</td>
+</tr>
+<tr><td>'redraw-entire-outline'</td>
+<td>yes</td>
+<td>start of tree.redraw</td>
+<td>c (note 6)</td>
+</tr>
+<tr><td>'save1'</td>
+<td>yes</td>
+<td>before any Save command</td>
+<td>c,p,v,fileName</td>
+</tr>
+<tr><td>'save2'</td>
+<td>&nbsp;</td>
+<td>after  any Save command</td>
+<td>c,p,v,fileName</td>
+</tr>
+<tr><td>'scan-directives'</td>
+<td>&nbsp;</td>
+<td>in scanDirectives</td>
+<td>c,p,v,s,old_dict,dict,pluginsList (note 10)</td>
+</tr>
+<tr><td>'select1'</td>
+<td>yes</td>
+<td>before selecting a position</td>
+<td>c,new_p,old_p,new_v,new_v</td>
+</tr>
+<tr><td>'select2'</td>
+<td>&nbsp;</td>
+<td>after  selecting a position</td>
+<td>c,new_p,old_p,new_v,old_v</td>
+</tr>
+<tr><td>'select3'</td>
+<td>&nbsp;</td>
+<td>after  selecting a position</td>
+<td>c,new_p,old_p,new_v,old_v</td>
+</tr>
+<tr><td>'set-mark'</td>
+<td>&nbsp;</td>
+<td>when a mark is set</td>
+<td>c,p,v</td>
+</tr>
+<tr><td>'show-popup-menu'</td>
+<td>&nbsp;</td>
+<td>in tree.OnPopup</td>
+<td>c,p,v,event</td>
+</tr>
+<tr><td>'start1'</td>
+<td>&nbsp;</td>
+<td>after app.finishCreate()</td>
+<td>None</td>
+</tr>
+<tr><td>'start2'</td>
+<td>&nbsp;</td>
+<td>after opening first Leo window</td>
+<td>c,p,v,fileName</td>
+</tr>
+<tr><td>'unselect1'</td>
+<td>yes</td>
+<td>before unselecting a vnode</td>
+<td>c,new_p,old_p,new_v,old_v</td>
+</tr>
+<tr><td>'unselect2'</td>
+<td>&nbsp;</td>
+<td>after  unselecting a vnode</td>
+<td>c,new_p,old_p,old_v,old_v</td>
+</tr>
+<tr><td>'&#64;url1'</td>
+<td>yes</td>
+<td>before double-click &#64;url node</td>
+<td>c,p,v,url (note 5)</td>
+</tr>
+<tr><td>'&#64;url2'</td>
+<td>&nbsp;</td>
+<td>after  double-click &#64;url node</td>
+<td>c,p,v(note 5)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ol class="arabic">
+<li><p class="first">'activate' and 'deactivate' hooks have been removed because they do not work as expected.</p>
+</li>
+<li><p class="first">'commands' hooks: The label entry in the keywords dict contains the
+'canonicalized' form of the command, that is, the lowercase name of the command
+with all non-alphabetic characters removed.
+Commands hooks now set the label for undo and redo commands 'undo' and 'redo'
+rather than 'cantundo' and 'cantredo'.</p>
+</li>
+<li><p class="first">'menu1' hook: Setting <tt class="docutils literal"><span class="pre">g.app.realMenuNameDict</span></tt> in this hook is an easy way of
+translating menu names to other languages. <strong>Note</strong>: the 'new' names created this
+way affect only the actual spelling of the menu items, they do <em>not</em> affect how
+you specify shortcuts settings, nor do they affect the 'official'
+command names passed in <tt class="docutils literal"><span class="pre">g.app.commandName</span></tt>. For example:</p>
+<pre class="literal-block">
+app().realMenuNameDict['Open...'] = 'Ouvre'.
+</pre>
+</li>
+<li><p class="first">'open1' and 'open2' hooks: These are called with a keywords dict containing the following entries:</p>
+<ul class="simple">
+<li>c:          The commander of the newly opened window.</li>
+<li>old_c:      The commander of the previously open window.</li>
+<li>new_c:      (deprecated: use 'c' instead) The commander of the newly opened window.</li>
+<li>fileName:   The name of the file being opened.</li>
+</ul>
+<p>You can use <tt class="docutils literal"><span class="pre">old_c.currentPosition()</span></tt> and <tt class="docutils literal"><span class="pre">c.currentPosition()</span></tt> to get the current
+position in the old and new windows.
+Leo calls the 'open1' and 'open2' hooks only if the file is not already open. Leo
+will also call the 'open1' and 'open2' hooks if: a) a file is opened using the
+Recent Files menu and b) the file is not already open.</p>
+</li>
+<li><p class="first">'&#64;url1' and '&#64;url2' hooks are only executed if the 'icondclick1' hook returns None.</p>
+</li>
+<li><p class="first">These hooks are useful for testing.</p>
+</li>
+<li><p class="first">These hooks allow plugins to parse and handle markup within doc parts,
+comments and Python <tt class="docutils literal"><span class="pre">'''</span></tt> strings. Note that these hooks are <em>not</em> called in
+Python <tt class="docutils literal"><span class="pre">'''</span></tt> strings. See the color_markup plugin for a complete example of how to
+use these hooks.</p>
+</li>
+<li><p class="first">Leo calls the 'create-optional-menus' hook when creating menus. This hook need
+only create new menus in the correct order, without worrying about the placement
+of the menus in the menu bar. See the plugins_menu and scripts_menu plugins for
+examples of how to use this hook.</p>
+</li>
+<li><p class="first">The <tt class="docutils literal"><span class="pre">New</span></tt> command calls 'new'.
+The 'new_c' key is deprecated.  Use the 'c' key instead.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">g.scanDirectives</span></tt> calls 'scan-directives' hook.
+<tt class="docutils literal"><span class="pre">g.scanDirectives</span></tt> returns a dictionary, say d.
+d.get('pluginsList') is an a list of tuples <tt class="docutils literal"><span class="pre">(d,v,s,k)</span></tt> where:</p>
+<ul class="simple">
+<li>d is the spelling of the &#64;directive, without the leading &#64;.</li>
+<li>v is the vnode containing the directive, _not_ the original vnode.</li>
+<li>s[k:] is a string containing whatever follows the &#64;directive.
+k has already been moved past any whitespace that follows the &#64;directive.</li>
+</ul>
+<p>See the add_directives plugins directive for a complete example of how to use
+the 'scan-directives' hook.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">g.app.closeLeoWindow</span></tt> calls the 'close-frame' hook just before
+removing the window from <tt class="docutils literal"><span class="pre">g.app.windowList</span></tt>. The hook code may remove the window
+from <tt class="docutils literal"><span class="pre">app.windowList</span></tt> to prevent <tt class="docutils literal"><span class="pre">g.app.closeLeoWindow</span></tt> from destroying the window.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">g.app.destroyAllGlobalWindows</span></tt> calls the 'destroy-all-global-windows' hook.
+This hook gives plugins the chance to clean up after themselves when Leo shuts down.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="convenience-routines-for-plugins">
+<h2><a class="toc-backref" href="#id8" name="convenience-routines-for-plugins">Convenience routines for plugins</a></h2>
+<p>The following methods exist for the convenience of plugins.</p>
+<p><strong>g.enableIdleTimeHook(idleTimeDelay=100)</strong></p>
+<p>Enables the &quot;idle&quot; hook. Afterwards, Leo will call the &quot;idle&quot; hook approximately every idleTimeDelay milliseconds.
+Leo will continue to call the &quot;idle&quot; hook periodically until <tt class="docutils literal"><span class="pre">disableIdleTimeHook</span></tt> is called.</p>
+<p><strong>g.disableIdleTimeHook()</strong></p>
+<p>Disables the &quot;idle&quot; hook.</p>
+<p><strong>c.frame.createMenuItemsFromTable (self,menuName,table,openWith=0)</strong></p>
+<p>This method adds items to the menu whose name is menuName.
+The table argument describes the entries to be created.
+This table is a sequence of items of the form <tt class="docutils literal"><span class="pre">(name,shortcut,command)</span></tt>:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">name</span></tt> is the command name.</li>
+<li><tt class="docutils literal"><span class="pre">shortcut</span></tt> is the shortcut, or`` None`` to indicate no shortcut.</li>
+<li><tt class="docutils literal"><span class="pre">command</span></tt> is the routine to execute when the menu item is selected.</li>
+<li>An entry of the form <tt class="docutils literal"><span class="pre">(&quot;-&quot;,None,None)</span></tt> creates a separator line between menu items.</li>
+</ul>
+<p>For example:</p>
+<pre class="literal-block">
+table =
+    (&quot;Toggle Active Pane&quot;,&quot;Ctrl-T&quot;,self.OnToggleActivePane),
+    (&quot;-&quot;,None,None),
+    (&quot;Toggle Split Direction&quot;,None,self.OnToggleSplitDirection))
+c.frame.createMenuItemsFromTable(&quot;Window&quot;,table)
+</pre>
+<p>If the <tt class="docutils literal"><span class="pre">openWith</span></tt> keyword argument is 1 the items are added to a submenu of the Open With menu.
+However, it will be more convenient to use the <tt class="docutils literal"><span class="pre">createOpenWithMenuFromTable</span></tt> method to create the <tt class="docutils literal"><span class="pre">Open</span> <span class="pre">With</span></tt> menu.</p>
+<p><strong>c.frame.createNewMenu (self,menuName,parentName=&quot;top&quot;)</strong></p>
+<p>This method creates a new menu:</p>
+<ul class="simple">
+<li>menuName is the name of the menu to be created.</li>
+<li>parentName is the name of the parent menu, or &quot;top&quot; if the menu is to created in the menu bar.</li>
+</ul>
+<p>This method returns the menu object that was created, or None if there was a problem.
+Your code need not remember the value returned by this method.  Instead, your code will refer to menus by name.</p>
+<p><strong>c.frame.createOpenWithMenuFromTable (self,table)</strong></p>
+<p>This method adds items to submenu of the <tt class="docutils literal"><span class="pre">Open</span> <span class="pre">With</span></tt> menu item in the <tt class="docutils literal"><span class="pre">File</span></tt> menu.
+The table argument describes the entries to be created.
+This table is a sequence of items of the form <tt class="docutils literal"><span class="pre">(name,shortcut,data)</span></tt>:</p>
+<ul class="simple">
+<li>name is the command name</li>
+<li>shortcut is the shortcut, or None to indicate no shortcut.</li>
+<li>data is a tuple of the form (command,arg,ext)</li>
+<li>command is one of &quot;os.system&quot;, &quot;os.startfile&quot;, &quot;os.spawnl&quot;, &quot;os.spawnv&quot; or &quot;exec&quot;.</li>
+<li>arg is an argument to be passed to the given command.</li>
+<li>ext is a file extension or None.</li>
+</ul>
+<p>When the user selects the <tt class="docutils literal"><span class="pre">Open</span> <span class="pre">With</span></tt> item corresponding to the table item Leo executes <tt class="docutils literal"><span class="pre">command(arg)</span></tt>.
+If <tt class="docutils literal"><span class="pre">ext</span></tt> is not <tt class="docutils literal"><span class="pre">None</span></tt>, the temp file has the given extension.
+Otherwise, Leo computes an extension based on what <tt class="docutils literal"><span class="pre">&#64;language</span></tt> directive is in effect.
+For example:</p>
+<pre class="literal-block">
+table = (
+    (&quot;Idle&quot;,   &quot;Alt+Shift+I&quot;,(&quot;os.system&quot;,idle_arg,&quot;.py&quot;)),
+    (&quot;Word&quot;,   &quot;Alt+Shift+W&quot;,(&quot;os.startfile&quot;,None,&quot;.doc&quot;)),
+    (&quot;Wordpad&quot;,&quot;Alt+Shift+T&quot;,(&quot;os.startfile&quot;,None,&quot;.txt&quot;)))
+
+top().frame.createOpenWithMenuFromTable(table)
+</pre>
+<p><strong>c.frame.deleteMenu (self,menuName)</strong></p>
+<p>Deletes the menu whose name is given, including all entries in the menu.</p>
+<p><strong>c.frame.deleteMenuItem (self,itemName,menuName=&quot;top&quot;)</strong></p>
+<p>Deletes the item whose name is itemName from the menu whose name is menuName.
+To delete a menu in the menubar, specify <tt class="docutils literal"><span class="pre">menuName=&quot;top&quot;</span></tt>.</p>
+<p><strong>c.frame.menu.setRealMenuNamesFromTable(table)</strong></p>
+<p>Translates names of menus and menu items into another language.  For example:</p>
+<pre class="literal-block">
+table = (
+    (&quot;Help&quot;, &quot;&amp;Aide&quot;),
+    (&quot;About Leo...&quot;, &quot;Au &amp;sujet de Leo...&quot;),
+    (&quot;Online Home Page&quot;, &quot;&amp;Page d'Accueil en ligne&quot;),
+    (&quot;Open Online Tutorial&quot;, &quot;Ouvrir &amp;Tutoriel en ligne&quot;),
+    (&quot;Open LeoDocs.leo&quot;, &quot;Ouvrir Leo&amp;Docs.leo&quot;),
+    (&quot;Open LeoConfig.leo&quot;, &quot;Ouvrir Leo&amp;Config.leo&quot;),
+    (&quot;Apply Settings&quot;, &quot;Appliquer les &amp;Réglages&quot;),
+)
+
+c.frame.menu.setRealMenuNamesFromTable(table)
+</pre>
+</div>
+<div class="section" id="support-for-unit-testing">
+<h2><a class="toc-backref" href="#id9" name="support-for-unit-testing">Support for unit testing</a></h2>
+<p>The plugins test suite creates a new convention: if a plugin has a function at
+the outer (module) level called <tt class="docutils literal"><span class="pre">unitTest</span></tt>, Leo will call that function when
+doing unit testing for plugins. So it would be good if writers of plugins would
+create such a <tt class="docutils literal"><span class="pre">unitTest</span> <span class="pre">function</span></tt>. To indicate a failure the <tt class="docutils literal"><span class="pre">unitTest</span></tt> just
+throws an exception. Leo's plugins test suite takes care of the rest.</p>
+</div>
+<div class="section" id="adding-extensible-attributes-to-nodes-and-leo-files">
+<h2><a class="toc-backref" href="#id10" name="adding-extensible-attributes-to-nodes-and-leo-files">Adding extensible attributes to nodes and .leo files</a></h2>
+<p>Leo's .leo file format is extensible. The basis for extending .leo files are the
+<tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt> and <tt class="docutils literal"><span class="pre">v.unknownAttributes</span></tt> ivars of tnodes and vnodes,
+or uA's for short. Leo translates between uA's and xml attributes in the
+corresponding <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements in .leo files. Plugins may also use
+<tt class="docutils literal"><span class="pre">v.tempAttributes</span></tt> or <tt class="docutils literal"><span class="pre">t.tempAttributes</span></tt> ivars to hold temporary information
+that will <em>not</em> be written to the .leo file.</p>
+<p>Collectively, these four kinds of ivars are called <strong>attribute ivars</strong>.
+Attribute ivars must be Python dictionaries, whose keys are names of plugins and
+whose values are <em>other</em> dictionaries, called <strong>inner dictionaries</strong>, for
+exclusive use of each plugin. For example, a plugin named 'xyzzy' would set
+<tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt> as follows:</p>
+<pre class="literal-block">
+# Create the uA if necessary.
+if not p.v.t.hasattr('unknownAttributes'):
+    p.v.t.unknownAttributes = {}
+
+# Get the inner dictionary for the 'xyzzy' plugin, creating it if necessary.
+d = p.v.t.unknownAttributes.get('xyzzy',{})
+
+# Set some values. These values must be picklable.
+d ['key1'] = someValue
+d ['key2'] = anotherValue
+
+# Update the uA.
+p.v.t.unknownAttributes ['xyzzy'] = d
+</pre>
+<p>Plugins would use similar code to create <tt class="docutils literal"><span class="pre">v.unknownAttributes</span></tt>,
+<tt class="docutils literal"><span class="pre">t.tempAttributes</span></tt>, and <tt class="docutils literal"><span class="pre">v.tempAttributes</span></tt> ivars.</p>
+<p><strong>Important</strong>: All members of inner dictionaries should be picklable: Leo
+uses Python's Pickle module to encode all values in these dictionaries. Leo will
+discard any attributes that can not be pickled. This should not be a major
+problem to plugins. For example, instead of putting a tnode into these
+dictionaries, a plugin could put the tnode's gnx (a string) in the dictionary.</p>
+<p><strong>Important</strong>: Plugins must <em>not</em> use <tt class="docutils literal"><span class="pre">v.unknownAttributes</span></tt> inside <tt class="docutils literal"><span class="pre">&#64;thin</span></tt>
+trees. Indeed Leo uses <strong>hidden machinery</strong> to write <tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt>.
+Leo does <em>not</em> write <tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt> to thin derived files. Instead Leo
+writes a representation of all <tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt> contained in the
+<tt class="docutils literal"><span class="pre">&#64;thin</span></tt> tree to a special xml attribute called
+<tt class="docutils literal"><span class="pre">descendentTnodeUnknownAttributes</span></tt> in the <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> element corresponding to the
+<tt class="docutils literal"><span class="pre">&#64;thin</span></tt> node. Yes, this is complicated, but it works. Leo can <em>not</em> write
+<tt class="docutils literal"><span class="pre">v.unknownAttributes</span></tt> in <tt class="docutils literal"><span class="pre">&#64;thin</span></tt> trees because <strong>only tnodes have gnx's in
+thin derived files</strong>. In effect, vnodes are anonymous.</p>
+<p>Plugins that must associate attributes with vnodes should support only <tt class="docutils literal"><span class="pre">&#64;file</span></tt>
+trees. A completely different alternative would be for the plugin to extend how
+Leo reads and writes <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> elements in .leo files, but that would be much more
+complicated than using <tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt></p>
+<p>Here are the details about how Leo associates uA's with <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements in .leo files:</p>
+<ul class="simple">
+<li><strong>Native xml attributes</strong> are the attributes of <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements that are
+known (treated specially) by Leo's read/write code.
+The only native attribute of <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements is <tt class="docutils literal"><span class="pre">tx</span></tt>.
+The native attributes of <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> elements are <tt class="docutils literal"><span class="pre">a</span></tt>, <tt class="docutils literal"><span class="pre">t</span></tt>, <tt class="docutils literal"><span class="pre">vtag</span></tt>, <tt class="docutils literal"><span class="pre">tnodeList</span></tt>,
+<tt class="docutils literal"><span class="pre">marks</span></tt>, <tt class="docutils literal"><span class="pre">expanded</span></tt> and <tt class="docutils literal"><span class="pre">descendentTnodeUnknownAttributes</span></tt>.
+All other attributes of <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements are <strong>foreign xml attributes</strong>.</li>
+<li>When reading a .leo file, Leo will create <tt class="docutils literal"><span class="pre">t.unknownAttributes</span></tt> or <tt class="docutils literal"><span class="pre">v.unknownAttributes</span></tt> ivars for
+any <tt class="docutils literal"><span class="pre">tnode</span></tt> or <tt class="docutils literal"><span class="pre">vnode</span></tt> whose corresponding <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> or <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> element contains a foreign xml attribute.</li>
+<li>When writing a file, Leo will write foreign xml attributes in <tt class="docutils literal"><span class="pre">&lt;v&gt;</span></tt> or <tt class="docutils literal"><span class="pre">&lt;t&gt;</span></tt> elements
+if the corresponding  vnode or tnode contains an <tt class="docutils literal"><span class="pre">unknownAttributes</span></tt> ivar.</li>
+<li>Leo performs the usual xml escapes on these strings when reading or writing the <tt class="docutils literal"><span class="pre">unknownAttributes</span></tt> ivars.</li>
+</ul>
+</div>
+<div class="section" id="how-to-make-operations-undoable">
+<h2><a class="toc-backref" href="#id11" name="how-to-make-operations-undoable">How to make operations undoable</a></h2>
+<p>Client code should call <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">u.afterX</span></tt> methods to create a bead
+describing the operation that is being performed. <strong>Note</strong>: <tt class="docutils literal"><span class="pre">u</span></tt> is shorthand for
+<tt class="docutils literal"><span class="pre">c.undoer</span></tt>. Most <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> methods return <tt class="docutils literal"><span class="pre">undoData</span></tt> that the client
+code merely passes to the corresponding <tt class="docutils literal"><span class="pre">u.afterX</span></tt> method. This data contains
+the 'before' snapshot. The <tt class="docutils literal"><span class="pre">u.afterX</span></tt> methods then create a bead containing
+both the 'before' and 'after' snapshots.</p>
+<p><tt class="docutils literal"><span class="pre">u.beforeChangeGroup</span></tt> and <tt class="docutils literal"><span class="pre">u.afterChangeGroup</span></tt> allow multiple calls to
+<tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">u.afterX</span></tt> methods to be treated as a single undoable entry.
+See the code for the <tt class="docutils literal"><span class="pre">Change</span> <span class="pre">All</span></tt>, <tt class="docutils literal"><span class="pre">Sort</span></tt>, <tt class="docutils literal"><span class="pre">Promote</span></tt> and <tt class="docutils literal"><span class="pre">Demote</span></tt>
+commands for examples. The <tt class="docutils literal"><span class="pre">u.beforeChangeGroup</span></tt> and <tt class="docutils literal"><span class="pre">u.afterChangeGroup</span></tt>
+methods substantially reduce the number of <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">afterX</span></tt> methods
+needed.</p>
+<p>Plugins may define their own <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">afterX</span></tt> methods. Indeed,
+<tt class="docutils literal"><span class="pre">u.afterX</span></tt> merely needs to set the <tt class="docutils literal"><span class="pre">bunch.undoHelper</span></tt> and
+<tt class="docutils literal"><span class="pre">bunch.redoHelper</span></tt> ivars to the methods used to undo and redo the operation.
+See the code for the various <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">afterX</span></tt> methods for guidance.</p>
+<p><tt class="docutils literal"><span class="pre">p.setDirty</span></tt> and <tt class="docutils literal"><span class="pre">p.setAllAncestorAtFileNodesDirty</span></tt> now return a
+<tt class="docutils literal"><span class="pre">dirtyVnodeList</span></tt> that all vnodes that became dirty as the result of an
+operation. More than one list may be generated: client code is responsible for
+merging lists using the pattern <tt class="docutils literal"><span class="pre">dirtyVnodeList.extend(dirtyVnodeList2)</span></tt></p>
+<p>See the section <tt class="docutils literal"><span class="pre">&lt;&lt;</span> <span class="pre">How</span> <span class="pre">Leo</span> <span class="pre">implements</span> <span class="pre">unlimited</span> <span class="pre">undo</span> <span class="pre">&gt;&gt;</span></tt> in <tt class="docutils literal"><span class="pre">leoUndo.py</span></tt>
+for more details. In general, the best way to see how to implement undo is to
+see how Leo's core calls the <tt class="docutils literal"><span class="pre">u.beforeX</span></tt> and <tt class="docutils literal"><span class="pre">afterX</span></tt> methods.</p>
+</div>
+<div class="section" id="specifying-tk-options-using-leo-xresources">
+<h2><a class="toc-backref" href="#id12" name="specifying-tk-options-using-leo-xresources">Specifying Tk options using .leo_xresources</a></h2>
+<p>Leo looks for a file called <tt class="docutils literal"><span class="pre">.leo_xresources</span></tt> in the users home directory. If
+found, Leo will pass that file to Tk's <tt class="docutils literal"><span class="pre">option_readfile</span></tt> method for the top
+widget. This allows users to set Tk options.</p>
+<hr class="docutils" />
+<p><a class="reference reference" href="scripting.html"><img alt="back" src="arrow_lt.gif" /></a> <a class="reference reference" href="front.html"><img alt="leo" src="leo.gif" /></a> <a class="reference reference" href="history.html"><img alt="next" src="arrow_rt.gif" /></a></p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!--@+leo-ver=4-->
+<!--@+node:@file treetest.html-->
+<!--@@language html-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<head>
+<!--@<< head >>-->
+<!--@+node:<< head >>-->
+<title>Destroydrop &raquo; Javascripts &raquo; Tree &raquo; v1</title>
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+<link rel="StyleSheet" href="/dd.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="StyleSheet" href="tree.css" type="text/css" />
+<script type="text/javascript" src="tree.js"></script>
+<!--@nonl-->
+<!--@-node:<< head >>-->
+<!--@nl-->
+</head>
+
+<body>
+<!--@<< body >>-->
+<!--@+node:<< body >>-->
+<div id="shadow">
+
+	<div id="content">
+
+		<div id="location">
+			<h1><a href="/">Destroydrop</a> &raquo; <a href="/javascripts/">Javascripts</a> &raquo; <a href="/javascripts/tree/">Tree</a> &raquo; <a href="/javascripts/tree/v1/">V1</a></h1>
+		</div>
+
+
+		<div class="line"></div>
+
+
+		<div id="main">
+
+			<h3>Description</h3>
+			<div class="line"></div>
+			<div class="item">
+				<p>The tree has been tested on IE 5.0, 5.5, 6.0 on Windows, IE 5.0 on Mac, Opera 7, and various versions of Netscape 6.0 and Mozilla.</p>
+				<p>&raquo; Konqueror 2+: "style.display" can't be changed</p>
+				<p>A new version of the tree will be ready soon.</p>
+
+			</div>
+
+			<h3>Example</h3>
+			<div class="line"></div>
+			<div class="item">
+
+				<div class="tree">
+				<script type="text/javascript">
+				<!--
+					var Tree = new Array;var n = 0;
+					// nodeId | parentNodeId | nodeName | nodeUrl
+					Tree[n++]  = "1|0|Page 1|#";
+					Tree[n++]	 = "2|1|Page 1.1|#";
+					Tree[n++]  = "3|1|Page 1.2|#";
+					Tree[n++]  = "4|3|Page 1.2.1|#";
+					Tree[n++]  = "5|1|Page 1.3|#";
+					Tree[n++]  = "6|2|Page 1.1.1|#";
+					Tree[n++]  = "7|6|Page 1.1.1.1|#";
+					Tree[n++]  = "8|6|Page 1.1.1.2|#";
+					Tree[n++]  = "9|1|Page 1.4|#";
+					Tree[n++]  = "10|9|Page 1.4.1|#";
+					Tree[n++] = "11|4|Page 1.2.1.1|#";
+					Tree[n++] = "12|6|Page 1.1.1.3|#";
+					Tree[n++] = "13|10|Page 1.4.1.1|#";
+					Tree[n++] = "14|6|Page 1.1.1.4|#";
+					Tree[n++] = "15|6|Page 1.1.1.5|#";
+					Tree[n++] = "16|6|Page 1.1.1.6|#";
+					Tree[n++] = "17|14|Page 1.1.1.4.1|#";
+					Tree[n++] = "18|2|Page 1.1.2|#";
+					Tree[n++] = "19|14|Page 1.1.1.4.2|#";
+					Tree[n++] = "20|16|Page 1.1.1.6.1|#";
+					Tree[n++] = "21|16|Page 1.1.1.6.2|#";
+					Tree[n++] = "22|0|Page 2|#";
+					Tree[n++] = "23|0|Page 3|#";
+					Tree[n++] = "24|23|Page 3|#";
+					Tree[n++] = "25|24|Page 3|#";
+					Tree[n++] = "26|25|Page 3|#";
+					Tree[n++] = "27|26|Page 3|#";
+					Tree[n++] = "28|27|Page 3|#";
+					Tree[n++] = "29|28|Page 3|#";
+					Tree[n++] = "30|29|Page 3|#";
+					Tree[n++] = "31|0|Page 4|#";
+
+					// treeArray, startNode, openNode
+					// startNode and openNode are optional
+					createTree(Tree, 0, 4);
+				//-->
+				</script>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="extra">
+
+			<h3>Download</h3>
+			<div class="line"></div>
+			<div class="item">
+				<ul class="nav">
+					<li><a href="tree.js">tree.js</a> - right click and save as</li>
+					<li><a href="tree.zip">tree.zip</a> - tree.js with examples</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<div class="line"></div>
+
+
+		<div id="copy">
+			<p class="right"><a href="http://validator.w3.org/check/referer">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></p>
+			<p><a href="mailto&#58;drop&#64;destroydrop&#46;com">&copy;2002-2003 Geir Landr&ouml;</a></p>
+		</div>
+
+	</div>
+
+</div>
+<!--@nonl-->
+<!--@-node:<< body >>-->
+<!--@nl-->
+</body>
+
+</html>
+<!--@nonl-->
+<!--@-node:@file treetest.html-->
+<!--@-leo-->

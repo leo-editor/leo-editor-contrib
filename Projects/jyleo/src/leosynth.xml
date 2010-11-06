@@ -1,0 +1,439 @@
+<synth>
+
+<style id='tiger_background' >
+
+    <state>
+        <color value='WHITE' key='TEXT_FOREGROUND' /> 
+        <color value='WHITE' key='TEXT_BACKGROUND' />
+        
+        <imagePainter path='/orangerbar.gif' method='menuBarBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />  
+        <imagePainter path='/orangerbar.gif' method='toolBarBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+        <imagePainter path='/orangerbar.gif' method='splitPaneBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+        <imagePainter path='/oranger.gif' method='desktopPaneBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+        imagePainter path='/oranger.gif' method='rootPaneBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+    </state>
+
+    <opaque value='false' />
+</style>
+
+
+<style id ="font_base" >
+    <font name="Arial" size='16' />
+</style>
+
+<style id="base" clone='font_base' >
+    <state>
+        <color value="BLUE" type="TEXT_FOREGROUND" />
+        <color value="WHITE" type="TEXT_BACKGROUND" />
+        <color value="WHITE" type='BACKGROUND' />
+        <color value="RED" type='FOREGROUND' />
+    </state>
+    <state value='SELECTED' >
+        <color value='RED' type='BACKGROUND' />
+    </state>
+</style>
+
+<style id='tb' clone='base' >
+    <state>
+    <imageIcon id='handle' path='/Leoapp2.GIF' />
+    <!-- I had to look at the source for SynthToolBarUI to figure this one out, handleIcon is mentioned in the property table -->
+    <property key='ToolBar.handleIcon' value='handle' />
+    <property key='ToolBar.separatorSize' type='dimension' value='0 0 0 0' />
+
+    </state>
+    <imagePainter path='/yellow.gif' method='toolBarBorder' sourceInsets='1 1 1 1' paintCenter='false' />
+</style>
+
+<style id='splitpane' >
+    <state>
+    <!-- imagePainter path='/rednoise.gif' method='splitPaneDividerBackground' sourceInsets='5 5 5 5'  paintCenter='true'  stretch='false' -->
+    <property key='SplitPane.size' type='integer' value='20' />
+    <property key='SplitPane.oneTouchButtonSize' type='integer' value='16' />
+    </state>
+</style>
+
+<style id='iftb' >
+    <font name="Arial" size="16" />
+    <state>
+        <color value='RED' type='TEXT_FOREGROUND' />
+        <color value='RED' type='TEXT_BACKGROUND' />
+         <color value='RED' type='BACKGROUND' />
+        <imagePainter path='/orangerbar.gif' method='internalFrameTitlePaneBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+    <state value='FOCUSED' >
+        <color value='WHITE' type='TEXT_FOREGROUND' />
+        <color value='WHITE' type='TEXT_BACKGROUND' />
+        <color value='RED' type='FOREGROUND' />
+        <color value='RED' type='BACKGROUND' />
+        <imagePainter path='/orangerbar.gif' method='internalFrameTitlePaneBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+    
+    <opaque value='true' />
+    <imageIcon id='collapses' path='/orangerbar.gif' />
+    <imageIcon id='co2' path='/orange.gif' />
+    <imageIcon id='system' path='/Leoapp2.GIF' />
+    <imageIcon id='minimize' path='/minimize.gif' />
+    <imageIcon id='maximize' path='/maximize.gif' />
+    <imageIcon id='close' path='/close.gif' />
+    <imageIcon id='shrink' path='/shrink.gif' />
+    <property key='InternalFrameTitlePane.iconifyIcon' value='minimize' />
+    <property key='InternalFrameTitlePane.maximizeIcon' value='maximize' />
+    <property key='InternalFrameTitlePane.minimizeIcon' value='shrink' />
+    <property key='InternalFrameTitlePane.closeIcon' value='close' />
+    <property key='InternalFrame.icon' value='system' /> 
+    <insets top='1' bottom='1' right='1' left='1' />
+
+</style>
+
+<style id='dticon' >
+    <opaque value='true' />
+    <font name="Arial" size="16" />
+    <state>
+        <color value='WHITE' type='FOREGROUND' />
+        <color value='WHITE' type='TEXT_FOREGROUND' />
+        <color value='WHITE' type='TEXT_BACKGROUND' />
+        <imagePainter path='/orangerbar.gif' method='desktopIconBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id='texts' clone='font_base' >
+    <opaque value='true' />
+    <state>
+    </state>
+    
+    
+</style>
+
+<style id='menus' clone='base' >
+
+    <state>
+        <color value='WHITE' type="TEXT_FOREGROUND" />
+        <color value='WHITE' type='FOREGROUND' />
+        <color value='BLUE' type='BACKGROUND' />
+        <imageIcon id='mI' path='/Leoapp2.GIF' />
+        <property key='Menu.arrowIcon' value='mI' />
+        <opaque value='false' />
+        <imagePainter path='/oranger.gif' method='popupMenuBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+        <imagePainter path='/yellow.gif' method='menuBarBorder' sourceInsets='1 1 1 1' paintCenter='false' />
+    </state>
+    <state value='MOUSE_OVER' >
+        <color value ='WHITE' type="TEXT_BACKGROUND" />
+        <color value ='BLUE' type='TEXT_FOREGROUND' />
+    </state>
+    <state value='SELECTED' >
+        <color value ='WHITE' type="TEXT_BACKGROUND" />
+        <color value ='BLUE' type='TEXT_FOREGROUND' />
+    </state>
+        <state value='FOCUSED' >
+        <color value ='WHITE' type="TEXT_BACKGROUND" />
+        <color value ='BLUE' type='TEXT_FOREGROUND' />
+    </state>
+</style>
+
+
+<style id='button'>
+    <state>
+        <color value='WHITE' type='TEXT_FOREGROUND' />
+        <color value='BLUE' type='BACKGROUND' />
+        <insets top='5' left='5' right='5' bottom='5' />
+        <imagePainter path='/yellow.gif' method='buttonBackground' sourceInsets='3 3 3 3' paintCenter='false' />
+        <imagePainter path='/Weirdness.gif' method='buttonBorder' sourceInsets='3 3 3 3' paintCenter='false' destinationInsets='1 1 1 1' />
+        <property key='Button.contentAreaFilled' type='boolean' value='true' />
+        <object id='ins' class='java.awt.Insets' >
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+        </object>
+    <property key='Button.margin' value='ins' />
+    </state>
+    <state value='MOUSE_OVER' >
+        <imagePainter path='/Weirdness.gif' method='buttonBackground' sourceInsets='3 3 3 3' paintCenter='false' />
+    </state>
+
+</style>
+
+<style id='ab'>
+    <object class='java.lang.Integer' id='size'>
+        <int>30</int>
+    </object>
+    <property key='ArrowButton.size' value='size'/>
+</style>
+
+<style id='jlist' clone='base'>
+    <state>
+        <color value='BLUE' type='FOREGROUND' />
+        <color value='WHITE' type='BACKGROUND' />
+        <color value='RED' type='TEXT_FOREGROUND' />
+        <color value='ORANGE' type='TEXT_BACKGROUND' />
+        <imagePainter path='/oranger.gif' method='listBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+    </state>
+    <opaque value='true' />
+    <property key='List.rendererUseListColors' type='boolean' value='true' />
+</style>
+
+<style id='mbbackground' >
+    <state>
+        <imagePainter path='/oranger.gif' method='panelBackground' sourceInsets='10 10 10 10' paintCenter='true' stretch='true' />
+    </state>
+</style>
+
+<style id='sbar' >
+    
+
+    <imagePainter path='/uparrow.gif' method='arrowButtonForeground' direction='north' sourceInsets='1 1 1 1' paintCenter='true' />
+    <imagePainter path='/downarrow.gif' method='arrowButtonForeground' direction='south' sourceInsets='1 1 1 1' paintCenter='true' />
+    <imagePainter path='/rightarrow.gif' method='arrowButtonForeground' direction='east' sourceInsets='1 1 1 1' paintCenter='true' />
+    <imagePainter path='/leftarrow.gif' method='arrowButtonForeground' direction='west' sourceInsets='1 1 1 1' paintCenter='true' />
+
+</style>
+
+<style id='sbar2' >
+    <state>
+        <color value='BLUE' type="FOREGROUND" />
+        <color value='BLUE' type="BACKGROUND" />
+        <imagePainter path='/oranger.gif' method='scrollBarThumbBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+        <imagePainter path='/yellow.gif' method='scrollBarThumbBorder' sourceInsets='1 1 1 1' paintCenter='false' />
+        <imagePainter path='/oranger.gif' method='scrollBarTrackBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+        <imagePainter path='/oranger.gif' method='scrollBarBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+        <imagePainter path='/oranger.gif' method='scrollPaneBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+
+<style id='jtf' clone='base' >
+    <state>
+        <imagePainter path='/orangerbar.gif' method='textFieldBorder' sourceInsets='3 3 3 3' paintCenter='false' />
+        <color value="WHITE" type="BACKGROUND" />
+        <color value="RED" type="FOREGROUND" />
+        <color value="BLUE" type="TEXT_FOREGROUND" />
+        <color value="WHITE" type="TEXT_BACKGROUND" />
+    </state>
+    <state value='SELECTED' >
+        <color value="WHITE" type="TEXT_FOREGROUND" />
+        <color value="RED" type="TEXT_BACKGROUND" />
+        <color value="RED" type='BACKGROUND' />
+    </state>
+    <insets top='3' bottom='3' right='3' left='3' />
+</style>
+
+<style id='tree'>
+    <state>
+        
+        <color value='RED' type="TEXT_BACKGROUND" />
+        <color value="BLUE" type='TEXT_FOREGROUND' />
+    </state>
+    <state value='FOCUSED'>
+        <color value='RED' type="TEXT_BACKGROUND" />
+        <color value="BLUE" type='TEXT_FOREGROUND' />
+    </state>
+    <state value='SELECTED' >
+        <color value='RED' type='BACKGROUND' />
+        <color value='RED' type='FOREGROUND' />
+    </state>
+    <object id='reds' class='java.awt.Color' >
+        <int>255</int>
+        <int>0</int>
+        <int>0</int>
+    </object>
+    <!-- its important to set this default property or the current node will not be colored -->
+    <defaultsProperty key='Tree.selectionBackground' value='reds' />
+    <imageIcon id='collapse' path='/plusnode.gif' />
+    <imageIcon id='expand' path='/minusnode.gif' />
+    
+    <object class='java.lang.Integer' id='rci'>
+        <int>7</int>
+    </object>
+    <object class='java.lang.Integer' id='lci'>
+        <int>15</int>
+    </object>
+    <object class='java.lang.Boolean' id='scrolls' >
+        <boolean>true</boolean>
+    </object>
+    <property key='Tree.collapsedIcon' value='collapse' />
+    <property key='Tree.expandedIcon' value='expand' />
+    <property key='Tree.rightChildIndent' value='lci' />
+    <property key='Tree.leftChildIndent' value='rci' />
+    <property key='Tree.scrollsHorizontallyAndVertically' value='scrolls' />
+</style>
+
+<style id='treecell'>
+    <state value='SELECTED' >
+        <color value='RED' type='FOREGROUND' />
+        <color value='RED' type='BACKGROUND'/>
+        <color value='RED' type='TEXT_FOREGROUND' />
+        <color value='WHITE' type='TEXT_BACKGROUND' />
+        
+    </state>
+</style>
+
+<style id='iconrenderer' >
+    <state value='SELECTED' >
+        <imagePainter path='/orangerbar.gif' method='labelBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id='jlabel' clone='base' >
+    <state>
+        <color value='BLUE' type='TEXT_FOREGROUND' />
+        <color value='WHITE' type='TEXT_BACKGROUND' />
+    </state>
+    <opaque value='false' />
+</style>
+
+<style id='tabbedpanetab' >
+    <insets top='2' bottom='2' right='2' left='2' />
+    <imagePainter method='tabbedPaneTabBorder' path='/yellow.gif' sourceInsets='1 1 0 1' paintCenter='false' />
+</style>
+
+<style id='radios' clone='base' >
+
+    <state>
+        <imageIcon id='unsel' path='/unsel_radio.gif' />
+        <property key='RadioButton.icon' value='unsel' />
+        <color value='WHITE' type='FOREGROUND' />
+    </state>
+
+    <state value='MOUSE_OVER and SELECTED' >
+        <imageIcon id='sel2' path='/focused_sel_radio.gif' />
+        <property key='RadioButton.icon' value='sel2' />
+    </state>
+        <state value='SELECTED' >
+        <imageIcon id='sel' path='/sel_radio.gif' />
+        <property key='RadioButton.icon' value='sel' />
+    </state>
+<state value='MOUSE_OVER' >
+        <imageIcon id='unsel2' path='/focused_unsel_radio.gif' />
+        <property key='RadioButton.icon' value='unsel2' />
+    </state>
+
+</style>
+
+
+<style id='ckboxes' clone='base' >
+
+    <state>
+        <imageIcon id='cunsel' path='/unsel_checkbox.gif' />
+        <property key='CheckBox.icon' value='cunsel' />
+        <color value='WHITE' type='FOREGROUND' />
+    </state>
+
+    <state value='SELECTED and MOUSE_OVER' >
+        <imageIcon id='csel2' path='/sel_checkbox_ch.gif' />
+        <property key='CheckBox.icon' value='csel2' />
+    </state>
+        <state value='SELECTED' >
+        <imageIcon id='csel' path='/unsel_checkbox_ch.gif' />
+        <property key='CheckBox.icon' value='csel' />
+    </state>
+<state value='MOUSE_OVER' >
+        <imageIcon id='cunsel2' path='/sel_checkbox.gif' />
+        <property key='CheckBox.icon' value='cunsel2' />
+    </state>
+
+</style>
+
+<style id='leodialog' >
+    <imagePainter path='/oranger.gif' method='panelBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+</style>
+
+<style id='comboboxes' clone='base' >
+    <state>
+        <color value='BLUE' type='FOREGROUND' />
+        <color value='WHITE' type='BACKGROUND' />
+    </state>
+</style>
+
+<style id='filechoosers' >
+    <state>
+        <imagePainter path='/oranger.gif' method='fileChooserBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id='colorchoosers' >
+    <state>
+        <imagePainter path='/oranger.gif' method='colorChooserBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id='optionpanes' >
+    <state>
+        <imagePainter path='/oranger.gif' method='optionPaneBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id='sliders' >
+    <state>
+        <imagePainter path='/yellow.gif' method='sliderThumbBorder' sourceInsets='1 1 1 1' paintCenter='false'/>
+        <imagePainter path='/yellow.gif' method='sliderTrackBorder' sourceInsets='1 1 1 1' paintCenter='false'/>
+        <imagePainter path='/orangerbar.gif' method='sliderThumbBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<style id = 'colorchooser_dialog'>
+    <state>
+        <imagePainter path='/oranger.gif' method='panelBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+
+</style>
+
+<style id = 'settingsview' >
+    <state>
+        <imagePainter path='/oranger.gif' method = 'panelBackground' sourceInsets='1 1 1 1' paintCenter='true' />
+    </state>
+</style>
+
+<bind style='font_base' type='region' key='.*' />
+<bind style='tiger_background' type='region' key='MenuBar' />
+<bind style='tiger_background' type='region' key='ToolBar' />
+<bind style='tiger_background' type='region' key='SplitPane' />
+<bind style='tiger_background' type='region' key='DesktopPane' />
+<bind style='tiger_background' type='region' key='RootPane' />
+<bind style='iftb' type='region' key='InternalFrame' />
+<bind style='iftb' type='region' key='InternalFrameTitlePane' />
+<bind style='dticon' type='region' key='DesktopIcon' />
+<bind style="base" type="region" key="PANEL" />
+<!-- Note: colorchoosers dialogs contentPane are given the name cc_dialog -->
+<bind style="colorchooser_dialog" type='name' key='cc_dialog' />
+<bind style='menus' type='region' key='Menu' />
+<bind style='menus' type='region' key='MenuItem' />
+<bind style='menus' type='region' key='MenuBar'  />
+<bind style='menus' type='region' key='MenuItemAccelerator' />
+<bind style='menus' type='region' key='PopupMenu' />
+<bind style='comboboxes' type='region' key='ComboBox' />
+<bind style='comboboxes' type='region' key='List' />
+<bind style='jtf' type='region' key='TextField' />
+<bind style='sbar' type='region' key='ArrowButton' />
+<bind style='button' type='region' key='BUTTON' />
+<!-- bind style="texts" type="region" key="TEXTPANE" -->
+<bind style='texts' type='name' key='Log' />
+<bind style='texts' type='name' key='Editor'/>
+<bind style="texts" type="region" key="TEXTAREA" />
+<bind style='tree' type='region' key='TREE' />
+<bind style='treecell' type='region' key='TREECELL' />
+<bind style='treecell' type='name' key='Tree.cellEditor' />
+<bind style='jlabel' type='region' key='Label' />
+<bind style='tb' type='region' key='TOOLBAR' />
+<bind style='splitpane' type='region' key='Splitpanedivider' />
+<bind style='splitpane' type='region' key='Splitpane' />
+<!-- note: the autocompleter list has been given the name Autolist -->
+<bind style='jlist' type='name' key='Autolist'/>
+<!-- note: the minibuffers background panel has been given the name Minibufferbackgrond -->
+<bind style='mbbackground' type='name' key='Minibufferbackground' />
+<bind style='sbar2' type='region' key='SCROLLBAR' />
+<bind style='sbar2' type='region' key='SCROLLBARTRACK' />
+<bind style='sbar2' type='region' key='SCROLLBARTHUMB' />
+<bind style='tabbedpanetab' type='region' key='TabbedPaneTab' />
+<bind style='radios' type='region' key='RadioButton' />
+<bind style='ckboxes' type='region' key='CheckBox' />
+<bind style='leodialog' type='name' key='Leodialog' />
+<bind style='iconrenderer' type='name' key='IconTreeRenderer' />
+<bind style='filechoosers' type='region' key='FileChooser' />
+<bind style='colorchoosers' type='region' key='ColorChooser' />
+<bind style='optionpanes' type='region' key='OptionPane' />
+<bind style='sliders' type='region' key='SliderThumb' />
+<bind style='sliders' type='region' key='SliderTrack' />
+<!-- the settingsview is for the view pane in the settings frame -->
+<bind style='settingsview' type='name' key='SettingsView' />
+
+</synth>

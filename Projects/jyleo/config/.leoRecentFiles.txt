@@ -1,0 +1,15 @@
+C:\jyleo\src\LeoJy2.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testnewread.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testexpand.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testchapter.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testrv.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testscript_mod.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testum.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/whatda.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testblock.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testnu.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testustack.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testscroll.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testmm3.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testmm.leo
+/home/brihar/jyportLeo/leo-4.2-final/src/testmm2.leo

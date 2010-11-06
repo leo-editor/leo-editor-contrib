@@ -1,0 +1,55 @@
+#@+leo-ver=4-thin
+#@+node:edream.120603093808:@thin pluginsManager.txt
+#@@comment #
+#@@tabwidth -4
+
+#@+at 
+#@nonl
+# Leo loads plugins in the order they appear in this file.
+# 
+# The FIRST mention of a plugin in this file controls whether the plugin is 
+# enabled or not:
+# - If the plugin's name is commented out, it is disabled, otherwise it is 
+# enabled.
+# - Plugins not appearing in this file are disabled.
+# 
+# File names may be indented as desired.
+#@-at
+#@@c
+
+# Icon area: order is important.
+mod_scripting.py
+#hoist.py
+
+
+# Plugin_manager.py needs plugins_menu.py
+#plugins_menu.py
+#usetemacs.py
+#autocompleter.py
+#Library.py
+#editAttributes.py
+#plugin_manager.py
+
+
+
+#UNL.py
+#@-node:edream.120603093808:@thin pluginsManager.txt
+#@-leo
+#JUnitIntegrator.py
+#AntIntegrator.py
+#SVNIntegrator.py
+#LeoCommunicator.py
+#MindMapPlugin.py
+#CommentatorControl.py
+#JRubyIntegration.py
+#JavaIntegration.py
+#dyna_menu.py
+#LeoWebBrowser.py
+JyLeoSpellChecker.py
+
+
+
+
+
+
+

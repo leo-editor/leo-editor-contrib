@@ -1,0 +1,2 @@
+#configure the dictionary to use, like so:dict=english.0
+dict=english.0

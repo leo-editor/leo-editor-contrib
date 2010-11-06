@@ -1,0 +1,253 @@
+<!--@+leo-ver=4-->
+<!--@+node:@file showLeo.html-->
+<!--@@language html-->
+<!--@@tabwidth 4-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<!--@+others-->
+<!--@+node:html  (body sets onLoad)-->
+<!--@@comment //-->
+
+<head>
+<!--@<< head >>-->
+<!--@+node:<< head >>-->
+<title>leoDHTML.leo</title>
+
+<link rel="StyleSheet" href="dtree.css" type="text/css" />
+
+<script type="text/javascript" src="dtree.js"></script>
+
+<script type="text/javascript">
+
+    var xmldoc=null
+    var gUrl=null
+    var txArr=null
+    var vnodes=null
+    var tnodes=null
+    
+    // Define all methods
+	<!--@    @+others-->
+	<!--@+node:ekr functions-->
+	<!--@@comment //-->
+	<!--@nonl-->
+	<!--@-node:ekr functions-->
+	<!--@+node:createOutline-->
+	function createOutline()
+	{
+	    var file = 'showLeo.html'
+	    var id=0 ; var level=0 ; var vLevel=0
+	    var isOpen=true ; var icon=null
+	    var parent=new Array() ; var p=0
+	    
+	    d = new dTree('d')
+	    parent[level] = 0
+	    d.add(id++,-1,gUrl,"",file,"","",icon,icon,isOpen)
+	    for (i=0;i<vnodes.length;i++) {
+			<!--@        << compute v,vLevel,h,t,tx,a >>-->
+			<!--@+node:<< compute v,vLevel,h,t,tx,a >>-->
+			var v = vnodes[i]
+			var vLevel = vnodeLevel(v)
+			var headlines = v.getElementsByTagName("vh")
+			var h = headlines[0].text
+			var tx = v.getAttribute("t")
+			var t = txArr[tx]
+			var a = v.getAttribute("a")
+			<!--@nonl-->
+			<!--@-node:<< compute v,vLevel,h,t,tx,a >>-->
+			<!--@nl-->
+	        vLevel++ // The outer item is level 0.
+	        p = parent[vLevel-1]
+	        level = vLevel
+	        parent[vLevel]=id // Set the new parent at this level
+	        isOpen = (a && a.indexOf("E") != -1)
+	        body = t.text
+	        icon = (body!=null && body.length > 0) ? 'box01.GIF' : 'box00.GIF'
+	        d.add(id++,p,h,body,file,"","",icon,icon,isOpen)
+	    }
+	    document.write(d)
+	}
+	<!--@nonl-->
+	<!--@-node:createOutline-->
+	<!--@+node:createTable-->
+	function createTable()
+	{
+	    // var vnodesElement = xmldoc.getElementsByTagName("vnodes")
+	    vnodes = xmldoc.getElementsByTagName("v")
+	    tnodes = xmldoc.getElementsByTagName("t")
+	    
+	    // Remember all tnode indices.
+	    txArr = new Array()
+	    for (i=0;i<tnodes.length;i++) {
+	        var t = tnodes[i]
+	        var tx = t.getAttribute("tx")
+	        txArr[tx] = t
+	    }
+	    
+	    if (0)
+	        dumpTable()
+	    else
+	        createOutline()
+	}
+	<!--@-node:createTable-->
+	<!--@+node:dumpTable-->
+	function dumpTable()
+	{
+		<!--@    << dump global info >>-->
+		<!--@+node:<< dump global info >>-->
+		para()
+		write(vnodes.length + " vnodes, ")
+		write(tnodes.length + " tnodes")
+		endp()
+		<!--@nonl-->
+		<!--@-node:<< dump global info >>-->
+		<!--@nl-->
+	    
+	    var tnodeCounts = new Array() // to detect joined nodes.
+	    var level = 0 ; var vLevel = 0
+	    
+	    for (i=0;i<vnodes.length;i++) {
+	        var v = vnodes[i]
+	        var headlines = v.getElementsByTagName("vh")
+	        var h = headlines[0]
+	        var tx = v.getAttribute("t")
+	        var t = txArr[tx]
+	        var a = v.getAttribute("a")
+			<!--@        << dump info >>-->
+			<!--@+node:<< dump info >>-->
+			
+			para()
+			if (0) {
+			    // Probably detecting clones should be left to the xml to xml translator.
+			    // Dectecting clones is easy inside Leo, hard here.
+			    var prevT = tnodeCounts[tx]
+			    if (prevT!=undefined) write("join: " + tx)
+			    tnodeCounts[tx]=tx
+			}
+			vLevel = vnodeLevel(v)
+			write("level: " + vLevel)
+			write(", delta: " + (vLevel-level))
+			level = vLevel
+			write(", v.h: " + h.text)
+			write(", v.tx: " + tx)
+			if (a) write(", attr=" + a)
+			write(", v.t: " + t.text)
+			endp()
+			
+			if (0) { // doesn't work yet
+			    para()
+			    allChildren = v.childNodes
+			    for (j=0;j<allChildren.length;j++) {
+			        vChildren = allChildren[j].getElementsByTagName("v")
+			        n = vChildren.length
+			        // write(n)
+			        if (n!=undefined && n > 0) {
+			            write(n + " children") ; break
+			        }
+			    }
+			    endp()
+			}
+			<!--@nonl-->
+			<!--@-node:<< dump info >>-->
+			<!--@nl-->
+	    }
+	}
+	<!--@nonl-->
+	<!--@-node:dumpTable-->
+	<!--@+node:loadxml-->
+	function loadxml(url) {
+	    gUrl = url
+	    if (document.implementation && document.implementation.createDocument) {
+	        xmldoc = document.implementation.createDocument("","",none)
+	        // xmldoc.onload = createTable
+	        xmldoc.load(url)
+	    }
+	    else if (typeof ActiveXObject != "undefined") {
+	        xmldoc = new ActiveXObject("Msxml.DOMDocument")
+	        xmldoc.onreadystatechange = function () {
+	            if (xmldoc.readyState == 4) createTable()
+	        }
+	        xmldoc.load(url)
+	    }
+	    // else alert("This browser can not load xml file")
+	}
+	<!--@nonl-->
+	<!--@-node:loadxml-->
+	<!--@+node:onBodyPaneChange-->
+	function onBodyPaneChange()
+	{
+	    alert(s)
+	    // var bodyPane = document.getElementById("bodyPane")
+	    // s = bodyPane.innerText
+	}
+	<!--@nonl-->
+	<!--@-node:onBodyPaneChange-->
+	<!--@+node:onLoad (not used)-->
+	function onLoad(file) {
+	    loadxml(file)
+	}
+	<!--@-node:onLoad (not used)-->
+	<!--@+node:vnodeLevel-->
+	function vnodeLevel(v)
+	{
+	    var level = -1
+	    while (v.parentNode!=null) {
+	        v = v.parentNode
+	        level += 1
+	    }
+	    return level - 2 // adjust for vnode & document nodes.
+	}
+	<!--@nonl-->
+	<!--@-node:vnodeLevel-->
+	<!--@+node:dump utils-->
+	function para() { write("<p>") }
+	function endp() { write("</p>") }
+	function write(s) { document.write(s) }
+	<!--@nonl-->
+	<!--@-node:dump utils-->
+	<!--@-others-->
+
+</script>
+<!--@nonl-->
+<!--@-node:<< head >>-->
+<!--@nl-->
+</head>
+
+<body>
+<!--@<< body >>-->
+<!--@+node:<< body >> specify load file-->
+<!--@@comment //-->
+
+<h2>leoDHTML.leo</h2>
+
+<div class="dtree">
+
+    <p>
+    <a href="javascript: d.openAll();">open all</a> |
+    <a href="javascript: d.closeAll();">close all</a>
+    </p>
+    
+    <script type="text/javascript">
+        // This is executed _before_ the onLoad routine!
+        if (0)
+			// These are very slow.
+            // loadxml("c:/prog/leoCVS/leo/src/leoPy.leo")
+			loadxml("c:/prog/leoCVS/leo/doc/LeoDocs.leo")
+        else
+            loadxml("c:/prog/showLeo/leoDHTML.leo")
+    </script>
+
+</div>
+<!--@nonl-->
+<!--@-node:<< body >> specify load file-->
+<!--@nl-->
+</body>
+<!--@nonl-->
+<!--@-node:html  (body sets onLoad)-->
+<!--@-others-->
+
+</html>
+<!--@-node:@file showLeo.html-->
+<!--@-leo-->

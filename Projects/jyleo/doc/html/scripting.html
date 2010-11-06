@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.3.10: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*ORIGINAL GOODGER + changes; up to line 224 it's standard reST stylesheet
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:date: $Date: 2004/07/09 14:03:05 $
+:version: $Revision: 1.1 $
+:copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+*/
+
+.first {
+  margin-top: 0 }
+
+.last {
+  margin-bottom: 0 }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+dd {
+  margin-bottom: 0.5em }
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.attention, div.caution, div.danger, div.error, div.hint,
+div.important, div.note, div.tip, div.warning, div.admonition {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.hint p.admonition-title, div.important p.admonition-title,
+div.note p.admonition-title, div.tip p.admonition-title,
+div.admonition p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em }
+
+div.footer, div.header {
+  font-size: smaller }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 0em 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.line-block {
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;}
+  /*background-color: #eeeeee }*/
+  /*for some reason i can't overide in an import*/
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.option-argument {
+  font-style: italic }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+table {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.citation {
+  border-left: solid thin gray ;
+  padding-left: 0.5ex }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.footnote {
+  border-left: solid thin black ;
+  padding-left: 0.5ex }
+
+td, th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+th.docinfo-name, th.field-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap }
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+  font-size: 100% }
+
+/*for some reason, the following isn't being overridden by the imports
+at the end of this style sheet so I've commented it out*/
+/*tt {
+  background-color: #eeeeee }*/
+
+ul.auto-toc {
+  list-style-type: none }
+  
+hr { /* EKR */
+  width: 100%;
+  height: 1pt;
+  color: gray;
+}
+  
+@import url(leo_rst.css);
+@import url(silver_city.css);
+
+
+</style>
+</head>
+<body>
+<div class="document">
+<!-- rst3: filename: html\scripting.html -->
+<p><a class="reference" href="design.html"><img alt="back" src="arrow_lt.gif" /></a> <a class="reference" href="front.html"><img alt="leo" src="leo.gif" /></a> <a class="reference" href="customizing.html"><img alt="next" src="arrow_rt.gif" /></a></p>
+<div class="section" id="chapter-7-scripting-leo-with-python">
+<h1><a class="toc-backref" href="#id1" name="chapter-7-scripting-leo-with-python">Chapter 7: Scripting Leo with Python</a></h1>
+<p>This chapter describes only the most useful functions, classes and methods in
+<tt class="docutils literal"><span class="pre">leo.py</span></tt>. Keep in mind that <em>your scripts have complete access to all of Leo's
+source code</em>, that is, all the code in <tt class="docutils literal"><span class="pre">LeoPy.leo</span></tt>. Your scripts can use Leo's
+code in whatever ways are convenient. You are <em>not</em> limited by what you see in
+this chapter.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#chapter-7-scripting-leo-with-python" id="id1" name="id1">Chapter 7: Scripting Leo with Python</a><ul>
+<li><a class="reference" href="#overview" id="id2" name="id2">Overview</a></li>
+<li><a class="reference" href="#g-es-writes-to-the-log-pane" id="id3" name="id3">g.es writes to the log pane</a></li>
+<li><a class="reference" href="#app-windowlist-the-list-of-all-open-frames" id="id4" name="id4">app.windowList: the list of all open frames</a></li>
+<li><a class="reference" href="#getting-and-setting-headline-and-body-text" id="id5" name="id5">Getting and setting headline and body text</a></li>
+<li><a class="reference" href="#traversing-outlines" id="id6" name="id6">Traversing outlines</a><ul>
+<li><a class="reference" href="#about-copying-positions" id="id7" name="id7">About copying positions</a></li>
+<li><a class="reference" href="#c-allnodes-iter" id="id8" name="id8">c.allNodes_iter</a></li>
+<li><a class="reference" href="#p-children-iter" id="id9" name="id9">p.children_iter</a></li>
+<li><a class="reference" href="#p-parents-iter-p-self-and-parents-iter" id="id10" name="id10">p.parents_iter &amp; p.self_and_parents_iter</a></li>
+<li><a class="reference" href="#p-siblings-iter-p-following-siblings-iter" id="id11" name="id11">p.siblings_iter &amp; p.following_siblings_iter</a></li>
+<li><a class="reference" href="#p-subtree-iter-p-self-and-subtree-iter" id="id12" name="id12">p.subtree_iter &amp; p.self_and_subtree_iter</a></li>
+<li><a class="reference" href="#testing-whether-a-position-is-valid" id="id13" name="id13">Testing whether a position is valid</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#updating-the-screen" id="id14" name="id14">Updating the screen</a></li>
+<li><a class="reference" href="#invoking-commands-from-scripts" id="id15" name="id15">Invoking commands from scripts</a></li>
+<li><a class="reference" href="#getting-settings-from-settings-trees" id="id16" name="id16">Getting settings from &#64;settings trees</a></li>
+<li><a class="reference" href="#getting-and-setting-preferences" id="id17" name="id17">Getting and setting preferences</a></li>
+<li><a class="reference" href="#functions-for-finding-and-changing-text-from-scripts" id="id18" name="id18">Functions for finding and changing text from scripts</a></li>
+<li><a class="reference" href="#running-leo-in-batch-mode" id="id19" name="id19">Running Leo in batch mode</a></li>
+<li><a class="reference" href="#functions-defined-in-leoglobals-py" id="id20" name="id20">Functions defined in leoGlobals.py</a></li>
+<li><a class="reference" href="#redirecting-output-from-scripts" id="id21" name="id21">Redirecting output from scripts</a></li>
+<li><a class="reference" href="#summary-of-the-vnode-and-position-classes" id="id22" name="id22">Summary of the vnode and position classes</a><ul>
+<li><a class="reference" href="#iterators" id="id23" name="id23">Iterators</a></li>
+<li><a class="reference" href="#getters" id="id24" name="id24">Getters</a></li>
+<li><a class="reference" href="#setters" id="id25" name="id25">Setters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- Links used in this document. -->
+<!-- WARNING: image targets may not have upper case letters! -->
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id2" name="overview">Overview</a></h2>
+<p>Leo's source code is a collection of classes, along with utility functions in
+<tt class="docutils literal"><span class="pre">leoGlobals.py</span></tt>. Here are Leo's most important classes and objects:</p>
+<dl class="docutils">
+<dt><strong>The Execute Script command predefines c, g and p</strong></dt>
+<dd><p class="first">Leo's <tt class="docutils literal"><span class="pre">Execute</span> <span class="pre">Script</span></tt> command predefines <tt class="docutils literal"><span class="pre">c</span></tt> to be the commander of the
+outline containing the script. <tt class="docutils literal"><span class="pre">g</span></tt> and <tt class="docutils literal"><span class="pre">p</span></tt> are predefined as follows:</p>
+<pre class="last literal-block">
+import leoGlobals as g
+p = c.currentPosition()
+</pre>
+</dd>
+<dt><strong>g.app</strong></dt>
+<dd>The <strong>application object</strong> representing the entire Leo application.
+The ivars (instance variables) of <tt class="docutils literal"><span class="pre">g.app</span></tt> represent Leo's global variables.</dd>
+<dt><strong>commander</strong></dt>
+<dd>An instance of the <tt class="docutils literal"><span class="pre">Commands</span></tt> class in <tt class="docutils literal"><span class="pre">leoCommands.py</span></tt>.
+Commanders represent commands for a <em>particular</em> window.
+Each open Leo window has its own commander.
+By convention, any variable named <tt class="docutils literal"><span class="pre">c</span></tt> is a commander.</dd>
+<dt><strong>frame</strong></dt>
+<dd>An instance of the base <tt class="docutils literal"><span class="pre">leoFrame</span></tt> class in <tt class="docutils literal"><span class="pre">leoFrame.py</span></tt>.
+Frames contains all the internal data needed to manage a Leo window.
+Given a commander <tt class="docutils literal"><span class="pre">c</span></tt>, <tt class="docutils literal"><span class="pre">c.frame</span></tt> is commanders frame.
+Given a frame <tt class="docutils literal"><span class="pre">f</span></tt>, <tt class="docutils literal"><span class="pre">f.c</span></tt> is the frame's commander.</dd>
+<dt><strong>position</strong></dt>
+<dd><p class="first">An instance of the <tt class="docutils literal"><span class="pre">position</span></tt> class in <tt class="docutils literal"><span class="pre">leoNodes.py</span></tt>.
+A position object represents the location of a particular node <em>in a tree traversal</em>.
+By convention, variables named <tt class="docutils literal"><span class="pre">p</span></tt>, <tt class="docutils literal"><span class="pre">p1</span></tt> or <tt class="docutils literal"><span class="pre">p2</span></tt> are positions.
+For any <tt class="docutils literal"><span class="pre">position</span></tt> <tt class="docutils literal"><span class="pre">p</span></tt>, <tt class="docutils literal"><span class="pre">p.v</span></tt> is the vnode at that position and <tt class="docutils literal"><span class="pre">p.v.t</span></tt> is the tnode at that position.
+<strong>Positions are the primary way to access data.</strong>
+<tt class="docutils literal"><span class="pre">c.currentPosition</span></tt> and <tt class="docutils literal"><span class="pre">c.rootPosition</span></tt> return positions.
+From those starting point, it is possible to access the data in any node.</p>
+<p><strong>Important</strong>:
+Positions can become <em>invalid</em> when the structure of the outline changes.
+Therefore, plugins and scripts must <em>not</em> store positions for use at a later time if the outline
+could have changed in the meantime.</p>
+<p class="last"><strong>Important</strong>:
+For compatibility with old (pre-4.2) scripts, <tt class="docutils literal"><span class="pre">c.currentVnode</span></tt> and
+<tt class="docutils literal"><span class="pre">c.rootVnode</span></tt> methods return <em>positions</em> not vnodes. Old scripts appear to
+be using vnodes; in fact they are using positions. I call such scripts
+<strong>confused</strong> scripts. Confused scripts work because the <tt class="docutils literal"><span class="pre">position</span></tt> class
+is designed to make them work. We'll see how this works in detail in <a class="reference" href="#about-copying-positions">About
+copying positions</a>.  This section is <strong>supremely important</strong>.</p>
+</dd>
+<dt><strong>vnode</strong></dt>
+<dd>An instance of the <tt class="docutils literal"><span class="pre">vnode</span></tt> class in <tt class="docutils literal"><span class="pre">leoNodes.py</span></tt>.
+vnodes represent an outline node.
+Normally, scripts access vnodes via the <tt class="docutils literal"><span class="pre">position</span></tt> class described below. 
+By convention, variables named <tt class="docutils literal"><span class="pre">v</span></tt>, <tt class="docutils literal"><span class="pre">v1</span></tt> or <tt class="docutils literal"><span class="pre">v2</span></tt> refer to vnodes.
+<strong>Important</strong>: scripts normally should use positions, not vnodes.</dd>
+<dt><strong>tnode</strong></dt>
+<dd>An instance of the <tt class="docutils literal"><span class="pre">tnode</span></tt> class in <tt class="docutils literal"><span class="pre">leoNodes.py</span></tt>.
+tnodes represent the actual data in a vnode, including headline and body text.
+Cloned <em>vnodes</em> share the tnode <em>of their first child</em>.
+For any vnode <tt class="docutils literal"><span class="pre">v</span></tt>, <tt class="docutils literal"><span class="pre">v.t</span></tt> is v's tnode.
+<strong>Important</strong>: If <tt class="docutils literal"><span class="pre">p</span></tt> is a <tt class="docutils literal"><span class="pre">position</span></tt>, <tt class="docutils literal"><span class="pre">p.v.t</span></tt> is the tnode associated with that position.
+Many positions may share the same tnode.</dd>
+</dl>
+</div>
+<div class="section" id="g-es-writes-to-the-log-pane">
+<h2><a class="toc-backref" href="#id3" name="g-es-writes-to-the-log-pane">g.es writes to the log pane</a></h2>
+<p>The g.es method prints its arguments to the log pane:</p>
+<pre class="literal-block">
+g.es(&quot;Hello world&quot;)
+</pre>
+<p>g.es converts non-string arguments using repr:</p>
+<pre class="literal-block">
+g.es(c)
+</pre>
+<p>g.es prints multiple arguments separated by commas:</p>
+<pre class="literal-block">
+g.es(&quot;Hello&quot;,&quot;world&quot;)
+</pre>
+</div>
+<div class="section" id="app-windowlist-the-list-of-all-open-frames">
+<h2><a class="toc-backref" href="#id4" name="app-windowlist-the-list-of-all-open-frames">app.windowList: the list of all open frames</a></h2>
+<p>The windowlist attribute of the application instance contains the list of the
+frames of all open windows. The commands ivar of the frame gives the commander
+for that frame:</p>
+<pre class="literal-block">
+windows = g.app.windowList # get the list of all open frames.
+g.es(&quot;windows...&quot;)
+for f in windows:
+    c = f.c # c is f's commander
+    g.es(f)
+    g.es(f.shortFileName())
+    g.es(c)
+    g.es(c.rootPosition())
+</pre>
+</div>
+<div class="section" id="getting-and-setting-headline-and-body-text">
+<h2><a class="toc-backref" href="#id5" name="getting-and-setting-headline-and-body-text">Getting and setting headline and body text</a></h2>
+<p>Here is how to access the data of a Leo window:</p>
+<pre class="literal-block">
+g.es(p) # p is already defined.
+p = c.currentPosition() # get the current position.
+g.es(p)
+g.es(&quot;head:&quot;,p.headString())
+g.es(&quot;body:&quot;,p.bodyString())
+</pre>
+<p>Here is how to access data at position <tt class="docutils literal"><span class="pre">p</span></tt>.
+<strong>Note</strong>: these methods work whether or not <tt class="docutils literal"><span class="pre">p</span></tt> is the current position:</p>
+<pre class="literal-block">
+body = p.bodyString()
+head = p.headString()
+p.setBodyStringOrPane(body)     # set body text of p to body.
+p.setHeadStringOrHeadline(head) # set headline text of p to head.
+</pre>
+</div>
+<div class="section" id="traversing-outlines">
+<h2><a class="toc-backref" href="#id6" name="traversing-outlines">Traversing outlines</a></h2>
+<p>The proper way to traverse an outline is with an iterator.
+Iterators are defined only by the position class;
+vnodes can not have iterators because vnodes may appear in multiple places in an outline.</p>
+<div class="section" id="about-copying-positions">
+<h3><a class="toc-backref" href="#id7" name="about-copying-positions">About copying positions</a></h3>
+<p>Understanding this section is <strong>supremely important</strong> for anyone who wants to
+script Leo properly.</p>
+<p>By default, all iterators discussed below use a <strong>single</strong> position to move
+through the outline. This is a vital optimization; otherwise Leo would generate
+one or more position object for each node of a tree traversal. However, it means
+that it is <strong>useless</strong> to try to capture a position with:</p>
+<pre class="literal-block">
+p2 = p  # Wrong.  p2 will change after this assignment.
+</pre>
+<p>Instead, scripts and plugins should use <tt class="docutils literal"><span class="pre">p.copy()</span></tt> to 'capture' the value of a position:</p>
+<pre class="literal-block">
+p2 = p.copy()   # Write: p2 will not change when p changes later.
+</pre>
+<p>Another way to solve this problem is to set <tt class="docutils literal"><span class="pre">copy=True</span></tt> when using an iterator:</p>
+<pre class="literal-block">
+d = {}
+for p in c.allNodes_iter(copy=True):
+    d[p.v.t] = p
+</pre>
+<p>This creates a dictionary of (unchanging!) positions, indexed via tnode.
+<strong>Warning</strong> The positions in this dictionary will become invalid when the
+outline's structure changes. It would be wrong to save a dictionary like this
+for use between commands.</p>
+<p>Setting the <tt class="docutils literal"><span class="pre">copy=True</span></tt> argument to iterators is an acceptable strategy for
+infrequently used scripts; it is not acceptable for heavily used code in Leo's
+core: it would create huge numbers of positions that would immediately be
+candidates for garbage collection.</p>
+<p><strong>Important</strong>: 'Confused' scripts work because the <tt class="docutils literal"><span class="pre">position</span></tt> methods that
+simulate the old <tt class="docutils literal"><span class="pre">vnode</span></tt> methods automatically create copies of positions when
+'moving' through an outline. Thus, confused scripts generate many more positions
+than would the equivalent script that uses <tt class="docutils literal"><span class="pre">position</span></tt> iterators. Such is the
+price of compatibility.</p>
+</div>
+<div class="section" id="c-allnodes-iter">
+<h3><a class="toc-backref" href="#id8" name="c-allnodes-iter">c.allNodes_iter</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">c.allNodes_iter</span></tt> iterator returns a list of all positions in the outline.
+This script makes a list of all the nodes in an outline:</p>
+<pre class="literal-block">
+nodes = [p for p in c.allNodes_iter()]
+g.es(&quot;This outline contains %d nodes&quot; % len(nodes))
+</pre>
+<p>Here is one way to count the nodes of an outline:</p>
+<pre class="literal-block">
+count = 0
+for p in c.allNodes_iter():
+    count += 1
+g.es(&quot;This outline contains %d nodes&quot; % count)
+</pre>
+<p>Here is a way to count the <em>distinct</em> vnodes of an outline:</p>
+<pre class="literal-block">
+positions = 0 ; tnodes = {}
+for p in c.allNodes_iter():
+    positions += 1
+    if not tnodes.get(p.v.t):
+        tnodes[p.v.t] = p.v.t
+g.es(&quot;%8s positions&quot; % positions)
+g.es(&quot;%8s vnodes&quot; % len(tnodes.keys()))
+</pre>
+</div>
+<div class="section" id="p-children-iter">
+<h3><a class="toc-backref" href="#id9" name="p-children-iter">p.children_iter</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">p.children_iter</span></tt> iterator returns a list of all children of position <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+parent = p.parent()
+g.es(&quot;children of %s&quot; % parent.headString(),color=&quot;purple&quot;)
+for p in parent.children_iter():
+    g.es(p.headString())
+</pre>
+</div>
+<div class="section" id="p-parents-iter-p-self-and-parents-iter">
+<h3><a class="toc-backref" href="#id10" name="p-parents-iter-p-self-and-parents-iter">p.parents_iter &amp; p.self_and_parents_iter</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">p.parents_iter</span></tt> iterator returns a list of all parents of position <tt class="docutils literal"><span class="pre">p</span></tt>, excluding <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+current = p.copy()
+g.es(&quot;inclusive parents of %s&quot; % current.headString(),color=&quot;purple&quot;)
+for p in current.self_and_parents_iter():
+    g.es(p.headString())
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">p.self_and_parents_iter</span></tt> iterator returns a list of all parents of position <tt class="docutils literal"><span class="pre">p</span></tt>, including <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+current = p.copy()
+g.es(&quot;exclusive of %s&quot; % current.headString(),color=&quot;purple&quot;)
+for p in current.parents_iter():
+    g.es(p.headString())
+</pre>
+</div>
+<div class="section" id="p-siblings-iter-p-following-siblings-iter">
+<h3><a class="toc-backref" href="#id11" name="p-siblings-iter-p-following-siblings-iter">p.siblings_iter &amp; p.following_siblings_iter</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">p.siblings_iter</span></tt> iterator returns a list of all siblings of position <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+current = c.currentPosition()
+g.es(&quot;all siblings of %s&quot; % current.headString(),color=&quot;purple&quot;)
+for p in current.self_and_siblings_iter():
+    g.es(p.headString())
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">p.following_siblings_iter</span></tt> iterator returns a list of all siblings that follow position <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+current = c.currentPosition()
+g.es(&quot;following siblings of %s&quot; % current.headString(),color=&quot;purple&quot;)
+for p in current.following_siblings_iter():
+    g.es(p.headString())
+</pre>
+</div>
+<div class="section" id="p-subtree-iter-p-self-and-subtree-iter">
+<h3><a class="toc-backref" href="#id12" name="p-subtree-iter-p-self-and-subtree-iter">p.subtree_iter &amp; p.self_and_subtree_iter</a></h3>
+<p>The p.subtree_iter iterator returns a list of all positions in <tt class="docutils literal"><span class="pre">p</span></tt>'s subtree, excluding <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+parent = p.parent()
+g.es(&quot;inclusive subtree of %s&quot; % parent.headString(),color=&quot;purple&quot;)
+for p in parent.self_and_subtree_iter():
+    g.es(p.headString())
+</pre>
+<p>The p.self_and_subtree_iter iterator returns a list of all positions in <tt class="docutils literal"><span class="pre">p</span></tt>'s subtree, including <tt class="docutils literal"><span class="pre">p</span></tt>:</p>
+<pre class="literal-block">
+parent = p.parent()
+g.es(&quot;exclusive subtree of %s&quot; % parent.headString(),color=&quot;purple&quot;)
+for p in parent.subtree_iter():
+    g.es(p.headString())
+</pre>
+</div>
+<div class="section" id="testing-whether-a-position-is-valid">
+<h3><a class="toc-backref" href="#id13" name="testing-whether-a-position-is-valid">Testing whether a position is valid</a></h3>
+<p>The tests:</p>
+<pre class="literal-block">
+if p:       # Right
+if not p:   # Right
+</pre>
+<p>are the <strong>only</strong> correct ways to test whether a position <tt class="docutils literal"><span class="pre">p</span></tt> is valid.
+In particular, the following <strong>will not work</strong>:</p>
+<pre class="literal-block">
+if p is None:       # Wrong
+if p is not None:   # Wrong
+</pre>
+</div>
+</div>
+<div class="section" id="updating-the-screen">
+<h2><a class="toc-backref" href="#id14" name="updating-the-screen">Updating the screen</a></h2>
+<p>Leo's commands use <tt class="docutils literal"><span class="pre">c.beginUpdate</span></tt> and <tt class="docutils literal"><span class="pre">c.endUpdate</span></tt> to reduce flicker.
+<tt class="docutils literal"><span class="pre">c.beginUpdate</span></tt> suppresses all drawing in the outline pane until the matching
+<tt class="docutils literal"><span class="pre">c.endUpdate</span></tt> is seen. These methods can be nested; each <tt class="docutils literal"><span class="pre">c.beginUpdate</span></tt>
+must have a corresponding <tt class="docutils literal"><span class="pre">c.endUpdate</span></tt>. <tt class="docutils literal"><span class="pre">c.endUpdate</span></tt> takes an optional
+parameter. No redrawing is done if this parameter is <tt class="docutils literal"><span class="pre">False</span></tt>. This can
+sometimes be useful; inner code can tell other code whether redrawing is
+actually required. <tt class="docutils literal"><span class="pre">c.redraw</span></tt> forces an update of the entire screen:</p>
+<pre class="literal-block">
+# Force a screen redraw
+c.redraw()
+
+# Typical way to redraw the screen:
+c.beginUpdate()   
+try:
+    ...code that alters the screen...
+finally:
+    c.endUpdate()
+
+# Typical way to conditionally redraw the screen:
+c.beginUpdate()
+try:
+    ...code sets flag if the screen needs redrawing.
+    flag = True
+finally:
+    c.endUpdate(flag)
+</pre>
+</div>
+<div class="section" id="invoking-commands-from-scripts">
+<h2><a class="toc-backref" href="#id15" name="invoking-commands-from-scripts">Invoking commands from scripts</a></h2>
+<p>Leo dispatches commands using c.doCommand,
+which calls the &quot;command1&quot; and &quot;command2&quot; hook routines for the given label.
+c.doCommand catches all exceptions thrown by the command:</p>
+<pre class="literal-block">
+c.doCommand(c.markHeadline,label=&quot;markheadline&quot;)
+</pre>
+<p>You can also call command handlers directly so that hooks will not be called:</p>
+<pre class="literal-block">
+c.markHeadline()
+</pre>
+</div>
+<div class="section" id="getting-settings-from-settings-trees">
+<h2><a class="toc-backref" href="#id16" name="getting-settings-from-settings-trees">Getting settings from &#64;settings trees</a></h2>
+<p>Any .leo file may contain an <tt class="docutils literal"><span class="pre">&#64;settings</span></tt> tree, so settings may be different for each commander.
+Plugins and other scripts can get the value of settings as follows:</p>
+<pre class="literal-block">
+format_headlines = c.config.getBool('rst3_format_headlines')
+g.es('format_headlines',format_headlines)
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">c.config</span></tt> class has the following getters.
+See the <tt class="docutils literal"><span class="pre">configSettings</span></tt> in <tt class="docutils literal"><span class="pre">leoCommands.py</span></tt> for details:</p>
+<pre class="literal-block">
+getBool
+getColor
+getDirectory
+getFloat
+getInt
+getLanguage
+getRatio
+getShortcut
+getString
+</pre>
+<p>You can set any <em>existing</em> item in an <tt class="docutils literal"><span class="pre">&#64;settings</span></tt> tree with <tt class="docutils literal"><span class="pre">c.config.set(p,setting,val)</span></tt>.
+For example:</p>
+<pre class="literal-block">
+for val in (False,True):
+    c.config.set(p,'rst3_format_headlines',val)
+    format_headlines = c.config.getBool('rst3_format_headlines')
+    g.es('format_headlines',format_headlines)
+</pre>
+<p><tt class="docutils literal"><span class="pre">c.config.set</span></tt> does not change the <tt class="docutils literal"><span class="pre">&#64;settings</span></tt> tree; it simply changes the values returned by the getters.</p>
+</div>
+<div class="section" id="getting-and-setting-preferences">
+<h2><a class="toc-backref" href="#id17" name="getting-and-setting-preferences">Getting and setting preferences</a></h2>
+<p>Each commander maintains its own preferences.
+Your scripts can get the following ivars:</p>
+<pre class="literal-block">
+ivars = (
+    'output_doc_flag',
+    'page_width',
+    'page_width',
+    'tab_width',
+    'tangle_batch_flag',
+    'tangle_directory',
+    'target_language',
+    'untangle_batch_flag',
+    'use_header_flag',
+)
+
+g.es(&quot;Prefs ivars...\n&quot;,color=&quot;purple&quot;)
+for ivar in ivars:
+    g.es(getattr(c,ivar))
+</pre>
+<p>If your script sets <tt class="docutils literal"><span class="pre">c.tab_width</span></tt> your script may call <tt class="docutils literal"><span class="pre">f.setTabWidth</span></tt> to redraw the screen:</p>
+<pre class="literal-block">
+c.tab_width = -4    # Change this and see what happens.
+c.frame.setTabWidth(c.tab_width)
+</pre>
+</div>
+<div class="section" id="functions-for-finding-and-changing-text-from-scripts">
+<h2><a class="toc-backref" href="#id18" name="functions-for-finding-and-changing-text-from-scripts">Functions for finding and changing text from scripts</a></h2>
+<p>The file <tt class="docutils literal"><span class="pre">leoFindScript.py</span></tt> contains functions for finding and changing text
+from within scripts.  See <tt class="docutils literal"><span class="pre">leoFindScript.py</span></tt> in <tt class="docutils literal"><span class="pre">LeoPy.leo</span></tt> for full details.</p>
+<p>The findall function returns a list of tuples <tt class="docutils literal"><span class="pre">(v,pos)</span></tt> describing matches in
+<tt class="docutils literal"><span class="pre">c</span></tt>'s entire tree:</p>
+<pre class="literal-block">
+import leoFindScript
+
+pattern=&quot;import leoGlobals as g&quot;
+result = leoFindScript.findAll(c,pattern,bodyFlag=1)
+
+g.es(&quot;%-3d instances of: '%s'...\n&quot; % (len(result),pattern),color=&quot;purple&quot;)
+
+for v,pos in result:
+    body = v.bodyString()
+    g.es('\n%-4d %s' % (pos,v.headString()))
+    g.es(g.get_line_after(body,pos))
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">reFindall</span></tt> function returns a list of tuples <tt class="docutils literal"><span class="pre">(v,mo,pos)</span></tt>, where <tt class="docutils literal"><span class="pre">mo</span></tt>
+is a <tt class="docutils literal"><span class="pre">MatchObject</span></tt>. The <tt class="docutils literal"><span class="pre">reFlags</span></tt> argument are flags to <tt class="docutils literal"><span class="pre">re.search</span></tt>:</p>
+<pre class="literal-block">
+import leoFindScript
+
+pattern=&quot;from .* import&quot;
+result = leoFindScript.reFindAll(c,pattern,bodyFlag=1,reFlags=None)
+
+g.es(&quot;%-3d instances of: '%s'...\n&quot; % (len(result),pattern),color=&quot;purple&quot;)
+for v,mo,pos in result:
+    body = v.bodyString()
+    g.es('\n%-4d %s' % (pos,v.headString()))
+    g.es(g.get_line_after(body,pos))
+</pre>
+</div>
+<div class="section" id="running-leo-in-batch-mode">
+<h2><a class="toc-backref" href="#id19" name="running-leo-in-batch-mode">Running Leo in batch mode</a></h2>
+<p>On startup, Leo looks for two arguments of the form:</p>
+<pre class="literal-block">
+--script scriptFile
+</pre>
+<p>If found, Leo enters batch mode. In batch mode Leo does not show any windows.
+Leo assumes the scriptFile contains a Python script and executes the contents of
+that file using Leo's <tt class="docutils literal"><span class="pre">Execute</span> <span class="pre">Script</span></tt> command. By default, Leo sends all
+output to the console window. Scripts in the scriptFile may disable or enable
+this output by calling <tt class="docutils literal"><span class="pre">app.log.disable</span></tt> or <tt class="docutils literal"><span class="pre">app.log.enable</span></tt></p>
+<p>Scripts in the scriptFile may execute any of Leo's commands except the <tt class="docutils literal"><span class="pre">Edit</span> <span class="pre">Body</span></tt>
+and <tt class="docutils literal"><span class="pre">Edit</span> <span class="pre">Headline</span></tt> commands. Those commands require interaction with the user.
+For example, the following batch script reads a Leo file and prints all the
+headlines in that file:</p>
+<pre class="literal-block">
+path = r&quot;c:\prog\leoCVS\leo\test\test.leo&quot;
+
+g.app.log.disable() # disable reading messages while opening the file
+flag,newFrame = g.openWithFileName(path,None)
+g.app.log.enable() # re-enable the log.
+
+for p in newFrame.c.allNodes_iter():
+    g.es(g.toEncodedString(p.headString(),&quot;utf-8&quot;))
+</pre>
+</div>
+<div class="section" id="functions-defined-in-leoglobals-py">
+<h2><a class="toc-backref" href="#id20" name="functions-defined-in-leoglobals-py">Functions defined in leoGlobals.py</a></h2>
+<p><tt class="docutils literal"><span class="pre">leoGlobals.py</span></tt> contains many utility functions and constants.
+The following script prints all the names defined in <tt class="docutils literal"><span class="pre">leoGlobals.py</span></tt>:</p>
+<pre class="literal-block">
+g.es(&quot;Names defined in leoGlobals.py&quot;,color=&quot;purple&quot;)
+names = g.__dict__.keys()
+names.sort()
+for name in names:
+    g.es(name)
+</pre>
+</div>
+<div class="section" id="redirecting-output-from-scripts">
+<h2><a class="toc-backref" href="#id21" name="redirecting-output-from-scripts">Redirecting output from scripts</a></h2>
+<p><tt class="docutils literal"><span class="pre">leoGlobals.py</span></tt> defines 6 convenience methods for redirecting stdout and stderr:</p>
+<pre class="literal-block">
+g.redirectStderr() # Redirect stderr to the current log pane.
+g.redirectStdout() # Redirect stdout to the current log pane.
+g.restoreStderr()  # Restores stderr so it prints to the console window.
+g.restoreStdout()  # Restores stdout so it prints to the console window.
+g.stdErrIsRedirected() # Returns True if the stderr stream is redirected to the log pane.
+g.stdOutIsRedirected() # Returns True if the stdout stream is redirected to the log pane.
+</pre>
+<p>Calls need <em>not</em> be paired. Redundant calls are ignored and the last call made
+controls where output for each stream goes.
+<strong>Note</strong>: you must execute Leo in a console window to see non-redirected output from the print statement:</p>
+<pre class="literal-block">
+print &quot;stdout isRedirected:&quot;, g.stdOutIsRedirected()
+print &quot;stderr isRedirected:&quot;, g.stdErrIsRedirected()
+
+g.redirectStderr()
+print &quot;stdout isRedirected:&quot;, g.stdOutIsRedirected()
+print &quot;stderr isRedirected:&quot;, g.stdErrIsRedirected()
+
+g.redirectStdout()
+print &quot;stdout isRedirected:&quot;, g.stdOutIsRedirected()
+print &quot;stderr isRedirected:&quot;, g.stdErrIsRedirected()
+
+g.restoreStderr()
+print &quot;stdout isRedirected:&quot;, g.stdOutIsRedirected()
+print &quot;stderr isRedirected:&quot;, g.stdErrIsRedirected()
+
+g.restoreStdout()
+print &quot;stdout isRedirected:&quot;, g.stdOutIsRedirected()
+print &quot;stderr isRedirected:&quot;, g.stdErrIsRedirected()
+</pre>
+</div>
+<div class="section" id="summary-of-the-vnode-and-position-classes">
+<h2><a class="toc-backref" href="#id22" name="summary-of-the-vnode-and-position-classes">Summary of the vnode and position classes</a></h2>
+<p>Most scripts will use methods of the position class to access information in an
+outline. The following sections summarizes the most useful methods that your
+scripts can use. For a complete list, see the <tt class="docutils literal"><span class="pre">leoNodes.py</span></tt> in of <tt class="docutils literal"><span class="pre">LeoPy.leo</span></tt>.</p>
+<div class="section" id="iterators">
+<h3><a class="toc-backref" href="#id23" name="iterators">Iterators</a></h3>
+<p>Iterators exist only in the position class:</p>
+<pre class="literal-block">
+c.allNodes_iter            # returns all positions in c's outline.
+p.children_iter            # returns all children of p.
+p.parents_iter             # returns all parents of p.
+p.self_and_parents_iter    # returns p and all parents of p.
+p.siblings_iter            # returns all siblings of p, including p.
+p.following_siblings_iter  # returns all siblings following p.
+p.subtree_iter             # returns all positions in p's subtree, excluding p.
+p.self_and_subtree_iter    # returns all positions in p's subtree, including p.
+</pre>
+</div>
+<div class="section" id="getters">
+<h3><a class="toc-backref" href="#id24" name="getters">Getters</a></h3>
+<p><tt class="docutils literal"><span class="pre">p.c</span></tt> is an 'official' ivar of the <tt class="docutils literal"><span class="pre">position</span></tt> class.  <tt class="docutils literal"><span class="pre">p.c</span></tt> is <tt class="docutils literal"><span class="pre">p</span></tt>'s commander.</p>
+<p>Here are the most useful getters of the <tt class="docutils literal"><span class="pre">vnode</span></tt> and <tt class="docutils literal"><span class="pre">position</span></tt> classes.</p>
+<p>Returning strings:</p>
+<pre class="literal-block">
+p.bodyString() # the body string of p.
+p.headString() # the headline string of p.
+</pre>
+<p>Returning ints:</p>
+<pre class="literal-block">
+p.childIndex()
+p.numberOfChildren()
+p.level()
+</pre>
+<p>Returning bools representing property bits:</p>
+<pre class="literal-block">
+p.hasChildren()
+p.isAncestorOf(v2) # True if v2 is a child, grandchild, etc. of p.
+p.isCloned()
+p.isDirty()
+p.isExpanded()
+p.isMarked()
+p.isVisible()
+p.isVisited()
+</pre>
+</div>
+<div class="section" id="setters">
+<h3><a class="toc-backref" href="#id25" name="setters">Setters</a></h3>
+<p>Here are the most useful setters of the <tt class="docutils literal"><span class="pre">Commands</span></tt> and <tt class="docutils literal"><span class="pre">position</span></tt> classes.
+The following setters of the <tt class="docutils literal"><span class="pre">position</span></tt> class regardless of whether
+<tt class="docutils literal"><span class="pre">p</span></tt> is the presently selected position:</p>
+<pre class="literal-block">
+p.setBodyString(s)  # Sets the body text of p.
+p.setHeadStringOrHeadline(s)  # Sets the headline text of p.
+</pre>
+<p>Moving nodes:</p>
+<pre class="literal-block">
+p.moveAfter(v2)           # move p after v2
+p.moveToNthChildOf(v2,n)  # move p to the n'th child of v2
+p.moveToRoot()            #  make p the root position
+</pre>
+<p>The &quot;visited&quot; bit may be used by commands or scripts for any purpose.
+Many commands use this bits for tree traversal, so these bits do not persist:</p>
+<pre class="literal-block">
+c.clearAllVisited() # Clears all visited bits in c's tree.
+p.clearVisited()
+p.setVisited()
+</pre>
+<hr class="docutils" />
+<p><a class="reference reference" href="design.html"><img alt="back" src="arrow_lt.gif" /></a> <a class="reference reference" href="front.html"><img alt="leo" src="leo.gif" /></a> <a class="reference reference" href="customizing.html"><img alt="next" src="arrow_rt.gif" /></a></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

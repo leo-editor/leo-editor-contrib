@@ -1,0 +1,16 @@
+%runlog boogaaa.log
+%logstart boogaaa.log
+print "GOADSsad"
+print "MILKTOAST"
+print "VILKEER"
+a = 2000
+print a
+a += 30000
+print a
+class z:
+      print "Z IS MY CLASS"
+
+print z
+%runlog jythonshell.log.1~
+%logstart rotate
+a = 1000

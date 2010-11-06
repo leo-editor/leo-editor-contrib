@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="LeoStyle.css" type="text/css" />	-->
+        <style type="text/css">         
+        
+        body
+        {
+            font: Helvetica;
+        }
+        
+        
+        .NodeText
+        {
+            border: 1p;
+            border-color: #ffee88;
+            border-style: dashed;
+            background-color: #ffdd88;
+        }
+        
+ </style>
+        <title model="name" view="Text"/>
+    </head>
+
+    <body>
+
+<table height="100%" width="100%" border="0">
+<tr valign="top"><td>
+
+    <p>
+        <ul model="parents" view="List">
+            <li pattern="listItem"><a view="Link"/></li> 
+            <a pattern="emptyList"/> 
+        </ul>
+
+        <ul>
+        <li><h1 model="name" view="Text"/></li>
+            <ul model="childrens" view="List">
+                <li pattern="listItem"><a view="Link"/></li> 
+                <a pattern="emptyList"/> 
+            </ul>
+        </ul>
+    </p>
+    
+    <p>Being edited by:
+        <ul model="users" view="List">
+            <li pattern="emptyList">No one.</li> 
+            <li pattern="listItem" view="Text"/> 
+        </ul>
+    </p>
+    
+    <table border="0" width="100%">
+        <tr><td></td><td width="80%"><div class="NodeText" model="text" view="ParagraphText"/></td><td></td></tr>
+    </table>
+        
+</td></tr>
+    <tr valign="bottom"><td><hr/></td></tr>
+</table>
+    
+    <p>(This is the LeoServer web interface node representation)</p>
+         
+    <hr/><p/>
+        
+    <table border="1">
+        <tr><td>Name:</td><th model="name"/></tr>
+        <tr><td>Text:</td><td model="text" view="ParagraphText"/></tr>
+    </table>
+        
+    <p/>
+    <table border="1">
+        <tr>
+            <td>HB:</td>
+            <td> 
+                <ol model="HB" view="List">
+                    <li pattern="listItem" view="Text"/>
+                    <a pattern="emptyList" > - </a>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>delayed_operations:</td>
+            <td> 
+                <ol model="delayed_operations" view="List">
+                    <li pattern="listItem" view="Text"/> 
+                    <a pattern="emptyList" > - </a>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>base_text:</td>
+            <td model="base_text" view="ParagraphText"/>
+        </tr>
+        <tr>
+            <td>Minimum State Vector:</td>
+            <td model="MSV" view="Text"/>
+        </tr>
+    </table>
+
+    <p/>		
+    <table border="1">
+        <tr> <td>Childrens:</td>
+            <td>
+                 <ul model="childrens" view="List">
+                        <li pattern="listItem"> <a view="Link"/> </li>
+                     <a pattern="emptyList">This node has no childrens.</a>
+                </ul>
+            </td>
+        </tr>
+        <tr> <td>Parents:</td>
+            <td>
+                 <ul model="parents" view="List">
+                        <li pattern="listItem"> <a view="Link"/> </li>
+                     <a pattern="emptyList">This node has no parents (very strange, could be a bug).</a>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    
+    <p/>
+    <table border="1">
+    <tr>
+        <td>Online users:</td>
+        <td>
+            <ul model="users" view="List">
+                <li pattern="listItem" view="Text"/> 
+                <a pattern="emptyList">No one here.</a>
+            </ul>
+        </td>
+    </tr>
+    </table>
+
+    <p/> <hr/>		
+        
+    </body>
+
+</html>

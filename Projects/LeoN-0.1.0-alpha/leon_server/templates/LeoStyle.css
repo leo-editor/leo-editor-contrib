@@ -1,0 +1,27 @@
+/*@+leo-ver=4*/
+/*@+node:@file templates/LeoStyle.css*/
+/*@@language css*/
+/*@@comment /* */*/
+
+/*@<<css code>>*/
+/*@+node:<< css code >>*/
+
+
+body
+{
+    font: Helvetica;
+}
+
+
+.NodeText
+{
+    border: 1p;
+    border-color: #ffee88;
+    border-style: dashed;
+    background-color: #ffdd88;
+}
+
+/*@-node:<< css code >>*/
+/*@nl*/
+/*@-node:@file templates/LeoStyle.css*/
+/*@-leo*/

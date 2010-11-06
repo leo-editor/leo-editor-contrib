@@ -1,0 +1,16 @@
+#@+leo-ver=4-thin-encoding=utf-8,.
+#@+node:zorcanda!.20050429161034.1:@thin testsvn22.txt
+#@+others
+#@+node:zorcanda!.20050429161034.2:NewHeadline
+meow!!!    
+#@-node:zorcanda!.20050429161034.2:NewHeadline
+#@+node:zorcanda!.20050429161034.3:cats
+bats
+
+roooaaaaarrr   rats
+
+zats
+#@-node:zorcanda!.20050429161034.3:cats
+#@-others
+#@-node:zorcanda!.20050429161034.1:@thin testsvn22.txt
+#@-leo

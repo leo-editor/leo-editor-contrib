@@ -1,0 +1,1889 @@
+#@+leo-ver=4-thin
+#@+node:ekr.20031218072017.329:@thin ../doc/leoNotes.txt
+#@@nocolor
+
+This contains my notes for the Leo project.
+
+#@+all
+#@+node:ekr.20050123161408:ExamDiff files
+0 leo.py
+1 leoApp.py
+2 leoAtFile.py
+3 leoColor.py
+4 leoCommands.py
+5 leoCompare.py
+6 leoConfig.py
+7 leoFileCommands.py
+8 leoFind.py
+9 leoFrame.py
+10 leoGlobals.py
+11 leoGui.py
+12 leoImport.py
+13 leoKeys.py
+14 leoMenu.py
+15 leoNodes.py
+16 leoPlugins.py
+17 leoTangle.py
+18 leoTkinterComparePanel.py
+19 leoTkinterDialog.py
+20 leoTkinterFind.py
+21 leoTkinterFontPanel.py
+22 leoTkinterFrame.py
+23 leoTkinterGui.py
+24 leoTkinterKeys.py
+25 leoTkinterMenu.py
+26 leoTkinterTree.py
+27 leoUndo.py
+#@nonl
+#@+node:ekr.20050123160215.1:Put all files in alpha order in ExamDiff
+import leoGlobals as g
+
+print '-' * 20
+d = []
+
+for p in g.top().allNodes_iter():
+    s = p.headString()
+    if s.startswith('@thin'):
+        d.append(s[5:].strip())
+        
+d.sort()
+
+for s in d:
+    print s
+    
+
+        
+#@-node:ekr.20050123160215.1:Put all files in alpha order in ExamDiff
+#@-node:ekr.20050123161408:ExamDiff files
+#@+node:ekr.20031218072017.365:How to...
+#@+node:ekr.20031218072017.366:How to add and remove files from CVS repository
+use the command line option in the admin menu to do the following:
+
+add leoConfig.py and leoConfig.txt
+	cvs add leoConfig.txt
+	cvs add leoConfig.py
+	(then do commit)
+
+remove readme*.doc
+	remove files from working area (done)
+	cvs remove readme1.doc
+	cvs remove readme2.doc
+	...
+	(then do commit)
+#@nonl
+#@-node:ekr.20031218072017.366:How to add and remove files from CVS repository
+#@+node:ekr.20031218072017.367:How to add support for a new language
+@nocolor
+
+- Add a new entries in << define global data structures >> app
+
+- Add a new Tk.Radiobutton in <<create the Target Language frame>>
+
+- Add an entry to the languages list in <<configure language-specific settings>>
+
+- Add a list of the keywords of the language to << define colorizer keywords >>
+
+  N.B.: the name of this list must be x_keywords, where x is the entry in language in step a.
+
+- Add any language-specifig code to leoColor.colorizeAnyLanguage.
+  For most languages nothing need be done in this step.
+  
+- If the language is case insensitive, add it to the list of
+case_insensitiveLanguages found in  << define global colorizer data >>
+
+TESTS
+
+- Test the syntax coloring for the new language by using the @language directive.
+
+- Test workings of the Preferences Panel by choosing the language in the panel and by looking at code that is _not_ under control of an @language directive.
+
+- Test the leoConfig.txt by setting default_target_language to the name of the new language.  When you restart Leo, the new language should be selected in the Prefs panel.
+
+- Remove leoConfig.txt, select the new language in the Prefs panel, and save the .leo file.  Open the file with a text editor and check to make sure that the <preferences> tag (near the top) contains an entry like this:
+
+<preferences allow_rich_text="0" defaultTargetLanguage="Python">
+</preferences>
+
+but with the name of your new language instead of "Python".
+
+- Create an @root node and verify that you can Tangle it.
+
+@color
+#@nonl
+#@+node:EKR.20040623090054:<< define global colorizer data >>
+case_insensitiveLanguages = []
+#@nonl
+#@-node:EKR.20040623090054:<< define global colorizer data >>
+#@+node:ekr.20031218072017.368:<< define global data structures >> app
+# Internally, lower case is used for all language names.
+self.language_delims_dict = {
+    "ada" : "--",
+    "actionscript" : "// /* */", #jason 2003-07-03
+    "c" : "// /* */", # C, C++ or objective C.
+    "csharp" : "// /* */",	# C#
+    "css" : "/* */", # 4/1/04
+    "cweb" : "@q@ @>", # Use the "cweb hack"
+    "elisp" : ";",
+    "forth" : "\\_ _(_ _)", # Use the "REM hack"
+    "fortran" : "C",
+    "fortran90" : "!",
+    "html" : "<!-- -->",
+    "java" : "// /* */",
+    "latex" : "%",
+    "pascal" : "// { }",
+    "perl" : "#",
+    "perlpod" : "# __=pod__ __=cut__", # 9/25/02: The perlpod hack.
+    "php" : "//",
+    "plain" : "#", # We must pick something.
+    "python" : "#",
+    "rapidq" : "'", # fil 2004-march-11
+    "rebol" : ";",  # jason 2003-07-03
+    "shell" : "#",  # shell scripts
+    "tcltk" : "#",
+    "ruby": "#",
+    "unknown" : "#" } # Set when @comment is seen.
+
+self.language_extension_dict = {
+    "ada" : "ads",
+    "actionscript" : "as", #jason 2003-07-03
+    "c" : "c",
+    "css" : "css", # 4/1/04
+    "cweb" : "w",
+    "elisp" : "el",
+    "forth" : "forth",
+    "fortran" : "f",
+    "fortran90" : "f",
+    "html" : "html",
+    "java" : "java",
+    "latex" : "tex", # 1/8/04
+    "noweb" : "nw",
+    "pascal" : "p",
+    "perl" : "perl",
+    "perlpod" : "perl",
+    "php" : "php",
+    "plain" : "txt",
+    "python" : "py",
+    "rapidq" : "bas", # fil 2004-march-11
+    "rebol" : "r",    # jason 2003-07-03
+    "shell" : "sh",   # DS 4/1/04
+    "tex" : "tex",
+    "tcltk" : "tcl",
+    "ruby": "ruby",
+    "unknown" : "txt" } # Set when @comment is seen.
+    
+self.extension_dict = {
+    "ads"   : "ada",
+    "adb"   : "ada",
+    "as"    : "actionscript",
+    "bas"   : "rapidq",
+    "c"     : "c",
+    "css"   : "css",
+    "el"    : "elisp",
+    "forth" : "forth",
+    "f"     : "fortran90", # or fortran ?
+    "html"  : "html",
+    "java"  : "java",
+    "noweb" : "nw",
+    "p"     : "pascal",
+    "perl"  : "perl",
+    "php"   : "php",
+    "py"    : "python",
+    "ruby": "ruby",
+    "r"     : "rebol",
+    "sh"    : "shell",
+    "tex"   : "tex",
+    "txt"   : "plain",
+    "tcl"   : "tcltk",
+    "w"     : "cweb" }
+#@-node:ekr.20031218072017.368:<< define global data structures >> app
+#@+node:ekr.20031218072017.370:<< configure language-specific settings >> colorizer
+# Define has_string, keywords, single_comment_start, block_comment_start, block_comment_end.
+
+if self.language == "cweb": # Use C comments, not cweb sentinel comments.
+    delim1,delim2,delim3 = g.set_delims_from_language("c")
+elif self.comment_string:
+    delim1,delim2,delim3 = g.set_delims_from_string(self.comment_string)
+elif self.language == "plain": # 1/30/03
+    delim1,delim2,delim3 = None,None,None
+else:
+    delim1,delim2,delim3 = g.set_delims_from_language(self.language)
+
+self.single_comment_start = delim1
+self.block_comment_start = delim2
+self.block_comment_end = delim3
+
+# A strong case can be made for making this code as fast as possible.
+# Whether this is compatible with general language descriptions remains to be seen.
+self.case_sensitiveLanguage = self.language not in case_insensitiveLanguages
+self.has_string = self.language != "plain"
+if self.language == "plain":
+    self.string_delims = ()
+elif self.language in ("elisp","html"):
+    self.string_delims = ('"')
+else:
+    self.string_delims = ("'",'"')
+self.has_pp_directives = self.language in ("c","csharp","cweb","latex")
+
+# The list of languages for which keywords exist.
+# Eventually we might just use language_delims_dict.keys()
+languages = [
+    "actionscript","ada","c","csharp","css","cweb","elisp","forth","html","java","latex",
+    "pascal","perl","perlpod","php","python","rapidq","rebol","shell","tcltk"]
+
+self.keywords = []
+if self.language == "cweb":
+    for i in self.c_keywords:
+        self.keywords.append(i)
+    for i in self.cweb_keywords:
+        self.keywords.append(i)
+else:
+    for name in languages:
+        if self.language==name: 
+            # g.trace("setting keywords for",name)
+            self.keywords = getattr(self, name + "_keywords")
+
+# For forth.
+self.nextForthWordIsNew = False
+
+# Color plain text unless we are under the control of @nocolor.
+# state = g.choose(self.flag,"normal","nocolor")
+state = self.setFirstLineState()
+
+
+if 1: # 10/25/02: we color both kinds of references in cweb mode.
+    self.lb = "<<"
+    self.rb = ">>"
+else:
+    self.lb = g.choose(self.language == "cweb","@<","<<")
+    self.rb = g.choose(self.language == "cweb","@>",">>")
+#@nonl
+#@-node:ekr.20031218072017.370:<< configure language-specific settings >> colorizer
+#@+node:ekr.20031218072017.371:<< define colorizer keywords >> colorizer
+@others
+
+cweb_keywords = c_keywords
+perlpod_keywords = perl_keywords
+#@nonl
+#@+node:ekr.20031218072017.372:actionscript keywords
+actionscript_keywords = [
+#Jason 2003-07-03 
+#Actionscript keywords for Leo adapted from UltraEdit syntax highlighting
+"break", "call", "continue", "delete", "do", "else", "false", "for", "function", "goto", "if", "in", "new", "null", "return", "true", "typeof", "undefined", "var", "void", "while", "with", "#include", "catch", "constructor", "prototype", "this", "try", "_parent", "_root", "__proto__", "ASnative", "abs", "acos", "appendChild", "asfunction", "asin", "atan", "atan2", "attachMovie", "attachSound", "attributes", "BACKSPACE", "CAPSLOCK", "CONTROL", "ceil", "charAt", "charCodeAt", "childNodes", "chr", "cloneNode", "close", "concat", "connect", "cos", "createElement", "createTextNode", "DELETEKEY", "DOWN", "docTypeDecl", "duplicateMovieClip", "END", "ENTER", "ESCAPE", "enterFrame", "entry", "equal", "eval", "evaluate", "exp", "firstChild", "floor", "fromCharCode", "fscommand", "getAscii", "getBeginIndex", "getBounds", "getBytesLoaded", "getBytesTotal", "getCaretIndex", "getCode", "getDate", "getDay", "getEndIndex", "getFocus", "getFullYear", "getHours", "getMilliseconds", "getMinutes", "getMonth", "getPan", "getProperty", "getRGB", "getSeconds", "getTime", "getTimer", "getTimezoneOffset", "getTransform", "getURL", "getUTCDate", "getUTCDay", "getUTCFullYear", "getUTCHours", "getUTCMilliseconds", "getUTCMinutes", "getUTCMonth", "getUTCSeconds", "getVersion", "getVolume", "getYear", "globalToLocal", "gotoAndPlay", "gotoAndStop", "HOME", "haschildNodes", "hide", "hitTest", "INSERT", "Infinity", "ifFrameLoaded", "ignoreWhite", "indexOf", "insertBefore", "int", "isDown", "isFinite", "isNaN", "isToggled", "join", "keycode", "keyDown", "keyUp", "LEFT", "LN10", "LN2", "LOG10E", "LOG2E", "lastChild", "lastIndexOf", "length", "load", "loaded", "loadMovie", "loadMovieNum", "loadVariables", "loadVariablesNum", "localToGlobal", "log", "MAX_VALUE", "MIN_VALUE", "max", "maxscroll", "mbchr", "mblength", "mbord", "mbsubstring", "min", "NEGATIVE_INFINITY", "NaN", "newline", "nextFrame", "nextScene", "nextSibling", "nodeName", "nodeType", "nodeValue", "on", "onClipEvent", "onClose", "onConnect", "onData", "onLoad", "onXML", "ord", "PGDN", "PGUP", "PI", "POSITIVE_INFINITY", "parentNode", "parseFloat", "parseInt", "parseXML", "play", "pop", "pow", "press", "prevFrame", "previousSibling", "prevScene", "print", "printAsBitmap", "printAsBitmapNum", "printNum", "push", "RIGHT", "random", "release", "removeMovieClip", "removeNode", "reverse", "round", "SPACE", "SQRT1_2", "SQRT2", "scroll", "send", "sendAndLoad", "set", "setDate", "setFocus", "setFullYear", "setHours", "setMilliseconds", "setMinutes", "setMonth", "setPan", "setProperty", "setRGB", "setSeconds", "setSelection", "setTime", "setTransform", "setUTCDate", "setUTCFullYear", "setUTCHours", "setUTCMilliseconds", "setUTCMinutes", "setUTCMonth", "setUTCSeconds", "setVolume", "setYear", "shift", "show", "sin", "slice", "sort", "start", "startDrag", "status", "stop", "stopAllSounds", "stopDrag", "substr", "substring", "swapDepths", "splice", "split", "sqrt", "TAB", "tan", "targetPath", "tellTarget", "toggleHighQuality", "toLowerCase", "toString", "toUpperCase", "trace", "UP", "UTC", "unescape", "unloadMovie", "unLoadMovieNum", "unshift", "updateAfterEvent", "valueOf", "xmlDecl", "_alpha", "_currentframe", "_droptarget", "_focusrect", "_framesloaded", "_height", "_highquality", "_name", "_quality", "_rotation", "_soundbuftime", "_target", "_totalframes", "_url", "_visible", "_width", "_x", "_xmouse", "_xscale", "_y", "_ymouse", "_yscale", "and", "add", "eq", "ge", "gt", "le", "lt", "ne", "not", "or", "Array", "Boolean", "Color", "Date", "Key", "Math", "MovieClip", "Mouse", "Number", "Object", "Selection", "Sound", "String", "XML", "XMLSocket"
+]
+#@nonl
+#@-node:ekr.20031218072017.372:actionscript keywords
+#@+node:bwmulder.20041023131509:ada keywords
+ada_keywords = [
+    "abort",       "else",       "new",        "return",
+    "abs",         "elsif",      "not",        "reverse",
+    "abstract",    "end",        "null",
+    "accept",      "entry",      "select",
+    "access",      "exception",  "separate",
+    "aliased",     "exit",       "of",         "subtype",
+    "all",                       "or",
+    "and",         "for",        "others",     "tagged",
+    "array",       "function",   "out",        "task",
+    "at",                                      "terminate",
+                   "generic",    "package",    "then",
+    "begin",       "goto",       "pragma",     "type",
+    "body",                      "private",
+                   "if",         "procedure",
+    "case",        "in",         "protected",  "until",
+    "constant",    "is",                       "use",
+                                 "raise",
+    "declare",                   "range",      "when",
+    "delay",       "limited",    "record",     "while",
+    "delta",       "loop",       "rem",        "with",
+    "digits",                    "renames",
+    "do",          "mod",        "requeue",    "xor"
+   ]
+#@nonl
+#@-node:bwmulder.20041023131509:ada keywords
+#@+node:ekr.20040206072057:c# keywords
+csharp_keywords = [
+    "abstract","as",
+    "base","bool","break","byte",
+    "case","catch","char","checked","class","const","continue",
+    "decimal","default","delegate","do","double",
+    "else","enum","event","explicit","extern",
+    "false","finally","fixed","float","for","foreach",
+    "get","goto",
+    "if","implicit","in","int","interface","internal","is",
+    "lock","long",
+    "namespace","new","null",
+    "object","operator","out","override",
+    "params","partial","private","protected","public",
+    "readonly","ref","return",
+    "sbyte","sealed","set","short","sizeof","stackalloc",
+    "static","string","struct","switch",
+    "this","throw","true","try","typeof",
+    "uint","ulong","unchecked","unsafe","ushort","using",
+    "value","virtual","void","volatile",
+    "where","while",
+    "yield"]
+#@nonl
+#@-node:ekr.20040206072057:c# keywords
+#@+node:ekr.20031218072017.373:c/c++ keywords
+c_keywords = [
+    # C keywords
+    "auto","break","case","char","continue",
+    "default","do","double","else","enum","extern",
+    "float","for","goto","if","int","long","register","return",
+    "short","signed","sizeof","static","struct","switch",
+    "typedef","union","unsigned","void","volatile","while",
+    # C++ keywords
+    "asm","bool","catch","class","const","const_cast",
+    "delete","dynamic_cast","explicit","false","friend",
+    "inline","mutable","namespace","new","operator",
+    "private","protected","public","reinterpret_cast","static_cast",
+    "template","this","throw","true","try",
+    "typeid","typename","using","virtual","wchar_t"]
+#@nonl
+#@-node:ekr.20031218072017.373:c/c++ keywords
+#@+node:ekr.20040401103539:css keywords
+css_keywords = [
+#html tags
+"address", "applet", "area", "a", "base", "basefont",
+"big", "blockquote", "body", "br", "b", "caption", "center",
+"cite", "code", "dd", "dfn", "dir", "div", "dl", "dt", "em", "font",
+"form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "hr", "html", "img",
+"input", "isindex", "i", "kbd", "link", "li", "link", "map", "menu",
+"meta", "ol", "option", "param", "pre", "p", "samp",
+"select", "small", "span", "strike", "strong", "style", "sub", "sup",
+"table", "td", "textarea", "th", "title", "tr", "tt", "ul", "u", "var",
+#units
+"mm", "cm", "in", "pt", "pc", "em", "ex", "px",
+#colors
+"aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "yellow", "white",
+#important directive
+"!important",
+#font rules
+"font", "font-family", "font-style", "font-variant", "font-weight", "font-size",
+#font values
+"cursive", "fantasy", "monospace", "normal", "italic", "oblique", "small-caps",
+"bold", "bolder", "lighter", "medium", "larger", "smaller",
+"serif", "sans-serif",
+#background rules
+"background", "background-color", "background-image", "background-repeat", "background-attachment", "background-position",
+#background values
+"contained", "none", "top", "center", "bottom", "left", "right", "scroll", "fixed",
+"repeat", "repeat-x", "repeat-y", "no-repeat",
+#text rules
+"word-spacing", "letter-spacing", "text-decoration", "vertical-align", "text-transform", "text-align", "text-indent", "text-transform", "text-shadow", "unicode-bidi", "line-height",
+#text values
+"normal", "none", "underline", "overline", "blink", "sub", "super", "middle", "top", "text-top", "text-bottom",
+"capitalize", "uppercase", "lowercase", "none", "left", "right", "center", "justify",
+"line-through",
+#box rules
+"margin", "margin-top", "margin-bottom", "margin-left", "margin-right",
+"margin", "padding-top", "padding-bottom", "padding-left", "padding-right",
+"border", "border-width", "border-style", "border-top", "border-top-width", "border-top-style", "border-bottom", "border-bottom-width", "border-bottom-style", "border-left", "border-left-width", "border-left-style", "border-right", "border-right-width", "border-right-style", "border-color",
+#box values
+"width", "height", "float", "clear",
+"auto", "thin", "medium", "thick", "left", "right", "none", "both",
+"none", "dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset",
+#display rules
+"display", "white-space", 
+"min-width", "max-width", "min-height", "max-height",
+"outline-color", "outline-style", "outline-width",
+#display values
+"run-in", "inline-block", "list-item", "block", "inline", "none", "normal", "pre", "nowrap", "table-cell", "table-row", "table-row-group", "table-header-group", "inline-table", "table-column", "table-column-group", "table-cell", "table-caption"
+#list rules
+"list-style", "list-style-type", "list-style-image", "list-style-position",
+#list values
+"disc", "circle", "square", "decimal", "decimal-leading-zero", "none",
+"lower-roman", "upper-roman", "lower-alpha", "upper-alpha", "lower-latin", "upper-latin",
+#table rules
+"border-collapse", "caption-side",
+#table-values
+"empty-cells", "table-layout",
+#misc values/rules
+"counter-increment", "counter-reset",
+"marker-offset", "z-index",
+"cursor", "direction", "marks", "quotes",
+"clip", "content", "orphans", "overflow", "visibility",
+#aural rules
+"pitch", "range", "pitch-during", "cue-after", "pause-after", "cue-before", "pause-before", "speak-header", "speak-numeral", "speak-punctuation", "speed-rate", "play-during", "voice-family",
+#aural values
+"stress", "azimuth", "elevation", "pitch", "richness", "volume",
+"page-break", "page-after", "page-inside"]
+#@nonl
+#@-node:ekr.20040401103539:css keywords
+#@+node:ekr.20031218072017.374:elisp keywords
+# EKR: needs more work.
+elisp_keywords = [
+    # Maybe...
+    "error","princ",
+    # More typical of other lisps...
+    "apply","eval",
+    "t","nil",
+    "and","or","not",
+    "cons","car","cdr",
+    "cond",
+    "defconst","defun","defvar",
+    "eq","ne","equal","gt","ge","lt","le",
+    "if",
+    "let",
+    "mapcar",
+    "prog","progn",
+    "set","setq",
+    "type-of",
+    "unless",
+    "when","while"]
+#@nonl
+#@-node:ekr.20031218072017.374:elisp keywords
+#@+node:ekr.20041107093834:forth keywords
+# Default forth keywords: extended by leo-forthwords.txt.
+forth_keywords = [
+    "variable", "constant", "code", "end-code",
+    "dup", "2dup", "swap", "2swap", "drop", "2drop",
+    "r>", ">r", "2r>", "2>r",
+    "if", "else", "then",
+    "begin", "again", "until", "while", "repeat",
+    "v-for", "v-next", "exit",
+    "meta", "host", "target", "picasm", "macro",
+    "needs", "include",
+    "'", "[']",
+    ":", ";",
+    "@", "!", ",", "1+", "+", "-",
+    "<", "<=", "=", ">=", ">",
+    "invert", "and", "or", 
+    ]
+
+# Forth words which define other words: extended by leo-forthdefwords.txt.
+forth_definingwords = [
+    ":", "variable", "constant", "code",
+    ]
+
+# Forth words which start strings: extended by leo-forthstringwords.txt.
+forth_stringwords = [
+    's"', '."', '"', '."',
+    'abort"',
+    ]
+
+# Forth words to be rendered in boldface: extended by leo-forthboldwords.txt.
+forth_boldwords = [ ]
+
+# Forth words to be rendered in italics: extended by leo-forthitalicwords.txt.
+forth_italicwords = [ ]
+
+# Forth bold-italics words: extemded leo-forthbolditalicwords.txt if present
+# Note: on some boxen, bold italics may show in plain bold.
+forth_bolditalicwords = [ ]
+#@nonl
+#@-node:ekr.20041107093834:forth keywords
+#@+node:ekr.20031218072017.375:html keywords
+# No longer used by syntax colorer.
+html_keywords = []
+
+if 0: # Not used at present.
+    unused_keywords = [
+        # html constructs.
+        "a","body","cf",
+        "h1","h2","h3","h4","h5","h6",
+        "head","html","hr",
+        "i","img","li","lu","meta",
+        "p","title","ul",
+        # Common tags
+        "caption","col","colgroup",
+        "table","tbody","td","tfoot","th","thead","tr",
+        "script","style"]
+
+    html_specials = [ "<%","%>" ]
+#@nonl
+#@-node:ekr.20031218072017.375:html keywords
+#@+node:ekr.20031218072017.376:java keywords
+java_keywords = [
+    "abstract","boolean","break","byte","byvalue",
+    "case","cast","catch","char","class","const","continue",
+    "default","do","double","else","extends",
+    "false","final","finally","float","for","future",
+    "generic","goto","if","implements","import","inner",
+    "instanceof","int","interface","long","native",
+    "new","null","operator","outer",
+    "package","private","protected","public","rest","return",
+    "short","static","super","switch","synchronized",
+    "this","throw","transient","true","try",
+    "var","void","volatile","while"]
+#@nonl
+#@-node:ekr.20031218072017.376:java keywords
+#@+node:ekr.20031218072017.377:latex keywords
+#If you see two idenitical words, with minor capitalization differences
+#DO NOT ASSUME that they are the same word. For example \vert produces
+#a single vertical line and \Vert produces a double vertical line
+#Marcus A. Martin.
+
+latex_special_keyword_characters = "@(){}%"
+
+latex_keywords = [
+    #special keyworlds
+    "\\%", # 11/9/03
+    "\\@", "\\(", "\\)", "\\{", "\\}",
+    #A
+    "\\acute", "\\addcontentsline", "\\addtocontents", "\\addtocounter", "\\address",
+    "\\addtolength", "\\addvspace", "\\AE", "\\ae", "\\aleph", "\\alph", "\\angle",
+    "\\appendix", 
+    "\\approx",	"\\arabic", "\\arccos", "\\arcsin", "\\arctan", "\\ast", "\\author",
+    #B
+    "\\b", "\\backmatter", "\\backslash", "\\bar", "\\baselineskip", "\\baselinestretch",
+    "\\begin", "\\beta", "\\bezier", "\\bf", "\\bfseries", "\\bibitem", "\\bigcap", 
+    "\\bigcup", "\\bigodot", "\\bigoplus", "\\bigotimes", "\\bigskip", "\\biguplus", 
+    "\\bigvee", "\\bigwedge",	"\\bmod", "\\boldmath", "\\Box", "\\breve", "\\bullet",
+    #C
+    "\\c", "\\cal", "\\caption", "\\cdot", "\\cdots", "\\centering", "\\chapter", 
+    "\\check", "\\chi", "\\circ", "\\circle", "\\cite", "\\cleardoublepage", "\\clearpage", 
+    "\\cline",	"\\closing", "\\clubsuit", "\\coprod", "\\copywright", "\\cos", "\\cosh", 
+    "\\cot", "\\coth",	"csc",
+    #D
+    "\\d", "\\dag", "\\dashbox", "\\date", "\\ddag", "\\ddot", "\\ddots", "\\decl", 
+    "\\deg", "\\Delta", 
+    "\\delta", "\\depthits", "\\det", 
+    "\\DH", "\\dh", "\\Diamond", "\\diamondsuit", "\\dim", "\\div", "\\DJ", "\\dj", 
+    "\\documentclass", "\\documentstyle", 
+    "\\dot", "\\dotfil", "\\downarrow",
+    #E
+    "\\ell", "\\em", "\\emph", "\\end", "\\enlargethispage", "\\ensuremath", 
+    "\\enumi", "\\enuii", "\\enumiii", "\\enuiv", "\\epsilon", "\\equation", "\\equiv",	
+    "\\eta", "\\example", "\\exists", "\\exp",
+    #F
+    "\\fbox", "\\figure", "\\flat", "\\flushbottom", "\\fnsymbol", "\\footnote", 
+    "\\footnotemark", "\\fotenotesize", 
+    "\\footnotetext", "\\forall", "\\frac", "\\frame", "\\framebox", "\\frenchspacing", 
+    "\\frontmatter",
+    #G
+    "\\Gamma", "\\gamma", "\\gcd", "\\geq", "\\gg", "\\grave", "\\guillemotleft", 
+    "\\guillemotright",	"\\guilsinglleft", "\\guilsinglright",
+    #H
+    "\\H", "\\hat", "\\hbar", "\\heartsuit", "\\heightits", "\\hfill", "\\hline", "\\hom",
+    "\\hrulefill",	"\\hspace", "\\huge",	"\\Huge",	"\\hyphenation"
+    #I
+    "\\Im", "\\imath", "\\include", "includeonly", "indent", "\\index", "\\inf", "\\infty", 
+    "\\input", "\\int", "\\iota",	"\\it", "\\item", "\\itshape",
+    #J
+    "\\jmath", "\\Join",
+    #K
+    "\\k", "\\kappa", "\\ker", "\\kill",
+    #L
+    "\\label", "\\Lambda", "\\lambda", "\\langle", "\\large", "\\Large", "\\LARGE", 
+    "\\LaTeX", "\\LaTeXe", 
+    "\\ldots", "\\leadsto", "\\left", "\\Leftarrow", "\\leftarrow", "\\lefteqn", "\\leq",
+    "\\lg", "\\lhd", "\\lim", "\\liminf", "\\limsup", "\\line", 	"\\linebreak", 
+    "\\linethickness", "\\linewidth",	"\\listfiles",
+    "\\ll", "\\ln", "\\location", "\\log", "\\Longleftarrow", "\\longleftarrow", 
+    "\\Longrightarrow",	"longrightarrow",
+    #M
+    "\\mainmatter", "\\makebox", "\\makeglossary", "\\makeindex","\\maketitle", "\\markboth", "\\markright",
+    "\\mathbf", "\\mathcal", "\\mathit", "\\mathnormal", "\\mathop",
+    "\\mathrm", "\\mathsf", "\\mathtt", "\\max", "\\mbox", "\\mdseries", "\\medskip",
+    "\\mho", "\\min", "\\mp", "\\mpfootnote", "\\mu", "\\multicolumn", "\\multiput",
+    #N
+    "\\nabla", "\\natural", "\\nearrow", "\\neq", "\\newcommand", "\\newcounter", 
+    "\\newenvironment", "\\newfont",
+    "\\newlength",	"\\newline", "\\newpage", "\\newsavebox", "\\newtheorem", "\\NG", "\\ng",
+    "\\nocite", "\\noindent", "\\nolinbreak", "\\nopagebreak", "\\normalsize",
+    "\\not", "\\nu", "nwarrow",
+    #O
+    "\\Omega", "\\omega", "\\onecolumn", "\\oint", "\\opening", "\\oval", 
+    "\\overbrace", "\\overline",
+    #P
+    "\\P", "\\page", "\\pagebreak", "\\pagenumbering", "\\pageref", "\\pagestyle", 
+    "\\par", "\\parbox",	"\\paragraph", "\\parindent", "\\parskip", "\\part", 
+    "\\partial", "\\per", "\\Phi", 	"\\phi",	"\\Pi", "\\pi", "\\pm", 
+    "\\pmod", "\\pounds", "\\prime", "\\printindex", "\\prod", "\\propto", "\\protext", 
+    "\\providecomamnd", "\\Psi",	"\\psi", "\\put",
+    #Q
+    "\\qbezier", "\\quoteblbase", "\\quotesinglbase",
+    #R
+    "\\r", "\\raggedbottom", "\\raggedleft", "\\raggedright", "\\raisebox", "\\rangle", 
+    "\\Re", "\\ref", 	"\\renewcommand", "\\renewenvironment", "\\rhd", "\\rho", "\\right", 
+    "\\Rightarrow",	"\\rightarrow", "\\rm", "\\rmfamily",
+    "\\Roman", "\\roman", "\\rule", 
+    #S
+    "\\s", "\\samepage", "\\savebox", "\\sbox", "\\sc", "\\scriptsize", "\\scshape", 
+    "\\searrow",	"\\sec", "\\section",
+    "\\setcounter", "\\setlength", "\\settowidth", "\\settodepth", "\\settoheight", 
+    "\\settowidth", "\\sf", "\\sffamily", "\\sharp", "\\shortstack", "\\Sigma", "\\sigma", 
+    "\\signature", "\\sim", "\\simeq", "\\sin", "\\sinh", "\\sl", "\\SLiTeX",
+    "\\slshape", "\\small", "\\smallskip", "\\spadesuit", "\\sqrt", "\\sqsubset",	
+    "\\sqsupset", "\\SS",
+    "\\stackrel", "\\star", "\\subsection", "\\subset", 
+    "\\subsubsection", "\\sum", "\\sup", "\\supressfloats", "\\surd", "\\swarrow",
+    #T
+    "\\t", "\\table", "\\tableofcontents", "\\tabularnewline", "\\tan", "\\tanh", 
+    "\\tau", "\\telephone",	"\\TeX", "\\textbf",
+    "\\textbullet", "\\textcircled", "\\textcompworkmark",	"\\textemdash", 
+    "\\textendash", "\\textexclamdown", "\\textheight", "\\textquestiondown", 
+    "\\textquoteblleft", "\\textquoteblright", "\\textquoteleft",
+    "\\textperiod", "\\textquotebl", "\\textquoteright", "\\textmd", "\\textit", "\\textrm", 
+    "\\textsc", "\\textsl", "\\textsf", "\\textsuperscript", "\\texttt", "\\textup",
+    "\\textvisiblespace", "\\textwidth", "\\TH", "\\th", "\\thanks", "\\thebibligraphy",
+    "\\Theta", "theta", 
+    "\\tilde", "\\thinlines", 
+    "\\thispagestyle", "\\times", "\\tiny", "\\title",	"\\today", "\\totalheightits", 
+    "\\triangle", "\\tt", 
+    "\\ttfamily", "\\twocoloumn", "\\typeout", "\\typein",
+    #U
+    "\\u", "\\underbrace", "\\underline", "\\unitlength", "\\unlhd", "\\unrhd", "\\Uparrow",
+    "\\uparrow",	"\\updownarrow", "\\upshape", "\\Upsilon", "\\upsilon", "\\usebox",	
+    "\\usecounter", "\\usepackage", 
+    #V
+    "\\v", "\\value", "\\varepsilon", "\\varphi", "\\varpi", "\\varrho", "\\varsigma", 
+    "\\vartheta", "\\vdots", "\\vec", "\\vector", "\\verb", "\\Vert", "\\vert", 	"\\vfill",
+    "\\vline", "\\vphantom", "\\vspace",
+    #W
+    "\\widehat", "\\widetilde", "\\widthits", "\\wp",
+    #X
+    "\\Xi", "\\xi",
+    #Z
+    "\\zeta" ]
+#@nonl
+#@-node:ekr.20031218072017.377:latex keywords
+#@+node:ekr.20031218072017.378:pascal keywords
+pascal_keywords = [
+    "and","array","as","begin",
+    "case","const","class","constructor","cdecl"
+    "div","do","downto","destructor","dispid","dynamic",
+    "else","end","except","external",
+    "false","file","for","forward","function","finally",
+    "goto","if","in","is","label","library",
+    "mod","message","nil","not","nodefault""of","or","on",
+    "procedure","program","packed","pascal",
+    "private","protected","public","published",
+    "record","repeat","raise","read","register",
+    "set","string","shl","shr","stdcall",
+    "then","to","true","type","try","until","unit","uses",
+    "var","virtual","while","with","xor"
+    # object pascal
+    "asm","absolute","abstract","assembler","at","automated",
+    "finalization",
+    "implementation","inherited","initialization","inline","interface",
+    "object","override","resident","resourcestring",
+    "threadvar",
+    # limited contexts
+    "exports","property","default","write","stored","index","name" ]
+#@nonl
+#@-node:ekr.20031218072017.378:pascal keywords
+#@+node:ekr.20031218072017.379:perl keywords
+perl_keywords = [
+    "continue","do","else","elsif","format","for","format","for","foreach",
+    "if","local","package","sub","tr","unless","until","while","y",
+    # Comparison operators
+    "cmp","eq","ge","gt","le","lt","ne",
+    # Matching ooperators
+    "m","s",
+    # Unary functions
+    "alarm","caller","chdir","cos","chroot","exit","eval","exp",
+    "getpgrp","getprotobyname","gethostbyname","getnetbyname","gmtime",
+    "hex","int","length","localtime","log","ord","oct",
+    "require","reset","rand","rmdir","readlink",
+    "scalar","sin","sleep","sqrt","srand","umask",
+    # Transfer ops
+    "next","last","redo","go","dump",
+    # File operations...
+    "select","open",
+    # FL ops
+    "binmode","close","closedir","eof",
+    "fileno","getc","getpeername","getsockname","lstat",
+    "readdir","rewinddir","stat","tell","telldir","write",
+    # FL2 ops
+    "bind","connect","flock","listen","opendir",
+    "seekdir","shutdown","truncate",
+    # FL32 ops
+    "accept","pipe",
+    # FL3 ops
+    "fcntl","getsockopt","ioctl","read",
+    "seek","send","sysread","syswrite",
+    # FL4 & FL5 ops
+    "recv","setsocket","socket","socketpair",
+    # Array operations
+    "pop","shift","split","delete",
+    # FLIST ops
+    "sprintf","grep","join","pack",
+    # LVAL ops
+    "chop","defined","study","undef",
+    # f0 ops
+    "endhostent","endnetent","endservent","endprotoent",
+    "endpwent","endgrent","fork",
+    "getgrent","gethostent","getlogin","getnetent","getppid",
+    "getprotoent","getpwent","getservent",
+    "setgrent","setpwent","time","times","wait","wantarray",
+    # f1 ops
+    "getgrgid","getgrnam","getprotobynumber","getpwnam","getpwuid",
+    "sethostent","setnetent","setprotoent","setservent",
+    # f2 ops
+    "atan2","crypt",
+    "gethostbyaddr","getnetbyaddr","getpriority","getservbyname","getservbyport",
+    "index","link","mkdir","msgget","rename",
+    "semop","setpgrp","symlink","unpack","waitpid",
+    # f2 or 3 ops
+    "index","rindex","substr",
+    # f3 ops
+    "msgctl","msgsnd","semget","setpriority","shmctl","shmget","vec",
+    # f4 & f5 ops
+    "semctl","shmread","shmwrite","msgrcv",
+    # Assoc ops
+    "dbmclose","each","keys","values",
+    # List ops
+    "chmod","chown","die","exec","kill",
+    "print","printf","return","reverse",
+    "sort","system","syscall","unlink","utime","warn"]
+#@nonl
+#@-node:ekr.20031218072017.379:perl keywords
+#@+node:ekr.20031218072017.380:php keywords
+php_keywords = [ # 08-SEP-2002 DTHEIN
+    "__CLASS__", "__FILE__", "__FUNCTION__", "__LINE__",
+    "and", "as", "break",
+    "case", "cfunction", "class", "const", "continue",
+    "declare", "default", "do",
+    "else", "elseif", "enddeclare", "endfor", "endforeach",
+    "endif", "endswitch",  "endwhile", "eval", "extends",
+    "for", "foreach", "function", "global", "if",
+    "new", "old_function", "or", "static", "switch",
+    "use", "var", "while", "xor" ]
+    
+# The following are supposed to be followed by ()
+php_paren_keywords = [
+    "array", "die", "echo", "empty", "exit",
+    "include", "include_once", "isset", "list",
+    "print", "require", "require_once", "return",
+    "unset" ]
+    
+# The following are handled by special case code:
+# "<?php", "?>"
+#@-node:ekr.20031218072017.380:php keywords
+#@+node:ekr.20050618052653:plsql keywords
+#@-node:ekr.20050618052653:plsql keywords
+#@+node:ekr.20031218072017.381:python keywords
+python_keywords = [
+    "and",       "del",       "for",       "is",        "raise",    
+    "assert",    "elif",      "from",      "lambda",    "return",   
+    "break",     "else",      "global",    "not",       "try",      
+    "class",     "except",    "if",        "or",        "yield",   
+    "continue",  "exec",      "import",    "pass",      "while",
+    "def",       "finally",   "in",        "print"]
+#@nonl
+#@-node:ekr.20031218072017.381:python keywords
+#@+node:ekr.20040331145826:rapidq keywords
+rapidq_keywords = [
+# Syntax file for RapidQ
+"$APPTYPE","$DEFINE","$ELSE","$ENDIF","$ESCAPECHARS","$IFDEF","$IFNDEF",
+"$INCLUDE","$MACRO","$OPTIMIZE","$OPTION","$RESOURCE","$TYPECHECK","$UNDEF",
+"ABS","ACOS","ALIAS","AND","AS","ASC","ASIN","ATAN","ATN","BIN$","BIND","BYTE",
+"CALL","CALLBACK","CALLFUNC","CASE","CEIL","CHDIR","CHDRIVE","CHR$","CINT",
+"CLNG","CLS","CODEPTR","COMMAND$","COMMANDCOUNT","CONSOLE","CONST","CONSTRUCTOR",
+"CONVBASE$","COS","CREATE","CSRLIN","CURDIR$","DATA","DATE$","DEC","DECLARE",
+"DEFBYTE","DEFDBL","DEFDWORD","DEFINT","DEFLNG","DEFSHORT","DEFSNG","DEFSTR",
+"DEFWORD","DELETE$","DIM","DIR$","DIREXISTS","DO","DOEVENTS","DOUBLE","DWORD",
+"ELSE","ELSEIF","END","ENVIRON","ENVIRON$","EVENT","EXIT","EXP","EXTENDS",
+"EXTRACTRESOURCE","FIELD$","FILEEXISTS","FIX","FLOOR","FOR","FORMAT$","FRAC",
+"FUNCTION","FUNCTIONI","GET$","GOSUB","GOTO","HEX$","IF","INC","INITARRAY",
+"INKEY$","INP","INPUT","INPUT$","INPUTHANDLE","INSERT$","INSTR","INT","INTEGER",
+"INV","IS","ISCONSOLE","KILL","KILLMESSAGE","LBOUND","LCASE$","LEFT$","LEN",
+"LFLUSH","LIB","LIBRARYINST","LOCATE","LOG","LONG","LOOP","LPRINT","LTRIM$",
+"MEMCMP","MESSAGEBOX","MESSAGEDLG","MID$","MKDIR","MOD","MOUSEX","MOUSEY",
+"NEXT","NOT","OFF","ON","OR","OUT","OUTPUTHANDLE","PARAMSTR$","PARAMSTRCOUNT",
+"PARAMVAL","PARAMVALCOUNT","PCOPY","PEEK","PLAYWAV","POKE","POS","POSTMESSAGE",
+"PRINT","PROPERTY","QUICKSORT","RANDOMIZE","REDIM","RENAME","REPLACE$",
+"REPLACESUBSTR$","RESOURCE","RESOURCECOUNT","RESTORE","RESULT","RETURN",
+"REVERSE$","RGB","RIGHT$","RINSTR","RMDIR","RND","ROUND","RTRIM$","RUN",
+"SCREEN","SELECT","SENDER","SENDMESSAGE","SETCONSOLETITLE","SGN","SHELL",
+"SHL","SHORT","SHOWMESSAGE","SHR","SIN","SINGLE","SIZEOF","SLEEP","SOUND",
+"SPACE$","SQR","STACK","STATIC","STEP","STR$","STRF$","STRING","STRING$",
+"SUB","SUBI","SWAP","TALLY","TAN","THEN","TIME$","TIMER","TO","TYPE","UBOUND",
+"UCASE$","UNLOADLIBRARY","UNTIL","VAL","VARIANT","VARPTR","VARPTR$","VARTYPE",
+"WEND","WHILE","WITH","WORD","XOR"]
+#@nonl
+#@-node:ekr.20040331145826:rapidq keywords
+#@+node:ekr.20031218072017.382:rebol keywords
+rebol_keywords = [
+#Jason 2003-07-03 
+#based on UltraEdit syntax highlighting
+"about", "abs", "absolute", "add", "alert", "alias", "all", "alter", "and", "and~", "any", "append", "arccosine", "arcsine", "arctangent", "array", "ask", "at",  
+"back", "bind", "boot-prefs", "break", "browse", "build-port", "build-tag",  
+"call", "caret-to-offset", "catch", "center-face", "change", "change-dir", "charset", "checksum", "choose", "clean-path", "clear", "clear-fields", "close", "comment", "complement", "compose", "compress", "confirm", "continue-post", "context", "copy", "cosine", "create-request", "crypt", "cvs-date", "cvs-version",  
+"debase", "decode-cgi", "decode-url", "decompress", "deflag-face", "dehex", "delete", "demo", "desktop", "detab", "dh-compute-key", "dh-generate-key", "dh-make-key", "difference", "dirize", "disarm", "dispatch", "divide", "do", "do-boot", "do-events", "do-face", "do-face-alt", "does", "dsa-generate-key", "dsa-make-key", "dsa-make-signature", "dsa-verify-signature",  
+"echo", "editor", "either", "else", "emailer", "enbase", "entab", "exclude", "exit", "exp", "extract", 
+"fifth", "find", "find-key-face", "find-window", "flag-face", "first", "flash", "focus", "for", "forall", "foreach", "forever", "form", "forskip", "fourth", "free", "func", "function",  
+"get", "get-modes", "get-net-info", "get-style",  
+"halt", "has", "head", "help", "hide", "hide-popup",  
+"if", "import-email", "in", "inform", "input", "insert", "insert-event-func", "intersect", 
+"join", 
+"last", "launch", "launch-thru", "layout", "license", "list-dir", "load", "load-image", "load-prefs", "load-thru", "log-10", "log-2", "log-e", "loop", "lowercase",  
+"make", "make-dir", "make-face", "max", "maximum", "maximum-of", "min", "minimum", "minimum-of", "mold", "multiply",  
+"negate", "net-error", "next", "not", "now",  
+"offset-to-caret", "open", "open-events", "or", "or~", 
+"parse", "parse-email-addrs", "parse-header", "parse-header-date", "parse-xml", "path-thru", "pick", "poke", "power", "prin", "print", "probe", "protect", "protect-system",  
+"q", "query", "quit",  
+"random", "read", "read-io", "read-net", "read-thru", "reboot", "recycle", "reduce", "reform", "rejoin", "remainder", "remold", "remove", "remove-event-func", "rename", "repeat", "repend", "replace", "request", "request-color", "request-date", "request-download", "request-file", "request-list", "request-pass", "request-text", "resend", "return", "reverse", "rsa-encrypt", "rsa-generate-key", "rsa-make-key", 
+"save", "save-prefs", "save-user", "scroll-para", "second", "secure", "select", "send", "send-and-check", "set", "set-modes", "set-font", "set-net", "set-para", "set-style", "set-user", "set-user-name", "show", "show-popup", "sine", "size-text", "skip", "sort", "source", "split-path", "square-root", "stylize", "subtract", "switch",  
+"tail", "tangent", "textinfo", "third", "throw", "throw-on-error", "to", "to-binary", "to-bitset", "to-block", "to-char", "to-date", "to-decimal", "to-email", "to-event", "to-file", "to-get-word", "to-hash", "to-hex", "to-idate", "to-image", "to-integer", "to-issue", "to-list", "to-lit-path", "to-lit-word", "to-local-file", "to-logic", "to-money", "to-none", "to-pair", "to-paren", "to-path", "to-rebol-file", "to-refinement", "to-set-path", "to-set-word", "to-string", "to-tag", "to-time", "to-tuple", "to-url", "to-word", "trace", "trim", "try",  
+"unfocus", "union", "unique", "uninstall", "unprotect", "unset", "until", "unview", "update", "upgrade", "uppercase", "usage", "use",  
+"vbug", "view", "view-install", "view-prefs",  
+"wait", "what", "what-dir", "while", "write", "write-io",  
+"xor", "xor~",  
+"action!", "any-block!", "any-function!", "any-string!", "any-type!", "any-word!",  
+"binary!", "bitset!", "block!",  
+"char!",  
+"datatype!", "date!", "decimal!", 
+"email!", "error!", "event!",  
+"file!", "function!",  
+"get-word!",  
+"hash!",  
+"image!", "integer!", "issue!",  
+"library!", "list!", "lit-path!", "lit-word!", "logic!",  
+"money!",  
+"native!", "none!", "number!",  
+"object!", "op!",  
+"pair!", "paren!", "path!", "port!",  
+"refinement!", "routine!",  
+"series!", "set-path!", "set-word!", "string!", "struct!", "symbol!",  
+"tag!", "time!", "tuple!",  
+"unset!", "url!",  
+"word!",  
+"any-block?", "any-function?", "any-string?", "any-type?", "any-word?",  
+"binary?", "bitset?", "block?",  
+"char?", "connected?", "crypt-strength?", 
+"datatype?", "date?", "decimal?", "dir?",  
+"email?", "empty?", "equal?", "error?", "even?", "event?", "exists?", "exists-key?",
+"file?", "flag-face?", "found?", "function?",  
+"get-word?", "greater-or-equal?", "greater?",  
+"hash?", "head?",  
+"image?", "in-window?", "index?", "info?", "input?", "inside?", "integer?", "issue?",  
+"length?", "lesser-or-equal?", "lesser?", "library?", "link-app?", "link?", "list?", "lit-path?", "lit-word?", "logic?",  
+"modified?", "money?",  
+"native?", "negative?", "none?", "not-equal?", "number?",  
+"object?", "odd?", "offset?", "op?", "outside?",  
+"pair?", "paren?", "path?", "port?", "positive?",  
+"refinement?", "routine?",  
+"same?", "screen-offset?", "script?", "series?", "set-path?", "set-word?", "size?", "span?", "strict-equal?", "strict-not-equal?", "string?", "struct?",  
+"tag?", "tail?", "time?", "tuple?", "type?",  
+"unset?", "url?",  
+"value?", "view?", 
+"within?", "word?",  
+"zero?"
+]
+#@nonl
+#@-node:ekr.20031218072017.382:rebol keywords
+#@+node:ekr.20040401111125:shell keywords
+shell_keywords = [
+    # reserved keywords
+    "case","do","done","elif","else","esac","fi",
+    "for","if","in","then",
+    "until","while",
+    "break","cd","chdir","continue","eval","exec",
+    "exit","kill","newgrp","pwd","read","readonly",
+    "return","shift","test","trap","ulimit",
+    "umask","wait" ]
+#@nonl
+#@-node:ekr.20040401111125:shell keywords
+#@+node:ekr.20031218072017.383:tcl/tk keywords
+tcltk_keywords = [ # Only the tcl keywords are here.
+    "after",     "append",    "array",
+    "bgerror",   "binary",    "break",
+    "catch",     "cd",        "clock",
+    "close",     "concat",    "continue",
+    "dde",
+    "encoding",  "eof",       "eval",
+    "exec",      "exit",      "expr",
+    "fblocked",  "fconfigure","fcopy",     "file",      "fileevent",
+    "filename",  "flush",     "for",       "foreach",   "format",
+    "gets",      "glob",      "global",
+    "history",
+    "if",        "incr",      "info",      "interp",
+    "join",
+    "lappend",   "lindex",    "linsert",   "list",      "llength",
+    "load",      "lrange",    "lreplace",  "lsearch",   "lsort",
+    "memory",    "msgcat",
+    "namespace",
+    "open",
+    "package",   "parray",    "pid",
+    "proc",      "puts",      "pwd",
+    "read",      "regexp",    "registry",   "regsub",
+    "rename",    "resource",  "return",
+    "scan",      "seek",      "set",        "socket",   "source",
+    "split",     "string",    "subst",      "switch",
+    "tell",      "time",      "trace",
+    "unknown",   "unset",     "update",     "uplevel",   "upvar",
+    "variable",  "vwait",
+    "while" ]
+#@nonl
+#@-node:ekr.20031218072017.383:tcl/tk keywords
+#@+node:zorcanda!.20050911213311:ruby keywords
+ruby_keywords = [
+
+    '#',
+
+
+
+
+]
+#@nonl
+#@-node:zorcanda!.20050911213311:ruby keywords
+#@-node:ekr.20031218072017.371:<< define colorizer keywords >> colorizer
+#@+node:ekr.20050618052621:Add the language name to @language default_target_language entry in leoSettings.leo
+#@-node:ekr.20050618052621:Add the language name to @language default_target_language entry in leoSettings.leo
+#@-node:ekr.20031218072017.367:How to add support for a new language
+#@+node:ekr.20031218072017.384:How to export syntax colored code preserving colors
+Scite has the option to "Export as html" and "export as rtf", and it will be
+full of colour and fonts - and you can define them in properties, so it will be
+the same as during editing.
+#@nonl
+#@-node:ekr.20031218072017.384:How to export syntax colored code preserving colors
+#@+node:ekr.20031218072017.385:How to Increase environment space
+To increase the size of environment space, add the following to config.sys:
+
+shell=C:\windows\command\command.com /p:4096
+
+Notes:
+
+1. The path C:\windows\command\command.com may vary.
+Check you system for the location of command.com.
+
+2. This works for versions of Windows prior to Me.
+On Me you set the registry somehow.
+No information on XP.
+#@nonl
+#@-node:ekr.20031218072017.385:How to Increase environment space
+#@+node:ekr.20050316092232:How to install jyLeo
+- Unpack the .zip file, placing the result in c:\prog.
+
+- Edit jleo.bat:
+
+rem open jyLeo
+rem
+cd c:\prog\<path to jython>\src
+java -jar c:\jython22a0\jython.jar leo.py
+#@nonl
+#@+node:ekr.20050716104357:Old instructions
+@nocolor
+
+- put the jyleo-nnn.jar file in c:\prog
+
+- Execute the following command in a console window
+    cd c:\prog
+    jar xvf j-leo-nnn.jar
+
+This creates a folder called j-leo-nnn
+
+- Do the following, or execute jleo.bat
+
+cd c:\prog\j-leo-nnn\src
+java -jar c:\jython22a0\jython.jar leo.py
+
+Note:  at present this gives KeyError: HOME
+
+In leo.py, in computeHomeDir, I changed:
+@color
+
+home = os.getenv('HOME' )#,default=dotDir)
+
+to:
+
+try:
+    home = os.getenv('HOME' )#,default=dotDir)
+except Exception:
+    home = ''
+#@-node:ekr.20050716104357:Old instructions
+#@+node:ekr.20050317153447:jy-Leo install instructions by Paul Paterson
+@killcolor
+
+http://sourceforge.net/forum/message.php?msg_id=3053534
+By: paulpaterson
+
+Very interesting indeed - great work! 
+ 
+I didn't have Java/Jython installed so for others in the same boat here's what I had to do to get it work on my platform (Win2k). Some of this is in the README but I had to do some extra but I'm not sure why. 
+ 
+1. Install 1.5 JDK  
+http://java.sun.com/j2se/1.5.0/download.jsp 
+ 
+2. Install Jython 
+http://www.jython.org/jython22a0.zip 
+ 
+3. Edit Jython.bat file - the part that calls Java.exe to ... 
+"C:\Program Files\Java\jdk1.5.0_02\jre\bin\java" -cp "C:\Program Files\Java\jdk1.5.0_02\jre\lib";"c:\Apps\Python23\Jython";"C:\Apps\jLeo\j-leo-MAR15\Icons";"C:\Apps\jLeo\j-leo-MAR15\skins";"C:\Apps\jLeo\j-leo-MAR15\src";"C:\Apps\jLeo\j-leo-MAR15\skinimages" -Dpython.home="c:\Apps\Python23\Jython" -jar jython.jar %ARGS% 
+ 
+Where  
+- Java installed at C:\Program Files\Java\jdk1.5.0_02 
+- Jython at c:\Apps\Python23\Jython 
+- jLeo at C:\Apps\jLeo\j-leo-MAR15 
+ 
+Change your paths as appropriate! There must be a better way to do this - Java confuses me! 
+ 
+4. Edit leo.py in jleo/src directory to fix failure to find HOME env variable. 
+ 
+line 241 becomes ... 
+ 
+....try:home = os.getenv('HOME' )#,default=dotDir) 
+....except KeyError:home="" 
+ 
+ 
+Then, from the Jython install directory ... 
+ 
+Jython " 
+C:\Apps\jLeo\j-leo-MAR15\src\leo.py" 
+ 
+Works a treat!  
+ 
+Paul
+#@-node:ekr.20050317153447:jy-Leo install instructions by Paul Paterson
+#@-node:ekr.20050316092232:How to install jyLeo
+#@+node:ekr.20031218072017.386:How to remove cursed newlines: use binary mode
+teknico ( Nicola Larosa ) 
+ RE: Removing '\r' characters?   
+2002-09-16 14:27  
+> I am plowing through old bug reports, and I found the following, from whom 
+> I don't know: 
+
+That's from me, *again*. You are kindly advised to stop forgetting the attribution to all my bug reports. ;^) 
+
+>> - Source files still have the dreaded \r in them. Why don't you switch 
+>> to \n only, once and for all, and live happily ever after? ;^) 
+
+> I sure whould like to do that, and I'm not sure how to do this. All 
+> versions of the read code attempt to remove '\r' characters, and all 
+> versions of the write code write '\n' only for newlines. 
+
+Sorry for being a bit vague, I was talking about the Leo source files themselves. I don't know what you use to edit them, ;^))) but in version 3.6 they still have \r\n as end-of-line. 
+
+If Leo itself does not solve the problem, may I suggest the 
+Tools/scripts/crlf.py script in the Python source distibution? It's nice and simple, and skips binary files, too. That's what I use every time I install a new version of Leo. :^) 
+ 
+#@+node:ekr.20031218072017.387:The solution
+Under unix, python writes "\n" as "\n"; under windows, it writes it as "\r\n". The unix python interpreter ignores trailing "\r" in python source files. There are no such guarantees for other languages. Unix users should be able to get rid of the cosmetically detrimental "\r" either by running dos2unix on the offending files, or, if they're part of a .leo project, reading them into leo and writing them out again.  
+
+
+By: edream ( Edward K. Ream ) 
+ RE: Removing '\r' characters?   
+2002-09-17 09:34  
+Oh, I see. Thanks very much for this clarification. 
+
+Just to make sure I understand you: the problem with '\r' characters is that: 
+
+1. I am creating LeoPy.leo and LeoDocs.leo on Windows and 
+2. People are then using these files on Linux. 
+
+and the way to remove the '\r' characters: 
+
+1. I could run dos2unix on all distributed files just before committing to CVS or making a final distribution or 
+2. People could, say, do the following: 
+
+Step 1: Read and Save the .leo files, thereby eliminating the '\r' in those files and 
+Step 2: Use the Write @file nodes command on all derived files to clear the '\r' in those files. 
+
+Do you agree so far? 
+
+> Under unix, python writes "\n" as "\n"; under windows, it writes it as "\r\n". 
+
+I am going to see if there is any way to get Python to write a "raw" '\n' to a file. I think there must be. This would solve the problem once and for all. 
+
+Thanks again for this most helpful comment. 
+
+Edward
+#@nonl
+#@-node:ekr.20031218072017.387:The solution
+#@+node:ekr.20031218072017.388:cursed newline answer
+In 2.3 you can open files with the "U" flag and get "universal newline"
+support: 
+
+% python
+Python 2.3a0 (#86, Sep 4 2002, 21:13:00) 
+[GCC 2.96 20000731 (Mandrake Linux 8.1 2.96-0.62mdk)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> f = open("crlf.txt")
+>>> line = f.readline()
+>>> line
+'This is an example of what I have come to call the "cursed newline"
+problem,\r\n'
+>>> f = open("crlf.txt", "rU")
+>>> line = f.readline()
+>>> line
+'This is an example of what I have come to call the "cursed newline" problem,\n'
+
+#@-node:ekr.20031218072017.388:cursed newline answer
+#@+node:ekr.20031218072017.389:cursed newline answer 2
+> You can open the file in 'binary' mode (adding 'b' to the mode string) and
+> the file will contain '\r\n' on both platforms (and any other platforms.)
+
+Nope. Exactly wrong. In 2.2 and those before, when files are opened in
+*text* mode (no "b") then reading them will provide Unix-style line endings
+(newline only). When you open files in binary mode then you see the bytes
+stored in the file.
+
+On Unix systems there's no difference in the contents of a file whether in
+binary or text mode. On Windows a file is shorter by the number of carriage
+returns. On the Mac I have no idea what they do. Probably just carriage
+returns, to be different :-)
+
+2.3 will be a bit more flexible about such mattrers.
+#@-node:ekr.20031218072017.389:cursed newline answer 2
+#@-node:ekr.20031218072017.386:How to remove cursed newlines: use binary mode
+#@+node:ekr.20031218072017.390:How to run Pychecker
+Do the following in Idle:
+
+import pychecker.checker ; import leo
+
+To run Idle(Python2.3 version) directly:
+
+cd c:\prog\leoCvs\leo\src
+c:\python23\python c:\python23\Lib\idlelib\idle.py
+
+The HOME var must be set to c:\prog\leoCVS for .pycheckrc to be effective.
+
+To suppress warnings from the standard library set ignoreStandardLibrary=1 in .pycheckrc
+#@nonl
+#@-node:ekr.20031218072017.390:How to run Pychecker
+#@+node:ekr.20050510071834:How to use a temp file with pdb
+@killcolor
+
+http://sourceforge.net/forum/message.php?msg_id=3137690
+By: nobody
+
+I dont know if anyone has solved this for regular Leo, but in the JyLeo JythonShell,
+when the user executes a script with Pdb it:
+1. dumps the script in a tmp file system's tmp directory.
+2. Executes pdb based off of that tmp file.
+
+that way you get all the goodness that pdb can offer.
+#@-node:ekr.20050510071834:How to use a temp file with pdb
+#@+node:ekr.20031218072017.391:How to use CVS branches
+@nocolor
+
+I have a fair bit of expertise on CVS branches. It's late at night, so I don't have time for a long soapbox spiel at the moment. I will try to post something tomorrow. 
+
+The brief picture is: 
+
+* Check out code from CVS at the point you want to create the branch. 
+
+* Make sure none of the files in your sandbox is modified. 
+
+* Create the branch (cvs tag -b branchname). The branch name must start with a letter (upper or lower case) and thereafter can have alphanumeric characters, hyphens, and underscores (no periods or spaces). 
+
+* The branch is created on the repository, but your sandbox is still checked out on the main branch. To check out on the new branch, do "cvs up -r branchname". 
+
+When you want to merge changes back into the main branch, you can use "cvs up -r MAIN" to retrieve the main branch, then "cvs up -j branchname" to merge changes, then "cvs commit" to commit the merged version to the main branch AFTER YOU HAVE VERIFIED IT. 
+
+I would recommend caution with merging because as you have noted, leo files are not well set up for CVS. They don't merge well because of inconsistent sentinel values. 
+
+You may want to look at manually merging changes back into the main branch until leo implements invariant unique (UUID) sentinel indices. 
+
+This will not hurt your ability to use branches, only your ability to automatically merge changes from one branch onto another.
+#@nonl
+#@-node:ekr.20031218072017.391:How to use CVS branches
+#@+node:ekr.20041214135556:How to use Tile
+@nocolor
+https://sourceforge.net/forum/message.php?msg_id=2882718
+By: nobody
+
+if anyone is interested here is some code that Tilefied my Leo instance, its
+does some patching in the LeoGui program.
+
+@color
+
+def createRootWindow(self):
+
+    """Create a hidden Tk root window."""
+    #import Tix
+    self.root = root = Tk.Tk()
+    root.tk.call( 'package', 'require', 'tile' )
+    #root.tk.call( 'namespace', 'import', '-force', 'ttk::*' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::scrollbar' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::label' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::entry' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::menu' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::button' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::frame' )
+    root.tk.call( 'namespace', 'import', '-force', 'ttk::menubutton' )
+    root.tk.call( 'tile::setTheme', 'clam' )
+    #self.root = root = Tix.Tk()
+    root.title("Leo Main Window")
+    root.withdraw()
+    
+    self.setDefaultIcon()
+    self.getDefaultConfigFont(g.app.config)
+    self.createGlobalWindows()
+
+    return root
+#@nonl
+#@-node:ekr.20041214135556:How to use Tile
+#@-node:ekr.20031218072017.365:How to...
+#@+node:ekr.20050214055018:Mac Notes
+#@+node:ekr.20050221054932:How to make monolithic Leo app on MacOS X
+ @killcolor
+http://sourceforge.net/forum/message.php?msg_id=3007062
+By: jgleeson
+
+Sorry to take so long to reply.  I've been buried in work and haven't kept up
+with some email.
+
+Here's the link to the site where I posted the folder you have:
+<http://homepage.mac.com/jdgleeson/>  It's the small file named "Leo.zip" (23
+KB), not the large file "Leo-4.3-alpha-2.dmg" (20 MB).
+
+I agree that I did not write very clear instructions, beginnng with the first
+step, where I should have also said:  "It is important to use version 1.1.8
+of py2app, which is only available through svn.  The version on the py2app website
+is 1.1.7, which creates buggy Tkinter apps. If you try to use version 1.1.7,
+the Leo app it creates will give you a message saying that Tkinter is not properly
+installed.  Your installation is fine; otherwise you could not have even built
+Leo.app with py2app, because py2app copies the essential parts of Tcl/Tk into
+the application bundle to make the app completely standalone."
+
+I haven't tried intalling the Fink subversion -- I'm using DarwinPorts
+<http://darwinports.opendarwin.org/>.  But there's a simpler alternative than
+DarwinPorts. Metissian releases OS X packages of Subversion clients
+<http://metissian.com/projects/macosx/subversion/>
+
+AFAIK, the command "python setup.py bdist_mpkg --open" only applies to the py2app
+1.1.8 distribution.  By the way, bdist_mpkg is distributed with py2app. It creates
+a package around the setup.py script (more specialized than Platypus).  I don't
+have any experience with bdist_mpkg yet.
+
+'Copy the leo folder into this directory' is horrible. I'm glad you figured
+it out -- I'm not sure I could have.
+
+"python setup.py py2app -a" should be run in the folder with the readme file,
+which also contains the setup.py file that the command refers to.  Most importantly,
+the folder in which this command is run must contain the leo folder -- which
+it does only if you are brilliant enough to decode my instructions.   ;) 
+
+HTH
+
+-John
+#@nonl
+#@-node:ekr.20050221054932:How to make monolithic Leo app on MacOS X
+#@+node:ekr.20050214055018.4:@url http://idisk.mac.com/genthaler-Public/Leo.zip (download)
+#@-node:ekr.20050214055018.4:@url http://idisk.mac.com/genthaler-Public/Leo.zip (download)
+#@+node:ekr.20050214055018.5:@url http://www.wordtech-software.com/leo.html  (Mac Bundle)
+#@-node:ekr.20050214055018.5:@url http://www.wordtech-software.com/leo.html  (Mac Bundle)
+#@+node:ekr.20050513164506:Problems with run script command on Mac x11
+@killcolor
+
+Jon Schull <jschull@softlock.com>  
+Date:  2003/12/30 Tue PM 05:50:51 EST 
+To:  edreamleo@charter.net 
+Subject:  Leo, Mac OS X 10.3, and VPython 
+             
+I've been evaluating leo or vpython programming on  Mac OS X 10.3, and 
+have some observations and a suggestion.
+
+Observations:
+- Leo runs under X11 as well as under OS X.
+- My X11 python configuration was created using the recipe at XXX (which enables vpython).
+- The OS X configuration is vanilla MacPython from MacPython.org, along with AquaTclTk batteries included XXX.
+
+In both environments I can run leo under python leo.py and under idle.
+Under OS X we get font smoothing, but we can't run visual python programs (python crashes;  this is a known incompatibility with  MacPython.)
+    
+- Under X11 we can run visual python programs like this one
+    #box.py
+    from visual import *
+    box()
+            
+And we can even run them under leo (under X11). HOWEVER, when the visual python program is terminated, leo vanishes (leo and the vp program apparently run in the same space)
+    
+Under x11, we can keep leo alive by putting the vp program in its own space:
+    
+    os.popen3('/sw/bin/python /Users/jis/box.py')
+    
+However,  this doesn't let us see the output of stderr and stdout.  
+Those text streams are available...
+        
+    def do(cmd='ls'):
+        from os import popen3
+        pIn,pOut,pErr=0,1,2
+        popenResults=popen3(cmd)
+        print popenResults[pOut].read()
+        print popenResults[pErr].read()
+    
+    import os	
+    do('/sw/bin/python /Users/jis/box.py')
+        
+...but only when the vpython program terminates.
+    
+Here's the good news:  if we execute our vp program with 
+/sw/bin/idle.py rather than with python, we get to see the program 
+output in real time (under idle, under X11).
+    
+    import os	
+    os.chdir('/sw/lib/python2.3/idlelib')
+    os.popen3('/sw/bin/python idle.py -r /Users/jis/box.py')
+        
+#this runs as an executed script in leo, and produces a live idle 
+with real time ongoing output.
+    
+Now, while idle is running, leo sits in suspended animation.  But when 
+the vpython program terminates, we are left in idle, and when idle is 
+terminated, leo becomes active again.
+    
+It would be even better if leo were not suspended (using os.spawn, 
+perhaps) but the real point is that I would really really like leo's 
+"Execute script" command to execute code this way and spare me having 
+to  hard-write the path to box.py.  It ought to be possible to 
+eliminate os.chdir as well.
+
+------------------
+Jon Schull, Ph.D.
+Associate Professor
+Information Technology
+Rochester Institute of Technology
+schull@digitalgoods.com 585-738-6696
+#@nonl
+#@-node:ekr.20050513164506:Problems with run script command on Mac x11
+#@+node:ekr.20040104162835.8:Linux/Mac notes: Dan Winkler
+#@+node:ekr.20040104162835.13:Fink & aqua
+Yes, fink does have pre-built Pythons, both 2.1 and 2.2.  (If you don't 
+see them it probably means you don't have the right servers listed in 
+your /sw/etc/apt/sources.list file.)  However, the versions of Python 
+you'd get through fink are set up to run under X Windows, which I don't 
+think is what you want.
+
+I think what you want is MacPython which can run Tk programs like Leo 
+under Aqua.  That's what I use these days.
+
+I can tell from your question that you don't understand the following 
+differences between the versions of Python available:
+
+1) The version that comes with OS X is a text only one which doesn't 
+have Tk.  Leo can't run under that.  Also, I hate Apple for including 
+this instead of one that does have Tk and I hope they'll fix it some 
+day.
+
+2) You can get a version of Python from fink with has Tk but which runs 
+under X Windows.  I don't think you want that.
+
+3). You can also get MacPython which has Tk but it's a version of Tk 
+that uses the Aqua windowing system, not X Windows.
+
+So Tk can either be present or not and if it is present it can use 
+either X Windows or Aqua.  You want it present and using Aqua, I think.
+
+
+#@-node:ekr.20040104162835.13:Fink & aqua
+#@+node:ekr.20040104162835.14:Mac, Fink, etc.
+> 1. The python that FC installs is MacPython.  I think that because the
+> MacPython docs talk about Fink.
+
+Nope.  The python installed by FC knows nothing about the Mac.  It 
+thinks it's running on a Unix machine.  And it uses a version of Tk 
+which thinks it's running on a Unix machine.  The window standard on 
+Unix is called X (or X11 or XFree86, all the same thing).  So the main 
+reason to run Leo this way would be to get an idea of how it works for 
+Unix/Linux users.  But when programs run under X, they don't look like 
+Mac programs.  They don't get all those glossy, translucent widgets 
+that Aqua provides.  They really look like they would on a Unix/Linux 
+machine.
+
+Aqua is the native windowing system on Mac.  MacPython is set up to 
+work with it.  Most Mac users will want Leo to work this way.  That's 
+what I do.
+
+>
+>
+> I have the TkTclAquBI (Batteries included) installer.  Is installing 
+> this
+> enough to get Leo to work with Aqua?  Do I have to de-install the
+> present tk stuff that I installed with FC?
+
+Yes, I think that's all I installed to get Tk to work under Aqua.  You 
+don't have to deinstall the FC stuff.  All the FC stuff lives in its 
+own world under /sw and runs under X.  It won't conflict with the Mac 
+world.
+
+#@-node:ekr.20040104162835.14:Mac, Fink, etc.
+#@+node:ekr.20040104162835.15:Double clicking on Linux
+Double-clickable things (i.e. Macintosh applications) are usually 
+actually folders with a name that ends in .app.  The file you found is 
+probably executable only from the command line, not by double clicking 
+it.  So I think if you run it from the command line it will work but 
+will not know about Tk because Apple's version was built without Tk 
+support.
+
+You can also execute the .app programs from the command line by using 
+the open command, so "open foo.app" will do the same thing as double 
+clicking on foo in the finder (the .app extension is suppressed).  The 
+idea behind this is that an application can look like just one opaque 
+icon in the finder but actually have all its resources nicely organized 
+in subfolders.
+#@-node:ekr.20040104162835.15:Double clicking on Linux
+#@-node:ekr.20040104162835.8:Linux/Mac notes: Dan Winkler
+#@-node:ekr.20050214055018:Mac Notes
+#@+node:ekr.20031218072017.392:Python Notes...
+#@+node:ekr.20031218072017.393:What's new for each version:
+New in 2.2 (Do not use)
+
+- Iterators/Generators
+- Nested Scopes
+- New Classes
+
+The what's new for each version:
+
+http://www.amk.ca/python/2.0/
+http://www.amk.ca/python/2.1/
+#@+node:ekr.20031218072017.394:@url http://www.python.org/2.3/highlights.html
+#@-node:ekr.20031218072017.394:@url http://www.python.org/2.3/highlights.html
+#@+node:ekr.20031218072017.395:@url http://www.amk.ca/python/2.1/
+#@-node:ekr.20031218072017.395:@url http://www.amk.ca/python/2.1/
+#@+node:ekr.20031218072017.396:@url http://www.amk.ca/python/2.0/
+#@-node:ekr.20031218072017.396:@url http://www.amk.ca/python/2.0/
+#@-node:ekr.20031218072017.393:What's new for each version:
+#@+node:ekr.20031218072017.397:Default values & keyword arguments
+@nocolor
+
+1. You specify default values of _formal parameters_ in a def statement.
+
+2. You specify keywords arguments in a _function call_.
+
+3. An argument list must have any positional arguments followed by any keyword arguments, where the keywords must be chosen from the formal parameter names.  It's not important whether a formal parameter has a default value or not.
+
+4. No argument may receive a value more than once.
+
+5. When a final formal parameter of the form **name is present, it receives a dictionary containing all keyword arguments whose keyword doesn't correspond to a formal parameter.
+
+EKR Notes:
+
+1.  I have been confusing default values with keyword arguments.  _Any_ formal parameter may be specified with a keyword argument!
+
+2.  Arbitrary keyword params can be used if the def has an **arg.
+#@nonl
+#@-node:ekr.20031218072017.397:Default values & keyword arguments
+#@+node:ekr.20031218072017.398:How to call any Python method from the C API
+In general, everything you can do in Python is accessible through the C API.
+
+	lines = block.split('\n');
+ 
+> That will be
+ 
+	lines = PyObject_CallMethod(block, "split", "s", "\n");
+#@-node:ekr.20031218072017.398:How to call any Python method from the C API
+#@+node:ekr.20031218072017.399:How to run Python programs easily on NT,2K,XP
+#@+node:ekr.20031218072017.400:setting the PATHEXT env var
+It is worth noting that NT, Win2K and XP all have an alternative which is
+to add .PY to the PATHEXT environment variable. Then you can run any .PY
+file directly just by typing the name of the script without the extension. 
+
+e.g.
+C:\>set PATHEXT=.COM;.EXE;.BAT;.CMD
+
+C:\>set PATH=%PATH%;c:\python22\tools\Scripts
+
+C:\>google
+'google' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>set PATHEXT=.COM;.EXE;.BAT;.CMD;.PY
+
+C:\>google
+Usage: C:\python22\tools\Scripts\google.py querystring
+
+C:\>
+#@-node:ekr.20031218072017.400:setting the PATHEXT env var
+#@+node:ekr.20031218072017.401:Yet another Python .bat wrapper
+>> It has a header of just one line. All the ugly stuff is at the end.
+>>
+>> -------------------------------------------------------------------
+>> goto ="python"
+>>
+>> # Python code goes here
+>>
+>> ''' hybrid python/batch footer:
+>> @:="python"
+>> @python.exe %0 %1 %2 %3 %4 %5 %6 %7 %8 %9
+>> @if errorlevel 9009 echo Python may be downloaded from
+>www.python.org/download
+>> @rem '''
+>> -------------------------------------------------------------------
+>>
+>>         Oren
+>>
+>
+
+It's for running python scripts on windows, without having to type:
+
+[<path to python>\]python[.exe] <scriptname> [<arguments>*]
+
+and almost takes the place of the "shabang" line at the top of *nix
+scripts.
+
+#@-node:ekr.20031218072017.401:Yet another Python .bat wrapper
+#@-node:ekr.20031218072017.399:How to run Python programs easily on NT,2K,XP
+#@+node:ekr.20050228095252:xml tools mentioned in posts
+#@+node:ekr.20050228095252.1:@url http://www.xml.com/pub/a/2003/02/12/py-xml.html
+@killcolor
+http://sourceforge.net/forum/message.php?msg_id=3019151
+By: e
+
+>>code to parse and write XML ? 
+
+something like this to get started?
+Simple XML Processing With elementtree
+<http://www.xml.com/pub/a/2003/02/12/py-xml.html>
+look at some plugin source for a bunch
+of ways to insert nodes and move them 
+programatically. the piemenu is on the forum 
+somewhere has nearly everything you would need.
+BTW, I've got a u3 event I use all the time:
+one click, insert body and headline from the clipboard.
+
+... def u3(event ):  
+... ... #insert paste body 
+... ... #and create headline, cheap extract
+... ... c.selectVnode(v )
+... ... c.insertHeadline()
+... ... #c.moveOutlineRight()
+... ... cv = c.currentVnode()
+... ... cv.setBodyStringOrPane(
+... ... ... g.app.gui.getTextFromClipboard())
+... ... s = g.app.gui.getTextFromClipboard()[:25].strip()
+... ... s = ' '.join(s.split()[:3])  
+... ... #later skip punctuation somehow make smarter
+... ... cv.setHeadString(s)
+... self.u3.bind('<Button-1>', u3 )  
+THANKS! this hack saves bunches of time daily.
+would work other places than the piemenu too.
+
+I won't attempt to reiterate what many other blogs
+and articles have said about elementtree.
+besides which I know next to nothing deep about XML.
+no clue how it compares to sax or anything else.
+I will say it's great for parsing and creating and
+modifying XML and HTML in the few short examples
+I've read from years past and some recent. 
+lately there is also a c module,
+works in conjunction with Elementtree.py
+very clean code compiles easily w/o error.
+light, fast. how does he do it?
+<http://effbot.org/zone/element-index.htm>
+
+its html tree can work with Tidy, I actually started
+a very similar project to parse HTML into nodes:
+html, head, script, body, table or form etc.
+using pullparser then beautifulsoup.
+I got lost where if you insert a node, 
+then a body then another node malformed HTML
+can really screw you up. Tidy helps somewhat.
+XML is probably much better formed,
+I like the comment about keeping the tags in the body.
+maybe easier to verify later body by body
+rather than trying to match nodes & subnodes.
+funny how a comment can change your perspective
+of the problem from mostly chaos back to mostly order.
+the really funny part is, as I pictured the node headline
+it was just descriptive, the tags were in the body
+but the confusion won.
+
+the html import in Leo as many know is to a single node.
+so many parsing/web scraping projects would go 
+that much easier if you could isolate sections 
+via a Leo import so it must happen under 
+program control to be useful and non tedious.
+will have to try again w/elementtree.
+its parser will do all the work I didn't want to
+have to do building a stack of elements and bodys.
+sometimes it pays to wait for a better solution.
+well formed html is not the norm.
+maybe you will post your code first and I can adapt it!
+#@nonl
+#@-node:ekr.20050228095252.1:@url http://www.xml.com/pub/a/2003/02/12/py-xml.html
+#@+node:ekr.20050228095252.2:@url http://gnosis.cx
+@killcolor
+http://sourceforge.net/forum/message.php?msg_id=3019245
+By: paulpaterson
+
+I haven't used ElementTree but I do make extensive use of the gnosis XML tools.
+The XML_Objectify function turns any XML into an object where the attributes
+are child properties and nodes.
+
+Just another toolkit to consider!
+
+http://gnosis.cx/download/Gnosis_Utils-current.tar.gz
+#@+node:ekr.20050228095252.3:@url http://gnosis.cx/download/Gnosis_Utils-current.tar.gz
+#@-node:ekr.20050228095252.3:@url http://gnosis.cx/download/Gnosis_Utils-current.tar.gz
+#@-node:ekr.20050228095252.2:@url http://gnosis.cx
+#@-node:ekr.20050228095252:xml tools mentioned in posts
+#@-node:ekr.20031218072017.392:Python Notes...
+#@+node:ekr.20050306070535:Tk Notes
+@killcolor
+#@nonl
+#@+node:ekr.20050306070535.1:*** How to use Tk bindtags
+http://sourceforge.net/forum/message.php?msg_id=1864584
+By: btheado
+
+If you don't already know about Tk's bindtags command, then check it out.  It
+should make things like this easy.  It basically allows you to dynamically add
+and remove a whole group of bindings all at once without affecting any other
+bindings.
+
+i.e. if you have a window called .text:
+
+# Enter escape mode
+bind .text <Esc> {
+    # add EscapeMode to .text's list of bindings by
+    # using the bindtags command (not shown)
+}
+
+bind EscapeMode <Up> {
+    # Add special escape mode up handling code here
+    break
+}
+bind EscapeMode <Down> {
+    # Add special escape mode down handling code
+    break
+}
+etc.
+
+# Leave escape mode
+bind EscapeMode <Esc> {
+    # remove EscapeMode from .text's list of bindings
+    # by using the bindtags command (not shown)
+}
+
+See (http://wiki.tcl.tk/bindtags) for a page with more information about bindtags
+and a link to the bindtags man page.
+
+I just wanted you to be aware of this functionality if and when you do tackle
+this.  I have found Tk's event handling, bindtags functionality very powerful,
+easy to use, and quite elegant for the coding I've done.
+
+Brian Theado
+#@nonl
+#@-node:ekr.20050306070535.1:*** How to use Tk bindtags
+#@+node:ekr.20050306070535.2:Delay body display so alt+arrow keys aren't slowed (threaded colorizer?)
+We need a delay on body display so alt+arrow keys arent slowed down while navigating.
+
+EKR: Alt-Up and Alt-Down are bound to Go To Next/Prev visible. The idea is that
+if we don't display the body text these keys will work faster.
+#@nonl
+#@-node:ekr.20050306070535.2:Delay body display so alt+arrow keys aren't slowed (threaded colorizer?)
+#@+node:ekr.20050306070535.3:How to detect changes in text
+http://sourceforge.net/forum/message.php?msg_id=1864564
+By: btheado
+
+WAS:RE: Leo 3.10 comments
+edream wrote:
+
+>This is due to apparent glitches in the Tk event dispatching. The problem is
+that pressing a control or alt or shift key _all by themselves_ will generate
+keypress events that are passed on to Leo's key handlers
+
+This should be easy to make simpler--just bind an empty script to <Alt-KeyPress>,
+<Shift-KeyPress>, etc.  Tk chooses the most specific event it can find, so the
+more general <KeyPress> handler will not fire.
+
+On a broader note, when programming the text widget in Tcl/Tk, watching key
+events is not the easiest way to detect changes in the text.  The only way the
+text in a text widget can change is if either the delete or the insert subcommands
+(methods) are called.  Any keypresses that end up changing text will have called
+one of these subcommands.
+
+So the simplest way to detect changes is to just intercept the calls to insert
+and delete.  In Tcl/Tk intercepting these calls is pretty straightforward. 
+I don't know if the same is true in Tkinter.
+
+Also note the text widget in Tk8.4 (http://www.tcl.tk/man/tcl8.4/TkCmd/text.htm#M72)
+has a built-in way of seeing if the text has changed
+
+Brian Theado
+#@nonl
+#@-node:ekr.20050306070535.3:How to detect changes in text
+#@-node:ekr.20050306070535:Tk Notes
+#@+node:ekr.20031218072017.434:Unused code
+@ignore
+@language python
+@color
+#@nonl
+#@+node:ekr.20050424173858:From config
+#@+node:ekr.20050424115658.1:original from config.readSettingsFiles
+d = self.readSettings(c)
+# g.trace(c)
+if d:
+    theHash = c.hash()
+    d['_hash'] = theHash
+    if setOptionsFlag:
+        self.localOptionsDict[theHash] = d
+        << update recent files from d >>
+    else:
+        self.localOptionsList.insert(0,d)
+else:
+    g.es("No @settings tree in %s" % (g.shortFileName(path)),color="red")
+g.app.destroyWindow(c.frame)
+#@nonl
+#@+node:ekr.20041201081440:<< update recent files from d >>
+for key in d.keys():
+    if munge(key) == "recentfiles":
+        # Entries were created by parserBaseClass.set.
+        bunch = d.get(key)
+        files = bunch.val
+        files = [theFile.strip() for theFile in files]
+        if 0:
+            print "config.readSettingsFiles.  recent files..."
+            for theFile in files:
+                print theFile
+        self.appendToRecentFiles(files)
+#@nonl
+#@-node:ekr.20041201081440:<< update recent files from d >>
+#@-node:ekr.20050424115658.1:original from config.readSettingsFiles
+#@+node:ekr.20050424114937:From configSettings.setRecentFiles
+    root = g.app.config.settingsRoot(c)
+    if not root:
+        if 0:
+            << create @settings node >>
+        return
+
+    p = g.app.config.findSettingsPosition(c,"@recent-files")
+    if not p:
+        if 0:
+            << create @recent-files node >>
+        return
+    << Update p, leaving c.changed untouched >>
+#@nonl
+#@+node:ekr.20050420081237.1:<< create @recent-files node >>
+g.es('created @recent-files node',color='red')
+p = root.insertAsNthChild(0)
+p.initHeadString('@recent-files')
+c.selectPosition(p)
+
+assert(g.app.config.findSettingsPosition(c,"@recent-files"))
+#@nonl
+#@-node:ekr.20050420081237.1:<< create @recent-files node >>
+#@+node:ekr.20050420081237:<< create @settings node >>
+g.es('created @settings node',color='red')
+
+old_root = c.rootPosition()
+root = old_root.insertAfter()
+root.moveToRoot(old_root)
+root.initHeadString('@settings')
+
+assert(g.app.config.settingsRoot(c))
+#@nonl
+#@-node:ekr.20050420081237:<< create @settings node >>
+#@+node:ekr.20050420081237.2:<< Update p, leaving c.changed untouched >>
+oldText = p.bodyString()
+changed = c.isChanged()
+newText = '\n'.join(files)
+p.setBodyStringOrPane(newText,encoding=g.app.tkEncoding)
+c.setChanged(changed)
+
+if doUndo:
+    c.undoer.setUndoTypingParams(old_p,'Clear Recent Files',
+        oldText,newText,oldSel=None,newSel=None)
+#@nonl
+#@-node:ekr.20050420081237.2:<< Update p, leaving c.changed untouched >>
+#@-node:ekr.20050424114937:From configSettings.setRecentFiles
+#@+node:ekr.20041121151924:doRecentFiles
+def doRecentFiles (self,p,kind,name,val):
+    
+    s = p.bodyString().strip()
+    if s:
+        lines = g.splitLines(s)
+        self.set(p,"recent-files","recent-files",lines)
+#@nonl
+#@-node:ekr.20041121151924:doRecentFiles
+#@+node:ekr.20041225063637.44:createRecentFiles
+def createRecentFiles (self,parent,p,kind,name,vals):
+    
+    s = p.bodyString()
+    lines = g.splitLines(s)
+
+    vec = util.Vector( lines )
+    #for z in items:
+    #    vec.add( z )
+    jlist = swing.JList( vec )
+    jlist.setSelectionMode( swing.ListSelectionModel.SINGLE_SELECTION )
+    jlist.setSelectionForeground( awt.Color.WHITE )
+    jlist.setSelectionBackground( awt.Color.BLUE )
+    jlist.setSelectedIndex( initialitem )
+    view = swing.JScrollPane( jlist )
+    eborder = sborder.LineBorder( awt.Color.BLUE )
+    tborder = sborder.TitledBorder( eborder )
+    tborder.setTitle( name )
+    view.setBorder( tborder )
+    parent.add( view )
+    
+    def recentFilesCallback():
+        return jlist.getSelectedValue()
+    self.initValue(p,name,kind,val,recentFilesCallback)
+    self.suppressComments = p.copy()
+@    
+    bg = self.commonBackground
+    s = p.bodyString()
+    lines = g.splitLines(s)
+    f = Tk.Frame(parent)
+    recentFilesBox = Pmw.ComboBox(f,
+        labelpos="ew",label_text='recent files',
+        label_background = bg,
+        scrolledlist_items=lines)
+
+    if lines:
+        recentFilesBox.selectitem(0)
+    recentFilesBox.pack(side="left")
+    # Increase the width of the entry field.
+    entryfield = recentFilesBox.component('entryfield')
+    entry = entryfield.component('entry')
+    entry.configure(width=70)
+
+    def recentFilesCallback():
+        files = recentFilesBox.get(0,'end')
+        files = [theFile.strip() for theFile in files if theFile.strip()]
+        return files
+
+    self.initValue(p,name,kind,vals,recentFilesCallback)
+
+    self.sc.create_window(10,self.h,anchor='w',window=f)
+    self.h += 30
+    self.suppressComments = p.copy()
+#@nonl
+#@-node:ekr.20041225063637.44:createRecentFiles
+#@-node:ekr.20050424173858:From config
+#@+node:ekr.20050506094742:Unused from atFile.writeOpenFile
+# these have been replaced by at.putAtFirst/LastLines
+#@nonl
+#@+node:ekr.20041005105605.159:<< put all @last lines in root >> (4.x)
+@ Write any @last lines.  These lines are also converted to @verbatim lines, so the read logic simply ignores lines following the @-leo sentinel.
+@c
+
+tag = "@last"
+
+# 4/17/04 Use g.splitLines to preserve trailing newlines.
+lines = g.splitLines(root.v.t.bodyString)
+n = len(lines) ; j = k = n - 1
+
+# Scan backwards for @last directives.
+while j >= 0:
+    line = lines[j]
+    if g.match(line,0,tag): j -= 1
+    elif not line.strip():
+        j -= 1
+    else: break
+    
+# Write the @last lines.
+for line in lines[j+1:k+1]:
+    if g.match(line,0,tag):
+        i = len(tag) ; i = g.skip_ws(line,i)
+        at.os(line[i:])
+#@nonl
+#@-node:ekr.20041005105605.159:<< put all @last lines in root >> (4.x)
+#@+node:ekr.20041005105605.158:<< put all @first lines in root >> (4.x)
+@ Write any @first lines.  These lines are also converted to @verbatim lines, so the read logic simply ignores lines preceding the @+leo sentinel.
+@c
+
+s = root.v.t.bodyString
+tag = "@first"
+i = 0
+while g.match(s,i,tag):
+    i += len(tag)
+    i = g.skip_ws(s,i)
+    j = i
+    i = g.skip_to_end_of_line(s,i)
+    # Write @first line, whether empty or not
+    line = s[j:i]
+    at.os(line) ; at.onl()
+    i = g.skip_nl(s,i)
+#@nonl
+#@-node:ekr.20041005105605.158:<< put all @first lines in root >> (4.x)
+#@-node:ekr.20050506094742:Unused from atFile.writeOpenFile
+#@-node:ekr.20031218072017.434:Unused code
+#@-all
+#@nonl
+#@-node:ekr.20031218072017.329:@thin ../doc/leoNotes.txt
+#@-leo
