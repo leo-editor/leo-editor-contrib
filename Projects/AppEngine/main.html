@@ -1,0 +1,25 @@
+
+<h1>The Leo Outlining Editor<h1>
+
+{% for shout in shouts %}
+<div>
+    {{shout.message}}
+    from
+    {% ifequal shout.who None %}
+        Anonymous
+    {% else %}
+        {{shout.who}}
+    {% endifequal %}
+</div>
+{% endfor %}
+
+<form action="main_submit" method="post" acccept-charset="utf-8">
+
+    <p>From: <input type="text" name="who" value="" id="who"></p>
+
+    <p>Message: <input type="text" name="message" value="" id="message"></p>
+
+    <p><input type="submit" value="Shout!"></p>
+
+</form>
+

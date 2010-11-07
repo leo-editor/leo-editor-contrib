@@ -1,0 +1,10 @@
+
+# Created in AppEngine.leo
+application: my-app-engine-project
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /.*
+  script: my-app-engine-project.py
