@@ -32,7 +32,7 @@ syn match   leoSentinel  "^.\{,4}\zs@[@\-+].*"	 containedin=ALL
 " Idea is to keep the node's name (headline contents) prominent
 syn match   Comment         "\* .*$"hs=s+1  containedin=leoSentinel
 
-highlight leoSentinel guifg=grey
+highlight leoSentinel guifg=grey ctermfg=darkgrey
 
 
 " Wishlist:
