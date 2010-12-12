@@ -25,8 +25,7 @@
 "
 "	(better but too hard(?): match only if preceding character is a known comment delimeter)
 
-syn match   leoSentinel  "^.\{,4}\zs@[@\-+].*"	 containedin=Comment,pythonComment,vimComment,vimMtchComment,vimLineComment,perlComment,perlDATA,perlPOD,vimScriptDelim,rubyRegexpComment,rubyComment,rubyDocumentation,rubyData,htmlCommentPart,htmlComment,javaScriptLineComment,javaScriptComment,htmlCssStyleComment,vbComment,vbLineNumber,cssComment
-	" why can't we use plain ol 'Comment' group instead of 'pythonComment' etc. ?
+syn match   leoSentinel  "^.\{,4}\zs@[@\-+].*"	 containedin=ALL
 	" why did this stop this working with html files?
 
 " Resume normal emphasis within leoHeadline after last asterisk (*)
