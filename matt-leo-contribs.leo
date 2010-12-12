@@ -10,16 +10,32 @@
 <find_panel_settings/>
 <vnodes>
 <v t="maphew.20101201124731.3113" a="E"><vh>Leo Contribs (mine)</vh>
+<v t="matt.20101204175038.1325"><vh>@file ~/code/o4w/apt/apt.py</vh></v>
+<v t="matt.20101212004153.1367" a="E"><vh>Vim-Syntax</vh>
+<v t="matt.20101207194045.1370"><vh>@file ~/.vim/scripts.vim</vh></v>
 <v t="maphew.20101201124731.3123"><vh>@file filetype.vim</vh></v>
-<v t="matt.20101204140731.1281"><vh>tests</vh>
+<v t="matt.20101204175038.1322" a="O"><vh>@file ~/.vim/after/filetype.vim</vh></v>
+<v t="matt.20101204140731.1281" a="E"><vh>tests</vh>
+<v t="matt.20101204175038.1325"></v>
 <v t="maphew.20101201124731.3120"><vh>@file test.py</vh></v>
 <v t="maphew.20101201124731.3114"><vh>@file test.html</vh></v>
 <v t="maphew.20101201124731.3117"><vh>@file test.css</vh></v>
 </v>
+<v t="matt.20101204175038.1323"><vh>@url appending syntax</vh></v>
+<v t="matt.20101204175038.1324"><vh>@url new filetype</vh></v>
+</v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="maphew.20101201124731.3113">Towards Leo-aware syntax highlighting in vim.</t>
+<t tx="maphew.20101201124731.3113">Towards Leo-aware syntax highlighting in vim.
+
+
+</t>
 <t tx="matt.20101204140731.1281">@path tests</t>
+<t tx="matt.20101204175038.1322"></t>
+<t tx="matt.20101204175038.1323">http://vimdoc.sourceforge.net/htmldoc/syntax.html#mysyntaxfile-add</t>
+<t tx="matt.20101204175038.1324">http://vimdoc.sourceforge.net/htmldoc/filetype.html#new-filetype</t>
+<t tx="matt.20101212004153.1367">@path vim-syntax
+</t>
 </tnodes>
 </leo_file>
