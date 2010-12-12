@@ -6,8 +6,16 @@
 Some text in body of level one
 #@+at followed by
 # /*
+# /*
+# /*
+# /*
+# /*
 # multiline 
 # comment
+# */
+# */
+# */
+# */
 # */
 #@+node:matt.20101128232629.1271: *3* Level Two
 this is body
