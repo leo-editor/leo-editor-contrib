@@ -2,7 +2,7 @@
 "@+node:matt.20101212004153.1446: * @file filetype.vim
 "@@language vim
 "@+others
-"@+node:matt.20101212004153.1442: ** main
+"@+node:matt.20101212004153.1442: ** ftype main
 " Leo editor additions
 " to activate save this file as ~/.vim/after/filetype.vim
 
