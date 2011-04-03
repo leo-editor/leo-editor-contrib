@@ -9,25 +9,41 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ville.20110403183730.2488" a="E"><vh>NewHeadline</vh>
+<v t="ville.20110403183730.2488" a="E"><vh>Contains exressions that manipulate the g.vs</vh>
 <v t="ville.20110403183730.2489"><vh>@a baz</vh></v>
 </v>
 <v t="ville.20110403184104.2493"><vh>@r foo2</vh></v>
 </vnodes>
 <tnodes>
-<t tx="ville.20110403183730.2488">@x =foo {
+<t tx="ville.20110403183730.2488">Please enable "valuespace.py" plugin and do alt-x vs-update to parse everything
+
+Note how this has @a (anchor) as child, causes this node to be evaluated.
+
+
+@x =foo {
 
 Some lines go here
 
 And more lines here
 
+The syntax =foo assigns the lines to g.vs.foo
 
 @x }
 
+This syntax is nice for single line expressions
+
 @x foo2 = foo.grep('line')
+
+@x {
+
+print "This syntax is ok for arbirtrary python code"
+print "Another print"
+
+@x }
 </t>
 <t tx="ville.20110403183730.2489"></t>
 <t tx="ville.20110403184104.2493">Some lines go here
-And more lines here</t>
+And more lines here
+The syntax =foo assigns the lines to g.vs.foo</t>
 </tnodes>
 </leo_file>
