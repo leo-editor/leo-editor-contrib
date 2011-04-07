@@ -20,12 +20,13 @@
 <v t="ville.20110407204806.1449" a="E"><vh>copy of output shcmd('ls /usr/bin')</vh>
 <v t="ville.20110407205245.1452"><vh>@a</vh></v>
 </v>
-<v t="ville.20110407205245.1455" a="E"><vh>@nosent /tmp/generated.txt</vh>
+<v t="ville.20110407205245.1455"><vh>@nosent /tmp/generated.txt</vh>
 <v t="ville.20110407204806.1450"><vh>@r early</vh></v>
 <v t="ville.20110407205245.1454"><vh>@r later</vh></v>
 <v t="ville.20110407205245.1457"><vh>@r early</vh></v>
 </v>
 <v t="ville.20110407205245.1453"><vh>@= bunch.foo</vh></v>
+<v t="ville.20110407211219.1462"><vh>newHeadline</vh></v>
 </vnodes>
 <tnodes>
 <t tx="ville.20110403183730.2488">Please enable "valuespace.py" plugin and do alt-x vs-update to parse everything
@@ -58,7 +59,11 @@ print "Another print"
 <t tx="ville.20110403184104.2493">Some lines go here
 And more lines here
 The syntax =foo assigns the lines to g.vs.foo</t>
-<t tx="ville.20110407203520.1442">@x {
+<t tx="ville.20110407203520.1442">Note how @a is always needed to make leo parse the body of the parent node. Otherwise, this would get very slow with large outlines.
+
+Executable content starts
+
+@x {
 from leo.external.stringlist import shcmd
 
 class Bunch:
@@ -3179,5 +3184,6 @@ amidi
 amixer
 amuFormat.sh
 amule</t>
+<t tx="ville.20110407211219.1462"></t>
 </tnodes>
 </leo_file>
