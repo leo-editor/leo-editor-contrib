@@ -17,16 +17,25 @@
 </v>
 <v t="ville.20110403184104.2493"><vh>@r foo2</vh></v>
 <v t="ville.20110407203657.1446"><vh>@r shcmd('ls /usr/bin')</vh></v>
-<v t="ville.20110407204806.1449" a="E"><vh>copy of output shcmd('ls /usr/bin')</vh>
+<v t="ville.20110407204806.1449"><vh>@= files_modified</vh>
 <v t="ville.20110407205245.1452"><vh>@a</vh></v>
 </v>
+<v t="ville.20110407225915.1477"><vh>@r files_modified.grep('zip')</vh></v>
 <v t="ville.20110407205245.1455"><vh>@nosent /tmp/generated.txt</vh>
 <v t="ville.20110407204806.1450"><vh>@r early</vh></v>
 <v t="ville.20110407205245.1454"><vh>@r later</vh></v>
 <v t="ville.20110407205245.1457"><vh>@r early</vh></v>
+<v t="ville.20110407225430.1467"><vh>@r bunch.block</vh></v>
 </v>
+<v t="ville.20110407225915.1476"><vh>assignments</vh>
 <v t="ville.20110407205245.1453"><vh>@= bunch.foo</vh></v>
-<v t="ville.20110407211219.1462"><vh>newHeadline</vh></v>
+<v t="ville.20110407225430.1468"><vh>@= lst+</vh></v>
+<v t="ville.20110407225430.1470"><vh>@= lst+</vh></v>
+<v t="ville.20110407225430.1471"><vh>@r lst</vh></v>
+</v>
+<v t="ville.20110407225430.1464"><vh>to bunch from body of text</vh>
+<v t="ville.20110407225430.1465"><vh>@a</vh></v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ville.20110403183730.2488">Please enable "valuespace.py" plugin and do alt-x vs-update to parse everything
@@ -71,6 +80,8 @@ class Bunch:
         self.__dict__.update(kwds)
 
 bunch = Bunch()
+
+lst = []
 
 @x }
 
@@ -3184,6 +3195,53 @@ amidi
 amixer
 amuFormat.sh
 amule</t>
-<t tx="ville.20110407211219.1462"></t>
+<t tx="ville.20110407225430.1464">aoaoeaoe
+aoaoeaoe
+aoaoeaoe
+aoaoeaoe
+
+@x =bunch.block {
+
+some 
+lines
+
+@x }
+
+@x =lst+ {
+
+Also append to list from 
+body of text
+
+@x }
+
+aoaoeaoe
+aoaoeaoe
+aoaoeaoe</t>
+<t tx="ville.20110407225430.1465"></t>
+<t tx="ville.20110407225430.1467">some 
+lines</t>
+<t tx="ville.20110407225430.1468">line in list
+</t>
+<t tx="ville.20110407225430.1470">another line in list
+</t>
+<t tx="ville.20110407225430.1471">[['line in list'],
+ ['another line in list'],
+ ['Also append to list from ', 'body of text']]</t>
+<t tx="ville.20110407225915.1476"></t>
+<t tx="ville.20110407225915.1477">funzip
+gpg-zip
+mzip
+preunzip
+prezip
+prezip-bin
+unzip
+unzipsfx
+zip
+zipcloak
+zipgrep
+zipinfo
+zipnote
+zipsplit
+</t>
 </tnodes>
 </leo_file>
