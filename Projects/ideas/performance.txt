@@ -20,13 +20,26 @@ It would reduce the need to iterate through all nodes.
 #@+node:ville.20110409230425.5724: ** C/C++ extensions
 #@+node:ville.20110409230425.5725: *3* Native tree representation
 We could make the whole tree structure reside in native code side, and just
-use python classes to "view" that data.
+use python classes to "view" that data (i.e. a vnode would be a wrapper object for underlying, lightweight node class)
 
-This would allow various interesting things, like lightning fast iteration/search/drawing, 
-lightweight nodes and positions, etc. It would be possible to leverage multi
-core cpu's by having multiple threads walking through the tree at same time
-(e.g. when saving an outline and writing derived files).
+This would allow various interesting things, like lightning fast
+iteration/search/drawing, lightweight nodes and positions, etc. It would be
+possible to leverage multi core cpu's by having multiple threads walking
+through the tree at same time (e.g. when saving an outline and writing
+derived files).
 
 -- VMV
+#@+node:ville.20110409230425.5733: *3* cython
+convert some routines to cython (with alternative pure-python implementation)
+
+#@+node:ville.20110409230425.5730: *3* array as position
+We could use array.array as a lighter weight position sometimes:
+
+http://docs.python.org/library/array.html
+#@+node:ville.20110409230425.5732: *3* Shared memory tree representation
+If we invented a way to represent tree as a flat data structure
+efficiently, we could have it in shared memory and have multiple processes
+reading it at the same time (again to benefit from multicore cpus)
+
 #@-others
 #@-leo
