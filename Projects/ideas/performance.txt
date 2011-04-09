@@ -1,0 +1,32 @@
+#@+leo-ver=5-thin
+#@+node:ville.20110409230425.5720: * @file performance.txt
+#@@language plain
+#@@pagewidth 75
+
+#@+others
+#@+node:ville.20110409230425.5721: ** Caching
+#@+node:ville.20110409230425.5722: *3* Dict with first word of h => position
+This dict would make finding nodes in outline pretty fast. It would look like
+
+@file => list of positions
+@auto => list of positions
+foo => list of positions 
+
+etc etc.
+
+It would reduce the need to iterate through all nodes. 
+
+-- VMV
+#@+node:ville.20110409230425.5724: ** C/C++ extensions
+#@+node:ville.20110409230425.5725: *3* Native tree representation
+We could make the whole tree structure reside in native code side, and just
+use python classes to "view" that data.
+
+This would allow various interesting things, like lightning fast iteration/search/drawing, 
+lightweight nodes and positions, etc. It would be possible to leverage multi
+core cpu's by having multiple threads walking through the tree at same time
+(e.g. when saving an outline and writing derived files).
+
+-- VMV
+#@-others
+#@-leo
