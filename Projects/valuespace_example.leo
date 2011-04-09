@@ -20,7 +20,7 @@
 <v t="ville.20110407204806.1449"><vh>@= files_modified</vh>
 <v t="ville.20110407205245.1452"><vh>@a</vh></v>
 </v>
-<v t="ville.20110407225915.1477"><vh>@r files_modified.grep('zip')</vh></v>
+<v t="ville.20110407225915.1477"><vh>@@r files_modified.grep('zip')</vh></v>
 <v t="ville.20110407205245.1455"><vh>@nosent /tmp/generated.txt</vh>
 <v t="ville.20110407204806.1450"><vh>@r early</vh></v>
 <v t="ville.20110407205245.1454"><vh>@r later</vh></v>
@@ -41,7 +41,7 @@
 <v t="ville.20110409200729.1481"><vh>@a</vh></v>
 </v>
 <v t="ville.20110409200729.1479"><vh>@= mycl</vh></v>
-<v t="ville.20110409201537.1486"><vh>@r mycl</vh></v>
+<v t="ville.20110409201537.1486"><vh>@r mycl.grep('line')</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -62,7 +62,7 @@ The syntax =foo assigns the lines to g.vs.foo
 
 This syntax is nice for single line expressions
 
-@x foo2 = foo.grep('line')
+@x foo2 = [' '] #foo.grep('line')
 
 @x {
 
@@ -72,9 +72,7 @@ print "Another print"
 @x }
 </t>
 <t tx="ville.20110403183730.2489"></t>
-<t tx="ville.20110403184104.2493">Some lines go here
-And more lines here
-The syntax =foo assigns the lines to g.vs.foo</t>
+<t tx="ville.20110403184104.2493">[' ']</t>
 <t tx="ville.20110407203520.1442">Note how @a is always needed to make leo parse the body of the parent node. Otherwise, this would get very slow with large outlines.
 
 Executable content starts
@@ -3418,7 +3416,9 @@ zjsdecode
 zsoelim
 
 </t>
-<t tx="ville.20110407204806.1450">a2p
+<t tx="ville.20110407204806.1450">
+
+a2p
 aconnect
 acpi_fakekey
 acpi_listen
@@ -3433,11 +3433,13 @@ alsaucm
 amidi
 amixer
 amuFormat.sh
-amule</t>
+amule
+</t>
 <t tx="ville.20110407205245.1452"></t>
 <t tx="ville.20110407205245.1453">content for obj.foo
 </t>
-<t tx="ville.20110407205245.1454">apt-add-repository
+<t tx="ville.20110407205245.1454">
+apt-add-repository
 apt-cache
 apt-cdrom
 apt-config
@@ -3446,10 +3448,13 @@ apt-extracttemplates
 apt-ftparchive
 apt-get
 apt-key
-apt-mark</t>
+apt-mark
+</t>
 <t tx="ville.20110407205245.1455">@others
 </t>
-<t tx="ville.20110407205245.1457">a2p
+<t tx="ville.20110407205245.1457">
+
+a2p
 aconnect
 acpi_fakekey
 acpi_listen
@@ -3464,7 +3469,8 @@ alsaucm
 amidi
 amixer
 amuFormat.sh
-amule</t>
+amule
+</t>
 <t tx="ville.20110407225430.1464">aoaoeaoe
 aoaoeaoe
 aoaoeaoe
@@ -3488,15 +3494,19 @@ aoaoeaoe
 aoaoeaoe
 aoaoeaoe</t>
 <t tx="ville.20110407225430.1465"></t>
-<t tx="ville.20110407225430.1467">some 
-lines</t>
+<t tx="ville.20110407225430.1467">
+
+some 
+lines
+
+</t>
 <t tx="ville.20110407225430.1468">line in list
 </t>
 <t tx="ville.20110407225430.1470">another line in list
 </t>
-<t tx="ville.20110407225430.1471">[['line in list'],
- ['another line in list'],
- ['Also append to list from ', 'body of text']]</t>
+<t tx="ville.20110407225430.1471">['line in list\n',
+ 'another line in list\n',
+ '\n\nAlso append to list from \nbody of text\n\n']</t>
 <t tx="ville.20110407225915.1476"></t>
 <t tx="ville.20110407225915.1477">funzip
 gpg-zip
@@ -3511,9 +3521,10 @@ zipcloak
 zipgrep
 zipinfo
 zipnote
-zipsplit</t>
+zipsplit
+</t>
 <t tx="ville.20110409200729.1478"></t>
-<t tx="ville.20110409200729.1479">@cl linecount
+<t tx="ville.20110409200729.1479">@cl slist
 
 line 1
 
@@ -3529,6 +3540,7 @@ def linecount(block):
     
 </t>
 <t tx="ville.20110409200729.1481"></t>
-<t tx="ville.20110409201537.1486">4</t>
+<t tx="ville.20110409201537.1486">line 1
+line 2</t>
 </tnodes>
 </leo_file>
