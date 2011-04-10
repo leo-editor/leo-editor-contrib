@@ -46,14 +46,18 @@ Schema 2
 
 
 
-tables
-^^^^^^
+Creation
+^^^^^^^^
 
+
+import sqlite3
+
+treefrag_schema = """
 drop table if exists blobs;
 
 CREATE TABLE blobs (
  id INTEGER PRIMARY KEY,
- compressed INTEGER,
+ format INTEGER,
  data BLOB
 );
 
@@ -78,25 +82,50 @@ CREATE TABLE edges (
  
 CREATE INDEX a_idx ON edges (a);
 CREATE INDEX b_idx ON edges (b);
+"""
 
-@a tables
-~~~~~~~~~
+class TreeFrag:
+    def __init__(self, dbfile):
+        self.conn = sqlite3.connect(dbfile)
 
+    def reset_db(self):
+        cu = self.conn.cursor()
+        cu.executescript(treefrag_schema)
+        self.conn.commit()
 
+    def dump_node(self, p):
+        
+        cu = self.conn.cursor()
+        body = sqlite3.Binary(p.b)
+        cmd = "insert into blobs (data) values (?)"
+        t = (body,)
+        cu.execute(cmd, t)
+        bod_id = cu.lastrowid
+        print "inserted", bod_id
+        
+        cmd = "insert into nodes (gnx, h) values (?, ?)"
+        t = p.gnx, p.h
+        cu.execute(cmd, t)
+        node_id = cu.lastrowid
+        self.conn.commit()
+        
+                
+    def write_tree(self, p):
+        self.dump_node(p)
+        
+        
+def test(p):
+    tf = TreeFrag("/tmp/treefrag.db")
+    #tf.reset_db()
+    tf.write_tree(p)       
+    
+test(p)
 
-Creation
-^^^^^^^^
+Browser
+^^^^^^^
 
-
-import sqlite3
-
-conn = sqlite3.connect('/tmp/example')
-
-cu = conn.cursor()
-ts = c.vs['tables']
-
-cu.executescript(ts)
-conn.commit()
+import os
+os.system("sqlitebrowser /tmp/treefrag.db")
 
 Implementation strategy
 +++++++++++++++++++++++
