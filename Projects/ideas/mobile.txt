@@ -109,7 +109,7 @@ class TreeFrag:
         t = p.gnx, p.h, bod_id
         cu.execute(cmd, t)
         node_id = cu.lastrowid
-        self.conn.commit()
+        
         return node_id
         
                 
@@ -125,6 +125,8 @@ class TreeFrag:
                         
         if pos:
             self.dump_node(pos)
+            
+        self.conn.commit()            
             
     def write_edges(self, p):
         chi = p.children()
@@ -148,8 +150,10 @@ class TreeFrag:
 def test(c):
     tf = TreeFrag("/tmp/treefrag.db")
     tf.reset_db()
+    print "begin dump"
     tf.write_vnodes(c)       
     tf.write_all_edges(c)
+    print "end dump"
     
 test(c)
 
