@@ -11,7 +11,7 @@
 <vnodes>
 <v t="ville.20110409230425.5720"
 expanded="ville.20110409230425.5724,"><vh>@file performance.txt</vh></v>
-<v t="ville.20110410112107.1445"><vh>@auto-rst mobile.txt</vh></v>
+<v t="ville.20110410112107.1445" a="E"><vh>@auto-rst mobile.txt</vh></v>
 <v t="ville.20110410112539.1457"><vh>Tests</vh>
 <v t="ville.20110410112539.1458"><vh>Elixir</vh>
 <v t="ville.20110410112539.1459"><vh>@path elixir</vh>
