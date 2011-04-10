@@ -1,0 +1,30 @@
+Mobile Leo
+==========
+
+
+
+File format: leoq
++++++++++++++++++
+
+- Use sqlite for storage
+- Only ONE file per outline - embed @file nodes, images, other attachments (@url)
+
+Schema
+******
+
+
+
+Node
+^^^^
+
+class Node(Entity):
+
+Implementation strategy
++++++++++++++++++++++++
+
+- Qt, QML, C++
+
+- "Drill down" through the tree
+
+- Also flat view with search bar
+
