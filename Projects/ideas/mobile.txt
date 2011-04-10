@@ -125,14 +125,31 @@ class TreeFrag:
                         
         if pos:
             self.dump_node(pos)
-    def write_edges(self):
-        pass            
+            
+    def write_edges(self, p):
+        chi = p.children()
+        par = self.gnxs[p.gnx]
+        cu = self.conn.cursor()
+        for i, ch in enumerate(chi):
+            cmd = "insert into edges (a,b,pos) values (?,?,?)"
+            t = (par, self.gnxs[ch.gnx], i)
+            cu.execute(cmd,t)
+            
+
+    def write_all_edges(self,c):
+        all = c.all_unique_positions()
         
+        for p in all:
+            self.write_edges(p.copy())        
+        
+        self.conn.commit()
+            
         
 def test(c):
     tf = TreeFrag("/tmp/treefrag.db")
     tf.reset_db()
     tf.write_vnodes(c)       
+    tf.write_all_edges(c)
     
 test(c)
 
