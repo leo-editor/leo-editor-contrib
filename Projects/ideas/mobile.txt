@@ -87,6 +87,8 @@ CREATE INDEX b_idx ON edges (b);
 class TreeFrag:
     def __init__(self, dbfile):
         self.conn = sqlite3.connect(dbfile)
+        # gnx => node id
+        self.gnxs = {}
 
     def reset_db(self):
         cu = self.conn.cursor()
@@ -103,21 +105,32 @@ class TreeFrag:
         bod_id = cu.lastrowid
         print "inserted", bod_id
         
-        cmd = "insert into nodes (gnx, h) values (?, ?)"
-        t = p.gnx, p.h
+        cmd = "insert into nodes (gnx, h, bodyid) values (?, ?, ?)"
+        t = p.gnx, p.h, bod_id
         cu.execute(cmd, t)
         node_id = cu.lastrowid
         self.conn.commit()
+        return node_id
         
                 
-    def write_tree(self, p):
-        self.dump_node(p)
+    def write_vnodes(self, c, pos = None):
+        if pos is None:
+            it = c.unique_nodes()
+        else:
+            it = pos.unique_subtree()
+        for p in it:
+            nid = self.dump_node(p)
+            self.gnxs[p.gnx] = nid
+            
+            
+        if pos:
+            self.dump_node(pos)
         
         
 def test(p):
     tf = TreeFrag("/tmp/treefrag.db")
-    #tf.reset_db()
-    tf.write_tree(p)       
+    tf.reset_db()
+    tf.write_vnodes(p)       
     
 test(p)
 
