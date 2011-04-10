@@ -9,9 +9,21 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ville.20110409230425.5720" a="E"
-expanded="ville.20110409230425.5721,ville.20110409230425.5724,"><vh>@file performance.txt</vh></v>
+<v t="ville.20110409230425.5720"
+expanded="ville.20110409230425.5724,"><vh>@file performance.txt</vh></v>
+<v t="ville.20110410112107.1445"><vh>@auto-rst mobile.txt</vh></v>
+<v t="ville.20110410112539.1457"><vh>Tests</vh>
+<v t="ville.20110410112539.1458"><vh>Elixir</vh>
+<v t="ville.20110410112539.1459"><vh>@path elixir</vh>
+<v t="ville.20110410112539.1460"><vh>@file model.py</vh></v>
+<v t="ville.20110410112539.1461"><vh>@file test.py</vh></v>
+</v>
+</v>
+</v>
 </vnodes>
 <tnodes>
+<t tx="ville.20110410112539.1457"></t>
+<t tx="ville.20110410112539.1458"></t>
+<t tx="ville.20110410112539.1459"></t>
 </tnodes>
 </leo_file>
