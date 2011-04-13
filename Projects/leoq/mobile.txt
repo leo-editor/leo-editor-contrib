@@ -1,5 +1,54 @@
-#@+leo-ver=5-thin
-#@+node:ville.20110413215331.2589: * @file create_leoq.py
+Mobile Leo
+==========
+
+
+
+File format: leoq
++++++++++++++++++
+
+- Use sqlite for storage
+- Only ONE file per outline - embed @file nodes, images, other attachments (@url)
+
+Schema 1 (abandoned)
+********************
+
+
+
+TextBlock
+^^^^^^^^^
+
+class TextBlock(Entity):
+    """ Use for body text """
+    has_field("compressed", Boolean)
+    has_field("data", Binary, deferred = "True")
+    
+    belongs_to('node', of_kind="Node")
+
+Node
+^^^^
+
+class Node(Entity):
+    has_field('gnx', Unicode(20))
+    has_field('h', UnicodeText)
+    has_one('parent', of_kind="Node", 
+    
+    gnx = Field(Unicode(30))
+    h = Field(UnicodeText)
+    has_one('b', of_kind="TextBlock", inverse = "node")
+
+Schema 2
+********
+
+
+
+@url http://techportal.ibuildings.com/2009/09/07/graphs-in-the-database-sql-meets-social-networks/
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+create_leoq.py
+^^^^^^^^^^^^^^
+
 import sqlite3
 
 treefrag_schema = """
@@ -15,14 +64,11 @@ drop table if exists nodes;
 
 CREATE TABLE nodes (
  id INTEGER PRIMARY KEY,
- gnx VARCHAR(20),
+ gnx VARCHAR(20) NOT NULL,
  
  h TEXT,
  bodyid INTEGER REFERENCES blobs(id)
 );
-
--- 0 is always root node
-INSERT INTO nodes (id, h) values (0, '__INVISIBLE_ROOT__');
  
 drop table if exists edges;
 
@@ -110,4 +156,18 @@ def test(c):
     
 test(c)
 
-#@-leo
+Browser
+^^^^^^^
+
+import os
+os.system("sqlitebrowser /tmp/treefrag.db")
+
+Implementation strategy
++++++++++++++++++++++++
+
+- Qt, QML, C++
+
+- "Drill down" through the tree
+
+- Also flat view with search bar
+
