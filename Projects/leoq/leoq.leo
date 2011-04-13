@@ -16,12 +16,18 @@
 <v t="ville.20110413215331.2597"><vh>@file test.py</vh></v>
 </v>
 </v>
-<v t="ville.20110413215331.2577"><vh>@auto-rst mobile.txt</vh></v>
+<v t="ville.20110413215331.2577" a="E"><vh>@auto-rst mobile.txt</vh></v>
 <v t="ville.20110413215331.2589"><vh>@file create_leoq.py</vh></v>
+<v t="ville.20110413215331.2598"><vh>root </vh></v>
 </vnodes>
 <tnodes>
 <t tx="ville.20110413215331.2565"></t>
 <t tx="ville.20110413215331.2594"></t>
 <t tx="ville.20110413215331.2595"></t>
+<t tx="ville.20110413215331.2598">r = c.rootPosition().self_and_siblings()
+
+for n in r:
+    print n.h
+</t>
 </tnodes>
 </leo_file>

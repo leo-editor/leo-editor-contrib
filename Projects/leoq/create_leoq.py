@@ -86,9 +86,21 @@ class TreeFrag:
         par = self.gnxs[p.gnx]
         cu = self.conn.cursor()
         for i, ch in enumerate(chi):
-            cmd = "insert into edges (a,b,pos) values (?,?,?)"
+            cmd = "insert into edges (a,b,pos) values (?,?,?)"            
             t = (par, self.gnxs[ch.gnx], i)
+            print cmd,t
             cu.execute(cmd,t)
+            
+    def write_top_edges(self):
+        # create edges from "0" (root) to top level nodes
+        cu = self.conn.cursor()
+        for i, ch in enumerate(c.rootPosition().self_and_siblings()):
+            cmd = "insert into edges (a,b,pos) values (0,?,?)"
+            t = (self.gnxs[ch.gnx], i)
+            print cmd,t
+            cu.execute(cmd,t)
+        
+            
             
 
     def write_all_edges(self,c):
@@ -96,12 +108,13 @@ class TreeFrag:
         
         for p in all:
             self.write_edges(p.copy())        
-        
+
+        self.write_top_edges()        
         self.conn.commit()
             
         
 def test(c):
-    tf = TreeFrag("/tmp/treefrag.db")
+    tf = TreeFrag("/home/ville/treefrag.db")
     tf.reset_db()
     print "begin dump"
     tf.write_vnodes(c)       
