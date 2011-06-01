@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
-<leo_file>
+<leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
 <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
 	<global_window_position top="50" left="50" height="500" width="700"/>
@@ -14,6 +15,7 @@
 <v t="ville.20090720134348.2378"><vh>introduce sloppycode</vh></v>
 <v t="ville.20090710203400.1284" a="E"><vh>leo_branch_dir</vh>
 <v t="ville.20090730191424.1457"><vh>do branch the release</vh></v>
+<v t="ville.20110602003437.2556"><vh>(prereleases) branch current state</vh></v>
 </v>
 <v t="ville.20090627195028.1458"><vh>packaging_dir</vh></v>
 <v t="ville.20090627195028.1454"><vh>get_bzr_version</vh></v>
@@ -29,6 +31,7 @@
 <v t="ville.20100223172758.1434"><vh>release version (for 4.7)</vh></v>
 <v t="ville.20100226164817.1350"><vh>release version (for 4.7.1)</vh></v>
 <v t="ville.20101105210628.1712"><vh>release version (for 4.8b1)</vh></v>
+<v t="ville.20110602003437.2554"><vh>release version (for 4.9b1)</vh></v>
 </v>
 <v t="ville.20090627195028.1451"><vh>export tarball</vh></v>
 <v t="ville.20090627195028.1461"><vh>extract tarball</vh></v>
@@ -100,7 +103,7 @@ with g.cd(g.ns.packaging_dir + '/' + g.ns.rel_version) as g.ns.workpath:
 
 #debuild -i -I.git -S -sa -k348F0F07</t>
 <t tx="ville.20090627195028.1465">with g.cd(g.ns.workpath):
-    g.sh("dch -b -v ${rel_version.lstrip('leo-') + '-1'} -D lucid")</t>
+    g.sh("dch -b -v ${rel_version.lstrip('leo-') + '-1'} -D natty")</t>
 <t tx="ville.20090627195028.1466"></t>
 <t tx="ville.20090627195028.1468">c.db['debian_pkg_dir'] = "~/pkg/leo-4.6~rc1~bzr2098"
 </t>
@@ -213,5 +216,9 @@ g.ns.rel_version = "leo-4.7.1"
 <t tx="ville.20101105210628.1712">#wb.require("get_bzr_version")
 g.ns.rel_version = "leo-4.8~b1"
 </t>
+<t tx="ville.20110602003437.2554">#wb.require("get_bzr_version")
+g.ns.rel_version = "leo-4.9~pre"
+</t>
+<t tx="ville.20110602003437.2556">g.sh('bzr branch lp:leo-editor ${leo_branch_dir}')</t>
 </tnodes>
 </leo_file>
