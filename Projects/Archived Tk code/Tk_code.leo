@@ -3,14 +3,13 @@
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
+<globals body_outline_ratio="0.50" body_secondary_ratio="0.50">
+	<global_window_position top="142" left="412" height="842" width="1116"/>
 	<global_log_window_position top="0" left="0" height="0" width="0"/>
 </globals>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20110601212241.1422"><vh>Old Tk code</vh>
 <v t="ekr.20110601212241.1431"><vh>From Leo's core</vh>
 <v t="ekr.20110601212241.1432"><vh>app.createTkGui</vh></v>
 <v t="ekr.20110601212241.1433"><vh>g.createStandAloneTkApp</vh></v>
@@ -249,11 +248,14 @@
 <v t="ekr.20110601214739.5009"><vh>@file URLloader.py</vh></v>
 </v>
 </v>
+<v t="ekr.20110602070844.3531"><vh>Other deprecated plugins</vh>
+<v t="ekr.20110602070710.3423"><vh>@file UNL.py</vh></v>
+<v t="ekr.20110602070710.3452"><vh>@file EditAttributes.py</vh></v>
+<v t="ekr.20110602070710.3505"><vh>@file LeoN.py</vh></v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20110601212241.1422"></t>
-<t tx="ekr.20110601212241.1431"></t>
+<t tx="ekr.20110601212241.1431" str_leo_pos="0"></t>
 <t tx="ekr.20110601212241.1432">def createTkGui (self,fileName='',verbose=False):
 
     """A convenience routines for plugins to 
@@ -2630,5 +2632,6 @@ a="pierre";
 return(0);
 
 </t>
+<t tx="ekr.20110602070844.3531"></t>
 </tnodes>
 </leo_file>
