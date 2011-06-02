@@ -3,8 +3,8 @@
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.50" body_secondary_ratio="0.50">
-	<global_window_position top="142" left="412" height="842" width="1116"/>
+<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
+	<global_window_position top="50" left="50" height="500" width="700"/>
 	<global_log_window_position top="0" left="0" height="0" width="0"/>
 </globals>
 <preferences/>
@@ -18,6 +18,47 @@
 <v t="ekr.20110601212241.1436"><vh>createDialogButtons</vh></v>
 <v t="ekr.20110601212241.1437"><vh>center</vh></v>
 <v t="ekr.20110601212241.1438"><vh>get_window_info</vh></v>
+</v>
+</v>
+<v t="ekr.20110602085920.3479"><vh>From leoSettings.leo</vh>
+<v t="ekr.20110602085920.3480"><vh>Plugins</vh>
+<v t="ekr.20110602085920.3492"><vh>cleo</vh>
+<v t="ekr.20110602085920.3493"><vh>@bool cleo_color_ignore = True</vh></v>
+<v t="ekr.20110602085920.3494"><vh>@color cleo_color_prog_green =</vh></v>
+<v t="ekr.20110602085920.3495"><vh>@color cleo_color_prog_red =</vh></v>
+<v t="ekr.20110602085920.3496"><vh>@data cleo_color_file_node_list</vh></v>
+<v t="ekr.20110602085920.3497"><vh>@float cleo_prog_extra = 4</vh></v>
+<v t="ekr.20110602085920.3498"><vh>@float cleo_time_init = 1.0</vh></v>
+<v t="ekr.20110602085920.3499"><vh>@int cleo_prog_scale = 1</vh></v>
+<v t="ekr.20110602085920.3500"><vh>@int cleo_prog_width = 18</vh></v>
+<v t="ekr.20110602085920.3501"><vh>@string cleo_time_name = days</vh></v>
+<v t="ekr.20110602085920.3502"><vh>@string cleo_icon_path = cleo</vh></v>
+</v>
+<v t="ekr.20110602085920.3506"><vh>fastgotonode plugin</vh>
+<v t="ekr.20110602085920.3507"><vh>@bool fastgotonode_useKeyBinding = True</vh></v>
+<v t="ekr.20110602085920.3508"><vh>@string fastgotonode_binding =  Shift-space</vh></v>
+</v>
+<v t="ekr.20110602085920.3514"><vh>library plugin</vh>
+<v t="ekr.20110602085920.3515"><vh>@bool library_verbose = True</vh></v>
+<v t="ekr.20110602085920.3516"><vh>@string library_lib = default</vh></v>
+<v t="ekr.20110602085920.3517"><vh>@string library_lib0 = default/library.dbm</vh></v>
+<v t="ekr.20110602085920.3518"><vh>@string library_lib1 = default/libraryS.dbm</vh></v>
+</v>
+<v t="ekr.20110602085920.3521"><vh>shortcut _button plugin</vh>
+<v t="ekr.20110602085920.3522"><vh>@data shortcut_button_data</vh></v>
+</v>
+</v>
+<v t="ekr.20110602090408.3514"><vh>Outline pane colors (Tk only)</vh>
+<v t="ekr.20110602090408.3515"><vh>@color headline_text_unselected_background_color = #ffffec</vh></v>
+<v t="ekr.20110602090408.3516"><vh>@color headline_text_unselected_foreground_color = None</vh></v>
+<v t="ekr.20110602090408.3517"><vh>@color headline_text_selected_background_color = #dbdbdb</vh></v>
+<v t="ekr.20110602090408.3518"><vh>@color headline_text_selected_foreground_color = None</vh></v>
+<v t="ekr.20110602090408.3519"><vh>@color headline_text_editing_background_color = None</vh></v>
+<v t="ekr.20110602090408.3520"><vh>@color headline_text_editing_foreground_color = None</vh></v>
+<v t="ekr.20110602090408.3521"><vh>@color headline_text_editing_selection_foreground_color = None</vh></v>
+<v t="ekr.20110602090408.3522"><vh>@color headline_text_editing_selection_background_color = None</vh></v>
+<v t="ekr.20110602090408.3523"><vh>@color outline_pane_background_color = #ffffec</vh></v>
+<v t="ekr.20110602090408.3525"><vh>@@color unselected-background-color = #f2fdff</vh></v>
 </v>
 </v>
 <v t="ekr.20110601214739.3217"><vh>Tk only plugins</vh>
@@ -255,7 +296,7 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20110601212241.1431" str_leo_pos="0"></t>
+<t tx="ekr.20110601212241.1431"></t>
 <t tx="ekr.20110601212241.1432">def createTkGui (self,fileName='',verbose=False):
 
     """A convenience routines for plugins to 
@@ -2633,5 +2674,107 @@ return(0);
 
 </t>
 <t tx="ekr.20110602070844.3531"></t>
+<t tx="ekr.20110602085920.3479"></t>
+<t tx="ekr.20110602085920.3480"></t>
+<t tx="ekr.20110602085920.3492"></t>
+<t tx="ekr.20110602085920.3493"></t>
+<t tx="ekr.20110602085920.3494">The colour used instead of green in progress bars</t>
+<t tx="ekr.20110602085920.3495">The colour used instead of red in progress bars</t>
+<t tx="ekr.20110602085920.3496"># list of @file node types to color.
+# Uncomment these to enable coloring for these kinds of nodes.
+@asis
+@auto
+@file
+@thin
+</t>
+<t tx="ekr.20110602085920.3497">pixels per time unit to add to width of scaled progress bars</t>
+<t tx="ekr.20110602085920.3498">The default number of time units.</t>
+<t tx="ekr.20110602085920.3499">0: no progress bars
+1: unscaled progress bars
+2: scaled progress bars</t>
+<t tx="ekr.20110602085920.3500">The base width of progress bars, in pixels.</t>
+<t tx="ekr.20110602085920.3501">The name of time unit (e.g. days, weeks, hours)</t>
+<t tx="ekr.20110602085920.3502">path to cleo icons relative to Leo icon dir
+e.g. cleo or cleo/small</t>
+<t tx="ekr.20110602085920.3506"></t>
+<t tx="ekr.20110602085920.3507">If this setting is True, the ``fastgotonode_binding`` setting should be a
+Keyspecifier that does not conflict with any key binding in leoSettings.leo.
+
+If this setting is False, the ``fastgotonode_binding`` setting should be some
+other event specifier, typically 'Button-3'.</t>
+<t tx="ekr.20110602085920.3508"># The binding used to invoke the popup menu.
+# Some possibilities:
+
+Shift-space  # Control-space conflicts with an Emacs binding.
+Button-3
+Double-Button-3 # Useful if you also have the rClick plugin enabled.</t>
+<t tx="ekr.20110602085920.3514"></t>
+<t tx="ekr.20110602085920.3515">True: turns on extra feedback</t>
+<t tx="ekr.20110602085920.3516"></t>
+<t tx="ekr.20110602085920.3517"></t>
+<t tx="ekr.20110602085920.3518"></t>
+<t tx="ekr.20110602085920.3521"></t>
+<t tx="ekr.20110602085920.3522"># The name of the iconBar to which the buttons should initially be placed
+# This is ignored unless the toolbar.py plugin is enabled
+
+iconbar = 
+
+
+# An icon to be used in place of text if the toolbar.py plugin is enabled
+# The PIL module must also be availiable for icons to be visible
+# Value may be a full path or a path relative to leo/icons or leave empty for text only 
+
+icon = 
+
+
+# The colors to be used for the 'shortcut' button
+
+master-fg = 
+master-bg = 
+
+
+# The colors to be used for the buttons generated by the 'shortcut' button
+
+slave-fg = 
+slave-bg = 
+
+
+# The rClick menu to use for the 'shortcut' button and generated buttons
+# These will be ignored unless both rClick.py and tooblar.py plugins are enabled
+
+master-menu = 
+slave-menu = 
+
+</t>
+<t tx="ekr.20110602090408.3514"></t>
+<t tx="ekr.20110602090408.3515">Background color of unselected headline text.
+
+LavenderBlush1</t>
+<t tx="ekr.20110602090408.3516">Foreground color of unselected headline text.</t>
+<t tx="ekr.20110602090408.3517">Background color of selected headline text that is not being edited.
+
+LavenderBlush2</t>
+<t tx="ekr.20110602090408.3518">Foreground color of selected headline text that is not being edited.
+
+DodgerBlue4</t>
+<t tx="ekr.20110602090408.3519">Background color of unselected headline text in a headline that is being edited.
+
+Foreground color must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110602090408.3520">Foreground color of unselected headline text in a headline that is being edited.
+
+Background color must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110602090408.3521">Foreground color of selected text headline text in a headline that is being edited.
+
+Background must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110602090408.3522">Background color of selected text headline text in a headline that is being edited.
+
+Foreground must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110602090408.3523">Background color of outline pane itself.
+
+LavenderBlush1
+#ffffe1 # a little too yellow.
+#ffffec
+LightSteelBlue1 # Good for testing.</t>
+<t tx="ekr.20110602090408.3525">A kind of blue</t>
 </tnodes>
 </leo_file>
