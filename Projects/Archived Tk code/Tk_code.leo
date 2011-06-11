@@ -60,6 +60,14 @@
 <v t="ekr.20110602090408.3523"><vh>@color outline_pane_background_color = #ffffec</vh></v>
 <v t="ekr.20110602090408.3525"><vh>@@color unselected-background-color = #f2fdff</vh></v>
 </v>
+<v t="ekr.20110611103200.3526"><vh>Tk tree settings</vh>
+<v t="ekr.20110611103200.3527"><vh>@bool look_for_control_drag_on_mouse_down = True</vh></v>
+<v t="ekr.20110611103200.3528"><vh>@bool center_selected_tree_node = True</vh></v>
+<v t="ekr.20110611103200.3529"><vh>@bool expanded_click_area = True</vh></v>
+<v t="ekr.20110611103200.3530"><vh>@bool idle_redraw = False</vh></v>
+<v t="ekr.20110611103200.3531"><vh>@bool initialClickExpandsOrContractsNode = True</vh></v>
+<v t="ekr.20110611103200.3532"><vh>@bool outline_pane_scrolls_horizontally = True</vh></v>
+</v>
 </v>
 <v t="ekr.20110601214739.3217"><vh>Tk only plugins</vh>
 <v t="ekr.20110603082935.3602"><vh>Tk-only settings</vh>
@@ -69,6 +77,17 @@
 <v t="ekr.20110603082935.3612"><vh>@font log font</vh></v>
 <v t="ekr.20110603082935.3613"><vh>@font menu text font</vh></v>
 <v t="ekr.20110603082935.3614"><vh>@font outline font</vh></v>
+</v>
+<v t="ekr.20110611100040.3517"><vh>Outline pane colors (Tk only)</vh>
+<v t="ekr.20110611100040.3518"><vh>@@color headline_text_unselected_background_color = #ffffec</vh></v>
+<v t="ekr.20110611100040.3519"><vh>@@color headline_text_unselected_foreground_color = None</vh></v>
+<v t="ekr.20110611100040.3520"><vh>@@color headline_text_selected_background_color = #dbdbdb</vh></v>
+<v t="ekr.20110611100040.3521"><vh>@@color headline_text_selected_foreground_color = None</vh></v>
+<v t="ekr.20110611100040.3522"><vh>@@color headline_text_editing_background_color = None</vh></v>
+<v t="ekr.20110611100040.3523"><vh>@@color headline_text_editing_foreground_color = None</vh></v>
+<v t="ekr.20110611100040.3524"><vh>@@color headline_text_editing_selection_foreground_color = None</vh></v>
+<v t="ekr.20110611100040.3525"><vh>@@color headline_text_editing_selection_background_color = None</vh></v>
+<v t="ekr.20110611100040.3526"><vh>@@color outline_pane_background_color = #ffffec</vh></v>
 </v>
 </v>
 <v t="ekr.20110603082935.3591"><vh>Tk-specific documentation</vh>
@@ -4539,5 +4558,50 @@ Edward K. Ream, November 4, 2001
 </t>
 <t tx="ekr.20110603082935.3631">http://groups.google.com/group/leo-editor/browse_thread/thread/c66f30b5d09d3411#
 </t>
+<t tx="ekr.20110611100040.3517"></t>
+<t tx="ekr.20110611100040.3518">Background color of unselected headline text.
+
+LavenderBlush1</t>
+<t tx="ekr.20110611100040.3519">Foreground color of unselected headline text.</t>
+<t tx="ekr.20110611100040.3520">Background color of selected headline text that is not being edited.
+
+LavenderBlush2</t>
+<t tx="ekr.20110611100040.3521">Foreground color of selected headline text that is not being edited.
+
+DodgerBlue4</t>
+<t tx="ekr.20110611100040.3522">Background color of unselected headline text in a headline that is being edited.
+
+Foreground color must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110611100040.3523">Foreground color of unselected headline text in a headline that is being edited.
+
+Background color must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110611100040.3524">Foreground color of selected text headline text in a headline that is being edited.
+
+Background must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110611100040.3525">Background color of selected text headline text in a headline that is being edited.
+
+Foreground must also be specified for either setting to take effect.</t>
+<t tx="ekr.20110611100040.3526">Background color of outline pane itself.
+
+LavenderBlush1
+#ffffe1 # a little too yellow.
+#ffffec
+LightSteelBlue1 # Good for testing.</t>
+<t tx="ekr.20110611103200.3526"></t>
+<t tx="ekr.20110611103200.3527">This option controls the interpretation of the control key when dragging nodes in the outline pane.
+
+True: A drag is a control-drag if the control key is down at the start of the drag.
+
+False: A drag is a control-drag if the control key is down at the end of the drag.</t>
+<t tx="ekr.20110611103200.3528">True (Recommended): Leo scrolls the outline to put the selected node near the center of the outline pane.
+False (Legacy): Leo scrolls the outline to put the selected node at the top or bottom of the outline pane.</t>
+<t tx="ekr.20110611103200.3529">1: Click near a node expands or contracts the node.
+0: Only clicks in a node's plus/minus box expands or contracts the node.
+
+Note:  @bool expanded_click_area = True conflicts with the UniversalScrolling plugin.</t>
+<t tx="ekr.20110611103200.3530"></t>
+<t tx="ekr.20110611103200.3531">True:  Clicking anywhere in an unselected node selects the node and *also* expands or contracts it.
+False: Clicking an unselected node just selects the node, unless the click happens in the expand/contract box.</t>
+<t tx="ekr.20110611103200.3532">True: Use horizontal scrollbar in outline pane.</t>
 </tnodes>
 </leo_file>
