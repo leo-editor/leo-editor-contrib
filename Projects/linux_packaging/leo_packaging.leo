@@ -32,6 +32,7 @@
 <v t="ville.20100226164817.1350"><vh>release version (for 4.7.1)</vh></v>
 <v t="ville.20101105210628.1712"><vh>release version (for 4.8b1)</vh></v>
 <v t="ville.20110602003437.2554"><vh>release version (for 4.9b1)</vh></v>
+<v t="ville.20110725063505.1383"><vh>release version (for 4.9)</vh></v>
 </v>
 <v t="ville.20090627195028.1451"><vh>export tarball</vh></v>
 <v t="ville.20090627195028.1461"><vh>extract tarball</vh></v>
@@ -112,7 +113,7 @@ with g.cd(g.ns.packaging_dir + '/' + g.ns.rel_version) as g.ns.workpath:
 dput ppa:villemvainio/ppa &lt;source.changes&gt;
 
 # upload packaging changes to launchpad
-# bzr push --remember lp:~leo-editor-team/leo-editor/packaging-jaunty</t>
+# bzr push --remember lp:~leo-editor-team/leo-editor/packaging</t>
 <t tx="ville.20090710203400.1282"></t>
 <t tx="ville.20090710203400.1283">#wb.require("get_bzr_version")
 rel_version = "leo-4.6~rc1"
@@ -190,7 +191,7 @@ bzr branch lp:~leo-editor-team/leo-editor/packaging-jaunty debian</t>
 dd = dict((k,v) for k,v in g.ns.__dict__.items() if not k.startswith('__'))
 pprint.pprint(dd)
 </t>
-<t tx="ville.20090730191424.1457">branchtag = 'leo-4-8-b1'
+<t tx="ville.20090730191424.1457">branchtag = 'leo-4-9-final'
 g.sh('bzr branch -r tag:$branchtag lp:leo-editor ${leo_branch_dir}')</t>
 <t tx="ville.20090730191424.1460">#wb.require("get_bzr_version")
 g.ns.rel_version = "leo-4.6.1"
@@ -220,5 +221,9 @@ g.ns.rel_version = "leo-4.8~b1"
 g.ns.rel_version = "leo-4.9~pre"
 </t>
 <t tx="ville.20110602003437.2556">g.sh('bzr branch lp:leo-editor ${leo_branch_dir}')</t>
+<t tx="ville.20110725063505.1383">#wb.require("get_bzr_version")
+g.ns.rel_version = "leo-4.9"
+
+</t>
 </tnodes>
 </leo_file>
