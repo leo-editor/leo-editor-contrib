@@ -3,8 +3,8 @@
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.50" body_secondary_ratio="0.65">
-	<global_window_position top="76" left="410" height="830" width="1087"/>
+<globals body_outline_ratio="0.45" body_secondary_ratio="0.65">
+	<global_window_position top="76" left="410" height="952" width="1202"/>
 	<global_log_window_position top="0" left="0" height="0" width="0"/>
 </globals>
 <preferences/>
@@ -642,7 +642,6 @@
 <v t="ekr.20120404123906.8068"><vh>jl_has_typevars</vh></v>
 <v t="ekr.20120404123906.8069"><vh>jl_is_leaf_type (dllexport)</vh></v>
 <v t="ekr.20120404123906.8070"><vh>jl_full_type</vh></v>
-<v t="ekr.20120404123906.8071"><vh>int type_eqv_</vh></v>
 </v>
 <v t="ekr.20120404123906.8072"><vh>type union</vh>
 <v t="ekr.20120404123906.8073"><vh>count_union_components</vh></v>
@@ -655,8 +654,8 @@
 <v t="ekr.20120404123906.8079"><vh>extend &amp; helper</vh>
 <v t="ekr.20120404123906.8080"><vh>extend_</vh></v>
 </v>
-<v t="ekr.20120404123906.8081"><vh>jl_type_intersect (forward decl)</vh></v>
 <v t="ekr.20120404123906.8139"><vh>** constraint satisfaction algorithm</vh>
+<v t="ekr.20120404123906.8153"><vh>is_btv</vh></v>
 <v t="ekr.20120404123906.8140"><vh>jl_type_intersect &amp; helpers</vh>
 <v t="ekr.20120404123906.8141"><vh>intersect_union</vh></v>
 <v t="ekr.20120404123906.8142"><vh>tuple_intersect_size</vh></v>
@@ -668,14 +667,13 @@
 <v t="ekr.20120404123906.8147"><vh>jl_type_intersection_matching</vh>
 <v t="ekr.20120404123906.8148"><vh>solve_tvar_constraints</vh>
 <v t="ekr.20120404123906.8149"><vh>tvar_lookup</vh></v>
+</v>
+</v>
+</v>
 <v t="ekr.20120404123906.8150"><vh>meet</vh>
 <v t="ekr.20120404123906.8151"><vh>meet_tvar</vh></v>
 <v t="ekr.20120404123906.8152"><vh>meet_tvars</vh></v>
 </v>
-</v>
-</v>
-</v>
-<v t="ekr.20120404123906.8153"><vh>is_btv</vh></v>
 <v t="ekr.20120404123906.8154"><vh>Not used</vh>
 <v t="ekr.20120404123906.8155"><vh>type_summary</vh></v>
 <v t="ekr.20120404123906.8156"><vh>print_env</vh></v>
@@ -19132,6 +19130,14 @@ jl_value_t *jl_nothing;
 
 void jl_add_constructors(jl_struct_type_t *t);
 
+static jl_value_t *
+jl_type_intersect(
+    jl_value_t *a, jl_value_t *b,
+    cenv_t *penv, cenv_t *eqc, variance_t var);
+
+static int type_eqv_(jl_value_t *a, jl_value_t *b);
+
+
 </t>
 <t tx="ekr.20120404123906.8065">// type properties and predicates.
 
@@ -19229,8 +19235,6 @@ jl_value_t *jl_full_type(jl_value_t *v)
     return (jl_value_t*)out;
 }
 </t>
-<t tx="ekr.20120404123906.8071">static int type_eqv_(jl_value_t *a, jl_value_t *b);
-</t>
 <t tx="ekr.20120404123906.8072">// --- type union ---</t>
 <t tx="ekr.20120404123906.8073">static int count_union_components(jl_tuple_t *types)
 {
@@ -19306,8 +19310,8 @@ jl_tuple_t *jl_compute_type_union(jl_tuple_t *types)
     return result;
 }
 </t>
-<t tx="ekr.20120404123906.8077">
-jl_value_t *jl_type_union(jl_tuple_t *types)
+<t tx="ekr.20120404123906.8077">jl_value_t *
+jl_type_union(jl_tuple_t *types)
 {
     types = jl_compute_type_union(types);
     if (types-&gt;length == 1)
@@ -19350,11 +19354,6 @@ typedef struct {
     soln-&gt;data[soln-&gt;n++] = var;
     soln-&gt;data[soln-&gt;n++] = val;
 }
-</t>
-<t tx="ekr.20120404123906.8081">static jl_value_t *
-jl_type_intersect(
-    jl_value_t *a, jl_value_t *b,
-    cenv_t *penv, cenv_t *eqc, variance_t var);
 </t>
 <t tx="ekr.20120404123906.8100">
 // --- type instantiation and cache ---
@@ -20715,51 +20714,54 @@ extern void jl_init_int32_int64_cache(void);
 </t>
 <t tx="ekr.20120404123906.8139">@nocolor-node
 
-/*
-  constraint satisfaction algorithm:
-  - keep lists of equality constraints and subtype constraints
-    (invariant and covariant)
-  - all constraints between two typevars are equality, i.e. it means the
-    two corresponding typevars must end up with the same value. however
-    they are kept in the subtype constraint list because they are not part
-    of the final answer yet.
-  - after computing the intersection, we try to solve the typevar constraints
-  - for each equality constraint T=S, add T=S to the results
-  - for each other constraint T=S, do
-      if T=U is in the results
-        if S is a typevar
-          if S=R is in the results
-            update R to meet(lookup(R),lookup(U))
-          else
-            add S=meet(S,lookup(U))
-          end
-          update U to S
-        else
-          update U to meet(lookup(U),S)
-        end
+@
+constraint satisfaction algorithm:
+
+- keep lists of equality constraints and subtype constraints
+  (invariant and covariant)
+  
+- all constraints between two typevars are equality, i.e. it means the
+  two corresponding typevars must end up with the same value. however
+  they are kept in the subtype constraint list because they are not part
+  of the final answer yet.
+
+- after computing the intersection, we try to solve the typevar constraints
+- for each equality constraint T=S, add T=S to the results
+- for each other constraint T=S, do
+  if T=U is in the results
+    if S is a typevar
+      if S=R is in the results
+        update R to meet(lookup(R),lookup(U))
       else
-        if S has typevars
-          add T=S
-        else
-          add T=_&lt;:S
-        end
+        add S=meet(S,lookup(U))
       end
+      update U to S
+    else
+      update U to meet(lookup(U),S)
+    end
+  else
+    if S has typevars
+      add T=S
+    else
+      add T=_&lt;:S
+    end
+  end
 
-    meet(X,Y) =
-      if X and Y both have no typevars and not equal, fail
-      if X has no typevars and X&lt;:Y, return X, else fail
-      if Y has no typevars and Y&lt;:X, return Y, else fail
-      if one or both is typevar, return meet_typevar(X,Y)
-      else return intersect(X,Y)
+meet(X,Y) =
+  if X and Y both have no typevars and not equal, fail
+  if X has no typevars and X&lt;:Y, return X, else fail
+  if Y has no typevars and Y&lt;:X, return Y, else fail
+  if one or both is typevar, return meet_typevar(X,Y)
+  else return intersect(X,Y)
 
-    update X to Y =
-      if X is a typevar, trace to its class root and put Y there
-      else put Y where X was
+update X to Y =
+  if X is a typevar, trace to its class root and put Y there
+  else put Y where X was
 
-    lookup(X) =
-      if X is a typevar and X=Y is in the results, return lookup(Y)
-      else return X
-*/
+lookup(X) =
+  if X is a typevar and X=Y is in the results, return lookup(Y)
+  else return X
+
 </t>
 <t tx="ekr.20120404123906.8140">static jl_value_t *
 jl_type_intersect(
@@ -21558,7 +21560,9 @@ meet_tvars(jl_tvar_t *a, jl_tvar_t *b)
     return res;
 }
 </t>
-<t tx="ekr.20120404123906.8153">static inline int is_btv(jl_value_t *v)
+<t tx="ekr.20120404123906.8153">// is bound type var.
+
+static inline int is_btv(jl_value_t *v)
 {
     return jl_is_typevar(v) &amp;&amp; ((jl_tvar_t*)v)-&gt;bound;
 }
