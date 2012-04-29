@@ -10,10 +10,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ville.20120429101639.1371" a="E"><vh>Main script, execute this to test</vh>
-<v t="ville.20120429101639.1372"><vh>t1</vh></v>
-<v t="ville.20120429101639.1373"><vh>t2</vh></v>
-</v>
+<v t="ville.20120429101639.1371" a="E"><vh>@auto notebooktest.py</vh></v>
 <v t="ville.20120429101639.1363" a="E"><vh>Root level</vh>
 <v t="ville.20120429101639.1364" a="E"><vh>ch1</vh>
 <v t="ville.20120429101639.1366"><vh>ch1.1</vh></v>
@@ -79,73 +76,5 @@ print n.children()</t>
 <t tx="ville.20120429101639.1365">Ch 2 content</t>
 <t tx="ville.20120429101639.1366">Level 2</t>
 <t tx="ville.20120429101639.1367">Also level 2</t>
-<t tx="ville.20120429101639.1371">from PyQt4.QtCore import QUrl, QObject
-
-from PyQt4.QtDeclarative import QDeclarativeView
-from PyQt4.QtGui import QStandardItemModel,QStandardItem
-
-class ModelWrapper:
-    def __init__(self, fieldlist):
-        self.rolenames = rn = {}
-        self.roleids = ri = {}
-        for n,f in enumerate(fieldlist):
-            rid = n + 100
-            rn[rid] = f
-            ri[f] = rid
-        self.model = mo = QStandardItemModel()
-        mo.setRoleNames(rn)
-
-    def mkitem(self, d):
-        """ dict with field-&gt;value """        
-        si = QStandardItem()
-        for k,v in d.items():
-            rid = self.roleids[k]
-            si.setData(v, rid)
-            
-        return si
-                   
-    
-class NbController:
-        
-    def addNode(self, p, styling = {}):
-        v = p.v
-        d = {"h" : v.h, "b" : v.b, "gnx" : v.gnx, "level" : p.level()}
-        d.update(styling)
-        self.gnxcache[v.gnx] = v    
-        si = self.mw.mkitem(d )
-        self.mw.model.appendRow(si)
-
-    def add_all_nodes(self):
-        for p in c.all_positions():                        
-            self.addNode(p)
-            
-    def __init__(self):
-        
-        self.gnxcache = {}
-        
-        self.mw = ModelWrapper(["h", "b", "gnx", "level", "style"])
- 
-        self.add_all_nodes()       
-        c._view = view = QDeclarativeView()
-        ctx = view.rootContext()        
-        
-        
-        
-        ctx.setContextProperty("nodesModel", self.mw.model)
-                
-        path = g.os_path_join(g.computeLeoDir(), 'plugins', 'qmlnb', 'qml', 'leonbmain.qml')
-        view.setSource(QUrl(path))
-        view.setResizeMode(QDeclarativeView.SizeRootObjectToView)
-        # Display the user interface and allow the user to interact with it.
-        view.setGeometry(100, 100, 800, 600)
-        view.show()
-        
-        c.dummy = view
-        
-NbController()        </t>
-<t tx="ville.20120429101639.1372"># aaoao
-</t>
-<t tx="ville.20120429101639.1373">#oeoeoeoe
-</t>
 </tnodes>
 </leo_file>
