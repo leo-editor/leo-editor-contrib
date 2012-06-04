@@ -34,19 +34,38 @@ class NbController:
         self.mw.model.appendRow(si)
 
     def add_all_nodes(self):
-        for p in c.all_positions():                        
+        self.mw.model.clear()
+        for p in self.c.all_positions():                        
             self.addNode(p)
             
-    def __init__(self):
+    def add_subtree(self,pos):
+        self.mw.model.clear()
         
+        for p in pos.self_and_subtree():                        
+            self.addNode(p)
+            
+    def __init__(self, c):
+
+        self.c = c    
         self.gnxcache = {}
         
         self.mw = ModelWrapper(["h", "b", "gnx", "level", "style"])
 
-        self.add_all_nodes()       
+        #self.add_all_nodes()       
+        #self.add_subtree(p)       
         c._view = view = QDeclarativeView()
         ctx = view.rootContext()        
         
+        @g.command("nb-all")
+        def nb_all_f(event):
+            self.add_all_nodes()
+        
+            
+        @g.command("nb-subtree")
+        def nb_subtree_f(event):
+            p = self.c.p
+            self.add_subtree(p)
+            
         ctx.setContextProperty("nodesModel", self.mw.model)
                 
         path = g.os_path_join(g.computeLeoDir(), 'plugins', 'qmlnb', 'qml', 'leonbmain.qml')
@@ -58,4 +77,4 @@ class NbController:
         
         c.dummy = view
         
-NbController()        
+NbController(c)        
