@@ -11,9 +11,22 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ville.20120817104907.1683"><vh>Simple test</vh></v>
+<v t="ville.20120817104907.1688" a="E"><vh>leo walker</vh>
+<v t="ville.20120817104907.1689" a="E"><vh>@file write_leo_file.py</vh></v>
+</v>
+<v t="ville.20120817104907.1687"><vh>more advanced test</vh></v>
+<v t="ville.20120817104907.1691" a="E"><vh>@spreadsheet</vh>
+<v t="ville.20120817104907.1684" a="E"><vh>heading</vh>
+<v t="ville.20120817104907.1685"><vh>cell to add</vh></v>
+<v t="ville.20120817104907.1694"><vh>single line content holder</vh></v>
+<v t="ville.20120817104907.1686"><vh>another cell to add</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
-<t tx="ville.20120817104907.1683">import xlwt
+<t tx="ville.20120817104907.1683">@language python
+
+import xlwt
 from datetime import datetime
 
 font0 = xlwt.Font()
@@ -38,6 +51,22 @@ ws.write(2, 2, xlwt.Formula("A3+B3"))
 
 wb.save('example.xls')
 
-g.os_startfile("example.xls")</t>
+g.os_startfile("example.xls")
+</t>
+<t tx="ville.20120817104907.1684"></t>
+<t tx="ville.20120817104907.1685">Many lines of content
+line 2
+
+Lots 
+of content for the cell
+</t>
+<t tx="ville.20120817104907.1686">More detailed content
+
+and latter line
+</t>
+<t tx="ville.20120817104907.1687"></t>
+<t tx="ville.20120817104907.1688"></t>
+<t tx="ville.20120817104907.1691"></t>
+<t tx="ville.20120817104907.1694">Bunch of content in body, on single line</t>
 </tnodes>
 </leo_file>
