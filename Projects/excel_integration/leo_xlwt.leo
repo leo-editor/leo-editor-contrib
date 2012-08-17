@@ -10,11 +10,11 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
+<v t="ville.20120817104907.1695"><vh>Instructions</vh></v>
 <v t="ville.20120817104907.1683"><vh>Simple test</vh></v>
 <v t="ville.20120817104907.1688" a="E"><vh>leo walker</vh>
 <v t="ville.20120817104907.1689" a="E"><vh>@file write_leo_file.py</vh></v>
 </v>
-<v t="ville.20120817104907.1687"><vh>more advanced test</vh></v>
 <v t="ville.20120817104907.1691" a="E"><vh>@spreadsheet</vh>
 <v t="ville.20120817104907.1684" a="E"><vh>heading</vh>
 <v t="ville.20120817104907.1685"><vh>cell to add</vh></v>
@@ -64,9 +64,14 @@ of content for the cell
 
 and latter line
 </t>
-<t tx="ville.20120817104907.1687"></t>
 <t tx="ville.20120817104907.1688"></t>
 <t tx="ville.20120817104907.1691"></t>
 <t tx="ville.20120817104907.1694">Bunch of content in body, on single line</t>
+<t tx="ville.20120817104907.1695">On ubuntu, install python-xlwt (excel write libary)
+press ctrl+b on write_leo_file.py below
+
+Mechanism: 
+
+</t>
 </tnodes>
 </leo_file>
