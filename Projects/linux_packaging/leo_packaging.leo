@@ -33,6 +33,7 @@
 <v t="ville.20101105210628.1712"><vh>release version (for 4.8b1)</vh></v>
 <v t="ville.20110602003437.2554"><vh>release version (for 4.9b1)</vh></v>
 <v t="ville.20110725063505.1383"><vh>release version (for 4.9)</vh></v>
+<v t="ville.20120817104907.1561"><vh>release version (for 4.10)</vh></v>
 </v>
 <v t="ville.20090627195028.1451"><vh>export tarball</vh></v>
 <v t="ville.20090627195028.1461"><vh>extract tarball</vh></v>
@@ -104,7 +105,7 @@ with g.cd(g.ns.packaging_dir + '/' + g.ns.rel_version) as g.ns.workpath:
 
 #debuild -i -I.git -S -sa -k348F0F07</t>
 <t tx="ville.20090627195028.1465">with g.cd(g.ns.workpath):
-    g.sh("dch -b -v ${rel_version.lstrip('leo-') + '-1'} -D natty")</t>
+    g.sh("dch -b -v ${rel_version.lstrip('leo-') + '-1'} -D precise")</t>
 <t tx="ville.20090627195028.1466"></t>
 <t tx="ville.20090627195028.1468">c.db['debian_pkg_dir'] = "~/pkg/leo-4.6~rc1~bzr2098"
 </t>
@@ -191,7 +192,7 @@ bzr branch lp:~leo-editor-team/leo-editor/packaging-jaunty debian</t>
 dd = dict((k,v) for k,v in g.ns.__dict__.items() if not k.startswith('__'))
 pprint.pprint(dd)
 </t>
-<t tx="ville.20090730191424.1457">branchtag = 'leo-4-9-final'
+<t tx="ville.20090730191424.1457">branchtag = 'leo-4-10-final'
 g.sh('bzr branch -r tag:$branchtag lp:leo-editor ${leo_branch_dir}')</t>
 <t tx="ville.20090730191424.1460">#wb.require("get_bzr_version")
 g.ns.rel_version = "leo-4.6.1"
@@ -223,6 +224,10 @@ g.ns.rel_version = "leo-4.9~pre"
 <t tx="ville.20110602003437.2556">g.sh('bzr branch lp:leo-editor ${leo_branch_dir}')</t>
 <t tx="ville.20110725063505.1383">#wb.require("get_bzr_version")
 g.ns.rel_version = "leo-4.9"
+
+</t>
+<t tx="ville.20120817104907.1561">#wb.require("get_bzr_version")
+g.ns.rel_version = "leo-4.10"
 
 </t>
 </tnodes>
