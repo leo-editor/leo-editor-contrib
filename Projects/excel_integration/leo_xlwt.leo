@@ -19,7 +19,12 @@
 <v t="ville.20120817104907.1691" a="E"><vh>@spreadsheet testspread.xls</vh>
 <v t="ville.20120817104907.1684" a="E"><vh>heading</vh>
 <v t="ville.20120817104907.1685"><vh>cell to add</vh></v>
-<v t="ville.20120817104907.1694"><vh>single line content holder</vh></v>
+<v t="ville.20120817104907.1694" a="E"><vh>single line content holder</vh>
+<v t="ville.20120820091105.1509"><vh>@col same line as parent</vh></v>
+<v t="ville.20120820091105.1510"><vh>@col still same line</vh></v>
+<v t="ville.20120820091105.1511"><vh>this is new line</vh></v>
+<v t="ville.20120820091105.1512"><vh>@col</vh></v>
+</v>
 <v t="ville.20120817104907.1686"><vh>another cell to add</vh></v>
 </v>
 <v t="ville.20120817104907.1696"><vh>heading 2</vh>
@@ -82,5 +87,9 @@ Mechanism:
 <t tx="ville.20120817104907.1697"></t>
 <t tx="ville.20120817104907.1698"></t>
 <t tx="ville.20120817104907.1699"></t>
+<t tx="ville.20120820091105.1509">More text for same line, new column</t>
+<t tx="ville.20120820091105.1510">More stuff</t>
+<t tx="ville.20120820091105.1511">new line content</t>
+<t tx="ville.20120820091105.1512">And new stuff for the latter line</t>
 </tnodes>
 </leo_file>

@@ -43,14 +43,27 @@ def write_spreadsheets(c):
         row = 0
         
         for n in root.subtree():    
-            col=0            
+            
+            h = n.h
+            if h.startswith("@col"):             
+                ws.write(row, col, n.b)
+                col+=1
+                continue
+                
+                
+            col = 2
+            row += 1
+                
+                
+            
             if n.v.children:
         
-                ws.write(row, col, n.h,style1)
+                ws.write(row, 0, n.h,style1)
             else:
-                ws.write(row, col, n.h, style0)
-            ws.write(row, col+1, n.b.strip())
-            row += 1
+                ws.write(row, 0, n.h, style0)
+            ws.write(row, 1, n.b.strip())
+            
+            
         
         #if os.path.exists(
         #os.remove(fname)
