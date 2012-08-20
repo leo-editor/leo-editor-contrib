@@ -15,11 +15,17 @@
 <v t="ville.20120817104907.1688" a="E"><vh>leo walker</vh>
 <v t="ville.20120817104907.1689" a="E"><vh>@file write_leo_file.py</vh></v>
 </v>
-<v t="ville.20120817104907.1691" a="E"><vh>@spreadsheet</vh>
+<v t="ville.20120817104907.1699" a="E"><vh>@path /tmp</vh>
+<v t="ville.20120817104907.1691" a="E"><vh>@spreadsheet testspread.xls</vh>
 <v t="ville.20120817104907.1684" a="E"><vh>heading</vh>
 <v t="ville.20120817104907.1685"><vh>cell to add</vh></v>
 <v t="ville.20120817104907.1694"><vh>single line content holder</vh></v>
 <v t="ville.20120817104907.1686"><vh>another cell to add</vh></v>
+</v>
+<v t="ville.20120817104907.1696"><vh>heading 2</vh>
+<v t="ville.20120817104907.1697"><vh>more</vh></v>
+</v>
+<v t="ville.20120817104907.1698"><vh>cells</vh></v>
 </v>
 </v>
 </vnodes>
@@ -54,11 +60,9 @@ wb.save('example.xls')
 g.os_startfile("example.xls")
 </t>
 <t tx="ville.20120817104907.1684"></t>
-<t tx="ville.20120817104907.1685">Many lines of content
-line 2
+<t tx="ville.20120817104907.1685">Many lines of content,line 2
 
-Lots 
-of content for the cell
+Lots  of content for the cell
 </t>
 <t tx="ville.20120817104907.1686">More detailed content
 
@@ -66,12 +70,17 @@ and latter line
 </t>
 <t tx="ville.20120817104907.1688"></t>
 <t tx="ville.20120817104907.1691"></t>
-<t tx="ville.20120817104907.1694">Bunch of content in body, on single line</t>
+<t tx="ville.20120817104907.1694">Bunch of content in body, on single line
+</t>
 <t tx="ville.20120817104907.1695">On ubuntu, install python-xlwt (excel write libary)
 press ctrl+b on write_leo_file.py below
 
 Mechanism: 
 
 </t>
+<t tx="ville.20120817104907.1696"></t>
+<t tx="ville.20120817104907.1697"></t>
+<t tx="ville.20120817104907.1698"></t>
+<t tx="ville.20120817104907.1699"></t>
 </tnodes>
 </leo_file>
