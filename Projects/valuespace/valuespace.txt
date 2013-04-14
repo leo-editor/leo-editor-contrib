@@ -4,27 +4,28 @@
 #@+node:ville.20110407203520.1442: ** prelude
 Note how @a is always needed to make leo parse the body of the parent node. Otherwise, this would get very slow with large outlines.
 
-Executable content starts
+Executable content starts. Note the handy "others" pattern to keep code nodes themselves "python only"
 
 @x {
 
-#@+<< imports >>
-#@+node:ville.20130414102144.4110: *3* << imports >>
+#@+others
+#@+node:ville.20110407203657.1445: *3* @a
+#@+node:ville.20130414102144.4110: *3* imports
 
 from leo.external.stringlist import shcmd
 
-#@-<< imports >>
+#@+node:ville.20130414102144.4111: *3* bunch
 class Bunch:
     def __init__(self, **kwds):
         self.__dict__.update(kwds)
 
 bunch = Bunch()
+#@-others
 
 lst = []
 
 @x }
 
-#@+node:ville.20110407203657.1445: *3* @a
 #@+node:ville.20110403183730.2488: ** Contains exressions that manipulate the g.vs
 Please enable "valuespace.py" plugin and do alt-x vs-update to parse everything
 
@@ -4178,5 +4179,30 @@ line 2
 #@+node:ville.20110409201537.1486: *3* @r mycl.grep('line')
 line 1
 line 2
+#@+node:ville.20130414231049.1849: ** @path jsondemo
+In children here, we read in foovar.json (it gets assigned to 'foovar') in phase 1. 
+Some calculation is performed using that, barvar is created, and it gets written to file system as json.
+#@+node:ville.20130414231049.1850: *3* @vsi foovar.json
+{
+  "val": [
+    "hello", 
+    "world"
+  ]
+}
+#@+node:ville.20130414231049.1851: *3* derive barvar from foovar
+@x {
+barvar = foovar.copy()
+barvar['more_data'] = [1,2,3]
+
+
+@x }
+#@+node:ville.20130414231049.1853: *4* @a
+#@+node:ville.20130414231049.1852: *3* @vso barvar.json
+{
+  "val": [
+    "hello", 
+    "world"
+  ]
+}
 #@-others
 #@-leo
