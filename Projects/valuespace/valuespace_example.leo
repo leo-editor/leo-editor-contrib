@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ville.20110409221110.10501" a="E"
-expanded="ville.20130414231049.1849,ville.20130414231049.1851,"><vh>@file valuespace.txt</vh></v>
+expanded="ville.20110407204806.1449,ville.20110409200729.1478,ville.20130414231049.1849,"><vh>@file valuespace.txt</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>

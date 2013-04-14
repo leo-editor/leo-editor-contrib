@@ -4189,11 +4189,29 @@ Some calculation is performed using that, barvar is created, and it gets written
     "world"
   ]
 }
+#@+node:ville.20130414234557.1715: *3* @vsi bunch.testfoo.json
+{
+  "val": [
+    "hello", 
+    "world"
+  ], 
+  "more_data": [
+    1, 
+    2, 
+    3
+  ]
+}
 #@+node:ville.20130414231049.1851: *3* derive barvar from foovar
+Note how this gets executed after vsi, and before vso
+
 @x {
 barvar = foovar.copy()
 barvar['more_data'] = [1,2,3]
 
+# also fiddle with the bunch version
+
+bunch.testbar = bunch.testfoo.copy()
+bunch.testbar['bunchextra'] = 42
 
 @x }
 #@+node:ville.20130414231049.1853: *4* @a
@@ -4202,6 +4220,23 @@ barvar['more_data'] = [1,2,3]
   "val": [
     "hello", 
     "world"
+  ], 
+  "more_data": [
+    1, 
+    2, 
+    3
+  ]
+}
+#@+node:ville.20130414234557.1714: *3* @vso bunch.testbar.json
+{
+  "val": [
+    "hello", 
+    "world"
+  ], 
+  "more_data": [
+    1, 
+    2, 
+    3
   ]
 }
 #@-others

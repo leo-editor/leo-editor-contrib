@@ -1,0 +1,12 @@
+{
+  "bunchextra": 42, 
+  "val": [
+    "hello", 
+    "world"
+  ], 
+  "more_data": [
+    1, 
+    2, 
+    3
+  ]
+}
