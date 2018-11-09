@@ -7,18 +7,15 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20181108111559.1"><vh>pscript study outline</vh></v>
-<v t="ekr.20181108111640.1"><vh>@path C:/Anaconda3/Lib/site-packages/pscript</vh>
 <v t="ekr.20181108111640.313"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181108111640.314"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.314"><vh>&lt;&lt; docstring &gt;&gt;</vh></v>
 </v>
 <v t="ekr.20181108111640.2"><vh>@@clean base.py</vh>
-<v t="ekr.20181108111640.3"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.4"><vh>class BasicParser(Parser2)</vh></v>
 <v t="ekr.20181108111640.5"><vh>class Parser(Parser3)</vh></v>
 <v t="ekr.20181108111640.6"><vh>this_is_js</vh></v>
 </v>
 <v t="ekr.20181108111640.7"><vh>@@clean commonast.py</vh>
-<v t="ekr.20181108111640.8"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.9"><vh>parse</vh></v>
 <v t="ekr.20181108111640.10"><vh>class Node(object)</vh>
 <v t="ekr.20181108111640.11"><vh>class OPS</vh></v>
@@ -166,9 +163,10 @@
 </v>
 </v>
 <v t="ekr.20181108111640.152"><vh>@@clean functions.py</vh>
-<v t="ekr.20181108111640.153"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.154"><vh>class JSString(str)</vh></v>
-<v t="ekr.20181108111640.155"><vh>py2js</vh></v>
+<v t="ekr.20181108111640.155"><vh>py2js</vh>
+<v t="ekr.20181108210630.1"><vh>&lt;&lt; py2js docstring &gt;&gt;</vh></v>
+</v>
 <v t="ekr.20181108111640.156"><vh>js_rename</vh></v>
 <v t="ekr.20181108111640.157"><vh>get_node_exe</vh></v>
 <v t="ekr.20181108111640.158"><vh>evaljs</vh></v>
@@ -176,12 +174,11 @@
 <v t="ekr.20181108111640.160"><vh>script2js</vh></v>
 </v>
 <v t="ekr.20181108111640.161"><vh>@@clean modules.py</vh>
-<v t="ekr.20181108111640.162"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.162"><vh>&lt;&lt; code snippets &gt;&gt;</vh></v>
 <v t="ekr.20181108111640.163"><vh>isidentifier</vh></v>
 <v t="ekr.20181108111640.164"><vh>create_js_module</vh></v>
 </v>
 <v t="ekr.20181108111640.165"><vh>@@clean parser0.py</vh>
-<v t="ekr.20181108111640.166"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.167"><vh>class JSError(Exception)</vh></v>
 <v t="ekr.20181108111640.168"><vh>unify</vh></v>
 <v t="ekr.20181108111640.169"><vh>class NameSpace(dict)</vh>
@@ -215,7 +212,8 @@
 </v>
 </v>
 <v t="ekr.20181108111640.196"><vh>@@clean parser1.py</vh>
-<v t="ekr.20181108111640.197"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.197"><vh>&lt;&lt; parser1 docstring &gt;&gt;</vh></v>
+<v t="ekr.20181108211821.1"><vh>&lt;&lt; parser1 data &gt;&gt;</vh></v>
 <v t="ekr.20181108111640.198"><vh>class Parser1(Parser0)</vh>
 <v t="ekr.20181108111640.199"><vh>Parser1.parse_Num</vh></v>
 <v t="ekr.20181108111640.200"><vh>Parser1.parse_Str</vh></v>
@@ -257,7 +255,8 @@
 </v>
 </v>
 <v t="ekr.20181108111640.236"><vh>@@clean parser2.py</vh>
-<v t="ekr.20181108111640.237"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.237"><vh>&lt;&lt; parser2 docstring &gt;&gt;</vh></v>
+<v t="ekr.20181108212134.1"><vh>&lt;&lt; parser2 data &gt;&gt;</vh></v>
 <v t="ekr.20181108111640.238"><vh>class Parser2(Parser1)</vh>
 <v t="ekr.20181108111640.239"><vh>Parser2.parse_Raise</vh></v>
 <v t="ekr.20181108111640.240"><vh>Parser2.parse_Assert</vh></v>
@@ -287,7 +286,7 @@
 <v t="ekr.20181108111640.263"><vh>get_class_definition</vh></v>
 </v>
 <v t="ekr.20181108111640.264"><vh>@@clean parser3.py</vh>
-<v t="ekr.20181108111640.265"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.265"><vh>&lt;&lt; parser3 docstring &gt;&gt;</vh></v>
 <v t="ekr.20181108111640.266"><vh>class Parser3(Parser2)</vh>
 <v t="ekr.20181108111640.267"><vh>Parser3.function_this_is_js</vh></v>
 <v t="ekr.20181108111640.268"><vh>Parser3.function_RawJS</vh></v>
@@ -312,15 +311,15 @@
 <v t="ekr.20181108111640.286"><vh>make_method</vh></v>
 </v>
 <v t="ekr.20181108111640.287"><vh>@@clean stdlib.py</vh>
-<v t="ekr.20181108111640.288"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.289"><vh>get_std_info</vh></v>
 <v t="ekr.20181108111640.290"><vh>_update_deps</vh></v>
 <v t="ekr.20181108111640.291"><vh>get_partial_std_lib</vh></v>
 <v t="ekr.20181108111640.292"><vh>get_full_std_lib</vh></v>
 <v t="ekr.20181108111640.293"><vh>get_all_std_names</vh></v>
+<v t="ekr.20181108212755.1"><vh>&lt;&lt; define FUNCTIONS &gt;&gt;</vh></v>
+<v t="ekr.20181108212823.1"><vh>&lt;&lt; define METHODS &gt;&gt;</vh></v>
 </v>
 <v t="ekr.20181108111640.294"><vh>@@clean stubs.py</vh>
-<v t="ekr.20181108111640.295"><vh>Declarations</vh></v>
 <v t="ekr.20181108111640.296"><vh>class RawJS</vh>
 <v t="ekr.20181108111640.297"><vh>RawJS.__init__</vh></v>
 <v t="ekr.20181108111640.298"><vh>RawJS.__repr__</vh></v>
@@ -333,21 +332,17 @@
 <v t="ekr.20181108111640.304"><vh>JSConstant.__init__</vh></v>
 <v t="ekr.20181108111640.305"><vh>JSConstant.__repr__</vh></v>
 </v>
-<v t="ekr.20181108111640.306"><vh>class Stubs</vh>
-<v t="ekr.20181108111640.307"><vh>Stubs.__getattr__</vh></v>
-</v>
+<v t="ekr.20181108111640.306"><vh>class Stubs</vh></v>
 </v>
 <v t="ekr.20181108111640.308"><vh>@@clean testing.py</vh>
-<v t="ekr.20181108111640.309"><vh>Declarations</vh></v>
+<v t="ekr.20181108111640.309"><vh>&lt;&lt; testing data &gt;&gt;</vh></v>
 <v t="ekr.20181108111640.310"><vh>run_tests_if_main</vh></v>
 <v t="ekr.20181108111640.311"><vh>_enable_faulthandler</vh></v>
 <v t="ekr.20181108111640.312"><vh>_clear_our_modules</vh></v>
 </v>
-</v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20181108111559.1"></t>
-<t tx="ekr.20181108111640.1"></t>
+<t tx="ekr.20181108111559.1"># Note: this code has not been tested with perfect import.</t>
 <t tx="ekr.20181108111640.10">class Node(object):
     """ Abstract base class for all Nodes.
     """
@@ -843,12 +838,7 @@ def fromjson(cls, text):
     self._stack.append((node.body_nodes, n.body))
     return node
 </t>
-<t tx="ekr.20181108111640.152">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.153">import re
+<t tx="ekr.20181108111640.152">import re
 import os
 import sys
 import types
@@ -861,7 +851,9 @@ from . import Parser
 from .stdlib import get_full_std_lib  # noqa
 from .modules import create_js_module
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181108111640.154">class JSString(str):
     """ A subclass of string, so we can add attributes to JS string objects.
@@ -871,42 +863,7 @@ from .modules import create_js_module
 
 </t>
 <t tx="ekr.20181108111640.155">def py2js(ob=None, new_name=None, **parser_options):
-    """ Convert Python to JavaScript.
-    
-    Parameters:
-        ob (str, module, function, class): The code, function or class
-            to transpile.
-        new_name (str, optional): If given, renames the function or class. This
-            can be used to simply change the name and/or add a prefix. It can
-            also be used to turn functions into methods using
-            "MyClass.prototype.foo". Double-underscore name mangling is taken
-            into account in the process.
-        parser_options: Additional options, see
-            :class:`Parser class &lt;pscript.Parser&gt;` for details.
-    
-    Returns:
-        str: The JavaScript code as a str object that
-        has a ``meta`` attribute with the following fields:
-        
-        * filename (str): the name of the file that defines the object.
-        * linenr (int): the starting linenr for the object definition.
-        * pycode (str): the Python code used to generate the JS.
-        * pyhash (str): a hash of the Python code.
-        * vars_defined (set): names defined in the toplevel namespace.
-        * vars_unknown (set): names used in the code but not defined in it.
-          This includes namespaces, e.g. "foo.some_function".
-        * vars_global (set): names explicitly declared global.
-        * std_functions (set): stdlib functions used in this code.
-        * std_method (set): stdlib methods used in this code.
-    
-    Notes:
-        The Python source code for a class is acquired by name.
-        Therefore one should avoid decorating classes in modules where
-        multiple classes with the same name are defined. This is a
-        consequence of classes not having a corresponding code object (in
-        contrast to functions).
-    
-    """
+    &lt;&lt; py2js docstring &gt;&gt;
     
     def py2js_(ob):
         if isinstance(ob, str):
@@ -996,11 +953,10 @@ from .modules import create_js_module
         return py2js_  # uses as a decorator with some options set
     return py2js_(ob)
 
-
-re_sub1 = re.compile(r'this\.__(\w*?[a-zA-Z0-9](?!__)\W)', re.UNICODE)
-
 </t>
-<t tx="ekr.20181108111640.156">def js_rename(jscode, cur_name, new_name):
+<t tx="ekr.20181108111640.156">re_sub1 = re.compile(r'this\.__(\w*?[a-zA-Z0-9](?!__)\W)', re.UNICODE)
+
+def js_rename(jscode, cur_name, new_name):
     """ Rename a function or class in a JavaScript code string.
     
     The new name can be prefixed (i.e. have dots in it). Functions can be
@@ -1065,11 +1021,10 @@ re_sub1 = re.compile(r'this\.__(\w*?[a-zA-Z0-9](?!__)\W)', re.UNICODE)
         1/0
         
     return jscode
-
-
-NODE_EXE = None
 </t>
-<t tx="ekr.20181108111640.157">def get_node_exe():
+<t tx="ekr.20181108111640.157">NODE_EXE = None
+
+def get_node_exe():
     """ Small utility that provides the node exe. The first time this
     is called both 'nodejs' and 'node' are tried. To override the
     executable path, set the ``PSCRIPT_NODE_EXE`` environment variable.
@@ -1086,11 +1041,10 @@ NODE_EXE = None
             NODE_EXE = 'node'
     return NODE_EXE
 
-
-_eval_count = 0
-
 </t>
-<t tx="ekr.20181108111640.158">def evaljs(jscode, whitespace=True, print_result=True, extra_nodejs_args=None):
+<t tx="ekr.20181108111640.158">_eval_count = 0
+
+def evaljs(jscode, whitespace=True, print_result=True, extra_nodejs_args=None):
     """ Evaluate JavaScript code in Node.js.
     
     Parameters:
@@ -1234,19 +1188,18 @@ def _fromdict(cls, d):
     with open(filename2, 'wb') as f:
         f.write(jscode.encode())
 </t>
-<t tx="ekr.20181108111640.161">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.162">"""
+<t tx="ekr.20181108111640.161">"""
 Functionality for creating JS modules of various formats, including AMD and UMD.
 """
 
 import re
 
-
-# Immediately Invoked Function Expression (IIFE)
+&lt;&lt; code snippets &gt;&gt;
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181108111640.162"># Immediately Invoked Function Expression (IIFE)
 HIDDEN = """
 (function () {
 
@@ -1405,13 +1358,8 @@ return {exports};
     
     return template
 </t>
-<t tx="ekr.20181108111640.165">@path C:/Anaconda3/Lib/site-packages/pscript/
-# -*- coding: utf-8
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.166">"""
+<t tx="ekr.20181108111640.165"># -*- coding: utf-8
+"""
 Parts of this code (and in the other modules that define the parser
 class) are inspired by / taken from the py2js project.
 
@@ -1433,7 +1381,9 @@ from . import stdlib, logger
 
 reprs = json.dumps  # Save string representation without the u in u'xx'.
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181108111640.167">class JSError(Exception):
     """ Exception raised when unable to convert Python to JS.
@@ -1916,12 +1866,22 @@ def vars(self):
     else:
         raise JSError('Cannot parse %s-nodes yet' % nodeType)
 </t>
-<t tx="ekr.20181108111640.196">@path C:/Anaconda3/Lib/site-packages/pscript/
+<t tx="ekr.20181108111640.196">&lt;&lt; parser1 docstring &gt;&gt;
+import re
+
+from . import commonast as ast
+from . import stdlib
+from .parser0 import Parser0, JSError, unify, reprs  # noqa
+
+&lt;&lt; parser1 data &gt;&gt;
+
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20181108111640.197">"""
+<t tx="ekr.20181108111640.197">@language rest
+
+"""
 
 The basics
 ----------
@@ -2107,42 +2067,6 @@ PScript does provide functionality to package code in JS modules,
 but these follow the ``require`` pattern.
 
 """
-
-import re
-
-from . import commonast as ast
-from . import stdlib
-from .parser0 import Parser0, JSError, unify, reprs  # noqa
-
-
-# Define builtin stuff for which we know that it returns a bool or int
-_bool_funcs = 'hasattr', 'all', 'any', 'op_contains', 'op_equals', 'truthy'
-_bool_meths = ('count', 'isalnum', 'isalpha', 'isidentifier', 'islower',
-               'isnumeric', 'isdigit', 'isdecimal', 'isspace', 'istitle',
-               'isupper', 'startswith')
-returning_bool = tuple([stdlib.FUNCTION_PREFIX + x + '(' for x in _bool_funcs] +
-                       [stdlib.METHOD_PREFIX + x + '.' for x in _bool_meths])
-
-
-# precompile regexp to help determine whether a string is an identifier
-isidentifier1 = re.compile(r'^\w+$', re.UNICODE)
-
-reserved_names = (
-    'abstract', 'instanceof', 'boolean', 'enum', 'switch', 'export',
-    'interface', 'synchronized', 'extends', 'let', 'case', 'throw',
-    'catch', 'final', 'native', 'throws', 'new', 'transient',
-    'const', 'package', 'function', 'private', 'typeof', 'debugger', 'goto',
-    'protected', 'var', 'default', 'public', 'void', 'delete', 'implements',
-    'volatile', 'do', 'static',
-    # Commented, because are disallowed in Python too.
-    # 'else', 'break', 'finally', 'class', 'for', 'try', 'continue', 'if',
-    # 'return', 'import', 'while', 'in', 'with',
-    # Commented for pragmatic reasons
-    # 'super', 'float', 'this', 'int', 'byte', 'long', 'char', 'short',
-    # 'double', 'null', 'true', 'false',
-    )
-
-
 </t>
 <t tx="ekr.20181108111640.198">class Parser1(Parser0):
     """ Parser that add basic functionality like assignments,
@@ -2157,7 +2081,9 @@ reserved_names = (
     return repr(node.value)
 
 </t>
-<t tx="ekr.20181108111640.2">@path C:/Anaconda3/Lib/site-packages/pscript/
+<t tx="ekr.20181108111640.2">from .parser2 import Parser2
+from .parser3 import Parser3
+
 @others
 @language python
 @tabwidth -4
@@ -2834,12 +2760,22 @@ reserved_names = (
         code += self.parse(child)
     return code
 </t>
-<t tx="ekr.20181108111640.236">@path C:/Anaconda3/Lib/site-packages/pscript/
+<t tx="ekr.20181108111640.236">&lt;&lt; parser2 docstring &gt;&gt;
+
+from . import commonast as ast
+from . import stdlib
+from . import logger
+from .parser1 import Parser1, JSError, unify, reprs  # noqa
+
+&lt;&lt; parser2 data &gt;&gt;
+
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20181108111640.237">"""
+<t tx="ekr.20181108111640.237">@language rest
+
+"""
 
 If statements
 -------------
@@ -3062,36 +2998,6 @@ Globals and nonlocal
     # a is now 4
 
 """
-
-from . import commonast as ast
-from . import stdlib
-from . import logger
-from .parser1 import Parser1, JSError, unify, reprs  # noqa
-
-
-RAW_DOC_WARNING = ('Function %s only has a docstring, which used to be '
-                   'intepreted as raw JS. Wrap a call to RawJS(...) around the '
-                   'docstring, or add "pass" to the function body to prevent '
-                   'this behavior.')
-
-JS_RESERVED_WORDS = set()
-
-
-# https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
-RESERVED = {'true', 'false', 'null',
-            # Reserved keywords as of ECMAScript 6
-            'break', 'case', 'catch', 'class', 'const', 'continue', 'debugger',
-            'default', 'delete', 'do', 'else', 'export', 'extends', 'finally',
-            'for', 'function', 'if', 'import', 'in', 'instanceof', 'new',
-            'return', 'super', 'switch', 'this', 'throw', 'try', 'typeof',
-            'var', 'void', 'while', 'with', 'yield',
-            # Future reserved keywords
-            'implements', 'interface', 'let', 'package', 'private',
-            'protected', 'public', 'static', 'enum',
-            'await',  # only in module code
-            }
-
- 
 </t>
 <t tx="ekr.20181108111640.238">class Parser2(Parser1):
     """ Parser that adds control flow, functions, classes, and exceptions.
@@ -4028,12 +3934,21 @@ RESERVED = {'true', 'false', 'null',
     code.append('')
     return code
 </t>
-<t tx="ekr.20181108111640.264">@path C:/Anaconda3/Lib/site-packages/pscript/
+<t tx="ekr.20181108111640.264">&lt;&lt; parser3 docstring &gt;&gt;
+
+from . import commonast as ast
+from . import stdlib
+from .parser2 import Parser2, JSError, unify  # noqa
+from .stubs import RawJS
+
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20181108111640.265">"""
+<t tx="ekr.20181108111640.265">@language rest
+@wrap
+
+"""
 
 Python Builtins
 ---------------
@@ -4221,14 +4136,8 @@ Aside from ``window``, ``pscript`` also provides ``undefined``,
 ``Inifinity``, and ``NaN``.
 
 """
-
-from . import commonast as ast
-from . import stdlib
-from .parser2 import Parser2, JSError, unify  # noqa
-from .stubs import RawJS
-
-
-# This class has several `function_foo()` and `method_bar()` methods
+</t>
+<t tx="ekr.20181108111640.266"># This class has several `function_foo()` and `method_bar()` methods
 # to implement corresponding functionality. Most of these are
 # auto-generated from the stdlib. However, some methods need explicit
 # implementation, e.g. to parse keyword arguments, or are inlined rather
@@ -4239,9 +4148,7 @@ from .stubs import RawJS
 # bypass the stdlib in this case, because it is assumed that the user
 # intended to call a special method on the object.
 
-
-</t>
-<t tx="ekr.20181108111640.266">class Parser3(Parser2):
+class Parser3(Parser2):
     """ Parser to transcompile Python to JS, allowing more Pythonic
     code, like ``self``, ``print()``, ``len()``, list methods, etc.
     """
@@ -4534,12 +4441,7 @@ for name, code in stdlib.FUNCTIONS.items():
         m = make_function(name, tuple(nargs), function_deps, method_deps)
         setattr(Parser3, 'function_' + name, m)
 </t>
-<t tx="ekr.20181108111640.287">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.288">"""
+<t tx="ekr.20181108111640.287">"""
 PScript standard functions.
 
 Functions are declared as ... functions. Methods are written as methods
@@ -4559,7 +4461,30 @@ METHODS = {}
 FUNCTION_PREFIX = '_pyfunc_'
 METHOD_PREFIX = '_pymeth_'
 
+@others
 
+&lt;&lt; define FUNCTIONS &gt;&gt;
+&lt;&lt; define METHODS &gt;&gt;
+
+for key in METHODS:
+    METHODS[key] = re.subn(r'METHOD_PREFIX(.+?)\(',
+                           r'METHOD_PREFIX\1.call(', METHODS[key])[0]
+    METHODS[key] = METHODS[key].replace(
+        'KEY', key).replace(
+        'FUNCTION_PREFIX', FUNCTION_PREFIX).replace(
+        'METHOD_PREFIX', METHOD_PREFIX).replace(
+        ', )', ')')
+    
+for key in FUNCTIONS:
+    FUNCTIONS[key] = re.subn(r'METHOD_PREFIX(.+?)\(',
+                             r'METHOD_PREFIX\1.call(', FUNCTIONS[key])[0]
+    FUNCTIONS[key] = FUNCTIONS[key].replace(
+        'KEY', key).replace(
+        'FUNCTION_PREFIX', FUNCTION_PREFIX).replace(
+        'METHOD_PREFIX', METHOD_PREFIX)
+
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181108111640.289">def get_std_info(code):
     """ Given the JS code for a std function or method, determine the
@@ -4665,7 +4590,1415 @@ METHOD_PREFIX = '_pymeth_'
             [METHOD_PREFIX + f for f in METHODS])
 
 
-## ----- Functions
+</t>
+<t tx="ekr.20181108111640.294">"""
+Module that can dynamically generate stubs.
+"""
+
+import sys
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181108111640.296">class RawJS:
+    """ An object to wrap verbatim code to be included in the generated
+    JavaScript. This serves a number of purposes:
+    
+    * Using code in PScript that is not valid Python syntax, like regular
+      expressions or the jQuery object ``$``.
+    * Write high performance code that avoids Pythonic features like operator
+      overloading.
+    * In Flexx's module system it can be used to create a stub variable in
+      Python that *does* have a value in JS. This value can imported in other
+      modules, leading to a shared value also in JS.
+    
+    PScript does not verify the syntax of the code, so write carefully!
+    To allow the features in the 3d point, this object has a magic touch:
+    the ``__module__`` attribute of an instance refers to the module in which it
+    was instantiated, and if it's a global, its defining name can be obtained.
+    
+    Example:
+    
+    .. code-block:: py
+        
+        # Syntax not usable in Py
+        myre = RawJS('/ab+c/')
+        
+        # Code that should only execute on JS
+        foo = RawJS('require("some.module")')
+        
+        # Performance
+        def bar(n):
+            res = []
+            RawJS('''
+                for (var i=0; i&lt;n; i++) {
+                    if (is_ok_num(i)) {
+                        res.push(i);
+                    }
+                }
+            ''')
+    
+    """
+    
+    @others
+</t>
+<t tx="ekr.20181108111640.297">def __init__(self, code, _resolve_defining_module=True):
+    if not isinstance(code, str):
+        raise TypeError('RawJS requires str input.')
+    self._lines = self._str2lines(code)
+    
+    # Get the globals of the module in which this instance is defined, so
+    # that we can set __module__ and later obtain the name by which this 
+    # instance is known in that module. We use a trick here to get access
+    # to the stack frame while avoiding sys._getframe().
+    try:
+        raise Exception()
+    except Exception as err:
+        tb = getattr(err, '__traceback__', None)
+        if tb is None:  # Legacy Python 2.x
+            import sys
+            _, _, tb = sys.exc_info()
+        self._globals = tb.tb_frame.f_back.f_globals
+        del tb
+    self.__module__ = self._globals['__name__']
+    self._real_name = None
+
+</t>
+<t tx="ekr.20181108111640.298">def __repr__(self):
+    if len(self._lines) == 1 and len(self._lines[0]) &lt; 60:
+        return '&lt;%s "%s"&gt;' % (self.__class__.__name__, self.get_code(0))
+    else:
+        return '&lt;%s with %i lines&gt;' % (self.__class__.__name__, len(self._lines))
+
+</t>
+<t tx="ekr.20181108111640.299">def __str__(self):
+    return self.get_code(0)
+
+</t>
+<t tx="ekr.20181108111640.30">class Set(Node):
+    """
+    Attributes:
+        element_nodes: the items in the set.
+    """
+    __slots__ = 'element_nodes',
+
+</t>
+<t tx="ekr.20181108111640.300">@classmethod
+def _str2lines(cls, text):
+    """ Classmethod to split a text in lines, dedenting each line.
+    The first line's indentation will assume the minimal
+    indentation.
+    """
+    lines = text.replace('\r', '').split('\n')
+    lines[0] = lines[0].strip()  # firts line is always detented
+    if len(lines) &gt; 1:
+        # Get minimal indentation
+        min_indent = 99999
+        for line in lines[1:]:
+            if line.strip():  # don't count empty lines
+                min_indent = min(min_indent, len(line) - len(line.lstrip()))
+        # Remove indentation
+        for i in range(1, len(lines)):
+            lines[i] = lines[i][min_indent:].rstrip()
+    # Remove empty line only at beginning
+    if not lines[0]:
+        lines.pop(0)
+    return lines
+
+</t>
+<t tx="ekr.20181108111640.301">def get_defined_name(self, suggestion=None):
+    """ Get the name by which this object is known in the module in which
+    it is defined. Only works if it is a global. Returns '' otherwise.
+    If a suggestion is given and it is the correct name, this function
+    performs faster. The resulting name is cached internally.
+    """
+    if self._real_name is None:
+        self._real_name = ''  # could be defined not in the globals
+        if suggestion and self._globals.get(suggestion, None) is self:
+            self._real_name = suggestion
+        else:
+            for name, val in self._globals.items():
+                if val is self:
+                    self._real_name = name
+                    break
+    return self._real_name
+
+</t>
+<t tx="ekr.20181108111640.302">def get_code(self, indent=0):
+    """ Get the code with the given indentation.
+    """
+    indent = indent * ' '
+    return '\n'.join([indent + line for line in self._lines])
+
+
+</t>
+<t tx="ekr.20181108111640.303">class JSConstant:
+    """ Class to represent variables that are used in JS, and are considered
+    global or otherwise available in a way that Python cannot know.
+    """
+    
+    @others
+</t>
+<t tx="ekr.20181108111640.304">def __init__(self, name='jsconstant'):
+    self._name = name
+
+</t>
+<t tx="ekr.20181108111640.305">def __repr__(self):  # pragma: no cover
+    return '&lt;%s %s&gt;' % (self.__class__.__name__, self._name)
+
+
+</t>
+<t tx="ekr.20181108111640.306">class Stubs:
+    
+    __name__ = __name__
+    __file__ = __file__
+    JSConstant = JSConstant
+    RawJS = RawJS
+    
+    def __getattr__(self, name):
+        if name in ('JSConstant', 'RawJS'):
+            return getattr(self, name)
+        else:
+            return self.JSConstant(name)
+    
+# Seems hacky, but is supported: http://stackoverflow.com/a/7668273/2271927
+sys.modules[__name__] = Stubs()
+</t>
+<t tx="ekr.20181108111640.308"># -*- coding: utf-8 -*-
+# Copyright (c) 2016, Almar Klein
+# Distributed under the (new) BSD License.
+
+"""
+Functionality used for testing, based on pytest. This module is designed
+to just work, without modification, in most projects.
+
+Write your tests like this:
+
+    from yourproject.xxx.testing import run_tests_if_main, raises, skipif
+    ...
+    run_tests_if_main()
+
+Then you can run the test file as a script, which will run all tests
+and report coverage. Magic!
+"""
+
+from __future__ import absolute_import, print_function, division
+
+import os
+import sys
+import inspect
+
+import pytest
+
+&lt;&lt; testing data &gt;&gt;
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181108111640.309">PACKAGE_NAME = __name__.split('.')[0]
+
+# Get project root dir
+THIS_DIR = os.path.abspath(os.path.dirname(__file__))
+ROOT_DIR = THIS_DIR
+for i in range(9):
+    ROOT_DIR = os.path.dirname(ROOT_DIR)
+    if os.path.basename(ROOT_DIR) == PACKAGE_NAME:
+        ROOT_DIR = os.path.dirname(ROOT_DIR)
+        break
+else:
+    print('testing.py could not find project root dir, '
+          'using testing.py directory instead.')
+    ROOT_DIR = THIS_DIR
+
+
+# Inject some function names so they can be obtained with one import
+raises = pytest.raises
+skipif = pytest.mark.skipif
+skip = pytest.skip
+
+</t>
+<t tx="ekr.20181108111640.31">class Dict(Node):
+    """
+    Attributes:
+        key_nodes: the keys of the dict.
+        value_nodes: the corresponding values.
+    """
+    __slots__ = 'key_nodes', 'value_nodes'
+
+</t>
+<t tx="ekr.20181108111640.310">def run_tests_if_main(show_coverage=False):
+    """ Run tests in a given file if it is run as a script
+    
+    Coverage is reported for running this single test. Set show_coverage to
+    launch the report in the web browser.
+    """
+    local_vars = inspect.currentframe().f_back.f_locals
+    if not local_vars.get('__name__', '') == '__main__':
+        return
+    # we are in a "__main__"
+    os.chdir(ROOT_DIR)
+    fname = str(local_vars['__file__'])
+    _clear_our_modules()
+    _enable_faulthandler()
+    pytest.main(['-v', '-x', '--color=yes', '--cov', PACKAGE_NAME,
+                 '--cov-config', '.coveragerc', '--cov-report', 'html', fname])
+    if show_coverage:
+        import webbrowser
+        fname = os.path.join(ROOT_DIR, 'htmlcov', 'index.html')
+        webbrowser.open_new_tab(fname)
+
+
+</t>
+<t tx="ekr.20181108111640.311">def _enable_faulthandler():
+    """ Enable faulthandler (if we can), so that we get tracebacks
+    on segfaults.
+    """
+    try:
+        import faulthandler
+        faulthandler.enable()
+        print('Faulthandler enabled')
+    except Exception:
+        print('Could not enable faulthandler')
+
+
+</t>
+<t tx="ekr.20181108111640.312">def _clear_our_modules():
+    """ Remove ourselves from sys.modules to force an import.
+    """
+    for key in list(sys.modules.keys()):
+        if key.startswith(PACKAGE_NAME) and 'testing' not in key:
+            del sys.modules[key]
+</t>
+<t tx="ekr.20181108111640.313">&lt;&lt; docstring &gt;&gt;
+__version__ = '0.6.2'
+
+import sys
+import logging
+
+logger = logging.getLogger(__name__)
+
+# Assert compatibility and redirect to legacy version on Python 2.7
+ok = True
+
+if sys.version_info[0] == 2:  # pragma: no cover
+    if sys.version_info &lt; (2, 7):
+        raise RuntimeError('PScript needs at least Python 2.7')
+    if type(b'') == type(''):  # noqa - will be str and unicode after conversion
+        sys.modules[__name__] = __import__(__name__ + '_legacy')
+        ok = False
+
+# NOTE: The code for the parser is quite long, especially if you want
+# to document it well. Therefore it is split in multiple modules, which
+# are simply numbered 0, 1, 2, etc. Here in the __init__, we define
+# which parser is *the* parser. This gives us the freedom to split the
+# parser in smaller pieces if we want.
+#
+# In the docstring of every parser module we maintain a brief user-guide
+# demonstrating the features defined in that module. In the docs these
+# docstrings are combined into one complete guide.
+
+# flake8: noqa
+
+if ok:
+        
+    from .parser0 import Parser0, JSError
+    from .parser1 import Parser1
+    from .parser2 import Parser2
+    from .parser3 import Parser3
+    from .base import *
+    
+    from .functions import py2js, evaljs, evalpy, JSString
+    from .functions import script2js, js_rename, create_js_module
+    from .stdlib import get_full_std_lib, get_all_std_names
+    from .stubs import RawJS, JSConstant, window, undefined
+
+
+del logging, sys, ok
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181108111640.314">@language rest
+@wrap
+"""
+The pscript module provides functionality for transpiling Python code
+to JavaScript.
+
+Quick intro
+-----------
+
+This is a brief intro for using PScript. For more details see the
+sections below.
+
+PScript is a tool to write JavaScript using (a subset) of the Python
+language. All relevant builtins, and the methods of list, dict and str
+are supported. Not supported are set, slicing with steps, ``yield`` and
+imports. Other than that, most Python code should work as expected ...
+mostly, see caveats below. If you try hard enough the JavaScript may
+shine through. As a rule of thumb, the code should behave as expected
+when correct, but error reporting may not be very Pythonic.
+
+The most important functions you need to know about are
+:func:`py2js &lt;pscript.py2js&gt;` and 
+:func:`evalpy &lt;pscript.evalpy&gt;`.
+In principal you do not need knowledge of JavaScript to write PScript
+code, though it does help in corner cases.
+
+
+Goals
+-----
+
+There is an increase in Python projects that target web technology to
+handle visualization and user interaction.
+PScript grew out of a desire to allow writing JavaScript callbacks in
+Python, to allow user-defined interaction to be flexible, fast, and
+stand-alone.
+
+This resulted in the following two main goals: 
+
+* To make writing JavaScript easier and less frustrating, by letting
+  people write it with the Python syntax and builtins, and fixing some
+  of JavaScripts quirks.
+* To allow JavaScript snippets to be defined naturally inside a Python
+  program.
+
+Code produced by PScript works standalone. Any (PScript-compatible)
+Python snippet can be converted to JS; you don't need another JS library
+to run it.
+
+PScript can also be used to develop standalone JavaScript (AMD) modules.
+
+
+PScript is just JavaScript
+--------------------------
+
+The purpose of projects like Skulpt or PyJS is to enable full Python
+support in the browser. This approach will always be plagued by a
+fundamental limitation: libraries that are not pure Python (like numpy)
+will not work.
+
+PScript takes a more modest approach; it is a tool that allows one to
+write JavaScript with a Python syntax. PScript is just JavaScript.
+
+This means that depending on what you want to achieve, you may still need
+to know a thing or two about how JavaScript works. Further, not all Python
+code can be converted (e.g. import is not supported), and
+lists and dicts are really just JavaScript arrays and objects, respectively.
+
+
+Pythonic
+--------
+
+PScript makes writing JS more "Pythonic". Apart from allowing Python syntax
+for loops, classes, etc, all relevant Python builtins are supported,
+as well as the methods of list, dict and str. E.g. you can use
+``print()``, ``range()``, ``L.append()``, ``D.update()``, etc.
+
+The empty list and dict evaluate to false (whereas in JS it's
+true), and ``isinstance()`` just works (whereas JS' ``typeof`` is
+broken). 
+
+Deep comparisons are supported (e.g. for ``==`` and ``in``), so you can
+compare two lists or dicts, or even a structure of nested
+lists/dicts. Lists can be combined with the plus operator, and lists
+and strings can be repeated with the multiply (star) operator. Class
+methods are bound functions.
+
+.. _pscript-caveats:
+
+Caveats
+-------
+
+PScript fixes some of JS's quirks, but it's still just JavaScript.
+Here's a list of things to keep an eye out for. This list is likely
+incomplete. We recommend familiarizing yourself with JavaScript if you
+plan to make heavy use of PScript.
+
+* JavasScript has a concept of ``null`` (i.e. ``None``), as well as
+  ``undefined``. Sometimes you may want to use ``if x is None or x is
+  undefined: ...``.
+* Accessing an attribute that does not exist will not raise an
+  AttributeError but yield ``undefined``. Though this may change.
+* Keys in a dictionary are implicitly converted to strings.
+* Magic functions on classes (e.g. for operator overloading) do not work.
+* Calling an object that starts with a capital letter is assumed to be
+  a class instantiation (using ``new``): PScript classes *must* start
+  with a capital letter, and any other callables must not.
+* A function can accept keyword arguments if it has a ``**kwargs`` parameter
+  or named arguments after ``*args``. Passing keywords to a function that does
+  not handle keyword arguments might result in confusing errors.
+* Divide by zero results in `inf` instead of raising ZeroDivisionError.
+
+
+PScript is valid Python
+------------------------
+
+Other than e.g. RapydScript, PScript is valid Python. This allows
+creating modules that are a mix of real Python and PScript. You can easily
+write code that runs correctly both as Python and PScript, and
+:func:`raw JavaScript &lt;pscript.RawJS&gt;` can
+be included where needed (e.g. for performance).
+
+PScript's compiler is written in Python. Perhaps PScript can
+at some point compile itself, so that it becomes possible to define
+PScript inside HTML documents.
+
+There are things you can do, which you cannot do in Python:
+
+
+Performance
+-----------
+
+Because PScript produces relatively bare JavaScript, it is pretty fast.
+Faster than CPython, and significantly faster than e.g. Brython.
+Check out ``examples/app/benchmark.py``.
+
+Nevertheless, the overhead to realize the more Pythonic behavior can
+have a negative impact on performance in tight loops (in comparison to
+writing the JS by hand). The recommended approach is to write
+performance critical code in pure JavaScript
+(using :func:`RawJS &lt;pscript.RawJS&gt;`) if necessary. 
+
+.. _pscript-support:
+
+Support
+-------
+
+This is an overview of the language features that PScript
+supports/lacks. 
+
+Not currently supported:
+
+* import (maybe we should translate an import to ``require()``?)
+* the ``set`` class (JS has no set, but we could create one?)
+* slicing with steps (JS does not support this)
+* Generators, i.e. ``yield`` (not widely supported in JS)
+
+Supported basics:
+
+* numbers, strings, lists, dicts (the latter become JS arrays and objects)
+* operations: binary, unary, boolean, power, integer division, ``in`` operator
+* comparisons (``==`` -&gt; ``==``, ``is`` -&gt; ``===``)
+* tuple packing and unpacking
+* basic string formatting
+* slicing with start end end (though not with step)
+* if-statements and single-line if-expressions
+* while-loops and for-loops supporting continue, break, and else-clauses
+* for-loops using ``range()``
+* for-loop over arrays
+* for-loop over dict/object using ``.keys()``, ``.values()`` and ``.items()``
+* function calls can have ``*args``
+* function defs can have default arguments and ``*args``
+* function calls/defs can use keyword arguments and ``**kwargs``, but
+  use with care (see caveats).
+* lambda expressions
+* list comprehensions
+* classes, with (single) inheritance, and the use of ``super()``
+* raising and catching exceptions, assertions
+* creation of "modules"
+* globals / nonlocal
+* The ``with`` statement (no equivalent in JS)
+* double underscore name mangling
+
+Supported Python conveniences:
+
+* use of ``self`` is translated to ``this``
+* ``print()`` becomes ``console.log()`` (also supports ``sep`` and ``end``)
+* ``isinstance()`` Just Works (for primitive types as well as
+  user-defined classes)
+* an empty list or dict evaluates to False as in Python.
+* all Python builtin functions that make sense in JS are supported:
+  isinstance, issubclass, callable, hasattr, getattr, setattr, delattr,
+  print, len, max, min, chr, ord, dict, list, tuple, range, pow, sum,
+  round, int, float, str, bool, abs, divmod, all, any, enumerate, zip,
+  reversed, sorted, filter, map.
+* all methods of list, dict and str are supported (except a few string
+  methods: encode, format_map, isprintable, maketrans).
+* the default return value of a function is ``None``/``null`` instead
+  of ``undefined``.
+* list concatenation using the plus operator, and list/str repeating
+  using the star operator.
+* deep comparisons.
+* class methods are bound functions (i.e. ``this`` is fixed to the
+  instance).
+* functions that are defined in another function (a.k.a closures) that do not
+  have self/this as a first argument, are bound the the same instance as the
+  function in which it is defined.
+
+
+Other functionality
+-------------------
+
+The PScript package provides a few other "utilities" to deal with JS code,
+such as renaming function/class definitions, and creating JS modules
+(AMD, UMD, etc.).
+
+"""
+
+</t>
+<t tx="ekr.20181108111640.32">class Ellipsis(Node):
+    """ Represents the ``...`` syntax for the Ellipsis singleton.
+    """
+    __slots__ = ()
+
+</t>
+<t tx="ekr.20181108111640.33">class NameConstant(Node):
+    """
+    Attributes:
+        value: the corresponding native Python object like True, False or None.
+    """
+    __slots__ = 'value',
+
+## Variables, attributes, indexing and slicing
+
+</t>
+<t tx="ekr.20181108111640.34">class Name(Node):
+    """
+    Attributes:
+        name: the string name of this variable.
+    """
+    __slots__ = 'name',
+
+</t>
+<t tx="ekr.20181108111640.35">class Starred(Node):
+    """ A starred variable name, e.g. ``*foo``. Note that this isn't
+    used to define a function with ``*args`` - FunctionDef nodes have
+    special fields for that.
+    
+    Attributes:
+        value_node: the value that is starred, typically a Name node.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.36">class Attribute(Node):
+    """ Attribute access, e.g. ``foo.bar``.
+    
+    Attributes:
+        value_node: The node to get/set an attribute of. Typically a Name node.
+        attr: a string with the name of the attribute.
+    """
+    __slots__ = 'value_node', 'attr'
+
+</t>
+<t tx="ekr.20181108111640.37">class Subscript(Node):
+    """ Subscript access, e.g. ``foo[3]``.
+    
+    Attributes:
+        value_node: The node to get/set a subscript of. Typically a Name node.
+        slice_node: An Index, Slice or ExtSlice node.
+    """
+    __slots__ = 'value_node', 'slice_node'
+
+</t>
+<t tx="ekr.20181108111640.38">class Index(Node):
+    """
+    Attributes:
+        value_node: Single index.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.39">class Slice(Node):
+    """
+    Attributes:
+        lower_node: start slice.
+        upper_node: end slice.
+        step_node: slice step.
+    """
+    __slots__ = 'lower_node', 'upper_node', 'step_node'
+
+</t>
+<t tx="ekr.20181108111640.4">class BasicParser(Parser2):
+    """ A parser without the Pythonic features for converting builtin
+    functions and common methods.
+    """
+    pass
+
+
+</t>
+<t tx="ekr.20181108111640.40">class ExtSlice(Node):
+    """
+    Attributes:
+        dim_nodes: list of Index and Slice nodes (of for each dimension).
+    """
+    __slots__ = 'dim_nodes',
+
+## Expressions
+
+</t>
+<t tx="ekr.20181108111640.41">class Expr(Node):
+    """ When an expression, such as a function call, appears as a
+    statement by itself (an expression statement), with its return value
+    not used or stored, it is wrapped in this container.
+    
+    Attributes:
+        value_node: holds one of the other nodes in this section, or a
+            literal, a Name, a Lambda, or a Yield or YieldFrom node.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.42">class UnaryOp(Node):
+    """ A unary operation (e.g. ``-x``, ``not x``).
+    
+    Attributes:
+        op: the operator (an enum from ``Node.OPS``).
+        right_node: the operand at the right of the operator.
+    """
+    __slots__ = 'op', 'right_node'
+
+</t>
+<t tx="ekr.20181108111640.43">class BinOp(Node):
+    """ A binary operation (e.g. ``a / b``, ``a + b``).
+    
+    Attributes:
+        op: the operator (an enum from ``Node.OPS``).
+        left_node: the node to the left of the operator.
+        right_node: the node to the right of the operator.
+    """
+    __slots__ = 'op', 'left_node', 'right_node'
+
+</t>
+<t tx="ekr.20181108111640.44">class BoolOp(Node):
+    """ A boolean operator (``and``, ``or``, but not ``not``).
+    
+    Attributes:
+        op: the operator (an enum from ``Node.OPS``).
+        value_nodes: a list of nodes. ``a``, ``b`` and ``c`` in 
+            ``a or b or c``.
+    """
+    __slots__ = 'op', 'value_nodes'
+
+</t>
+<t tx="ekr.20181108111640.45">class Compare(Node):
+    """ A comparison of two or more values. 
+    
+    Attributes:
+        op: the comparison operator (an enum from ``Node.COMP``).
+        left_node: the node to the left of the operator.
+        right_node: the node to the right of the operator.
+    """
+    __slots__ = 'op', 'left_node', 'right_node'
+
+</t>
+<t tx="ekr.20181108111640.46">class Call(Node):
+    """ A function call.
+    
+    Attributes:
+        func_node: Name, Attribute or SubScript node that represents
+            the function.
+        arg_nodes: list of nodes representing positional arguments.
+        kwarg_nodes: list of Keyword nodes representing keyword arguments.
+    
+    Note that an argument ``*x`` would be specified as a Starred node
+    in arg_nodes, and ``**y`` as a Keyword node with a name being ``None``.
+    """
+    __slots__ = ('func_node', 'arg_nodes', 'kwarg_nodes')
+
+</t>
+<t tx="ekr.20181108111640.47">class Keyword(Node):
+    """ Keyword argument used in a Call.
+    
+    Attributes:
+        name: the (string) name of the argument. Is None for ``**kwargs``.
+        value_node: the value of the arg. 
+    """
+    __slots__ = ('name', 'value_node')
+
+</t>
+<t tx="ekr.20181108111640.48">class IfExp(Node):
+    """ An expression such as ``a if b else c``.
+    
+    Attributes:
+        test_node: the ``b`` in the above.
+        body_node: the ``a`` in the above.
+        else_node: the ``c`` in the above.
+    """
+    __slots__ = 'test_node', 'body_node', 'else_node'
+
+</t>
+<t tx="ekr.20181108111640.49">class ListComp(Node):
+    """ List comprehension.
+    
+    Attributes:
+        element_node: the part being evaluated for each item.
+        comp_nodes: a list of Comprehension nodes.
+    """
+    __slots__ = 'element_node', 'comp_nodes'
+
+</t>
+<t tx="ekr.20181108111640.5">class Parser(Parser3):
+    """ Parser to convert Python to JavaScript.
+    
+    Instantiate this class with the Python code. Retrieve the JS code
+    using the dump() method.
+    
+    In a subclass, you can implement methods called "function_x" or
+    "method_x", which will then be called during parsing when a
+    function/method with name "x" is encountered. Several methods and
+    functions are already implemented in this way.
+    
+    While working on ast parsing, this resource is very helpful:
+    https://greentreesnakes.readthedocs.org
+    
+    Parameters:
+        code (str): the Python source code.
+        pysource (tuple): the filename and line number that contain the source.
+        indent (int): the base indentation level (default 0). One
+            indentation level means 4 spaces.
+        docstrings (bool): whether docstrings are included in JS
+            (default True).
+        inline_stdlib (bool): whether the used stdlib functions are inlined
+            (default True). Set to False if the stdlib is already loaded.
+    """
+    pass
+
+
+# Create stubs that mean something
+Infinity = float('inf')
+NaN = float('nan')
+
+</t>
+<t tx="ekr.20181108111640.50">class SetComp(Node):
+    """ Set comprehension. See ListComp.
+    """
+    __slots__ = 'element_node', 'comp_nodes'
+
+</t>
+<t tx="ekr.20181108111640.51">class GeneratorExp(Node):
+    """ Generor expression. See ListComp.
+    """
+    __slots__ = 'element_node', 'comp_nodes'
+
+</t>
+<t tx="ekr.20181108111640.52">class DictComp(Node):
+    """ Dict comprehension.
+    
+    Attributes:
+        key_node: the key of the item being evaluated.
+        value_node: the value of the item being evaluated.
+        comp_nodes: a list of Comprehension nodes.
+    """
+    __slots__ = 'key_node', 'value_node', 'comp_nodes'
+
+</t>
+<t tx="ekr.20181108111640.53">class Comprehension(Node):
+    """ Represents a single for-clause in a comprehension.
+    
+    Attributes:
+        target_node: reference to use for each element, typically a
+            Name or Tuple node.
+        iter_node: the object to iterate over.
+        if_nodes: a list of test expressions.
+    """
+    __slots__ = 'target_node', 'iter_node', 'if_nodes'
+
+
+## Statements
+
+</t>
+<t tx="ekr.20181108111640.54">class Assign(Node):
+    """ Assignment of a value to a variable.
+    
+    Attributes:
+        target_nodes: variables to assign to, Name or SubScript.
+        value_node: the object to assign.
+    """
+    __slots__ = 'target_nodes', 'value_node'
+
+</t>
+<t tx="ekr.20181108111640.55">class AugAssign(Node):
+    """ Augmented assignment, such as ``a += 1``.
+    
+    Attributes:
+        target_node: variable to assign to, Name or SubScript.
+        op: operator enum (e.g. ``Node.OPS.Add``)
+        value_node: the object to assign.
+    """ 
+    __slots__ = 'target_node', 'op', 'value_node'
+
+
+</t>
+<t tx="ekr.20181108111640.56">class Raise(Node):
+    """ Raising an exception.
+    
+    Attributes:
+        exc_node: the exception object to be raised, normally a Call
+            or Name, or None for a standalone raise.
+        cause_node: the optional part for y in raise x from y.
+    """
+    __slots__ = 'exc_node', 'cause_node'
+
+</t>
+<t tx="ekr.20181108111640.57">class Assert(Node):
+    """ An assertion.
+    
+    Attributes:
+        test_node: the condition to test.
+        msg_node: the failure message (commonly a Str node)
+    """
+    __slots__ = 'test_node', 'msg_node'
+
+</t>
+<t tx="ekr.20181108111640.58">class Delete(Node):
+    """ A del statement.
+    
+    Attributes:
+        target_nodes: the variables to delete, such as Name, Attribute
+            or Subscript nodes.
+    """
+    __slots__ = 'target_nodes',
+
+</t>
+<t tx="ekr.20181108111640.59">class Pass(Node):
+    """ Do nothing.
+    """
+    __slots__ = ()
+
+</t>
+<t tx="ekr.20181108111640.6">def this_is_js():
+    """ Function available in both JS and Py that returns whether the code is running
+    on Python or JavaScript.
+    """
+    return False
+</t>
+<t tx="ekr.20181108111640.60">class Import(Node):
+    """ An import statement.
+    
+    Attributes:
+        root: the name of the module to import from. None if this is
+            not a from-import.
+        names: list of (name, alias) tuples, where alias can be None.
+        level: an integer indicating depth of import. Zero means
+            absolute import.
+    """
+    __slots__ = 'root', 'names', 'level'
+
+## Control flow
+
+</t>
+<t tx="ekr.20181108111640.61">class If(Node):
+    """ An if-statement.
+    
+    Note that elif clauses don't have a special representation in the
+    AST, but rather appear as extra If nodes within the else section
+    of the previous one.
+    
+    Attributes:
+        test_node: the test, e.g. a Compare node.
+        body_nodes: the body of the if-statement.
+        else_nodes: the body of the else-clause of the if-statement.
+    """
+    __slots__ = 'test_node', 'body_nodes', 'else_nodes'
+
+</t>
+<t tx="ekr.20181108111640.62">class For(Node):
+    """ A for-loop.
+    
+    Attributes:
+        target_node: the variable(s) the loop assigns to.
+        iter_node: the object to iterate over.
+        body_nodes: the body of the for-loop.
+        else_nodes: the body of the else-clause of the for-loop.
+    """
+    __slots__ = 'target_node', 'iter_node', 'body_nodes', 'else_nodes'
+
+</t>
+<t tx="ekr.20181108111640.63">class While(Node):
+    """ A while-loop.
+    
+    Attributes:
+        test_node: the test to perform on each iteration.
+        body_nodes: the body of the for-loop.
+        else_nodes: the body of the else-clause of the for-loop.
+    """
+    __slots__ = 'test_node', 'body_nodes', 'else_nodes'
+
+</t>
+<t tx="ekr.20181108111640.64">class Break(Node):
+    """ Break from a loop.
+    """
+    __slots__ = ()
+
+</t>
+<t tx="ekr.20181108111640.65">class Continue(Node):
+    """ Continue with next iteration of a loop.
+    """
+    __slots__ = ()
+
+</t>
+<t tx="ekr.20181108111640.66">class Try(Node):
+    """ Try-block.
+    
+    Attributes:
+        body_nodes: the body of the try-block (i.e. the code to try).
+        handler_nodes: a list of ExceptHandler instances.
+        else_nodes: the body of the else-clause of the try-block.
+        finally_nodes: the body of the finally-clause of the try-block.
+    """
+    __slots__ = 'body_nodes', 'handler_nodes', 'else_nodes', 'finally_nodes'
+
+</t>
+<t tx="ekr.20181108111640.67">class ExceptHandler(Node):
+    """ Single except-clause.
+    
+    Attributes:
+        type_node: the type of exception to catch. Often a Name node
+            or None to catch all.
+        name: the string name of the exception object in case of ``as err``.
+            None otherwise.
+        body_nodes: the body of the except-clause.
+    """
+    __slots__ = 'type_node', 'name', 'body_nodes'
+
+</t>
+<t tx="ekr.20181108111640.68">class With(Node):
+    """ A with-block (i.e. a context manager).
+    
+    Attributes:
+        item_nodes: a list of WithItem nodes (i.e. context managers).
+        body_nodes: the body of the with-block.
+    """
+    __slots__ = 'item_nodes', 'body_nodes'
+
+</t>
+<t tx="ekr.20181108111640.69">class WithItem(Node):
+    """ A single context manager in a with block.
+    
+    Attributes:
+        expr_node: the expression for the context manager.
+        as_node: a Name, Tuple or List node representing the ``as foo`` part.
+    """
+    __slots__ = 'expr_node', 'as_node'
+
+## Function and class definitions
+
+</t>
+<t tx="ekr.20181108111640.7">"""
+Module that defines a common AST description, independent from Python
+version and implementation. Also provides a function ``parse()`` to
+generate this common AST by using the builtin ast module and converting
+the result. Supports CPython 2.7, CPython 3.2+, Pypy.
+
+https://github.com/almarklein/commonast
+"""
+
+# Notes:
+# Python 3.6 introduced ast.Constant, which seems to be added so that 3d
+# party code can use it, but ast.parse does not produce it afaik.
+
+from __future__ import print_function, absolute_import
+
+import sys
+import ast
+import json
+from base64 import encodestring as encodebytes, decodestring as decodebytes
+
+pyversion = sys.version_info
+NoneType = None.__class__
+
+if pyversion &gt;= (3, ):
+    basestring = str  # noqa
+
+
+# do some extra asserts when running tests, but not always, for speed
+docheck = 'pytest' in sys.modules
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181108111640.70">class FunctionDef(Node):
+    """ A function definition.
+    
+    Attributes:
+        name: the (string) name of the function.
+        decorator_nodes: the list of decorators to be applied, stored
+            outermost first (i.e. the first in the list will be applied
+            last).
+        annotation_node: the return annotation (Python 3 only).
+        arg_nodes: list of Args nodes representing positional arguments.
+            These *may* have a default value.
+        kwarg_nodes: list of Arg nodes representing keyword-only arguments.
+        args_node: an Arg node representing ``*args``.
+        kwargs_node: an Arg node representing ``**kwargs``.
+        body_nodes: the body of the function.
+    """
+    __slots__ = ('name', 'decorator_nodes', 'annotation_node',
+                 'arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
+                 'body_nodes')
+
+</t>
+<t tx="ekr.20181108111640.71">class Lambda(Node):
+    """ Anonymous function definition.
+    
+    Attributes:
+        arg_nodes: list of Args nodes representing positional arguments.
+        kwarg_nodes: list of Arg nodes representing keyword-only arguments.
+        args_node: an Arg node representing ``*args``.
+        kwargs_node: an Arg node representing ``**kwargs``.
+        body_node: the body of the function (a single node).
+    """
+    __slots__ = ('arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
+                 'body_node')
+
+</t>
+<t tx="ekr.20181108111640.72">class AsyncFunctionDef(Node):
+    """ Asynchronous function definition.
+    
+    Same as FunctionDef, but async.
+    """
+    __slots__ = ('name', 'decorator_nodes', 'annotation_node',
+                 'arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
+                 'body_nodes')
+
+</t>
+<t tx="ekr.20181108111640.73">class Arg(Node):
+    """ Function argument for a FunctionDef.
+    
+    Attributes:
+        name: the (string) name of the argument.
+        value_node: the default value of this argument. Can be None.
+        annotation_node: the annotation for this argument (Python3 only).
+    """
+    
+    __slots__ = ('name', 'value_node', 'annotation_node')
+
+</t>
+<t tx="ekr.20181108111640.74">class Return(Node):
+    """
+    Attributes:
+        value_node: the value to return.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.75">class Yield(Node):
+    """
+    Attributes:
+        value_node: the value to yield.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.76">class YieldFrom(Node):
+    """
+    Attributes:
+        value_node: the value to yield.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.77">class Await(Node):
+    """
+    Attributes:
+        value_node: the value to return.
+    """
+    __slots__ = 'value_node',
+
+</t>
+<t tx="ekr.20181108111640.78">class Global(Node):
+    """
+    Attributes:
+        names: a list of string names to declare global.
+    """
+    __slots__ = 'names',
+
+</t>
+<t tx="ekr.20181108111640.79">class Nonlocal(Node):
+    """
+    Attributes:
+        names: a list of string names to declare nonlocal.
+    """
+    __slots__ = 'names',
+
+</t>
+<t tx="ekr.20181108111640.80">class ClassDef(Node):
+    """ A class definition.
+    
+    Attributes:
+        name: a string for the class name.
+        decorator_nodes: the list of decorators to be applied, as in FunctionDef.
+        arg_nodes: list of nodes representing base classes.
+        kwarg_nodes: list of Keyword nodes representing keyword-only arguments.
+        body_nodes: the body of the class.
+    
+    Note that arg_nodes and kwarg_nodes are similar to those in the
+    Call node. An argument ``*x`` would be specified as a Starred node
+    in arg_nodes, and ``**y`` as a Keyword node with a name being
+    ``None``. For more information on keyword arguments see
+    https://www.python.org/dev/peps/pep-3115/.
+    """
+    __slots__ = ('name', 'decorator_nodes', 'arg_nodes', 'kwarg_nodes', 'body_nodes')
+
+## -- (end marker for doc generator)
+
+
+</t>
+<t tx="ekr.20181108111640.81">class NativeAstConverter:
+    """ Convert ast produced by Python's ast module to common ast.
+    """
+    
+    @others
+</t>
+<t tx="ekr.20181108111640.82">def __init__(self, code):
+    self._root = ast.parse(code)
+    self._lines =code.splitlines()
+    self._stack = []  # contains tuple elements: (list_obj, native_nodes)
+
+</t>
+<t tx="ekr.20181108111640.83">def _add_comments(self, container, lineno):
+    """ Add comment nodes from the last point until the given line number.
+    """
+    linenr1 = self._comment_pointer
+    linenr2 = lineno
+    self._comment_pointer = linenr2 + 1  # store for next time
+    
+    for i in range(linenr1, linenr2):
+        line = self._lines[i-1]  # lineno's start from 1
+        if line.lstrip().startswith('#'):
+            before, _, comment = line.partition('#')
+            node = Comment(comment)
+            node.lineno = i
+            node.col_offset = len(before)
+            container.append(node)
+
+</t>
+<t tx="ekr.20181108111640.84">def convert(self, comments=False):
+    assert not self._stack
+    self._comment_pointer = 1
+    
+    result = self._convert(self._root)
+    
+    while self._stack:
+        container, native_nodes = self._stack.pop(0)
+        for native_node in native_nodes:
+            node = self._convert(native_node)
+            if comments:
+                self._add_comments(container, node.lineno)
+            container.append(node)
+    
+    return result
+
+</t>
+<t tx="ekr.20181108111640.85">def _convert(self, n):
+    
+    # n is the native node produced by the ast module
+    if n is None:
+        return None  # but some node attributes can be None
+    assert isinstance(n, ast.AST)
+    
+    # Get converter function
+    type = n.__class__.__name__
+    try:
+        converter = getattr(self, '_convert_' + type)
+    except AttributeError:  # pragma: no cover
+        raise RuntimeError('Cannot convert %s nodes.' % type)
+    # Convert node
+    val = converter(n)
+    assert isinstance(val, Node)
+    # Set its position
+    val.lineno = getattr(n, 'lineno', 1)
+    val.col_offset = getattr(n, 'col_offset', 0)
+    return val
+
+</t>
+<t tx="ekr.20181108111640.86">def _convert_Module(self, n):
+    node = Module([])
+    # Add back the "docstring" that Python removed; this may actually be
+    # a code snippet and not a module.
+    self._stack.append((node.body_nodes, n.body))
+    return node
+
+## Literals
+
+</t>
+<t tx="ekr.20181108111640.87">def _convert_Num(self, n):
+    if pyversion &lt; (3, ) and str(n.n).startswith('-'):
+        # -4 is a unary sub on 4, dont forget complex numbers
+        return UnaryOp(Node.OPS.USub, Num(-n.n))
+    return Num(n.n)
+
+</t>
+<t tx="ekr.20181108111640.88">def _convert_Str(self, n):
+    # We check the string prefix here. We only really need it in Python 2,
+    # because u is not needed in py3, and b and r are resolved by the lexer,
+    # and f as well (resulting in  JoinedStr or  FormattedValue).
+    # Note that the col_offset of the node seems 1 off when the string is
+    # a key in a dict :/ (PScript issue #15)
+    if pyversion &lt; (3, ):
+        line = self._lines[n.lineno-1]
+        i = n.col_offset
+        i = i - 1 if (i &gt; 0 and line[i-1] in 'rufb"\'') else i
+        pre = ''
+        if line[i] not in '"\'':
+            pre += line[i]
+            if line[i + 1] not in '"\'':
+                pre += line[i + 1]
+        if 'b' in pre:
+            return Bytes(n.s)
+    return Str(n.s)
+
+</t>
+<t tx="ekr.20181108111640.89">def _convert_JoinedStr(self, n):
+    c = self._convert
+    return JoinedStr([c(x) for x in n.values])
+
+</t>
+<t tx="ekr.20181108111640.9">def parse(code, comments=False):
+    """ Parse Python code to produce a common AST tree.
+    
+    Parameters:
+        code (str): the Python code to parse
+        comments (bool): if True, will include Comment nodes. Default False.
+    """
+    converter = NativeAstConverter(code)
+    return converter.convert(comments)
+
+
+</t>
+<t tx="ekr.20181108111640.90">def _convert_FormattedValue(self, n):
+    conversion = '' if n.conversion &lt; 0 else chr(n.conversion)
+    return FormattedValue(self._convert(n.value), conversion,
+                          self._convert(n.format_spec))
+
+</t>
+<t tx="ekr.20181108111640.91">def _convert_Bytes(self, n):
+    return Bytes(n.s)
+
+</t>
+<t tx="ekr.20181108111640.92">def _convert_List(self, n):
+    c = self._convert
+    return List([c(x) for x in n.elts])
+
+</t>
+<t tx="ekr.20181108111640.93">def _convert_Tuple(self, n):
+    c = self._convert
+    return Tuple([c(x) for x in n.elts])
+
+</t>
+<t tx="ekr.20181108111640.94">def _convert_Set(self, n):
+    c = self._convert
+    return Set([c(x) for x in n.elts])
+
+</t>
+<t tx="ekr.20181108111640.95">def _convert_Dict(self, n):
+    c = self._convert
+    return Dict([c(x) for x in n.keys], [c(x) for x in n.values])
+
+</t>
+<t tx="ekr.20181108111640.96">def _convert_Ellipsis(self, n):
+    if pyversion &lt; (3, ):
+        return Index(Ellipsis())  # Ellipses must be wrapped in an index
+    return Ellipsis()
+
+</t>
+<t tx="ekr.20181108111640.97">def _convert_NameConstant(self, n):
+    return NameConstant(n.value)
+
+## Variables, attributes, indexing and slicing
+
+</t>
+<t tx="ekr.20181108111640.98">def _convert_Name(self, n):
+    if pyversion &lt; (3, 4):  # pragma: no cover
+        M = {'None': None, 'False': False, 'True': True}
+        if n.id in M:
+            return NameConstant(M[n.id])  # Python &lt; 3.4
+    if pyversion &lt; (3, ) and isinstance(n.ctx , ast.Param):
+        return Arg(n.id, None, None)
+    return Name(n.id)
+
+</t>
+<t tx="ekr.20181108111640.99">def _convert_Starred(self, n):
+    return Starred(self._convert(n.value))
+
+</t>
+<t tx="ekr.20181108210630.1">""" Convert Python to JavaScript.
+
+Parameters:
+    ob (str, module, function, class): The code, function or class
+        to transpile.
+    new_name (str, optional): If given, renames the function or class. This
+        can be used to simply change the name and/or add a prefix. It can
+        also be used to turn functions into methods using
+        "MyClass.prototype.foo". Double-underscore name mangling is taken
+        into account in the process.
+    parser_options: Additional options, see
+        :class:`Parser class &lt;pscript.Parser&gt;` for details.
+
+Returns:
+    str: The JavaScript code as a str object that
+    has a ``meta`` attribute with the following fields:
+    
+    * filename (str): the name of the file that defines the object.
+    * linenr (int): the starting linenr for the object definition.
+    * pycode (str): the Python code used to generate the JS.
+    * pyhash (str): a hash of the Python code.
+    * vars_defined (set): names defined in the toplevel namespace.
+    * vars_unknown (set): names used in the code but not defined in it.
+      This includes namespaces, e.g. "foo.some_function".
+    * vars_global (set): names explicitly declared global.
+    * std_functions (set): stdlib functions used in this code.
+    * std_method (set): stdlib methods used in this code.
+
+Notes:
+    The Python source code for a class is acquired by name.
+    Therefore one should avoid decorating classes in modules where
+    multiple classes with the same name are defined. This is a
+    consequence of classes not having a corresponding code object (in
+    contrast to functions).
+
+"""</t>
+<t tx="ekr.20181108211821.1"># Define builtin stuff for which we know that it returns a bool or int
+_bool_funcs = 'hasattr', 'all', 'any', 'op_contains', 'op_equals', 'truthy'
+_bool_meths = ('count', 'isalnum', 'isalpha', 'isidentifier', 'islower',
+               'isnumeric', 'isdigit', 'isdecimal', 'isspace', 'istitle',
+               'isupper', 'startswith')
+returning_bool = tuple([stdlib.FUNCTION_PREFIX + x + '(' for x in _bool_funcs] +
+                       [stdlib.METHOD_PREFIX + x + '.' for x in _bool_meths])
+
+
+# precompile regexp to help determine whether a string is an identifier
+isidentifier1 = re.compile(r'^\w+$', re.UNICODE)
+
+reserved_names = (
+    'abstract', 'instanceof', 'boolean', 'enum', 'switch', 'export',
+    'interface', 'synchronized', 'extends', 'let', 'case', 'throw',
+    'catch', 'final', 'native', 'throws', 'new', 'transient',
+    'const', 'package', 'function', 'private', 'typeof', 'debugger', 'goto',
+    'protected', 'var', 'default', 'public', 'void', 'delete', 'implements',
+    'volatile', 'do', 'static',
+    # Commented, because are disallowed in Python too.
+    # 'else', 'break', 'finally', 'class', 'for', 'try', 'continue', 'if',
+    # 'return', 'import', 'while', 'in', 'with',
+    # Commented for pragmatic reasons
+    # 'super', 'float', 'this', 'int', 'byte', 'long', 'char', 'short',
+    # 'double', 'null', 'true', 'false',
+    )
+</t>
+<t tx="ekr.20181108212134.1">RAW_DOC_WARNING = ('Function %s only has a docstring, which used to be '
+                   'intepreted as raw JS. Wrap a call to RawJS(...) around the '
+                   'docstring, or add "pass" to the function body to prevent '
+                   'this behavior.')
+
+JS_RESERVED_WORDS = set()
+
+
+# https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
+RESERVED = {'true', 'false', 'null',
+            # Reserved keywords as of ECMAScript 6
+            'break', 'case', 'catch', 'class', 'const', 'continue', 'debugger',
+            'default', 'delete', 'do', 'else', 'export', 'extends', 'finally',
+            'for', 'function', 'if', 'import', 'in', 'instanceof', 'new',
+            'return', 'super', 'switch', 'this', 'throw', 'try', 'typeof',
+            'var', 'void', 'while', 'with', 'yield',
+            # Future reserved keywords
+            'implements', 'interface', 'let', 'package', 'private',
+            'protected', 'public', 'static', 'enum',
+            'await',  # only in module code
+            }</t>
+<t tx="ekr.20181108212755.1">## ----- Functions
 
 ## Special functions: not really in builtins, but important enough to support
 
@@ -5006,7 +6339,8 @@ FUNCTIONS['op_mult'] = """function (a, b) { // nargs: 2
 }"""
 
 
-## ----- Methods
+</t>
+<t tx="ekr.20181108212823.1">## ----- Methods
 
 ## List only
 
@@ -5509,1361 +6843,6 @@ METHODS['zfill'] = """function (width) { // nargs: 1
     if (this.constructor !== String) return this.KEY.apply(this, arguments);
     return METHOD_PREFIXrjust(this, width, '0');
 }"""
-
-
-for key in METHODS:
-    METHODS[key] = re.subn(r'METHOD_PREFIX(.+?)\(',
-                           r'METHOD_PREFIX\1.call(', METHODS[key])[0]
-    METHODS[key] = METHODS[key].replace(
-        'KEY', key).replace(
-        'FUNCTION_PREFIX', FUNCTION_PREFIX).replace(
-        'METHOD_PREFIX', METHOD_PREFIX).replace(
-        ', )', ')')
-    
-for key in FUNCTIONS:
-    FUNCTIONS[key] = re.subn(r'METHOD_PREFIX(.+?)\(',
-                             r'METHOD_PREFIX\1.call(', FUNCTIONS[key])[0]
-    FUNCTIONS[key] = FUNCTIONS[key].replace(
-        'KEY', key).replace(
-        'FUNCTION_PREFIX', FUNCTION_PREFIX).replace(
-        'METHOD_PREFIX', METHOD_PREFIX)
-</t>
-<t tx="ekr.20181108111640.294">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.295">"""
-Module that can dynamically generate stubs.
-"""
-
-import sys
-
-
-</t>
-<t tx="ekr.20181108111640.296">class RawJS:
-    """ An object to wrap verbatim code to be included in the generated
-    JavaScript. This serves a number of purposes:
-    
-    * Using code in PScript that is not valid Python syntax, like regular
-      expressions or the jQuery object ``$``.
-    * Write high performance code that avoids Pythonic features like operator
-      overloading.
-    * In Flexx's module system it can be used to create a stub variable in
-      Python that *does* have a value in JS. This value can imported in other
-      modules, leading to a shared value also in JS.
-    
-    PScript does not verify the syntax of the code, so write carefully!
-    To allow the features in the 3d point, this object has a magic touch:
-    the ``__module__`` attribute of an instance refers to the module in which it
-    was instantiated, and if it's a global, its defining name can be obtained.
-    
-    Example:
-    
-    .. code-block:: py
-        
-        # Syntax not usable in Py
-        myre = RawJS('/ab+c/')
-        
-        # Code that should only execute on JS
-        foo = RawJS('require("some.module")')
-        
-        # Performance
-        def bar(n):
-            res = []
-            RawJS('''
-                for (var i=0; i&lt;n; i++) {
-                    if (is_ok_num(i)) {
-                        res.push(i);
-                    }
-                }
-            ''')
-    
-    """
-    
-    @others
-</t>
-<t tx="ekr.20181108111640.297">def __init__(self, code, _resolve_defining_module=True):
-    if not isinstance(code, str):
-        raise TypeError('RawJS requires str input.')
-    self._lines = self._str2lines(code)
-    
-    # Get the globals of the module in which this instance is defined, so
-    # that we can set __module__ and later obtain the name by which this 
-    # instance is known in that module. We use a trick here to get access
-    # to the stack frame while avoiding sys._getframe().
-    try:
-        raise Exception()
-    except Exception as err:
-        tb = getattr(err, '__traceback__', None)
-        if tb is None:  # Legacy Python 2.x
-            import sys
-            _, _, tb = sys.exc_info()
-        self._globals = tb.tb_frame.f_back.f_globals
-        del tb
-    self.__module__ = self._globals['__name__']
-    self._real_name = None
-
-</t>
-<t tx="ekr.20181108111640.298">def __repr__(self):
-    if len(self._lines) == 1 and len(self._lines[0]) &lt; 60:
-        return '&lt;%s "%s"&gt;' % (self.__class__.__name__, self.get_code(0))
-    else:
-        return '&lt;%s with %i lines&gt;' % (self.__class__.__name__, len(self._lines))
-
-</t>
-<t tx="ekr.20181108111640.299">def __str__(self):
-    return self.get_code(0)
-
-</t>
-<t tx="ekr.20181108111640.3">from .parser2 import Parser2
-from .parser3 import Parser3
-
-
-</t>
-<t tx="ekr.20181108111640.30">class Set(Node):
-    """
-    Attributes:
-        element_nodes: the items in the set.
-    """
-    __slots__ = 'element_nodes',
-
-</t>
-<t tx="ekr.20181108111640.300">@classmethod
-def _str2lines(cls, text):
-    """ Classmethod to split a text in lines, dedenting each line.
-    The first line's indentation will assume the minimal
-    indentation.
-    """
-    lines = text.replace('\r', '').split('\n')
-    lines[0] = lines[0].strip()  # firts line is always detented
-    if len(lines) &gt; 1:
-        # Get minimal indentation
-        min_indent = 99999
-        for line in lines[1:]:
-            if line.strip():  # don't count empty lines
-                min_indent = min(min_indent, len(line) - len(line.lstrip()))
-        # Remove indentation
-        for i in range(1, len(lines)):
-            lines[i] = lines[i][min_indent:].rstrip()
-    # Remove empty line only at beginning
-    if not lines[0]:
-        lines.pop(0)
-    return lines
-
-</t>
-<t tx="ekr.20181108111640.301">def get_defined_name(self, suggestion=None):
-    """ Get the name by which this object is known in the module in which
-    it is defined. Only works if it is a global. Returns '' otherwise.
-    If a suggestion is given and it is the correct name, this function
-    performs faster. The resulting name is cached internally.
-    """
-    if self._real_name is None:
-        self._real_name = ''  # could be defined not in the globals
-        if suggestion and self._globals.get(suggestion, None) is self:
-            self._real_name = suggestion
-        else:
-            for name, val in self._globals.items():
-                if val is self:
-                    self._real_name = name
-                    break
-    return self._real_name
-
-</t>
-<t tx="ekr.20181108111640.302">def get_code(self, indent=0):
-    """ Get the code with the given indentation.
-    """
-    indent = indent * ' '
-    return '\n'.join([indent + line for line in self._lines])
-
-
-</t>
-<t tx="ekr.20181108111640.303">class JSConstant:
-    """ Class to represent variables that are used in JS, and are considered
-    global or otherwise available in a way that Python cannot know.
-    """
-    
-    @others
-</t>
-<t tx="ekr.20181108111640.304">def __init__(self, name='jsconstant'):
-    self._name = name
-
-</t>
-<t tx="ekr.20181108111640.305">def __repr__(self):  # pragma: no cover
-    return '&lt;%s %s&gt;' % (self.__class__.__name__, self._name)
-
-
-</t>
-<t tx="ekr.20181108111640.306">class Stubs:
-    
-    __name__ = __name__
-    __file__ = __file__
-    JSConstant = JSConstant
-    RawJS = RawJS
-    
-    @others
-sys.modules[__name__] = Stubs()
-</t>
-<t tx="ekr.20181108111640.307">def __getattr__(self, name):
-    if name in ('JSConstant', 'RawJS'):
-        return getattr(self, name)
-    else:
-        return self.JSConstant(name)
-
-
-\\-4.# Seems hacky, but is supported: http://stackoverflow.com/a/7668273/2271927
-</t>
-<t tx="ekr.20181108111640.308">@path C:/Anaconda3/Lib/site-packages/pscript/
-# -*- coding: utf-8 -*-
-# Copyright (c) 2016, Almar Klein
-# Distributed under the (new) BSD License.
-
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.309">"""
-Functionality used for testing, based on pytest. This module is designed
-to just work, without modification, in most projects.
-
-Write your tests like this:
-
-    from yourproject.xxx.testing import run_tests_if_main, raises, skipif
-    ...
-    run_tests_if_main()
-
-Then you can run the test file as a script, which will run all tests
-and report coverage. Magic!
-"""
-
-
-from __future__ import absolute_import, print_function, division
-
-import os
-import sys
-import inspect
-
-import pytest
-
-
-PACKAGE_NAME = __name__.split('.')[0]
-
-# Get project root dir
-THIS_DIR = os.path.abspath(os.path.dirname(__file__))
-ROOT_DIR = THIS_DIR
-for i in range(9):
-    ROOT_DIR = os.path.dirname(ROOT_DIR)
-    if os.path.basename(ROOT_DIR) == PACKAGE_NAME:
-        ROOT_DIR = os.path.dirname(ROOT_DIR)
-        break
-else:
-    print('testing.py could not find project root dir, '
-          'using testing.py directory instead.')
-    ROOT_DIR = THIS_DIR
-
-
-# Inject some function names so they can be obtained with one import
-raises = pytest.raises
-skipif = pytest.mark.skipif
-skip = pytest.skip
-
-
-</t>
-<t tx="ekr.20181108111640.31">class Dict(Node):
-    """
-    Attributes:
-        key_nodes: the keys of the dict.
-        value_nodes: the corresponding values.
-    """
-    __slots__ = 'key_nodes', 'value_nodes'
-
-</t>
-<t tx="ekr.20181108111640.310">def run_tests_if_main(show_coverage=False):
-    """ Run tests in a given file if it is run as a script
-    
-    Coverage is reported for running this single test. Set show_coverage to
-    launch the report in the web browser.
-    """
-    local_vars = inspect.currentframe().f_back.f_locals
-    if not local_vars.get('__name__', '') == '__main__':
-        return
-    # we are in a "__main__"
-    os.chdir(ROOT_DIR)
-    fname = str(local_vars['__file__'])
-    _clear_our_modules()
-    _enable_faulthandler()
-    pytest.main(['-v', '-x', '--color=yes', '--cov', PACKAGE_NAME,
-                 '--cov-config', '.coveragerc', '--cov-report', 'html', fname])
-    if show_coverage:
-        import webbrowser
-        fname = os.path.join(ROOT_DIR, 'htmlcov', 'index.html')
-        webbrowser.open_new_tab(fname)
-
-
-</t>
-<t tx="ekr.20181108111640.311">def _enable_faulthandler():
-    """ Enable faulthandler (if we can), so that we get tracebacks
-    on segfaults.
-    """
-    try:
-        import faulthandler
-        faulthandler.enable()
-        print('Faulthandler enabled')
-    except Exception:
-        print('Could not enable faulthandler')
-
-
-</t>
-<t tx="ekr.20181108111640.312">def _clear_our_modules():
-    """ Remove ourselves from sys.modules to force an import.
-    """
-    for key in list(sys.modules.keys()):
-        if key.startswith(PACKAGE_NAME) and 'testing' not in key:
-            del sys.modules[key]
-</t>
-<t tx="ekr.20181108111640.313">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-if sys.version_info[0] == 2:  # pragma: no cover
-    if sys.version_info &lt; (2, 7):
-        raise RuntimeError('PScript needs at least Python 2.7')
-    if type(b'') == type(''):  # noqa - will be str and unicode after conversion
-        sys.modules[__name__] = __import__(__name__ + '_legacy')
-        ok = False
-
-# NOTE: The code for the parser is quite long, especially if you want
-# to document it well. Therefore it is split in multiple modules, which
-# are simply numbered 0, 1, 2, etc. Here in the __init__, we define
-# which parser is *the* parser. This gives us the freedom to split the
-# parser in smaller pieces if we want.
-#
-# In the docstring of every parser module we maintain a brief user-guide
-# demonstrating the features defined in that module. In the docs these
-# docstrings are combined into one complete guide.
-
-# flake8: noqa
-
-if ok:
-        
-    from .parser0 import Parser0, JSError
-    from .parser1 import Parser1
-    from .parser2 import Parser2
-    from .parser3 import Parser3
-    from .base import *
-    
-    from .functions import py2js, evaljs, evalpy, JSString
-    from .functions import script2js, js_rename, create_js_module
-    from .stdlib import get_full_std_lib, get_all_std_names
-    from .stubs import RawJS, JSConstant, window, undefined
-
-
-del logging, sys, ok
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.314">"""
-The pscript module provides functionality for transpiling Python code
-to JavaScript.
-
-Quick intro
------------
-
-This is a brief intro for using PScript. For more details see the
-sections below.
-
-PScript is a tool to write JavaScript using (a subset) of the Python
-language. All relevant builtins, and the methods of list, dict and str
-are supported. Not supported are set, slicing with steps, ``yield`` and
-imports. Other than that, most Python code should work as expected ...
-mostly, see caveats below. If you try hard enough the JavaScript may
-shine through. As a rule of thumb, the code should behave as expected
-when correct, but error reporting may not be very Pythonic.
-
-The most important functions you need to know about are
-:func:`py2js &lt;pscript.py2js&gt;` and 
-:func:`evalpy &lt;pscript.evalpy&gt;`.
-In principal you do not need knowledge of JavaScript to write PScript
-code, though it does help in corner cases.
-
-
-Goals
------
-
-There is an increase in Python projects that target web technology to
-handle visualization and user interaction.
-PScript grew out of a desire to allow writing JavaScript callbacks in
-Python, to allow user-defined interaction to be flexible, fast, and
-stand-alone.
-
-This resulted in the following two main goals: 
-
-* To make writing JavaScript easier and less frustrating, by letting
-  people write it with the Python syntax and builtins, and fixing some
-  of JavaScripts quirks.
-* To allow JavaScript snippets to be defined naturally inside a Python
-  program.
-
-Code produced by PScript works standalone. Any (PScript-compatible)
-Python snippet can be converted to JS; you don't need another JS library
-to run it.
-
-PScript can also be used to develop standalone JavaScript (AMD) modules.
-
-
-PScript is just JavaScript
---------------------------
-
-The purpose of projects like Skulpt or PyJS is to enable full Python
-support in the browser. This approach will always be plagued by a
-fundamental limitation: libraries that are not pure Python (like numpy)
-will not work.
-
-PScript takes a more modest approach; it is a tool that allows one to
-write JavaScript with a Python syntax. PScript is just JavaScript.
-
-This means that depending on what you want to achieve, you may still need
-to know a thing or two about how JavaScript works. Further, not all Python
-code can be converted (e.g. import is not supported), and
-lists and dicts are really just JavaScript arrays and objects, respectively.
-
-
-Pythonic
---------
-
-PScript makes writing JS more "Pythonic". Apart from allowing Python syntax
-for loops, classes, etc, all relevant Python builtins are supported,
-as well as the methods of list, dict and str. E.g. you can use
-``print()``, ``range()``, ``L.append()``, ``D.update()``, etc.
-
-The empty list and dict evaluate to false (whereas in JS it's
-true), and ``isinstance()`` just works (whereas JS' ``typeof`` is
-broken). 
-
-Deep comparisons are supported (e.g. for ``==`` and ``in``), so you can
-compare two lists or dicts, or even a structure of nested
-lists/dicts. Lists can be combined with the plus operator, and lists
-and strings can be repeated with the multiply (star) operator. Class
-methods are bound functions.
-
-.. _pscript-caveats:
-
-Caveats
--------
-
-PScript fixes some of JS's quirks, but it's still just JavaScript.
-Here's a list of things to keep an eye out for. This list is likely
-incomplete. We recommend familiarizing yourself with JavaScript if you
-plan to make heavy use of PScript.
-
-* JavasScript has a concept of ``null`` (i.e. ``None``), as well as
-  ``undefined``. Sometimes you may want to use ``if x is None or x is
-  undefined: ...``.
-* Accessing an attribute that does not exist will not raise an
-  AttributeError but yield ``undefined``. Though this may change.
-* Keys in a dictionary are implicitly converted to strings.
-* Magic functions on classes (e.g. for operator overloading) do not work.
-* Calling an object that starts with a capital letter is assumed to be
-  a class instantiation (using ``new``): PScript classes *must* start
-  with a capital letter, and any other callables must not.
-* A function can accept keyword arguments if it has a ``**kwargs`` parameter
-  or named arguments after ``*args``. Passing keywords to a function that does
-  not handle keyword arguments might result in confusing errors.
-* Divide by zero results in `inf` instead of raising ZeroDivisionError.
-
-
-PScript is valid Python
-------------------------
-
-Other than e.g. RapydScript, PScript is valid Python. This allows
-creating modules that are a mix of real Python and PScript. You can easily
-write code that runs correctly both as Python and PScript, and
-:func:`raw JavaScript &lt;pscript.RawJS&gt;` can
-be included where needed (e.g. for performance).
-
-PScript's compiler is written in Python. Perhaps PScript can
-at some point compile itself, so that it becomes possible to define
-PScript inside HTML documents.
-
-There are things you can do, which you cannot do in Python:
-
-
-Performance
------------
-
-Because PScript produces relatively bare JavaScript, it is pretty fast.
-Faster than CPython, and significantly faster than e.g. Brython.
-Check out ``examples/app/benchmark.py``.
-
-Nevertheless, the overhead to realize the more Pythonic behavior can
-have a negative impact on performance in tight loops (in comparison to
-writing the JS by hand). The recommended approach is to write
-performance critical code in pure JavaScript
-(using :func:`RawJS &lt;pscript.RawJS&gt;`) if necessary. 
-
-.. _pscript-support:
-
-Support
--------
-
-This is an overview of the language features that PScript
-supports/lacks. 
-
-Not currently supported:
-
-* import (maybe we should translate an import to ``require()``?)
-* the ``set`` class (JS has no set, but we could create one?)
-* slicing with steps (JS does not support this)
-* Generators, i.e. ``yield`` (not widely supported in JS)
-
-Supported basics:
-
-* numbers, strings, lists, dicts (the latter become JS arrays and objects)
-* operations: binary, unary, boolean, power, integer division, ``in`` operator
-* comparisons (``==`` -&gt; ``==``, ``is`` -&gt; ``===``)
-* tuple packing and unpacking
-* basic string formatting
-* slicing with start end end (though not with step)
-* if-statements and single-line if-expressions
-* while-loops and for-loops supporting continue, break, and else-clauses
-* for-loops using ``range()``
-* for-loop over arrays
-* for-loop over dict/object using ``.keys()``, ``.values()`` and ``.items()``
-* function calls can have ``*args``
-* function defs can have default arguments and ``*args``
-* function calls/defs can use keyword arguments and ``**kwargs``, but
-  use with care (see caveats).
-* lambda expressions
-* list comprehensions
-* classes, with (single) inheritance, and the use of ``super()``
-* raising and catching exceptions, assertions
-* creation of "modules"
-* globals / nonlocal
-* The ``with`` statement (no equivalent in JS)
-* double underscore name mangling
-
-Supported Python conveniences:
-
-* use of ``self`` is translated to ``this``
-* ``print()`` becomes ``console.log()`` (also supports ``sep`` and ``end``)
-* ``isinstance()`` Just Works (for primitive types as well as
-  user-defined classes)
-* an empty list or dict evaluates to False as in Python.
-* all Python builtin functions that make sense in JS are supported:
-  isinstance, issubclass, callable, hasattr, getattr, setattr, delattr,
-  print, len, max, min, chr, ord, dict, list, tuple, range, pow, sum,
-  round, int, float, str, bool, abs, divmod, all, any, enumerate, zip,
-  reversed, sorted, filter, map.
-* all methods of list, dict and str are supported (except a few string
-  methods: encode, format_map, isprintable, maketrans).
-* the default return value of a function is ``None``/``null`` instead
-  of ``undefined``.
-* list concatenation using the plus operator, and list/str repeating
-  using the star operator.
-* deep comparisons.
-* class methods are bound functions (i.e. ``this`` is fixed to the
-  instance).
-* functions that are defined in another function (a.k.a closures) that do not
-  have self/this as a first argument, are bound the the same instance as the
-  function in which it is defined.
-
-
-Other functionality
--------------------
-
-The PScript package provides a few other "utilities" to deal with JS code,
-such as renaming function/class definitions, and creating JS modules
-(AMD, UMD, etc.).
-
-"""
-
-__version__ = '0.6.2'
-
-import sys
-import logging
-
-logger = logging.getLogger(__name__)
-
-# Assert compatibility and redirect to legacy version on Python 2.7
-ok = True
-</t>
-<t tx="ekr.20181108111640.32">class Ellipsis(Node):
-    """ Represents the ``...`` syntax for the Ellipsis singleton.
-    """
-    __slots__ = ()
-
-</t>
-<t tx="ekr.20181108111640.33">class NameConstant(Node):
-    """
-    Attributes:
-        value: the corresponding native Python object like True, False or None.
-    """
-    __slots__ = 'value',
-
-## Variables, attributes, indexing and slicing
-
-</t>
-<t tx="ekr.20181108111640.34">class Name(Node):
-    """
-    Attributes:
-        name: the string name of this variable.
-    """
-    __slots__ = 'name',
-
-</t>
-<t tx="ekr.20181108111640.35">class Starred(Node):
-    """ A starred variable name, e.g. ``*foo``. Note that this isn't
-    used to define a function with ``*args`` - FunctionDef nodes have
-    special fields for that.
-    
-    Attributes:
-        value_node: the value that is starred, typically a Name node.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.36">class Attribute(Node):
-    """ Attribute access, e.g. ``foo.bar``.
-    
-    Attributes:
-        value_node: The node to get/set an attribute of. Typically a Name node.
-        attr: a string with the name of the attribute.
-    """
-    __slots__ = 'value_node', 'attr'
-
-</t>
-<t tx="ekr.20181108111640.37">class Subscript(Node):
-    """ Subscript access, e.g. ``foo[3]``.
-    
-    Attributes:
-        value_node: The node to get/set a subscript of. Typically a Name node.
-        slice_node: An Index, Slice or ExtSlice node.
-    """
-    __slots__ = 'value_node', 'slice_node'
-
-</t>
-<t tx="ekr.20181108111640.38">class Index(Node):
-    """
-    Attributes:
-        value_node: Single index.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.39">class Slice(Node):
-    """
-    Attributes:
-        lower_node: start slice.
-        upper_node: end slice.
-        step_node: slice step.
-    """
-    __slots__ = 'lower_node', 'upper_node', 'step_node'
-
-</t>
-<t tx="ekr.20181108111640.4">class BasicParser(Parser2):
-    """ A parser without the Pythonic features for converting builtin
-    functions and common methods.
-    """
-    pass
-
-
-</t>
-<t tx="ekr.20181108111640.40">class ExtSlice(Node):
-    """
-    Attributes:
-        dim_nodes: list of Index and Slice nodes (of for each dimension).
-    """
-    __slots__ = 'dim_nodes',
-
-## Expressions
-
-</t>
-<t tx="ekr.20181108111640.41">class Expr(Node):
-    """ When an expression, such as a function call, appears as a
-    statement by itself (an expression statement), with its return value
-    not used or stored, it is wrapped in this container.
-    
-    Attributes:
-        value_node: holds one of the other nodes in this section, or a
-            literal, a Name, a Lambda, or a Yield or YieldFrom node.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.42">class UnaryOp(Node):
-    """ A unary operation (e.g. ``-x``, ``not x``).
-    
-    Attributes:
-        op: the operator (an enum from ``Node.OPS``).
-        right_node: the operand at the right of the operator.
-    """
-    __slots__ = 'op', 'right_node'
-
-</t>
-<t tx="ekr.20181108111640.43">class BinOp(Node):
-    """ A binary operation (e.g. ``a / b``, ``a + b``).
-    
-    Attributes:
-        op: the operator (an enum from ``Node.OPS``).
-        left_node: the node to the left of the operator.
-        right_node: the node to the right of the operator.
-    """
-    __slots__ = 'op', 'left_node', 'right_node'
-
-</t>
-<t tx="ekr.20181108111640.44">class BoolOp(Node):
-    """ A boolean operator (``and``, ``or``, but not ``not``).
-    
-    Attributes:
-        op: the operator (an enum from ``Node.OPS``).
-        value_nodes: a list of nodes. ``a``, ``b`` and ``c`` in 
-            ``a or b or c``.
-    """
-    __slots__ = 'op', 'value_nodes'
-
-</t>
-<t tx="ekr.20181108111640.45">class Compare(Node):
-    """ A comparison of two or more values. 
-    
-    Attributes:
-        op: the comparison operator (an enum from ``Node.COMP``).
-        left_node: the node to the left of the operator.
-        right_node: the node to the right of the operator.
-    """
-    __slots__ = 'op', 'left_node', 'right_node'
-
-</t>
-<t tx="ekr.20181108111640.46">class Call(Node):
-    """ A function call.
-    
-    Attributes:
-        func_node: Name, Attribute or SubScript node that represents
-            the function.
-        arg_nodes: list of nodes representing positional arguments.
-        kwarg_nodes: list of Keyword nodes representing keyword arguments.
-    
-    Note that an argument ``*x`` would be specified as a Starred node
-    in arg_nodes, and ``**y`` as a Keyword node with a name being ``None``.
-    """
-    __slots__ = ('func_node', 'arg_nodes', 'kwarg_nodes')
-
-</t>
-<t tx="ekr.20181108111640.47">class Keyword(Node):
-    """ Keyword argument used in a Call.
-    
-    Attributes:
-        name: the (string) name of the argument. Is None for ``**kwargs``.
-        value_node: the value of the arg. 
-    """
-    __slots__ = ('name', 'value_node')
-
-</t>
-<t tx="ekr.20181108111640.48">class IfExp(Node):
-    """ An expression such as ``a if b else c``.
-    
-    Attributes:
-        test_node: the ``b`` in the above.
-        body_node: the ``a`` in the above.
-        else_node: the ``c`` in the above.
-    """
-    __slots__ = 'test_node', 'body_node', 'else_node'
-
-</t>
-<t tx="ekr.20181108111640.49">class ListComp(Node):
-    """ List comprehension.
-    
-    Attributes:
-        element_node: the part being evaluated for each item.
-        comp_nodes: a list of Comprehension nodes.
-    """
-    __slots__ = 'element_node', 'comp_nodes'
-
-</t>
-<t tx="ekr.20181108111640.5">class Parser(Parser3):
-    """ Parser to convert Python to JavaScript.
-    
-    Instantiate this class with the Python code. Retrieve the JS code
-    using the dump() method.
-    
-    In a subclass, you can implement methods called "function_x" or
-    "method_x", which will then be called during parsing when a
-    function/method with name "x" is encountered. Several methods and
-    functions are already implemented in this way.
-    
-    While working on ast parsing, this resource is very helpful:
-    https://greentreesnakes.readthedocs.org
-    
-    Parameters:
-        code (str): the Python source code.
-        pysource (tuple): the filename and line number that contain the source.
-        indent (int): the base indentation level (default 0). One
-            indentation level means 4 spaces.
-        docstrings (bool): whether docstrings are included in JS
-            (default True).
-        inline_stdlib (bool): whether the used stdlib functions are inlined
-            (default True). Set to False if the stdlib is already loaded.
-    """
-    pass
-
-
-# Create stubs that mean something
-Infinity = float('inf')
-NaN = float('nan')
-
-</t>
-<t tx="ekr.20181108111640.50">class SetComp(Node):
-    """ Set comprehension. See ListComp.
-    """
-    __slots__ = 'element_node', 'comp_nodes'
-
-</t>
-<t tx="ekr.20181108111640.51">class GeneratorExp(Node):
-    """ Generor expression. See ListComp.
-    """
-    __slots__ = 'element_node', 'comp_nodes'
-
-</t>
-<t tx="ekr.20181108111640.52">class DictComp(Node):
-    """ Dict comprehension.
-    
-    Attributes:
-        key_node: the key of the item being evaluated.
-        value_node: the value of the item being evaluated.
-        comp_nodes: a list of Comprehension nodes.
-    """
-    __slots__ = 'key_node', 'value_node', 'comp_nodes'
-
-</t>
-<t tx="ekr.20181108111640.53">class Comprehension(Node):
-    """ Represents a single for-clause in a comprehension.
-    
-    Attributes:
-        target_node: reference to use for each element, typically a
-            Name or Tuple node.
-        iter_node: the object to iterate over.
-        if_nodes: a list of test expressions.
-    """
-    __slots__ = 'target_node', 'iter_node', 'if_nodes'
-
-
-## Statements
-
-</t>
-<t tx="ekr.20181108111640.54">class Assign(Node):
-    """ Assignment of a value to a variable.
-    
-    Attributes:
-        target_nodes: variables to assign to, Name or SubScript.
-        value_node: the object to assign.
-    """
-    __slots__ = 'target_nodes', 'value_node'
-
-</t>
-<t tx="ekr.20181108111640.55">class AugAssign(Node):
-    """ Augmented assignment, such as ``a += 1``.
-    
-    Attributes:
-        target_node: variable to assign to, Name or SubScript.
-        op: operator enum (e.g. ``Node.OPS.Add``)
-        value_node: the object to assign.
-    """ 
-    __slots__ = 'target_node', 'op', 'value_node'
-
-
-</t>
-<t tx="ekr.20181108111640.56">class Raise(Node):
-    """ Raising an exception.
-    
-    Attributes:
-        exc_node: the exception object to be raised, normally a Call
-            or Name, or None for a standalone raise.
-        cause_node: the optional part for y in raise x from y.
-    """
-    __slots__ = 'exc_node', 'cause_node'
-
-</t>
-<t tx="ekr.20181108111640.57">class Assert(Node):
-    """ An assertion.
-    
-    Attributes:
-        test_node: the condition to test.
-        msg_node: the failure message (commonly a Str node)
-    """
-    __slots__ = 'test_node', 'msg_node'
-
-</t>
-<t tx="ekr.20181108111640.58">class Delete(Node):
-    """ A del statement.
-    
-    Attributes:
-        target_nodes: the variables to delete, such as Name, Attribute
-            or Subscript nodes.
-    """
-    __slots__ = 'target_nodes',
-
-</t>
-<t tx="ekr.20181108111640.59">class Pass(Node):
-    """ Do nothing.
-    """
-    __slots__ = ()
-
-</t>
-<t tx="ekr.20181108111640.6">def this_is_js():
-    """ Function available in both JS and Py that returns whether the code is running
-    on Python or JavaScript.
-    """
-    return False
-</t>
-<t tx="ekr.20181108111640.60">class Import(Node):
-    """ An import statement.
-    
-    Attributes:
-        root: the name of the module to import from. None if this is
-            not a from-import.
-        names: list of (name, alias) tuples, where alias can be None.
-        level: an integer indicating depth of import. Zero means
-            absolute import.
-    """
-    __slots__ = 'root', 'names', 'level'
-
-## Control flow
-
-</t>
-<t tx="ekr.20181108111640.61">class If(Node):
-    """ An if-statement.
-    
-    Note that elif clauses don't have a special representation in the
-    AST, but rather appear as extra If nodes within the else section
-    of the previous one.
-    
-    Attributes:
-        test_node: the test, e.g. a Compare node.
-        body_nodes: the body of the if-statement.
-        else_nodes: the body of the else-clause of the if-statement.
-    """
-    __slots__ = 'test_node', 'body_nodes', 'else_nodes'
-
-</t>
-<t tx="ekr.20181108111640.62">class For(Node):
-    """ A for-loop.
-    
-    Attributes:
-        target_node: the variable(s) the loop assigns to.
-        iter_node: the object to iterate over.
-        body_nodes: the body of the for-loop.
-        else_nodes: the body of the else-clause of the for-loop.
-    """
-    __slots__ = 'target_node', 'iter_node', 'body_nodes', 'else_nodes'
-
-</t>
-<t tx="ekr.20181108111640.63">class While(Node):
-    """ A while-loop.
-    
-    Attributes:
-        test_node: the test to perform on each iteration.
-        body_nodes: the body of the for-loop.
-        else_nodes: the body of the else-clause of the for-loop.
-    """
-    __slots__ = 'test_node', 'body_nodes', 'else_nodes'
-
-</t>
-<t tx="ekr.20181108111640.64">class Break(Node):
-    """ Break from a loop.
-    """
-    __slots__ = ()
-
-</t>
-<t tx="ekr.20181108111640.65">class Continue(Node):
-    """ Continue with next iteration of a loop.
-    """
-    __slots__ = ()
-
-</t>
-<t tx="ekr.20181108111640.66">class Try(Node):
-    """ Try-block.
-    
-    Attributes:
-        body_nodes: the body of the try-block (i.e. the code to try).
-        handler_nodes: a list of ExceptHandler instances.
-        else_nodes: the body of the else-clause of the try-block.
-        finally_nodes: the body of the finally-clause of the try-block.
-    """
-    __slots__ = 'body_nodes', 'handler_nodes', 'else_nodes', 'finally_nodes'
-
-</t>
-<t tx="ekr.20181108111640.67">class ExceptHandler(Node):
-    """ Single except-clause.
-    
-    Attributes:
-        type_node: the type of exception to catch. Often a Name node
-            or None to catch all.
-        name: the string name of the exception object in case of ``as err``.
-            None otherwise.
-        body_nodes: the body of the except-clause.
-    """
-    __slots__ = 'type_node', 'name', 'body_nodes'
-
-</t>
-<t tx="ekr.20181108111640.68">class With(Node):
-    """ A with-block (i.e. a context manager).
-    
-    Attributes:
-        item_nodes: a list of WithItem nodes (i.e. context managers).
-        body_nodes: the body of the with-block.
-    """
-    __slots__ = 'item_nodes', 'body_nodes'
-
-</t>
-<t tx="ekr.20181108111640.69">class WithItem(Node):
-    """ A single context manager in a with block.
-    
-    Attributes:
-        expr_node: the expression for the context manager.
-        as_node: a Name, Tuple or List node representing the ``as foo`` part.
-    """
-    __slots__ = 'expr_node', 'as_node'
-
-## Function and class definitions
-
-</t>
-<t tx="ekr.20181108111640.7">@path C:/Anaconda3/Lib/site-packages/pscript/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181108111640.70">class FunctionDef(Node):
-    """ A function definition.
-    
-    Attributes:
-        name: the (string) name of the function.
-        decorator_nodes: the list of decorators to be applied, stored
-            outermost first (i.e. the first in the list will be applied
-            last).
-        annotation_node: the return annotation (Python 3 only).
-        arg_nodes: list of Args nodes representing positional arguments.
-            These *may* have a default value.
-        kwarg_nodes: list of Arg nodes representing keyword-only arguments.
-        args_node: an Arg node representing ``*args``.
-        kwargs_node: an Arg node representing ``**kwargs``.
-        body_nodes: the body of the function.
-    """
-    __slots__ = ('name', 'decorator_nodes', 'annotation_node',
-                 'arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
-                 'body_nodes')
-
-</t>
-<t tx="ekr.20181108111640.71">class Lambda(Node):
-    """ Anonymous function definition.
-    
-    Attributes:
-        arg_nodes: list of Args nodes representing positional arguments.
-        kwarg_nodes: list of Arg nodes representing keyword-only arguments.
-        args_node: an Arg node representing ``*args``.
-        kwargs_node: an Arg node representing ``**kwargs``.
-        body_node: the body of the function (a single node).
-    """
-    __slots__ = ('arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
-                 'body_node')
-
-</t>
-<t tx="ekr.20181108111640.72">class AsyncFunctionDef(Node):
-    """ Asynchronous function definition.
-    
-    Same as FunctionDef, but async.
-    """
-    __slots__ = ('name', 'decorator_nodes', 'annotation_node',
-                 'arg_nodes', 'kwarg_nodes', 'args_node', 'kwargs_node', 
-                 'body_nodes')
-
-</t>
-<t tx="ekr.20181108111640.73">class Arg(Node):
-    """ Function argument for a FunctionDef.
-    
-    Attributes:
-        name: the (string) name of the argument.
-        value_node: the default value of this argument. Can be None.
-        annotation_node: the annotation for this argument (Python3 only).
-    """
-    
-    __slots__ = ('name', 'value_node', 'annotation_node')
-
-</t>
-<t tx="ekr.20181108111640.74">class Return(Node):
-    """
-    Attributes:
-        value_node: the value to return.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.75">class Yield(Node):
-    """
-    Attributes:
-        value_node: the value to yield.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.76">class YieldFrom(Node):
-    """
-    Attributes:
-        value_node: the value to yield.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.77">class Await(Node):
-    """
-    Attributes:
-        value_node: the value to return.
-    """
-    __slots__ = 'value_node',
-
-</t>
-<t tx="ekr.20181108111640.78">class Global(Node):
-    """
-    Attributes:
-        names: a list of string names to declare global.
-    """
-    __slots__ = 'names',
-
-</t>
-<t tx="ekr.20181108111640.79">class Nonlocal(Node):
-    """
-    Attributes:
-        names: a list of string names to declare nonlocal.
-    """
-    __slots__ = 'names',
-
-</t>
-<t tx="ekr.20181108111640.8">"""
-Module that defines a common AST description, independent from Python
-version and implementation. Also provides a function ``parse()`` to
-generate this common AST by using the builtin ast module and converting
-the result. Supports CPython 2.7, CPython 3.2+, Pypy.
-
-https://github.com/almarklein/commonast
-"""
-
-# Notes:
-# Python 3.6 introduced ast.Constant, which seems to be added so that 3d
-# party code can use it, but ast.parse does not produce it afaik.
-
-from __future__ import print_function, absolute_import
-
-import sys
-import ast
-import json
-from base64 import encodestring as encodebytes, decodestring as decodebytes
-
-pyversion = sys.version_info
-NoneType = None.__class__
-
-if pyversion &gt;= (3, ):
-    basestring = str  # noqa
-
-
-# do some extra asserts when running tests, but not always, for speed
-docheck = 'pytest' in sys.modules
-
-</t>
-<t tx="ekr.20181108111640.80">class ClassDef(Node):
-    """ A class definition.
-    
-    Attributes:
-        name: a string for the class name.
-        decorator_nodes: the list of decorators to be applied, as in FunctionDef.
-        arg_nodes: list of nodes representing base classes.
-        kwarg_nodes: list of Keyword nodes representing keyword-only arguments.
-        body_nodes: the body of the class.
-    
-    Note that arg_nodes and kwarg_nodes are similar to those in the
-    Call node. An argument ``*x`` would be specified as a Starred node
-    in arg_nodes, and ``**y`` as a Keyword node with a name being
-    ``None``. For more information on keyword arguments see
-    https://www.python.org/dev/peps/pep-3115/.
-    """
-    __slots__ = ('name', 'decorator_nodes', 'arg_nodes', 'kwarg_nodes', 'body_nodes')
-
-## -- (end marker for doc generator)
-
-
-</t>
-<t tx="ekr.20181108111640.81">class NativeAstConverter:
-    """ Convert ast produced by Python's ast module to common ast.
-    """
-    
-    @others
-</t>
-<t tx="ekr.20181108111640.82">def __init__(self, code):
-    self._root = ast.parse(code)
-    self._lines =code.splitlines()
-    self._stack = []  # contains tuple elements: (list_obj, native_nodes)
-
-</t>
-<t tx="ekr.20181108111640.83">def _add_comments(self, container, lineno):
-    """ Add comment nodes from the last point until the given line number.
-    """
-    linenr1 = self._comment_pointer
-    linenr2 = lineno
-    self._comment_pointer = linenr2 + 1  # store for next time
-    
-    for i in range(linenr1, linenr2):
-        line = self._lines[i-1]  # lineno's start from 1
-        if line.lstrip().startswith('#'):
-            before, _, comment = line.partition('#')
-            node = Comment(comment)
-            node.lineno = i
-            node.col_offset = len(before)
-            container.append(node)
-
-</t>
-<t tx="ekr.20181108111640.84">def convert(self, comments=False):
-    assert not self._stack
-    self._comment_pointer = 1
-    
-    result = self._convert(self._root)
-    
-    while self._stack:
-        container, native_nodes = self._stack.pop(0)
-        for native_node in native_nodes:
-            node = self._convert(native_node)
-            if comments:
-                self._add_comments(container, node.lineno)
-            container.append(node)
-    
-    return result
-
-</t>
-<t tx="ekr.20181108111640.85">def _convert(self, n):
-    
-    # n is the native node produced by the ast module
-    if n is None:
-        return None  # but some node attributes can be None
-    assert isinstance(n, ast.AST)
-    
-    # Get converter function
-    type = n.__class__.__name__
-    try:
-        converter = getattr(self, '_convert_' + type)
-    except AttributeError:  # pragma: no cover
-        raise RuntimeError('Cannot convert %s nodes.' % type)
-    # Convert node
-    val = converter(n)
-    assert isinstance(val, Node)
-    # Set its position
-    val.lineno = getattr(n, 'lineno', 1)
-    val.col_offset = getattr(n, 'col_offset', 0)
-    return val
-
-</t>
-<t tx="ekr.20181108111640.86">def _convert_Module(self, n):
-    node = Module([])
-    # Add back the "docstring" that Python removed; this may actually be
-    # a code snippet and not a module.
-    self._stack.append((node.body_nodes, n.body))
-    return node
-
-## Literals
-
-</t>
-<t tx="ekr.20181108111640.87">def _convert_Num(self, n):
-    if pyversion &lt; (3, ) and str(n.n).startswith('-'):
-        # -4 is a unary sub on 4, dont forget complex numbers
-        return UnaryOp(Node.OPS.USub, Num(-n.n))
-    return Num(n.n)
-
-</t>
-<t tx="ekr.20181108111640.88">def _convert_Str(self, n):
-    # We check the string prefix here. We only really need it in Python 2,
-    # because u is not needed in py3, and b and r are resolved by the lexer,
-    # and f as well (resulting in  JoinedStr or  FormattedValue).
-    # Note that the col_offset of the node seems 1 off when the string is
-    # a key in a dict :/ (PScript issue #15)
-    if pyversion &lt; (3, ):
-        line = self._lines[n.lineno-1]
-        i = n.col_offset
-        i = i - 1 if (i &gt; 0 and line[i-1] in 'rufb"\'') else i
-        pre = ''
-        if line[i] not in '"\'':
-            pre += line[i]
-            if line[i + 1] not in '"\'':
-                pre += line[i + 1]
-        if 'b' in pre:
-            return Bytes(n.s)
-    return Str(n.s)
-
-</t>
-<t tx="ekr.20181108111640.89">def _convert_JoinedStr(self, n):
-    c = self._convert
-    return JoinedStr([c(x) for x in n.values])
-
-</t>
-<t tx="ekr.20181108111640.9">def parse(code, comments=False):
-    """ Parse Python code to produce a common AST tree.
-    
-    Parameters:
-        code (str): the Python code to parse
-        comments (bool): if True, will include Comment nodes. Default False.
-    """
-    converter = NativeAstConverter(code)
-    return converter.convert(comments)
-
-
-</t>
-<t tx="ekr.20181108111640.90">def _convert_FormattedValue(self, n):
-    conversion = '' if n.conversion &lt; 0 else chr(n.conversion)
-    return FormattedValue(self._convert(n.value), conversion,
-                          self._convert(n.format_spec))
-
-</t>
-<t tx="ekr.20181108111640.91">def _convert_Bytes(self, n):
-    return Bytes(n.s)
-
-</t>
-<t tx="ekr.20181108111640.92">def _convert_List(self, n):
-    c = self._convert
-    return List([c(x) for x in n.elts])
-
-</t>
-<t tx="ekr.20181108111640.93">def _convert_Tuple(self, n):
-    c = self._convert
-    return Tuple([c(x) for x in n.elts])
-
-</t>
-<t tx="ekr.20181108111640.94">def _convert_Set(self, n):
-    c = self._convert
-    return Set([c(x) for x in n.elts])
-
-</t>
-<t tx="ekr.20181108111640.95">def _convert_Dict(self, n):
-    c = self._convert
-    return Dict([c(x) for x in n.keys], [c(x) for x in n.values])
-
-</t>
-<t tx="ekr.20181108111640.96">def _convert_Ellipsis(self, n):
-    if pyversion &lt; (3, ):
-        return Index(Ellipsis())  # Ellipses must be wrapped in an index
-    return Ellipsis()
-
-</t>
-<t tx="ekr.20181108111640.97">def _convert_NameConstant(self, n):
-    return NameConstant(n.value)
-
-## Variables, attributes, indexing and slicing
-
-</t>
-<t tx="ekr.20181108111640.98">def _convert_Name(self, n):
-    if pyversion &lt; (3, 4):  # pragma: no cover
-        M = {'None': None, 'False': False, 'True': True}
-        if n.id in M:
-            return NameConstant(M[n.id])  # Python &lt; 3.4
-    if pyversion &lt; (3, ) and isinstance(n.ctx , ast.Param):
-        return Arg(n.id, None, None)
-    return Name(n.id)
-
-</t>
-<t tx="ekr.20181108111640.99">def _convert_Starred(self, n):
-    return Starred(self._convert(n.value))
-
 </t>
 </tnodes>
 </leo_file>
