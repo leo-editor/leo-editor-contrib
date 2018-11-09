@@ -340,6 +340,9 @@
 <v t="ekr.20181108111640.311"><vh>_enable_faulthandler</vh></v>
 <v t="ekr.20181108111640.312"><vh>_clear_our_modules</vh></v>
 </v>
+<v t="ekr.20181108212755.1"></v>
+<v t="ekr.20181108212823.1"></v>
+<v t="ekr.20181108111640.162"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20181108111559.1"># Note: this code has not been tested with perfect import.</t>

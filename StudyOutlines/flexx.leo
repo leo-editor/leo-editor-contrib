@@ -7,18 +7,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20181031045130.3"><vh>Flex study outline</vh></v>
-<v t="ekr.20181031045138.1"><vh>@path C:/Anaconda3/Lib/site-packages/flexx</vh>
-<v t="ekr.20181031045138.2"><vh>@@clean flx.py</vh>
-<v t="ekr.20181031045138.3"><vh>Declarations (flx.py)</vh></v>
-</v>
+<v t="ekr.20181031045138.2"><vh>@@clean flx.py</vh></v>
 <v t="ekr.20181031045138.4"><vh>@@clean _config.py</vh>
-<v t="ekr.20181031045138.5"><vh>Declarations (_config.py)</vh></v>
+<v t="ekr.20181031045138.5"><vh>Declarations </vh></v>
 </v>
 <v t="ekr.20181031045138.6"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.7"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.7"><vh>Declarations </vh></v>
 </v>
 <v t="ekr.20181031045138.8"><vh>@@clean __main__.py</vh>
-<v t="ekr.20181031045138.9"><vh>Declarations (__main__.py)</vh></v>
 <v t="ekr.20181031045138.10"><vh>class CLI</vh>
 <v t="ekr.20181031045138.11"><vh>CLI.__init__</vh></v>
 <v t="ekr.20181031045138.12"><vh>CLI.get_command_names</vh></v>
@@ -30,52 +26,52 @@
 <v t="ekr.20181031045138.18"><vh>CLI.cmd_log</vh></v>
 </v>
 <v t="ekr.20181031045138.19"><vh>class FetchError(Exception)</vh></v>
-<v t="ekr.20181031045138.20"><vh>http_fetch (__main__.py)</vh></v>
-<v t="ekr.20181031045138.21"><vh>main (__main__.py)</vh></v>
+<v t="ekr.20181031045138.20"><vh>http_fetch </vh></v>
+<v t="ekr.20181031045138.21"><vh>main </vh></v>
 </v>
 <v t="ekr.20181031045138.22"><vh>@path app</vh>
 <v t="ekr.20181031045138.23"><vh>@@clean bsdf_lite.py</vh>
-<v t="ekr.20181031045138.24"><vh>Declarations (bsdf_lite.py)</vh></v>
-<v t="ekr.20181031045138.25"><vh>lencode (bsdf_lite.py)</vh></v>
-<v t="ekr.20181031045138.26"><vh>lendecode (bsdf_lite.py)</vh></v>
-<v t="ekr.20181031045138.27"><vh>encode_type_id (bsdf_lite.py)</vh></v>
+<v t="ekr.20181031045138.24"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.25"><vh>lencode </vh></v>
+<v t="ekr.20181031045138.26"><vh>lendecode </vh></v>
+<v t="ekr.20181031045138.27"><vh>encode_type_id </vh></v>
 <v t="ekr.20181031045138.28"><vh>class BsdfLiteSerializer(object)</vh>
-<v t="ekr.20181031045138.29"><vh>BsdfLiteSerializer(object).__init__</vh></v>
-<v t="ekr.20181031045138.30"><vh>BsdfLiteSerializer(object)._parse_options</vh></v>
-<v t="ekr.20181031045138.31"><vh>BsdfLiteSerializer(object).add_extension</vh></v>
-<v t="ekr.20181031045138.32"><vh>BsdfLiteSerializer(object).remove_extension</vh></v>
-<v t="ekr.20181031045138.33"><vh>BsdfLiteSerializer(object)._encode</vh></v>
-<v t="ekr.20181031045138.34"><vh>BsdfLiteSerializer(object)._decode</vh></v>
-<v t="ekr.20181031045138.35"><vh>BsdfLiteSerializer(object).encode</vh></v>
-<v t="ekr.20181031045138.36"><vh>BsdfLiteSerializer(object).save</vh></v>
-<v t="ekr.20181031045138.37"><vh>BsdfLiteSerializer(object).decode</vh></v>
-<v t="ekr.20181031045138.38"><vh>BsdfLiteSerializer(object).load</vh></v>
+<v t="ekr.20181031045138.29"><vh>BsdfLiteSerializer.__init__</vh></v>
+<v t="ekr.20181031045138.30"><vh>BsdfLiteSerializer._parse_options</vh></v>
+<v t="ekr.20181031045138.31"><vh>BsdfLiteSerializer.add_extension</vh></v>
+<v t="ekr.20181031045138.32"><vh>BsdfLiteSerializer.remove_extension</vh></v>
+<v t="ekr.20181031045138.33"><vh>BsdfLiteSerializer._encode</vh></v>
+<v t="ekr.20181031045138.34"><vh>BsdfLiteSerializer._decode</vh></v>
+<v t="ekr.20181031045138.35"><vh>BsdfLiteSerializer.encode</vh></v>
+<v t="ekr.20181031045138.36"><vh>BsdfLiteSerializer.save</vh></v>
+<v t="ekr.20181031045138.37"><vh>BsdfLiteSerializer.decode</vh></v>
+<v t="ekr.20181031045138.38"><vh>BsdfLiteSerializer.load</vh></v>
 </v>
 <v t="ekr.20181031045138.39"><vh>class Extension(object)</vh>
-<v t="ekr.20181031045138.40"><vh>Extension(object).__repr__</vh></v>
-<v t="ekr.20181031045138.41"><vh>Extension(object).match</vh></v>
-<v t="ekr.20181031045138.42"><vh>Extension(object).encode</vh></v>
-<v t="ekr.20181031045138.43"><vh>Extension(object).decode</vh></v>
+<v t="ekr.20181031045138.40"><vh>Extension.__repr__</vh></v>
+<v t="ekr.20181031045138.41"><vh>Extension.match</vh></v>
+<v t="ekr.20181031045138.42"><vh>Extension.encode</vh></v>
+<v t="ekr.20181031045138.43"><vh>Extension.decode</vh></v>
 </v>
 <v t="ekr.20181031045138.44"><vh>class ComplexExtension(Extension)</vh>
-<v t="ekr.20181031045138.45"><vh>ComplexExtension(Extension).encode</vh></v>
-<v t="ekr.20181031045138.46"><vh>ComplexExtension(Extension).decode</vh></v>
+<v t="ekr.20181031045138.45"><vh>ComplexExtension.encode</vh></v>
+<v t="ekr.20181031045138.46"><vh>ComplexExtension.decode</vh></v>
 </v>
 <v t="ekr.20181031045138.47"><vh>class NDArrayExtension(Extension)</vh>
-<v t="ekr.20181031045138.48"><vh>NDArrayExtension(Extension).__init__</vh></v>
-<v t="ekr.20181031045138.49"><vh>NDArrayExtension(Extension).match</vh></v>
-<v t="ekr.20181031045138.50"><vh>NDArrayExtension(Extension).encode</vh></v>
-<v t="ekr.20181031045138.51"><vh>NDArrayExtension(Extension).decode</vh></v>
+<v t="ekr.20181031045138.48"><vh>NDArrayExtension.__init__</vh></v>
+<v t="ekr.20181031045138.49"><vh>NDArrayExtension.match</vh></v>
+<v t="ekr.20181031045138.50"><vh>NDArrayExtension.encode</vh></v>
+<v t="ekr.20181031045138.51"><vh>NDArrayExtension.decode</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.52"><vh>@@clean live_tester.py</vh>
-<v t="ekr.20181031045138.53"><vh>Declarations (live_tester.py)</vh></v>
-<v t="ekr.20181031045138.54"><vh>launch (live_tester.py)</vh></v>
-<v t="ekr.20181031045138.55"><vh>filter_stdout (live_tester.py)</vh></v>
-<v t="ekr.20181031045138.56"><vh>run_live (live_tester.py)</vh></v>
+<v t="ekr.20181031045138.53"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.54"><vh>launch </vh></v>
+<v t="ekr.20181031045138.55"><vh>filter_stdout </vh></v>
+<v t="ekr.20181031045138.56"><vh>run_live </vh></v>
 </v>
 <v t="ekr.20181031045138.57"><vh>@@clean _app.py</vh>
-<v t="ekr.20181031045138.58"><vh>Declarations (_app.py)</vh></v>
+<v t="ekr.20181031045138.58"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.59"><vh>class ExporterWebSocketDummy</vh>
 <v t="ekr.20181031045138.60"><vh>ExporterWebSocketDummy.__init__</vh></v>
 <v t="ekr.20181031045138.61"><vh>ExporterWebSocketDummy.write_command</vh></v>
@@ -94,29 +90,29 @@
 <v t="ekr.20181031045138.73"><vh>App.export</vh></v>
 <v t="ekr.20181031045138.74"><vh>App.publish</vh></v>
 </v>
-<v t="ekr.20181031045138.75"><vh>valid_app_name (_app.py)</vh></v>
+<v t="ekr.20181031045138.75"><vh>valid_app_name </vh></v>
 <v t="ekr.20181031045138.76"><vh>class AppManager(event.Component)</vh>
-<v t="ekr.20181031045138.77"><vh>AppManager(event.Component).__init__</vh></v>
-<v t="ekr.20181031045138.78"><vh>AppManager(event.Component).register_app</vh></v>
-<v t="ekr.20181031045138.79"><vh>AppManager(event.Component).create_default_session</vh></v>
-<v t="ekr.20181031045138.80"><vh>AppManager(event.Component).remove_default_session</vh></v>
-<v t="ekr.20181031045138.81"><vh>AppManager(event.Component).get_default_session</vh></v>
-<v t="ekr.20181031045138.82"><vh>AppManager(event.Component)._clear_old_pending_sessions</vh></v>
-<v t="ekr.20181031045138.83"><vh>AppManager(event.Component).create_session</vh></v>
-<v t="ekr.20181031045138.84"><vh>AppManager(event.Component).connect_client</vh></v>
-<v t="ekr.20181031045138.85"><vh>AppManager(event.Component).disconnect_client</vh></v>
-<v t="ekr.20181031045138.86"><vh>AppManager(event.Component).has_app_name</vh></v>
-<v t="ekr.20181031045138.87"><vh>AppManager(event.Component).get_app_names</vh></v>
-<v t="ekr.20181031045138.88"><vh>AppManager(event.Component).get_session_by_id</vh></v>
-<v t="ekr.20181031045138.89"><vh>AppManager(event.Component).get_connections</vh></v>
-<v t="ekr.20181031045138.90"><vh>AppManager(event.Component).connections_changed</vh></v>
+<v t="ekr.20181031045138.77"><vh>AppManager.__init__</vh></v>
+<v t="ekr.20181031045138.78"><vh>AppManager.register_app</vh></v>
+<v t="ekr.20181031045138.79"><vh>AppManager.create_default_session</vh></v>
+<v t="ekr.20181031045138.80"><vh>AppManager.remove_default_session</vh></v>
+<v t="ekr.20181031045138.81"><vh>AppManager.get_default_session</vh></v>
+<v t="ekr.20181031045138.82"><vh>AppManager._clear_old_pending_sessions</vh></v>
+<v t="ekr.20181031045138.83"><vh>AppManager.create_session</vh></v>
+<v t="ekr.20181031045138.84"><vh>AppManager.connect_client</vh></v>
+<v t="ekr.20181031045138.85"><vh>AppManager.disconnect_client</vh></v>
+<v t="ekr.20181031045138.86"><vh>AppManager.has_app_name</vh></v>
+<v t="ekr.20181031045138.87"><vh>AppManager.get_app_names</vh></v>
+<v t="ekr.20181031045138.88"><vh>AppManager.get_session_by_id</vh></v>
+<v t="ekr.20181031045138.89"><vh>AppManager.get_connections</vh></v>
+<v t="ekr.20181031045138.90"><vh>AppManager.connections_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.91"><vh>@@clean _asset.py</vh>
-<v t="ekr.20181031045138.92"><vh>Declarations (_asset.py)</vh></v>
-<v t="ekr.20181031045138.93"><vh>get_mod_name (_asset.py)</vh></v>
-<v t="ekr.20181031045138.94"><vh>module_is_package (_asset.py)</vh></v>
-<v t="ekr.20181031045138.95"><vh>solve_dependencies (_asset.py)</vh></v>
+<v t="ekr.20181031045138.92"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.93"><vh>get_mod_name </vh></v>
+<v t="ekr.20181031045138.94"><vh>module_is_package </vh></v>
+<v t="ekr.20181031045138.95"><vh>solve_dependencies </vh></v>
 <v t="ekr.20181031045138.96"><vh>class Asset</vh>
 <v t="ekr.20181031045138.97"><vh>Asset.__init__</vh></v>
 <v t="ekr.20181031045138.98"><vh>Asset.__repr__</vh></v>
@@ -128,18 +124,18 @@
 <v t="ekr.20181031045138.104"><vh>Asset._get_from_url</vh></v>
 </v>
 <v t="ekr.20181031045138.105"><vh>class Bundle(Asset)</vh>
-<v t="ekr.20181031045138.106"><vh>Bundle(Asset).__init__</vh></v>
-<v t="ekr.20181031045138.107"><vh>Bundle(Asset).__repr__</vh></v>
-<v t="ekr.20181031045138.108"><vh>Bundle(Asset).add_asset</vh></v>
-<v t="ekr.20181031045138.109"><vh>Bundle(Asset).add_module</vh></v>
-<v t="ekr.20181031045138.110"><vh>Bundle(Asset).assets</vh></v>
-<v t="ekr.20181031045138.111"><vh>Bundle(Asset).modules</vh></v>
-<v t="ekr.20181031045138.112"><vh>Bundle(Asset).deps</vh></v>
-<v t="ekr.20181031045138.113"><vh>Bundle(Asset).to_string</vh></v>
+<v t="ekr.20181031045138.106"><vh>Bundle.__init__</vh></v>
+<v t="ekr.20181031045138.107"><vh>Bundle.__repr__</vh></v>
+<v t="ekr.20181031045138.108"><vh>Bundle.add_asset</vh></v>
+<v t="ekr.20181031045138.109"><vh>Bundle.add_module</vh></v>
+<v t="ekr.20181031045138.110"><vh>Bundle.assets</vh></v>
+<v t="ekr.20181031045138.111"><vh>Bundle.modules</vh></v>
+<v t="ekr.20181031045138.112"><vh>Bundle.deps</vh></v>
+<v t="ekr.20181031045138.113"><vh>Bundle.to_string</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.114"><vh>@@clean _assetstore.py</vh>
-<v t="ekr.20181031045138.115"><vh>Declarations (_assetstore.py)</vh></v>
+<v t="ekr.20181031045138.115"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.116"><vh>class AssetStore</vh>
 <v t="ekr.20181031045138.117"><vh>AssetStore.__init__</vh></v>
 <v t="ekr.20181031045138.118"><vh>AssetStore.__repr__</vh></v>
@@ -159,7 +155,7 @@
 </v>
 </v>
 <v t="ekr.20181031045138.132"><vh>@@clean _clientcore.py</vh>
-<v t="ekr.20181031045138.133"><vh>Declarations (_clientcore.py)</vh></v>
+<v t="ekr.20181031045138.133"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.134"><vh>class Flexx</vh>
 <v t="ekr.20181031045138.135"><vh>Flexx.__init__</vh></v>
 <v t="ekr.20181031045138.136"><vh>Flexx.init</vh></v>
@@ -191,49 +187,49 @@
 </v>
 </v>
 <v t="ekr.20181031045138.161"><vh>@@clean _component2.py</vh>
-<v t="ekr.20181031045138.162"><vh>Declarations (_component2.py)</vh></v>
-<v t="ekr.20181031045138.163"><vh>make_proxy_action (_component2.py)</vh></v>
-<v t="ekr.20181031045138.164"><vh>make_proxy_emitter (_component2.py)</vh></v>
-<v t="ekr.20181031045138.165"><vh>get_component_classes (_component2.py)</vh></v>
-<v t="ekr.20181031045138.166"><vh>meta_repr (_component2.py)</vh></v>
+<v t="ekr.20181031045138.162"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.163"><vh>make_proxy_action </vh></v>
+<v t="ekr.20181031045138.164"><vh>make_proxy_emitter </vh></v>
+<v t="ekr.20181031045138.165"><vh>get_component_classes </vh></v>
+<v t="ekr.20181031045138.166"><vh>meta_repr </vh></v>
 <v t="ekr.20181031045138.167"><vh>class LocalProperty(Property)</vh></v>
 <v t="ekr.20181031045138.168"><vh>class ComponentMetaJS(ComponentMeta)</vh>
-<v t="ekr.20181031045138.169"><vh>ComponentMetaJS(ComponentMeta).__init__</vh></v>
+<v t="ekr.20181031045138.169"><vh>ComponentMetaJS.__init__</vh></v>
 </v>
 <v t="ekr.20181031045138.170"><vh>class AppComponentMeta(ComponentMeta)</vh>
-<v t="ekr.20181031045138.171"><vh>AppComponentMeta(ComponentMeta)._init_hook1</vh></v>
-<v t="ekr.20181031045138.172"><vh>AppComponentMeta(ComponentMeta)._init_hook2</vh></v>
-<v t="ekr.20181031045138.173"><vh>AppComponentMeta(ComponentMeta)._make_js_proxy_class</vh></v>
-<v t="ekr.20181031045138.174"><vh>AppComponentMeta(ComponentMeta)._make_js_local_class</vh></v>
-<v t="ekr.20181031045138.175"><vh>AppComponentMeta(ComponentMeta)._get_js</vh></v>
-<v t="ekr.20181031045138.176"><vh>AppComponentMeta(ComponentMeta)._get_js_of_base_classes</vh></v>
+<v t="ekr.20181031045138.171"><vh>AppComponentMeta._init_hook1</vh></v>
+<v t="ekr.20181031045138.172"><vh>AppComponentMeta._init_hook2</vh></v>
+<v t="ekr.20181031045138.173"><vh>AppComponentMeta._make_js_proxy_class</vh></v>
+<v t="ekr.20181031045138.174"><vh>AppComponentMeta._make_js_local_class</vh></v>
+<v t="ekr.20181031045138.175"><vh>AppComponentMeta._get_js</vh></v>
+<v t="ekr.20181031045138.176"><vh>AppComponentMeta._get_js_of_base_classes</vh></v>
 </v>
 <v t="ekr.20181031045138.177"><vh>class BaseAppComponent(Component)</vh>
-<v t="ekr.20181031045138.178"><vh>BaseAppComponent(Component)._comp_init_app_component</vh></v>
+<v t="ekr.20181031045138.178"><vh>BaseAppComponent._comp_init_app_component</vh></v>
 </v>
 <v t="ekr.20181031045138.179"><vh>class LocalComponent(BaseAppComponent)</vh>
-<v t="ekr.20181031045138.180"><vh>LocalComponent(BaseAppComponent)._comp_init_property_values</vh></v>
-<v t="ekr.20181031045138.181"><vh>LocalComponent(BaseAppComponent)._ensure_proxy_instance</vh></v>
-<v t="ekr.20181031045138.182"><vh>LocalComponent(BaseAppComponent).emit</vh></v>
-<v t="ekr.20181031045138.183"><vh>LocalComponent(BaseAppComponent)._dispose</vh></v>
-<v t="ekr.20181031045138.184"><vh>LocalComponent(BaseAppComponent)._flx_set_has_proxy</vh></v>
-<v t="ekr.20181031045138.185"><vh>LocalComponent(BaseAppComponent)._flx_set_event_types_at_proxy</vh></v>
+<v t="ekr.20181031045138.180"><vh>LocalComponent._comp_init_property_values</vh></v>
+<v t="ekr.20181031045138.181"><vh>LocalComponent._ensure_proxy_instance</vh></v>
+<v t="ekr.20181031045138.182"><vh>LocalComponent.emit</vh></v>
+<v t="ekr.20181031045138.183"><vh>LocalComponent._dispose</vh></v>
+<v t="ekr.20181031045138.184"><vh>LocalComponent._flx_set_has_proxy</vh></v>
+<v t="ekr.20181031045138.185"><vh>LocalComponent._flx_set_event_types_at_proxy</vh></v>
 </v>
 <v t="ekr.20181031045138.186"><vh>class ProxyComponent(BaseAppComponent)</vh>
-<v t="ekr.20181031045138.187"><vh>ProxyComponent(BaseAppComponent).__init__</vh></v>
-<v t="ekr.20181031045138.188"><vh>ProxyComponent(BaseAppComponent)._comp_init_property_values</vh></v>
-<v t="ekr.20181031045138.189"><vh>ProxyComponent(BaseAppComponent)._comp_apply_property_values</vh></v>
-<v t="ekr.20181031045138.190"><vh>ProxyComponent(BaseAppComponent)._proxy_action</vh></v>
-<v t="ekr.20181031045138.191"><vh>ProxyComponent(BaseAppComponent)._proxy_emitter</vh></v>
-<v t="ekr.20181031045138.192"><vh>ProxyComponent(BaseAppComponent)._mutate</vh></v>
-<v t="ekr.20181031045138.193"><vh>ProxyComponent(BaseAppComponent)._registered_reactions_hook</vh></v>
-<v t="ekr.20181031045138.194"><vh>ProxyComponent(BaseAppComponent)._emit_at_proxy</vh></v>
-<v t="ekr.20181031045138.195"><vh>ProxyComponent(BaseAppComponent).dispose</vh></v>
-<v t="ekr.20181031045138.196"><vh>ProxyComponent(BaseAppComponent)._dispose</vh></v>
+<v t="ekr.20181031045138.187"><vh>ProxyComponent.__init__</vh></v>
+<v t="ekr.20181031045138.188"><vh>ProxyComponent._comp_init_property_values</vh></v>
+<v t="ekr.20181031045138.189"><vh>ProxyComponent._comp_apply_property_values</vh></v>
+<v t="ekr.20181031045138.190"><vh>ProxyComponent._proxy_action</vh></v>
+<v t="ekr.20181031045138.191"><vh>ProxyComponent._proxy_emitter</vh></v>
+<v t="ekr.20181031045138.192"><vh>ProxyComponent._mutate</vh></v>
+<v t="ekr.20181031045138.193"><vh>ProxyComponent._registered_reactions_hook</vh></v>
+<v t="ekr.20181031045138.194"><vh>ProxyComponent._emit_at_proxy</vh></v>
+<v t="ekr.20181031045138.195"><vh>ProxyComponent.dispose</vh></v>
+<v t="ekr.20181031045138.196"><vh>ProxyComponent._dispose</vh></v>
 </v>
 <v t="ekr.20181031045138.197"><vh>class StubComponent(BaseAppComponent)</vh>
-<v t="ekr.20181031045138.198"><vh>StubComponent(BaseAppComponent).__init__</vh></v>
-<v t="ekr.20181031045138.199"><vh>StubComponent(BaseAppComponent).__repr__</vh></v>
+<v t="ekr.20181031045138.198"><vh>StubComponent.__init__</vh></v>
+<v t="ekr.20181031045138.199"><vh>StubComponent.__repr__</vh></v>
 </v>
 <v t="ekr.20181031045138.200"><vh>class JsComponent</vh>
 <v t="ekr.20181031045138.201"><vh>JsComponent.__repr__</vh></v>
@@ -244,20 +240,20 @@
 <v t="ekr.20181031045138.205"><vh>PyComponent.__repr__</vh></v>
 </v>
 <v t="ekr.20181031045138.206"><vh>class BsdfComponentExtension(bsdf.Extension)</vh>
-<v t="ekr.20181031045138.207"><vh>BsdfComponentExtension(bsdf.Extension).match</vh></v>
-<v t="ekr.20181031045138.208"><vh>BsdfComponentExtension(bsdf.Extension).encode</vh></v>
-<v t="ekr.20181031045138.209"><vh>BsdfComponentExtension(bsdf.Extension).decode</vh></v>
-<v t="ekr.20181031045138.210"><vh>BsdfComponentExtension(bsdf.Extension).match_js</vh></v>
-<v t="ekr.20181031045138.211"><vh>BsdfComponentExtension(bsdf.Extension).encode_js</vh></v>
-<v t="ekr.20181031045138.212"><vh>BsdfComponentExtension(bsdf.Extension).decode_js</vh></v>
+<v t="ekr.20181031045138.207"><vh>BsdfComponentExtension.match</vh></v>
+<v t="ekr.20181031045138.208"><vh>BsdfComponentExtension.encode</vh></v>
+<v t="ekr.20181031045138.209"><vh>BsdfComponentExtension.decode</vh></v>
+<v t="ekr.20181031045138.210"><vh>BsdfComponentExtension.match_js</vh></v>
+<v t="ekr.20181031045138.211"><vh>BsdfComponentExtension.encode_js</vh></v>
+<v t="ekr.20181031045138.212"><vh>BsdfComponentExtension.decode_js</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.213"><vh>@@clean _funcs.py</vh>
-<v t="ekr.20181031045138.214"><vh>Declarations (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.215"><vh>start (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.216"><vh>run (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.217"><vh>stop (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.218"><vh>_auto_closer (_funcs.py)</vh></v>
+<v t="ekr.20181031045138.214"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.215"><vh>start </vh></v>
+<v t="ekr.20181031045138.216"><vh>run </vh></v>
+<v t="ekr.20181031045138.217"><vh>stop </vh></v>
+<v t="ekr.20181031045138.218"><vh>_auto_closer </vh></v>
 <v t="ekr.20181031045138.219"><vh>class NoteBookHelper</vh>
 <v t="ekr.20181031045138.220"><vh>NoteBookHelper.__init__</vh></v>
 <v t="ekr.20181031045138.221"><vh>NoteBookHelper.enable</vh></v>
@@ -265,15 +261,15 @@
 <v t="ekr.20181031045138.223"><vh>NoteBookHelper.release</vh></v>
 <v t="ekr.20181031045138.224"><vh>NoteBookHelper.write_command</vh></v>
 </v>
-<v t="ekr.20181031045138.225"><vh>init_notebook (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.226"><vh>serve (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.227"><vh>launch (_funcs.py)</vh></v>
-<v t="ekr.20181031045138.228"><vh>export (_funcs.py)</vh></v>
+<v t="ekr.20181031045138.225"><vh>init_notebook </vh></v>
+<v t="ekr.20181031045138.226"><vh>serve </vh></v>
+<v t="ekr.20181031045138.227"><vh>launch </vh></v>
+<v t="ekr.20181031045138.228"><vh>export </vh></v>
 </v>
 <v t="ekr.20181031045138.229"><vh>@@clean _modules.py</vh>
-<v t="ekr.20181031045138.230"><vh>Declarations (_modules.py)</vh></v>
-<v t="ekr.20181031045138.231"><vh>mangle_dotted_vars (_modules.py)</vh></v>
-<v t="ekr.20181031045138.232"><vh>is_pscript_module (_modules.py)</vh></v>
+<v t="ekr.20181031045138.230"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.231"><vh>mangle_dotted_vars </vh></v>
+<v t="ekr.20181031045138.232"><vh>is_pscript_module </vh></v>
 <v t="ekr.20181031045138.233"><vh>class JSModule</vh>
 <v t="ekr.20181031045138.234"><vh>JSModule.__init__</vh></v>
 <v t="ekr.20181031045138.235"><vh>JSModule.__repr__</vh></v>
@@ -294,9 +290,9 @@
 </v>
 </v>
 <v t="ekr.20181031045138.250"><vh>@@clean _server.py</vh>
-<v t="ekr.20181031045138.251"><vh>Declarations (_server.py)</vh></v>
-<v t="ekr.20181031045138.252"><vh>create_server (_server.py)</vh></v>
-<v t="ekr.20181031045138.253"><vh>current_server (_server.py)</vh></v>
+<v t="ekr.20181031045138.251"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.252"><vh>create_server </vh></v>
+<v t="ekr.20181031045138.253"><vh>current_server </vh></v>
 <v t="ekr.20181031045138.254"><vh>class AbstractServer</vh>
 <v t="ekr.20181031045138.255"><vh>AbstractServer.__init__</vh></v>
 <v t="ekr.20181031045138.256"><vh>AbstractServer._running</vh></v>
@@ -310,8 +306,8 @@
 </v>
 </v>
 <v t="ekr.20181031045138.264"><vh>@@clean _session.py</vh>
-<v t="ekr.20181031045138.265"><vh>Declarations (_session.py)</vh></v>
-<v t="ekr.20181031045138.266"><vh>get_random_string (_session.py)</vh></v>
+<v t="ekr.20181031045138.265"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.266"><vh>get_random_string </vh></v>
 <v t="ekr.20181031045138.267"><vh>class Session</vh>
 <v t="ekr.20181031045138.268"><vh>Session.__init__</vh></v>
 <v t="ekr.20181031045138.269"><vh>Session.__repr__</vh></v>
@@ -346,39 +342,39 @@
 <v t="ekr.20181031045138.298"><vh>Session._get_ping_call_list</vh></v>
 <v t="ekr.20181031045138.299"><vh>Session._receive_pong</vh></v>
 </v>
-<v t="ekr.20181031045138.300"><vh>send_ping_later (_session.py)</vh></v>
-<v t="ekr.20181031045138.301"><vh>get_page (_session.py)</vh></v>
-<v t="ekr.20181031045138.302"><vh>get_page_for_export (_session.py)</vh></v>
-<v t="ekr.20181031045138.303"><vh>_get_page (_session.py)</vh></v>
+<v t="ekr.20181031045138.300"><vh>send_ping_later </vh></v>
+<v t="ekr.20181031045138.301"><vh>get_page </vh></v>
+<v t="ekr.20181031045138.302"><vh>get_page_for_export </vh></v>
+<v t="ekr.20181031045138.303"><vh>_get_page </vh></v>
 </v>
 <v t="ekr.20181031045138.304"><vh>@@clean _tornadoserver.py</vh>
-<v t="ekr.20181031045138.305"><vh>Declarations (_tornadoserver.py)</vh></v>
-<v t="ekr.20181031045138.306"><vh>is_main_thread (_tornadoserver.py)</vh></v>
+<v t="ekr.20181031045138.305"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.306"><vh>is_main_thread </vh></v>
 <v t="ekr.20181031045138.307"><vh>class TornadoServer(AbstractServer)</vh>
-<v t="ekr.20181031045138.308"><vh>TornadoServer(AbstractServer).__init__</vh></v>
-<v t="ekr.20181031045138.309"><vh>TornadoServer(AbstractServer)._open</vh></v>
-<v t="ekr.20181031045138.310"><vh>TornadoServer(AbstractServer)._close</vh></v>
-<v t="ekr.20181031045138.311"><vh>TornadoServer(AbstractServer).app</vh></v>
-<v t="ekr.20181031045138.312"><vh>TornadoServer(AbstractServer).server</vh></v>
-<v t="ekr.20181031045138.313"><vh>TornadoServer(AbstractServer).protocol</vh></v>
+<v t="ekr.20181031045138.308"><vh>TornadoServer.__init__</vh></v>
+<v t="ekr.20181031045138.309"><vh>TornadoServer._open</vh></v>
+<v t="ekr.20181031045138.310"><vh>TornadoServer._close</vh></v>
+<v t="ekr.20181031045138.311"><vh>TornadoServer.app</vh></v>
+<v t="ekr.20181031045138.312"><vh>TornadoServer.server</vh></v>
+<v t="ekr.20181031045138.313"><vh>TornadoServer.protocol</vh></v>
 </v>
-<v t="ekr.20181031045138.314"><vh>port_hash (_tornadoserver.py)</vh></v>
+<v t="ekr.20181031045138.314"><vh>port_hash </vh></v>
 <v t="ekr.20181031045138.315"><vh>class FlexxHandler(RequestHandler)</vh>
-<v t="ekr.20181031045138.316"><vh>FlexxHandler(RequestHandler).initialize</vh></v>
-<v t="ekr.20181031045138.317"><vh>FlexxHandler(RequestHandler).write_error</vh></v>
-<v t="ekr.20181031045138.318"><vh>FlexxHandler(RequestHandler).on_finish</vh></v>
+<v t="ekr.20181031045138.316"><vh>FlexxHandler.initialize</vh></v>
+<v t="ekr.20181031045138.317"><vh>FlexxHandler.write_error</vh></v>
+<v t="ekr.20181031045138.318"><vh>FlexxHandler.on_finish</vh></v>
 </v>
 <v t="ekr.20181031045138.319"><vh>class AppHandler(FlexxHandler)</vh>
-<v t="ekr.20181031045138.320"><vh>AppHandler(FlexxHandler).get</vh></v>
-<v t="ekr.20181031045138.321"><vh>AppHandler(FlexxHandler)._get_index</vh></v>
-<v t="ekr.20181031045138.322"><vh>AppHandler(FlexxHandler)._get_app</vh></v>
+<v t="ekr.20181031045138.320"><vh>AppHandler.get</vh></v>
+<v t="ekr.20181031045138.321"><vh>AppHandler._get_index</vh></v>
+<v t="ekr.20181031045138.322"><vh>AppHandler._get_app</vh></v>
 </v>
 <v t="ekr.20181031045138.323"><vh>class MainHandler(RequestHandler)</vh>
-<v t="ekr.20181031045138.324"><vh>MainHandler(RequestHandler)._guess_mime_type</vh></v>
-<v t="ekr.20181031045138.325"><vh>MainHandler(RequestHandler).get</vh></v>
-<v t="ekr.20181031045138.326"><vh>MainHandler(RequestHandler)._get_asset</vh></v>
-<v t="ekr.20181031045138.327"><vh>MainHandler(RequestHandler)._get_info</vh></v>
-<v t="ekr.20181031045138.328"><vh>MainHandler(RequestHandler)._get_cmd</vh></v>
+<v t="ekr.20181031045138.324"><vh>MainHandler._guess_mime_type</vh></v>
+<v t="ekr.20181031045138.325"><vh>MainHandler.get</vh></v>
+<v t="ekr.20181031045138.326"><vh>MainHandler._get_asset</vh></v>
+<v t="ekr.20181031045138.327"><vh>MainHandler._get_info</vh></v>
+<v t="ekr.20181031045138.328"><vh>MainHandler._get_cmd</vh></v>
 </v>
 <v t="ekr.20181031045138.329"><vh>class MessageCounter</vh>
 <v t="ekr.20181031045138.330"><vh>MessageCounter.__init__</vh></v>
@@ -387,24 +383,24 @@
 <v t="ekr.20181031045138.333"><vh>MessageCounter.stop</vh></v>
 </v>
 <v t="ekr.20181031045138.334"><vh>class WSHandler(WebSocketHandler)</vh>
-<v t="ekr.20181031045138.335"><vh>WSHandler(WebSocketHandler).open</vh></v>
-<v t="ekr.20181031045138.336"><vh>WSHandler(WebSocketHandler).on_message</vh></v>
-<v t="ekr.20181031045138.337"><vh>WSHandler(WebSocketHandler).on_close</vh></v>
-<v t="ekr.20181031045138.338"><vh>WSHandler(WebSocketHandler).pinger1</vh></v>
-<v t="ekr.20181031045138.339"><vh>WSHandler(WebSocketHandler).on_pong</vh></v>
-<v t="ekr.20181031045138.340"><vh>WSHandler(WebSocketHandler).write_command</vh></v>
-<v t="ekr.20181031045138.341"><vh>WSHandler(WebSocketHandler).close</vh></v>
-<v t="ekr.20181031045138.342"><vh>WSHandler(WebSocketHandler).close_this</vh></v>
-<v t="ekr.20181031045138.343"><vh>WSHandler(WebSocketHandler).check_origin</vh></v>
+<v t="ekr.20181031045138.335"><vh>WSHandler.open</vh></v>
+<v t="ekr.20181031045138.336"><vh>WSHandler.on_message</vh></v>
+<v t="ekr.20181031045138.337"><vh>WSHandler.on_close</vh></v>
+<v t="ekr.20181031045138.338"><vh>WSHandler.pinger1</vh></v>
+<v t="ekr.20181031045138.339"><vh>WSHandler.on_pong</vh></v>
+<v t="ekr.20181031045138.340"><vh>WSHandler.write_command</vh></v>
+<v t="ekr.20181031045138.341"><vh>WSHandler.close</vh></v>
+<v t="ekr.20181031045138.342"><vh>WSHandler.close_this</vh></v>
+<v t="ekr.20181031045138.343"><vh>WSHandler.check_origin</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.344"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.345"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.345"><vh>Declarations </vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.346"><vh>@path event</vh>
 <v t="ekr.20181031045138.347"><vh>@@clean both_tester.py</vh>
-<v t="ekr.20181031045138.348"><vh>Declarations (both_tester.py)</vh></v>
+<v t="ekr.20181031045138.348"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.349"><vh>class StdoutMismatchError(Exception)</vh></v>
 <v t="ekr.20181031045138.350"><vh>class FakeStream</vh>
 <v t="ekr.20181031045138.351"><vh>FakeStream.__init__</vh></v>
@@ -412,17 +408,17 @@
 <v t="ekr.20181031045138.353"><vh>FakeStream.flush</vh></v>
 <v t="ekr.20181031045138.354"><vh>FakeStream.getvalue</vh></v>
 </v>
-<v t="ekr.20181031045138.355"><vh>call_func_in_py (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.356"><vh>call_func_in_js (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.357"><vh>smart_compare (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.358"><vh>validate_text (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.359"><vh>_wrap (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.360"><vh>_zip (both_tester.py)</vh></v>
-<v t="ekr.20181031045138.361"><vh>run_in_both (both_tester.py)</vh></v>
+<v t="ekr.20181031045138.355"><vh>call_func_in_py </vh></v>
+<v t="ekr.20181031045138.356"><vh>call_func_in_js </vh></v>
+<v t="ekr.20181031045138.357"><vh>smart_compare </vh></v>
+<v t="ekr.20181031045138.358"><vh>validate_text </vh></v>
+<v t="ekr.20181031045138.359"><vh>_wrap </vh></v>
+<v t="ekr.20181031045138.360"><vh>_zip </vh></v>
+<v t="ekr.20181031045138.361"><vh>run_in_both </vh></v>
 </v>
 <v t="ekr.20181031045138.362"><vh>@@clean _action.py</vh>
-<v t="ekr.20181031045138.363"><vh>Declarations (_action.py)</vh></v>
-<v t="ekr.20181031045138.364"><vh>action (_action.py)</vh></v>
+<v t="ekr.20181031045138.363"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.364"><vh>action </vh></v>
 <v t="ekr.20181031045138.365"><vh>class BaseDescriptor</vh>
 <v t="ekr.20181031045138.366"><vh>BaseDescriptor.__repr__</vh></v>
 <v t="ekr.20181031045138.367"><vh>BaseDescriptor.__set__</vh></v>
@@ -430,8 +426,8 @@
 <v t="ekr.20181031045138.369"><vh>BaseDescriptor._format_doc</vh></v>
 </v>
 <v t="ekr.20181031045138.370"><vh>class ActionDescriptor(BaseDescriptor)</vh>
-<v t="ekr.20181031045138.371"><vh>ActionDescriptor(BaseDescriptor).__init__</vh></v>
-<v t="ekr.20181031045138.372"><vh>ActionDescriptor(BaseDescriptor).__get__</vh></v>
+<v t="ekr.20181031045138.371"><vh>ActionDescriptor.__init__</vh></v>
+<v t="ekr.20181031045138.372"><vh>ActionDescriptor.__get__</vh></v>
 </v>
 <v t="ekr.20181031045138.373"><vh>class Action</vh>
 <v t="ekr.20181031045138.374"><vh>Action.__init__</vh></v>
@@ -441,25 +437,25 @@
 </v>
 </v>
 <v t="ekr.20181031045138.378"><vh>@@clean _attribute.py</vh>
-<v t="ekr.20181031045138.379"><vh>Declarations (_attribute.py)</vh></v>
+<v t="ekr.20181031045138.379"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.380"><vh>class Attribute(BaseDescriptor)</vh>
-<v t="ekr.20181031045138.381"><vh>Attribute(BaseDescriptor).__init__</vh></v>
-<v t="ekr.20181031045138.382"><vh>Attribute(BaseDescriptor)._set_name</vh></v>
-<v t="ekr.20181031045138.383"><vh>Attribute(BaseDescriptor).__set__</vh></v>
-<v t="ekr.20181031045138.384"><vh>Attribute(BaseDescriptor).__get__</vh></v>
+<v t="ekr.20181031045138.381"><vh>Attribute.__init__</vh></v>
+<v t="ekr.20181031045138.382"><vh>Attribute._set_name</vh></v>
+<v t="ekr.20181031045138.383"><vh>Attribute.__set__</vh></v>
+<v t="ekr.20181031045138.384"><vh>Attribute.__get__</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.385"><vh>@@clean _component.py</vh>
-<v t="ekr.20181031045138.386"><vh>Declarations (_component.py)</vh></v>
-<v t="ekr.20181031045138.387"><vh>with_metaclass (_component.py)</vh></v>
-<v t="ekr.20181031045138.388"><vh>new_type (_component.py)</vh></v>
+<v t="ekr.20181031045138.386"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.387"><vh>with_metaclass </vh></v>
+<v t="ekr.20181031045138.388"><vh>new_type </vh></v>
 <v t="ekr.20181031045138.389"><vh>class ComponentMeta(type)</vh>
-<v t="ekr.20181031045138.390"><vh>ComponentMeta(type).__init__</vh></v>
-<v t="ekr.20181031045138.391"><vh>ComponentMeta(type)._init_hook1</vh></v>
-<v t="ekr.20181031045138.392"><vh>ComponentMeta(type)._init_hook2</vh></v>
-<v t="ekr.20181031045138.393"><vh>ComponentMeta(type)._set_cls_attr</vh></v>
-<v t="ekr.20181031045138.394"><vh>ComponentMeta(type)._finish_properties</vh></v>
-<v t="ekr.20181031045138.395"><vh>ComponentMeta(type)._set_summaries</vh></v>
+<v t="ekr.20181031045138.390"><vh>ComponentMeta.__init__</vh></v>
+<v t="ekr.20181031045138.391"><vh>ComponentMeta._init_hook1</vh></v>
+<v t="ekr.20181031045138.392"><vh>ComponentMeta._init_hook2</vh></v>
+<v t="ekr.20181031045138.393"><vh>ComponentMeta._set_cls_attr</vh></v>
+<v t="ekr.20181031045138.394"><vh>ComponentMeta._finish_properties</vh></v>
+<v t="ekr.20181031045138.395"><vh>ComponentMeta._set_summaries</vh></v>
 </v>
 <v t="ekr.20181031045138.396"><vh>class Component</vh>
 <v t="ekr.20181031045138.397"><vh>Component.__init__</vh></v>
@@ -485,26 +481,26 @@
 <v t="ekr.20181031045138.417"><vh>Component.get_event_handlers</vh></v>
 <v t="ekr.20181031045138.418"><vh>Component.reaction</vh></v>
 </v>
-<v t="ekr.20181031045138.419"><vh>mutate_dict (_component.py)</vh></v>
-<v t="ekr.20181031045138.420"><vh>_mutate_array_py (_component.py)</vh></v>
-<v t="ekr.20181031045138.421"><vh>_mutate_array_js (_component.py)</vh></v>
+<v t="ekr.20181031045138.419"><vh>mutate_dict </vh></v>
+<v t="ekr.20181031045138.420"><vh>_mutate_array_py </vh></v>
+<v t="ekr.20181031045138.421"><vh>_mutate_array_js </vh></v>
 </v>
 <v t="ekr.20181031045138.422"><vh>@@clean _dict.py</vh>
-<v t="ekr.20181031045138.423"><vh>Declarations (_dict.py)</vh></v>
-<v t="ekr.20181031045138.424"><vh>isidentifier (_dict.py)</vh></v>
+<v t="ekr.20181031045138.423"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.424"><vh>isidentifier </vh></v>
 <v t="ekr.20181031045138.425"><vh>class Dict(_dict)</vh>
-<v t="ekr.20181031045138.426"><vh>Dict(_dict).__repr__</vh></v>
-<v t="ekr.20181031045138.427"><vh>Dict(_dict).__getattribute__</vh></v>
-<v t="ekr.20181031045138.428"><vh>Dict(_dict).__setattr__</vh></v>
-<v t="ekr.20181031045138.429"><vh>Dict(_dict).__dir__</vh></v>
+<v t="ekr.20181031045138.426"><vh>Dict.__repr__</vh></v>
+<v t="ekr.20181031045138.427"><vh>Dict.__getattribute__</vh></v>
+<v t="ekr.20181031045138.428"><vh>Dict.__setattr__</vh></v>
+<v t="ekr.20181031045138.429"><vh>Dict.__dir__</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.430"><vh>@@clean _emitter.py</vh>
-<v t="ekr.20181031045138.431"><vh>Declarations (_emitter.py)</vh></v>
-<v t="ekr.20181031045138.432"><vh>emitter (_emitter.py)</vh></v>
+<v t="ekr.20181031045138.431"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.432"><vh>emitter </vh></v>
 <v t="ekr.20181031045138.433"><vh>class EmitterDescriptor(BaseDescriptor)</vh>
-<v t="ekr.20181031045138.434"><vh>EmitterDescriptor(BaseDescriptor).__init__</vh></v>
-<v t="ekr.20181031045138.435"><vh>EmitterDescriptor(BaseDescriptor).__get__</vh></v>
+<v t="ekr.20181031045138.434"><vh>EmitterDescriptor.__init__</vh></v>
+<v t="ekr.20181031045138.435"><vh>EmitterDescriptor.__get__</vh></v>
 </v>
 <v t="ekr.20181031045138.436"><vh>class Emitter</vh>
 <v t="ekr.20181031045138.437"><vh>Emitter.__init__</vh></v>
@@ -514,7 +510,7 @@
 </v>
 </v>
 <v t="ekr.20181031045138.441"><vh>@@clean _js.py</vh>
-<v t="ekr.20181031045138.442"><vh>Declarations (_js.py)</vh></v>
+<v t="ekr.20181031045138.442"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.443"><vh>class MetaCollector</vh>
 <v t="ekr.20181031045138.444"><vh>MetaCollector.__init__</vh></v>
 <v t="ekr.20181031045138.445"><vh>MetaCollector.py2js</vh></v>
@@ -539,13 +535,13 @@
 <v t="ekr.20181031045138.462"><vh>ComponentJS.__create_reaction</vh></v>
 <v t="ekr.20181031045138.463"><vh>ComponentJS.__create_reaction_ob</vh></v>
 </v>
-<v t="ekr.20181031045138.464"><vh>_create_js_class (_js.py)</vh></v>
-<v t="ekr.20181031045138.465"><vh>create_js_component_class (_js.py)</vh></v>
-<v t="ekr.20181031045138.466"><vh>gen_prop_classes (_js.py)</vh></v>
+<v t="ekr.20181031045138.464"><vh>_create_js_class </vh></v>
+<v t="ekr.20181031045138.465"><vh>create_js_component_class </vh></v>
+<v t="ekr.20181031045138.466"><vh>gen_prop_classes </vh></v>
 </v>
 <v t="ekr.20181031045138.467"><vh>@@clean _loop.py</vh>
-<v t="ekr.20181031045138.468"><vh>Declarations (_loop.py)</vh></v>
-<v t="ekr.20181031045138.469"><vh>this_is_js (_loop.py)</vh></v>
+<v t="ekr.20181031045138.468"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.469"><vh>this_is_js </vh></v>
 <v t="ekr.20181031045138.470"><vh>class Loop</vh>
 <v t="ekr.20181031045138.471"><vh>Loop.__init__</vh></v>
 <v t="ekr.20181031045138.472"><vh>Loop.reset</vh></v>
@@ -572,66 +568,66 @@
 </v>
 </v>
 <v t="ekr.20181031045138.493"><vh>@@clean _property.py</vh>
-<v t="ekr.20181031045138.494"><vh>Declarations (_property.py)</vh></v>
+<v t="ekr.20181031045138.494"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.495"><vh>class Property(BaseDescriptor)</vh>
-<v t="ekr.20181031045138.496"><vh>Property(BaseDescriptor).__init__</vh></v>
-<v t="ekr.20181031045138.497"><vh>Property(BaseDescriptor)._consume_args</vh></v>
-<v t="ekr.20181031045138.498"><vh>Property(BaseDescriptor)._set_name</vh></v>
-<v t="ekr.20181031045138.499"><vh>Property(BaseDescriptor)._set_data</vh></v>
-<v t="ekr.20181031045138.500"><vh>Property(BaseDescriptor).__set__</vh></v>
-<v t="ekr.20181031045138.501"><vh>Property(BaseDescriptor).__get__</vh></v>
-<v t="ekr.20181031045138.502"><vh>Property(BaseDescriptor).make_mutator</vh></v>
-<v t="ekr.20181031045138.503"><vh>Property(BaseDescriptor).make_set_action</vh></v>
-<v t="ekr.20181031045138.504"><vh>Property(BaseDescriptor)._validate_py</vh></v>
-<v t="ekr.20181031045138.505"><vh>Property(BaseDescriptor)._validate</vh></v>
+<v t="ekr.20181031045138.496"><vh>Property.__init__</vh></v>
+<v t="ekr.20181031045138.497"><vh>Property._consume_args</vh></v>
+<v t="ekr.20181031045138.498"><vh>Property._set_name</vh></v>
+<v t="ekr.20181031045138.499"><vh>Property._set_data</vh></v>
+<v t="ekr.20181031045138.500"><vh>Property.__set__</vh></v>
+<v t="ekr.20181031045138.501"><vh>Property.__get__</vh></v>
+<v t="ekr.20181031045138.502"><vh>Property.make_mutator</vh></v>
+<v t="ekr.20181031045138.503"><vh>Property.make_set_action</vh></v>
+<v t="ekr.20181031045138.504"><vh>Property._validate_py</vh></v>
+<v t="ekr.20181031045138.505"><vh>Property._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.506"><vh>class AnyProp(Property)</vh></v>
 <v t="ekr.20181031045138.507"><vh>class BoolProp(Property)</vh>
-<v t="ekr.20181031045138.508"><vh>BoolProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.508"><vh>BoolProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.509"><vh>class TriStateProp(Property)</vh>
-<v t="ekr.20181031045138.510"><vh>TriStateProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.510"><vh>TriStateProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.511"><vh>class IntProp(Property)</vh>
-<v t="ekr.20181031045138.512"><vh>IntProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.512"><vh>IntProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.513"><vh>class FloatProp(Property)</vh>
-<v t="ekr.20181031045138.514"><vh>FloatProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.514"><vh>FloatProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.515"><vh>class StringProp(Property)</vh>
-<v t="ekr.20181031045138.516"><vh>StringProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.516"><vh>StringProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.517"><vh>class TupleProp(Property)</vh>
-<v t="ekr.20181031045138.518"><vh>TupleProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.518"><vh>TupleProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.519"><vh>class ListProp(Property)</vh>
-<v t="ekr.20181031045138.520"><vh>ListProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.520"><vh>ListProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.521"><vh>class DictProp(Property)</vh>
-<v t="ekr.20181031045138.522"><vh>DictProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.522"><vh>DictProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.523"><vh>class ComponentProp(Property)</vh>
-<v t="ekr.20181031045138.524"><vh>ComponentProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.524"><vh>ComponentProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.525"><vh>class FloatPairProp(Property)</vh>
-<v t="ekr.20181031045138.526"><vh>FloatPairProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.526"><vh>FloatPairProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.527"><vh>class EnumProp(Property)</vh>
-<v t="ekr.20181031045138.528"><vh>EnumProp(Property)._consume_args</vh></v>
-<v t="ekr.20181031045138.529"><vh>EnumProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.528"><vh>EnumProp._consume_args</vh></v>
+<v t="ekr.20181031045138.529"><vh>EnumProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.530"><vh>class ColorProp(Property)</vh>
-<v t="ekr.20181031045138.531"><vh>ColorProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.531"><vh>ColorProp._validate</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.532"><vh>@@clean _reaction.py</vh>
-<v t="ekr.20181031045138.533"><vh>Declarations (_reaction.py)</vh></v>
-<v t="ekr.20181031045138.534"><vh>looks_like_method (_reaction.py)</vh></v>
-<v t="ekr.20181031045138.535"><vh>reaction (_reaction.py)</vh></v>
+<v t="ekr.20181031045138.533"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.534"><vh>looks_like_method </vh></v>
+<v t="ekr.20181031045138.535"><vh>reaction </vh></v>
 <v t="ekr.20181031045138.536"><vh>class ReactionDescriptor(BaseDescriptor)</vh>
-<v t="ekr.20181031045138.537"><vh>ReactionDescriptor(BaseDescriptor).__init__</vh></v>
-<v t="ekr.20181031045138.538"><vh>ReactionDescriptor(BaseDescriptor).__get__</vh></v>
-<v t="ekr.20181031045138.539"><vh>ReactionDescriptor(BaseDescriptor).local_connection_strings</vh></v>
+<v t="ekr.20181031045138.537"><vh>ReactionDescriptor.__init__</vh></v>
+<v t="ekr.20181031045138.538"><vh>ReactionDescriptor.__get__</vh></v>
+<v t="ekr.20181031045138.539"><vh>ReactionDescriptor.local_connection_strings</vh></v>
 </v>
 <v t="ekr.20181031045138.540"><vh>class Reaction</vh>
 <v t="ekr.20181031045138.541"><vh>Reaction.__init__</vh></v>
@@ -651,114 +647,114 @@
 </v>
 </v>
 <v t="ekr.20181031045138.555"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.556"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.556"><vh>Declarations </vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.557"><vh>@path resources</vh>
 <v t="ekr.20181031045138.558"><vh>@@clean iconmaker.py</vh>
-<v t="ekr.20181031045138.559"><vh>Declarations (iconmaker.py)</vh></v>
-<v t="ekr.20181031045138.560"><vh>create_icon (iconmaker.py)</vh></v>
-<v t="ekr.20181031045138.561"><vh>create_icons (iconmaker.py)</vh></v>
-<v t="ekr.20181031045138.562"><vh>create_silly_icon (iconmaker.py)</vh></v>
+<v t="ekr.20181031045138.559"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.560"><vh>create_icon </vh></v>
+<v t="ekr.20181031045138.561"><vh>create_icons </vh></v>
+<v t="ekr.20181031045138.562"><vh>create_silly_icon </vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.563"><vh>@path ui</vh>
 <v t="ekr.20181031045138.564"><vh>@@clean _widget.py</vh>
-<v t="ekr.20181031045138.565"><vh>Declarations (_widget.py)</vh></v>
-<v t="ekr.20181031045138.566"><vh>create_element (_widget.py)</vh></v>
+<v t="ekr.20181031045138.565"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.566"><vh>create_element </vh></v>
 <v t="ekr.20181031045138.567"><vh>class Widget(app.JsComponent)</vh>
-<v t="ekr.20181031045138.568"><vh>Widget(app.JsComponent).set_icon</vh></v>
-<v t="ekr.20181031045138.569"><vh>Widget(app.JsComponent).__init__</vh></v>
-<v t="ekr.20181031045138.570"><vh>Widget(app.JsComponent)._comp_init_property_values</vh></v>
-<v t="ekr.20181031045138.571"><vh>Widget(app.JsComponent).init</vh></v>
-<v t="ekr.20181031045138.572"><vh>Widget(app.JsComponent)._create_dom</vh></v>
-<v t="ekr.20181031045138.573"><vh>Widget(app.JsComponent)._render_dom</vh></v>
-<v t="ekr.20181031045138.574"><vh>Widget(app.JsComponent).__render</vh></v>
-<v t="ekr.20181031045138.575"><vh>Widget(app.JsComponent).__render_resolve</vh></v>
-<v t="ekr.20181031045138.576"><vh>Widget(app.JsComponent)._repr_html_</vh></v>
-<v t="ekr.20181031045138.577"><vh>Widget(app.JsComponent).dispose</vh></v>
-<v t="ekr.20181031045138.578"><vh>Widget(app.JsComponent).apply_style</vh></v>
-<v t="ekr.20181031045138.579"><vh>Widget(app.JsComponent).__css_class_changed</vh></v>
-<v t="ekr.20181031045138.580"><vh>Widget(app.JsComponent).__title_changed</vh></v>
-<v t="ekr.20181031045138.581"><vh>Widget(app.JsComponent).__icon_changed</vh></v>
-<v t="ekr.20181031045138.582"><vh>Widget(app.JsComponent).__update_tabindex</vh></v>
-<v t="ekr.20181031045138.583"><vh>Widget(app.JsComponent)._update_minmaxsize</vh></v>
-<v t="ekr.20181031045138.584"><vh>Widget(app.JsComponent)._query_min_max_size</vh></v>
-<v t="ekr.20181031045138.585"><vh>Widget(app.JsComponent).check_real_size</vh></v>
-<v t="ekr.20181031045138.586"><vh>Widget(app.JsComponent).__size_may_have_changed</vh></v>
-<v t="ekr.20181031045138.587"><vh>Widget(app.JsComponent)._set_size</vh></v>
-<v t="ekr.20181031045138.588"><vh>Widget(app.JsComponent).set_parent</vh></v>
-<v t="ekr.20181031045138.589"><vh>Widget(app.JsComponent).__container_changed</vh></v>
-<v t="ekr.20181031045138.590"><vh>Widget(app.JsComponent)._release_child</vh></v>
-<v t="ekr.20181031045138.591"><vh>Widget(app.JsComponent)._registered_reactions_hook</vh></v>
-<v t="ekr.20181031045138.592"><vh>Widget(app.JsComponent)._init_events</vh></v>
-<v t="ekr.20181031045138.593"><vh>Widget(app.JsComponent).pointer_down</vh></v>
-<v t="ekr.20181031045138.594"><vh>Widget(app.JsComponent).pointer_up</vh></v>
-<v t="ekr.20181031045138.595"><vh>Widget(app.JsComponent).pointer_cancel</vh></v>
-<v t="ekr.20181031045138.596"><vh>Widget(app.JsComponent).pointer_click</vh></v>
-<v t="ekr.20181031045138.597"><vh>Widget(app.JsComponent).pointer_double_click</vh></v>
-<v t="ekr.20181031045138.598"><vh>Widget(app.JsComponent).pointer_move</vh></v>
-<v t="ekr.20181031045138.599"><vh>Widget(app.JsComponent).pointer_wheel</vh></v>
-<v t="ekr.20181031045138.600"><vh>Widget(app.JsComponent)._create_pointer_event</vh></v>
-<v t="ekr.20181031045138.601"><vh>Widget(app.JsComponent).key_down</vh></v>
-<v t="ekr.20181031045138.602"><vh>Widget(app.JsComponent).key_up</vh></v>
-<v t="ekr.20181031045138.603"><vh>Widget(app.JsComponent).key_press</vh></v>
-<v t="ekr.20181031045138.604"><vh>Widget(app.JsComponent)._create_key_event</vh></v>
+<v t="ekr.20181031045138.568"><vh>Widget.set_icon</vh></v>
+<v t="ekr.20181031045138.569"><vh>Widget.__init__</vh></v>
+<v t="ekr.20181031045138.570"><vh>Widget._comp_init_property_values</vh></v>
+<v t="ekr.20181031045138.571"><vh>Widget.init</vh></v>
+<v t="ekr.20181031045138.572"><vh>Widget._create_dom</vh></v>
+<v t="ekr.20181031045138.573"><vh>Widget._render_dom</vh></v>
+<v t="ekr.20181031045138.574"><vh>Widget.__render</vh></v>
+<v t="ekr.20181031045138.575"><vh>Widget.__render_resolve</vh></v>
+<v t="ekr.20181031045138.576"><vh>Widget._repr_html_</vh></v>
+<v t="ekr.20181031045138.577"><vh>Widget.dispose</vh></v>
+<v t="ekr.20181031045138.578"><vh>Widget.apply_style</vh></v>
+<v t="ekr.20181031045138.579"><vh>Widget.__css_class_changed</vh></v>
+<v t="ekr.20181031045138.580"><vh>Widget.__title_changed</vh></v>
+<v t="ekr.20181031045138.581"><vh>Widget.__icon_changed</vh></v>
+<v t="ekr.20181031045138.582"><vh>Widget.__update_tabindex</vh></v>
+<v t="ekr.20181031045138.583"><vh>Widget._update_minmaxsize</vh></v>
+<v t="ekr.20181031045138.584"><vh>Widget._query_min_max_size</vh></v>
+<v t="ekr.20181031045138.585"><vh>Widget.check_real_size</vh></v>
+<v t="ekr.20181031045138.586"><vh>Widget.__size_may_have_changed</vh></v>
+<v t="ekr.20181031045138.587"><vh>Widget._set_size</vh></v>
+<v t="ekr.20181031045138.588"><vh>Widget.set_parent</vh></v>
+<v t="ekr.20181031045138.589"><vh>Widget.__container_changed</vh></v>
+<v t="ekr.20181031045138.590"><vh>Widget._release_child</vh></v>
+<v t="ekr.20181031045138.591"><vh>Widget._registered_reactions_hook</vh></v>
+<v t="ekr.20181031045138.592"><vh>Widget._init_events</vh></v>
+<v t="ekr.20181031045138.593"><vh>Widget.pointer_down</vh></v>
+<v t="ekr.20181031045138.594"><vh>Widget.pointer_up</vh></v>
+<v t="ekr.20181031045138.595"><vh>Widget.pointer_cancel</vh></v>
+<v t="ekr.20181031045138.596"><vh>Widget.pointer_click</vh></v>
+<v t="ekr.20181031045138.597"><vh>Widget.pointer_double_click</vh></v>
+<v t="ekr.20181031045138.598"><vh>Widget.pointer_move</vh></v>
+<v t="ekr.20181031045138.599"><vh>Widget.pointer_wheel</vh></v>
+<v t="ekr.20181031045138.600"><vh>Widget._create_pointer_event</vh></v>
+<v t="ekr.20181031045138.601"><vh>Widget.key_down</vh></v>
+<v t="ekr.20181031045138.602"><vh>Widget.key_up</vh></v>
+<v t="ekr.20181031045138.603"><vh>Widget.key_press</vh></v>
+<v t="ekr.20181031045138.604"><vh>Widget._create_key_event</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.605"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.606"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.606"><vh>Declarations </vh></v>
 </v>
 <v t="ekr.20181031045138.607"><vh>@path layouts</vh>
 <v t="ekr.20181031045138.608"><vh>@@clean _form.py</vh>
-<v t="ekr.20181031045138.609"><vh>Declarations (_form.py)</vh></v>
+<v t="ekr.20181031045138.609"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.610"><vh>class BaseTableLayout(Layout)</vh>
-<v t="ekr.20181031045138.611"><vh>BaseTableLayout(Layout)._apply_table_layout</vh></v>
-<v t="ekr.20181031045138.612"><vh>BaseTableLayout(Layout)._adapt_to_size_change</vh></v>
-<v t="ekr.20181031045138.613"><vh>BaseTableLayout(Layout)._apply_cell_layout</vh></v>
+<v t="ekr.20181031045138.611"><vh>BaseTableLayout._apply_table_layout</vh></v>
+<v t="ekr.20181031045138.612"><vh>BaseTableLayout._adapt_to_size_change</vh></v>
+<v t="ekr.20181031045138.613"><vh>BaseTableLayout._apply_cell_layout</vh></v>
 </v>
 <v t="ekr.20181031045138.614"><vh>class FormLayout(BaseTableLayout)</vh>
-<v t="ekr.20181031045138.615"><vh>FormLayout(BaseTableLayout)._create_dom</vh></v>
-<v t="ekr.20181031045138.616"><vh>FormLayout(BaseTableLayout)._render_dom</vh></v>
-<v t="ekr.20181031045138.617"><vh>FormLayout(BaseTableLayout)._apply_cell_layout</vh></v>
-<v t="ekr.20181031045138.618"><vh>FormLayout(BaseTableLayout)._query_min_max_size</vh></v>
+<v t="ekr.20181031045138.615"><vh>FormLayout._create_dom</vh></v>
+<v t="ekr.20181031045138.616"><vh>FormLayout._render_dom</vh></v>
+<v t="ekr.20181031045138.617"><vh>FormLayout._apply_cell_layout</vh></v>
+<v t="ekr.20181031045138.618"><vh>FormLayout._query_min_max_size</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.619"><vh>@@clean _hv.py</vh>
-<v t="ekr.20181031045138.620"><vh>Declarations (_hv.py)</vh></v>
+<v t="ekr.20181031045138.620"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.621"><vh>class OrientationProp(Property)</vh>
-<v t="ekr.20181031045138.622"><vh>OrientationProp(Property)._validate</vh></v>
+<v t="ekr.20181031045138.622"><vh>OrientationProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.623"><vh>class HVLayout(Layout)</vh>
-<v t="ekr.20181031045138.624"><vh>HVLayout(Layout).__init__</vh></v>
-<v t="ekr.20181031045138.625"><vh>HVLayout(Layout).set_from_flex_values</vh></v>
-<v t="ekr.20181031045138.626"><vh>HVLayout(Layout).set_splitter_positions</vh></v>
-<v t="ekr.20181031045138.627"><vh>HVLayout(Layout).user_splitter_positions</vh></v>
-<v t="ekr.20181031045138.628"><vh>HVLayout(Layout)._query_min_max_size</vh></v>
-<v t="ekr.20181031045138.629"><vh>HVLayout(Layout).__size_changed</vh></v>
-<v t="ekr.20181031045138.630"><vh>HVLayout(Layout).__let_children_check_size</vh></v>
-<v t="ekr.20181031045138.631"><vh>HVLayout(Layout).__set_mode</vh></v>
-<v t="ekr.20181031045138.632"><vh>HVLayout(Layout).__set_orientation</vh></v>
-<v t="ekr.20181031045138.633"><vh>HVLayout(Layout).__set_padding</vh></v>
-<v t="ekr.20181031045138.634"><vh>HVLayout(Layout)._release_child</vh></v>
-<v t="ekr.20181031045138.635"><vh>HVLayout(Layout)._render_dom</vh></v>
-<v t="ekr.20181031045138.636"><vh>HVLayout(Layout)._ensure_seps</vh></v>
-<v t="ekr.20181031045138.637"><vh>HVLayout(Layout)._rerender</vh></v>
-<v t="ekr.20181031045138.638"><vh>HVLayout(Layout)._set_box_child_flexes</vh></v>
-<v t="ekr.20181031045138.639"><vh>HVLayout(Layout)._set_box_spacing</vh></v>
-<v t="ekr.20181031045138.640"><vh>HVLayout(Layout)._get_available_size</vh></v>
-<v t="ekr.20181031045138.641"><vh>HVLayout(Layout).__spacing_changed</vh></v>
-<v t="ekr.20181031045138.642"><vh>HVLayout(Layout)._set_split_from_flexes</vh></v>
-<v t="ekr.20181031045138.643"><vh>HVLayout(Layout).__watch_splitter_positions</vh></v>
-<v t="ekr.20181031045138.644"><vh>HVLayout(Layout).__apply_one_splitter_pos</vh></v>
-<v t="ekr.20181031045138.645"><vh>HVLayout(Layout).__apply_positions</vh></v>
-<v t="ekr.20181031045138.646"><vh>HVLayout(Layout).__render_positions</vh></v>
-<v t="ekr.20181031045138.647"><vh>HVLayout(Layout).pointer_down</vh></v>
-<v t="ekr.20181031045138.648"><vh>HVLayout(Layout).pointer_up</vh></v>
-<v t="ekr.20181031045138.649"><vh>HVLayout(Layout).pointer_move</vh></v>
+<v t="ekr.20181031045138.624"><vh>HVLayout.__init__</vh></v>
+<v t="ekr.20181031045138.625"><vh>HVLayout.set_from_flex_values</vh></v>
+<v t="ekr.20181031045138.626"><vh>HVLayout.set_splitter_positions</vh></v>
+<v t="ekr.20181031045138.627"><vh>HVLayout.user_splitter_positions</vh></v>
+<v t="ekr.20181031045138.628"><vh>HVLayout._query_min_max_size</vh></v>
+<v t="ekr.20181031045138.629"><vh>HVLayout.__size_changed</vh></v>
+<v t="ekr.20181031045138.630"><vh>HVLayout.__let_children_check_size</vh></v>
+<v t="ekr.20181031045138.631"><vh>HVLayout.__set_mode</vh></v>
+<v t="ekr.20181031045138.632"><vh>HVLayout.__set_orientation</vh></v>
+<v t="ekr.20181031045138.633"><vh>HVLayout.__set_padding</vh></v>
+<v t="ekr.20181031045138.634"><vh>HVLayout._release_child</vh></v>
+<v t="ekr.20181031045138.635"><vh>HVLayout._render_dom</vh></v>
+<v t="ekr.20181031045138.636"><vh>HVLayout._ensure_seps</vh></v>
+<v t="ekr.20181031045138.637"><vh>HVLayout._rerender</vh></v>
+<v t="ekr.20181031045138.638"><vh>HVLayout._set_box_child_flexes</vh></v>
+<v t="ekr.20181031045138.639"><vh>HVLayout._set_box_spacing</vh></v>
+<v t="ekr.20181031045138.640"><vh>HVLayout._get_available_size</vh></v>
+<v t="ekr.20181031045138.641"><vh>HVLayout.__spacing_changed</vh></v>
+<v t="ekr.20181031045138.642"><vh>HVLayout._set_split_from_flexes</vh></v>
+<v t="ekr.20181031045138.643"><vh>HVLayout.__watch_splitter_positions</vh></v>
+<v t="ekr.20181031045138.644"><vh>HVLayout.__apply_one_splitter_pos</vh></v>
+<v t="ekr.20181031045138.645"><vh>HVLayout.__apply_positions</vh></v>
+<v t="ekr.20181031045138.646"><vh>HVLayout.__render_positions</vh></v>
+<v t="ekr.20181031045138.647"><vh>HVLayout.pointer_down</vh></v>
+<v t="ekr.20181031045138.648"><vh>HVLayout.pointer_up</vh></v>
+<v t="ekr.20181031045138.649"><vh>HVLayout.pointer_move</vh></v>
 </v>
-<v t="ekr.20181031045138.650"><vh>_applyBoxStyle (_hv.py)</vh></v>
-<v t="ekr.20181031045138.651"><vh>_get_min_max (_hv.py)</vh></v>
+<v t="ekr.20181031045138.650"><vh>_applyBoxStyle </vh></v>
+<v t="ekr.20181031045138.651"><vh>_get_min_max </vh></v>
 <v t="ekr.20181031045138.652"><vh>class HBox(HVLayout)</vh></v>
 <v t="ekr.20181031045138.653"><vh>class VBox(HVLayout)</vh></v>
 <v t="ekr.20181031045138.654"><vh>class HFix(HVLayout)</vh></v>
@@ -767,308 +763,308 @@
 <v t="ekr.20181031045138.657"><vh>class VSplit(HVLayout)</vh></v>
 </v>
 <v t="ekr.20181031045138.658"><vh>@@clean _layout.py</vh>
-<v t="ekr.20181031045138.659"><vh>Declarations (_layout.py)</vh></v>
+<v t="ekr.20181031045138.659"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.660"><vh>class Layout(Widget)</vh></v>
 </v>
 <v t="ekr.20181031045138.661"><vh>@@clean _pinboard.py</vh>
-<v t="ekr.20181031045138.662"><vh>Declarations (_pinboard.py)</vh></v>
+<v t="ekr.20181031045138.662"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.663"><vh>class PinboardLayout(Layout)</vh></v>
 </v>
 <v t="ekr.20181031045138.664"><vh>@@clean _stack.py</vh>
-<v t="ekr.20181031045138.665"><vh>Declarations (_stack.py)</vh></v>
+<v t="ekr.20181031045138.665"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.666"><vh>class StackLayout(Layout)</vh>
-<v t="ekr.20181031045138.667"><vh>StackLayout(Layout).set_current</vh></v>
-<v t="ekr.20181031045138.668"><vh>StackLayout(Layout).__set_current_widget</vh></v>
+<v t="ekr.20181031045138.667"><vh>StackLayout.set_current</vh></v>
+<v t="ekr.20181031045138.668"><vh>StackLayout.__set_current_widget</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.669"><vh>@@clean _tabs.py</vh>
-<v t="ekr.20181031045138.670"><vh>Declarations (_tabs.py)</vh></v>
+<v t="ekr.20181031045138.670"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.671"><vh>class TabLayout(StackLayout)</vh>
-<v t="ekr.20181031045138.672"><vh>TabLayout(StackLayout)._create_dom</vh></v>
-<v t="ekr.20181031045138.673"><vh>TabLayout(StackLayout)._render_dom</vh></v>
-<v t="ekr.20181031045138.674"><vh>TabLayout(StackLayout).__update_tabs</vh></v>
-<v t="ekr.20181031045138.675"><vh>TabLayout(StackLayout).__checks_sizes</vh></v>
-<v t="ekr.20181031045138.676"><vh>TabLayout(StackLayout).user_current</vh></v>
-<v t="ekr.20181031045138.677"><vh>TabLayout(StackLayout)._tabbar_click</vh></v>
+<v t="ekr.20181031045138.672"><vh>TabLayout._create_dom</vh></v>
+<v t="ekr.20181031045138.673"><vh>TabLayout._render_dom</vh></v>
+<v t="ekr.20181031045138.674"><vh>TabLayout.__update_tabs</vh></v>
+<v t="ekr.20181031045138.675"><vh>TabLayout.__checks_sizes</vh></v>
+<v t="ekr.20181031045138.676"><vh>TabLayout.user_current</vh></v>
+<v t="ekr.20181031045138.677"><vh>TabLayout._tabbar_click</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.678"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.679"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.679"><vh>Declarations </vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.680"><vh>@path widgets</vh>
 <v t="ekr.20181031045138.681"><vh>@@clean _bokeh.py</vh>
-<v t="ekr.20181031045138.682"><vh>Declarations (_bokeh.py)</vh></v>
-<v t="ekr.20181031045138.683"><vh>_load_bokeh (_bokeh.py)</vh></v>
-<v t="ekr.20181031045138.684"><vh>_load_bokeh_js (_bokeh.py)</vh></v>
-<v t="ekr.20181031045138.685"><vh>_load_bokeh_css (_bokeh.py)</vh></v>
-<v t="ekr.20181031045138.686"><vh>make_bokeh_widget (_bokeh.py)</vh></v>
+<v t="ekr.20181031045138.682"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.683"><vh>_load_bokeh </vh></v>
+<v t="ekr.20181031045138.684"><vh>_load_bokeh_js </vh></v>
+<v t="ekr.20181031045138.685"><vh>_load_bokeh_css </vh></v>
+<v t="ekr.20181031045138.686"><vh>make_bokeh_widget </vh></v>
 <v t="ekr.20181031045138.687"><vh>class BokehWidget(Widget)</vh>
-<v t="ekr.20181031045138.688"><vh>BokehWidget(Widget).from_plot</vh></v>
-<v t="ekr.20181031045138.689"><vh>BokehWidget(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.690"><vh>BokehWidget(Widget).set_plot_components</vh></v>
-<v t="ekr.20181031045138.691"><vh>BokehWidget(Widget).__resize_plot</vh></v>
+<v t="ekr.20181031045138.688"><vh>BokehWidget.from_plot</vh></v>
+<v t="ekr.20181031045138.689"><vh>BokehWidget._render_dom</vh></v>
+<v t="ekr.20181031045138.690"><vh>BokehWidget.set_plot_components</vh></v>
+<v t="ekr.20181031045138.691"><vh>BokehWidget.__resize_plot</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.692"><vh>@@clean _button.py</vh>
-<v t="ekr.20181031045138.693"><vh>Declarations (_button.py)</vh></v>
+<v t="ekr.20181031045138.693"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.694"><vh>class BaseButton(Widget)</vh>
-<v t="ekr.20181031045138.695"><vh>BaseButton(Widget).__on_pointer_click</vh></v>
-<v t="ekr.20181031045138.696"><vh>BaseButton(Widget).user_checked</vh></v>
+<v t="ekr.20181031045138.695"><vh>BaseButton.__on_pointer_click</vh></v>
+<v t="ekr.20181031045138.696"><vh>BaseButton.user_checked</vh></v>
 </v>
 <v t="ekr.20181031045138.697"><vh>class Button(BaseButton)</vh>
-<v t="ekr.20181031045138.698"><vh>Button(BaseButton)._create_dom</vh></v>
-<v t="ekr.20181031045138.699"><vh>Button(BaseButton)._render_dom</vh></v>
-<v t="ekr.20181031045138.700"><vh>Button(BaseButton).__disabled_changed</vh></v>
+<v t="ekr.20181031045138.698"><vh>Button._create_dom</vh></v>
+<v t="ekr.20181031045138.699"><vh>Button._render_dom</vh></v>
+<v t="ekr.20181031045138.700"><vh>Button.__disabled_changed</vh></v>
 </v>
 <v t="ekr.20181031045138.701"><vh>class ToggleButton(BaseButton)</vh>
-<v t="ekr.20181031045138.702"><vh>ToggleButton(BaseButton)._create_dom</vh></v>
-<v t="ekr.20181031045138.703"><vh>ToggleButton(BaseButton)._render_dom</vh></v>
-<v t="ekr.20181031045138.704"><vh>ToggleButton(BaseButton).__toggle_checked</vh></v>
-<v t="ekr.20181031045138.705"><vh>ToggleButton(BaseButton).__check_changed</vh></v>
+<v t="ekr.20181031045138.702"><vh>ToggleButton._create_dom</vh></v>
+<v t="ekr.20181031045138.703"><vh>ToggleButton._render_dom</vh></v>
+<v t="ekr.20181031045138.704"><vh>ToggleButton.__toggle_checked</vh></v>
+<v t="ekr.20181031045138.705"><vh>ToggleButton.__check_changed</vh></v>
 </v>
 <v t="ekr.20181031045138.706"><vh>class RadioButton(BaseButton)</vh>
-<v t="ekr.20181031045138.707"><vh>RadioButton(BaseButton)._create_dom</vh></v>
-<v t="ekr.20181031045138.708"><vh>RadioButton(BaseButton)._render_dom</vh></v>
-<v t="ekr.20181031045138.709"><vh>RadioButton(BaseButton).__update_group</vh></v>
-<v t="ekr.20181031045138.710"><vh>RadioButton(BaseButton).__check_changed</vh></v>
-<v t="ekr.20181031045138.711"><vh>RadioButton(BaseButton).pointer_click</vh></v>
+<v t="ekr.20181031045138.707"><vh>RadioButton._create_dom</vh></v>
+<v t="ekr.20181031045138.708"><vh>RadioButton._render_dom</vh></v>
+<v t="ekr.20181031045138.709"><vh>RadioButton.__update_group</vh></v>
+<v t="ekr.20181031045138.710"><vh>RadioButton.__check_changed</vh></v>
+<v t="ekr.20181031045138.711"><vh>RadioButton.pointer_click</vh></v>
 </v>
 <v t="ekr.20181031045138.712"><vh>class CheckBox(BaseButton)</vh>
-<v t="ekr.20181031045138.713"><vh>CheckBox(BaseButton)._create_dom</vh></v>
-<v t="ekr.20181031045138.714"><vh>CheckBox(BaseButton)._render_dom</vh></v>
-<v t="ekr.20181031045138.715"><vh>CheckBox(BaseButton).__check_changed</vh></v>
-<v t="ekr.20181031045138.716"><vh>CheckBox(BaseButton)._check_changed_from_dom</vh></v>
+<v t="ekr.20181031045138.713"><vh>CheckBox._create_dom</vh></v>
+<v t="ekr.20181031045138.714"><vh>CheckBox._render_dom</vh></v>
+<v t="ekr.20181031045138.715"><vh>CheckBox.__check_changed</vh></v>
+<v t="ekr.20181031045138.716"><vh>CheckBox._check_changed_from_dom</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.717"><vh>@@clean _canvas.py</vh>
-<v t="ekr.20181031045138.718"><vh>Declarations (_canvas.py)</vh></v>
+<v t="ekr.20181031045138.718"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.719"><vh>class CanvasWidget(Widget)</vh>
-<v t="ekr.20181031045138.720"><vh>CanvasWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.721"><vh>CanvasWidget(Widget)._prevent_default_event</vh></v>
-<v t="ekr.20181031045138.722"><vh>CanvasWidget(Widget)._create_pointer_event</vh></v>
-<v t="ekr.20181031045138.723"><vh>CanvasWidget(Widget).pointer_wheel</vh></v>
-<v t="ekr.20181031045138.724"><vh>CanvasWidget(Widget)._update_canvas_size</vh></v>
+<v t="ekr.20181031045138.720"><vh>CanvasWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.721"><vh>CanvasWidget._prevent_default_event</vh></v>
+<v t="ekr.20181031045138.722"><vh>CanvasWidget._create_pointer_event</vh></v>
+<v t="ekr.20181031045138.723"><vh>CanvasWidget.pointer_wheel</vh></v>
+<v t="ekr.20181031045138.724"><vh>CanvasWidget._update_canvas_size</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.725"><vh>@@clean _color.py</vh>
-<v t="ekr.20181031045138.726"><vh>Declarations (_color.py)</vh></v>
+<v t="ekr.20181031045138.726"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.727"><vh>class ColorSelectWidget(Widget)</vh>
-<v t="ekr.20181031045138.728"><vh>ColorSelectWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.729"><vh>ColorSelectWidget(Widget).user_color</vh></v>
-<v t="ekr.20181031045138.730"><vh>ColorSelectWidget(Widget)._color_changed</vh></v>
-<v t="ekr.20181031045138.731"><vh>ColorSelectWidget(Widget)._color_changed_from_dom</vh></v>
-<v t="ekr.20181031045138.732"><vh>ColorSelectWidget(Widget).__disabled_changed</vh></v>
+<v t="ekr.20181031045138.728"><vh>ColorSelectWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.729"><vh>ColorSelectWidget.user_color</vh></v>
+<v t="ekr.20181031045138.730"><vh>ColorSelectWidget._color_changed</vh></v>
+<v t="ekr.20181031045138.731"><vh>ColorSelectWidget._color_changed_from_dom</vh></v>
+<v t="ekr.20181031045138.732"><vh>ColorSelectWidget.__disabled_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.733"><vh>@@clean _dropdown.py</vh>
-<v t="ekr.20181031045138.734"><vh>Declarations (_dropdown.py)</vh></v>
+<v t="ekr.20181031045138.734"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.735"><vh>class BaseDropdown(Widget)</vh>
-<v t="ekr.20181031045138.736"><vh>BaseDropdown(Widget).init</vh></v>
-<v t="ekr.20181031045138.737"><vh>BaseDropdown(Widget).expand</vh></v>
-<v t="ekr.20181031045138.738"><vh>BaseDropdown(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.739"><vh>BaseDropdown(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.740"><vh>BaseDropdown(Widget)._but_click</vh></v>
-<v t="ekr.20181031045138.741"><vh>BaseDropdown(Widget)._submit_text</vh></v>
-<v t="ekr.20181031045138.742"><vh>BaseDropdown(Widget)._expand</vh></v>
-<v t="ekr.20181031045138.743"><vh>BaseDropdown(Widget)._collapse_maybe</vh></v>
-<v t="ekr.20181031045138.744"><vh>BaseDropdown(Widget)._collapse</vh></v>
-<v t="ekr.20181031045138.745"><vh>BaseDropdown(Widget)._check_expanded_pos</vh></v>
+<v t="ekr.20181031045138.736"><vh>BaseDropdown.init</vh></v>
+<v t="ekr.20181031045138.737"><vh>BaseDropdown.expand</vh></v>
+<v t="ekr.20181031045138.738"><vh>BaseDropdown._create_dom</vh></v>
+<v t="ekr.20181031045138.739"><vh>BaseDropdown._render_dom</vh></v>
+<v t="ekr.20181031045138.740"><vh>BaseDropdown._but_click</vh></v>
+<v t="ekr.20181031045138.741"><vh>BaseDropdown._submit_text</vh></v>
+<v t="ekr.20181031045138.742"><vh>BaseDropdown._expand</vh></v>
+<v t="ekr.20181031045138.743"><vh>BaseDropdown._collapse_maybe</vh></v>
+<v t="ekr.20181031045138.744"><vh>BaseDropdown._collapse</vh></v>
+<v t="ekr.20181031045138.745"><vh>BaseDropdown._check_expanded_pos</vh></v>
 </v>
 <v t="ekr.20181031045138.746"><vh>class ComboBox(BaseDropdown)</vh>
-<v t="ekr.20181031045138.747"><vh>ComboBox(BaseDropdown).set_options</vh></v>
-<v t="ekr.20181031045138.748"><vh>ComboBox(BaseDropdown).set_selected_index</vh></v>
-<v t="ekr.20181031045138.749"><vh>ComboBox(BaseDropdown).set_selected_key</vh></v>
-<v t="ekr.20181031045138.750"><vh>ComboBox(BaseDropdown).user_selected</vh></v>
-<v t="ekr.20181031045138.751"><vh>ComboBox(BaseDropdown)._create_dom</vh></v>
-<v t="ekr.20181031045138.752"><vh>ComboBox(BaseDropdown)._render_dom</vh></v>
-<v t="ekr.20181031045138.753"><vh>ComboBox(BaseDropdown).__track_editable</vh></v>
-<v t="ekr.20181031045138.754"><vh>ComboBox(BaseDropdown)._ul_click</vh></v>
-<v t="ekr.20181031045138.755"><vh>ComboBox(BaseDropdown)._select_from_ul</vh></v>
-<v t="ekr.20181031045138.756"><vh>ComboBox(BaseDropdown)._key_down</vh></v>
-<v t="ekr.20181031045138.757"><vh>ComboBox(BaseDropdown)._expand</vh></v>
-<v t="ekr.20181031045138.758"><vh>ComboBox(BaseDropdown)._submit_text</vh></v>
+<v t="ekr.20181031045138.747"><vh>ComboBox.set_options</vh></v>
+<v t="ekr.20181031045138.748"><vh>ComboBox.set_selected_index</vh></v>
+<v t="ekr.20181031045138.749"><vh>ComboBox.set_selected_key</vh></v>
+<v t="ekr.20181031045138.750"><vh>ComboBox.user_selected</vh></v>
+<v t="ekr.20181031045138.751"><vh>ComboBox._create_dom</vh></v>
+<v t="ekr.20181031045138.752"><vh>ComboBox._render_dom</vh></v>
+<v t="ekr.20181031045138.753"><vh>ComboBox.__track_editable</vh></v>
+<v t="ekr.20181031045138.754"><vh>ComboBox._ul_click</vh></v>
+<v t="ekr.20181031045138.755"><vh>ComboBox._select_from_ul</vh></v>
+<v t="ekr.20181031045138.756"><vh>ComboBox._key_down</vh></v>
+<v t="ekr.20181031045138.757"><vh>ComboBox._expand</vh></v>
+<v t="ekr.20181031045138.758"><vh>ComboBox._submit_text</vh></v>
 </v>
 <v t="ekr.20181031045138.759"><vh>class DropdownContainer(BaseDropdown)</vh>
-<v t="ekr.20181031045138.760"><vh>DropdownContainer(BaseDropdown)._render_dom</vh></v>
-<v t="ekr.20181031045138.761"><vh>DropdownContainer(BaseDropdown)._expand</vh></v>
+<v t="ekr.20181031045138.760"><vh>DropdownContainer._render_dom</vh></v>
+<v t="ekr.20181031045138.761"><vh>DropdownContainer._expand</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.762"><vh>@@clean _group.py</vh>
-<v t="ekr.20181031045138.763"><vh>Declarations (_group.py)</vh></v>
+<v t="ekr.20181031045138.763"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.764"><vh>class GroupWidget(Widget)</vh>
-<v t="ekr.20181031045138.765"><vh>GroupWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.766"><vh>GroupWidget(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.767"><vh>GroupWidget(Widget)._query_min_max_size</vh></v>
-<v t="ekr.20181031045138.768"><vh>GroupWidget(Widget)._title_changed</vh></v>
+<v t="ekr.20181031045138.765"><vh>GroupWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.766"><vh>GroupWidget._render_dom</vh></v>
+<v t="ekr.20181031045138.767"><vh>GroupWidget._query_min_max_size</vh></v>
+<v t="ekr.20181031045138.768"><vh>GroupWidget._title_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.769"><vh>@@clean _iframe.py</vh>
-<v t="ekr.20181031045138.770"><vh>Declarations (_iframe.py)</vh></v>
+<v t="ekr.20181031045138.770"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.771"><vh>class IFrame(Widget)</vh>
-<v t="ekr.20181031045138.772"><vh>IFrame(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.773"><vh>IFrame(Widget).__on_size</vh></v>
-<v t="ekr.20181031045138.774"><vh>IFrame(Widget)._update_url</vh></v>
+<v t="ekr.20181031045138.772"><vh>IFrame._create_dom</vh></v>
+<v t="ekr.20181031045138.773"><vh>IFrame.__on_size</vh></v>
+<v t="ekr.20181031045138.774"><vh>IFrame._update_url</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.775"><vh>@@clean _label.py</vh>
-<v t="ekr.20181031045138.776"><vh>Declarations (_label.py)</vh></v>
+<v t="ekr.20181031045138.776"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.777"><vh>class Label(Widget)</vh>
-<v t="ekr.20181031045138.778"><vh>Label(Widget).init</vh></v>
-<v t="ekr.20181031045138.779"><vh>Label(Widget).set_text</vh></v>
-<v t="ekr.20181031045138.780"><vh>Label(Widget).set_html</vh></v>
-<v t="ekr.20181031045138.781"><vh>Label(Widget)._wrap_changed</vh></v>
+<v t="ekr.20181031045138.778"><vh>Label.init</vh></v>
+<v t="ekr.20181031045138.779"><vh>Label.set_text</vh></v>
+<v t="ekr.20181031045138.780"><vh>Label.set_html</vh></v>
+<v t="ekr.20181031045138.781"><vh>Label._wrap_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.782"><vh>@@clean _lineedit.py</vh>
-<v t="ekr.20181031045138.783"><vh>Declarations (_lineedit.py)</vh></v>
+<v t="ekr.20181031045138.783"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.784"><vh>class LineEdit(Widget)</vh>
-<v t="ekr.20181031045138.785"><vh>LineEdit(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.786"><vh>LineEdit(Widget).user_text</vh></v>
-<v t="ekr.20181031045138.787"><vh>LineEdit(Widget).user_done</vh></v>
-<v t="ekr.20181031045138.788"><vh>LineEdit(Widget).submit</vh></v>
-<v t="ekr.20181031045138.789"><vh>LineEdit(Widget).key_down</vh></v>
-<v t="ekr.20181031045138.790"><vh>LineEdit(Widget).__text_changed</vh></v>
-<v t="ekr.20181031045138.791"><vh>LineEdit(Widget).__password_mode_changed</vh></v>
-<v t="ekr.20181031045138.792"><vh>LineEdit(Widget).__placeholder_text_changed</vh></v>
-<v t="ekr.20181031045138.793"><vh>LineEdit(Widget).__autocomp_changed</vh></v>
-<v t="ekr.20181031045138.794"><vh>LineEdit(Widget).__disabled_changed</vh></v>
+<v t="ekr.20181031045138.785"><vh>LineEdit._create_dom</vh></v>
+<v t="ekr.20181031045138.786"><vh>LineEdit.user_text</vh></v>
+<v t="ekr.20181031045138.787"><vh>LineEdit.user_done</vh></v>
+<v t="ekr.20181031045138.788"><vh>LineEdit.submit</vh></v>
+<v t="ekr.20181031045138.789"><vh>LineEdit.key_down</vh></v>
+<v t="ekr.20181031045138.790"><vh>LineEdit.__text_changed</vh></v>
+<v t="ekr.20181031045138.791"><vh>LineEdit.__password_mode_changed</vh></v>
+<v t="ekr.20181031045138.792"><vh>LineEdit.__placeholder_text_changed</vh></v>
+<v t="ekr.20181031045138.793"><vh>LineEdit.__autocomp_changed</vh></v>
+<v t="ekr.20181031045138.794"><vh>LineEdit.__disabled_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.795"><vh>@@clean _media.py</vh>
-<v t="ekr.20181031045138.796"><vh>Declarations (_media.py)</vh></v>
+<v t="ekr.20181031045138.796"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.797"><vh>class ImageWidget(Widget)</vh>
-<v t="ekr.20181031045138.798"><vh>ImageWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.799"><vh>ImageWidget(Widget).__resize_image</vh></v>
-<v t="ekr.20181031045138.800"><vh>ImageWidget(Widget).__source_changed</vh></v>
+<v t="ekr.20181031045138.798"><vh>ImageWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.799"><vh>ImageWidget.__resize_image</vh></v>
+<v t="ekr.20181031045138.800"><vh>ImageWidget.__source_changed</vh></v>
 </v>
 <v t="ekr.20181031045138.801"><vh>class VideoWidget(Widget)</vh>
-<v t="ekr.20181031045138.802"><vh>VideoWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.803"><vh>VideoWidget(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.804"><vh>VideoWidget(Widget).__source_changed</vh></v>
+<v t="ekr.20181031045138.802"><vh>VideoWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.803"><vh>VideoWidget._render_dom</vh></v>
+<v t="ekr.20181031045138.804"><vh>VideoWidget.__source_changed</vh></v>
 </v>
 <v t="ekr.20181031045138.805"><vh>class YoutubeWidget(Widget)</vh>
-<v t="ekr.20181031045138.806"><vh>YoutubeWidget(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.807"><vh>YoutubeWidget(Widget)._update_canvas_size</vh></v>
-<v t="ekr.20181031045138.808"><vh>YoutubeWidget(Widget).__source_changed</vh></v>
+<v t="ekr.20181031045138.806"><vh>YoutubeWidget._create_dom</vh></v>
+<v t="ekr.20181031045138.807"><vh>YoutubeWidget._update_canvas_size</vh></v>
+<v t="ekr.20181031045138.808"><vh>YoutubeWidget.__source_changed</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.809"><vh>@@clean _plotly.py</vh>
-<v t="ekr.20181031045138.810"><vh>Declarations (_plotly.py)</vh></v>
+<v t="ekr.20181031045138.810"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.811"><vh>class PlotlyWidget(Widget)</vh>
-<v t="ekr.20181031045138.812"><vh>PlotlyWidget(Widget).__relayout</vh></v>
-<v t="ekr.20181031045138.813"><vh>PlotlyWidget(Widget)._init_plot</vh></v>
+<v t="ekr.20181031045138.812"><vh>PlotlyWidget.__relayout</vh></v>
+<v t="ekr.20181031045138.813"><vh>PlotlyWidget._init_plot</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.814"><vh>@@clean _plotwidget.py</vh>
-<v t="ekr.20181031045138.815"><vh>Declarations (_plotwidget.py)</vh></v>
+<v t="ekr.20181031045138.815"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.816"><vh>class PlotWidget(CanvasWidget)</vh>
-<v t="ekr.20181031045138.817"><vh>PlotWidget(CanvasWidget).set_data</vh></v>
-<v t="ekr.20181031045138.818"><vh>PlotWidget(CanvasWidget).init</vh></v>
-<v t="ekr.20181031045138.819"><vh>PlotWidget(CanvasWidget).update</vh></v>
-<v t="ekr.20181031045138.820"><vh>PlotWidget(CanvasWidget)._update</vh></v>
-<v t="ekr.20181031045138.821"><vh>PlotWidget(CanvasWidget)._get_ticks</vh></v>
+<v t="ekr.20181031045138.817"><vh>PlotWidget.set_data</vh></v>
+<v t="ekr.20181031045138.818"><vh>PlotWidget.init</vh></v>
+<v t="ekr.20181031045138.819"><vh>PlotWidget.update</vh></v>
+<v t="ekr.20181031045138.820"><vh>PlotWidget._update</vh></v>
+<v t="ekr.20181031045138.821"><vh>PlotWidget._get_ticks</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.822"><vh>@@clean _progressbar.py</vh>
-<v t="ekr.20181031045138.823"><vh>Declarations (_progressbar.py)</vh></v>
+<v t="ekr.20181031045138.823"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.824"><vh>class ProgressBar(Widget)</vh>
-<v t="ekr.20181031045138.825"><vh>ProgressBar(Widget).set_value</vh></v>
-<v t="ekr.20181031045138.826"><vh>ProgressBar(Widget).__keep_value_constrained</vh></v>
-<v t="ekr.20181031045138.827"><vh>ProgressBar(Widget)._render_dom</vh></v>
+<v t="ekr.20181031045138.825"><vh>ProgressBar.set_value</vh></v>
+<v t="ekr.20181031045138.826"><vh>ProgressBar.__keep_value_constrained</vh></v>
+<v t="ekr.20181031045138.827"><vh>ProgressBar._render_dom</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.828"><vh>@@clean _slider.py</vh>
-<v t="ekr.20181031045138.829"><vh>Declarations (_slider.py)</vh></v>
+<v t="ekr.20181031045138.829"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.830"><vh>class Slider(Widget)</vh>
-<v t="ekr.20181031045138.831"><vh>Slider(Widget).init</vh></v>
-<v t="ekr.20181031045138.832"><vh>Slider(Widget).user_value</vh></v>
-<v t="ekr.20181031045138.833"><vh>Slider(Widget).user_done</vh></v>
-<v t="ekr.20181031045138.834"><vh>Slider(Widget).set_value</vh></v>
-<v t="ekr.20181031045138.835"><vh>Slider(Widget).__keep_value_constrained</vh></v>
-<v t="ekr.20181031045138.836"><vh>Slider(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.837"><vh>Slider(Widget).pointer_down</vh></v>
-<v t="ekr.20181031045138.838"><vh>Slider(Widget).pointer_up</vh></v>
-<v t="ekr.20181031045138.839"><vh>Slider(Widget).pointer_move</vh></v>
-<v t="ekr.20181031045138.840"><vh>Slider(Widget).__on_key</vh></v>
+<v t="ekr.20181031045138.831"><vh>Slider.init</vh></v>
+<v t="ekr.20181031045138.832"><vh>Slider.user_value</vh></v>
+<v t="ekr.20181031045138.833"><vh>Slider.user_done</vh></v>
+<v t="ekr.20181031045138.834"><vh>Slider.set_value</vh></v>
+<v t="ekr.20181031045138.835"><vh>Slider.__keep_value_constrained</vh></v>
+<v t="ekr.20181031045138.836"><vh>Slider._render_dom</vh></v>
+<v t="ekr.20181031045138.837"><vh>Slider.pointer_down</vh></v>
+<v t="ekr.20181031045138.838"><vh>Slider.pointer_up</vh></v>
+<v t="ekr.20181031045138.839"><vh>Slider.pointer_move</vh></v>
+<v t="ekr.20181031045138.840"><vh>Slider.__on_key</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.841"><vh>@@clean _tree.py</vh>
-<v t="ekr.20181031045138.842"><vh>Declarations (_tree.py)</vh></v>
+<v t="ekr.20181031045138.842"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.843"><vh>class TreeWidget(Widget)</vh>
-<v t="ekr.20181031045138.844"><vh>TreeWidget(Widget).init</vh></v>
-<v t="ekr.20181031045138.845"><vh>TreeWidget(Widget).get_all_items</vh></v>
-<v t="ekr.20181031045138.846"><vh>TreeWidget(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.847"><vh>TreeWidget(Widget).__check_listmode</vh></v>
-<v t="ekr.20181031045138.848"><vh>TreeWidget(Widget).__max_selected_changed</vh></v>
-<v t="ekr.20181031045138.849"><vh>TreeWidget(Widget)._handle_item_clicked</vh></v>
-<v t="ekr.20181031045138.850"><vh>TreeWidget(Widget).highlight_hide</vh></v>
-<v t="ekr.20181031045138.851"><vh>TreeWidget(Widget).highlight_show_item</vh></v>
-<v t="ekr.20181031045138.852"><vh>TreeWidget(Widget).highlight_show</vh></v>
-<v t="ekr.20181031045138.853"><vh>TreeWidget(Widget).highlight_get</vh></v>
-<v t="ekr.20181031045138.854"><vh>TreeWidget(Widget).highlight_toggle_selected</vh></v>
-<v t="ekr.20181031045138.855"><vh>TreeWidget(Widget).highlight_toggle_checked</vh></v>
-<v t="ekr.20181031045138.856"><vh>TreeWidget(Widget)._de_highlight_and_get_highlighted_index</vh></v>
-<v t="ekr.20181031045138.857"><vh>TreeWidget(Widget)._get_all_items_annotated</vh></v>
+<v t="ekr.20181031045138.844"><vh>TreeWidget.init</vh></v>
+<v t="ekr.20181031045138.845"><vh>TreeWidget.get_all_items</vh></v>
+<v t="ekr.20181031045138.846"><vh>TreeWidget._render_dom</vh></v>
+<v t="ekr.20181031045138.847"><vh>TreeWidget.__check_listmode</vh></v>
+<v t="ekr.20181031045138.848"><vh>TreeWidget.__max_selected_changed</vh></v>
+<v t="ekr.20181031045138.849"><vh>TreeWidget._handle_item_clicked</vh></v>
+<v t="ekr.20181031045138.850"><vh>TreeWidget.highlight_hide</vh></v>
+<v t="ekr.20181031045138.851"><vh>TreeWidget.highlight_show_item</vh></v>
+<v t="ekr.20181031045138.852"><vh>TreeWidget.highlight_show</vh></v>
+<v t="ekr.20181031045138.853"><vh>TreeWidget.highlight_get</vh></v>
+<v t="ekr.20181031045138.854"><vh>TreeWidget.highlight_toggle_selected</vh></v>
+<v t="ekr.20181031045138.855"><vh>TreeWidget.highlight_toggle_checked</vh></v>
+<v t="ekr.20181031045138.856"><vh>TreeWidget._de_highlight_and_get_highlighted_index</vh></v>
+<v t="ekr.20181031045138.857"><vh>TreeWidget._get_all_items_annotated</vh></v>
 </v>
 <v t="ekr.20181031045138.858"><vh>class TreeItem(Widget)</vh>
-<v t="ekr.20181031045138.859"><vh>TreeItem(Widget).user_selected</vh></v>
-<v t="ekr.20181031045138.860"><vh>TreeItem(Widget).user_checked</vh></v>
-<v t="ekr.20181031045138.861"><vh>TreeItem(Widget).user_collapsed</vh></v>
-<v t="ekr.20181031045138.862"><vh>TreeItem(Widget).set_parent</vh></v>
-<v t="ekr.20181031045138.863"><vh>TreeItem(Widget)._create_dom</vh></v>
-<v t="ekr.20181031045138.864"><vh>TreeItem(Widget)._render_dom</vh></v>
-<v t="ekr.20181031045138.865"><vh>TreeItem(Widget)._render_title</vh></v>
-<v t="ekr.20181031045138.866"><vh>TreeItem(Widget)._render_text</vh></v>
-<v t="ekr.20181031045138.867"><vh>TreeItem(Widget)._on_click</vh></v>
-<v t="ekr.20181031045138.868"><vh>TreeItem(Widget)._on_double_click</vh></v>
+<v t="ekr.20181031045138.859"><vh>TreeItem.user_selected</vh></v>
+<v t="ekr.20181031045138.860"><vh>TreeItem.user_checked</vh></v>
+<v t="ekr.20181031045138.861"><vh>TreeItem.user_collapsed</vh></v>
+<v t="ekr.20181031045138.862"><vh>TreeItem.set_parent</vh></v>
+<v t="ekr.20181031045138.863"><vh>TreeItem._create_dom</vh></v>
+<v t="ekr.20181031045138.864"><vh>TreeItem._render_dom</vh></v>
+<v t="ekr.20181031045138.865"><vh>TreeItem._render_title</vh></v>
+<v t="ekr.20181031045138.866"><vh>TreeItem._render_text</vh></v>
+<v t="ekr.20181031045138.867"><vh>TreeItem._on_click</vh></v>
+<v t="ekr.20181031045138.868"><vh>TreeItem._on_double_click</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.869"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.870"><vh>Declarations (__init__.py)</vh></v>
+<v t="ekr.20181031045138.870"><vh>Declarations </vh></v>
 </v>
 </v>
 </v>
 <v t="ekr.20181031045138.871"><vh>@path util</vh>
 <v t="ekr.20181031045138.872"><vh>@@clean config.py</vh>
-<v t="ekr.20181031045138.873"><vh>Declarations (config.py)</vh></v>
-<v t="ekr.20181031045138.874"><vh>as_bool (config.py)</vh></v>
-<v t="ekr.20181031045138.875"><vh>get_tuple_validator (config.py)</vh></v>
-<v t="ekr.20181031045138.876"><vh>stack_sorter (config.py)</vh></v>
+<v t="ekr.20181031045138.873"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.874"><vh>as_bool </vh></v>
+<v t="ekr.20181031045138.875"><vh>get_tuple_validator </vh></v>
+<v t="ekr.20181031045138.876"><vh>stack_sorter </vh></v>
 <v t="ekr.20181031045138.877"><vh>class Config(object)</vh>
-<v t="ekr.20181031045138.878"><vh>Config(object).__init__</vh></v>
-<v t="ekr.20181031045138.879"><vh>Config(object).__repr__</vh></v>
-<v t="ekr.20181031045138.880"><vh>Config(object).__str__</vh></v>
-<v t="ekr.20181031045138.881"><vh>Config(object).__len__</vh></v>
-<v t="ekr.20181031045138.882"><vh>Config(object).__iter__</vh></v>
-<v t="ekr.20181031045138.883"><vh>Config(object).__dir__</vh></v>
-<v t="ekr.20181031045138.884"><vh>Config(object).__getattr__</vh></v>
-<v t="ekr.20181031045138.885"><vh>Config(object).__getitem__</vh></v>
-<v t="ekr.20181031045138.886"><vh>Config(object).__setattr__</vh></v>
-<v t="ekr.20181031045138.887"><vh>Config(object).__setitem__</vh></v>
-<v t="ekr.20181031045138.888"><vh>Config(object)._set</vh></v>
-<v t="ekr.20181031045138.889"><vh>Config(object).load_from_file</vh></v>
-<v t="ekr.20181031045138.890"><vh>Config(object).load_from_string</vh></v>
-<v t="ekr.20181031045138.891"><vh>Config(object)._load_from_string</vh></v>
+<v t="ekr.20181031045138.878"><vh>Config.__init__</vh></v>
+<v t="ekr.20181031045138.879"><vh>Config.__repr__</vh></v>
+<v t="ekr.20181031045138.880"><vh>Config.__str__</vh></v>
+<v t="ekr.20181031045138.881"><vh>Config.__len__</vh></v>
+<v t="ekr.20181031045138.882"><vh>Config.__iter__</vh></v>
+<v t="ekr.20181031045138.883"><vh>Config.__dir__</vh></v>
+<v t="ekr.20181031045138.884"><vh>Config.__getattr__</vh></v>
+<v t="ekr.20181031045138.885"><vh>Config.__getitem__</vh></v>
+<v t="ekr.20181031045138.886"><vh>Config.__setattr__</vh></v>
+<v t="ekr.20181031045138.887"><vh>Config.__setitem__</vh></v>
+<v t="ekr.20181031045138.888"><vh>Config._set</vh></v>
+<v t="ekr.20181031045138.889"><vh>Config.load_from_file</vh></v>
+<v t="ekr.20181031045138.890"><vh>Config.load_from_string</vh></v>
+<v t="ekr.20181031045138.891"><vh>Config._load_from_string</vh></v>
 </v>
-<v t="ekr.20181031045138.892"><vh>is_valid_name (config.py)</vh></v>
-<v t="ekr.20181031045138.893"><vh>isidentifier (config.py)</vh></v>
-<v t="ekr.20181031045138.894"><vh>appdata_dir (config.py)</vh></v>
+<v t="ekr.20181031045138.892"><vh>is_valid_name </vh></v>
+<v t="ekr.20181031045138.893"><vh>isidentifier </vh></v>
+<v t="ekr.20181031045138.894"><vh>appdata_dir </vh></v>
 </v>
 <v t="ekr.20181031045138.895"><vh>@@clean getresource.py</vh>
-<v t="ekr.20181031045138.896"><vh>Declarations (getresource.py)</vh></v>
-<v t="ekr.20181031045138.897"><vh>get_resoure_path (getresource.py)</vh></v>
-<v t="ekr.20181031045138.898"><vh>get_resource (getresource.py)</vh></v>
-<v t="ekr.20181031045138.899"><vh>_fetch_file (getresource.py)</vh></v>
+<v t="ekr.20181031045138.896"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.897"><vh>get_resoure_path </vh></v>
+<v t="ekr.20181031045138.898"><vh>get_resource </vh></v>
+<v t="ekr.20181031045138.899"><vh>_fetch_file </vh></v>
 </v>
 <v t="ekr.20181031045138.900"><vh>@@clean logging.py</vh>
-<v t="ekr.20181031045138.901"><vh>Declarations (logging.py)</vh></v>
+<v t="ekr.20181031045138.901"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.902"><vh>class _Formatter(logging.Formatter)</vh>
-<v t="ekr.20181031045138.903"><vh>_Formatter(logging.Formatter).__init__</vh></v>
-<v t="ekr.20181031045138.904"><vh>_Formatter(logging.Formatter).format</vh></v>
+<v t="ekr.20181031045138.903"><vh>_Formatter.__init__</vh></v>
+<v t="ekr.20181031045138.904"><vh>_Formatter.format</vh></v>
 </v>
 <v t="ekr.20181031045138.905"><vh>class _Handler(logging.StreamHandler)</vh>
-<v t="ekr.20181031045138.906"><vh>_Handler(logging.StreamHandler).emit</vh></v>
+<v t="ekr.20181031045138.906"><vh>_Handler.emit</vh></v>
 </v>
 <v t="ekr.20181031045138.907"><vh>class _MatchFilter</vh>
 <v t="ekr.20181031045138.908"><vh>_MatchFilter.__init__</vh></v>
@@ -1078,7 +1074,7 @@
 <v t="ekr.20181031045138.911"><vh>_CaptureFilter.__init__</vh></v>
 <v t="ekr.20181031045138.912"><vh>_CaptureFilter.filter</vh></v>
 </v>
-<v t="ekr.20181031045138.913"><vh>set_log_level (logging.py)</vh></v>
+<v t="ekr.20181031045138.913"><vh>set_log_level </vh></v>
 <v t="ekr.20181031045138.914"><vh>class capture_log</vh>
 <v t="ekr.20181031045138.915"><vh>capture_log.__init__</vh></v>
 <v t="ekr.20181031045138.916"><vh>capture_log.__enter__</vh></v>
@@ -1086,30 +1082,28 @@
 </v>
 </v>
 <v t="ekr.20181031045138.918"><vh>@@clean minify.py</vh>
-<v t="ekr.20181031045138.919"><vh>Declarations (minify.py)</vh></v>
-<v t="ekr.20181031045138.920"><vh>minify (minify.py)</vh></v>
-<v t="ekr.20181031045138.921"><vh>remove_comments (minify.py)</vh></v>
-<v t="ekr.20181031045138.922"><vh>remove_all_whitespace (minify.py)</vh></v>
-<v t="ekr.20181031045138.923"><vh>remove_empty_lines (minify.py)</vh></v>
-<v t="ekr.20181031045138.924"><vh>remove_trailing_whitespace (minify.py)</vh></v>
-<v t="ekr.20181031045138.925"><vh>tabbify (minify.py)</vh></v>
+<v t="ekr.20181031045138.919"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.920"><vh>minify </vh></v>
+<v t="ekr.20181031045138.921"><vh>remove_comments </vh></v>
+<v t="ekr.20181031045138.922"><vh>remove_all_whitespace </vh></v>
+<v t="ekr.20181031045138.923"><vh>remove_empty_lines </vh></v>
+<v t="ekr.20181031045138.924"><vh>remove_trailing_whitespace </vh></v>
+<v t="ekr.20181031045138.925"><vh>tabbify </vh></v>
 </v>
 <v t="ekr.20181031045138.926"><vh>@@clean screenshot.py</vh>
-<v t="ekr.20181031045138.927"><vh>Declarations (screenshot.py)</vh></v>
+<v t="ekr.20181031045138.927"><vh>Declarations </vh></v>
 </v>
 <v t="ekr.20181031045138.928"><vh>@@clean testing.py</vh>
-<v t="ekr.20181031045138.929"><vh>Declarations (testing.py)</vh></v>
-<v t="ekr.20181031045138.930"><vh>run_tests_if_main (testing.py)</vh></v>
-<v t="ekr.20181031045138.931"><vh>_enable_faulthandler (testing.py)</vh></v>
-<v t="ekr.20181031045138.932"><vh>_clear_our_modules (testing.py)</vh></v>
+<v t="ekr.20181031045138.929"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.930"><vh>run_tests_if_main </vh></v>
+<v t="ekr.20181031045138.931"><vh>_enable_faulthandler </vh></v>
+<v t="ekr.20181031045138.932"><vh>_clear_our_modules </vh></v>
 </v>
 <v t="ekr.20181031045138.933"><vh>@@clean __init__.py</vh></v>
-</v>
 </v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20181031045130.3"></t>
-<t tx="ekr.20181031045138.1"></t>
 <t tx="ekr.20181031045138.10">class CLI:
     """ Command line interface class. Commands are simply defined as methods.
     """
@@ -3093,7 +3087,18 @@ StubComponent.__jsmodule__ = __name__
 \\-4.# participate in the AppComponentMeta class, so we add it here.
 </t>
 <t tx="ekr.20181031045138.2">@path C:/Anaconda3/Lib/site-packages/flexx/
-@others
+"""
+The flexx.flx module provides a namspace combining all the things from
+flexx.app, flexx.event, and flexx.ui.
+"""
+
+# flake8: noqa
+
+from . import __version__, config, set_log_level
+from .event import *
+from .app import *
+from .ui import *
+
 @language python
 @tabwidth -4
 </t>
@@ -5100,18 +5105,6 @@ async def co_eval(self, js):
     if len(self._ping_calls) &gt; 0:
         send_ping_later(self)
 
-</t>
-<t tx="ekr.20181031045138.3">"""
-The flexx.flx module provides a namspace combining all the things from
-flexx.app, flexx.event, and flexx.ui.
-"""
-
-# flake8: noqa
-
-from . import __version__, config, set_log_level
-from .event import *
-from .app import *
-from .ui import *
 </t>
 <t tx="ekr.20181031045138.30">def _parse_options(self, compression=0, use_checksum=False, float64=True):
 
@@ -15445,6 +15438,22 @@ def __resize_image(self):
 
 </t>
 <t tx="ekr.20181031045138.8">@path C:/Anaconda3/Lib/site-packages/flexx/
+"""
+Flexx has a command line interface to perform some simple tasks.
+Invoke it via ``python -m flexx``. Additional command line arguments
+can be provided to configure Flexx, see
+:func:`configuring flexx &lt;flexx.config&gt;`.
+
+.. code-block:: none
+
+"""
+
+import sys
+
+ALIASES = {'-h': 'help', '--help': 'help',
+           '--version': 'version',
+          }
+
 @others
 if __name__ == '__main__':
     main()
@@ -17452,7 +17461,7 @@ INSTANCE_DOCS = """ Configuration object for {name}
     return re.match(r'^\w+$', s, re.UNICODE) and re.match(r'^[0-9]', s) is None
 
 
-# From pyzolib/paths.py (https://bitbucket.org/pyzo/pyzolib/src/tip/paths.py)
+# From pyzolib/paths.py 
 </t>
 <t tx="ekr.20181031045138.894">def appdata_dir(appname=None, roaming=False):
     """ Get the path to the application directory, where applications
@@ -17602,23 +17611,6 @@ RESOURCES = {
 
 
 # Running this file as a script will download all downloadable resources
-</t>
-<t tx="ekr.20181031045138.9">"""
-Flexx has a command line interface to perform some simple tasks.
-Invoke it via ``python -m flexx``. Additional command line arguments
-can be provided to configure Flexx, see
-:func:`configuring flexx &lt;flexx.config&gt;`.
-
-.. code-block:: none
-
-"""
-
-import sys
-
-ALIASES = {'-h': 'help', '--help': 'help',
-           '--version': 'version',
-          }
-
 </t>
 <t tx="ekr.20181031045138.90">@event.emitter
 def connections_changed(self, name):
