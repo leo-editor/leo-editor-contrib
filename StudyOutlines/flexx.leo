@@ -742,6 +742,7 @@
 <v t="ekr.20181117050140.1"><vh>&lt;&lt; _widget docstring &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.566"><vh>create_element </vh></v>
 <v t="ekr.20181031045138.567"><vh>class Widget(app.JsComponent)</vh>
+<v t="ekr.20181117073144.1"><vh>&lt;&lt; Widget Css &gt;&gt;</vh></v>
 <v t="ekr.20181117052537.1"><vh>&lt;&lt; Widget Properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.568"><vh>Widget.set_icon</vh></v>
 <v t="ekr.20181117050521.1"><vh>Methods</vh>
@@ -800,11 +801,13 @@
 <v t="ekr.20181031045138.608"><vh>@@clean _form.py</vh>
 <v t="ekr.20181031045138.609"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.610"><vh>class BaseTableLayout(Layout)</vh>
+<v t="ekr.20181117073241.1"><vh>&lt;&lt; BaseTableLayout css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.611"><vh>BaseTableLayout._apply_table_layout</vh></v>
 <v t="ekr.20181031045138.612"><vh>BaseTableLayout._adapt_to_size_change</vh></v>
 <v t="ekr.20181031045138.613"><vh>BaseTableLayout._apply_cell_layout</vh></v>
 </v>
 <v t="ekr.20181031045138.614"><vh>class FormLayout(BaseTableLayout)</vh>
+<v t="ekr.20181117073533.1"><vh>&lt;&lt; FormLayout css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.615"><vh>FormLayout._create_dom</vh></v>
 <v t="ekr.20181031045138.616"><vh>FormLayout._render_dom</vh></v>
 <v t="ekr.20181031045138.617"><vh>FormLayout._apply_cell_layout</vh></v>
@@ -870,19 +873,25 @@
 </v>
 </v>
 <v t="ekr.20181031045138.658"><vh>@@clean _layout.py</vh>
-<v t="ekr.20181031045138.660"><vh>class Layout(Widget)</vh></v>
+<v t="ekr.20181031045138.660"><vh>class Layout(Widget)</vh>
+<v t="ekr.20181117073601.1"><vh>&lt;&lt; Layout css &gt;&gt;</vh></v>
+</v>
 </v>
 <v t="ekr.20181031045138.661"><vh>@@clean _pinboard.py</vh>
-<v t="ekr.20181031045138.663"><vh>class PinboardLayout(Layout)</vh></v>
+<v t="ekr.20181031045138.663"><vh>class PinboardLayout(Layout)</vh>
+<v t="ekr.20181117073637.1"><vh>&lt;&lt; PinboardLayout css &gt;&gt;</vh></v>
+</v>
 </v>
 <v t="ekr.20181031045138.664"><vh>@@clean _stack.py</vh>
 <v t="ekr.20181031045138.666"><vh>class StackLayout(Layout)</vh>
+<v t="ekr.20181117073503.1"><vh>&lt;&lt; StackLayout css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.667"><vh>StackLayout.set_current</vh></v>
 <v t="ekr.20181031045138.668"><vh>StackLayout.__set_current_widget</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.669"><vh>@@clean _tabs.py</vh>
 <v t="ekr.20181031045138.671"><vh>class TabLayout(StackLayout)</vh>
+<v t="ekr.20181117073706.1"><vh>&lt;&lt; TabLayou css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.672"><vh>TabLayout._create_dom</vh></v>
 <v t="ekr.20181031045138.673"><vh>TabLayout._render_dom</vh></v>
 <v t="ekr.20181031045138.674"><vh>TabLayout.__update_tabs</vh></v>
@@ -908,8 +917,9 @@
 </v>
 </v>
 <v t="ekr.20181031045138.692"><vh>@@clean _button.py</vh>
-<v t="ekr.20181031045138.693"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.694"><vh>class BaseButton(Widget)</vh>
+<v t="ekr.20181117073749.1"><vh>&lt;&lt; BaseButton css &gt;&gt;</vh></v>
+<v t="ekr.20181117074935.1"><vh>&lt;&lt; BaseButton properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.695"><vh>BaseButton.__on_pointer_click</vh></v>
 <v t="ekr.20181031045138.696"><vh>BaseButton.user_checked</vh></v>
 </v>
@@ -941,6 +951,8 @@
 <v t="ekr.20181031045138.717"><vh>@@clean _canvas.py</vh>
 <v t="ekr.20181031045138.718"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.719"><vh>class CanvasWidget(Widget)</vh>
+<v t="ekr.20181117073825.1"><vh>&lt;&lt; CanvasWidget css &gt;&gt;</vh></v>
+<v t="ekr.20181117075020.1"><vh>&lt;&lt; CanvasWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.720"><vh>CanvasWidget._create_dom</vh></v>
 <v t="ekr.20181031045138.721"><vh>CanvasWidget._prevent_default_event</vh></v>
 <v t="ekr.20181031045138.722"><vh>CanvasWidget._create_pointer_event</vh></v>
@@ -949,8 +961,8 @@
 </v>
 </v>
 <v t="ekr.20181031045138.725"><vh>@@clean _color.py</vh>
-<v t="ekr.20181031045138.726"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.727"><vh>class ColorSelectWidget(Widget)</vh>
+<v t="ekr.20181117075046.1"><vh>&lt;&lt; ColorSelectedWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.728"><vh>ColorSelectWidget._create_dom</vh></v>
 <v t="ekr.20181031045138.729"><vh>ColorSelectWidget.user_color</vh></v>
 <v t="ekr.20181031045138.730"><vh>ColorSelectWidget._color_changed</vh></v>
@@ -961,6 +973,7 @@
 <v t="ekr.20181031045138.733"><vh>@@clean _dropdown.py</vh>
 <v t="ekr.20181031045138.734"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.735"><vh>class BaseDropdown(Widget)</vh>
+<v t="ekr.20181117073929.1"><vh>&lt;&lt; BaseDropdown css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.736"><vh>BaseDropdown.init</vh></v>
 <v t="ekr.20181031045138.737"><vh>BaseDropdown.expand</vh></v>
 <v t="ekr.20181031045138.738"><vh>BaseDropdown._create_dom</vh></v>
@@ -973,6 +986,8 @@
 <v t="ekr.20181031045138.745"><vh>BaseDropdown._check_expanded_pos</vh></v>
 </v>
 <v t="ekr.20181031045138.746"><vh>class ComboBox(BaseDropdown)</vh>
+<v t="ekr.20181117074019.1"><vh>&lt;&lt; ComboBox css &gt;&gt;</vh></v>
+<v t="ekr.20181117074048.1"><vh>&lt;&lt; ComboBox properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.747"><vh>ComboBox.set_options</vh></v>
 <v t="ekr.20181031045138.748"><vh>ComboBox.set_selected_index</vh></v>
 <v t="ekr.20181031045138.749"><vh>ComboBox.set_selected_key</vh></v>
@@ -987,6 +1002,8 @@
 <v t="ekr.20181031045138.758"><vh>ComboBox._submit_text</vh></v>
 </v>
 <v t="ekr.20181031045138.759"><vh>class DropdownContainer(BaseDropdown)</vh>
+<v t="ekr.20181117074133.1"><vh>&lt;&lt; DropdownContainer css &gt;&gt;</vh></v>
+<v t="ekr.20181117075138.1"><vh>&lt;&lt; DropdownContainer properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.760"><vh>DropdownContainer._render_dom</vh></v>
 <v t="ekr.20181031045138.761"><vh>DropdownContainer._expand</vh></v>
 </v>
@@ -994,6 +1011,7 @@
 <v t="ekr.20181031045138.762"><vh>@@clean _group.py</vh>
 <v t="ekr.20181031045138.763"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.764"><vh>class GroupWidget(Widget)</vh>
+<v t="ekr.20181117074255.1"><vh>&lt;&lt; GroupWidget css &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.765"><vh>GroupWidget._create_dom</vh></v>
 <v t="ekr.20181031045138.766"><vh>GroupWidget._render_dom</vh></v>
 <v t="ekr.20181031045138.767"><vh>GroupWidget._query_min_max_size</vh></v>
@@ -1003,6 +1021,8 @@
 <v t="ekr.20181031045138.769"><vh>@@clean _iframe.py</vh>
 <v t="ekr.20181031045138.770"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.771"><vh>class IFrame(Widget)</vh>
+<v t="ekr.20181117074456.1"><vh>&lt;&lt; IFrame css &gt;&gt;</vh></v>
+<v t="ekr.20181117075202.1"><vh>&lt;&lt; IFrame properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.772"><vh>IFrame._create_dom</vh></v>
 <v t="ekr.20181031045138.773"><vh>IFrame.__on_size</vh></v>
 <v t="ekr.20181031045138.774"><vh>IFrame._update_url</vh></v>
@@ -1011,6 +1031,8 @@
 <v t="ekr.20181031045138.775"><vh>@@clean _label.py</vh>
 <v t="ekr.20181031045138.776"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.777"><vh>class Label(Widget)</vh>
+<v t="ekr.20181117074515.1"><vh>&lt;&lt; Label css &gt;&gt;</vh></v>
+<v t="ekr.20181117075226.1"><vh>&lt;&lt; Label properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.778"><vh>Label.init</vh></v>
 <v t="ekr.20181031045138.779"><vh>Label.set_text</vh></v>
 <v t="ekr.20181031045138.780"><vh>Label.set_html</vh></v>
@@ -1020,6 +1042,8 @@
 <v t="ekr.20181031045138.782"><vh>@@clean _lineedit.py</vh>
 <v t="ekr.20181031045138.783"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.784"><vh>class LineEdit(Widget)</vh>
+<v t="ekr.20181117074550.1"><vh>&lt;&lt; LineEdit css &gt;&gt;</vh></v>
+<v t="ekr.20181117074615.1"><vh>&lt;&lt; LineEdit properties &gt;&gt;</vh></v>
 <v t="ekr.20181117053548.1"><vh>Methods, actions, emitters</vh>
 <v t="ekr.20181031045138.785"><vh>LineEdit._create_dom</vh></v>
 <v t="ekr.20181031045138.786"><vh>LineEdit.user_text</vh></v>
@@ -1037,13 +1061,14 @@
 </v>
 </v>
 <v t="ekr.20181031045138.795"><vh>@@clean _media.py</vh>
-<v t="ekr.20181031045138.796"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.797"><vh>class ImageWidget(Widget)</vh>
+<v t="ekr.20181117075258.1"><vh>&lt;&lt; ImageWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.798"><vh>ImageWidget._create_dom</vh></v>
 <v t="ekr.20181031045138.799"><vh>ImageWidget.__resize_image</vh></v>
 <v t="ekr.20181031045138.800"><vh>ImageWidget.__source_changed</vh></v>
 </v>
 <v t="ekr.20181031045138.801"><vh>class VideoWidget(Widget)</vh>
+<v t="ekr.20181117075336.1"><vh>&lt;&lt; VideoWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.802"><vh>VideoWidget._create_dom</vh></v>
 <v t="ekr.20181031045138.803"><vh>VideoWidget._render_dom</vh></v>
 <v t="ekr.20181031045138.804"><vh>VideoWidget.__source_changed</vh></v>
@@ -1055,7 +1080,7 @@
 </v>
 </v>
 <v t="ekr.20181031045138.809"><vh>@@clean _plotly.py</vh>
-<v t="ekr.20181031045138.810"><vh>Declarations </vh></v>
+<v t="ekr.20181117075403.1"><vh>&lt;&lt; PlotlyWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.811"><vh>class PlotlyWidget(Widget)</vh>
 <v t="ekr.20181031045138.812"><vh>PlotlyWidget.__relayout</vh></v>
 <v t="ekr.20181031045138.813"><vh>PlotlyWidget._init_plot</vh></v>
@@ -1064,6 +1089,7 @@
 <v t="ekr.20181031045138.814"><vh>@@clean _plotwidget.py</vh>
 <v t="ekr.20181031045138.815"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.816"><vh>class PlotWidget(CanvasWidget)</vh>
+<v t="ekr.20181117075442.1"><vh>&lt;&lt; PlotWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.817"><vh>PlotWidget.set_data</vh></v>
 <v t="ekr.20181031045138.818"><vh>PlotWidget.init</vh></v>
 <v t="ekr.20181031045138.819"><vh>PlotWidget.update</vh></v>
@@ -1074,6 +1100,8 @@
 <v t="ekr.20181031045138.822"><vh>@@clean _progressbar.py</vh>
 <v t="ekr.20181031045138.823"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.824"><vh>class ProgressBar(Widget)</vh>
+<v t="ekr.20181117074658.1"><vh>&lt;&lt; ProgressBar css &gt;&gt;</vh></v>
+<v t="ekr.20181117074724.1"><vh>&lt;&lt; ProgressBar properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.825"><vh>ProgressBar.set_value</vh></v>
 <v t="ekr.20181031045138.826"><vh>ProgressBar.__keep_value_constrained</vh></v>
 <v t="ekr.20181031045138.827"><vh>ProgressBar._render_dom</vh></v>
@@ -1082,6 +1110,8 @@
 <v t="ekr.20181031045138.828"><vh>@@clean _slider.py</vh>
 <v t="ekr.20181031045138.829"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.830"><vh>class Slider(Widget)</vh>
+<v t="ekr.20181117074754.1"><vh>&lt;&lt; Slider css &gt;&gt;</vh></v>
+<v t="ekr.20181117074816.1"><vh>&lt;&lt; Slider properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.831"><vh>Slider.init</vh></v>
 <v t="ekr.20181031045138.832"><vh>Slider.user_value</vh></v>
 <v t="ekr.20181031045138.833"><vh>Slider.user_done</vh></v>
@@ -1098,6 +1128,7 @@
 <v t="ekr.20181031045138.843"><vh>class TreeWidget(Widget)</vh>
 <v t="ekr.20181117053452.1"><vh>&lt;&lt; TreeWidget docstring &gt;&gt;</vh></v>
 <v t="ekr.20181117053258.1"><vh>&lt;&lt; TreeWidget CSS &gt;&gt;</vh></v>
+<v t="ekr.20181117075523.1"><vh>&lt;&lt; TreeWidget properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.844"><vh>TreeWidget.init</vh></v>
 <v t="ekr.20181031045138.845"><vh>TreeWidget.get_all_items</vh></v>
 <v t="ekr.20181031045138.846"><vh>TreeWidget._render_dom</vh></v>
@@ -1134,6 +1165,48 @@
 </v>
 <v t="ekr.20181031045138.567"></v>
 <v t="ekr.20181031045138.604"></v>
+<v t="ekr.20181117075602.1"><vh>Found:css &gt;&gt;</vh>
+<v t="ekr.20181117073749.1"></v>
+<v t="ekr.20181117073929.1"></v>
+<v t="ekr.20181117073241.1"></v>
+<v t="ekr.20181117073825.1"></v>
+<v t="ekr.20181117074019.1"></v>
+<v t="ekr.20181117074133.1"></v>
+<v t="ekr.20181117073533.1"></v>
+<v t="ekr.20181117074255.1"></v>
+<v t="ekr.20181117052055.1"></v>
+<v t="ekr.20181117074456.1"></v>
+<v t="ekr.20181117074515.1"></v>
+<v t="ekr.20181117073601.1"></v>
+<v t="ekr.20181117074550.1"></v>
+<v t="ekr.20181117073637.1"></v>
+<v t="ekr.20181117074658.1"></v>
+<v t="ekr.20181117074754.1"></v>
+<v t="ekr.20181117073503.1"></v>
+<v t="ekr.20181117073706.1"></v>
+<v t="ekr.20181117053258.1"></v>
+<v t="ekr.20181117073144.1"></v>
+</v>
+<v t="ekr.20181117075617.1"><vh>Found:properties &gt;&gt;</vh>
+<v t="ekr.20181117074935.1"></v>
+<v t="ekr.20181117075020.1"></v>
+<v t="ekr.20181117075046.1"></v>
+<v t="ekr.20181117074048.1"></v>
+<v t="ekr.20181117075138.1"></v>
+<v t="ekr.20181117052149.1"></v>
+<v t="ekr.20181117075202.1"></v>
+<v t="ekr.20181117075258.1"></v>
+<v t="ekr.20181117075226.1"></v>
+<v t="ekr.20181117074615.1"></v>
+<v t="ekr.20181117075403.1"></v>
+<v t="ekr.20181117075442.1"></v>
+<v t="ekr.20181117074724.1"></v>
+<v t="ekr.20181117074816.1"></v>
+<v t="ekr.20181117053402.1"></v>
+<v t="ekr.20181117075523.1"></v>
+<v t="ekr.20181117075336.1"></v>
+<v t="ekr.20181117052537.1"></v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20181031045130.3"></t>
@@ -10486,37 +10559,8 @@ from . import logger  # noqa
     """
 
     DEFAULT_MIN_SIZE = 0, 0
-
-    CSS = """
-
-    .flx-Widget {
-        box-sizing: border-box;
-        overflow: hidden;
-        position: relative;  /* helps with absolute positioning of content */
-    }
-
-    /* Main widget to fill the whole page */
-    .flx-main-widget {
-       position: absolute;
-       left: 0;
-       right: 0;
-       width: 100%;
-       top: 0;
-       bottom: 0;
-       height: 100%;
-    }
-
-    /* to position children absolute */
-    .flx-abs-children &gt; .flx-Widget {
-        position: absolute;
-    }
-
-    /* Fix issue flexbox &gt; Widget &gt; layout on Chrome */
-    .flx-Widget:not(.flx-Layout) &gt; .flx-Layout {
-        position: absolute;
-    }
-    """
     
+    &lt;&lt; Widget Css &gt;&gt;
     &lt;&lt; Widget Properties &gt;&gt;
 
     @others
@@ -11478,40 +11522,8 @@ from .. import create_element
     resizing. This is not so much a problem when it is used as a leaf
     layout, but it's not recommended to embed such layouts in each-other.
     """
-
-    CSS = """
-
-    /* Clear any styling on this table (rendered_html is an IPython thing) */
-    .flx-BaseTableLayout, .flx-BaseTableLayout td, .flx-BaseTableLayout tr,
-    .rendered_html .flx-BaseTableLayout {
-        border: 0px;
-        padding: initial;
-        margin: initial;
-        background: initial;
-    }
-
-    /* Behave well inside hbox/vbox,
-       we assume no layouts to be nested inside a table layout */
-    .flx-box.flx-horizontal &gt; .flx-BaseTableLayout {
-        width: auto;
-    }
-    .flx-box.flx-vertical &gt; .flx-BaseTableLayout {
-        height: auto;
-    }
-
-    td.flx-vflex, td.flx-hflex {
-        padding: 2px;
-    }
-
-    /* In flexed cells, occupy the full space */
-    td.flx-vflex &gt; .flx-Widget {
-        height: 100%;
-    }
-    td.flx-hflex &gt; .flx-Widget {
-        width: 100%;
-    }
-    """
-
+    
+    &lt;&lt; BaseTableLayout css &gt;&gt;
 
     @others
 </t>
@@ -11622,13 +11634,8 @@ def _adapt_to_size_change(self, *events):
     `&lt;table&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/table&gt;`_.
     (This may be changed to use a CSS layout instead.)
     """
-
-    CSS = """
-    .flx-FormLayout .flx-title {
-        text-align: right;
-        padding-right: 5px;
-    }
-    """
+    
+    &lt;&lt; FormLayout css &gt;&gt;
 
     @others
 </t>
@@ -12480,25 +12487,8 @@ def cls(self):
 <t tx="ekr.20181031045138.660">class Layout(Widget):
     """ Abstract class for widgets that layout their child widgets.
     """
-
-    CSS = """
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .flx-Layout {
-        /* sizing of widgets/layouts inside layout is defined per layout */
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        border-spacing: 0;
-        border: 0;
-    }
-
-    """
+    
+    &lt;&lt; Layout css &gt;&gt;
 </t>
 <t tx="ekr.20181031045138.661">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
 """ PinboardLayout
@@ -12539,12 +12529,8 @@ from . import Layout
     The ``node`` of this widget is a
     `&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_.
     """
-
-    CSS = """
-    .flx-PinboardLayout &gt; .flx-Widget {
-        position: absolute;
-    }
-    """
+    
+    &lt;&lt; PinboardLayout css &gt;&gt;
 </t>
 <t tx="ekr.20181031045138.664">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
 """ StackLayout
@@ -12588,21 +12574,8 @@ from . import Layout
     The ``node`` of this widget is a
     `&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_.
     """
-
-    CSS = """
-        .flx-StackLayout &gt; .flx-Widget {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .flx-StackLayout &gt; .flx-Widget:not(.flx-current) {
-            display: none;
-        }
-    """
+    
+    &lt;&lt; StackLayout css &gt;&gt;
 
     current = event.ComponentProp(doc="""
             The currently shown widget (or None).
@@ -12686,60 +12659,8 @@ def is_served(self):
     The visible child widget fills the entire area of this element,
     except for a small area at the top where the tab-bar is shown.
     """
-
-    CSS = """
-
-    .flx-TabLayout &gt; .flx-Widget {
-        top: 30px;
-        margin: 0;
-        height: calc(100% - 30px);
-        border: 1px solid #ddd;
-    }
-
-    .flx-TabLayout &gt; .flx-tabbar {
-        box-sizing: border-box;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 30px;
-        overflow: hidden;
-    }
-
-    .flx-tabbar &gt; .flx-tab-item {
-        display: inline-block;
-        height: 22px;  /* 100% - 8px: 3 margin + 2 borders + 2 padding -1 overlap */
-        margin-top: 3px;
-        padding: 3px 6px 1px 6px;
-
-        overflow: hidden;
-        min-width: 10px;
-
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-
-        background: #ececec;
-        border: 1px solid #bbb;
-        border-radius: 3px 3px 0px 0px;
-        margin-left: -1px;
-        transition: background 0.3s;
-    }
-    .flx-tabbar &gt; .flx-tab-item:first-of-type {
-        margin-left: 0;
-    }
-
-    .flx-tabbar &gt; .flx-tab-item.flx-current {
-        background: #eaecff;
-        border-top: 3px solid #7bf;
-        margin-top: 0;
-    }
-
-    .flx-tabbar &gt; .flx-tab-item:hover {
-        background: #eaecff;
-    }
-    """
+    
+    &lt;&lt; TabLayou css &gt;&gt;
 
     @others
 </t>
@@ -13011,11 +12932,7 @@ def __resize_plot(self, *events):
             self.plot.model.document.resize()  # older
 </t>
 <t tx="ekr.20181031045138.692">@path C:/Anaconda3/Lib/site-packages/flexx/ui/widgets/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.693">""" Button classes
+""" Button classes
 
 Simple example:
 
@@ -13031,76 +12948,18 @@ Also see examples: :ref:`buttons.py`.
 from ... import event
 from .._widget import Widget
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.694">class BaseButton(Widget):
     """ Abstract button class.
     """
 
     DEFAULT_MIN_SIZE = 10, 24
-
-    CSS = """
-
-    .flx-BaseButton {
-        white-space: nowrap;
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        color: #333;
-    }
-    .flx-BaseButton, .flx-BaseButton &gt; input {
-        margin: 2px; /* room for outline */
-    }
-    .flx-BaseButton:focus, .flx-BaseButton &gt; input:focus  {
-        outline: none;
-        box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
-    }
-
-    .flx-Button, .flx-ToggleButton{
-        background: #e8e8e8;
-        border: 1px solid #ccc;
-        transition: background 0.3s;
-    }
-    .flx-Button:hover, .flx-ToggleButton:hover {
-        background: #e8eaff;
-    }
-
-    .flx-ToggleButton {
-        text-align: left;
-    }
-    .flx-ToggleButton.flx-checked {
-        background: #e8eaff;
-    }
-    .flx-ToggleButton::before {
-        content: '\\2610\\00a0 ';
-    }
-    .flx-ToggleButton.flx-checked::before {
-        content: '\\2611\\00a0 ';
-    }
-
-    .flx-RadioButton &gt; input, .flx-CheckBox &gt; input{
-        margin-left: 0.3em;
-        margin-right: 0.3em;
-    }
-
-    .flx-RadioButton &gt; input, .flx-CheckBox &gt; input {
-        color: #333;
-    }
-    .flx-RadioButton:hover &gt; input, .flx-CheckBox:hover &gt; input {
-        color: #036;
-    }
-    """
-
-    text = event.StringProp('', settable=True, doc="""
-        The text on the button.
-        """)
-
-    checked = event.BoolProp(False, settable=True, doc="""
-        Whether the button is checked.
-        """)
-
-    disabled = event.BoolProp(False, settable=True, doc="""
-        Whether the button is disabled.
-        """)
+    
+    &lt;&lt; BaseButton css &gt;&gt;
+    &lt;&lt; BaseButton properties &gt;&gt;
 
     @others
 </t>
@@ -13437,27 +13296,9 @@ perf_counter = None  # exists in PScript, time.perf_counter only in Python 3.3+
     """
 
     DEFAULT_MIN_SIZE = 50, 50
-
-    CSS = """
-    .flx-CanvasWidget {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .flx-CanvasWidget &gt; canvas {
-        /* Set position to absolute so that the canvas is not going
-         * to be forcing a size on the container div. */
-        position: absolute;
-    }
-    """
-
-    capture_wheel = event.BoolProp(False, settable=True, doc="""
-        Whether the wheel event is "captured", i.e. not propagated to result
-        into scrolling of the parent widget (or page). If True, if no scrolling
-        must have been performed outside of the widget for about half a second
-        in order for the widget to capture scroll events.
-        """)
+    
+    &lt;&lt; CanvasWidget css &gt;&gt;
+    &lt;&lt; CanvasWidget properties &gt;&gt;
 
     @others
 </t>
@@ -13614,11 +13455,7 @@ def _update_canvas_size(self, *events):
         self.node.style.height = size[1] + 'px'
 </t>
 <t tx="ekr.20181031045138.725">@path C:/Anaconda3/Lib/site-packages/flexx/ui/widgets/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.726">""" ColorSelectWidget
+""" ColorSelectWidget
 
 .. UIExample:: 50
 
@@ -13637,7 +13474,9 @@ def _update_canvas_size(self, *events):
 from ... import event
 from . import Widget
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.727">class ColorSelectWidget(Widget):
     """ A widget used to select a color.
@@ -13649,15 +13488,8 @@ from . import Widget
     """
 
     DEFAULT_MIN_SIZE = 28, 28
-
-    color = event.ColorProp('#000000', settable=True, doc="""
-        The currently selected color.
-        """)
-
-    disabled = event.BoolProp(False, settable=True, doc="""
-        Whether the color select is disabled.
-        """)
-
+    
+    &lt;&lt; ColorSelectedWidget properties &gt;&gt;
     @others
 </t>
 <t tx="ekr.20181031045138.728">def _create_dom(self):
@@ -13797,84 +13629,8 @@ from .._widget import Widget, create_element
     """
 
     DEFAULT_MIN_SIZE = 50, 28
-
-    CSS = """
-
-        .flx-BaseDropdown {
-            display: inline-block;
-            overflow: visible;
-            margin: 2px;
-            border-radius: 3px;
-            padding: 2px;
-            border: 1px solid #aaa;
-            max-height: 28px; /* overridden by maxsize */
-            white-space: nowrap; /* keep label and but on-line */
-            background: #e8e8e8
-        }
-
-        .flx-BaseDropdown:focus {
-            outline: none;
-            box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
-        }
-
-        .flx-BaseDropdown &gt; .flx-dd-edit {
-            display: none;
-            max-width: 2em;  /* reset silly lineedit sizing */
-            min-width: calc(100% - 1.5em - 2px);
-            min-height: 1em;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .flx-BaseDropdown &gt; .flx-dd-label {
-            display: inline-block;
-            min-width: calc(100% - 1.5em - 2px);
-            min-height: 1em;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .flx-BaseDropdown.editable-true {
-            background: #fff;
-        }
-        .flx-BaseDropdown.editable-true &gt; .flx-dd-label {
-            display: none;
-        }
-        .flx-BaseDropdown.editable-true &gt; .flx-dd-edit {
-            display: inline-block;
-        }
-
-        .flx-BaseDropdown &gt; .flx-dd-button {
-            display: inline-block;
-            position: static;
-            min-width: 1.5em;
-            max-width: 1.5em;
-            text-align: center;
-            margin: 0;
-        }
-        .flx-BaseDropdown &gt; .flx-dd-button:hover {
-            background: rgba(128, 128, 128, 0.1);
-        }
-        .flx-BaseDropdown &gt; .flx-dd-button::after {
-            content: '\\25BE';  /* 2228 1F847 1F83F */
-        }
-
-        .flx-BaseDropdown .flx-dd-space {
-            display: inline-block;
-            min-width: 1em;
-        }
-
-        .flx-BaseDropdown &gt; .flx-dd-strud {
-            /* The strud allows to give the box a natural minimum size,
-               but it should not affect the height. */
-            visibility: hidden;
-            overflow: hidden;
-            max-height: 0;
-        }
-    """
+    
+    &lt;&lt; BaseDropdown css &gt;&gt;
 
     @others
 </t>
@@ -14034,79 +13790,9 @@ def expand(self):
     `&lt;span&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/span&gt;`_
     with some child elements and quite a bit of CSS for rendering.
     """
-
-    CSS = """
-
-        .flx-ComboBox {
-        }
-
-        .flx-ComboBox &gt; ul  {
-            list-style-type: none;
-            box-sizing: border-box;
-            border: 1px solid #333;
-            border-radius: 3px;
-            margin: 0;
-            padding: 2px;
-            position: fixed;  /* because all our widgets are overflow:hidden */
-            background: white;
-            z-index: 9999;
-            display: none;
-        }
-        .flx-ComboBox.expanded &gt; ul {
-            display: block;
-            max-height: 220px;
-            overflow-y: auto;
-        }
-
-        .flx-ComboBox.expanded &gt; ul &gt; li:hover {
-            background: rgba(0, 128, 255, 0.2);
-        }
-        .flx-ComboBox.expanded &gt; ul &gt; li.highlighted-true {
-            box-shadow: inset 0 0 3px 1px rgba(0, 0, 255, 0.4);
-        }
-    """
-
-    # Note: we don't define text on the base class, because it would be
-    # the only common prop, plus we want a different docstring.
-
-    text = event.StringProp('', settable=True, doc="""
-        The text displayed on the widget. This property is set
-        when an item is selected from the dropdown menu. When editable,
-        the ``text`` is also set when the text is edited by the user.
-        This property is settable programatically regardless of the
-        value of ``editable``.
-        """)
-
-    selected_index = event.IntProp(-1, settable=True, doc="""
-        The currently selected item index. Can be -1 if no item has
-        been selected or when the text was changed manually (if editable).
-        Can also be programatically set.
-        """)
-
-    selected_key = event.StringProp('', settable=True, doc="""
-        The currently selected item key. Can be '' if no item has
-        been selected or when the text was changed manually (if editable).
-        Can also be programatically set.
-        """)
-
-    placeholder_text = event.StringProp('', settable=True, doc="""
-        The placeholder text to display in editable mode.
-        """)
-
-    editable = event.BoolProp(False, settable=True, doc="""
-        Whether the combobox's text is editable.
-        """)
-
-    options = event.TupleProp((), settable=True, doc="""
-        A list of tuples (key, text) representing the options. Both
-        keys and texts are converted to strings if they are not already.
-        For items that are given as a string, the key and text are the same.
-        If a dict is given, it is transformed to key-text pairs.
-        """)
-
-    _highlighted = app.LocalProperty(-1, settable=True, doc="""
-        The index of the currently highlighted item.
-        """)
+    
+    &lt;&lt; ComboBox css &gt;&gt;
+    &lt;&lt; ComboBox properties &gt;&gt;
 
     @others
 </t>
@@ -14315,28 +14001,9 @@ def __track_editable(self):
     *Note: This widget is currently broken, because pointer events do not work in the
     contained widget (at least on Firefox).*
     """
-
-    CSS = """
-        .flx-DropdownContainer {
-            min-width: 50px;
-        }
-        .flx-DropdownContainer &gt; .flx-Widget {
-            position: fixed;
-            min-height: 100px;
-            max-height: 300px;
-            width: 200px;
-            background: white;
-            z-index: 10001;
-            display: none;
-        }
-        .flx-DropdownContainer.expanded &gt; .flx-Widget {
-            display: initial;
-        }
-    """
-
-    text = event.StringProp('', settable=True, doc="""
-        The text displayed on the dropdown widget.
-        """)
+    
+    &lt;&lt; DropdownContainer css &gt;&gt;
+    &lt;&lt; DropdownContainer properties &gt;&gt;
 
     @others
 </t>
@@ -14408,21 +14075,8 @@ from . import Widget
     The ``node`` of this widget is a
     `&lt;fieldset&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/fieldset&gt;`_. 
     """
-
-    CSS = """
-
-    .flx-GroupWidget {
-        margin: 0;
-        padding: 5px;
-        border: 2px solid #ccc;
-        border-radius: 3px;
-    }
-    .flx-GroupWidget &gt; .flx-Layout {
-        width: calc(100% - 10px);
-        height: calc(100% - 25px);
-    }
-
-    """
+    
+    &lt;&lt; GroupWidget css &gt;&gt;
 
     @others
 </t>
@@ -14491,17 +14145,9 @@ from . import Widget
     """
 
     DEFAULT_MIN_SIZE = 10, 10
-
-    CSS = """
-        .flx-IFrame {
-            border: none;
-        }
-    """
-
-    url = event.StringProp('', settable=True, doc="""
-        The url to show. 'http://' is automatically prepended if the url
-        does not have '://' in it.
-        """)
+    
+    &lt;&lt; IFrame css &gt;&gt;
+    &lt;&lt; IFrame properties &gt;&gt;
 
     @others
 </t>
@@ -14559,32 +14205,9 @@ from . import Widget
     """
 
     DEFAULT_MIN_SIZE = 10, 24
-
-    CSS = """
-        .flx-Label {
-            border: 0px solid #454;
-            user-select: text;
-            -moz-user-select: text;
-            -webkit-user-select: text;
-            -ms-user-select: text;
-        }"""
-
-    text = event.StringProp('', doc="""
-        The text shown in the label (HTML is shown verbatim).
-        """)
-
-    html = event.StringProp('', doc="""
-        The html shown in the label.
-
-        Warning: there is a risk of introducing openings for XSS attacks
-        when html is introduced that you do not control (e.g. from user input).
-        """)
-
-    wrap = event.IntProp(0, settable=True, doc="""
-        Whether the content is allowed to be wrapped on multiple
-        lines. Set to 0/False for no wrap (default), 1/True for word-wrap,
-        2 for character wrap.
-        """)
+    
+    &lt;&lt; Label css &gt;&gt;
+    &lt;&lt; Label properties &gt;&gt;
 
     @others
 </t>
@@ -14694,43 +14317,9 @@ from . import Widget
     """
 
     DEFAULT_MIN_SIZE = 100, 28
-
-    CSS = """
-    .flx-LineEdit {
-        color: #333;
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        border: 1px solid #aaa;
-        margin: 2px;
-    }
-    .flx-LineEdit:focus  {
-        outline: none;
-        box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
-    }
-    """
-
-    ## Properties
-
-    text = event.StringProp(settable=True, doc="""
-        The current text of the line edit. Settable. If this is an empty
-        string, the placeholder_text is displayed instead.
-        """)
-
-    password_mode = event.BoolProp(False, settable=True, doc="""
-        Whether the insered text should be hidden.
-        """)
-
-    placeholder_text = event.StringProp(settable=True, doc="""
-        The placeholder text (shown when the text is an empty string).
-        """)
-
-    autocomp = event.TupleProp(settable=True, doc="""
-        A tuple/list of strings for autocompletion. Might not work in all browsers.
-        """)
-
-    disabled = event.BoolProp(False, settable=True, doc="""
-        Whether the line edit is disabled.
-        """)
+    
+    &lt;&lt; LineEdit css &gt;&gt;
+    &lt;&lt; LineEdit properties &gt;&gt;
 
     @others
 </t>
@@ -14868,11 +14457,7 @@ def __disabled_changed(self):
         self.node.removeAttribute("disabled")
 </t>
 <t tx="ekr.20181031045138.795">@path C:/Anaconda3/Lib/site-packages/flexx/ui/widgets/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.796">""" Media widgets
+""" Media widgets
 
 .. UIExample:: 200
 
@@ -14895,7 +14480,9 @@ def __disabled_changed(self):
 from ... import event
 from . import Widget
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.797">class ImageWidget(Widget):
     """ Display an image from a url.
@@ -14909,16 +14496,8 @@ from . import Widget
     DEFAULT_MIN_SIZE = 16, 16
 
     _sequence = 0
-
-    source = event.StringProp('', settable=True, doc="""
-        The source of the image, This can be anything that an HTML
-        img element supports.
-        """)
-
-    stretch = event.BoolProp(False, settable=True, doc="""
-        Whether the image should stretch to fill all available
-        space, or maintain its aspect ratio (default).
-        """)
+    
+    &lt;&lt; ImageWidget properties &gt;&gt;
 
     @others
 </t>
@@ -14991,11 +14570,8 @@ def __source_changed(self):
     """
 
     DEFAULT_MIN_SIZE = 100, 100
-
-    source = event.StringProp('', settable=True, doc="""
-        The source of the video. This must be a url of a resource
-        on the web.
-        """)
+    
+    &lt;&lt; VideoWidget properties &gt;&gt;
 
     @others
 </t>
@@ -15066,29 +14642,7 @@ def __source_changed(self, *events):
 \\-4.# todo: SVG? Icon?
 </t>
 <t tx="ekr.20181031045138.809">@path C:/Anaconda3/Lib/site-packages/flexx/ui/widgets/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.81">def get_default_session(self):
-    """ Get the default session that is used for interactive use.
-    Returns None unless create_default_session() was called earlier.
-
-    When a JsComponent class is created without a session, this method
-    is called to get one (and will then fail if it's None).
-    """
-    x = self._appinfo.get('__default__', None)
-    if x is None:
-        return None
-    else:
-        _, pending, connected = x
-        sessions = pending + connected
-        if sessions:
-            return sessions[-1]
-
-</t>
-<t tx="ekr.20181031045138.810">"""
-
+"""
 Simple example:
 
 .. UIExample:: 200
@@ -15110,24 +14664,32 @@ from . import Widget
 
 app.assets.associate_asset(__name__, 'https://cdn.plot.ly/plotly-latest.min.js')
 
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181031045138.81">def get_default_session(self):
+    """ Get the default session that is used for interactive use.
+    Returns None unless create_default_session() was called earlier.
+
+    When a JsComponent class is created without a session, this method
+    is called to get one (and will then fail if it's None).
+    """
+    x = self._appinfo.get('__default__', None)
+    if x is None:
+        return None
+    else:
+        _, pending, connected = x
+        sessions = pending + connected
+        if sessions:
+            return sessions[-1]
 
 </t>
 <t tx="ekr.20181031045138.811">class PlotlyWidget(Widget):
     """ A widget that shows a Plotly visualization.
     """
-
-    data = event.ListProp(settable=True, doc="""
-        The data (list of dicts) that describes the plot.
-        This can e.g. be the output of the Python plotly API call.
-        """)
-
-    layout = event.DictProp(settable=True, doc="""
-        The layout dict to style the plot.
-        """)
-
-    config = event.DictProp(settable=True, doc="""
-        The config for the plot.
-        """)
+    
+    &lt;&lt; PlotlyWidget properties &gt;&gt;
 
     @others
 </t>
@@ -15185,14 +14747,8 @@ from ._canvas import CanvasWidget
     """
 
     DEFAULT_MIN_SIZE = 300, 200
-
-    xdata = event.TupleProp((), doc="""
-            A list of values for the x-axis. Set via the ``set_data()`` action.
-            """)
-
-    ydata = event.TupleProp((), doc="""
-            A list of values for the y-axis. Set via the ``set_data()`` action.
-            """)
+    
+    &lt;&lt; PlotWidget properties &gt;&gt;
 
     @others
 </t>
@@ -15486,58 +15042,9 @@ from .._widget import Widget, create_element
     """
 
     DEFAULT_MIN_SIZE = 40, 16
-
-    CSS = """
-
-    .flx-ProgressBar {
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        background: #eee;
-    }
-
-    .flx-ProgressBar &gt; .progress-bar {
-        /* Use flexbox to vertically align label text */
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: flex;
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-        -moz-flex-flow: column;
-        flex-flow: column;
-        -webkit-justify-content: center;
-        -ms-justify-content: center;
-        -moz-justify-content: center;
-        justify-content: center;
-        white-space: nowrap;
-        align-self: stretch;
-
-        position: absolute; /* need this on Chrome when in a VBox */
-        background: #8be;
-        text-align: center;
-        /*transition: width 0.2s ease; behaves silly on Chrome */
-        }
-
-    """
-
-    value = event.FloatProp(0, settable=True, doc="""
-            The progress value.
-            """)
-
-    min = event.FloatProp(0, settable=True, doc="""
-        The minimum progress value.
-        """)
-
-    max = event.FloatProp(1, settable=True, doc="""
-        The maximum progress value.
-        """)
-
-    text = event.StringProp('', settable=True, doc="""
-        The label to display on the progress bar. Occurances of
-        "{percent}" are replaced with the current percentage, and
-        "{value}" with the current value.
-        """)
+    
+    &lt;&lt; ProgressBar css &gt;&gt;
+    &lt;&lt; ProgressBar properties &gt;&gt;
 
     @others
 </t>
@@ -15642,84 +15149,8 @@ from .._widget import Widget, create_element
 
     DEFAULT_MIN_SIZE = 40, 20
 
-    CSS = """
-
-    .flx-Slider:focus {
-        outline: none;
-    }
-
-    .flx-Slider &gt; .gutter {
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-
-        margin: 0 5px; /* half width of slider */
-        position: absolute;
-        top: calc(50% - 2px);
-        height: 4px;
-        width: calc(100% - 10px);
-        border-radius: 6px;
-        background: rgba(0, 0, 0, 0.2);
-        color: rgba(0,0,0,0);
-        text-align: center;
-        transition: height 0.2s, top 0.2s;
-    }
-    .flx-Slider.flx-dragging &gt; .gutter, .flx-Slider:focus &gt; .gutter {
-        top: calc(50% - 10px);
-        height: 20px;
-        color: rgba(0,0,0,1);
-    }
-
-    .flx-Slider .slider {
-        box-sizing: border-box;
-        text-align: center;
-        border-radius: 3px;
-        background: #48c;
-        border: 2px solid #48c;
-        transition: top 0.2s, height 0.2s, background 0.4s;
-        position: absolute;
-        top: calc(50% - 8px);
-        height: 16px;
-        width: 10px;
-        }
-    .flx-Slider.flx-dragging .slider, .flx-Slider:focus .slider {
-        background: none;
-        top: calc(50% - 10px);
-        height: 20px;
-    }
-    .flx-Slider &gt; .gutter &gt; .slider.disabled {
-        background: #888;
-        border: none;
-    }
-    """
-
-    step = event.FloatProp(0.01, settable=True, doc="""
-        The step size for the slider.
-        """)
-
-    min = event.FloatProp(0, settable=True, doc="""
-        The minimal slider value.
-        """)
-
-    max = event.FloatProp(1, settable=True, doc="""
-        The maximum slider value.
-        """)
-
-    value = event.FloatProp(0, settable=True, doc="""
-        The current slider value.
-        """)
-
-    text = event.StringProp('{value}', settable=True, doc="""
-        The label to display on the slider during dragging. Occurances of
-        "{percent}" are replaced with the current percentage, and
-        "{value}" with the current value. Default "{value}".
-        """)
-
-    disabled = event.BoolProp(False, settable=True, doc="""
-        Whether the slider is disabled.
-        """)
+    &lt;&lt; Slider css &gt;&gt;
+    &lt;&lt; Slider properties &gt;&gt;
 
     @others
 </t>
@@ -15902,15 +15333,7 @@ class TreeWidget(Widget):
     DEFAULT_MIN_SIZE = 100, 50
     
     &lt;&lt; TreeWidget CSS &gt;&gt;
-
-    max_selected = event.IntProp(0, settable=True, doc="""
-        The maximum number of selected items:
-
-        * If 0 (default) there is no selection.
-        * If 1, there can be one selected item.
-        * If &gt; 1, up to this number of items can be selected by clicking them.
-        * If -1, any number of items can be selected by holding Ctrl or Shift.
-        """)
+    &lt;&lt; TreeWidget properties &gt;&gt;
 
     @others
 </t>
@@ -17911,7 +17334,9 @@ Also see the convenience classes: HFix, VFix, HBox, VBox, HSplit, VSplit.
 
 </t>
 <t tx="ekr.20181117051939.1">## Util funcs</t>
-<t tx="ekr.20181117052055.1">CSS = """
+<t tx="ekr.20181117052055.1">@language css
+
+CSS = """
 
 /* === for box layout === */
 
@@ -18353,8 +17778,7 @@ CSS = """
 /* ----- End Tree Widget ----- */
 
 """</t>
-<t tx="ekr.20181117053402.1">
-text = event.StringProp('', settable=True, doc="""
+<t tx="ekr.20181117053402.1">text = event.StringProp('', settable=True, doc="""
     The text for this item. Can be used in combination with
     ``title`` to obtain two columns.
     """)
@@ -18425,5 +17849,724 @@ Style classes applied to the TreeItem, corresponding to its properties:
 <t tx="ekr.20181117053548.1">## Methods, actions, emitters</t>
 <t tx="ekr.20181117053608.1">## Reactions
 </t>
+<t tx="ekr.20181117073144.1">@language css
+
+CSS = """
+
+.flx-Widget {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;  /* helps with absolute positioning of content */
+}
+
+/* Main widget to fill the whole page */
+.flx-main-widget {
+   position: absolute;
+   left: 0;
+   right: 0;
+   width: 100%;
+   top: 0;
+   bottom: 0;
+   height: 100%;
+}
+
+/* to position children absolute */
+.flx-abs-children &gt; .flx-Widget {
+    position: absolute;
+}
+
+/* Fix issue flexbox &gt; Widget &gt; layout on Chrome */
+.flx-Widget:not(.flx-Layout) &gt; .flx-Layout {
+    position: absolute;
+}
+"""</t>
+<t tx="ekr.20181117073241.1">@language css
+
+CSS = """
+
+/* Clear any styling on this table (rendered_html is an IPython thing) */
+.flx-BaseTableLayout, .flx-BaseTableLayout td, .flx-BaseTableLayout tr,
+.rendered_html .flx-BaseTableLayout {
+    border: 0px;
+    padding: initial;
+    margin: initial;
+    background: initial;
+}
+
+/* Behave well inside hbox/vbox,
+   we assume no layouts to be nested inside a table layout */
+.flx-box.flx-horizontal &gt; .flx-BaseTableLayout {
+    width: auto;
+}
+.flx-box.flx-vertical &gt; .flx-BaseTableLayout {
+    height: auto;
+}
+
+td.flx-vflex, td.flx-hflex {
+    padding: 2px;
+}
+
+/* In flexed cells, occupy the full space */
+td.flx-vflex &gt; .flx-Widget {
+    height: 100%;
+}
+td.flx-hflex &gt; .flx-Widget {
+    width: 100%;
+}
+"""</t>
+<t tx="ekr.20181117073503.1">@language css
+
+CSS = """
+.flx-StackLayout &gt; .flx-Widget {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.flx-StackLayout &gt; .flx-Widget:not(.flx-current) {
+    display: none;
+}
+"""</t>
+<t tx="ekr.20181117073533.1">@language css
+
+CSS = """
+.flx-FormLayout .flx-title {
+    text-align: right;
+    padding-right: 5px;
+}
+"""</t>
+<t tx="ekr.20181117073601.1">@language css
+
+CSS = """
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flx-Layout {
+    /* sizing of widgets/layouts inside layout is defined per layout */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border: 0;
+}
+
+"""</t>
+<t tx="ekr.20181117073637.1">@language css
+
+CSS = """
+.flx-PinboardLayout &gt; .flx-Widget {
+    position: absolute;
+}
+"""
+</t>
+<t tx="ekr.20181117073706.1">@language css
+
+CSS = """
+
+.flx-TabLayout &gt; .flx-Widget {
+    top: 30px;
+    margin: 0;
+    height: calc(100% - 30px);
+    border: 1px solid #ddd;
+}
+
+.flx-TabLayout &gt; .flx-tabbar {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.flx-tabbar &gt; .flx-tab-item {
+    display: inline-block;
+    height: 22px;  /* 100% - 8px: 3 margin + 2 borders + 2 padding -1 overlap */
+    margin-top: 3px;
+    padding: 3px 6px 1px 6px;
+
+    overflow: hidden;
+    min-width: 10px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    background: #ececec;
+    border: 1px solid #bbb;
+    border-radius: 3px 3px 0px 0px;
+    margin-left: -1px;
+    transition: background 0.3s;
+}
+.flx-tabbar &gt; .flx-tab-item:first-of-type {
+    margin-left: 0;
+}
+
+.flx-tabbar &gt; .flx-tab-item.flx-current {
+    background: #eaecff;
+    border-top: 3px solid #7bf;
+    margin-top: 0;
+}
+
+.flx-tabbar &gt; .flx-tab-item:hover {
+    background: #eaecff;
+}
+"""</t>
+<t tx="ekr.20181117073749.1">@language css
+
+CSS = """
+
+.flx-BaseButton {
+    white-space: nowrap;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: #333;
+}
+.flx-BaseButton, .flx-BaseButton &gt; input {
+    margin: 2px; /* room for outline */
+}
+.flx-BaseButton:focus, .flx-BaseButton &gt; input:focus  {
+    outline: none;
+    box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
+}
+
+.flx-Button, .flx-ToggleButton{
+    background: #e8e8e8;
+    border: 1px solid #ccc;
+    transition: background 0.3s;
+}
+.flx-Button:hover, .flx-ToggleButton:hover {
+    background: #e8eaff;
+}
+
+.flx-ToggleButton {
+    text-align: left;
+}
+.flx-ToggleButton.flx-checked {
+    background: #e8eaff;
+}
+.flx-ToggleButton::before {
+    content: '\\2610\\00a0 ';
+}
+.flx-ToggleButton.flx-checked::before {
+    content: '\\2611\\00a0 ';
+}
+
+.flx-RadioButton &gt; input, .flx-CheckBox &gt; input{
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.flx-RadioButton &gt; input, .flx-CheckBox &gt; input {
+    color: #333;
+}
+.flx-RadioButton:hover &gt; input, .flx-CheckBox:hover &gt; input {
+    color: #036;
+}
+"""</t>
+<t tx="ekr.20181117073825.1">@language css
+
+CSS = """
+.flx-CanvasWidget {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.flx-CanvasWidget &gt; canvas {
+    /* Set position to absolute so that the canvas is not going
+     * to be forcing a size on the container div. */
+    position: absolute;
+}
+"""</t>
+<t tx="ekr.20181117073929.1">@language css
+
+CSS = """
+
+.flx-BaseDropdown {
+    display: inline-block;
+    overflow: visible;
+    margin: 2px;
+    border-radius: 3px;
+    padding: 2px;
+    border: 1px solid #aaa;
+    max-height: 28px; /* overridden by maxsize */
+    white-space: nowrap; /* keep label and but on-line */
+    background: #e8e8e8
+}
+
+.flx-BaseDropdown:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
+}
+
+.flx-BaseDropdown &gt; .flx-dd-edit {
+    display: none;
+    max-width: 2em;  /* reset silly lineedit sizing */
+    min-width: calc(100% - 1.5em - 2px);
+    min-height: 1em;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.flx-BaseDropdown &gt; .flx-dd-label {
+    display: inline-block;
+    min-width: calc(100% - 1.5em - 2px);
+    min-height: 1em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.flx-BaseDropdown.editable-true {
+    background: #fff;
+}
+.flx-BaseDropdown.editable-true &gt; .flx-dd-label {
+    display: none;
+}
+.flx-BaseDropdown.editable-true &gt; .flx-dd-edit {
+    display: inline-block;
+}
+
+.flx-BaseDropdown &gt; .flx-dd-button {
+    display: inline-block;
+    position: static;
+    min-width: 1.5em;
+    max-width: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+.flx-BaseDropdown &gt; .flx-dd-button:hover {
+    background: rgba(128, 128, 128, 0.1);
+}
+.flx-BaseDropdown &gt; .flx-dd-button::after {
+    content: '\\25BE';  /* 2228 1F847 1F83F */
+}
+
+.flx-BaseDropdown .flx-dd-space {
+    display: inline-block;
+    min-width: 1em;
+}
+
+.flx-BaseDropdown &gt; .flx-dd-strud {
+    /* The strud allows to give the box a natural minimum size,
+       but it should not affect the height. */
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+}
+"""</t>
+<t tx="ekr.20181117074019.1">@language css
+
+CSS = """
+
+.flx-ComboBox {
+}
+
+.flx-ComboBox &gt; ul  {
+    list-style-type: none;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin: 0;
+    padding: 2px;
+    position: fixed;  /* because all our widgets are overflow:hidden */
+    background: white;
+    z-index: 9999;
+    display: none;
+}
+.flx-ComboBox.expanded &gt; ul {
+    display: block;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.flx-ComboBox.expanded &gt; ul &gt; li:hover {
+    background: rgba(0, 128, 255, 0.2);
+}
+.flx-ComboBox.expanded &gt; ul &gt; li.highlighted-true {
+    box-shadow: inset 0 0 3px 1px rgba(0, 0, 255, 0.4);
+}
+"""</t>
+<t tx="ekr.20181117074048.1"># Note: we don't define text on the base class, because it would be
+# the only common prop, plus we want a different docstring.
+
+text = event.StringProp('', settable=True, doc="""
+    The text displayed on the widget. This property is set
+    when an item is selected from the dropdown menu. When editable,
+    the ``text`` is also set when the text is edited by the user.
+    This property is settable programatically regardless of the
+    value of ``editable``.
+    """)
+
+selected_index = event.IntProp(-1, settable=True, doc="""
+    The currently selected item index. Can be -1 if no item has
+    been selected or when the text was changed manually (if editable).
+    Can also be programatically set.
+    """)
+
+selected_key = event.StringProp('', settable=True, doc="""
+    The currently selected item key. Can be '' if no item has
+    been selected or when the text was changed manually (if editable).
+    Can also be programatically set.
+    """)
+
+placeholder_text = event.StringProp('', settable=True, doc="""
+    The placeholder text to display in editable mode.
+    """)
+
+editable = event.BoolProp(False, settable=True, doc="""
+    Whether the combobox's text is editable.
+    """)
+
+options = event.TupleProp((), settable=True, doc="""
+    A list of tuples (key, text) representing the options. Both
+    keys and texts are converted to strings if they are not already.
+    For items that are given as a string, the key and text are the same.
+    If a dict is given, it is transformed to key-text pairs.
+    """)
+
+_highlighted = app.LocalProperty(-1, settable=True, doc="""
+    The index of the currently highlighted item.
+    """)</t>
+<t tx="ekr.20181117074133.1">@language css
+
+CSS = """
+.flx-DropdownContainer {
+    min-width: 50px;
+}
+.flx-DropdownContainer &gt; .flx-Widget {
+    position: fixed;
+    min-height: 100px;
+    max-height: 300px;
+    width: 200px;
+    background: white;
+    z-index: 10001;
+    display: none;
+}
+.flx-DropdownContainer.expanded &gt; .flx-Widget {
+    display: initial;
+}
+"""</t>
+<t tx="ekr.20181117074255.1">
+@language css
+
+CSS = """
+
+.flx-GroupWidget {
+    margin: 0;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+.flx-GroupWidget &gt; .flx-Layout {
+    width: calc(100% - 10px);
+    height: calc(100% - 25px);
+}
+
+"""</t>
+<t tx="ekr.20181117074456.1">
+@language css
+
+CSS = """
+    .flx-IFrame {
+        border: none;
+    }
+"""</t>
+<t tx="ekr.20181117074515.1">@language css
+
+CSS = """
+.flx-Label {
+    border: 0px solid #454;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}"""</t>
+<t tx="ekr.20181117074550.1">@language css
+
+CSS = """
+.flx-LineEdit {
+    color: #333;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    margin: 2px;
+}
+.flx-LineEdit:focus  {
+    outline: none;
+    box-shadow: 0px 0px 3px 1px rgba(0, 100, 200, 0.7);
+}
+"""</t>
+<t tx="ekr.20181117074615.1">## Properties
+
+text = event.StringProp(settable=True, doc="""
+    The current text of the line edit. Settable. If this is an empty
+    string, the placeholder_text is displayed instead.
+    """)
+
+password_mode = event.BoolProp(False, settable=True, doc="""
+    Whether the insered text should be hidden.
+    """)
+
+placeholder_text = event.StringProp(settable=True, doc="""
+    The placeholder text (shown when the text is an empty string).
+    """)
+
+autocomp = event.TupleProp(settable=True, doc="""
+    A tuple/list of strings for autocompletion. Might not work in all browsers.
+    """)
+
+disabled = event.BoolProp(False, settable=True, doc="""
+    Whether the line edit is disabled.
+    """)</t>
+<t tx="ekr.20181117074658.1">
+@language css
+
+CSS = """
+
+.flx-ProgressBar {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #eee;
+}
+
+.flx-ProgressBar &gt; .progress-bar {
+    /* Use flexbox to vertically align label text */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    -moz-flex-flow: column;
+    flex-flow: column;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-self: stretch;
+
+    position: absolute; /* need this on Chrome when in a VBox */
+    background: #8be;
+    text-align: center;
+    /*transition: width 0.2s ease; behaves silly on Chrome */
+    }
+
+"""</t>
+<t tx="ekr.20181117074724.1">value = event.FloatProp(0, settable=True, doc="""
+        The progress value.
+        """)
+
+min = event.FloatProp(0, settable=True, doc="""
+    The minimum progress value.
+    """)
+
+max = event.FloatProp(1, settable=True, doc="""
+    The maximum progress value.
+    """)
+
+text = event.StringProp('', settable=True, doc="""
+    The label to display on the progress bar. Occurances of
+    "{percent}" are replaced with the current percentage, and
+    "{value}" with the current value.
+    """)
+</t>
+<t tx="ekr.20181117074754.1">@language css
+
+CSS = """
+
+.flx-Slider:focus {
+    outline: none;
+}
+
+.flx-Slider &gt; .gutter {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin: 0 5px; /* half width of slider */
+    position: absolute;
+    top: calc(50% - 2px);
+    height: 4px;
+    width: calc(100% - 10px);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(0,0,0,0);
+    text-align: center;
+    transition: height 0.2s, top 0.2s;
+}
+.flx-Slider.flx-dragging &gt; .gutter, .flx-Slider:focus &gt; .gutter {
+    top: calc(50% - 10px);
+    height: 20px;
+    color: rgba(0,0,0,1);
+}
+
+.flx-Slider .slider {
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    background: #48c;
+    border: 2px solid #48c;
+    transition: top 0.2s, height 0.2s, background 0.4s;
+    position: absolute;
+    top: calc(50% - 8px);
+    height: 16px;
+    width: 10px;
+    }
+.flx-Slider.flx-dragging .slider, .flx-Slider:focus .slider {
+    background: none;
+    top: calc(50% - 10px);
+    height: 20px;
+}
+.flx-Slider &gt; .gutter &gt; .slider.disabled {
+    background: #888;
+    border: none;
+}
+"""</t>
+<t tx="ekr.20181117074816.1">step = event.FloatProp(0.01, settable=True, doc="""
+    The step size for the slider.
+    """)
+
+min = event.FloatProp(0, settable=True, doc="""
+    The minimal slider value.
+    """)
+
+max = event.FloatProp(1, settable=True, doc="""
+    The maximum slider value.
+    """)
+
+value = event.FloatProp(0, settable=True, doc="""
+    The current slider value.
+    """)
+
+text = event.StringProp('{value}', settable=True, doc="""
+    The label to display on the slider during dragging. Occurances of
+    "{percent}" are replaced with the current percentage, and
+    "{value}" with the current value. Default "{value}".
+    """)
+
+disabled = event.BoolProp(False, settable=True, doc="""
+    Whether the slider is disabled.
+    """)</t>
+<t tx="ekr.20181117074935.1">text = event.StringProp('', settable=True, doc="""
+    The text on the button.
+    """)
+
+checked = event.BoolProp(False, settable=True, doc="""
+    Whether the button is checked.
+    """)
+
+disabled = event.BoolProp(False, settable=True, doc="""
+    Whether the button is disabled.
+    """)</t>
+<t tx="ekr.20181117075020.1">
+capture_wheel = event.BoolProp(False, settable=True, doc="""
+    Whether the wheel event is "captured", i.e. not propagated to result
+    into scrolling of the parent widget (or page). If True, if no scrolling
+    must have been performed outside of the widget for about half a second
+    in order for the widget to capture scroll events.
+    """)</t>
+<t tx="ekr.20181117075046.1">color = event.ColorProp('#000000', settable=True, doc="""
+    The currently selected color.
+    """)
+
+disabled = event.BoolProp(False, settable=True, doc="""
+    Whether the color select is disabled.
+    """)</t>
+<t tx="ekr.20181117075138.1">text = event.StringProp('', settable=True, doc="""
+    The text displayed on the dropdown widget.
+    """)</t>
+<t tx="ekr.20181117075202.1">url = event.StringProp('', settable=True, doc="""
+    The url to show. 'http://' is automatically prepended if the url
+    does not have '://' in it.
+    """)</t>
+<t tx="ekr.20181117075226.1">text = event.StringProp('', doc="""
+    The text shown in the label (HTML is shown verbatim).
+    """)
+
+html = event.StringProp('', doc="""
+    The html shown in the label.
+
+    Warning: there is a risk of introducing openings for XSS attacks
+    when html is introduced that you do not control (e.g. from user input).
+    """)
+
+wrap = event.IntProp(0, settable=True, doc="""
+    Whether the content is allowed to be wrapped on multiple
+    lines. Set to 0/False for no wrap (default), 1/True for word-wrap,
+    2 for character wrap.
+    """)
+</t>
+<t tx="ekr.20181117075258.1">
+source = event.StringProp('', settable=True, doc="""
+    The source of the image, This can be anything that an HTML
+    img element supports.
+    """)
+
+stretch = event.BoolProp(False, settable=True, doc="""
+    Whether the image should stretch to fill all available
+    space, or maintain its aspect ratio (default).
+    """)</t>
+<t tx="ekr.20181117075336.1">
+source = event.StringProp('', settable=True, doc="""
+    The source of the video. This must be a url of a resource
+    on the web.
+    """)</t>
+<t tx="ekr.20181117075403.1">
+data = event.ListProp(settable=True, doc="""
+    The data (list of dicts) that describes the plot.
+    This can e.g. be the output of the Python plotly API call.
+    """)
+
+layout = event.DictProp(settable=True, doc="""
+    The layout dict to style the plot.
+    """)
+
+config = event.DictProp(settable=True, doc="""
+    The config for the plot.
+    """)</t>
+<t tx="ekr.20181117075442.1">xdata = event.TupleProp((), doc="""
+        A list of values for the x-axis. Set via the ``set_data()`` action.
+        """)
+
+ydata = event.TupleProp((), doc="""
+        A list of values for the y-axis. Set via the ``set_data()`` action.
+        """)</t>
+<t tx="ekr.20181117075523.1">
+max_selected = event.IntProp(0, settable=True, doc="""
+    The maximum number of selected items:
+
+    * If 0 (default) there is no selection.
+    * If 1, there can be one selected item.
+    * If &gt; 1, up to this number of items can be selected by clicking them.
+    * If -1, any number of items can be selected by holding Ctrl or Shift.
+    """)</t>
+<t tx="ekr.20181117075602.1">@nosearch
+
+# flattened, ignore-case, head
+
+# found 20 nodes
+</t>
+<t tx="ekr.20181117075617.1">@nosearch
+
+# flattened, ignore-case, head
+
+# found 18 nodes</t>
 </tnodes>
 </leo_file>
