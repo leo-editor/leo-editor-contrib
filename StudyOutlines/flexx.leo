@@ -658,34 +658,127 @@
 <v t="ekr.20181031045138.562"><vh>create_silly_icon </vh></v>
 </v>
 </v>
+<v t="ekr.20181031045138.871"><vh>@path util</vh>
+<v t="ekr.20181031045138.872"><vh>@@clean config.py</vh>
+<v t="ekr.20181031045138.873"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.874"><vh>as_bool </vh></v>
+<v t="ekr.20181031045138.875"><vh>get_tuple_validator </vh></v>
+<v t="ekr.20181031045138.876"><vh>stack_sorter </vh></v>
+<v t="ekr.20181031045138.877"><vh>class Config(object)</vh>
+<v t="ekr.20181031045138.878"><vh>Config.__init__</vh></v>
+<v t="ekr.20181031045138.879"><vh>Config.__repr__</vh></v>
+<v t="ekr.20181031045138.880"><vh>Config.__str__</vh></v>
+<v t="ekr.20181031045138.881"><vh>Config.__len__</vh></v>
+<v t="ekr.20181031045138.882"><vh>Config.__iter__</vh></v>
+<v t="ekr.20181031045138.883"><vh>Config.__dir__</vh></v>
+<v t="ekr.20181031045138.884"><vh>Config.__getattr__</vh></v>
+<v t="ekr.20181031045138.885"><vh>Config.__getitem__</vh></v>
+<v t="ekr.20181031045138.886"><vh>Config.__setattr__</vh></v>
+<v t="ekr.20181031045138.887"><vh>Config.__setitem__</vh></v>
+<v t="ekr.20181031045138.888"><vh>Config._set</vh></v>
+<v t="ekr.20181031045138.889"><vh>Config.load_from_file</vh></v>
+<v t="ekr.20181031045138.890"><vh>Config.load_from_string</vh></v>
+<v t="ekr.20181031045138.891"><vh>Config._load_from_string</vh></v>
+</v>
+<v t="ekr.20181031045138.892"><vh>is_valid_name </vh></v>
+<v t="ekr.20181031045138.893"><vh>isidentifier </vh></v>
+<v t="ekr.20181031045138.894"><vh>appdata_dir </vh></v>
+</v>
+<v t="ekr.20181031045138.895"><vh>@@clean getresource.py</vh>
+<v t="ekr.20181031045138.896"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.897"><vh>get_resoure_path </vh></v>
+<v t="ekr.20181031045138.898"><vh>get_resource </vh></v>
+<v t="ekr.20181031045138.899"><vh>_fetch_file </vh></v>
+</v>
+<v t="ekr.20181031045138.900"><vh>@@clean logging.py</vh>
+<v t="ekr.20181031045138.901"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.902"><vh>class _Formatter(logging.Formatter)</vh>
+<v t="ekr.20181031045138.903"><vh>_Formatter.__init__</vh></v>
+<v t="ekr.20181031045138.904"><vh>_Formatter.format</vh></v>
+</v>
+<v t="ekr.20181031045138.905"><vh>class _Handler(logging.StreamHandler)</vh>
+<v t="ekr.20181031045138.906"><vh>_Handler.emit</vh></v>
+</v>
+<v t="ekr.20181031045138.907"><vh>class _MatchFilter</vh>
+<v t="ekr.20181031045138.908"><vh>_MatchFilter.__init__</vh></v>
+<v t="ekr.20181031045138.909"><vh>_MatchFilter.filter</vh></v>
+</v>
+<v t="ekr.20181031045138.910"><vh>class _CaptureFilter</vh>
+<v t="ekr.20181031045138.911"><vh>_CaptureFilter.__init__</vh></v>
+<v t="ekr.20181031045138.912"><vh>_CaptureFilter.filter</vh></v>
+</v>
+<v t="ekr.20181031045138.913"><vh>set_log_level </vh></v>
+<v t="ekr.20181031045138.914"><vh>class capture_log</vh>
+<v t="ekr.20181031045138.915"><vh>capture_log.__init__</vh></v>
+<v t="ekr.20181031045138.916"><vh>capture_log.__enter__</vh></v>
+<v t="ekr.20181031045138.917"><vh>capture_log.__exit__</vh></v>
+</v>
+</v>
+<v t="ekr.20181031045138.918"><vh>@@clean minify.py</vh>
+<v t="ekr.20181031045138.919"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.920"><vh>minify </vh></v>
+<v t="ekr.20181031045138.921"><vh>remove_comments </vh></v>
+<v t="ekr.20181031045138.922"><vh>remove_all_whitespace </vh></v>
+<v t="ekr.20181031045138.923"><vh>remove_empty_lines </vh></v>
+<v t="ekr.20181031045138.924"><vh>remove_trailing_whitespace </vh></v>
+<v t="ekr.20181031045138.925"><vh>tabbify </vh></v>
+</v>
+<v t="ekr.20181031045138.926"><vh>@@clean screenshot.py</vh>
+<v t="ekr.20181031045138.927"><vh>Declarations </vh></v>
+</v>
+<v t="ekr.20181031045138.928"><vh>@@clean testing.py</vh>
+<v t="ekr.20181031045138.929"><vh>Declarations </vh></v>
+<v t="ekr.20181031045138.930"><vh>run_tests_if_main </vh></v>
+<v t="ekr.20181031045138.931"><vh>_enable_faulthandler </vh></v>
+<v t="ekr.20181031045138.932"><vh>_clear_our_modules </vh></v>
+</v>
+<v t="ekr.20181031045138.933"><vh>@@clean __init__.py</vh></v>
+</v>
 <v t="ekr.20181031045138.563"><vh>@path ui</vh>
+<v t="ekr.20181031045138.605"><vh>@@clean __init__.py</vh>
+<v t="ekr.20181031045138.606"><vh>Declarations </vh></v>
+</v>
 <v t="ekr.20181031045138.564"><vh>@@clean _widget.py</vh>
-<v t="ekr.20181031045138.565"><vh>Declarations </vh></v>
+<v t="ekr.20181117050140.1"><vh>&lt;&lt; _widget docstring &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.566"><vh>create_element </vh></v>
 <v t="ekr.20181031045138.567"><vh>class Widget(app.JsComponent)</vh>
+<v t="ekr.20181117052537.1"><vh>&lt;&lt; Widget Properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.568"><vh>Widget.set_icon</vh></v>
+<v t="ekr.20181117050521.1"><vh>Methods</vh>
 <v t="ekr.20181031045138.569"><vh>Widget.__init__</vh></v>
 <v t="ekr.20181031045138.570"><vh>Widget._comp_init_property_values</vh></v>
 <v t="ekr.20181031045138.571"><vh>Widget.init</vh></v>
 <v t="ekr.20181031045138.572"><vh>Widget._create_dom</vh></v>
 <v t="ekr.20181031045138.573"><vh>Widget._render_dom</vh></v>
-<v t="ekr.20181031045138.574"><vh>Widget.__render</vh></v>
+<v t="ekr.20181031045138.574"><vh>Widget.__render &amp; helper</vh>
 <v t="ekr.20181031045138.575"><vh>Widget.__render_resolve</vh></v>
+</v>
 <v t="ekr.20181031045138.576"><vh>Widget._repr_html_</vh></v>
 <v t="ekr.20181031045138.577"><vh>Widget.dispose</vh></v>
+</v>
+<v t="ekr.20181117050617.1"><vh>Actions</vh>
 <v t="ekr.20181031045138.578"><vh>Widget.apply_style</vh></v>
+</v>
+<v t="ekr.20181117050825.1"><vh>Reactions</vh>
 <v t="ekr.20181031045138.579"><vh>Widget.__css_class_changed</vh></v>
 <v t="ekr.20181031045138.580"><vh>Widget.__title_changed</vh></v>
 <v t="ekr.20181031045138.581"><vh>Widget.__icon_changed</vh></v>
 <v t="ekr.20181031045138.582"><vh>Widget.__update_tabindex</vh></v>
+<v t="ekr.20181117050904.1"><vh>Widget.__make_singleton_container_widgets_work</vh></v>
+</v>
+<v t="ekr.20181117050743.1"><vh>Sizing</vh>
 <v t="ekr.20181031045138.583"><vh>Widget._update_minmaxsize</vh></v>
 <v t="ekr.20181031045138.584"><vh>Widget._query_min_max_size</vh></v>
 <v t="ekr.20181031045138.585"><vh>Widget.check_real_size</vh></v>
 <v t="ekr.20181031045138.586"><vh>Widget.__size_may_have_changed</vh></v>
 <v t="ekr.20181031045138.587"><vh>Widget._set_size</vh></v>
+</v>
+<v t="ekr.20181117050939.1"><vh>Parenting</vh>
 <v t="ekr.20181031045138.588"><vh>Widget.set_parent</vh></v>
 <v t="ekr.20181031045138.589"><vh>Widget.__container_changed</vh></v>
 <v t="ekr.20181031045138.590"><vh>Widget._release_child</vh></v>
+</v>
+<v t="ekr.20181117051008.1"><vh>Events</vh>
 <v t="ekr.20181031045138.591"><vh>Widget._registered_reactions_hook</vh></v>
 <v t="ekr.20181031045138.592"><vh>Widget._init_events</vh></v>
 <v t="ekr.20181031045138.593"><vh>Widget.pointer_down</vh></v>
@@ -702,8 +795,6 @@
 <v t="ekr.20181031045138.604"><vh>Widget._create_key_event</vh></v>
 </v>
 </v>
-<v t="ekr.20181031045138.605"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.606"><vh>Declarations </vh></v>
 </v>
 <v t="ekr.20181031045138.607"><vh>@path layouts</vh>
 <v t="ekr.20181031045138.608"><vh>@@clean _form.py</vh>
@@ -721,15 +812,22 @@
 </v>
 </v>
 <v t="ekr.20181031045138.619"><vh>@@clean _hv.py</vh>
-<v t="ekr.20181031045138.620"><vh>Declarations </vh></v>
+<v t="ekr.20181117051414.1"><vh>&lt;&lt; _hv docstring &gt;&gt;</vh></v>
+<v t="ekr.20181117052642.1"><vh>&lt;&lt; Notes on performance and layout boundaries. &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.621"><vh>class OrientationProp(Property)</vh>
 <v t="ekr.20181031045138.622"><vh>OrientationProp._validate</vh></v>
 </v>
 <v t="ekr.20181031045138.623"><vh>class HVLayout(Layout)</vh>
+<v t="ekr.20181117051554.1"><vh>&lt;&lt; HVLayout docstring &gt;&gt;</vh></v>
+<v t="ekr.20181117052055.1"><vh>&lt;&lt; HVLayout CSS &gt;&gt;</vh></v>
+<v t="ekr.20181117052149.1"><vh>&lt;&lt; HVLayout properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.624"><vh>HVLayout.__init__</vh></v>
+<v t="ekr.20181117051627.1"><vh>Actions</vh>
 <v t="ekr.20181031045138.625"><vh>HVLayout.set_from_flex_values</vh></v>
 <v t="ekr.20181031045138.626"><vh>HVLayout.set_splitter_positions</vh></v>
 <v t="ekr.20181031045138.627"><vh>HVLayout.user_splitter_positions</vh></v>
+</v>
+<v t="ekr.20181117051701.1"><vh>General reactions and hooks</vh>
 <v t="ekr.20181031045138.628"><vh>HVLayout._query_min_max_size</vh></v>
 <v t="ekr.20181031045138.629"><vh>HVLayout.__size_changed</vh></v>
 <v t="ekr.20181031045138.630"><vh>HVLayout.__let_children_check_size</vh></v>
@@ -740,8 +838,12 @@
 <v t="ekr.20181031045138.635"><vh>HVLayout._render_dom</vh></v>
 <v t="ekr.20181031045138.636"><vh>HVLayout._ensure_seps</vh></v>
 <v t="ekr.20181031045138.637"><vh>HVLayout._rerender</vh></v>
+</v>
+<v t="ekr.20181117051744.1"><vh>Reactions for box mode</vh>
 <v t="ekr.20181031045138.638"><vh>HVLayout._set_box_child_flexes</vh></v>
 <v t="ekr.20181031045138.639"><vh>HVLayout._set_box_spacing</vh></v>
+</v>
+<v t="ekr.20181117051809.1"><vh>Reactions and machinerey for fix/split mode</vh>
 <v t="ekr.20181031045138.640"><vh>HVLayout._get_available_size</vh></v>
 <v t="ekr.20181031045138.641"><vh>HVLayout.__spacing_changed</vh></v>
 <v t="ekr.20181031045138.642"><vh>HVLayout._set_split_from_flexes</vh></v>
@@ -753,8 +855,12 @@
 <v t="ekr.20181031045138.648"><vh>HVLayout.pointer_up</vh></v>
 <v t="ekr.20181031045138.649"><vh>HVLayout.pointer_move</vh></v>
 </v>
+</v>
+<v t="ekr.20181117051939.1"><vh>Util functions</vh>
 <v t="ekr.20181031045138.650"><vh>_applyBoxStyle </vh></v>
 <v t="ekr.20181031045138.651"><vh>_get_min_max </vh></v>
+</v>
+<v t="ekr.20181117051310.1"><vh>Convenience subclasses</vh>
 <v t="ekr.20181031045138.652"><vh>class HBox(HVLayout)</vh></v>
 <v t="ekr.20181031045138.653"><vh>class VBox(HVLayout)</vh></v>
 <v t="ekr.20181031045138.654"><vh>class HFix(HVLayout)</vh></v>
@@ -762,23 +868,20 @@
 <v t="ekr.20181031045138.656"><vh>class HSplit(HVLayout)</vh></v>
 <v t="ekr.20181031045138.657"><vh>class VSplit(HVLayout)</vh></v>
 </v>
+</v>
 <v t="ekr.20181031045138.658"><vh>@@clean _layout.py</vh>
-<v t="ekr.20181031045138.659"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.660"><vh>class Layout(Widget)</vh></v>
 </v>
 <v t="ekr.20181031045138.661"><vh>@@clean _pinboard.py</vh>
-<v t="ekr.20181031045138.662"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.663"><vh>class PinboardLayout(Layout)</vh></v>
 </v>
 <v t="ekr.20181031045138.664"><vh>@@clean _stack.py</vh>
-<v t="ekr.20181031045138.665"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.666"><vh>class StackLayout(Layout)</vh>
 <v t="ekr.20181031045138.667"><vh>StackLayout.set_current</vh></v>
 <v t="ekr.20181031045138.668"><vh>StackLayout.__set_current_widget</vh></v>
 </v>
 </v>
 <v t="ekr.20181031045138.669"><vh>@@clean _tabs.py</vh>
-<v t="ekr.20181031045138.670"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.671"><vh>class TabLayout(StackLayout)</vh>
 <v t="ekr.20181031045138.672"><vh>TabLayout._create_dom</vh></v>
 <v t="ekr.20181031045138.673"><vh>TabLayout._render_dom</vh></v>
@@ -788,9 +891,7 @@
 <v t="ekr.20181031045138.677"><vh>TabLayout._tabbar_click</vh></v>
 </v>
 </v>
-<v t="ekr.20181031045138.678"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181031045138.679"><vh>Declarations </vh></v>
-</v>
+<v t="ekr.20181031045138.678"><vh>@@clean __init__.py</vh></v>
 </v>
 <v t="ekr.20181031045138.680"><vh>@path widgets</vh>
 <v t="ekr.20181031045138.681"><vh>@@clean _bokeh.py</vh>
@@ -919,16 +1020,20 @@
 <v t="ekr.20181031045138.782"><vh>@@clean _lineedit.py</vh>
 <v t="ekr.20181031045138.783"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.784"><vh>class LineEdit(Widget)</vh>
+<v t="ekr.20181117053548.1"><vh>Methods, actions, emitters</vh>
 <v t="ekr.20181031045138.785"><vh>LineEdit._create_dom</vh></v>
 <v t="ekr.20181031045138.786"><vh>LineEdit.user_text</vh></v>
 <v t="ekr.20181031045138.787"><vh>LineEdit.user_done</vh></v>
 <v t="ekr.20181031045138.788"><vh>LineEdit.submit</vh></v>
 <v t="ekr.20181031045138.789"><vh>LineEdit.key_down</vh></v>
+</v>
+<v t="ekr.20181117053608.1"><vh>Reactions</vh>
 <v t="ekr.20181031045138.790"><vh>LineEdit.__text_changed</vh></v>
 <v t="ekr.20181031045138.791"><vh>LineEdit.__password_mode_changed</vh></v>
 <v t="ekr.20181031045138.792"><vh>LineEdit.__placeholder_text_changed</vh></v>
 <v t="ekr.20181031045138.793"><vh>LineEdit.__autocomp_changed</vh></v>
 <v t="ekr.20181031045138.794"><vh>LineEdit.__disabled_changed</vh></v>
+</v>
 </v>
 </v>
 <v t="ekr.20181031045138.795"><vh>@@clean _media.py</vh>
@@ -990,8 +1095,9 @@
 </v>
 </v>
 <v t="ekr.20181031045138.841"><vh>@@clean _tree.py</vh>
-<v t="ekr.20181031045138.842"><vh>Declarations </vh></v>
 <v t="ekr.20181031045138.843"><vh>class TreeWidget(Widget)</vh>
+<v t="ekr.20181117053452.1"><vh>&lt;&lt; TreeWidget docstring &gt;&gt;</vh></v>
+<v t="ekr.20181117053258.1"><vh>&lt;&lt; TreeWidget CSS &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.844"><vh>TreeWidget.init</vh></v>
 <v t="ekr.20181031045138.845"><vh>TreeWidget.get_all_items</vh></v>
 <v t="ekr.20181031045138.846"><vh>TreeWidget._render_dom</vh></v>
@@ -1008,6 +1114,7 @@
 <v t="ekr.20181031045138.857"><vh>TreeWidget._get_all_items_annotated</vh></v>
 </v>
 <v t="ekr.20181031045138.858"><vh>class TreeItem(Widget)</vh>
+<v t="ekr.20181117053402.1"><vh>&lt;&lt; TreeItem properties &gt;&gt;</vh></v>
 <v t="ekr.20181031045138.859"><vh>TreeItem.user_selected</vh></v>
 <v t="ekr.20181031045138.860"><vh>TreeItem.user_checked</vh></v>
 <v t="ekr.20181031045138.861"><vh>TreeItem.user_collapsed</vh></v>
@@ -1025,82 +1132,8 @@
 </v>
 </v>
 </v>
-<v t="ekr.20181031045138.871"><vh>@path util</vh>
-<v t="ekr.20181031045138.872"><vh>@@clean config.py</vh>
-<v t="ekr.20181031045138.873"><vh>Declarations </vh></v>
-<v t="ekr.20181031045138.874"><vh>as_bool </vh></v>
-<v t="ekr.20181031045138.875"><vh>get_tuple_validator </vh></v>
-<v t="ekr.20181031045138.876"><vh>stack_sorter </vh></v>
-<v t="ekr.20181031045138.877"><vh>class Config(object)</vh>
-<v t="ekr.20181031045138.878"><vh>Config.__init__</vh></v>
-<v t="ekr.20181031045138.879"><vh>Config.__repr__</vh></v>
-<v t="ekr.20181031045138.880"><vh>Config.__str__</vh></v>
-<v t="ekr.20181031045138.881"><vh>Config.__len__</vh></v>
-<v t="ekr.20181031045138.882"><vh>Config.__iter__</vh></v>
-<v t="ekr.20181031045138.883"><vh>Config.__dir__</vh></v>
-<v t="ekr.20181031045138.884"><vh>Config.__getattr__</vh></v>
-<v t="ekr.20181031045138.885"><vh>Config.__getitem__</vh></v>
-<v t="ekr.20181031045138.886"><vh>Config.__setattr__</vh></v>
-<v t="ekr.20181031045138.887"><vh>Config.__setitem__</vh></v>
-<v t="ekr.20181031045138.888"><vh>Config._set</vh></v>
-<v t="ekr.20181031045138.889"><vh>Config.load_from_file</vh></v>
-<v t="ekr.20181031045138.890"><vh>Config.load_from_string</vh></v>
-<v t="ekr.20181031045138.891"><vh>Config._load_from_string</vh></v>
-</v>
-<v t="ekr.20181031045138.892"><vh>is_valid_name </vh></v>
-<v t="ekr.20181031045138.893"><vh>isidentifier </vh></v>
-<v t="ekr.20181031045138.894"><vh>appdata_dir </vh></v>
-</v>
-<v t="ekr.20181031045138.895"><vh>@@clean getresource.py</vh>
-<v t="ekr.20181031045138.896"><vh>Declarations </vh></v>
-<v t="ekr.20181031045138.897"><vh>get_resoure_path </vh></v>
-<v t="ekr.20181031045138.898"><vh>get_resource </vh></v>
-<v t="ekr.20181031045138.899"><vh>_fetch_file </vh></v>
-</v>
-<v t="ekr.20181031045138.900"><vh>@@clean logging.py</vh>
-<v t="ekr.20181031045138.901"><vh>Declarations </vh></v>
-<v t="ekr.20181031045138.902"><vh>class _Formatter(logging.Formatter)</vh>
-<v t="ekr.20181031045138.903"><vh>_Formatter.__init__</vh></v>
-<v t="ekr.20181031045138.904"><vh>_Formatter.format</vh></v>
-</v>
-<v t="ekr.20181031045138.905"><vh>class _Handler(logging.StreamHandler)</vh>
-<v t="ekr.20181031045138.906"><vh>_Handler.emit</vh></v>
-</v>
-<v t="ekr.20181031045138.907"><vh>class _MatchFilter</vh>
-<v t="ekr.20181031045138.908"><vh>_MatchFilter.__init__</vh></v>
-<v t="ekr.20181031045138.909"><vh>_MatchFilter.filter</vh></v>
-</v>
-<v t="ekr.20181031045138.910"><vh>class _CaptureFilter</vh>
-<v t="ekr.20181031045138.911"><vh>_CaptureFilter.__init__</vh></v>
-<v t="ekr.20181031045138.912"><vh>_CaptureFilter.filter</vh></v>
-</v>
-<v t="ekr.20181031045138.913"><vh>set_log_level </vh></v>
-<v t="ekr.20181031045138.914"><vh>class capture_log</vh>
-<v t="ekr.20181031045138.915"><vh>capture_log.__init__</vh></v>
-<v t="ekr.20181031045138.916"><vh>capture_log.__enter__</vh></v>
-<v t="ekr.20181031045138.917"><vh>capture_log.__exit__</vh></v>
-</v>
-</v>
-<v t="ekr.20181031045138.918"><vh>@@clean minify.py</vh>
-<v t="ekr.20181031045138.919"><vh>Declarations </vh></v>
-<v t="ekr.20181031045138.920"><vh>minify </vh></v>
-<v t="ekr.20181031045138.921"><vh>remove_comments </vh></v>
-<v t="ekr.20181031045138.922"><vh>remove_all_whitespace </vh></v>
-<v t="ekr.20181031045138.923"><vh>remove_empty_lines </vh></v>
-<v t="ekr.20181031045138.924"><vh>remove_trailing_whitespace </vh></v>
-<v t="ekr.20181031045138.925"><vh>tabbify </vh></v>
-</v>
-<v t="ekr.20181031045138.926"><vh>@@clean screenshot.py</vh>
-<v t="ekr.20181031045138.927"><vh>Declarations </vh></v>
-</v>
-<v t="ekr.20181031045138.928"><vh>@@clean testing.py</vh>
-<v t="ekr.20181031045138.929"><vh>Declarations </vh></v>
-<v t="ekr.20181031045138.930"><vh>run_tests_if_main </vh></v>
-<v t="ekr.20181031045138.931"><vh>_enable_faulthandler </vh></v>
-<v t="ekr.20181031045138.932"><vh>_clear_our_modules </vh></v>
-</v>
-<v t="ekr.20181031045138.933"><vh>@@clean __init__.py</vh></v>
-</v>
+<v t="ekr.20181031045138.567"></v>
+<v t="ekr.20181031045138.604"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20181031045130.3"></t>
@@ -10389,79 +10422,7 @@ from flexx.util.icon import Icon
 </t>
 <t tx="ekr.20181031045138.563"></t>
 <t tx="ekr.20181031045138.564">@path C:/Anaconda3/Lib/site-packages/flexx/ui/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.565">"""
-Provides the base ``Widget`` class.
-
-When subclassing a Widget to create a compound widget (i.e. a widget
-that contains other widgets), initialize the child widgets inside the
-``init()`` method. That method is called while the widget is the
-*current widget*; any widgets instantiated inside it will automatically
-become children.
-
-.. UIExample:: 100
-
-    from flexx import flx
-
-    class Example(flx.Widget):
-        def init(self):
-            super().init()
-            
-            flx.Button(text='foo')
-            flx.Button(text='bar')
-
-
-One can also use a widget as a context manager (i.e. using the ``with``
-statement) to create child widgets. This is particularly useful for
-layout widgets (like ``HBox``).
-
-.. UIExample:: 100
-
-    from flexx import flx
-
-    class Example(flx.Widget):
-        def init(self):
-            super().init()
-            
-            with flx.HBox():
-                flx.Button(flex=1, text='foo')
-                flx.Button(flex=2, text='bar')
-
-
-It is possible to create custom low-level widgets by implementing
-``_render_dom()``, resulting in a declarative "react-like" (but less
-Pythonic) approach. It returns a virtual DOM that is used to update/replace
-the real browser DOM.
-
-.. UIExample:: 100
-
-    from flexx import flx
-    
-    class Example(flx.Widget):
-        
-        count = flx.IntProp()
-        
-        def _render_dom(self):
-            # This method automatically gets called when any of the used
-            # properties (only count, in this case) changes.
-            return flx.create_element('div', {}, 
-                flx.create_element('button',
-                                   {'onclick': self.increase_count},
-                                   '+'),
-                flx.create_element('span',
-                                   {'style.background': '#afa'},
-                                   str(self.count)),
-                )
-        
-        @flx.action
-        def increase_count(self):
-            self._mutate_count(self.count + 1)
-
-"""
-
+&lt;&lt; _widget docstring &gt;&gt;
 from pscript import undefined, window
 
 from ..event import loop
@@ -10470,6 +10431,9 @@ from .. import event, app
 from . import logger  # noqa
 
 
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.566">def create_element(type, props=None, *children):
     """ Convenience function to create a dictionary to represent
@@ -10552,118 +10516,8 @@ from . import logger  # noqa
         position: absolute;
     }
     """
-
-    ## Properties
-
-    container = event.StringProp('', settable=True, doc="""
-        The id of the DOM element that contains this widget if
-        parent is None. Use 'body' to make this widget the root.
-        """)
-
-    parent = event.ComponentProp(None, doc="""
-        The parent widget, or None if it has no parent. Setting
-        this property will update the "children" property of the
-        old and new parent.
-        """)
-
-    children = app.LocalProperty((), doc="""
-        The child widgets of this widget. This property is not settable and
-        only present in JavaScript.
-        """)
-
-    title = event.StringProp('', settable=True, doc="""
-        The string title of this widget. This is used to mark
-        the widget in e.g. a tab layout or form layout, and is used
-        as the app's title if this is the main widget.
-        """)
-
-    icon = app.LocalProperty('', settable=False, doc="""
-        The icon for this widget. This is used is some widgets classes,
-        and is used as the app's icon if this is the main widget.
-        It is settable from Python, but only present in JavaScript.
-        """)
-
-    css_class = event.StringProp('', settable=True, doc="""
-        The extra CSS class name to asign to the DOM element.
-        Spaces can be used to delimit multiple names. Note that the
-        DOM element already has a css class-name corresponding to
-        its class (e.g. 'flx-Widget) and all its superclasses.
-        """)
-
-    flex = event.FloatPairProp((0, 0), settable=True, doc="""
-        How much space this widget takes (relative to the other
-        widgets) when contained in a flexible layout such as HBox,
-        HFix, HSplit or FormLayout. A flex of 0 means to take
-        the minimum size. Flex is a two-element tuple, but both values
-        can be specified at once by specifying a scalar.
-        """)
-
-    size = event.FloatPairProp((0, 0), settable=False, doc="""
-        The actual size of the widget (readonly). Flexx tries to keep
-        this value up-to-date, but in e.g. a box layout, a change in a
-        Button's text can change the size of sibling widgets.
-        """)
-
-    minsize = event.FloatPairProp((0, 0), settable=True, doc="""
-        The user-defined minimum size (width, height) of this widget in pixels.
-        The default value differs per widget (``Widget.DEFAULT_MIN_SIZE``).
-        Note that using "min-width" or "min-height" in ``apply_style()``.
-        (and in the ``style`` kwarg) also set this property. Minimum sizes set
-        in CSS are ignored.
-        """)
-
-    minsize_from_children = event.BoolProp(True, settable=True, doc="""
-        Whether the children are taken into account to calculate this
-        widget's size constraints. Default True: both the ``minsize``
-        of this widget and the size constraints of its children (plus
-        spacing and padding for layout widgets) are used to calculate
-        the size constraints for this widget.
-
-        Set to False to prevent the content in this widget to affect
-        the parent's layout, e.g. to allow fully collapsing this widget
-        when the parent is a splitter. If this widget has a lot of
-        content, you may want to combine with ``style='overflow-y: auto'``.
-        """)
-
-    maxsize = event.FloatPairProp((1e9, 1e9), settable=True, doc="""
-        The user-defined maximum size (width, height) of this widget in pixels.
-        Note that using "max-width" or "max-height" in ``apply_style()``.
-        (and in the ``style`` kwarg) also set this property. Maximum sizes set
-        in CSS are ignored.
-        """)
-
-    _size_limits = event.TupleProp((0, 1e9, 0, 1e9), settable=True, doc="""
-        A 4-element tuple (minWidth, maxWidth, minHeight, maxHeight) in pixels,
-        based on ``minsize``, ``maxsize`` (and for some layouts the size limits
-        of the children). Private prop for internal use.
-        """)
-
-    tabindex = event.IntProp(-2, settable=True, doc="""
-        The index used to determine widget order when the user
-        iterates through the widgets using tab. This also determines
-        whether a widget is able to receive key events. Flexx automatically
-        sets this property when it should emit key events.
-        Effect of possible values on underlying DOM element:
-
-        * -2: element cannot have focus unless its a special element like
-            a link or form control (default).
-        * -1: element can have focus, but is not reachable via tab.
-        * 0: element can have focus, and is reachable via tab in the order
-            at which the element is defined.
-        * 1 and up: element can have focus, and the tab-order is determined
-            by the value of tabindex.
-        """)
-
-    capture_mouse = event.IntProp(1, settable=True, doc="""
-        To what extend the mouse is "captured".
-
-        * If 0, the mouse is not captured, and move events are only emitted
-          when the mouse is pressed down (not recommended).
-        * If 1 (default) the mouse is captured when pressed down, so move
-          and up events are received also when the mouse is outside the widget.
-        * If 2, move events are also emitted when the mouse is not pressed down
-          and inside the widget.
-        """)
+    
+    &lt;&lt; Widget Properties &gt;&gt;
 
     @others
 </t>
@@ -10680,8 +10534,6 @@ def set_icon(self, val):
     if not isinstance(val, str):
         raise TypeError('Icon must be a string')
     self._mutate_icon(val)
-
-## Methods
 
 </t>
 <t tx="ekr.20181031045138.569">def __init__(self, *init_args, **kwargs):
@@ -10929,10 +10781,11 @@ def __render(self):
 
     return node
 
-# Note that this method is only present at the Python side
-# (because the JsComponent meta class makes it so).
 </t>
-<t tx="ekr.20181031045138.576">def _repr_html_(self):
+<t tx="ekr.20181031045138.576"># Note that this method is only present at the Python side
+# (because the JsComponent meta class makes it so).
+
+def _repr_html_(self):
     """ This is to get the widget shown inline in the notebook.
     """
     if self.container:
@@ -10959,9 +10812,6 @@ def __render(self):
     super().dispose()
     self.set_parent(None)
     self._children_value = ()
-
-## Actions
-
 
 </t>
 <t tx="ekr.20181031045138.578">@event.action
@@ -11018,8 +10868,6 @@ def apply_style(self, style):
     if size_limits_changed:
         self.set_minsize((mima[0], mima[2]))
         self.set_maxsize((mima[1], mima[3]))
-
-## Reactions
 
 </t>
 <t tx="ekr.20181031045138.579">@event.reaction('css_class')
@@ -11087,35 +10935,6 @@ def __update_tabindex(self, *events):
         self.node.removeAttribute('tabIndex')
     else:
         self.node.tabIndex = ti
-
-# Now solved with CSS, which seems to work, but leaving this code for now ...
-# @event.reaction('children', '!children*.mode', '!children*.orientation')
-# def __make_singleton_container_widgets_work(self, *events):
-#     classNames = self.outernode.classList
-#     if not classNames.contains('flx-Layout'):
-#         # classNames.remove('flx-box')
-#         # classNames.remove('flx-horizontal')
-#         # classNames.remove('flx-vertical')
-#         classNames.remove('flx-abs-children')
-#         children = self.children
-#         if len(children) == 1:
-#             subClassNames = children[0].outernode.classList
-#             if subClassNames.contains('flx-Layout'):
-#                 classNames.add('flx-abs-children')
-#             # This seems to be enough, though previously we did:
-#             # if subClassNames.contains('flx-box'):
-#             #     # classNames.add('flx-box')
-#             #     vert = subClassNames.contains('flx-vertical')
-#             #     classNames.add('flx-horizontal' if vert else 'flx-horizontal')
-#             # else:
-#             #     # If child is a layout that uses absolute position, make
-#             #     # out children absolute.
-#             #     for name in ('split', 'StackPanel', 'TabPanel', 'DockPanel'):
-#             #         if subClassNames.contains('flx-' + name):
-#             #             classNames.add('flx-abs-children')
-#             #             break
-
-## Sizing
 
 </t>
 <t tx="ekr.20181031045138.583">@event.reaction
@@ -11190,9 +11009,6 @@ def __size_may_have_changed(self, *events):
             size[i] = size[i] * 100 + '%'
     self.outernode.style[prefix + 'width'] = size[0]
     self.outernode.style[prefix + 'height'] = size[1]
-
-## Parenting
-
 </t>
 <t tx="ekr.20181031045138.588">@event.action
 def set_parent(self, parent, pos=None):
@@ -11274,10 +11090,6 @@ def __container_changed(self, *events):
     """ Overload to restore a child widget, e.g. to its normal style.
     """
     pass
-
-## Events
-
-# todo: events: focus, enter, leave ... ?
 
 </t>
 <t tx="ekr.20181031045138.591">def _registered_reactions_hook(self):
@@ -11888,6 +11700,13 @@ def _adapt_to_size_change(self, *events):
             min(mima1[3], mima3[3])]
 </t>
 <t tx="ekr.20181031045138.619">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
+&lt;&lt; _hv docstring &gt;&gt;
+&lt;&lt; Notes on performance and layout boundaries. &gt;&gt;
+
+from ... import event, app
+from ...event import Property
+from . import Layout
+
 @others
 @language python
 @tabwidth -4
@@ -11907,109 +11726,6 @@ def _adapt_to_size_change(self, *events):
     """
 
     @others
-</t>
-<t tx="ekr.20181031045138.620">""" HVLayout
-
-The HVLayout and its subclasses provide a simple mechanism to horizontally
-or vertically stack child widgets. This can be done in different *modes*:
-box mode is suited for aligning content where natural size matters. The
-fix mode and split mode are more suited for high-level layout. See
-the HVLayout class for details.
-
-
-Interactive Box layout example:
-
-.. UIExample:: 200
-
-    from flexx import app, event, ui
-
-    class Example(ui.HBox):
-        def init(self):
-            self.b1 = ui.Button(text='Horizontal', flex=0)
-            self.b2 = ui.Button(text='Vertical', flex=1)
-            self.b3 = ui.Button(text='Horizontal reversed', flex=2)
-            self.b4 = ui.Button(text='Vertical reversed', flex=3)
-
-        @event.reaction('b1.pointer_down')
-        def _to_horizontal(self, *events):
-            self.set_orientation('h')
-
-        @event.reaction('b2.pointer_down')
-        def _to_vertical(self, *events):
-            self.set_orientation('v')
-
-        @event.reaction('b3.pointer_down')
-        def _to_horizontal_rev(self, *events):
-            self.set_orientation('hr')
-
-        @event.reaction('b4.pointer_down')
-        def _to_vertical_r(self, *events):
-            self.set_orientation('vr')
-
-Also see examples: :ref:`app_layout.py`, :ref:`splitters.py`,
-:ref:`box_vs_fix_layout.py`, :ref:`mondriaan.py`.
-
-"""
-
-
-"""
-## Notes on performance and layout boundaries.
-
-In layout one can see multiple streams of information:
-
-- Information about available size streams downward.
-- Information about minimum and maxium allowed sizes streams upward.
-- Information about natural sizes streams upward.
-
-The first two streams are not problematic, as they are very much
-one-directional, and minimum/maximum sizes are often quite static.
-The flow of natural size is important to obtain good looking layouts, but
-adds complications because of its recursive effect; a change in size may
-need several document reflows to get the layout right, which can cause
-severe performance penalties if many elements are involved. Therefore it
-is important to introduce "layout boundaries" in the higher levels of a UI
-so that layout can be established within individual parts of the UI without
-affecting the other parts.
-
-This module implements horizontal/vertical layouts that support natural sizes
-(box) and layouts that do not (fix and split). The former is implemented with
-CSS flexbox (the browser does all the work, and maintains the upward stream
-of natural sizes). The latter is implemented with absolute positioning (we make
-JavaScript do all the work). We realize good compatibility by maintaining the
-first two streams of information.
-
-To clearify, it would be possible to implement split and fix with flexbox,
-and this could result in a "nicety" that a VSplit with content can still
-have a natural horizontal size (and used as such in an HBox with flex 0).
-However, one can see how this will require additional document reflows
-(since a change in width can change the natural height and vice versa).
-Split and Fix layouts provide an intuitive way to introduce layout boundaries.
-
-For an element to be a layout boundary it must:
-
-- Not be display inline or inline-block
-- Not have a percentage height value.
-- Not have an implicit or auto height value.
-- Not have an implicit or auto width value.
-- Have an explicit overflow value (scroll, auto or hidden).
-- Not be a descendant of a &lt;table&gt; element.
-
-Most Widgets inside a HVLayout in split or fix mode conform to this:
-they are typically not table elements, the Widget sets overflow, the layout
-itself uses CSS to set display, and sets height and weight.
-
-More reading:
-
-- http://wilsonpage.co.uk/introducing-layout-boundaries/
-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-"""
-
-from ... import event, app
-from ...event import Property
-from . import Layout
-
-
 </t>
 <t tx="ekr.20181031045138.621">class OrientationProp(Property):
     """ A property that represents a pair of float values, which can also be
@@ -12033,195 +11749,14 @@ from . import Layout
 
 </t>
 <t tx="ekr.20181031045138.623">class HVLayout(Layout):
-    """ A layout widget to distribute child widgets horizontally or vertically.
 
-    This is a versatile layout class which can operate in different
-    orientations (horizontal, vertical, reversed), and in different modes:
-
-    In 'fix' mode, all available space is simply distributed corresponding
-    to the children's flex values. This can be convenient to e.g. split
-    a layout in two halves.
-
-    In 'box' mode, each widget gets at least its natural size (if available),
-    and any *additional* space is distributed corresponding to the children's
-    flex values. This is convenient for low-level layout of widgets, e.g. to
-    align  one or more buttons. It is common to use flex values of zero to
-    give widgets just the size that they needs and use an empty widget with a
-    flex of 1 to fill up any remaining space. This mode is based on CSS flexbox.
-
-    In 'split' mode, all available space is initially distributed corresponding
-    to the children's flex values. The splitters between the child widgets
-    can be dragged by the user and positioned via an action. This is useful
-    to give the user more control over the (high-level) layout.
-
-    In all modes, the layout is constrained by the minimum and maximum size
-    of the child widgets (as set via style/CSS). Note that flexbox (and thus
-    box mode) may not honour min/max sizes of widgets in child layouts.
-
-    Note that widgets with a flex value of zero may collapse if used inside
-    a fix/split layout, or in a box layout but lacking a natural size. This
-    can be resolved by assigning a minimum width/height to the widget. The
-    exception is if all child widgets have a flex value of zero, in which
-    case the available space is divided equally.
-
-    The ``node`` of this widget is a
-    `&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_. The
-    outer nodes of the child widgets are layed-out using JavaScript of CSS,
-    depending on the mode.
-    
-    Also see the convenience classes: HFix, VFix, HBox, VBox, HSplit, VSplit.
-    """
+    &lt;&lt; HVLayout docstring &gt;&gt;
 
     _DEFAULT_ORIENTATION = 'h'
     _DEFAULT_MODE = 'box'
 
-    CSS = """
-
-    /* === for box layout === */
-
-    .flx-HVLayout &gt; .flx-Widget {
-        margin: 0; /* the layout handles the margin */
-     }
-
-    .flx-box {
-        display: -webkit-flex;
-        display: -ms-flexbox;  /* IE 10 */
-        display: -ms-flex;     /* IE 11 */
-        display: -moz-flex;
-        display: flex;
-
-        /* How space is divided when all flex-factors are 0:
-           start, end, center, space-between, space-around */
-        -webkit-justify-content: space-around;
-        -ms-justify-content: space-around;
-        -moz-justify-content: space-around;
-        justify-content: space-around;
-
-        /* How items are aligned in the other direction:
-           center, stretch, baseline */
-        -webkit-align-items: stretch;
-        -ms-align-items: stretch;
-        -moz-align-items: stretch;
-        align-items: stretch;
-    }
-
-    .flx-box.flx-horizontal {
-        -webkit-flex-flow: row;
-        -ms-flex-flow: row;
-        -moz-flex-flow: row;
-        flex-flow: row;
-        width: 100%;
-    }
-    .flx-box.flx-vertical {
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-        -moz-flex-flow: column;
-        flex-flow: column;
-        height: 100%; width: 100%;
-    }
-    .flx-box.flx-horizontal.flx-reversed {
-        -webkit-flex-flow: row-reverse;
-        -ms-flex-flow: row-reverse;
-        -moz-flex-flow: row-reverse;
-        flex-flow: row-reverse;
-    }
-    .flx-box.flx-vertical.flx-reversed {
-        -webkit-flex-flow: column-reverse;
-        -ms-flex-flow: column-reverse;
-        -moz-flex-flow: column-reverse;
-        flex-flow: column-reverse;
-    }
-
-    /* Make child widgets (and layouts) size correctly */
-    .flx-box.flx-horizontal &gt; .flx-Widget {
-        height: auto;
-        width: auto;
-    }
-    .flx-box.flx-vertical &gt; .flx-Widget {
-        width: auto;
-        height: auto;
-    }
-
-    /* If a boxLayout is in a compound widget, we need to make that widget
-       a flex container (done with JS in Widget class), and scale here */
-    .flx-Widget &gt; .flx-box {
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-
-    /* === For split and fix layout === */
-
-    .flx-split &gt; .flx-Widget {
-        /* Let child widgets position well, and help them become a layout
-         * boundary. We cannot do "display: block;", as that would break stuff.
-        /* overflow is set in Widget.CSS, setting here breaks scrollable widgets
-         */
-        position: absolute;
-    }
-
-    .flx-split.flx-dragging { /* Fix for odd drag behavior on Chrome */
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .flx-split.flx-dragging iframe {  /* disable iframe during drag */
-        pointer-events: none;
-    }
-
-    .flx-split.flx-horizontal &gt; .flx-split-sep,
-    .flx-split.flx-horizontal.flx-dragging {
-        cursor: ew-resize;
-    }
-    .flx-split.flx-vertical &gt; .flx-split-sep,
-    .flx-split.flx-vertical.flx-dragging {
-        cursor: ns-resize;
-    }
-    .flx-split-sep {
-        z-index: 2;
-        position: absolute;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        box-sizing: border-box;
-        background: rgba(0, 0, 0, 0); /* transparent */
-        /* background: #fff;  /* hide underlying widgets */
-    }
-    """
-
-    mode = event.EnumProp(('box', 'fix', 'split'), settable=True, doc="""
-        The mode in which this layout operates:
-
-        * 'BOX': (default) each widget gets at least its natural size, and
-          additional space is distributed corresponding to the flex values.
-        * 'FIX': all available space is distributed corresponding to the flex values.
-        * 'SPLIT': available space is initially distributed correspondong to the
-          flex values, and can be modified by the user by dragging the splitters.
-        """)
-
-    orientation = OrientationProp(settable=True, doc="""
-        The orientation of the child widgets. 'h' or 'v' for horizontal and
-        vertical, or their reversed variants 'hr' and 'vr'. Settable with
-        values: 0, 1, 'h', 'v', 'hr', 'vr', 'horizontal', 'vertical',
-        'left-to-right', 'right-to-left', 'top-to-bottom', 'bottom-to-top'
-        (insensitive to case and use of dashes).
-        """)
-    
-    spacing = event.FloatProp(4, settable=True, doc="""
-        The space between two child elements (in pixels).
-        """)
-
-    padding = event.FloatProp(1, settable=True, doc="""
-        The empty space around the layout (in pixels).
-        """)
-
-    # splitter_positions = event.TupleProp(doc="""  xx local property!
-    splitter_positions = app.LocalProperty(doc="""
-        The preferred relative positions of the splitters. The actual
-        positions are subject to minsize and maxsize constraints
-        (and natural sizes for box-mode).
-        """)
+    &lt;&lt; HVLayout CSS &gt;&gt;
+    &lt;&lt; HVLayout properties &gt;&gt;
 
     @others
 </t>
@@ -12236,8 +11771,6 @@ from . import Layout
 
     if 'Split' in self._id and 'spacing' not in kwargs:
         self.set_spacing(8)
-
-## Actions
 
 </t>
 <t tx="ekr.20181031045138.625">@event.action
@@ -12309,9 +11842,6 @@ def user_splitter_positions(self, *positions):
 
     self.set_splitter_positions(*positions)
     return {'positions': positions}
-
-## General reactions and hooks
-
 </t>
 <t tx="ekr.20181031045138.628">def _query_min_max_size(self):
     """ Overload to also take child limits into account.
@@ -12510,8 +12040,6 @@ def _rerender(self):
         self._mutate_splitter_positions(sp1)
         self._mutate_splitter_positions(sp2)
 
-## Reactions for box mode
-
 </t>
 <t tx="ekr.20181031045138.638">@event.reaction('orientation', 'children', 'children*.flex', mode='greedy')
 def _set_box_child_flexes(self, *events):
@@ -12554,8 +12082,6 @@ def _set_box_spacing(self, *events):
                 child.outernode.style[margin] = self.spacing + 'px'
     for widget in children:
         widget.check_real_size()
-
-## Reactions and machinerey for fix/split mode
 
 </t>
 <t tx="ekr.20181031045138.64">def __call__(self, *args, **kwargs):
@@ -12853,7 +12379,7 @@ def pointer_move(self, e):
         return super().pointer_move(e)
 
 
-\\-4.## Util funcs
+
 
 </t>
 <t tx="ekr.20181031045138.65">def __repr__(self):
@@ -12873,10 +12399,6 @@ def pointer_move(self, e):
         return mima[0], mima[1]
     else:
         return mima[2], mima[3]
-
-
-## Convenience subclasses
-
 </t>
 <t tx="ekr.20181031045138.652">class HBox(HVLayout):
     """ Horizontal layout that tries to give each widget its natural size and
@@ -12939,16 +12461,14 @@ def pointer_move(self, e):
     _DEFAULT_MODE = 'split'
 </t>
 <t tx="ekr.20181031045138.658">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.659">""" Layout
+""" Layout
 """
 
 from . import Widget
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.66">@property
 def cls(self):
@@ -12981,11 +12501,7 @@ def cls(self):
     """
 </t>
 <t tx="ekr.20181031045138.661">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.662">""" PinboardLayout
+""" PinboardLayout
 
 Free positioning (absolute or relative) of child widgets. Example:
 
@@ -13009,7 +12525,9 @@ Free positioning (absolute or relative) of child widgets. Example:
 
 from . import Layout
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.663">class PinboardLayout(Layout):
     """ Unconstrained absolute and relative positioning of child widgets.
@@ -13029,11 +12547,7 @@ from . import Layout
     """
 </t>
 <t tx="ekr.20181031045138.664">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.665">""" StackLayout
+""" StackLayout
 
 Show only one child at any time. Example:
 
@@ -13064,7 +12578,9 @@ Show only one child at any time. Example:
 from ... import event
 from . import Layout
 
-
+@others
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.666">class StackLayout(Layout):
     """ A layout widget which shows only one of its children at a time.
@@ -13124,18 +12640,7 @@ def __set_current_widget(self):
                 widget.outernode.classList.remove('flx-current')
 </t>
 <t tx="ekr.20181031045138.669">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.67">@property
-def is_served(self):
-    """ Whether this app is already registered by the app manager.
-    """
-    return self._is_served
-
-</t>
-<t tx="ekr.20181031045138.670">""" TabLayout
+""" TabLayout
 
 A ``StackLayout`` subclass that uses tabs to let the user select a child widget.
 
@@ -13161,6 +12666,15 @@ from pscript import window
 from ... import event
 from ._stack import StackLayout
 
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181031045138.67">@property
+def is_served(self):
+    """ Whether this app is already registered by the app manager.
+    """
+    return self._is_served
 
 </t>
 <t tx="ekr.20181031045138.671">class TabLayout(StackLayout):
@@ -13304,11 +12818,7 @@ def user_current(self, current):
         self.user_current(index)
 </t>
 <t tx="ekr.20181031045138.678">@path C:/Anaconda3/Lib/site-packages/flexx/ui/layouts/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.679">""" Namespace for all layout widgets.
+""" Namespace for all layout widgets.
 """
 
 # flake8: noqa
@@ -13321,6 +12831,9 @@ from ._stack import StackLayout
 from ._tabs import TabLayout
 from ._pinboard import PinboardLayout
 from ._form import FormLayout
+
+@language python
+@tabwidth -4
 </t>
 <t tx="ekr.20181031045138.68">@property
 def url(self):
@@ -15219,8 +14732,6 @@ from . import Widget
         Whether the line edit is disabled.
         """)
 
-    ## Methods, actions, emitters
-
     @others
 </t>
 <t tx="ekr.20181031045138.785">def _create_dom(self):
@@ -15290,9 +14801,6 @@ def key_down(self, e):
     elif ev.key == 'Escape':
         self.node.blur()
     return ev
-
-## Reactions
-
 </t>
 <t tx="ekr.20181031045138.79">def create_default_session(self, cls=None):
     """ Create a default session for interactive use (e.g. the notebook).
@@ -16351,11 +15859,7 @@ def __on_key(self, *events):
             self.user_value(self.value - self.step)
 </t>
 <t tx="ekr.20181031045138.841">@path C:/Anaconda3/Lib/site-packages/flexx/ui/widgets/
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="ekr.20181031045138.842">""" TreeWidget
+""" TreeWidget
 
 A ``TreeWidget`` can contain ``TreeItems``, which in turn can contain
 ``TreeItems`` to construct a tree.
@@ -16382,181 +15886,22 @@ from .._widget import Widget, create_element
 
 loop = event.loop
 
-
-# todo: icons
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20181031045138.843"># todo: icons
 # todo: tooltips
 # todo: a variant that can load data dynamically from Python, for biggish data
 
 
-</t>
-<t tx="ekr.20181031045138.843">class TreeWidget(Widget):
-    """
-    A Widget that can be used to structure information in a list or a tree.
-    It's items are represented by its children, which may only be TreeItem
-    objects. Sub items can be created by instantiating TreeItems in the context
-    of another TreeItem.
-
-    When the items in the tree have no sub-items themselves, the TreeWidget is
-    in "list mode". Otherwise, items can be collapsed/expanded etc.
+class TreeWidget(Widget):
     
-    The ``node`` of this widget is a
-    `&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_
-    with some child elements and quite a bit of CSS for rendering.
-    
-    **Style**
-
-    This widget can be fully styled using CSS, using the following CSS classes:
-
-    * ``flx-listmode`` is set on the widget's node if no items have sub items.
-
-    Style classes for a TreeItem's elements:
-
-    * ``flx-TreeItem`` indicates the row of an item (its text, icon, and checkbox).
-    * ``flx-TreeItem &gt; collapsebut`` the element used to collapse/expand an item.
-    * ``flx-TreeItem &gt; checkbut`` the element used to check/uncheck an item.
-    * ``flx-TreeItem &gt; text`` the element that contains the text of the item.
-    * ``flx-TreeItem &gt; title`` the element that contains the title of the item.
-
-    Style classes applied to the TreeItem, corresponding to its properties:
-
-    * ``visible-true`` and ``visible-false`` indicate visibility.
-    * ``selected-true`` and ``selected-false`` indicate selection state.
-    * ``checked-true``, ``checked-false`` and ``checked-null`` indicate checked
-      state, with the ``null`` variant indicating not-checkable.
-    * ``collapsed-true``, ``collapsed-false`` and ``collapsed-null`` indicate
-      collapse state, with the ``null`` variant indicating not-collapsable.
-    
-    """
+    &lt;&lt; TreeWidget docstring &gt;&gt;
 
     DEFAULT_MIN_SIZE = 100, 50
-
-    CSS = """
-
-    /* ----- Tree Widget Mechanics ----- */
-
-    .flx-TreeWidget {
-        height: 100%;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        cursor: default;
-    }
-
-    .flx-TreeWidget &gt; ul {
-        position: absolute; /* avoid having an implicit width */
-        left: 0;
-        right: 0;
-    }
-
-    .flx-TreeWidget .flx-TreeItem {
-        display: inline-block;
-        margin: 0;
-        padding-left: 2px;
-        width: 100%;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    .flx-TreeWidget .flx-TreeItem &gt; .text {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-    }
-    .flx-TreeWidget .flx-TreeItem &gt; .title:empty + .text {
-        position: static;  /* .text width is not used*/
-    }
-
-    .flx-TreeWidget ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .flx-TreeWidget li.visible-false {
-        display: none;
-    }
-    .flx-TreeWidget li.collapsed-true ul {
-        display: none;
-    }
-
-    /* collapse button */
-    .flx-TreeWidget .flx-TreeItem &gt; .collapsebut {
-        display: inline-block;
-        width: 1.5em;  /* must match with ul padding-left */
-        text-align: center;
-        margin-left: -1px;  /* aligns better with indentation guide */
-    }
-    .flx-TreeWidget .flx-TreeItem.collapsed-null &gt; .collapsebut {
-        visibility: hidden;
-    }
-    .flx-TreeWidget.flx-listmode .flx-TreeItem &gt; .collapsebut {
-        display: none;
-    }
-
-    /* indentation guides */
-    .flx-TreeWidget ul {
-        padding-left: 0.75em;
-    }
-    .flx-TreeWidget &gt; ul {
-        padding-left: 0em;
-    }
-    .flx-TreeWidget.flx-listmode ul {
-        padding-left: 0.25em;
-    }
-
-    /* ----- Tree Widget Style ----- */
-
-    .flx-TreeWidget {
-        border: 2px groove black;
-        padding: 3px;
-    }
-
-    .flx-TreeItem.selected-true {
-        background: rgba(128, 128, 128, 0.35);
-    }
-    .flx-TreeItem.highlighted-true {
-        box-shadow: inset 0 0 3px 1px rgba(0, 0, 255, 0.4);
-    }
-
-    .flx-TreeWidget .flx-TreeItem.collapsed-true &gt; .collapsebut::after {
-        vertical-align: top;
-        content: '\\25B8';  /* small right triangle */
-    }
-    .flx-TreeWidget .flx-TreeItem.collapsed-false &gt; .collapsebut::after {
-        vertical-align: top;
-        content: '\\25BE';  /* small down triangle */
-    }
-
-    .flx-TreeWidget .flx-TreeItem &gt; .collapsebut {
-        color: rgba(128, 128, 128, 0.6);
-    }
-    .flx-TreeWidget li.collapsed-false &gt; ul &gt; li {
-        border-left: 1px solid rgba(128, 128, 128, 0.3);
-    }
-    .flx-TreeWidget li.collapsed-false.selected-true &gt; ul &gt; li {
-        border-left: 1px solid rgba(128, 128, 128, 0.6);
-    }
-
-    .flx-TreeItem.checked-null &gt; .checkbut {
-        content: '\\2611\\00a0';
-       /* display: none;  /* could also be visibility: hidden */
-    }
-    .flx-TreeItem.checked-true &gt; .checkbut::after {
-        vertical-align: top;
-        content: '\\2611\\00a0';
-    }
-    .flx-TreeItem.checked-false &gt; .checkbut::after {
-        vertical-align: top;
-        content: '\\2610\\00a0';
-    }
-
-    .flx-TreeWidget .flx-TreeItem &gt; .text.hastitle {
-        width: 50%;
-    }
-    /* ----- End Tree Widget ----- */
-
-    """
+    
+    &lt;&lt; TreeWidget CSS &gt;&gt;
 
     max_selected = event.IntProp(0, settable=True, doc="""
         The maximum number of selected items:
@@ -16856,38 +16201,8 @@ def _handle_item_clicked(self, *events):
     of ``Widget._render_dom()`` for details.
 
     """
-
-    text = event.StringProp('', settable=True, doc="""
-        The text for this item. Can be used in combination with
-        ``title`` to obtain two columns.
-        """)
-
-    title = event.StringProp('', settable=True, doc="""
-        The title for this item that appears before the text. Intended
-        for display of key-value pairs. If a title is given, the text is
-        positioned in a second (virtual) column of the tree widget.
-        """)
-
-    visible = event.BoolProp(True, settable=True, doc="""
-        Whether this item (and its sub items) is visible.
-        """)
-
-    selected = event.BoolProp(False, settable=True, doc="""
-        Whether this item is selected. Depending on the TreeWidget's
-        policy (max_selected), this can be set/unset on clicking the item.
-        """)
-
-    checked = event.TriStateProp(settable=True, doc="""
-        Whether this item is checked (i.e. has its checkbox set).
-        The value can be None, True or False. None (the default)
-        means that the item is not checkable.
-        """)
-
-    collapsed = event.TriStateProp(settable=True, doc="""
-        Whether this item is expanded (i.e. shows its children).
-        The value can be None, True or False. None (the default)
-        means that the item is not collapsable (unless it has sub items).
-        """)
+    
+    &lt;&lt; TreeItem properties &gt;&gt;
 
     @others
 </t>
@@ -18378,6 +17693,737 @@ def name(self):
     """
     return self._name
 
+</t>
+<t tx="ekr.20181117050140.1">"""
+Provides the base ``Widget`` class.
+
+When subclassing a Widget to create a compound widget (i.e. a widget
+that contains other widgets), initialize the child widgets inside the
+``init()`` method. That method is called while the widget is the
+*current widget*; any widgets instantiated inside it will automatically
+become children.
+
+.. UIExample:: 100
+
+    from flexx import flx
+
+    class Example(flx.Widget):
+        def init(self):
+            super().init()
+            
+            flx.Button(text='foo')
+            flx.Button(text='bar')
+
+
+One can also use a widget as a context manager (i.e. using the ``with``
+statement) to create child widgets. This is particularly useful for
+layout widgets (like ``HBox``).
+
+.. UIExample:: 100
+
+    from flexx import flx
+
+    class Example(flx.Widget):
+        def init(self):
+            super().init()
+            
+            with flx.HBox():
+                flx.Button(flex=1, text='foo')
+                flx.Button(flex=2, text='bar')
+
+
+It is possible to create custom low-level widgets by implementing
+``_render_dom()``, resulting in a declarative "react-like" (but less
+Pythonic) approach. It returns a virtual DOM that is used to update/replace
+the real browser DOM.
+
+.. UIExample:: 100
+
+    from flexx import flx
+    
+    class Example(flx.Widget):
+        
+        count = flx.IntProp()
+        
+        def _render_dom(self):
+            # This method automatically gets called when any of the used
+            # properties (only count, in this case) changes.
+            return flx.create_element('div', {}, 
+                flx.create_element('button',
+                                   {'onclick': self.increase_count},
+                                   '+'),
+                flx.create_element('span',
+                                   {'style.background': '#afa'},
+                                   str(self.count)),
+                )
+        
+        @flx.action
+        def increase_count(self):
+            self._mutate_count(self.count + 1)
+
+"""
+</t>
+<t tx="ekr.20181117050521.1">## Methods
+
+</t>
+<t tx="ekr.20181117050617.1">## Actions
+
+
+</t>
+<t tx="ekr.20181117050743.1">## Sizing</t>
+<t tx="ekr.20181117050825.1">## Reactions
+
+</t>
+<t tx="ekr.20181117050904.1"># Now solved with CSS, which seems to work, but leaving this code for now ...
+
+# @event.reaction('children', '!children*.mode', '!children*.orientation')
+# def __make_singleton_container_widgets_work(self, *events):
+#     classNames = self.outernode.classList
+#     if not classNames.contains('flx-Layout'):
+#         # classNames.remove('flx-box')
+#         # classNames.remove('flx-horizontal')
+#         # classNames.remove('flx-vertical')
+#         classNames.remove('flx-abs-children')
+#         children = self.children
+#         if len(children) == 1:
+#             subClassNames = children[0].outernode.classList
+#             if subClassNames.contains('flx-Layout'):
+#                 classNames.add('flx-abs-children')
+#             # This seems to be enough, though previously we did:
+#             # if subClassNames.contains('flx-box'):
+#             #     # classNames.add('flx-box')
+#             #     vert = subClassNames.contains('flx-vertical')
+#             #     classNames.add('flx-horizontal' if vert else 'flx-horizontal')
+#             # else:
+#             #     # If child is a layout that uses absolute position, make
+#             #     # out children absolute.
+#             #     for name in ('split', 'StackPanel', 'TabPanel', 'DockPanel'):
+#             #         if subClassNames.contains('flx-' + name):
+#             #             classNames.add('flx-abs-children')
+#             #             break
+
+
+</t>
+<t tx="ekr.20181117050939.1">## Parenting
+
+</t>
+<t tx="ekr.20181117051008.1">## Events
+
+# todo: events: focus, enter, leave ... ?
+
+</t>
+<t tx="ekr.20181117051310.1">## Convenience subclasses
+</t>
+<t tx="ekr.20181117051414.1">@language rest
+""" HVLayout
+
+The HVLayout and its subclasses provide a simple mechanism to horizontally
+or vertically stack child widgets. This can be done in different *modes*:
+box mode is suited for aligning content where natural size matters. The
+fix mode and split mode are more suited for high-level layout. See
+the HVLayout class for details.
+
+
+Interactive Box layout example:
+
+.. UIExample:: 200
+
+    from flexx import app, event, ui
+
+    class Example(ui.HBox):
+        def init(self):
+            self.b1 = ui.Button(text='Horizontal', flex=0)
+            self.b2 = ui.Button(text='Vertical', flex=1)
+            self.b3 = ui.Button(text='Horizontal reversed', flex=2)
+            self.b4 = ui.Button(text='Vertical reversed', flex=3)
+
+        @event.reaction('b1.pointer_down')
+        def _to_horizontal(self, *events):
+            self.set_orientation('h')
+
+        @event.reaction('b2.pointer_down')
+        def _to_vertical(self, *events):
+            self.set_orientation('v')
+
+        @event.reaction('b3.pointer_down')
+        def _to_horizontal_rev(self, *events):
+            self.set_orientation('hr')
+
+        @event.reaction('b4.pointer_down')
+        def _to_vertical_r(self, *events):
+            self.set_orientation('vr')
+
+Also see examples: :ref:`app_layout.py`, :ref:`splitters.py`,
+:ref:`box_vs_fix_layout.py`, :ref:`mondriaan.py`.
+
+"""
+
+
+</t>
+<t tx="ekr.20181117051554.1">@language rest
+
+""" A layout widget to distribute child widgets horizontally or vertically.
+
+This is a versatile layout class which can operate in different
+orientations (horizontal, vertical, reversed), and in different modes:
+
+In 'fix' mode, all available space is simply distributed corresponding
+to the children's flex values. This can be convenient to e.g. split
+a layout in two halves.
+
+In 'box' mode, each widget gets at least its natural size (if available),
+and any *additional* space is distributed corresponding to the children's
+flex values. This is convenient for low-level layout of widgets, e.g. to
+align  one or more buttons. It is common to use flex values of zero to
+give widgets just the size that they needs and use an empty widget with a
+flex of 1 to fill up any remaining space. This mode is based on CSS flexbox.
+
+In 'split' mode, all available space is initially distributed corresponding
+to the children's flex values. The splitters between the child widgets
+can be dragged by the user and positioned via an action. This is useful
+to give the user more control over the (high-level) layout.
+
+In all modes, the layout is constrained by the minimum and maximum size
+of the child widgets (as set via style/CSS). Note that flexbox (and thus
+box mode) may not honour min/max sizes of widgets in child layouts.
+
+Note that widgets with a flex value of zero may collapse if used inside
+a fix/split layout, or in a box layout but lacking a natural size. This
+can be resolved by assigning a minimum width/height to the widget. The
+exception is if all child widgets have a flex value of zero, in which
+case the available space is divided equally.
+
+The ``node`` of this widget is a
+`&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_. The
+outer nodes of the child widgets are layed-out using JavaScript of CSS,
+depending on the mode.
+
+Also see the convenience classes: HFix, VFix, HBox, VBox, HSplit, VSplit.
+"""</t>
+<t tx="ekr.20181117051627.1">## Actions
+</t>
+<t tx="ekr.20181117051701.1">## General reactions and hooks
+
+</t>
+<t tx="ekr.20181117051744.1">## Reactions for box mode
+</t>
+<t tx="ekr.20181117051809.1">## Reactions and machinerey for fix/split mode
+
+</t>
+<t tx="ekr.20181117051939.1">## Util funcs</t>
+<t tx="ekr.20181117052055.1">CSS = """
+
+/* === for box layout === */
+
+.flx-HVLayout &gt; .flx-Widget {
+    margin: 0; /* the layout handles the margin */
+ }
+
+.flx-box {
+    display: -webkit-flex;
+    display: -ms-flexbox;  /* IE 10 */
+    display: -ms-flex;     /* IE 11 */
+    display: -moz-flex;
+    display: flex;
+
+    /* How space is divided when all flex-factors are 0:
+       start, end, center, space-between, space-around */
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+
+    /* How items are aligned in the other direction:
+       center, stretch, baseline */
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    -moz-align-items: stretch;
+    align-items: stretch;
+}
+
+.flx-box.flx-horizontal {
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    -moz-flex-flow: row;
+    flex-flow: row;
+    width: 100%;
+}
+.flx-box.flx-vertical {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    -moz-flex-flow: column;
+    flex-flow: column;
+    height: 100%; width: 100%;
+}
+.flx-box.flx-horizontal.flx-reversed {
+    -webkit-flex-flow: row-reverse;
+    -ms-flex-flow: row-reverse;
+    -moz-flex-flow: row-reverse;
+    flex-flow: row-reverse;
+}
+.flx-box.flx-vertical.flx-reversed {
+    -webkit-flex-flow: column-reverse;
+    -ms-flex-flow: column-reverse;
+    -moz-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+}
+
+/* Make child widgets (and layouts) size correctly */
+.flx-box.flx-horizontal &gt; .flx-Widget {
+    height: auto;
+    width: auto;
+}
+.flx-box.flx-vertical &gt; .flx-Widget {
+    width: auto;
+    height: auto;
+}
+
+/* If a boxLayout is in a compound widget, we need to make that widget
+   a flex container (done with JS in Widget class), and scale here */
+.flx-Widget &gt; .flx-box {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* === For split and fix layout === */
+
+.flx-split &gt; .flx-Widget {
+    /* Let child widgets position well, and help them become a layout
+     * boundary. We cannot do "display: block;", as that would break stuff.
+    /* overflow is set in Widget.CSS, setting here breaks scrollable widgets
+     */
+    position: absolute;
+}
+
+.flx-split.flx-dragging { /* Fix for odd drag behavior on Chrome */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.flx-split.flx-dragging iframe {  /* disable iframe during drag */
+    pointer-events: none;
+}
+
+.flx-split.flx-horizontal &gt; .flx-split-sep,
+.flx-split.flx-horizontal.flx-dragging {
+    cursor: ew-resize;
+}
+.flx-split.flx-vertical &gt; .flx-split-sep,
+.flx-split.flx-vertical.flx-dragging {
+    cursor: ns-resize;
+}
+.flx-split-sep {
+    z-index: 2;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0); /* transparent */
+    /* background: #fff;  /* hide underlying widgets */
+}
+"""</t>
+<t tx="ekr.20181117052149.1">mode = event.EnumProp(('box', 'fix', 'split'), settable=True, doc="""
+    The mode in which this layout operates:
+
+    * 'BOX': (default) each widget gets at least its natural size, and
+      additional space is distributed corresponding to the flex values.
+    * 'FIX': all available space is distributed corresponding to the flex values.
+    * 'SPLIT': available space is initially distributed correspondong to the
+      flex values, and can be modified by the user by dragging the splitters.
+    """)
+
+orientation = OrientationProp(settable=True, doc="""
+    The orientation of the child widgets. 'h' or 'v' for horizontal and
+    vertical, or their reversed variants 'hr' and 'vr'. Settable with
+    values: 0, 1, 'h', 'v', 'hr', 'vr', 'horizontal', 'vertical',
+    'left-to-right', 'right-to-left', 'top-to-bottom', 'bottom-to-top'
+    (insensitive to case and use of dashes).
+    """)
+
+spacing = event.FloatProp(4, settable=True, doc="""
+    The space between two child elements (in pixels).
+    """)
+
+padding = event.FloatProp(1, settable=True, doc="""
+    The empty space around the layout (in pixels).
+    """)
+
+# splitter_positions = event.TupleProp(doc="""  xx local property!
+splitter_positions = app.LocalProperty(doc="""
+    The preferred relative positions of the splitters. The actual
+    positions are subject to minsize and maxsize constraints
+    (and natural sizes for box-mode).
+    """)
+</t>
+<t tx="ekr.20181117052537.1">## Properties
+
+container = event.StringProp('', settable=True, doc="""
+    The id of the DOM element that contains this widget if
+    parent is None. Use 'body' to make this widget the root.
+    """)
+
+parent = event.ComponentProp(None, doc="""
+    The parent widget, or None if it has no parent. Setting
+    this property will update the "children" property of the
+    old and new parent.
+    """)
+
+children = app.LocalProperty((), doc="""
+    The child widgets of this widget. This property is not settable and
+    only present in JavaScript.
+    """)
+
+title = event.StringProp('', settable=True, doc="""
+    The string title of this widget. This is used to mark
+    the widget in e.g. a tab layout or form layout, and is used
+    as the app's title if this is the main widget.
+    """)
+
+icon = app.LocalProperty('', settable=False, doc="""
+    The icon for this widget. This is used is some widgets classes,
+    and is used as the app's icon if this is the main widget.
+    It is settable from Python, but only present in JavaScript.
+    """)
+
+css_class = event.StringProp('', settable=True, doc="""
+    The extra CSS class name to asign to the DOM element.
+    Spaces can be used to delimit multiple names. Note that the
+    DOM element already has a css class-name corresponding to
+    its class (e.g. 'flx-Widget) and all its superclasses.
+    """)
+
+flex = event.FloatPairProp((0, 0), settable=True, doc="""
+    How much space this widget takes (relative to the other
+    widgets) when contained in a flexible layout such as HBox,
+    HFix, HSplit or FormLayout. A flex of 0 means to take
+    the minimum size. Flex is a two-element tuple, but both values
+    can be specified at once by specifying a scalar.
+    """)
+
+size = event.FloatPairProp((0, 0), settable=False, doc="""
+    The actual size of the widget (readonly). Flexx tries to keep
+    this value up-to-date, but in e.g. a box layout, a change in a
+    Button's text can change the size of sibling widgets.
+    """)
+
+minsize = event.FloatPairProp((0, 0), settable=True, doc="""
+    The user-defined minimum size (width, height) of this widget in pixels.
+    The default value differs per widget (``Widget.DEFAULT_MIN_SIZE``).
+    Note that using "min-width" or "min-height" in ``apply_style()``.
+    (and in the ``style`` kwarg) also set this property. Minimum sizes set
+    in CSS are ignored.
+    """)
+
+minsize_from_children = event.BoolProp(True, settable=True, doc="""
+    Whether the children are taken into account to calculate this
+    widget's size constraints. Default True: both the ``minsize``
+    of this widget and the size constraints of its children (plus
+    spacing and padding for layout widgets) are used to calculate
+    the size constraints for this widget.
+
+    Set to False to prevent the content in this widget to affect
+    the parent's layout, e.g. to allow fully collapsing this widget
+    when the parent is a splitter. If this widget has a lot of
+    content, you may want to combine with ``style='overflow-y: auto'``.
+    """)
+
+maxsize = event.FloatPairProp((1e9, 1e9), settable=True, doc="""
+    The user-defined maximum size (width, height) of this widget in pixels.
+    Note that using "max-width" or "max-height" in ``apply_style()``.
+    (and in the ``style`` kwarg) also set this property. Maximum sizes set
+    in CSS are ignored.
+    """)
+
+_size_limits = event.TupleProp((0, 1e9, 0, 1e9), settable=True, doc="""
+    A 4-element tuple (minWidth, maxWidth, minHeight, maxHeight) in pixels,
+    based on ``minsize``, ``maxsize`` (and for some layouts the size limits
+    of the children). Private prop for internal use.
+    """)
+
+tabindex = event.IntProp(-2, settable=True, doc="""
+    The index used to determine widget order when the user
+    iterates through the widgets using tab. This also determines
+    whether a widget is able to receive key events. Flexx automatically
+    sets this property when it should emit key events.
+    Effect of possible values on underlying DOM element:
+
+    * -2: element cannot have focus unless its a special element like
+        a link or form control (default).
+    * -1: element can have focus, but is not reachable via tab.
+    * 0: element can have focus, and is reachable via tab in the order
+        at which the element is defined.
+    * 1 and up: element can have focus, and the tab-order is determined
+        by the value of tabindex.
+    """)
+
+capture_mouse = event.IntProp(1, settable=True, doc="""
+    To what extend the mouse is "captured".
+
+    * If 0, the mouse is not captured, and move events are only emitted
+      when the mouse is pressed down (not recommended).
+    * If 1 (default) the mouse is captured when pressed down, so move
+      and up events are received also when the mouse is outside the widget.
+    * If 2, move events are also emitted when the mouse is not pressed down
+      and inside the widget.
+    """)</t>
+<t tx="ekr.20181117052642.1">@language rest
+@wrap
+
+"""
+## Notes on performance and layout boundaries.
+
+In layout one can see multiple streams of information:
+
+- Information about available size streams downward.
+- Information about minimum and maxium allowed sizes streams upward.
+- Information about natural sizes streams upward.
+
+The first two streams are not problematic, as they are very much
+one-directional, and minimum/maximum sizes are often quite static.
+The flow of natural size is important to obtain good looking layouts, but
+adds complications because of its recursive effect; a change in size may
+need several document reflows to get the layout right, which can cause
+severe performance penalties if many elements are involved. Therefore it
+is important to introduce "layout boundaries" in the higher levels of a UI
+so that layout can be established within individual parts of the UI without
+affecting the other parts.
+
+This module implements horizontal/vertical layouts that support natural sizes
+(box) and layouts that do not (fix and split). The former is implemented with
+CSS flexbox (the browser does all the work, and maintains the upward stream
+of natural sizes). The latter is implemented with absolute positioning (we make
+JavaScript do all the work). We realize good compatibility by maintaining the
+first two streams of information.
+
+To clearify, it would be possible to implement split and fix with flexbox,
+and this could result in a "nicety" that a VSplit with content can still
+have a natural horizontal size (and used as such in an HBox with flex 0).
+However, one can see how this will require additional document reflows
+(since a change in width can change the natural height and vice versa).
+Split and Fix layouts provide an intuitive way to introduce layout boundaries.
+
+For an element to be a layout boundary it must:
+
+- Not be display inline or inline-block
+- Not have a percentage height value.
+- Not have an implicit or auto height value.
+- Not have an implicit or auto width value.
+- Have an explicit overflow value (scroll, auto or hidden).
+- Not be a descendant of a &lt;table&gt; element.
+
+Most Widgets inside a HVLayout in split or fix mode conform to this:
+they are typically not table elements, the Widget sets overflow, the layout
+itself uses CSS to set display, and sets height and weight.
+
+More reading:
+
+- http://wilsonpage.co.uk/introducing-layout-boundaries/
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+"""</t>
+<t tx="ekr.20181117053258.1">@language css
+
+CSS = """
+
+/* ----- Tree Widget Mechanics ----- */
+
+.flx-TreeWidget {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+.flx-TreeWidget &gt; ul {
+    position: absolute; /* avoid having an implicit width */
+    left: 0;
+    right: 0;
+}
+
+.flx-TreeWidget .flx-TreeItem {
+    display: inline-block;
+    margin: 0;
+    padding-left: 2px;
+    width: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.flx-TreeWidget .flx-TreeItem &gt; .text {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.flx-TreeWidget .flx-TreeItem &gt; .title:empty + .text {
+    position: static;  /* .text width is not used*/
+}
+
+.flx-TreeWidget ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flx-TreeWidget li.visible-false {
+    display: none;
+}
+.flx-TreeWidget li.collapsed-true ul {
+    display: none;
+}
+
+/* collapse button */
+.flx-TreeWidget .flx-TreeItem &gt; .collapsebut {
+    display: inline-block;
+    width: 1.5em;  /* must match with ul padding-left */
+    text-align: center;
+    margin-left: -1px;  /* aligns better with indentation guide */
+}
+.flx-TreeWidget .flx-TreeItem.collapsed-null &gt; .collapsebut {
+    visibility: hidden;
+}
+.flx-TreeWidget.flx-listmode .flx-TreeItem &gt; .collapsebut {
+    display: none;
+}
+
+/* indentation guides */
+.flx-TreeWidget ul {
+    padding-left: 0.75em;
+}
+.flx-TreeWidget &gt; ul {
+    padding-left: 0em;
+}
+.flx-TreeWidget.flx-listmode ul {
+    padding-left: 0.25em;
+}
+
+/* ----- Tree Widget Style ----- */
+
+.flx-TreeWidget {
+    border: 2px groove black;
+    padding: 3px;
+}
+
+.flx-TreeItem.selected-true {
+    background: rgba(128, 128, 128, 0.35);
+}
+.flx-TreeItem.highlighted-true {
+    box-shadow: inset 0 0 3px 1px rgba(0, 0, 255, 0.4);
+}
+
+.flx-TreeWidget .flx-TreeItem.collapsed-true &gt; .collapsebut::after {
+    vertical-align: top;
+    content: '\\25B8';  /* small right triangle */
+}
+.flx-TreeWidget .flx-TreeItem.collapsed-false &gt; .collapsebut::after {
+    vertical-align: top;
+    content: '\\25BE';  /* small down triangle */
+}
+
+.flx-TreeWidget .flx-TreeItem &gt; .collapsebut {
+    color: rgba(128, 128, 128, 0.6);
+}
+.flx-TreeWidget li.collapsed-false &gt; ul &gt; li {
+    border-left: 1px solid rgba(128, 128, 128, 0.3);
+}
+.flx-TreeWidget li.collapsed-false.selected-true &gt; ul &gt; li {
+    border-left: 1px solid rgba(128, 128, 128, 0.6);
+}
+
+.flx-TreeItem.checked-null &gt; .checkbut {
+    content: '\\2611\\00a0';
+   /* display: none;  /* could also be visibility: hidden */
+}
+.flx-TreeItem.checked-true &gt; .checkbut::after {
+    vertical-align: top;
+    content: '\\2611\\00a0';
+}
+.flx-TreeItem.checked-false &gt; .checkbut::after {
+    vertical-align: top;
+    content: '\\2610\\00a0';
+}
+
+.flx-TreeWidget .flx-TreeItem &gt; .text.hastitle {
+    width: 50%;
+}
+/* ----- End Tree Widget ----- */
+
+"""</t>
+<t tx="ekr.20181117053402.1">
+text = event.StringProp('', settable=True, doc="""
+    The text for this item. Can be used in combination with
+    ``title`` to obtain two columns.
+    """)
+
+title = event.StringProp('', settable=True, doc="""
+    The title for this item that appears before the text. Intended
+    for display of key-value pairs. If a title is given, the text is
+    positioned in a second (virtual) column of the tree widget.
+    """)
+
+visible = event.BoolProp(True, settable=True, doc="""
+    Whether this item (and its sub items) is visible.
+    """)
+
+selected = event.BoolProp(False, settable=True, doc="""
+    Whether this item is selected. Depending on the TreeWidget's
+    policy (max_selected), this can be set/unset on clicking the item.
+    """)
+
+checked = event.TriStateProp(settable=True, doc="""
+    Whether this item is checked (i.e. has its checkbox set).
+    The value can be None, True or False. None (the default)
+    means that the item is not checkable.
+    """)
+
+collapsed = event.TriStateProp(settable=True, doc="""
+    Whether this item is expanded (i.e. shows its children).
+    The value can be None, True or False. None (the default)
+    means that the item is not collapsable (unless it has sub items).
+    """)</t>
+<t tx="ekr.20181117053452.1">"""
+A Widget that can be used to structure information in a list or a tree.
+It's items are represented by its children, which may only be TreeItem
+objects. Sub items can be created by instantiating TreeItems in the context
+of another TreeItem.
+
+When the items in the tree have no sub-items themselves, the TreeWidget is
+in "list mode". Otherwise, items can be collapsed/expanded etc.
+
+The ``node`` of this widget is a
+`&lt;div&gt; &lt;https://developer.mozilla.org/docs/Web/HTML/Element/div&gt;`_
+with some child elements and quite a bit of CSS for rendering.
+
+**Style**
+
+This widget can be fully styled using CSS, using the following CSS classes:
+
+* ``flx-listmode`` is set on the widget's node if no items have sub items.
+
+Style classes for a TreeItem's elements:
+
+* ``flx-TreeItem`` indicates the row of an item (its text, icon, and checkbox).
+* ``flx-TreeItem &gt; collapsebut`` the element used to collapse/expand an item.
+* ``flx-TreeItem &gt; checkbut`` the element used to check/uncheck an item.
+* ``flx-TreeItem &gt; text`` the element that contains the text of the item.
+* ``flx-TreeItem &gt; title`` the element that contains the title of the item.
+
+Style classes applied to the TreeItem, corresponding to its properties:
+
+* ``visible-true`` and ``visible-false`` indicate visibility.
+* ``selected-true`` and ``selected-false`` indicate selection state.
+* ``checked-true``, ``checked-false`` and ``checked-null`` indicate checked
+  state, with the ``null`` variant indicating not-checkable.
+* ``collapsed-true``, ``collapsed-false`` and ``collapsed-null`` indicate
+  collapse state, with the ``null`` variant indicating not-collapsable.
+
+"""</t>
+<t tx="ekr.20181117053548.1">## Methods, actions, emitters</t>
+<t tx="ekr.20181117053608.1">## Reactions
 </t>
 </tnodes>
 </leo_file>
