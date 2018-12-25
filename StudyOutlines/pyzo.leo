@@ -10,16 +10,16 @@
 <v t="ekr.20181225064458.1"><vh>@settings</vh>
 <v t="ekr.20181225064506.1"><vh>@bool run-pyflakes-on-write = False</vh></v>
 </v>
-</v>
-<v t="ekr.20181225060705.1"><vh>Recursive import script</vh></v>
 <v t="ekr.20181225061227.1"><vh>pyflakes complaints</vh></v>
-<v t="ekr.20181225064147.1"><vh>path errors</vh></v>
 <v t="ekr.20181225064601.1"><vh>changed files</vh></v>
+</v>
+<v t="ekr.20181225100814.1"><vh>Read me</vh></v>
+<v t="ekr.20181225060705.1"><vh>Recursive import script</vh></v>
 <v t="ekr.20181225061128.13"><vh>@path c:/apps/pyzo/source/pyzo</vh>
-<v t="ekr.20181225061128.14"><vh>@clean yotonloader.py</vh>
+<v t="ekr.20181225061128.14"><vh>@@clean yotonloader.py</vh>
 <v t="ekr.20181225061128.15"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061128.16"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061128.16"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061128.17"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.18"><vh>class MyApp(QtWidgets.QApplication)</vh>
 <v t="ekr.20181225061128.19"><vh>MyApp.event</vh></v>
@@ -31,12 +31,12 @@
 <v t="ekr.20181225061128.24"><vh>saveConfig</vh></v>
 <v t="ekr.20181225061128.25"><vh>start</vh></v>
 </v>
-<v t="ekr.20181225061128.26"><vh>@clean __main__.py</vh>
+<v t="ekr.20181225061128.26"><vh>@@clean __main__.py</vh>
 <v t="ekr.20181225061128.27"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.28"><vh>main</vh></v>
 </v>
 <v t="ekr.20181225061128.30"><vh>@path codeeditor</vh>
-<v t="ekr.20181225061128.31"><vh>@clean base.py</vh>
+<v t="ekr.20181225061128.31"><vh>@@clean base.py</vh>
 <v t="ekr.20181225061128.32"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.33"><vh>class CodeEditorBase(QtWidgets.QPlainTextEdit)</vh>
 <v t="ekr.20181225061128.34"><vh>CodeEditorBase.__init__</vh></v>
@@ -71,7 +71,7 @@
 <v t="ekr.20181225061128.63"><vh>CodeEditorBase.toggleCase</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061128.64"><vh>@clean highlighter.py</vh>
+<v t="ekr.20181225061128.64"><vh>@@clean highlighter.py</vh>
 <v t="ekr.20181225061128.65"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.66"><vh>class BlockData(QtGui.QTextBlockUserData)</vh>
 <v t="ekr.20181225061128.67"><vh>BlockData.__init__</vh></v>
@@ -82,7 +82,7 @@
 <v t="ekr.20181225061128.71"><vh>Highlighter.highlightBlock</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061128.72"><vh>@clean manager.py</vh>
+<v t="ekr.20181225061128.72"><vh>@@clean manager.py</vh>
 <v t="ekr.20181225061128.73"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.74"><vh>class Manager</vh>
 <v t="ekr.20181225061128.75"><vh>Manager._collectParsers</vh></v>
@@ -99,7 +99,7 @@
 <v t="ekr.20181225061128.86"><vh>Manager.defaultFont</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061128.87"><vh>@clean misc.py</vh>
+<v t="ekr.20181225061128.87"><vh>@@clean misc.py</vh>
 <v t="ekr.20181225061128.88"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.89"><vh>ce_option</vh></v>
 <v t="ekr.20181225061128.90"><vh>class _CallbackEventHandler(QtCore.QObject)</vh>
@@ -109,10 +109,10 @@
 </v>
 <v t="ekr.20181225061128.94"><vh>callLater</vh></v>
 </v>
-<v t="ekr.20181225061128.95"><vh>@clean qt.py</vh>
+<v t="ekr.20181225061128.95"><vh>@@clean qt.py</vh>
 <v t="ekr.20181225061128.96"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061128.97"><vh>@clean style.py</vh>
+<v t="ekr.20181225061128.97"><vh>@@clean style.py</vh>
 <v t="ekr.20181225061128.98"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.99"><vh>class StyleElementDescription</vh>
 <v t="ekr.20181225061128.100"><vh>StyleElementDescription.__init__</vh></v>
@@ -140,7 +140,7 @@
 <v t="ekr.20181225061128.121"><vh>StyleFormat.textCharFormat</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061128.122"><vh>@clean textutils.py</vh>
+<v t="ekr.20181225061128.122"><vh>@@clean textutils.py</vh>
 <v t="ekr.20181225061128.123"><vh>class TextReshaper</vh>
 <v t="ekr.20181225061128.124"><vh>TextReshaper.__init__</vh></v>
 <v t="ekr.20181225061128.125"><vh>TextReshaper.reshapeText</vh></v>
@@ -155,15 +155,15 @@
 <v t="ekr.20181225061128.134"><vh>TextReshaper._popLine</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061128.135"><vh>@clean _test.py</vh>
+<v t="ekr.20181225061128.135"><vh>@@clean _test.py</vh>
 <v t="ekr.20181225061128.136"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061128.137"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061128.137"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061128.138"><vh>Declarations</vh></v>
 <v t="ekr.20181225061128.139"><vh>class CodeEditor</vh></v>
 </v>
 <v t="ekr.20181225061129.2"><vh>@path extensions</vh>
-<v t="ekr.20181225061129.3"><vh>@clean appearance.py</vh>
+<v t="ekr.20181225061129.3"><vh>@@clean appearance.py</vh>
 <v t="ekr.20181225061129.4"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.5"><vh>class HighlightMatchingOccurrences(object)</vh>
 <v t="ekr.20181225061129.6"><vh>HighlightMatchingOccurrences.highlightMatchingOccurrences</vh></v>
@@ -284,7 +284,7 @@
 <v t="ekr.20181225061129.103"><vh>SyntaxHighlighting.setParser</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.104"><vh>@clean autocompletion.py</vh>
+<v t="ekr.20181225061129.104"><vh>@@clean autocompletion.py</vh>
 <v t="ekr.20181225061129.105"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.106"><vh>class CompletionListModel(QtCore.QStringListModel)</vh>
 <v t="ekr.20181225061129.107"><vh>CompletionListModel.data</vh></v>
@@ -308,7 +308,7 @@
 <v t="ekr.20181225061129.124"><vh>AutoCompletion.keyPressEvent</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.125"><vh>@clean behaviour.py</vh>
+<v t="ekr.20181225061129.125"><vh>@@clean behaviour.py</vh>
 <v t="ekr.20181225061129.126"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.127"><vh>class MoveLinesUpDown(object)</vh>
 <v t="ekr.20181225061129.128"><vh>MoveLinesUpDown.keyPressEvent</vh></v>
@@ -355,7 +355,7 @@
 <v t="ekr.20181225061129.160"><vh>AutoCloseQuotesAndBrackets._moveCursorRight</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.161"><vh>@clean calltip.py</vh>
+<v t="ekr.20181225061129.161"><vh>@@clean calltip.py</vh>
 <v t="ekr.20181225061129.162"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.163"><vh>class Calltip(object)</vh>
 <v t="ekr.20181225061129.164"><vh>class __CalltipLabel(QtWidgets.QLabel)</vh>
@@ -371,16 +371,16 @@
 <v t="ekr.20181225061129.173"><vh>keyPressEvent</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.174"><vh>@clean __init__.py</vh></v>
+<v t="ekr.20181225061129.174"><vh>@@clean __init__.py</vh></v>
 </v>
 <v t="ekr.20181225061129.176"><vh>@path parsers</vh>
-<v t="ekr.20181225061129.177"><vh>@clean cython_parser.py</vh>
+<v t="ekr.20181225061129.177"><vh>@@clean cython_parser.py</vh>
 <v t="ekr.20181225061129.178"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.179"><vh>class CythonParser(PythonParser)</vh>
 <v t="ekr.20181225061129.180"><vh>CythonParser._identifierState</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.181"><vh>@clean c_parser.py</vh>
+<v t="ekr.20181225061129.181"><vh>@@clean c_parser.py</vh>
 <v t="ekr.20181225061129.182"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.183"><vh>class MultilineCommentToken(CommentToken)</vh></v>
 <v t="ekr.20181225061129.184"><vh>class CharToken(Token)</vh></v>
@@ -391,7 +391,7 @@
 <v t="ekr.20181225061129.189"><vh>CParser._findNextToken</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.190"><vh>@clean python_parser.py</vh>
+<v t="ekr.20181225061129.190"><vh>@@clean python_parser.py</vh>
 <v t="ekr.20181225061129.191"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.192"><vh>class MultilineStringToken(StringToken)</vh></v>
 <v t="ekr.20181225061129.193"><vh>class CellCommentToken(CommentToken)</vh></v>
@@ -404,7 +404,7 @@
 <v t="ekr.20181225061129.199"><vh>class Python2Parser(PythonParser)</vh></v>
 <v t="ekr.20181225061129.200"><vh>class Python3Parser(PythonParser)</vh></v>
 </v>
-<v t="ekr.20181225061129.201"><vh>@clean s_expr_parser.py</vh>
+<v t="ekr.20181225061129.201"><vh>@@clean s_expr_parser.py</vh>
 <v t="ekr.20181225061129.202"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.203"><vh>class SExprParser(Parser)</vh>
 <v t="ekr.20181225061129.204"><vh>SExprParser.parseLine</vh></v>
@@ -413,7 +413,7 @@
 </v>
 <v t="ekr.20181225061129.207"><vh>class WatParser(SExprParser)</vh></v>
 </v>
-<v t="ekr.20181225061129.208"><vh>@clean tokens.py</vh>
+<v t="ekr.20181225061129.208"><vh>@@clean tokens.py</vh>
 <v t="ekr.20181225061129.209"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.210"><vh>class Token(object)</vh>
 <v t="ekr.20181225061129.211"><vh>Token.__init__</vh></v>
@@ -443,7 +443,7 @@
 <v t="ekr.20181225061129.234"><vh>class OpenParenToken(ParenthesisToken)</vh></v>
 <v t="ekr.20181225061129.235"><vh>class CloseParenToken(ParenthesisToken)</vh></v>
 </v>
-<v t="ekr.20181225061129.236"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061129.236"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061129.237"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.238"><vh>class BlockState(object)</vh>
 <v t="ekr.20181225061129.239"><vh>BlockState.__init__</vh></v>
@@ -465,7 +465,7 @@
 </v>
 </v>
 <v t="ekr.20181225061129.253"><vh>@path core</vh>
-<v t="ekr.20181225061129.254"><vh>@clean about.py</vh>
+<v t="ekr.20181225061129.254"><vh>@@clean about.py</vh>
 <v t="ekr.20181225061129.255"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.256"><vh>class AboutDialog(QtWidgets.QDialog)</vh>
 <v t="ekr.20181225061129.257"><vh>AboutDialog.__init__</vh></v>
@@ -475,7 +475,7 @@
 <v t="ekr.20181225061129.261"><vh>AboutDialog.createLicenseTab</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.262"><vh>@clean assistant.py</vh>
+<v t="ekr.20181225061129.262"><vh>@@clean assistant.py</vh>
 <v t="ekr.20181225061129.263"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.264"><vh>class Settings(QtWidgets.QWidget)</vh>
 <v t="ekr.20181225061129.265"><vh>Settings.__init__</vh></v>
@@ -499,7 +499,7 @@
 <v t="ekr.20181225061129.281"><vh>PyzoAssistant.showHelpForTerm</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061129.282"><vh>@clean baseTextCtrl.py</vh>
+<v t="ekr.20181225061129.282"><vh>@@clean baseTextCtrl.py</vh>
 <v t="ekr.20181225061129.283"><vh>Declarations</vh></v>
 <v t="ekr.20181225061129.284"><vh>normalizePath</vh></v>
 <v t="ekr.20181225061129.285"><vh>parseLine_autocomplete</vh></v>
@@ -540,7 +540,7 @@
 <v t="ekr.20181225061130.9"><vh>AutoCompObject.nameInImportNames</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.10"><vh>@clean codeparser.py</vh>
+<v t="ekr.20181225061130.10"><vh>@@clean codeparser.py</vh>
 <v t="ekr.20181225061130.11"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.12"><vh>class Job</vh>
 <v t="ekr.20181225061130.13"><vh>Job.__init__</vh></v>
@@ -572,7 +572,7 @@
 <v t="ekr.20181225061130.35"><vh>_findString</vh></v>
 <v t="ekr.20181225061130.36"><vh>washMultilineStrings</vh></v>
 </v>
-<v t="ekr.20181225061130.37"><vh>@clean commandline.py</vh>
+<v t="ekr.20181225061130.37"><vh>@@clean commandline.py</vh>
 <v t="ekr.20181225061130.38"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.39"><vh>class Server(RequestServer)</vh>
 <v t="ekr.20181225061130.40"><vh>Server.handle_request</vh></v>
@@ -583,7 +583,7 @@
 <v t="ekr.20181225061130.44"><vh>is_our_server_running</vh></v>
 <v t="ekr.20181225061130.45"><vh>is_pyzo_server_running</vh></v>
 </v>
-<v t="ekr.20181225061130.46"><vh>@clean compactTabWidget.py</vh>
+<v t="ekr.20181225061130.46"><vh>@@clean compactTabWidget.py</vh>
 <v t="ekr.20181225061130.47"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.48"><vh>class TabData</vh>
 <v t="ekr.20181225061130.49"><vh>TabData.__init__</vh></v>
@@ -614,7 +614,7 @@
 <v t="ekr.20181225061130.72"><vh>CompactTabWidget.tabText</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.73"><vh>@clean editor.py</vh>
+<v t="ekr.20181225061130.73"><vh>@@clean editor.py</vh>
 <v t="ekr.20181225061130.74"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.75"><vh>determineEncoding</vh></v>
 <v t="ekr.20181225061130.76"><vh>determineLineEnding</vh></v>
@@ -651,7 +651,7 @@
 <v t="ekr.20181225061130.107"><vh>PyzoEditor.processAutoComp</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.108"><vh>@clean editorTabs.py</vh>
+<v t="ekr.20181225061130.108"><vh>@@clean editorTabs.py</vh>
 <v t="ekr.20181225061130.109"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.110"><vh>simpleDialog</vh></v>
 <v t="ekr.20181225061130.111"><vh>get_shortest_unique_filename</vh></v>
@@ -732,7 +732,7 @@
 <v t="ekr.20181225061130.183"><vh>EditorTabs.closeAll</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.184"><vh>@clean history.py</vh>
+<v t="ekr.20181225061130.184"><vh>@@clean history.py</vh>
 <v t="ekr.20181225061130.185"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.186"><vh>class CommandHistory(QtCore.QObject)</vh>
 <v t="ekr.20181225061130.187"><vh>CommandHistory.__init__</vh></v>
@@ -745,7 +745,7 @@
 <v t="ekr.20181225061130.194"><vh>CommandHistory.find_all</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.195"><vh>@clean icons.py</vh>
+<v t="ekr.20181225061130.195"><vh>@@clean icons.py</vh>
 <v t="ekr.20181225061130.196"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.197"><vh>class IconArtist</vh>
 <v t="ekr.20181225061130.198"><vh>IconArtist.__init__</vh></v>
@@ -812,7 +812,7 @@
 <v t="ekr.20181225061130.253"><vh>ShellIconMaker.drawInMotion</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.254"><vh>@clean kernelbroker.py</vh>
+<v t="ekr.20181225061130.254"><vh>@@clean kernelbroker.py</vh>
 <v t="ekr.20181225061130.255"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.256"><vh>class KernelInfo(ssdf.Struct)</vh>
 <v t="ekr.20181225061130.257"><vh>KernelInfo.__init__</vh></v>
@@ -855,7 +855,7 @@
 <v t="ekr.20181225061130.290"><vh>Kernelmanager.terminateAll</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061130.291"><vh>@clean main.py</vh>
+<v t="ekr.20181225061130.291"><vh>@@clean main.py</vh>
 <v t="ekr.20181225061130.292"><vh>Declarations</vh></v>
 <v t="ekr.20181225061130.293"><vh>class MainWindow(QtWidgets.QMainWindow)</vh>
 <v t="ekr.20181225061130.294"><vh>MainWindow.__init__</vh></v>
@@ -884,7 +884,7 @@
 <v t="ekr.20181225061130.315"><vh>screenshot</vh></v>
 <v t="ekr.20181225061130.316"><vh>_screenshot</vh></v>
 </v>
-<v t="ekr.20181225061131.1"><vh>@clean menu.py</vh>
+<v t="ekr.20181225061131.1"><vh>@@clean menu.py</vh>
 <v t="ekr.20181225061131.2"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.3"><vh>buildMenus</vh></v>
 <v t="ekr.20181225061131.4"><vh>getShortcut</vh></v>
@@ -1071,7 +1071,7 @@
 <v t="ekr.20181225061131.162"><vh>KeymappingDialog.popupItem</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.163"><vh>@clean pyzoLogging.py</vh>
+<v t="ekr.20181225061131.163"><vh>@@clean pyzoLogging.py</vh>
 <v t="ekr.20181225061131.164"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.165"><vh>class DummyStd</vh>
 <v t="ekr.20181225061131.166"><vh>DummyStd.__init__</vh></v>
@@ -1093,7 +1093,7 @@
 <v t="ekr.20181225061131.181"><vh>OutputStreamSplitter.encoding</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.182"><vh>@clean shell.py</vh>
+<v t="ekr.20181225061131.182"><vh>@@clean shell.py</vh>
 <v t="ekr.20181225061131.183"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.184"><vh>class YotonEmbedder(QtCore.QObject)</vh>
 <v t="ekr.20181225061131.185"><vh>YotonEmbedder.__init__</vh></v>
@@ -1155,7 +1155,7 @@
 <v t="ekr.20181225061131.238"><vh>PythonShell._onConnectionClose</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.239"><vh>@clean shellInfoDialog.py</vh>
+<v t="ekr.20181225061131.239"><vh>@@clean shellInfoDialog.py</vh>
 <v t="ekr.20181225061131.240"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.241"><vh>class ShellInfoLineEdit(QtWidgets.QLineEdit)</vh>
 <v t="ekr.20181225061131.242"><vh>ShellInfoLineEdit.setTheText</vh></v>
@@ -1227,7 +1227,7 @@
 <v t="ekr.20181225061131.296"><vh>ShellInfoDialog.apply</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.297"><vh>@clean shellStack.py</vh>
+<v t="ekr.20181225061131.297"><vh>@@clean shellStack.py</vh>
 <v t="ekr.20181225061131.298"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.299"><vh>shellTitle</vh></v>
 <v t="ekr.20181225061131.300"><vh>class ShellStackWidget(QtWidgets.QWidget)</vh>
@@ -1268,7 +1268,7 @@
 <v t="ekr.20181225061131.332"><vh>InterpreterHelper.restart_shell</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.333"><vh>@clean splash.py</vh>
+<v t="ekr.20181225061131.333"><vh>@@clean splash.py</vh>
 <v t="ekr.20181225061131.334"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.335"><vh>class LogoWidget(QtWidgets.QFrame)</vh>
 <v t="ekr.20181225061131.336"><vh>LogoWidget.__init__</vh></v>
@@ -1280,12 +1280,12 @@
 <v t="ekr.20181225061131.340"><vh>SplashWidget.__init__</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061131.341"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061131.341"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061131.342"><vh>Declarations</vh></v>
 </v>
 </v>
 <v t="ekr.20181225061131.344"><vh>@path pyzokernel</vh>
-<v t="ekr.20181225061131.345"><vh>@clean debug.py</vh>
+<v t="ekr.20181225061131.345"><vh>@@clean debug.py</vh>
 <v t="ekr.20181225061131.346"><vh>Declarations</vh></v>
 <v t="ekr.20181225061131.347"><vh>class Debugger(bdb.Bdb)</vh>
 <v t="ekr.20181225061131.348"><vh>Debugger.__init__</vh></v>
@@ -1318,7 +1318,7 @@
 <v t="ekr.20181225061131.375"><vh>Debugger.do_events</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.1"><vh>@clean guiintegration.py</vh>
+<v t="ekr.20181225061132.1"><vh>@@clean guiintegration.py</vh>
 <v t="ekr.20181225061132.2"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.3"><vh>print_mainloop_warning</vh></v>
 <v t="ekr.20181225061132.4"><vh>class App_base</vh>
@@ -1381,7 +1381,7 @@
 <v t="ekr.20181225061132.49"><vh>App_gtk.process_events</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.50"><vh>@clean guisupport.py</vh>
+<v t="ekr.20181225061132.50"><vh>@@clean guisupport.py</vh>
 <v t="ekr.20181225061132.51"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.52"><vh>get_app_wx</vh></v>
 <v t="ekr.20181225061132.53"><vh>is_event_loop_running_wx</vh></v>
@@ -1390,7 +1390,7 @@
 <v t="ekr.20181225061132.56"><vh>is_event_loop_running_qt4</vh></v>
 <v t="ekr.20181225061132.57"><vh>start_event_loop_qt4</vh></v>
 </v>
-<v t="ekr.20181225061132.58"><vh>@clean interpreter.py</vh>
+<v t="ekr.20181225061132.58"><vh>@@clean interpreter.py</vh>
 <v t="ekr.20181225061132.59"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.60"><vh>class PS1</vh>
 <v t="ekr.20181225061132.61"><vh>PS1.__init__</vh></v>
@@ -1433,7 +1433,7 @@
 <v t="ekr.20181225061132.95"><vh>ExecutedSourceCollection._patch</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.96"><vh>@clean introspection.py</vh>
+<v t="ekr.20181225061132.96"><vh>@@clean introspection.py</vh>
 <v t="ekr.20181225061132.97"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.98"><vh>class PyzoIntrospector(yoton.RepChannel)</vh>
 <v t="ekr.20181225061132.99"><vh>PyzoIntrospector._getNameSpace</vh></v>
@@ -1447,7 +1447,7 @@
 <v t="ekr.20181225061132.107"><vh>PyzoIntrospector.terminate</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.108"><vh>@clean magic.py</vh>
+<v t="ekr.20181225061132.108"><vh>@@clean magic.py</vh>
 <v t="ekr.20181225061132.109"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.110"><vh>_should_not_interpret_as_magic</vh></v>
 <v t="ekr.20181225061132.111"><vh>class Magician</vh>
@@ -1474,18 +1474,18 @@
 <v t="ekr.20181225061132.132"><vh>Magician.notebook</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.133"><vh>@clean pipper.py</vh>
+<v t="ekr.20181225061132.133"><vh>@@clean pipper.py</vh>
 <v t="ekr.20181225061132.134"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.135"><vh>subprocess_with_callback</vh></v>
 <v t="ekr.20181225061132.136"><vh>print_</vh></v>
 <v t="ekr.20181225061132.137"><vh>pip_command_exe</vh></v>
 <v t="ekr.20181225061132.138"><vh>pip_command</vh></v>
 </v>
-<v t="ekr.20181225061132.139"><vh>@clean start.py</vh>
+<v t="ekr.20181225061132.139"><vh>@@clean start.py</vh>
 <v t="ekr.20181225061132.140"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.141"><vh>pyzo_excepthook</vh></v>
 </v>
-<v t="ekr.20181225061132.142"><vh>@clean _nope.py</vh>
+<v t="ekr.20181225061132.142"><vh>@@clean _nope.py</vh>
 <v t="ekr.20181225061132.143"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.144"><vh>_utf8</vh></v>
 <v t="ekr.20181225061132.145"><vh>n</vh></v>
@@ -1497,13 +1497,13 @@
 <v t="ekr.20181225061132.151"><vh>napping_allowed</vh></v>
 <v t="ekr.20181225061132.152"><vh>nope_scope</vh></v>
 </v>
-<v t="ekr.20181225061132.153"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061132.153"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061132.154"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.155"><vh>printDirect</vh></v>
 </v>
 </v>
 <v t="ekr.20181225061132.157"><vh>@path resources</vh>
-<v t="ekr.20181225061132.158"><vh>@clean tutorial.py</vh>
+<v t="ekr.20181225061132.158"><vh>@@clean tutorial.py</vh>
 <v t="ekr.20181225061132.159"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.160"><vh>getNumber</vh></v>
 <v t="ekr.20181225061132.161"><vh>foo</vh></v>
@@ -1511,7 +1511,7 @@
 </v>
 </v>
 <v t="ekr.20181225061132.168"><vh>@path tools</vh>
-<v t="ekr.20181225061133.75"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061133.75"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061133.76"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.77"><vh>class ToolDockWidget(QtWidgets.QDockWidget)</vh>
 <v t="ekr.20181225061133.78"><vh>ToolDockWidget.__init__</vh></v>
@@ -1537,7 +1537,7 @@
 <v t="ekr.20181225061133.96"><vh>ToolManager.getLoadedTools</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.169"><vh>@clean pyzoHistoryViewer.py</vh>
+<v t="ekr.20181225061132.169"><vh>@@clean pyzoHistoryViewer.py</vh>
 <v t="ekr.20181225061132.170"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.171"><vh>class PyzoHistoryViewer(QtWidgets.QWidget)</vh>
 <v t="ekr.20181225061132.172"><vh>PyzoHistoryViewer.__init__</vh></v>
@@ -1552,7 +1552,7 @@
 <v t="ekr.20181225061132.181"><vh>PyzoHistoryViewer._onDoubleClicked</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061132.182"><vh>@clean pyzoInteractiveHelp.py</vh>
+<v t="ekr.20181225061132.182"><vh>@@clean pyzoInteractiveHelp.py</vh>
 <v t="ekr.20181225061132.183"><vh>Declarations</vh></v>
 <v t="ekr.20181225061132.184"><vh>get_title_text</vh></v>
 <v t="ekr.20181225061132.185"><vh>class PyzoInteractiveHelp(QtWidgets.QWidget)</vh>
@@ -1567,7 +1567,7 @@
 <v t="ekr.20181225061133.8"><vh>PyzoInteractiveHelp.smartFormat</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.9"><vh>@clean pyzoLogger.py</vh>
+<v t="ekr.20181225061133.9"><vh>@@clean pyzoLogger.py</vh>
 <v t="ekr.20181225061133.10"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.11"><vh>class PyzoLogger(BaseShell)</vh>
 <v t="ekr.20181225061133.12"><vh>PyzoLogger.__init__</vh></v>
@@ -1576,7 +1576,7 @@
 <v t="ekr.20181225061133.15"><vh>PyzoLogger.processAutoComp</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.16"><vh>@clean pyzoSourceStructure.py</vh>
+<v t="ekr.20181225061133.16"><vh>@@clean pyzoSourceStructure.py</vh>
 <v t="ekr.20181225061133.17"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.18"><vh>class Navigation</vh>
 <v t="ekr.20181225061133.19"><vh>Navigation.__init__</vh></v>
@@ -1594,7 +1594,7 @@
 <v t="ekr.20181225061133.30"><vh>PyzoSourceStructure.updateStructure</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.31"><vh>@clean pyzoWebBrowser.py</vh>
+<v t="ekr.20181225061133.31"><vh>@@clean pyzoWebBrowser.py</vh>
 <v t="ekr.20181225061133.32"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.33"><vh>class WebView(QtWidgets.QTextBrowser)</vh>
 <v t="ekr.20181225061133.34"><vh>WebView.__init__</vh></v>
@@ -1617,7 +1617,7 @@
 <v t="ekr.20181225061133.50"><vh>PyzoWebBrowser.wheelEvent</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.51"><vh>@clean pyzoWorkspace.py</vh>
+<v t="ekr.20181225061133.51"><vh>@@clean pyzoWorkspace.py</vh>
 <v t="ekr.20181225061133.52"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.53"><vh>splitName</vh></v>
 <v t="ekr.20181225061133.54"><vh>joinName</vh></v>
@@ -1647,7 +1647,7 @@
 </v>
 </v>
 <v t="ekr.20181225061133.98"><vh>@path pyzoFileBrowser</vh>
-<v t="ekr.20181225061133.99"><vh>@clean browser.py</vh>
+<v t="ekr.20181225061133.99"><vh>@@clean browser.py</vh>
 <v t="ekr.20181225061133.100"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.101"><vh>class Browser(QtWidgets.QWidget)</vh>
 <v t="ekr.20181225061133.102"><vh>Browser.__init__</vh></v>
@@ -1708,7 +1708,7 @@
 <v t="ekr.20181225061133.152"><vh>SearchFilter.onMenuTriggered</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.153"><vh>@clean importwizard.py</vh>
+<v t="ekr.20181225061133.153"><vh>@@clean importwizard.py</vh>
 <v t="ekr.20181225061133.154"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.155"><vh>class CodeView</vh></v>
 <v t="ekr.20181225061133.156"><vh>class SelectFilePage(QtWidgets.QWizardPage)</vh>
@@ -1744,7 +1744,7 @@
 <v t="ekr.20181225061133.183"><vh>ImportWizard.previewData</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.184"><vh>@clean proxies.py</vh>
+<v t="ekr.20181225061133.184"><vh>@@clean proxies.py</vh>
 <v t="ekr.20181225061133.185"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.186"><vh>class Task</vh>
 <v t="ekr.20181225061133.187"><vh>Task.__init__</vh></v>
@@ -1809,7 +1809,7 @@
 <v t="ekr.20181225061133.241"><vh>NativeFSProxy.createDir</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.242"><vh>@clean tasks.py</vh>
+<v t="ekr.20181225061133.242"><vh>@@clean tasks.py</vh>
 <v t="ekr.20181225061133.243"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.244"><vh>class SearchTask(proxies.Task)</vh>
 <v t="ekr.20181225061133.245"><vh>SearchTask.process</vh></v>
@@ -1837,7 +1837,7 @@
 <v t="ekr.20181225061133.262"><vh>RemoveTask.process</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.263"><vh>@clean tree.py</vh>
+<v t="ekr.20181225061133.263"><vh>@@clean tree.py</vh>
 <v t="ekr.20181225061133.264"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.265"><vh>addIconOverlays</vh></v>
 <v t="ekr.20181225061133.266"><vh>_filterFileByName</vh></v>
@@ -1945,7 +1945,7 @@
 <v t="ekr.20181225061133.357"><vh>PopupMenu.onDelete</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061133.358"><vh>@clean utils.py</vh>
+<v t="ekr.20181225061133.358"><vh>@@clean utils.py</vh>
 <v t="ekr.20181225061133.359"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.360"><vh>cleanpath</vh></v>
 <v t="ekr.20181225061133.361"><vh>isdir</vh></v>
@@ -1954,7 +1954,7 @@
 <v t="ekr.20181225061133.364"><vh>getDrivesWin</vh></v>
 <v t="ekr.20181225061133.365"><vh>hasHiddenAttribute</vh></v>
 </v>
-<v t="ekr.20181225061133.366"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061133.366"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061133.367"><vh>Declarations</vh></v>
 <v t="ekr.20181225061133.368"><vh>class PyzoFileBrowser(QtWidgets.QWidget)</vh>
 <v t="ekr.20181225061133.369"><vh>PyzoFileBrowser.__init__</vh></v>
@@ -1968,7 +1968,7 @@
 </v>
 </v>
 <v t="ekr.20181225061134.2"><vh>@path util</vh>
-<v t="ekr.20181225061134.3"><vh>@clean bootstrapconda.py</vh>
+<v t="ekr.20181225061134.3"><vh>@@clean bootstrapconda.py</vh>
 <v t="ekr.20181225061134.4"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.5"><vh>check_for_conda_env</vh></v>
 <v t="ekr.20181225061134.6"><vh>class AskToInstallConda(QtWidgets.QDialog)</vh>
@@ -1998,7 +1998,7 @@
 <v t="ekr.20181225061134.28"><vh>StreamCatcher.output</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061134.29"><vh>@clean paths.py</vh>
+<v t="ekr.20181225061134.29"><vh>@@clean paths.py</vh>
 <v t="ekr.20181225061134.30"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.31"><vh>is_frozen</vh></v>
 <v t="ekr.20181225061134.32"><vh>temp_dir</vh></v>
@@ -2009,7 +2009,7 @@
 <v t="ekr.20181225061134.37"><vh>pyzo_dirs</vh></v>
 <v t="ekr.20181225061134.38"><vh>pyzo_dirs2</vh></v>
 </v>
-<v t="ekr.20181225061134.39"><vh>@clean pyzowizard.py</vh>
+<v t="ekr.20181225061134.39"><vh>@@clean pyzowizard.py</vh>
 <v t="ekr.20181225061134.40"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.41"><vh>retranslate</vh></v>
 <v t="ekr.20181225061134.42"><vh>class PyzoWizard(QtWidgets.QWizard)</vh>
@@ -2035,7 +2035,7 @@
 <v t="ekr.20181225061134.59"><vh>class ToolsWizardPage2(BasePyzoWizardPage)</vh></v>
 <v t="ekr.20181225061134.60"><vh>class FinalPage(BasePyzoWizardPage)</vh></v>
 </v>
-<v t="ekr.20181225061134.61"><vh>@clean zon.py</vh>
+<v t="ekr.20181225061134.61"><vh>@@clean zon.py</vh>
 <v t="ekr.20181225061134.62"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.63"><vh>isidentifier</vh></v>
 <v t="ekr.20181225061134.64"><vh>class Dict(_dict)</vh>
@@ -2069,7 +2069,7 @@
 <v t="ekr.20181225061134.91"><vh>ReaderWriter.to_list</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061134.92"><vh>@clean _locale.py</vh>
+<v t="ekr.20181225061134.92"><vh>@@clean _locale.py</vh>
 <v t="ekr.20181225061134.93"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.94"><vh>getLocale</vh></v>
 <v t="ekr.20181225061134.95"><vh>setLanguage</vh></v>
@@ -2081,9 +2081,9 @@
 <v t="ekr.20181225061134.101"><vh>lupdate</vh></v>
 <v t="ekr.20181225061134.102"><vh>lrelease</vh></v>
 </v>
-<v t="ekr.20181225061134.103"><vh>@clean __init__.py</vh></v>
+<v t="ekr.20181225061134.103"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20181225061134.105"><vh>@path interpreters</vh>
-<v t="ekr.20181225061134.106"><vh>@clean inwinreg.py</vh>
+<v t="ekr.20181225061134.106"><vh>@@clean inwinreg.py</vh>
 <v t="ekr.20181225061134.107"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.108"><vh>class PythonInReg</vh>
 <v t="ekr.20181225061134.109"><vh>PythonInReg.__init__</vh></v>
@@ -2102,7 +2102,7 @@
 <v t="ekr.20181225061134.121"><vh>_get_interpreter_in_reg</vh></v>
 <v t="ekr.20181225061134.122"><vh>register_interpreter</vh></v>
 </v>
-<v t="ekr.20181225061134.123"><vh>@clean pythoninterpreter.py</vh>
+<v t="ekr.20181225061134.123"><vh>@@clean pythoninterpreter.py</vh>
 <v t="ekr.20181225061134.124"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.125"><vh>make_abs</vh></v>
 <v t="ekr.20181225061134.126"><vh>class PythonInterpreter</vh>
@@ -2120,7 +2120,7 @@
 </v>
 <v t="ekr.20181225061134.138"><vh>versionStringToTuple</vh></v>
 </v>
-<v t="ekr.20181225061134.139"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061134.139"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061134.140"><vh>Declarations</vh></v>
 <v t="ekr.20181225061134.141"><vh>get_interpreters</vh></v>
 <v t="ekr.20181225061134.142"><vh>_select_interpreters</vh></v>
@@ -2132,46 +2132,46 @@
 </v>
 </v>
 <v t="ekr.20181225061134.149"><vh>@path qt</vh>
-<v t="ekr.20181225061134.150"><vh>@clean QtCore.py</vh>
+<v t="ekr.20181225061134.150"><vh>@@clean QtCore.py</vh>
 <v t="ekr.20181225061134.151"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061134.152"><vh>@clean QtGui.py</vh>
+<v t="ekr.20181225061134.152"><vh>@@clean QtGui.py</vh>
 <v t="ekr.20181225061134.153"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061134.154"><vh>@clean QtHelp.py</vh>
+<v t="ekr.20181225061134.154"><vh>@@clean QtHelp.py</vh>
 <v t="ekr.20181225061134.155"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061134.156"><vh>@clean QtPrintSupport.py</vh>
+<v t="ekr.20181225061134.156"><vh>@@clean QtPrintSupport.py</vh>
 <v t="ekr.20181225061134.157"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061134.158"><vh>@clean QtWidgets.py</vh>
+<v t="ekr.20181225061134.158"><vh>@@clean QtWidgets.py</vh>
 <v t="ekr.20181225061134.159"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061134.160"><vh>@clean uic.py</vh>
+<v t="ekr.20181225061134.160"><vh>@@clean uic.py</vh>
 <v t="ekr.20181225061134.161"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061135.1"><vh>@clean _version.py</vh>
+<v t="ekr.20181225061135.1"><vh>@@clean _version.py</vh>
 <v t="ekr.20181225061135.2"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061135.3"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061135.3"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061135.4"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.5"><vh>class PythonQtError(Exception)</vh></v>
 <v t="ekr.20181225061135.6"><vh>class PythonQtWarning(Warning)</vh></v>
 </v>
 <v t="ekr.20181225061135.8"><vh>@path _patch</vh>
-<v t="ekr.20181225061135.9"><vh>@clean qcombobox.py</vh>
+<v t="ekr.20181225061135.9"><vh>@@clean qcombobox.py</vh>
 <v t="ekr.20181225061135.10"><vh>patch_qcombobox</vh></v>
 </v>
-<v t="ekr.20181225061135.11"><vh>@clean qheaderview.py</vh>
+<v t="ekr.20181225061135.11"><vh>@@clean qheaderview.py</vh>
 <v t="ekr.20181225061135.12"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.13"><vh>introduce_renamed_methods_qheaderview</vh></v>
 </v>
-<v t="ekr.20181225061135.14"><vh>@clean __init__.py</vh></v>
+<v t="ekr.20181225061135.14"><vh>@@clean __init__.py</vh></v>
 </v>
 </v>
 </v>
 <v t="ekr.20181225061135.16"><vh>@path yoton</vh>
-<v t="ekr.20181225061135.17"><vh>@clean clientserver.py</vh>
+<v t="ekr.20181225061135.17"><vh>@@clean clientserver.py</vh>
 <v t="ekr.20181225061135.18"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.19"><vh>class RequestServer(threading.Thread)</vh>
 <v t="ekr.20181225061135.20"><vh>RequestServer.__init__</vh></v>
@@ -2188,7 +2188,7 @@
 </v>
 <v t="ekr.20181225061135.30"><vh>do_request</vh></v>
 </v>
-<v t="ekr.20181225061135.31"><vh>@clean connection.py</vh>
+<v t="ekr.20181225061135.31"><vh>@@clean connection.py</vh>
 <v t="ekr.20181225061135.32"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.33"><vh>class ConnectionCollection(list)</vh>
 <v t="ekr.20181225061135.34"><vh>ConnectionCollection.__getitem__</vh></v>
@@ -2225,11 +2225,11 @@
 <v t="ekr.20181225061135.63"><vh>class InterConnection(Connection)</vh></v>
 <v t="ekr.20181225061135.64"><vh>class UDPConnection(Connection)</vh></v>
 </v>
-<v t="ekr.20181225061135.65"><vh>@clean connection_itc.py</vh>
+<v t="ekr.20181225061135.65"><vh>@@clean connection_itc.py</vh>
 <v t="ekr.20181225061135.66"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.67"><vh>class ItcConnection(Connection)</vh></v>
 </v>
-<v t="ekr.20181225061135.68"><vh>@clean connection_tcp.py</vh>
+<v t="ekr.20181225061135.68"><vh>@@clean connection_tcp.py</vh>
 <v t="ekr.20181225061135.69"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.70"><vh>class TcpConnection(Connection)</vh>
 <v t="ekr.20181225061135.71"><vh>TcpConnection.__init__</vh></v>
@@ -2267,7 +2267,7 @@
 <v t="ekr.20181225061135.98"><vh>ReceivingThread._recv_n_bytes</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061135.99"><vh>@clean context.py</vh>
+<v t="ekr.20181225061135.99"><vh>@@clean context.py</vh>
 <v t="ekr.20181225061135.100"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.101"><vh>class Context(object)</vh>
 <v t="ekr.20181225061135.102"><vh>Context.__init__</vh></v>
@@ -2288,7 +2288,7 @@
 <v t="ekr.20181225061135.117"><vh>Context._recv_context_package</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061135.118"><vh>@clean core.py</vh>
+<v t="ekr.20181225061135.118"><vh>@@clean core.py</vh>
 <v t="ekr.20181225061135.119"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.120"><vh>can_send</vh></v>
 <v t="ekr.20181225061135.121"><vh>can_recv</vh></v>
@@ -2301,7 +2301,7 @@
 <v t="ekr.20181225061135.128"><vh>Package.from_header</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061135.129"><vh>@clean events.py</vh>
+<v t="ekr.20181225061135.129"><vh>@@clean events.py</vh>
 <v t="ekr.20181225061135.130"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.131"><vh>class CallableObject(object)</vh>
 <v t="ekr.20181225061135.132"><vh>CallableObject.__init__</vh></v>
@@ -2352,7 +2352,7 @@
 <v t="ekr.20181225061135.172"><vh>YotonApplication.embed_event_loop</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061135.173"><vh>@clean misc.py</vh>
+<v t="ekr.20181225061135.173"><vh>@@clean misc.py</vh>
 <v t="ekr.20181225061135.174"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.175"><vh>Property</vh></v>
 <v t="ekr.20181225061135.176"><vh>getErrorMsg</vh></v>
@@ -2389,7 +2389,7 @@
 <v t="ekr.20181225061135.204"><vh>TinyPackageQueue.clear</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061135.205"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061135.205"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061135.206"><vh>Declarations</vh></v>
 <v t="ekr.20181225061135.207"><vh>class SimpleSocket(Context)</vh>
 <v t="ekr.20181225061135.208"><vh>SimpleSocket.__init__</vh></v>
@@ -2398,7 +2398,7 @@
 </v>
 </v>
 <v t="ekr.20181225061136.2"><vh>@path channels</vh>
-<v t="ekr.20181225061136.3"><vh>@clean channels_base.py</vh>
+<v t="ekr.20181225061136.3"><vh>@@clean channels_base.py</vh>
 <v t="ekr.20181225061136.4"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.5"><vh>class BaseChannel(object)</vh>
 <v t="ekr.20181225061136.6"><vh>BaseChannel.__init__</vh></v>
@@ -2419,7 +2419,7 @@
 <v t="ekr.20181225061136.21"><vh>BaseChannel.slot_incoming</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.22"><vh>@clean channels_file.py</vh>
+<v t="ekr.20181225061136.22"><vh>@@clean channels_file.py</vh>
 <v t="ekr.20181225061136.23"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.24"><vh>class FileWrapper(object)</vh>
 <v t="ekr.20181225061136.25"><vh>FileWrapper.__init__</vh></v>
@@ -2437,7 +2437,7 @@
 <v t="ekr.20181225061136.37"><vh>FileWrapper.isatty</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.38"><vh>@clean channels_pubsub.py</vh>
+<v t="ekr.20181225061136.38"><vh>@@clean channels_pubsub.py</vh>
 <v t="ekr.20181225061136.39"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.40"><vh>class PubChannel(BaseChannel)</vh>
 <v t="ekr.20181225061136.41"><vh>PubChannel.__init__</vh></v>
@@ -2461,7 +2461,7 @@
 </v>
 <v t="ekr.20181225061136.58"><vh>select_sub_channel</vh></v>
 </v>
-<v t="ekr.20181225061136.59"><vh>@clean channels_reqrep.py</vh>
+<v t="ekr.20181225061136.59"><vh>@@clean channels_reqrep.py</vh>
 <v t="ekr.20181225061136.60"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.61"><vh>class TimeoutError(Exception)</vh></v>
 <v t="ekr.20181225061136.62"><vh>class CancelledError(Exception)</vh></v>
@@ -2507,7 +2507,7 @@
 <v t="ekr.20181225061136.99"><vh>ThreadForReqChannel.run</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.100"><vh>@clean channels_state.py</vh>
+<v t="ekr.20181225061136.100"><vh>@@clean channels_state.py</vh>
 <v t="ekr.20181225061136.101"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.102"><vh>class StateChannel(BaseChannel)</vh>
 <v t="ekr.20181225061136.103"><vh>StateChannel.__init__</vh></v>
@@ -2520,7 +2520,7 @@
 <v t="ekr.20181225061136.110"><vh>StateChannel._recv</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.111"><vh>@clean message_types.py</vh>
+<v t="ekr.20181225061136.111"><vh>@@clean message_types.py</vh>
 <v t="ekr.20181225061136.112"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.113"><vh>class MessageType(object)</vh>
 <v t="ekr.20181225061136.114"><vh>MessageType.message_to_bytes</vh></v>
@@ -2557,33 +2557,33 @@
 <v t="ekr.20181225061136.140"><vh>Unpacker.unpack_object</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.141"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225061136.141"><vh>@@clean __init__.py</vh>
 <v t="ekr.20181225061136.142"><vh>Declarations</vh></v>
 </v>
 </v>
 <v t="ekr.20181225061136.144"><vh>@path tests</vh>
-<v t="ekr.20181225061136.145"><vh>@clean count_lines_of_code.py</vh>
+<v t="ekr.20181225061136.145"><vh>@@clean count_lines_of_code.py</vh>
 <v t="ekr.20181225061136.146"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.147"><vh>count_lines</vh></v>
 </v>
-<v t="ekr.20181225061136.148"><vh>@clean event_driven1.py</vh>
+<v t="ekr.20181225061136.148"><vh>@@clean event_driven1.py</vh>
 <v t="ekr.20181225061136.149"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.150"><vh>class Reducer(yoton.RepChannel)</vh>
 <v t="ekr.20181225061136.151"><vh>Reducer.reduce</vh></v>
 </v>
 <v t="ekr.20181225061136.152"><vh>reply_handler</vh></v>
 </v>
-<v t="ekr.20181225061136.153"><vh>@clean event_driven2.py</vh>
+<v t="ekr.20181225061136.153"><vh>@@clean event_driven2.py</vh>
 <v t="ekr.20181225061136.154"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.155"><vh>message_handler</vh></v>
 </v>
-<v t="ekr.20181225061136.156"><vh>@clean hello_world.py</vh>
+<v t="ekr.20181225061136.156"><vh>@@clean hello_world.py</vh>
 <v t="ekr.20181225061136.157"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061136.158"><vh>@clean hops.py</vh>
+<v t="ekr.20181225061136.158"><vh>@@clean hops.py</vh>
 <v t="ekr.20181225061136.159"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061136.160"><vh>@clean message_type.py</vh>
+<v t="ekr.20181225061136.160"><vh>@@clean message_type.py</vh>
 <v t="ekr.20181225061136.161"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.162"><vh>class NumberMessageType(yoton.MessageType)</vh>
 <v t="ekr.20181225061136.163"><vh>NumberMessageType.message_from_bytes</vh></v>
@@ -2596,20 +2596,20 @@
 <v t="ekr.20181225061136.169"><vh>NumberMessageType.message_type_name</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.170"><vh>@clean reqrep.py</vh>
+<v t="ekr.20181225061136.170"><vh>@@clean reqrep.py</vh>
 <v t="ekr.20181225061136.171"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.172"><vh>class Adder(yoton.RepChannel)</vh>
 <v t="ekr.20181225061136.173"><vh>Adder.add</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.174"><vh>@clean routing_splitting.py</vh>
+<v t="ekr.20181225061136.174"><vh>@@clean routing_splitting.py</vh>
 <v t="ekr.20181225061136.175"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061136.176"><vh>@clean status.py</vh>
+<v t="ekr.20181225061136.176"><vh>@@clean status.py</vh>
 <v t="ekr.20181225061136.177"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.178"><vh>on_new_state</vh></v>
 </v>
-<v t="ekr.20181225061136.179"><vh>@clean test_networkPackageQueue.py</vh>
+<v t="ekr.20181225061136.179"><vh>@@clean test_networkPackageQueue.py</vh>
 <v t="ekr.20181225061136.180"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.181"><vh>class Sender(threading.Thread)</vh>
 <v t="ekr.20181225061136.182"><vh>Sender.run</vh></v>
@@ -2619,16 +2619,16 @@
 <v t="ekr.20181225061136.185"><vh>Receiver.show</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061136.186"><vh>@clean test_rapid_reconnect.py</vh>
+<v t="ekr.20181225061136.186"><vh>@@clean test_rapid_reconnect.py</vh>
 <v t="ekr.20181225061136.187"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.188"><vh>connect_test</vh></v>
 </v>
-<v t="ekr.20181225061136.189"><vh>@clean test_speed.py</vh>
+<v t="ekr.20181225061136.189"><vh>@@clean test_speed.py</vh>
 <v t="ekr.20181225061136.190"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.191"><vh>logticks10</vh></v>
 <v t="ekr.20181225061136.192"><vh>logticks2</vh></v>
 </v>
-<v t="ekr.20181225061136.193"><vh>@clean utest.py</vh>
+<v t="ekr.20181225061136.193"><vh>@@clean utest.py</vh>
 <v t="ekr.20181225061136.194"><vh>Declarations</vh></v>
 <v t="ekr.20181225061136.195"><vh>class Tester(unittest.TestCase)</vh>
 <v t="ekr.20181225061136.196"><vh>Tester.setUp</vh></v>
@@ -2642,10 +2642,10 @@
 <v t="ekr.20181225061137.8"><vh>Tester.test_req_rep2</vh></v>
 </v>
 </v>
-<v t="ekr.20181225061137.9"><vh>@clean _test_inExternalCode.py</vh>
+<v t="ekr.20181225061137.9"><vh>@@clean _test_inExternalCode.py</vh>
 <v t="ekr.20181225061137.10"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061137.11"><vh>@clean _test_message_stuff.py</vh>
+<v t="ekr.20181225061137.11"><vh>@@clean _test_message_stuff.py</vh>
 <v t="ekr.20181225061137.12"><vh>Declarations</vh></v>
 <v t="ekr.20181225061137.13"><vh>class Message(str)</vh></v>
 </v>
@@ -2661,12 +2661,11 @@ g.cls()
 dir_ = r'C:\apps\pyzo'
 c.recursiveImport(
     dir_ = dir_,
-    kind = '@clean', # '@clean', #'@nosent','@auto','@file',
+    kind = '@@clean', # '@@clean', #'@nosent','@auto','@file',
     recursive = True,
     safe_at_file = False,
     theTypes = ['.py',],
-)
-</t>
+)</t>
 <t tx="ekr.20181225061128.100">def __init__(self, name, description, defaultFormat):
     self._name = name
     self._description = description
@@ -45409,9 +45408,6 @@ __init__.py:20: 'yoton.channels.channels_reqrep.CancelledError' imported but unu
 __init__.py:21: 'yoton.channels.channels_state.StateChannel' imported but unused
 __init__.py:22: 'yoton.channels.channels_file.FileWrapper' imported but unused
 </t>
-<t tx="ekr.20181225064147.1">errors writing: C:/leo.repo/leo-editor-contrib/StudyOutlines/pyzo/source/pyzo/util/qt/_patch/__init__.py
-path does not exist: C:/leo.repo/leo-editor-contrib/StudyOutlines/pyzo/source/pyzo/util/qt/_patch
-</t>
 <t tx="ekr.20181225064451.1"></t>
 <t tx="ekr.20181225064458.1"></t>
 <t tx="ekr.20181225064506.1"></t>
@@ -45486,5 +45482,9 @@ wrote: test_networkPackageQueue.py
 wrote: utest.py
 
 </t>
+<t tx="ekr.20181225100814.1">@language rest
+@wrap
+
+For study only. See the list of changed files.</t>
 </tnodes>
 </leo_file>
