@@ -19,8 +19,9 @@
 <v t="ekr.20181225061128.14"><vh>@@clean yotonloader.py</vh>
 <v t="ekr.20181225061128.15"><vh>Declarations</vh></v>
 </v>
-<v t="ekr.20181225061128.16"><vh>@@clean __init__.py</vh>
-<v t="ekr.20181225061128.17"><vh>Declarations</vh></v>
+<v t="ekr.20181225061128.16"><vh>@clean __init__.py</vh>
+<v t="ekr.20181225102633.1"><vh>&lt;&lt; __init__.py docstring &gt;&gt;</vh></v>
+<v t="ekr.20181225102735.1"><vh>&lt;&lt; __init__.py imports &gt;&gt;</vh></v>
 <v t="ekr.20181225061128.18"><vh>class MyApp(QtWidgets.QApplication)</vh>
 <v t="ekr.20181225061128.19"><vh>MyApp.event</vh></v>
 </v>
@@ -31,8 +32,9 @@
 <v t="ekr.20181225061128.24"><vh>saveConfig</vh></v>
 <v t="ekr.20181225061128.25"><vh>start</vh></v>
 </v>
-<v t="ekr.20181225061128.26"><vh>@@clean __main__.py</vh>
-<v t="ekr.20181225061128.27"><vh>Declarations</vh></v>
+<v t="ekr.20181225061128.26"><vh>@clean __main__.py</vh>
+<v t="ekr.20181225102136.1"><vh>&lt;&lt; __main__.py docstring &gt;&gt;</vh></v>
+<v t="ekr.20181225061128.27"><vh>&lt;&lt; __main__.py imports &gt;&gt;</vh></v>
 <v t="ekr.20181225061128.28"><vh>main</vh></v>
 </v>
 <v t="ekr.20181225061128.30"><vh>@path codeeditor</vh>
@@ -2652,6 +2654,8 @@
 </v>
 </v>
 </v>
+<v t="ekr.20181225061128.26"></v>
+<v t="ekr.20181225061128.16"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20181225060705.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -3290,107 +3294,14 @@ import yoton  # noqa
 sys.path.pop(0)
 </t>
 <t tx="ekr.20181225061128.16">@path C:/apps/pyzo/source/pyzo/
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# Copyright (C) 2016, the Pyzo development team
-#
-# Pyzo is distributed under the terms of the (new) BSD License.
-# The full license can be found in 'license.txt'.
+&lt;&lt; __init__.py docstring &gt;&gt;
+# Set version number
+__version__ = '4.6.2'
+&lt;&lt; __init__.py imports &gt;&gt;
 
 @others
 @language python
 @tabwidth -4
-</t>
-<t tx="ekr.20181225061128.17">"""
-Pyzo is a cross-platform Python IDE focused on
-interactivity and introspection, which makes it very suitable for
-scientific computing. Its practical design is aimed at simplicity and
-efficiency.
-
-Pyzo is written in Python 3 and Qt. Binaries are available for Windows,
-Linux, and Mac. For questions, there is a discussion group.
-
-**Two components + tools**
-
-
-Pyzo consists of two main components, the editor and the shell, and uses
-a set of pluggable tools to help the programmer in various ways. Some
-example tools are source structure, project manager, interactive help,
-and workspace.
-
-**Some key features**
-
-
-* Powerful *introspection* (autocompletion, calltips, interactive help)
-* Allows various ways to *run code interactively* or to run a file as a script.
-* The shells runs in a *subprocess* and can therefore be interrupted or killed.
-* *Multiple shells* can be used at the same time, and can be of different
-  Python versions (from v2.4 to 3.x, including pypy)
-* Support for using several *GUI toolkits* interactively: PySide, PyQt4,
-  wx, fltk, GTK, Tk.
-* Run IPython shell or native shell.
-* *Full Unicode support* in both editor and shell.
-* Various handy *tools*, plus the ability to make your own.
-* Matlab-style *cell notation* to mark code sections (by starting a line
-  with '##').
-
-"""
-
-# Set version number
-__version__ = '4.6.2'
-
-import os
-import sys
-import locale
-import traceback
-
-# Check Python version
-if sys.version &lt; '3':
-    raise RuntimeError('Pyzo requires Python 3.x to run.')
-
-# Make each OS find platform plugins etc.
-if hasattr(sys, 'frozen') and sys.frozen:
-    app_dir = os.path.dirname(sys.executable)
-    if sys.platform.startswith('win'):
-        os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = app_dir
-    if sys.platform.startswith('linux'):
-        os.environ['QT_XKB_CONFIG_ROOT'] = '.'
-        os.environ['FONTCONFIG_FILE'] = os.path.join(app_dir, 'source/pyzo/resources',
-                                                    'fonts/linux_fonts.conf')
-
-# Import yoton as an absolute package
-from pyzo import yotonloader  # noqa
-from pyzo.util import paths
-
-# If there already is an instance of Pyzo, and the user is trying an
-# Pyzo command, we should send the command to the other process and quit.
-# We do this here, were we have not yet loaded Qt, so we are very light.
-from pyzo.core import commandline
-if commandline.is_our_server_running():
-    print('Started our command server')
-else:
-    # Handle command line args now
-    res = commandline.handle_cmd_args()
-    if res:
-        print(res)
-        sys.exit()
-    else:
-        # No args, proceed with starting up
-        print('Our command server is *not* running')
-
-
-from pyzo.util import zon as ssdf  # zon is ssdf-light
-from pyzo.util.qt import QtCore, QtGui, QtWidgets
-
-# Import language/translation tools
-from pyzo.util._locale import translate, setLanguage  # noqa
-
-# Set environ to let kernel know some stats about us
-os.environ['PYZO_PREFIX'] = sys.prefix
-_is_pyqt4 = hasattr(QtCore, 'PYQT_VERSION_STR')
-os.environ['PYZO_QTLIB'] = 'PyQt4' if _is_pyqt4 else 'PySide'
-
-
 </t>
 <t tx="ekr.20181225061128.18">class MyApp(QtWidgets.QApplication):
     """ So we an open .py files on OSX.
@@ -3604,10 +3515,9 @@ defaultQtStyleName = ''
 <t tx="ekr.20181225061128.26">@path C:/apps/pyzo/source/pyzo/
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Copyright (C) 2016, the Pyzo development team
-#
-# Pyzo is distributed under the terms of the (new) BSD License.
-# The full license can be found in 'license.txt'.
+&lt;&lt; __main__.py docstring &gt;&gt;
+&lt;&lt; __main__.py imports &gt;&gt;
+
 
 @others
 if __name__ == '__main__':
@@ -3615,16 +3525,7 @@ if __name__ == '__main__':
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20181225061128.27">""" Pyzo __main__ module
-
-This module takes enables starting Pyzo via either "python3 -m pyzo" or
-"python3 path/to/pyzo".
-
-In the first case it simply imports pyzo. In the latter case, that import
-will generally fail, in which case the parent directory is added to sys.path
-and the import is tried again. Then "pyzo.start()" is called.
-
-"""
+<t tx="ekr.20181225061128.27">
 
 import os
 import sys
@@ -45486,5 +45387,114 @@ wrote: utest.py
 @wrap
 
 For study only. See the list of changed files.</t>
+<t tx="ekr.20181225102136.1"># Copyright (C) 2016, the Pyzo development team
+#
+# Pyzo is distributed under the terms of the (new) BSD License.
+# The full license can be found in 'license.txt'.
+""" Pyzo __main__ module
+
+This module takes enables starting Pyzo via either "python3 -m pyzo" or
+"python3 path/to/pyzo".
+
+In the first case it simply imports pyzo. In the latter case, that import
+will generally fail, in which case the parent directory is added to sys.path
+and the import is tried again. Then "pyzo.start()" is called.
+
+"""</t>
+<t tx="ekr.20181225102633.1">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright (C) 2016, the Pyzo development team
+#
+# Pyzo is distributed under the terms of the (new) BSD License.
+# The full license can be found in 'license.txt'.
+"""
+Pyzo is a cross-platform Python IDE focused on
+interactivity and introspection, which makes it very suitable for
+scientific computing. Its practical design is aimed at simplicity and
+efficiency.
+
+Pyzo is written in Python 3 and Qt. Binaries are available for Windows,
+Linux, and Mac. For questions, there is a discussion group.
+
+**Two components + tools**
+
+
+Pyzo consists of two main components, the editor and the shell, and uses
+a set of pluggable tools to help the programmer in various ways. Some
+example tools are source structure, project manager, interactive help,
+and workspace.
+
+**Some key features**
+
+
+* Powerful *introspection* (autocompletion, calltips, interactive help)
+* Allows various ways to *run code interactively* or to run a file as a script.
+* The shells runs in a *subprocess* and can therefore be interrupted or killed.
+* *Multiple shells* can be used at the same time, and can be of different
+  Python versions (from v2.4 to 3.x, including pypy)
+* Support for using several *GUI toolkits* interactively: PySide, PyQt4,
+  wx, fltk, GTK, Tk.
+* Run IPython shell or native shell.
+* *Full Unicode support* in both editor and shell.
+* Various handy *tools*, plus the ability to make your own.
+* Matlab-style *cell notation* to mark code sections (by starting a line
+  with '##').
+
+"""</t>
+<t tx="ekr.20181225102735.1">
+
+import os
+import sys
+import locale
+import traceback
+
+# Check Python version
+if sys.version &lt; '3':
+    raise RuntimeError('Pyzo requires Python 3.x to run.')
+
+# Make each OS find platform plugins etc.
+if hasattr(sys, 'frozen') and sys.frozen:
+    app_dir = os.path.dirname(sys.executable)
+    if sys.platform.startswith('win'):
+        os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = app_dir
+    if sys.platform.startswith('linux'):
+        os.environ['QT_XKB_CONFIG_ROOT'] = '.'
+        os.environ['FONTCONFIG_FILE'] = os.path.join(app_dir, 'source/pyzo/resources',
+                                                    'fonts/linux_fonts.conf')
+
+# Import yoton as an absolute package
+from pyzo import yotonloader  # noqa
+from pyzo.util import paths
+
+# If there already is an instance of Pyzo, and the user is trying an
+# Pyzo command, we should send the command to the other process and quit.
+# We do this here, were we have not yet loaded Qt, so we are very light.
+from pyzo.core import commandline
+if commandline.is_our_server_running():
+    print('Started our command server')
+else:
+    # Handle command line args now
+    res = commandline.handle_cmd_args()
+    if res:
+        print(res)
+        sys.exit()
+    else:
+        # No args, proceed with starting up
+        print('Our command server is *not* running')
+
+
+from pyzo.util import zon as ssdf  # zon is ssdf-light
+from pyzo.util.qt import QtCore, QtGui, QtWidgets
+
+# Import language/translation tools
+from pyzo.util._locale import translate, setLanguage  # noqa
+
+# Set environ to let kernel know some stats about us
+os.environ['PYZO_PREFIX'] = sys.prefix
+_is_pyqt4 = hasattr(QtCore, 'PYQT_VERSION_STR')
+os.environ['PYZO_QTLIB'] = 'PyQt4' if _is_pyqt4 else 'PySide'
+
+
+</t>
 </tnodes>
 </leo_file>
