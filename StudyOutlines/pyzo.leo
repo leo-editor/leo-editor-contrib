@@ -3297,8 +3297,8 @@ sys.path.pop(0)
 &lt;&lt; __init__.py docstring &gt;&gt;
 # Set version number
 __version__ = '4.6.2'
+print(__file__, __version__)
 &lt;&lt; __init__.py imports &gt;&gt;
-
 @others
 @language python
 @tabwidth -4
@@ -3516,9 +3516,8 @@ defaultQtStyleName = ''
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &lt;&lt; __main__.py docstring &gt;&gt;
+import pdb ; pdb.set_trace()
 &lt;&lt; __main__.py imports &gt;&gt;
-
-
 @others
 if __name__ == '__main__':
     main()
@@ -3526,7 +3525,6 @@ if __name__ == '__main__':
 @tabwidth -4
 </t>
 <t tx="ekr.20181225061128.27">
-
 import os
 import sys
 
@@ -45391,6 +45389,7 @@ For study only. See the list of changed files.</t>
 #
 # Pyzo is distributed under the terms of the (new) BSD License.
 # The full license can be found in 'license.txt'.
+
 """ Pyzo __main__ module
 
 This module takes enables starting Pyzo via either "python3 -m pyzo" or
@@ -45400,13 +45399,15 @@ In the first case it simply imports pyzo. In the latter case, that import
 will generally fail, in which case the parent directory is added to sys.path
 and the import is tried again. Then "pyzo.start()" is called.
 
-"""</t>
+"""
+</t>
 <t tx="ekr.20181225102633.1">#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Copyright (C) 2016, the Pyzo development team
 #
 # Pyzo is distributed under the terms of the (new) BSD License.
 # The full license can be found in 'license.txt'.
+
 """
 Pyzo is a cross-platform Python IDE focused on
 interactivity and introspection, which makes it very suitable for
@@ -45440,9 +45441,10 @@ and workspace.
 * Matlab-style *cell notation* to mark code sections (by starting a line
   with '##').
 
-"""</t>
-<t tx="ekr.20181225102735.1">
+"""
 
+</t>
+<t tx="ekr.20181225102735.1">
 import os
 import sys
 import locale
