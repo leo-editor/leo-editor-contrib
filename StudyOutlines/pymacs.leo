@@ -30,7 +30,14 @@
 <v t="ekr.20181227065615.2"><vh>pymacs-print-for-apply</vh></v>
 <v t="ekr.20181227065708.1"><vh>pymacs-print-for-eval</vh></v>
 </v>
-<v t="ekr.20181227064730.1"><vh>&lt;&lt; Communication protocol &gt;&gt;</vh></v>
+<v t="ekr.20181227064730.1"><vh>&lt;&lt; Communication protocol &gt;&gt;</vh>
+<v t="ekr.20181228121834.1"><vh>pymacs-start-services</vh></v>
+<v t="ekr.20181228121838.1"><vh>pymacs-terminate-services</vh></v>
+<v t="ekr.20181228121838.2"><vh>pymacs-serve-until-reply</vh></v>
+<v t="ekr.20181228121838.3"><vh>pymacs-round-trip</vh></v>
+<v t="ekr.20181228121838.4"><vh>pymacs-interruptible-eval</vh></v>
+<v t="ekr.20181228122047.1"><vh>pymacs-proper-list-p</vh></v>
+</v>
 </v>
 </vnodes>
 <tnodes>
@@ -387,244 +394,8 @@ The timer is used only if `post-gc-hook' is not available.")
 ;; occurs that two successive messages are sent in the same direction.  The
 ;; first message is received from the Python side, it is `(version VERSION)'.
 
-(defun pymacs-start-services ()
-  ;; This function gets called automatically, as needed.
-  (let ((buffer (get-buffer-create "*Pymacs*")))
-    (with-current-buffer buffer
-      ;; Erase the buffer in case some previous incarnation of the
-      ;; Pymacs helper died.  Otherwise, the "(goto-char (point-min))"
-      ;; below might not find the proper synchronising reply and later
-      ;; trigger a spurious "Protocol error" diagnostic.
-      (erase-buffer)
-      (buffer-disable-undo)
-      (pymacs-set-buffer-multibyte nil)
-      (set-buffer-file-coding-system 'raw-text)
-      (save-match-data
-        ;; Launch the Pymacs helper.
-        (let ((process
-               (apply 'start-process "pymacs" buffer
-                      (let ((python (getenv "PYMACS_PYTHON")))
-                        (if (or (null python) (equal python ""))
-                            pymacs-python-command
-                          python))
-                      "-c" (concat "import sys;"
-                                   " from Pymacs import main;"
-                                   " main(*sys.argv[1:])")
-                      (append
-                       (and (&gt;= emacs-major-version 24) '("-f"))
-                       (mapcar 'expand-file-name pymacs-load-path)))))
-          (pymacs-kill-without-query process)
-          ;; Receive the synchronising reply.
-          (while (progn
-                   (goto-char (point-min))
-                   (not (re-search-forward "&lt;\\([0-9]+\\)\t" nil t)))
-            (unless (accept-process-output process pymacs-timeout-at-start)
-              (pymacs-report-error
-               "Pymacs helper did not start within %d seconds"
-               pymacs-timeout-at-start)))
-          (let ((marker (process-mark process))
-                (limit-position (+ (match-end 0)
-                                   (string-to-number (match-string 1)))))
-            (while (&lt; (marker-position marker) limit-position)
-              (unless (accept-process-output process pymacs-timeout-at-start)
-                (pymacs-report-error
-                 "Pymacs helper probably was interrupted at start")))))
-        ;; Check that synchronisation occurred.
-        (goto-char (match-end 0))
-        (let ((reply (read (current-buffer))))
-          (if (and (pymacs-proper-list-p reply)
-                   (= (length reply) 2)
-                   (eq (car reply) 'version))
-              (unless (string-equal (cadr reply) "@VERSION@")
-                (pymacs-report-error
-                 "Pymacs Lisp version is @VERSION@, Python is %s"
-                 (cadr reply)))
-            (pymacs-report-error "Pymacs got an invalid initial reply")))))
-    (if (not pymacs-use-hash-tables)
-        (setq pymacs-weak-hash t)
-      (when pymacs-used-ids
-        ;; A previous Pymacs session occurred in this Emacs session,
-        ;; some IDs hang around which do not correspond to anything on
-        ;; the Python side.  Python should not recycle such IDs for
-        ;; new objects.
-        (let ((pymacs-transit-buffer buffer)
-              (pymacs-forget-mutability t)
-              (pymacs-gc-inhibit t))
-          (pymacs-call "zombie_python" pymacs-used-ids))
-        (setq pymacs-used-ids nil))
-      (setq pymacs-weak-hash (make-hash-table :weakness 'value))
-      (if (boundp 'post-gc-hook)
-          (add-hook 'post-gc-hook 'pymacs-schedule-gc)
-        (setq pymacs-gc-timer (run-at-time 20 20 'pymacs-schedule-gc))))
-    ;; If nothing failed, only then declare that Pymacs has started!
-    (setq pymacs-transit-buffer buffer)
-    (let ((modules pymacs-load-history))
-      (setq pymacs-load-history nil)
-      (when (and modules (yes-or-no-p "Reload modules in previous session? "))
-        (mapc (lambda (args)
-                ;; Be defensive in case sys.path differs
-                (condition-case err
-                    (apply 'pymacs-load args)
-                  (error
-                   (message "%s: %s" (car err) (error-message-string err)))))
-              modules)))))
-
-(defun pymacs-terminate-services ()
-  ;; This function is mainly provided for documentation purposes.
-  (interactive)
-  (garbage-collect)
-  (pymacs-garbage-collect)
-  (when (or (not pymacs-used-ids)
-            (yes-or-no-p "\
-Killing the Pymacs helper might create zombie objects.  Kill? "))
-    (cond ((boundp 'post-gc-hook)
-           (remove-hook 'post-gc-hook 'pymacs-schedule-gc))
-          ((pymacs-timerp pymacs-gc-timer)
-           (pymacs-cancel-timer pymacs-gc-timer)))
-    (when (buffer-live-p pymacs-transit-buffer)
-      (kill-buffer pymacs-transit-buffer))
-    (setq pymacs-gc-inhibit nil
-          pymacs-gc-timer nil
-          pymacs-transit-buffer nil
-          pymacs-lisp nil
-          pymacs-freed-list nil)))
-
-(defun pymacs-serve-until-reply (action inserter)
-  ;; This function builds a Python request by printing ACTION and
-  ;; evaluating INSERTER, which itself prints an argument.  It then
-  ;; sends the request to the Pymacs helper, and serves all
-  ;; sub-requests coming from the Python side, until either a reply or
-  ;; an error is finally received.
-  (unless (and pymacs-transit-buffer
-               (buffer-name pymacs-transit-buffer)
-               (get-buffer-process pymacs-transit-buffer))
-    (when pymacs-weak-hash
-      (unless (or (eq pymacs-auto-restart t)
-                  (and (eq pymacs-auto-restart 'ask)
-                       (yes-or-no-p "The Pymacs helper died.  Restart it? ")))
-        (pymacs-report-error "There is no Pymacs helper!")))
-    (pymacs-start-services))
-  (when pymacs-gc-wanted
-    (pymacs-garbage-collect))
-  (let ((inhibit-quit t)
-        done value)
-    (while (not done)
-      (let ((form (pymacs-round-trip action inserter)))
-        (setq action (car form))
-        (when (eq action 'free)
-          (pymacs-free-lisp (cadr form))
-          (setq form (cddr form)
-                action (car form)))
-        (let* ((pair (pymacs-interruptible-eval (cadr form)))
-               (success (cdr pair)))
-          (setq value (car pair))
-          (cond ((eq action 'eval)
-                 (if success
-                     (setq action "return"
-                           inserter `(pymacs-print-for-eval ',value))
-                   (setq action "raise"
-                         inserter `(let ((pymacs-forget-mutability t))
-                                     (pymacs-print-for-eval ,value)))))
-                ((eq action 'expand)
-                 (if success
-                     (setq action "return"
-                           inserter `(let ((pymacs-forget-mutability t))
-                                       (pymacs-print-for-eval ,value)))
-                   (setq action "raise"
-                         inserter `(let ((pymacs-forget-mutability t))
-                                     (pymacs-print-for-eval ,value)))))
-                ((eq action 'return)
-                 (if success
-                     (setq done t)
-                   (pymacs-report-error "%s" value)))
-                ((eq action 'raise)
-                 (if success
-                     (pymacs-report-error "Python: %s" value)
-                   (pymacs-report-error "%s" value)))
-                (t (pymacs-report-error "Protocol error: %s" form))))))
-    value))
-
-(defun pymacs-round-trip (action inserter)
-  ;; This function produces a Python request by printing and
-  ;; evaluating INSERTER, which itself prints an argument.  It sends
-  ;; the request to the Pymacs helper, awaits for any kind of reply,
-  ;; and returns it.
-  (with-current-buffer pymacs-transit-buffer
-    ;; Possibly trim the beginning of the transit buffer.
-    (cond ((not pymacs-trace-transit)
-           (erase-buffer))
-          ((consp pymacs-trace-transit)
-           (when (&gt; (buffer-size) (cdr pymacs-trace-transit))
-             (let ((cut (- (buffer-size) (car pymacs-trace-transit))))
-               (when (&gt; cut 0)
-                 (save-excursion
-                   (goto-char cut)
-                   (unless (memq (preceding-char) '(0 ?\n))
-                     (forward-line 1))
-                   (delete-region (point-min) (point))))))))
-    ;; Send the request, wait for a reply, and process it.
-    (let* ((process (get-buffer-process pymacs-transit-buffer))
-           (status (process-status process))
-           (marker (process-mark process))
-           (moving (= (point) marker))
-           send-position reply-position reply)
-      (save-excursion
-        (save-match-data
-          ;; Encode request.
-          (setq send-position (marker-position marker))
-          (let ((standard-output marker))
-            (princ action)
-            (princ " ")
-            (eval inserter))
-          (goto-char marker)
-          (unless (= (preceding-char) ?\n)
-            (princ "\n" marker))
-          ;; Send request text.
-          (goto-char send-position)
-          (insert (format "&gt;%d\t" (- marker send-position)))
-          (setq reply-position (marker-position marker))
-          (process-send-region process send-position marker)
-          ;; Receive reply text.
-          (while (and (eq status 'run)
-                      (progn
-                        (goto-char reply-position)
-                        (not (re-search-forward "&lt;\\([0-9]+\\)\t" nil t))))
-            (unless (accept-process-output process pymacs-timeout-at-reply)
-              (setq status (process-status process))))
-          (when (eq status 'run)
-            (let ((limit-position (+ (match-end 0)
-                                     (string-to-number (match-string 1)))))
-              (while (and (eq status 'run)
-                          (&lt; (marker-position marker) limit-position))
-                (unless (accept-process-output process pymacs-timeout-at-line)
-                  (setq status (process-status process))))))
-          ;; Decode reply.
-          (if (not (eq status 'run))
-              (pymacs-report-error "Pymacs helper status is `%S'" status)
-            (goto-char (match-end 0))
-            (setq reply (read (current-buffer))))))
-      (when (and moving (not pymacs-trace-transit))
-        (goto-char marker))
-      reply)))
-
-(defun pymacs-interruptible-eval (expression)
-  ;; This function produces a pair (VALUE . SUCCESS) for EXPRESSION.
-  ;; A cautious evaluation of EXPRESSION is attempted, and any
-  ;; error while evaluating is caught, including Emacs quit (C-g).
-  ;; Any Emacs quit also gets forward as a SIGINT to the Pymacs handler.
-  ;; With SUCCESS being true, VALUE is the expression value.
-  ;; With SUCCESS being false, VALUE is an interruption diagnostic.
-  (condition-case info
-      (cons (let ((inhibit-quit nil)) (eval expression)) t)
-    (quit (setq quit-flag t)
-          (interrupt-process pymacs-transit-buffer)
-          (cons "*Interrupted!*" nil))
-    (error (cons (prin1-to-string info) nil))))
-
-(defun pymacs-proper-list-p (expression)
-  ;; Tell if a list is proper, id est, that it is `nil' or ends with `nil'.
-  (cond ((not expression))
-        ((consp expression) (not (cdr (last expression))))))</t>
+@others
+</t>
 <t tx="ekr.20181227064946.1">(defun pymacs-python-reference (object)
   ;; Return the text reference of a Python object if possible, else nil.
   (when (functionp object)
@@ -893,5 +664,248 @@ Killing the Pymacs helper might create zombie objects.  Kill? "))
         (princ "(")
         (princ (pymacs-allocate-lisp expression))
         (princ ")")))))</t>
+<t tx="ekr.20181228121834.1">(defun pymacs-start-services ()
+  ;; This function gets called automatically, as needed.
+  (let ((buffer (get-buffer-create "*Pymacs*")))
+    (with-current-buffer buffer
+      ;; Erase the buffer in case some previous incarnation of the
+      ;; Pymacs helper died.  Otherwise, the "(goto-char (point-min))"
+      ;; below might not find the proper synchronising reply and later
+      ;; trigger a spurious "Protocol error" diagnostic.
+      (erase-buffer)
+      (buffer-disable-undo)
+      (pymacs-set-buffer-multibyte nil)
+      (set-buffer-file-coding-system 'raw-text)
+      (save-match-data
+        ;; Launch the Pymacs helper.
+        (let ((process
+               (apply 'start-process "pymacs" buffer
+                      (let ((python (getenv "PYMACS_PYTHON")))
+                        (if (or (null python) (equal python ""))
+                            pymacs-python-command
+                          python))
+                      "-c" (concat "import sys;"
+                                   " from Pymacs import main;"
+                                   " main(*sys.argv[1:])")
+                      (append
+                       (and (&gt;= emacs-major-version 24) '("-f"))
+                       (mapcar 'expand-file-name pymacs-load-path)))))
+          (pymacs-kill-without-query process)
+          ;; Receive the synchronising reply.
+          (while (progn
+                   (goto-char (point-min))
+                   (not (re-search-forward "&lt;\\([0-9]+\\)\t" nil t)))
+            (unless (accept-process-output process pymacs-timeout-at-start)
+              (pymacs-report-error
+               "Pymacs helper did not start within %d seconds"
+               pymacs-timeout-at-start)))
+          (let ((marker (process-mark process))
+                (limit-position (+ (match-end 0)
+                                   (string-to-number (match-string 1)))))
+            (while (&lt; (marker-position marker) limit-position)
+              (unless (accept-process-output process pymacs-timeout-at-start)
+                (pymacs-report-error
+                 "Pymacs helper probably was interrupted at start")))))
+        ;; Check that synchronisation occurred.
+        (goto-char (match-end 0))
+        (let ((reply (read (current-buffer))))
+          (if (and (pymacs-proper-list-p reply)
+                   (= (length reply) 2)
+                   (eq (car reply) 'version))
+              (unless (string-equal (cadr reply) "@VERSION@")
+                (pymacs-report-error
+                 "Pymacs Lisp version is @VERSION@, Python is %s"
+                 (cadr reply)))
+            (pymacs-report-error "Pymacs got an invalid initial reply")))))
+    (if (not pymacs-use-hash-tables)
+        (setq pymacs-weak-hash t)
+      (when pymacs-used-ids
+        ;; A previous Pymacs session occurred in this Emacs session,
+        ;; some IDs hang around which do not correspond to anything on
+        ;; the Python side.  Python should not recycle such IDs for
+        ;; new objects.
+        (let ((pymacs-transit-buffer buffer)
+              (pymacs-forget-mutability t)
+              (pymacs-gc-inhibit t))
+          (pymacs-call "zombie_python" pymacs-used-ids))
+        (setq pymacs-used-ids nil))
+      (setq pymacs-weak-hash (make-hash-table :weakness 'value))
+      (if (boundp 'post-gc-hook)
+          (add-hook 'post-gc-hook 'pymacs-schedule-gc)
+        (setq pymacs-gc-timer (run-at-time 20 20 'pymacs-schedule-gc))))
+    ;; If nothing failed, only then declare that Pymacs has started!
+    (setq pymacs-transit-buffer buffer)
+    (let ((modules pymacs-load-history))
+      (setq pymacs-load-history nil)
+      (when (and modules (yes-or-no-p "Reload modules in previous session? "))
+        (mapc (lambda (args)
+                ;; Be defensive in case sys.path differs
+                (condition-case err
+                    (apply 'pymacs-load args)
+                  (error
+                   (message "%s: %s" (car err) (error-message-string err)))))
+              modules)))))
+
+</t>
+<t tx="ekr.20181228121838.1">(defun pymacs-terminate-services ()
+  ;; This function is mainly provided for documentation purposes.
+  (interactive)
+  (garbage-collect)
+  (pymacs-garbage-collect)
+  (when (or (not pymacs-used-ids)
+            (yes-or-no-p "\
+Killing the Pymacs helper might create zombie objects.  Kill? "))
+    (cond ((boundp 'post-gc-hook)
+           (remove-hook 'post-gc-hook 'pymacs-schedule-gc))
+          ((pymacs-timerp pymacs-gc-timer)
+           (pymacs-cancel-timer pymacs-gc-timer)))
+    (when (buffer-live-p pymacs-transit-buffer)
+      (kill-buffer pymacs-transit-buffer))
+    (setq pymacs-gc-inhibit nil
+          pymacs-gc-timer nil
+          pymacs-transit-buffer nil
+          pymacs-lisp nil
+          pymacs-freed-list nil)))
+
+</t>
+<t tx="ekr.20181228121838.2">(defun pymacs-serve-until-reply (action inserter)
+  ;; This function builds a Python request by printing ACTION and
+  ;; evaluating INSERTER, which itself prints an argument.  It then
+  ;; sends the request to the Pymacs helper, and serves all
+  ;; sub-requests coming from the Python side, until either a reply or
+  ;; an error is finally received.
+  (unless (and pymacs-transit-buffer
+               (buffer-name pymacs-transit-buffer)
+               (get-buffer-process pymacs-transit-buffer))
+    (when pymacs-weak-hash
+      (unless (or (eq pymacs-auto-restart t)
+                  (and (eq pymacs-auto-restart 'ask)
+                       (yes-or-no-p "The Pymacs helper died.  Restart it? ")))
+        (pymacs-report-error "There is no Pymacs helper!")))
+    (pymacs-start-services))
+  (when pymacs-gc-wanted
+    (pymacs-garbage-collect))
+  (let ((inhibit-quit t)
+        done value)
+    (while (not done)
+      (let ((form (pymacs-round-trip action inserter)))
+        (setq action (car form))
+        (when (eq action 'free)
+          (pymacs-free-lisp (cadr form))
+          (setq form (cddr form)
+                action (car form)))
+        (let* ((pair (pymacs-interruptible-eval (cadr form)))
+               (success (cdr pair)))
+          (setq value (car pair))
+          (cond ((eq action 'eval)
+                 (if success
+                     (setq action "return"
+                           inserter `(pymacs-print-for-eval ',value))
+                   (setq action "raise"
+                         inserter `(let ((pymacs-forget-mutability t))
+                                     (pymacs-print-for-eval ,value)))))
+                ((eq action 'expand)
+                 (if success
+                     (setq action "return"
+                           inserter `(let ((pymacs-forget-mutability t))
+                                       (pymacs-print-for-eval ,value)))
+                   (setq action "raise"
+                         inserter `(let ((pymacs-forget-mutability t))
+                                     (pymacs-print-for-eval ,value)))))
+                ((eq action 'return)
+                 (if success
+                     (setq done t)
+                   (pymacs-report-error "%s" value)))
+                ((eq action 'raise)
+                 (if success
+                     (pymacs-report-error "Python: %s" value)
+                   (pymacs-report-error "%s" value)))
+                (t (pymacs-report-error "Protocol error: %s" form))))))
+    value))
+
+</t>
+<t tx="ekr.20181228121838.3">(defun pymacs-round-trip (action inserter)
+  ;; This function produces a Python request by printing and
+  ;; evaluating INSERTER, which itself prints an argument.  It sends
+  ;; the request to the Pymacs helper, awaits for any kind of reply,
+  ;; and returns it.
+  (with-current-buffer pymacs-transit-buffer
+    ;; Possibly trim the beginning of the transit buffer.
+    (cond ((not pymacs-trace-transit)
+           (erase-buffer))
+          ((consp pymacs-trace-transit)
+           (when (&gt; (buffer-size) (cdr pymacs-trace-transit))
+             (let ((cut (- (buffer-size) (car pymacs-trace-transit))))
+               (when (&gt; cut 0)
+                 (save-excursion
+                   (goto-char cut)
+                   (unless (memq (preceding-char) '(0 ?\n))
+                     (forward-line 1))
+                   (delete-region (point-min) (point))))))))
+    ;; Send the request, wait for a reply, and process it.
+    (let* ((process (get-buffer-process pymacs-transit-buffer))
+           (status (process-status process))
+           (marker (process-mark process))
+           (moving (= (point) marker))
+           send-position reply-position reply)
+      (save-excursion
+        (save-match-data
+          ;; Encode request.
+          (setq send-position (marker-position marker))
+          (let ((standard-output marker))
+            (princ action)
+            (princ " ")
+            (eval inserter))
+          (goto-char marker)
+          (unless (= (preceding-char) ?\n)
+            (princ "\n" marker))
+          ;; Send request text.
+          (goto-char send-position)
+          (insert (format "&gt;%d\t" (- marker send-position)))
+          (setq reply-position (marker-position marker))
+          (process-send-region process send-position marker)
+          ;; Receive reply text.
+          (while (and (eq status 'run)
+                      (progn
+                        (goto-char reply-position)
+                        (not (re-search-forward "&lt;\\([0-9]+\\)\t" nil t))))
+            (unless (accept-process-output process pymacs-timeout-at-reply)
+              (setq status (process-status process))))
+          (when (eq status 'run)
+            (let ((limit-position (+ (match-end 0)
+                                     (string-to-number (match-string 1)))))
+              (while (and (eq status 'run)
+                          (&lt; (marker-position marker) limit-position))
+                (unless (accept-process-output process pymacs-timeout-at-line)
+                  (setq status (process-status process))))))
+          ;; Decode reply.
+          (if (not (eq status 'run))
+              (pymacs-report-error "Pymacs helper status is `%S'" status)
+            (goto-char (match-end 0))
+            (setq reply (read (current-buffer))))))
+      (when (and moving (not pymacs-trace-transit))
+        (goto-char marker))
+      reply)))
+
+</t>
+<t tx="ekr.20181228121838.4">(defun pymacs-interruptible-eval (expression)
+  ;; This function produces a pair (VALUE . SUCCESS) for EXPRESSION.
+  ;; A cautious evaluation of EXPRESSION is attempted, and any
+  ;; error while evaluating is caught, including Emacs quit (C-g).
+  ;; Any Emacs quit also gets forward as a SIGINT to the Pymacs handler.
+  ;; With SUCCESS being true, VALUE is the expression value.
+  ;; With SUCCESS being false, VALUE is an interruption diagnostic.
+  (condition-case info
+      (cons (let ((inhibit-quit nil)) (eval expression)) t)
+    (quit (setq quit-flag t)
+          (interrupt-process pymacs-transit-buffer)
+          (cons "*Interrupted!*" nil))
+    (error (cons (prin1-to-string info) nil))))
+
+</t>
+<t tx="ekr.20181228122047.1">(defun pymacs-proper-list-p (expression)
+  ;; Tell if a list is proper, id est, that it is `nil' or ends with `nil'.
+  (cond ((not expression))
+        ((consp expression) (not (cdr (last expression))))))</t>
 </tnodes>
 </leo_file>
