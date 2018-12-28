@@ -9,7 +9,14 @@
 <v t="ekr.20181227064002.3"><vh>pymacs.el</vh>
 <v t="ekr.20181227064146.1"><vh>&lt;&lt; docstring &gt;&gt;</vh></v>
 <v t="ekr.20181227064256.1"><vh>&lt;&lt; Portability stunts &gt;&gt;</vh></v>
-<v t="ekr.20181227064403.1"><vh>&lt;&lt; Published variables and functions &gt;&gt;</vh></v>
+<v t="ekr.20181227064403.1"><vh>&lt;&lt; Published variables and functions &gt;&gt;</vh>
+<v t="ekr.20181228123347.1"><vh>pymacs-load</vh></v>
+<v t="ekr.20181228123351.1"><vh>pymacs-autoload</vh></v>
+<v t="ekr.20181228123351.2"><vh>pymacs-eval</vh></v>
+<v t="ekr.20181228123351.3"><vh>pymacs-exec</vh></v>
+<v t="ekr.20181228123351.4"><vh>pymacs-call</vh></v>
+<v t="ekr.20181228123351.5"><vh>pymacs-apply</vh></v>
+</v>
 <v t="ekr.20181227064457.1"><vh>&lt;&lt; Integration details &gt;&gt;</vh>
 <v t="ekr.20181227064946.1"><vh>pymacs-python-reference</vh></v>
 <v t="ekr.20181227065018.1"><vh>experimental</vh>
@@ -19,7 +26,7 @@
 </v>
 <v t="ekr.20181227064545.1"><vh>&lt;&lt; Garbage collection of Python IDs &gt;&gt;</vh>
 <v t="ekr.20181227065258.1"><vh>pymacs-schedule-gc</vh></v>
-<v t="ekr.20181227065301.1"><vh>ymacs-garbage-collect</vh></v>
+<v t="ekr.20181227065301.1"><vh>pymacs-garbage-collect</vh></v>
 <v t="ekr.20181227065302.1"><vh>pymacs-defuns</vh></v>
 <v t="ekr.20181227065459.1"><vh>pymacs-defun</vh></v>
 <v t="ekr.20181227065334.1"><vh>pymacs-python</vh></v>
@@ -204,95 +211,8 @@ If `nil', calling a zombie will merely produce a diagnostic message.")
 Each function there is called with a single argument, the Python
 module name passed to as the first argument of `pymacs-load'.")
 
-;;;###autoload
-(defun pymacs-load (module &amp;optional prefix noerror)
-  "Import the Python module named MODULE into Emacs.
-Each function in the Python module is made available as an Emacs function.
-The Lisp name of each function is the concatenation of PREFIX with
-the Python name, in which underlines are replaced by dashes.  If PREFIX is
-not given, it defaults to MODULE followed by a dash.
-If NOERROR is not nil, do not raise error when the module is not found."
-  (interactive
-   (let* ((module (read-string "Python module? "))
-          (default (concat (car (last (split-string module "\\."))) "-"))
-          (prefix (read-string (format "Prefix? [%s] " default)
-                               nil nil default)))
-     (list module prefix)))
-  (message "Pymacs loading %s..." module)
-  (let ((lisp-code (pymacs-call "pymacs_load_helper" module prefix noerror)))
-    (cond (lisp-code (let ((result (eval lisp-code)))
-                       (add-to-list 'pymacs-load-history
-                                    (list module prefix noerror)
-                                    ;; append so that order is kept
-                                    'append)
-                       (message "Pymacs loading %s...done" module)
-                       (run-hook-with-args 'pymacs-after-load-functions module)
-                       result))
-          (noerror (message "Pymacs loading %s...failed" module) nil))))
-
-;;;###autoload
-(defun pymacs-autoload (function module &amp;optional prefix docstring interactive)
-  "Pymacs's equivalent of the standard emacs facility `autoload'.
-Define FUNCTION to autoload from Python MODULE using PREFIX.
-If PREFIX is not given, it defaults to MODULE followed by a dash.
-Optional DOCSTRING documents FUNCTION until it gets loaded.
-INTERACTIVE is normally the argument to the function `interactive',
-t means `interactive' without arguments, nil means not interactive,
-which is the default."
-  (unless (symbolp function)
-    (error "`%s' should be a symbol" function))
-  (unless (stringp module)
-    (error "`%s' should be a string" module))
-  (unless (pymacs-python-reference function)
-
-    (defalias function
-      `(lambda (&amp;rest args)
-         ,(or docstring
-              (format "Function `%s' to be loaded from Python module `%s'"
-                      function module))
-         ,(cond ((eq interactive t) '(interactive))
-                (interactive `(interactive ,interactive)))
-         (pymacs-load ,module ,prefix)
-         (unless (pymacs-python-reference ',function)
-           (error "Pymacs autoload failed to define function %s" ',function))
-         (apply ',function args)))))
-
-;;;###autoload
-(defun pymacs-eval (text)
-  "Compile TEXT as a Python expression, and return its value."
-  (interactive "sPython expression: ")
-  (let ((value (pymacs-serve-until-reply "eval" `(princ ,text))))
-    (when (pymacs-called-interactively-p)
-      (message "%S" value))
-    value))
-
-;;;###autoload
-(defun pymacs-exec (text)
-  "Compile and execute TEXT as a sequence of Python statements.
-This functionality is experimental, and does not appear to be useful."
-  (interactive "sPython statements: ")
-  (let ((value (pymacs-serve-until-reply "exec" `(princ ,text))))
-    (when (pymacs-called-interactively-p)
-      (message "%S" value))
-    value))
-
-;;;###autoload
-(defun pymacs-call (function &amp;rest arguments)
-  "Return the result of calling a Python function FUNCTION over ARGUMENTS.
-FUNCTION is a string denoting the Python function, ARGUMENTS are separate
-Lisp expressions, one per argument.  Immutable Lisp constants are converted
-to Python equivalents, other structures are converted into Lisp handles."
-  (pymacs-serve-until-reply
-   "eval" `(pymacs-print-for-apply ',function ',arguments)))
-
-;;;###autoload
-(defun pymacs-apply (function arguments)
-  "Return the result of calling a Python function FUNCTION over ARGUMENTS.
-FUNCTION is a string denoting the Python function, ARGUMENTS is a list of
-Lisp expressions.  Immutable Lisp constants are converted to Python
-equivalents, other structures are converted into Lisp handles."
-  (pymacs-serve-until-reply
-   "eval" `(pymacs-print-for-apply ',function ',arguments)))</t>
+@others
+</t>
 <t tx="ekr.20181227064457.1">;;; Integration details.
 
 ;; This page tries to increase the integration seamlessness of Pymacs
@@ -907,5 +827,95 @@ Killing the Pymacs helper might create zombie objects.  Kill? "))
   ;; Tell if a list is proper, id est, that it is `nil' or ends with `nil'.
   (cond ((not expression))
         ((consp expression) (not (cdr (last expression))))))</t>
+<t tx="ekr.20181228123347.1">;;;###autoload
+(defun pymacs-load (module &amp;optional prefix noerror)
+  "Import the Python module named MODULE into Emacs.
+Each function in the Python module is made available as an Emacs function.
+The Lisp name of each function is the concatenation of PREFIX with
+the Python name, in which underlines are replaced by dashes.  If PREFIX is
+not given, it defaults to MODULE followed by a dash.
+If NOERROR is not nil, do not raise error when the module is not found."
+  (interactive
+   (let* ((module (read-string "Python module? "))
+          (default (concat (car (last (split-string module "\\."))) "-"))
+          (prefix (read-string (format "Prefix? [%s] " default)
+                               nil nil default)))
+     (list module prefix)))
+  (message "Pymacs loading %s..." module)
+  (let ((lisp-code (pymacs-call "pymacs_load_helper" module prefix noerror)))
+    (cond (lisp-code (let ((result (eval lisp-code)))
+                       (add-to-list 'pymacs-load-history
+                                    (list module prefix noerror)
+                                    ;; append so that order is kept
+                                    'append)
+                       (message "Pymacs loading %s...done" module)
+                       (run-hook-with-args 'pymacs-after-load-functions module)
+                       result))
+          (noerror (message "Pymacs loading %s...failed" module) nil))))
+</t>
+<t tx="ekr.20181228123351.1">;;;###autoload
+(defun pymacs-autoload (function module &amp;optional prefix docstring interactive)
+  "Pymacs's equivalent of the standard emacs facility `autoload'.
+Define FUNCTION to autoload from Python MODULE using PREFIX.
+If PREFIX is not given, it defaults to MODULE followed by a dash.
+Optional DOCSTRING documents FUNCTION until it gets loaded.
+INTERACTIVE is normally the argument to the function `interactive',
+t means `interactive' without arguments, nil means not interactive,
+which is the default."
+  (unless (symbolp function)
+    (error "`%s' should be a symbol" function))
+  (unless (stringp module)
+    (error "`%s' should be a string" module))
+  (unless (pymacs-python-reference function)
+
+    (defalias function
+      `(lambda (&amp;rest args)
+         ,(or docstring
+              (format "Function `%s' to be loaded from Python module `%s'"
+                      function module))
+         ,(cond ((eq interactive t) '(interactive))
+                (interactive `(interactive ,interactive)))
+         (pymacs-load ,module ,prefix)
+         (unless (pymacs-python-reference ',function)
+           (error "Pymacs autoload failed to define function %s" ',function))
+         (apply ',function args)))))
+</t>
+<t tx="ekr.20181228123351.2">;;;###autoload
+(defun pymacs-eval (text)
+  "Compile TEXT as a Python expression, and return its value."
+  (interactive "sPython expression: ")
+  (let ((value (pymacs-serve-until-reply "eval" `(princ ,text))))
+    (when (pymacs-called-interactively-p)
+      (message "%S" value))
+    value))
+</t>
+<t tx="ekr.20181228123351.3">;;;###autoload
+(defun pymacs-exec (text)
+  "Compile and execute TEXT as a sequence of Python statements.
+This functionality is experimental, and does not appear to be useful."
+  (interactive "sPython statements: ")
+  (let ((value (pymacs-serve-until-reply "exec" `(princ ,text))))
+    (when (pymacs-called-interactively-p)
+      (message "%S" value))
+    value))
+</t>
+<t tx="ekr.20181228123351.4">;;;###autoload
+(defun pymacs-call (function &amp;rest arguments)
+  "Return the result of calling a Python function FUNCTION over ARGUMENTS.
+FUNCTION is a string denoting the Python function, ARGUMENTS are separate
+Lisp expressions, one per argument.  Immutable Lisp constants are converted
+to Python equivalents, other structures are converted into Lisp handles."
+  (pymacs-serve-until-reply
+   "eval" `(pymacs-print-for-apply ',function ',arguments)))
+
+</t>
+<t tx="ekr.20181228123351.5">;;;###autoload
+(defun pymacs-apply (function arguments)
+  "Return the result of calling a Python function FUNCTION over ARGUMENTS.
+FUNCTION is a string denoting the Python function, ARGUMENTS is a list of
+Lisp expressions.  Immutable Lisp constants are converted to Python
+equivalents, other structures are converted into Lisp handles."
+  (pymacs-serve-until-reply
+   "eval" `(pymacs-print-for-apply ',function ',arguments)))</t>
 </tnodes>
 </leo_file>
