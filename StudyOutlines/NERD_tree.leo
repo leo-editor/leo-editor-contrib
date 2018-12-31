@@ -320,6 +320,26 @@
 <v t="ekr.20181231110604.222"><vh>" FUNCTION: TreeFileNode.cacheParent</vh></v>
 <v t="ekr.20181231110604.223"><vh>" FUNCTION: TreeFileNode.clearBookmarks() {{{1</vh></v>
 <v t="ekr.20181231110604.224"><vh>" FUNCTION: TreeFileNode.copy(dest) {{{1</vh></v>
+<v t="ekr.20181231163532.1"><vh>" FUNCTION: TreeFileNode.delete {{{1</vh></v>
+<v t="ekr.20181231163518.1"><vh>" FUNCTION: TreeFileNode.displayString() {{{1</vh></v>
+<v t="ekr.20181231163535.1"><vh>" FUNCTION: TreeFileNode.findNode(path) {{{1</vh></v>
+<v t="ekr.20181231163537.1"><vh>" FUNCTION: TreeFileNode.findSibling(direction) {{{1</vh></v>
+<v t="ekr.20181231163539.1"><vh>" FUNCTION: TreeFileNode.getNerdtree(){{{1</vh></v>
+<v t="ekr.20181231163541.1"><vh>" FUNCTION: TreeFileNode.GetRootForTab(){{{1</vh></v>
+<v t="ekr.20181231163544.1"><vh>" FUNCTION: TreeFileNode.GetSelected() {{{1</vh></v>
+<v t="ekr.20181231163547.1"><vh>" FUNCTION: TreeFileNode.isVisible() {{{1</vh></v>
+<v t="ekr.20181231163548.1"><vh>" FUNCTION: TreeFileNode.isRoot() {{{1</vh></v>
+<v t="ekr.20181231163550.1"><vh>" FUNCTION: TreeFileNode.New(path, nerdtree) {{{1</vh></v>
+<v t="ekr.20181231163552.1"><vh>" FUNCTION: TreeFileNode.open() {{{1</vh></v>
+<v t="ekr.20181231163554.1"><vh>" FUNCTION: TreeFileNode.openSplit() {{{1</vh></v>
+<v t="ekr.20181231163555.1"><vh>" FUNCTION: TreeFileNode.openVSplit() {{{1</vh></v>
+<v t="ekr.20181231163558.1"><vh>" FUNCTION: TreeFileNode.openInNewTab(options) {{{1</vh></v>
+<v t="ekr.20181231163600.1"><vh>" FUNCTION: TreeFileNode.putCursorHere(isJump, recurseUpward){{{1</vh></v>
+<v t="ekr.20181231163602.1"><vh>" FUNCTION: TreeFileNode.refresh() {{{1</vh></v>
+<v t="ekr.20181231163603.1"><vh>" FUNCTION: TreeFileNode.refreshFlags() {{{1</vh></v>
+<v t="ekr.20181231163605.1"><vh>" FUNCTION: TreeFileNode.rename() {{{1</vh></v>
+<v t="ekr.20181231163607.1"><vh>" FUNCTION: TreeFileNode.renderToString {{{1</vh></v>
+<v t="ekr.20181231163609.1"><vh>" TreeFileNode._renderToString</vh></v>
 </v>
 <v t="ekr.20181231110604.225"><vh>@path ui.vim</vh>
 <v t="ekr.20181231110604.226"><vh>" FUNCTION: s:UI.centerView() {{{2</vh></v>
@@ -2543,279 +2563,6 @@ let s:TreeFileNode = {}
 let g:NERDTreeFileNode = s:TreeFileNode
 
 @others
-
-" FUNCTION: TreeFileNode.delete {{{1
-" Removes this node from the tree and calls the Delete method for its path obj
-function! s:TreeFileNode.delete()
-    call self.path.delete()
-    call self.parent.removeChild(self)
-endfunction
-
-" FUNCTION: TreeFileNode.displayString() {{{1
-"
-" Returns a string that specifies how the node should be represented as a
-" string
-"
-" Return:
-" a string that can be used in the view to represent this node
-function! s:TreeFileNode.displayString()
-    return self.path.flagSet.renderToString() . self.path.displayString()
-endfunction
-
-" FUNCTION: TreeFileNode.equals(treenode) {{{1
-"
-" Compares this treenode to the input treenode and returns 1 if they are the
-" same node.
-"
-" Use this method instead of ==  because sometimes when the treenodes contain
-" many children, vim seg faults when doing ==
-"
-" Args:
-" treenode: the other treenode to compare to
-function! s:TreeFileNode.equals(treenode)
-    return self.path.str() ==# a:treenode.path.str()
-endfunction
-
-" FUNCTION: TreeFileNode.findNode(path) {{{1
-" Returns self if this node.path.Equals the given path.
-" Returns {} if not equal.
-"
-" Args:
-" path: the path object to compare against
-function! s:TreeFileNode.findNode(path)
-    if a:path.equals(self.path)
-        return self
-    endif
-    return {}
-endfunction
-
-" FUNCTION: TreeFileNode.findSibling(direction) {{{1
-" Find the next or previous sibling of this node.
-"
-" Args:
-" direction: 0 for previous, 1 for next
-"
-" Return:
-" The next/previous TreeFileNode object or an empty dictionary if not found.
-function! s:TreeFileNode.findSibling(direction)
-
-    " There can be no siblings if there is no parent.
-    if empty(self.parent)
-        return {}
-    endif
-
-    let l:nodeIndex = self.parent.getChildIndex(self.path)
-
-    if l:nodeIndex == -1
-        return {}
-    endif
-
-    " Get the next index to begin the search.
-    let l:nodeIndex += a:direction ? 1 : -1
-
-    while 0 &lt;= l:nodeIndex &amp;&amp; l:nodeIndex &lt; self.parent.getChildCount()
-
-        " Return the next node if it is not ignored.
-        if !self.parent.children[l:nodeIndex].path.ignore(self.getNerdtree())
-            return self.parent.children[l:nodeIndex]
-        endif
-
-        let l:nodeIndex += a:direction ? 1 : -1
-    endwhile
-
-    return {}
-endfunction
-
-" FUNCTION: TreeFileNode.getNerdtree(){{{1
-function! s:TreeFileNode.getNerdtree()
-    return self._nerdtree
-endfunction
-
-" FUNCTION: TreeFileNode.GetRootForTab(){{{1
-" get the root node for this tab
-function! s:TreeFileNode.GetRootForTab()
-    if g:NERDTree.ExistsForTab()
-        return getbufvar(t:NERDTreeBufName, 'NERDTree').root
-    end
-    return {}
-endfunction
-
-" FUNCTION: TreeFileNode.GetSelected() {{{1
-" If the cursor is currently positioned on a tree node, return the node.
-" Otherwise, return the empty dictionary.
-function! s:TreeFileNode.GetSelected()
-
-    try
-        let l:path = b:NERDTree.ui.getPath(line('.'))
-
-        if empty(l:path)
-            return {}
-        endif
-
-        return b:NERDTree.root.findNode(l:path)
-    catch
-        return {}
-    endtry
-endfunction
-
-" FUNCTION: TreeFileNode.isVisible() {{{1
-" returns 1 if this node should be visible according to the tree filters and
-" hidden file filters (and their on/off status)
-function! s:TreeFileNode.isVisible()
-    return !self.path.ignore(self.getNerdtree())
-endfunction
-
-" FUNCTION: TreeFileNode.isRoot() {{{1
-function! s:TreeFileNode.isRoot()
-    if !g:NERDTree.ExistsForBuf()
-        throw "NERDTree.NoTreeError: No tree exists for the current buffer"
-    endif
-
-    return self.equals(self.getNerdtree().root)
-endfunction
-
-" FUNCTION: TreeFileNode.New(path, nerdtree) {{{1
-" Returns a new TreeNode object with the given path and parent
-"
-" Args:
-" path: file/dir that the node represents
-" nerdtree: the tree the node belongs to
-function! s:TreeFileNode.New(path, nerdtree)
-    if a:path.isDirectory
-        return g:NERDTreeDirNode.New(a:path, a:nerdtree)
-    else
-        let newTreeNode = copy(self)
-        let newTreeNode.path = a:path
-        let newTreeNode.parent = {}
-        let newTreeNode._nerdtree = a:nerdtree
-        return newTreeNode
-    endif
-endfunction
-
-" FUNCTION: TreeFileNode.open() {{{1
-function! s:TreeFileNode.open(...)
-    let opts = a:0 ? a:1 : {}
-    let opener = g:NERDTreeOpener.New(self.path, opts)
-    call opener.open(self)
-endfunction
-
-" FUNCTION: TreeFileNode.openSplit() {{{1
-" Open this node in a new window
-function! s:TreeFileNode.openSplit()
-    call nerdtree#deprecated('TreeFileNode.openSplit', 'is deprecated, use .open() instead.')
-    call self.open({'where': 'h'})
-endfunction
-
-" FUNCTION: TreeFileNode.openVSplit() {{{1
-" Open this node in a new vertical window
-function! s:TreeFileNode.openVSplit()
-    call nerdtree#deprecated('TreeFileNode.openVSplit', 'is deprecated, use .open() instead.')
-    call self.open({'where': 'v'})
-endfunction
-
-" FUNCTION: TreeFileNode.openInNewTab(options) {{{1
-function! s:TreeFileNode.openInNewTab(options)
-    call nerdtree#deprecated('TreeFileNode.openinNewTab', 'is deprecated, use .open() instead.')
-    call self.open(extend({'where': 't'}, a:options))
-endfunction
-
-" FUNCTION: TreeFileNode.putCursorHere(isJump, recurseUpward){{{1
-" Places the cursor on the line number this node is rendered on
-"
-" Args:
-" isJump: 1 if this cursor movement should be counted as a jump by vim
-" recurseUpward: try to put the cursor on the parent if the this node isnt
-" visible
-function! s:TreeFileNode.putCursorHere(isJump, recurseUpward)
-    let ln = self.getNerdtree().ui.getLineNum(self)
-    if ln != -1
-        if a:isJump
-            mark '
-        endif
-        call cursor(ln, col("."))
-    else
-        if a:recurseUpward
-            let node = self
-            while node != {} &amp;&amp; self.getNerdtree().ui.getLineNum(node) ==# -1
-                let node = node.parent
-                call node.open()
-            endwhile
-            call self._nerdtree.render()
-            call node.putCursorHere(a:isJump, 0)
-        endif
-    endif
-endfunction
-
-" FUNCTION: TreeFileNode.refresh() {{{1
-function! s:TreeFileNode.refresh()
-    call self.path.refresh(self.getNerdtree())
-endfunction
-
-" FUNCTION: TreeFileNode.refreshFlags() {{{1
-function! s:TreeFileNode.refreshFlags()
-    call self.path.refreshFlags(self.getNerdtree())
-endfunction
-
-" FUNCTION: TreeFileNode.rename() {{{1
-" Calls the rename method for this nodes path obj
-function! s:TreeFileNode.rename(newName)
-    let newName = substitute(a:newName, '\(\\\|\/\)$', '', '')
-    call self.path.rename(newName)
-    call self.parent.removeChild(self)
-
-    let parentPath = self.path.getParent()
-    let newParent = self.getNerdtree().root.findNode(parentPath)
-
-    if newParent != {}
-        call newParent.createChild(self.path, 1)
-        call newParent.refresh()
-    endif
-endfunction
-
-" FUNCTION: TreeFileNode.renderToString {{{1
-" returns a string representation for this tree to be rendered in the view
-function! s:TreeFileNode.renderToString()
-    return self._renderToString(0, 0)
-endfunction
-
-" Args:
-" depth: the current depth in the tree for this call
-" drawText: 1 if we should actually draw the line for this node (if 0 then the
-" child nodes are rendered only)
-" for each depth in the tree
-function! s:TreeFileNode._renderToString(depth, drawText)
-    let output = ""
-    if a:drawText ==# 1
-
-        let treeParts = repeat('  ', a:depth - 1)
-
-        if !self.path.isDirectory
-            let treeParts = treeParts . '  '
-        endif
-
-        let line = treeParts . self.displayString()
-
-        let output = output . line . "\n"
-    endif
-
-    " if the node is an open dir, draw its children
-    if self.path.isDirectory ==# 1 &amp;&amp; self.isOpen ==# 1
-
-        let childNodesToDraw = self.getVisibleChildren()
-
-        if self.isCascadable() &amp;&amp; a:depth &gt; 0
-
-            let output = output . childNodesToDraw[0]._renderToString(a:depth, 0)
-
-        elseif len(childNodesToDraw) &gt; 0
-            for i in childNodesToDraw
-                let output = output . i._renderToString(a:depth + 1, 1)
-            endfor
-        endif
-    endif
-
-    return output
-endfunction
 
 " vim: set sw=4 sts=4 et fdm=marker:
 </t>
@@ -5810,10 +5557,12 @@ endfunction</t>
 <t tx="ekr.20181231111158.1">function! s:upDirCurrentRootClosed()
     call nerdtree#ui_glue#upDir(0)
 endfunction</t>
-<t tx="ekr.20181231111331.1">    let node = g:NERDTreeFileNode.GetSelected()
+<t tx="ekr.20181231111331.1">function! NERDTreeExecFileActive()
+    let node = g:NERDTreeFileNode.GetSelected()
     return !node.path.isDirectory &amp;&amp; node.path.isExecutable
 endfunction</t>
-<t tx="ekr.20181231111334.1">    let treenode = g:NERDTreeFileNode.GetSelected()
+<t tx="ekr.20181231111334.1">function! NERDTreeExecFile()
+    let treenode = g:NERDTreeFileNode.GetSelected()
     echo "==========================================================\n"
     echo "Complete the command to execute (add arguments etc):\n"
     let cmd = treenode.path.str({'escape': 1})
@@ -5855,6 +5604,238 @@ function! s:FindParentVCSRoot(path)
         let l:path = l:path.getParent()
     endwhile
     return (empty(l:path) || l:path._str() =~ '^\(\a:\\\|\/\)$') ? a:path : l:path
+endfunction</t>
+<t tx="ekr.20181231163518.1">" FUNCTION: TreeFileNode.displayString() {{{1
+"
+" Returns a string that specifies how the node should be represented as a
+" string
+"
+" Return:
+" a string that can be used in the view to represent this node
+function! s:TreeFileNode.displayString()
+    return self.path.flagSet.renderToString() . self.path.displayString()
+endfunction</t>
+<t tx="ekr.20181231163532.1">" Removes this node from the tree and calls the Delete method for its path obj
+function! s:TreeFileNode.delete()
+    call self.path.delete()
+    call self.parent.removeChild(self)
+" FUNCTION: TreeFileNode.equals(treenode) {{{1
+"
+" Compares this treenode to the input treenode and returns 1 if they are the
+" same node.
+"
+" Use this method instead of ==  because sometimes when the treenodes contain
+" many children, vim seg faults when doing ==
+"
+" Args:
+" treenode: the other treenode to compare to
+function! s:TreeFileNode.equals(treenode)
+    return self.path.str() ==# a:treenode.path.str()
+endfunction</t>
+<t tx="ekr.20181231163535.1">" Returns self if this node.path.Equals the given path.
+" Returns {} if not equal.
+"
+" Args:
+" path: the path object to compare against
+function! s:TreeFileNode.findNode(path)
+    if a:path.equals(self.path)
+        return self
+    endif
+    return {}
+endfunction</t>
+<t tx="ekr.20181231163537.1">" Find the next or previous sibling of this node.
+"
+" Args:
+" direction: 0 for previous, 1 for next
+"
+" Return:
+" The next/previous TreeFileNode object or an empty dictionary if not found.
+function! s:TreeFileNode.findSibling(direction)
+
+    " There can be no siblings if there is no parent.
+    if empty(self.parent)
+        return {}
+    endif
+
+    let l:nodeIndex = self.parent.getChildIndex(self.path)
+
+    if l:nodeIndex == -1
+        return {}
+    endif
+
+    " Get the next index to begin the search.
+    let l:nodeIndex += a:direction ? 1 : -1
+
+    while 0 &lt;= l:nodeIndex &amp;&amp; l:nodeIndex &lt; self.parent.getChildCount()
+
+        " Return the next node if it is not ignored.
+        if !self.parent.children[l:nodeIndex].path.ignore(self.getNerdtree())
+            return self.parent.children[l:nodeIndex]
+        endif
+
+        let l:nodeIndex += a:direction ? 1 : -1
+    endwhile
+
+    return {}
+endfunction</t>
+<t tx="ekr.20181231163539.1">function! s:TreeFileNode.getNerdtree()
+    return self._nerdtree
+endfunction</t>
+<t tx="ekr.20181231163541.1">" get the root node for this tab
+function! s:TreeFileNode.GetRootForTab()
+    if g:NERDTree.ExistsForTab()
+        return getbufvar(t:NERDTreeBufName, 'NERDTree').root
+    end
+    return {}
+endfunction</t>
+<t tx="ekr.20181231163544.1">" If the cursor is currently positioned on a tree node, return the node.
+" Otherwise, return the empty dictionary.
+function! s:TreeFileNode.GetSelected()
+
+    try
+        let l:path = b:NERDTree.ui.getPath(line('.'))
+
+        if empty(l:path)
+            return {}
+        endif
+
+        return b:NERDTree.root.findNode(l:path)
+    catch
+        return {}
+    endtry
+endfunction</t>
+<t tx="ekr.20181231163547.1">" returns 1 if this node should be visible according to the tree filters and
+" hidden file filters (and their on/off status)
+function! s:TreeFileNode.isVisible()
+    return !self.path.ignore(self.getNerdtree())
+endfunction</t>
+<t tx="ekr.20181231163548.1">function! s:TreeFileNode.isRoot()
+    if !g:NERDTree.ExistsForBuf()
+        throw "NERDTree.NoTreeError: No tree exists for the current buffer"
+    endif
+
+    return self.equals(self.getNerdtree().root)
+endfunction</t>
+<t tx="ekr.20181231163550.1">" Returns a new TreeNode object with the given path and parent
+"
+" Args:
+" path: file/dir that the node represents
+" nerdtree: the tree the node belongs to
+function! s:TreeFileNode.New(path, nerdtree)
+    if a:path.isDirectory
+        return g:NERDTreeDirNode.New(a:path, a:nerdtree)
+    else
+        let newTreeNode = copy(self)
+        let newTreeNode.path = a:path
+        let newTreeNode.parent = {}
+        let newTreeNode._nerdtree = a:nerdtree
+        return newTreeNode
+    endif
+endfunction</t>
+<t tx="ekr.20181231163552.1">function! s:TreeFileNode.open(...)
+    let opts = a:0 ? a:1 : {}
+    let opener = g:NERDTreeOpener.New(self.path, opts)
+    call opener.open(self)
+endfunction</t>
+<t tx="ekr.20181231163554.1">" Open this node in a new window
+function! s:TreeFileNode.openSplit()
+    call nerdtree#deprecated('TreeFileNode.openSplit', 'is deprecated, use .open() instead.')
+    call self.open({'where': 'h'})
+endfunction</t>
+<t tx="ekr.20181231163555.1">" Open this node in a new vertical window
+function! s:TreeFileNode.openVSplit()
+    call nerdtree#deprecated('TreeFileNode.openVSplit', 'is deprecated, use .open() instead.')
+    call self.open({'where': 'v'})
+endfunction</t>
+<t tx="ekr.20181231163558.1">function! s:TreeFileNode.openInNewTab(options)
+    call nerdtree#deprecated('TreeFileNode.openinNewTab', 'is deprecated, use .open() instead.')
+    call self.open(extend({'where': 't'}, a:options))
+endfunction</t>
+<t tx="ekr.20181231163600.1">" Places the cursor on the line number this node is rendered on
+"
+" Args:
+" isJump: 1 if this cursor movement should be counted as a jump by vim
+" recurseUpward: try to put the cursor on the parent if the this node isnt
+" visible
+function! s:TreeFileNode.putCursorHere(isJump, recurseUpward)
+    let ln = self.getNerdtree().ui.getLineNum(self)
+    if ln != -1
+        if a:isJump
+            mark '
+        endif
+        call cursor(ln, col("."))
+    else
+        if a:recurseUpward
+            let node = self
+            while node != {} &amp;&amp; self.getNerdtree().ui.getLineNum(node) ==# -1
+                let node = node.parent
+                call node.open()
+            endwhile
+            call self._nerdtree.render()
+            call node.putCursorHere(a:isJump, 0)
+        endif
+    endif
+endfunction</t>
+<t tx="ekr.20181231163602.1">function! s:TreeFileNode.refresh()
+    call self.path.refresh(self.getNerdtree())
+endfunction</t>
+<t tx="ekr.20181231163603.1">function! s:TreeFileNode.refreshFlags()
+    call self.path.refreshFlags(self.getNerdtree())
+endfunction</t>
+<t tx="ekr.20181231163605.1">" Calls the rename method for this nodes path obj
+function! s:TreeFileNode.rename(newName)
+    let newName = substitute(a:newName, '\(\\\|\/\)$', '', '')
+    call self.path.rename(newName)
+    call self.parent.removeChild(self)
+
+    let parentPath = self.path.getParent()
+    let newParent = self.getNerdtree().root.findNode(parentPath)
+
+    if newParent != {}
+        call newParent.createChild(self.path, 1)
+        call newParent.refresh()
+    endif
+endfunction</t>
+<t tx="ekr.20181231163607.1">" returns a string representation for this tree to be rendered in the view
+function! s:TreeFileNode.renderToString()
+    return self._renderToString(0, 0)
+endfunction</t>
+<t tx="ekr.20181231163609.1">" depth: the current depth in the tree for this call
+" drawText: 1 if we should actually draw the line for this node (if 0 then the
+" child nodes are rendered only)
+" for each depth in the tree
+function! s:TreeFileNode._renderToString(depth, drawText)
+    let output = ""
+    if a:drawText ==# 1
+
+        let treeParts = repeat('  ', a:depth - 1)
+
+        if !self.path.isDirectory
+            let treeParts = treeParts . '  '
+        endif
+
+        let line = treeParts . self.displayString()
+
+        let output = output . line . "\n"
+    endif
+
+    " if the node is an open dir, draw its children
+    if self.path.isDirectory ==# 1 &amp;&amp; self.isOpen ==# 1
+
+        let childNodesToDraw = self.getVisibleChildren()
+
+        if self.isCascadable() &amp;&amp; a:depth &gt; 0
+
+            let output = output . childNodesToDraw[0]._renderToString(a:depth, 0)
+
+        elseif len(childNodesToDraw) &gt; 0
+            for i in childNodesToDraw
+                let output = output . i._renderToString(a:depth + 1, 1)
+            endfor
+        endif
+    endif
+
+    return output
 endfunction</t>
 </tnodes>
 </leo_file>
