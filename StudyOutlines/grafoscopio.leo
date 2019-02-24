@@ -3471,7 +3471,7 @@ visitedGoTo: aCollection
 
 ===== Accuracy
 
-These sources come from a "file out" file, which I then modified by hand.
+These sources come from a "file out" (.st) file, which I then modified by hand.
 
 There is no guarantee that errors have not crept in.
 
