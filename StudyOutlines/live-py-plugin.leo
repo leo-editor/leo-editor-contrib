@@ -91,7 +91,9 @@
 <v t="ekr.20190103112220.74"><vh>web_main &amp; helper</vh>
 <v t="ekr.20190103112220.75"><vh>display</vh></v>
 </v>
-<v t="ekr.20190103112220.76"><vh>main</vh></v>
+<v t="ekr.20190103112220.76"><vh>main</vh>
+<v t="ekr.20190104113125.1"><vh>&lt;&lt; add args &gt;&gt;</vh></v>
+</v>
 </v>
 <v t="ekr.20190103112220.77"><vh>@@clean mock_turtle.py</vh>
 <v t="ekr.20190103112220.78"><vh>Declarations</vh></v>
@@ -294,21 +296,20 @@ except ImportError:
 
 
 </t>
-<t tx="ekr.20190103112220.11">def _set_statement_line_numbers(self,
-                                statements,
-                                previous_line_number=None):
+<t tx="ekr.20190103112220.11">def _set_statement_line_numbers(self, statements, previous_line_number=None):
     """ Make sure that a series of statements have line numbers in order.
     previous_line_number is the line number to start with, or None."""
     for statement in statements:
         line_number = getattr(statement, 'lineno', None)
-        if (line_number is None and statement is not None and
-                previous_line_number is not None):
+        if (
+            line_number is None and statement is not None and
+            previous_line_number is not None
+        ):
             statement.lineno = previous_line_number
         else:
             line_numbers = set()
             self._find_line_numbers(statement, line_numbers)
             previous_line_number = max(line_numbers)
-
 </t>
 <t tx="ekr.20190103112220.110">class ReportBuilder(object):
     @others
@@ -338,7 +339,6 @@ except ImportError:
     not indexes.
     Return the maximum width of all the lines.
     """
-
     self._check_line_count(last_line)
     self.check_output()
     line_indexes = range(first_line-1, last_line)
@@ -380,7 +380,6 @@ except ImportError:
             self.frame_width = new_width
         if should_throw:
             raise RuntimeError('live coding message limit exceeded')
-
 </t>
 <t tx="ekr.20190103112220.114">def start_frame(self, first_line, last_line):
     """ Start a new stack frame to support recursive calls.
@@ -403,15 +402,14 @@ except ImportError:
     new_frame.max_width = self.max_width
     self.history.append(new_frame)
     return new_frame
-
 </t>
 <t tx="ekr.20190103112220.115">def _increment_message_count(self):
-    if (self.message_limit is not None and
-            self.message_count &gt;= self.message_limit):
-
+    if (
+        self.message_limit is not None and
+        self.message_count &gt;= self.message_limit
+    ):
         raise RuntimeError('live coding message limit exceeded')
     self.message_count += 1
-
 </t>
 <t tx="ekr.20190103112220.116">def add_message(self, message, line_number):
     """ Add a message to the report on line line_number (1-based). """
@@ -420,7 +418,6 @@ except ImportError:
         return
     if '\n' in message:
         message = re.sub(r'\s+', ' ', message)
-
     self.check_output()
     self._check_line_count(line_number)
     new_width = len(self.messages[line_number - 1]) + len(message)
@@ -442,7 +439,6 @@ except ImportError:
         print_line = self.current_output_line
         self.current_output_line = None
         self.add_message(print_message, print_line)
-
 </t>
 <t tx="ekr.20190103112220.118">def add_output(self, text, line_number, has_print_function=True, target_name=None):
     if (line_number != self.current_output_line or
@@ -452,16 +448,13 @@ except ImportError:
     self.current_output_line = line_number
     self.current_output_target_name = target_name
     self.has_print_function = has_print_function
-
 </t>
 <t tx="ekr.20190103112220.119">def add_extra_message(self, message, line_number):
     """ Add an extra message to the last frame after the code has finished
     running. """
-
     target = self.history[-1] if self.history else self
     target.max_width = self.max_width
     target.add_message(message, line_number)
-
 </t>
 <t tx="ekr.20190103112220.12">def visit(self, node):
     new_node = super(Tracer, self).visit(node)
@@ -492,9 +485,10 @@ except ImportError:
     if len(repr_text) &gt; max_width:
         half_width = max_width//2 - 5
         full_width = half_width * 2
-        repr_text = "{}[{} chars]{}".format(repr_text[:half_width],
-                                            len(repr_text) - full_width,
-                                            repr_text[-half_width:])
+        repr_text = "{}[{} chars]{}".format(
+            repr_text[:half_width],
+            len(repr_text) - full_width,
+            repr_text[-half_width:])
     return repr_text
 
 </t>
@@ -506,34 +500,27 @@ except ImportError:
     self.start_assignment()
     try:
         self.set_assignment_value(value)
-        self.report_assignment('{} = {{}}'.format(name),
-                               line_number=line_number)
+        self.report_assignment('{} = {{}}'.format(name), line_number=line_number)
     finally:
         self.end_assignment()
     return value
-
 </t>
 <t tx="ekr.20190103112220.122">def start_assignment(self):
     self.assignments.append(AssignmentReport())
-
 </t>
 <t tx="ekr.20190103112220.123">def end_assignment(self):
     self.assignments.pop()
-
 </t>
 <t tx="ekr.20190103112220.124">def set_assignment_value(self, value):
     self.assignments[-1].value = value
     return value
-
 </t>
 <t tx="ekr.20190103112220.125">def add_assignment_index(self, value):
     self.assignments[-1].indexes.append(value)
     return value
-
 </t>
 <t tx="ekr.20190103112220.126">def get_assignment_index(self, index_index):
     return self.assignments[-1].indexes[index_index]
-
 </t>
 <t tx="ekr.20190103112220.127">def report_assignment(self, format_string, line_number):
     assignment = self.assignments[-1]
@@ -548,9 +535,7 @@ except ImportError:
                 args)
         else:
             value_repr = self.get_repr(assignment.value)
-
-        display = format_string.format(*(assignment.indexes +
-                                         [value_repr]))
+        display = format_string.format(*(assignment.indexes + [value_repr]))
         if Enum is not None and isinstance(assignment.value, Enum):
             # Leave the representation of enums alone.
             pass
@@ -561,7 +546,6 @@ except ImportError:
     if display is not None:
         self.start_block(line_number, line_number)
         self.add_message(display + ' ', line_number)
-
 </t>
 <t tx="ekr.20190103112220.128">def report_lambda(self, first_line, last_line, *args):
     """ Report lambda parameters and result, and return result.
@@ -575,7 +559,6 @@ except ImportError:
     self.start_block(first_line, last_line)
     self.add_message('({} =&gt; {}) '.format(params, self.get_repr(result)), first_line)
     return result
-
 </t>
 <t tx="ekr.20190103112220.129">def exception(self, line_number=None):
     etype, value, tb = sys.exc_info()
@@ -596,7 +579,6 @@ except ImportError:
         finally:
             self.message_limit = old_limit
             self.max_width = old_width
-
 </t>
 <t tx="ekr.20190103112220.13">@staticmethod
 def _get_attribute_names(attribute_node):
@@ -604,10 +586,8 @@ def _get_attribute_names(attribute_node):
     while isinstance(attribute_node, Attribute):
         names.insert(0, attribute_node.attr)
         attribute_node = attribute_node.value
-
     if not names:
         return None
-
     names.insert(0, getattr(attribute_node, 'id', '&lt;?&gt;'))
     return names
 
@@ -615,37 +595,32 @@ def _get_attribute_names(attribute_node):
 <t tx="ekr.20190103112220.130">def return_value(self, value, line_number):
     self.add_message('return %s ' % self.get_repr(value), line_number)
     return value
-
 </t>
 <t tx="ekr.20190103112220.131">def yield_value(self, value, line_number):
     display = self.get_repr(value)
     self.add_message('yield %s ' % display, line_number)
     return value
-
 </t>
 <t tx="ekr.20190103112220.132">def yield_from(self, values, line_number):
     for value in values:
         self.start_block(line_number, line_number)
         yield self.yield_value(value, line_number)
-
 </t>
 <t tx="ekr.20190103112220.133">def record_call(self,
-                names,
-                displays_before,
-                result,
-                displays_after,
-                line_number):
+    names,
+    displays_before,
+    result,
+    displays_after,
+    line_number,
+):
     zipped = zip(names, displays_before, displays_after)
     for name, display_before, display_after in zipped:
         if display_before != display_after:
-            self.add_message('%s = %s ' % (name, display_after),
-                             line_number)
+            self.add_message('%s = %s ' % (name, display_after), line_number)
     return result
-
 </t>
 <t tx="ekr.20190103112220.134">def record_delete(self, name, target, line_number):
     return DeletionTarget(name, target, line_number, self)
-
 </t>
 <t tx="ekr.20190103112220.135">def report(self, total_lines=0):
     self.check_output()
@@ -663,18 +638,14 @@ def _get_attribute_names(attribute_node):
     self.history = []
     self._check_line_count(total_lines)
     return '\n'.join(self.messages)
-
 </t>
 <t tx="ekr.20190103112220.136">def _check_line_count(self, line_count):
     while len(self.messages) &lt; line_count:
         self.messages.append('')
-
 </t>
 <t tx="ekr.20190103112220.137">def count_all_messages(self):
     history_count = sum(frame.message_count for frame in self.history)
     return self.message_count + history_count
-
-
 </t>
 <t tx="ekr.20190103112220.138">class DeletionTarget(object):
     @others
@@ -696,14 +667,12 @@ def _get_attribute_names(attribute_node):
         otherwise, wrap in get_assignment_index(index_to_get).
     @return: string, or None if no assignment can be reported.
     """
-    slice_text, next_index = self._wrap_slice(subscript.slice,
-                                              index_to_get)
+    slice_text, next_index = self._wrap_slice(subscript.slice, index_to_get)
     value = subscript.value
     if isinstance(value, Name):
         value_text = value.id
     elif isinstance(value, Subscript):
-        value_text = self._wrap_subscript_target(value,
-                                                 index_to_get=next_index)
+        value_text = self._wrap_subscript_target(value, index_to_get=next_index)
     elif isinstance(value, Attribute):
         value_text = '.'.join(self._get_attribute_names(value))
     else:
@@ -720,9 +689,7 @@ def _get_attribute_names(attribute_node):
     del self.target[key]
     after = self.report_builder.get_repr(self.target)
     if before != after:
-        self.report_builder.assign(self.name,
-                                   self.target,
-                                   self.line_number)
+        self.report_builder.assign(self.name, self.target, self.line_number)
 
 </t>
 <t tx="ekr.20190103112220.141">def __delattr__(self, key):
@@ -730,9 +697,7 @@ def _get_attribute_names(attribute_node):
     self.target.__delattr__(key)
     after = self.report_builder.get_repr(self.target)
     if before != after:
-        self.report_builder.assign(self.name,
-                                   self.target,
-                                   self.line_number)
+        self.report_builder.assign(self.name, self.target, self.line_number)
 
 
 </t>
@@ -753,12 +718,9 @@ def _get_attribute_names(attribute_node):
     """
     if index_to_get is None:
         return self._create_bare_context_call(
-            'add_assignment_index',
-            [index_node])
+            'add_assignment_index', [index_node])
     return self._create_bare_context_call(
-        'get_assignment_index',
-        [Num(n=index_to_get)])
-
+        'get_assignment_index', [Num(n=index_to_get)])
 </t>
 <t tx="ekr.20190103112220.16">def _wrap_slice(self, sliceNode, index_to_get=None):
     """ Wrap a slice in calls to assignment index methods.
@@ -769,14 +731,14 @@ def _get_attribute_names(attribute_node):
     @return: format_text, next_index_to_get
     """
     if isinstance(sliceNode, (Index, Ellipsis)):
-        if (isinstance(sliceNode, Ellipsis) or
-                isinstance(sliceNode.value, Ellipsis)):
+        if (
+            isinstance(sliceNode, Ellipsis) or
+            isinstance(sliceNode.value, Ellipsis)
+        ):
             index_to_get = None
             format_text = '...'
         else:
-            sliceNode.value = self._wrap_assignment_index(
-                sliceNode.value,
-                index_to_get)
+            sliceNode.value = self._wrap_assignment_index(sliceNode.value, index_to_get)
             format_text = '{!r}'
             if index_to_get is not None:
                 index_to_get -= 1
@@ -786,56 +748,46 @@ def _get_attribute_names(attribute_node):
             step_text = ''
         else:
             step_text = ':{!r}'
-            sliceNode.step = self._wrap_assignment_index(
-                sliceNode.step,
-                index_to_get)
+            sliceNode.step = self._wrap_assignment_index(sliceNode.step, index_to_get)
         if sliceNode.upper is None:
             upper_text = ''
         else:
             upper_text = '{!r}'
-            sliceNode.upper = self._wrap_assignment_index(
-                sliceNode.upper,
-                index_to_get)
+            sliceNode.upper = self._wrap_assignment_index(sliceNode.upper, index_to_get)
         if sliceNode.lower is None:
             lower_text = ''
         else:
             lower_text = '{!r}'
-            sliceNode.lower = self._wrap_assignment_index(
-                sliceNode.lower,
-                index_to_get)
+            sliceNode.lower = self._wrap_assignment_index(sliceNode.lower, index_to_get)
         format_text = '{}:{}{}'.format(lower_text, upper_text, step_text)
     else:
         assert isinstance(sliceNode, ExtSlice)
         index_to_get = None
         format_text = ', '.join(self._wrap_slice(subslice)[0]
-                                for subslice in sliceNode.dims)
+            for subslice in sliceNode.dims)
     return format_text, index_to_get
-
 </t>
 <t tx="ekr.20190103112220.17">def visit_Call(self, node):
     existing_node = self.generic_visit(node)
     func_node = existing_node.func
-
     if self._is_untraceable_attribute(func_node):
         return existing_node
-
     comparisons = []  # [(name, node)]
     names = self._get_attribute_names(func_node)
     if names is not None:
-        comparisons.append(('.'.join(names[:-1]),
-                            existing_node.func.value))
-
+        comparisons.append(('.'.join(names[:-1]), existing_node.func.value))
     for arg_node in existing_node.args:
         if isinstance(arg_node, Name):
             comparisons.append((arg_node.id, arg_node))
-
     if not comparisons:
         return existing_node
-    args = [List(elts=[], ctx=Load()),
-            List(elts=[], ctx=Load()),
-            existing_node,
-            List(elts=[], ctx=Load()),
-            Num(n=existing_node.lineno)]
+    args = [
+        List(elts=[], ctx=Load()),
+        List(elts=[], ctx=Load()),
+        existing_node,
+        List(elts=[], ctx=Load()),
+        Num(n=existing_node.lineno),
+    ]
     for name, node in comparisons:
         args[0].elts.append(Str(s=name))  # name
         args[1].elts.append(  # repr() before
@@ -861,10 +813,8 @@ def _get_attribute_names(attribute_node):
                 target_name = getattr(target_value, 'id', None)
         if target_name is not None:
             args = [Str(s=target_name), target.value, Num(n=target.lineno)]
-            target.value = self._create_bare_context_call('record_delete',
-                                                          args)
+            target.value = self._create_bare_context_call('record_delete', args)
     return existing_node
-
 </t>
 <t tx="ekr.20190103112220.19">def _is_untraceable_attribute(self, node):
     if isinstance(node, Attribute):
@@ -874,7 +824,6 @@ def _get_attribute_names(attribute_node):
             return self._is_untraceable_attribute(node.value)
         return True
     return False
-
 </t>
 <t tx="ekr.20190103112220.2">@others
 @language python
@@ -893,11 +842,13 @@ def _get_attribute_names(attribute_node):
         existing_node.targets)
     if (len(existing_node.targets) == 1 and
             isinstance(existing_node.targets[0], Tuple)):
-        existing_node.value = Call(func=Name(id='tuple', ctx=Load()),
-                                   args=[existing_node.value],
-                                   keywords=[],
-                                   starargs=None,
-                                   kwargs=None)
+        existing_node.value = Call(
+            func=Name(id='tuple', ctx=Load()),
+           args=[existing_node.value],
+           keywords=[],
+           starargs=None,
+           kwargs=None,
+        )
     existing_node.value = self._create_bare_context_call(
         'set_assignment_value',
         [existing_node.value])
@@ -909,14 +860,14 @@ def _get_attribute_names(attribute_node):
             [Str(s=format_string), Num(n=existing_node.lineno)]))
     end_assignment = self._create_context_call('end_assignment')
     finally_body = [end_assignment]
-    new_nodes.append(TryFinally(body=try_body,
-                                finalbody=finally_body,
-                                handlers=[],
-                                orelse=[],
-                                lineno=first_line_number))
+    new_nodes.append(TryFinally(
+        body=try_body,
+        finalbody=finally_body,
+        handlers=[],
+        orelse=[],
+        lineno=first_line_number))
     self._set_statement_line_numbers(try_body, first_line_number)
     self._set_statement_line_numbers(finally_body, last_line_number)
-
     return new_nodes
 
 </t>
@@ -951,14 +902,14 @@ def _get_attribute_names(attribute_node):
             [Str(s=format_string), Num(n=existing_node.lineno)]))
     end_assignment = self._create_context_call('end_assignment')
     finally_body = [end_assignment]
-    new_nodes.append(TryFinally(body=try_body,
-                                finalbody=finally_body,
-                                handlers=[],
-                                orelse=[],
-                                lineno=first_line_number))
+    new_nodes.append(TryFinally(
+        body=try_body,
+        finalbody=finally_body,
+        handlers=[],
+        orelse=[],
+        lineno=first_line_number))
     self._set_statement_line_numbers(try_body, first_line_number)
     self._set_statement_line_numbers(finally_body, last_line_number)
-
     return new_nodes
 
 </t>
@@ -970,7 +921,6 @@ def _get_attribute_names(attribute_node):
     if FormattedValue is not None and isinstance(node, FormattedValue):
         # FormattedValue is a separate code block with its own line nums.
         return
-
     line_number = getattr(node, 'lineno', None)
     if line_number is not None:
         line_numbers.add(line_number)
@@ -993,14 +943,12 @@ def _get_attribute_names(attribute_node):
     for statement in new_node.body:
         self._find_line_numbers(statement, line_numbers)
     line_numbers.add(new_node.lineno)
-    args = [Num(n=min(line_numbers)),
-            Num(n=max(line_numbers))]
+    args = [Num(n=min(line_numbers)), Num(n=max(line_numbers))]
     new_body = [self._create_context_call('start_block', args)]
     new_body.extend(self._trace_assignment_list(new_node.target))
     new_body.extend(new_node.body)
     new_node.body = new_body
     return new_node
-
 </t>
 <t tx="ekr.20190103112220.24">def visit_While(self, node):
     new_node = self.generic_visit(node)
@@ -1011,15 +959,14 @@ def _get_attribute_names(attribute_node):
     for statement in new_node.body:
         self._find_line_numbers(statement, line_numbers)
     line_numbers.add(new_node.lineno)
-    args = [Num(n=min(line_numbers)),
-            Num(n=max(line_numbers))]
-    new_node.body.insert(0,
-                         self._create_context_call('start_block', args))
+    args = [Num(n=min(line_numbers)), Num(n=max(line_numbers))]
+    new_node.body.insert(0, self._create_context_call('start_block', args))
     return new_node
 
-# noinspection PyTypeChecker
 </t>
-<t tx="ekr.20190103112220.25">def visit_FunctionDef(self, node):
+<t tx="ekr.20190103112220.25"># noinspection PyTypeChecker
+
+def visit_FunctionDef(self, node):
     """ Instrument a function definition by creating a new report builder
     for this stack frame and putting it in a local variable. The local
     variable has the same name as the global variable so all calls can
@@ -1028,37 +975,36 @@ def _get_attribute_names(attribute_node):
     Kind of ugly, but I think it was worth it to handle recursive calls.
     """
     new_node = self.generic_visit(node)
-
     line_numbers = set()
     self._find_line_numbers(new_node, line_numbers)
     first_line_number = min(line_numbers)
     last_line_number = max(line_numbers)
-    args = [Num(n=first_line_number),
-            Num(n=last_line_number)]
+    args = [Num(n=first_line_number), Num(n=last_line_number)]
     try_body = new_node.body
-    globals_call = Call(func=Name(id='globals', ctx=Load()),
-                        args=[],
-                        keywords=[],
-                        starargs=None,
-                        kwargs=None)
-    global_context = Subscript(value=globals_call,
-                               slice=Index(value=Str(s=CONTEXT_NAME)),
-                               ctx=Load())
-    start_frame_call = Call(func=Attribute(value=global_context,
-                                           attr='start_frame',
-                                           ctx=Load()),
-                            args=args,
-                            keywords=[],
-                            starargs=None,
-                            kwargs=None)
-    context_assign = Assign(targets=[Name(id=CONTEXT_NAME, ctx=Store())],
-                            value=start_frame_call)
+    globals_call = Call(
+        func=Name(id='globals', ctx=Load()),
+        args=[],
+        keywords=[],
+        starargs=None,
+        kwargs=None)
+    global_context = Subscript(
+        value=globals_call,
+        slice=Index(value=Str(s=CONTEXT_NAME)),
+        ctx=Load())
+    start_frame_call = Call(
+        func=Attribute(value=global_context, attr='start_frame', ctx=Load()),
+        args=args,
+        keywords=[],
+        starargs=None,
+        kwargs=None)
+    context_assign = Assign(
+        targets=[Name(id=CONTEXT_NAME, ctx=Store())],
+        value=start_frame_call)
     new_node.body = [context_assign]
     if isinstance(try_body[0], Expr) and isinstance(try_body[0].value, Str):
         # Move docstring back to top of function.
         # noinspection PyUnresolvedReferences
         new_node.body.insert(0, try_body.pop(0))
-
     # trace function parameter values
     for target in new_node.args.args:
         if isinstance(target, Name) and target.id == 'self':
@@ -1072,19 +1018,16 @@ def _get_attribute_names(attribute_node):
     if new_node.args.kwarg is not None:
         new_node.body.append(
             self._trace_assignment(new_node.args.kwarg, node.lineno))
-
     if try_body:
-        handler_body = [self._create_context_call('exception'),
-                        Raise()]
-        new_node.body.append(
-            TryExcept(body=try_body,
-                      handlers=[ExceptHandler(body=handler_body)],
-                      orelse=[],
-                      finalbody=[]))
+        handler_body = [self._create_context_call('exception'), Raise()]
+        new_node.body.append(TryExcept(
+            body=try_body,
+            handlers=[ExceptHandler(body=handler_body)],
+            orelse=[],
+            finalbody=[]))
         self._set_statement_line_numbers(try_body, first_line_number)
         self._set_statement_line_numbers(handler_body, last_line_number)
     return new_node
-
 </t>
 <t tx="ekr.20190103112220.26">@staticmethod
 def _is_module_header(statement):
@@ -1093,7 +1036,6 @@ def _is_module_header(statement):
     if isinstance(statement, Expr):
         return isinstance(statement.value, Str)
     return False
-
 </t>
 <t tx="ekr.20190103112220.27">def visit_Module(self, node):
     new_node = self.generic_visit(node)
@@ -1108,53 +1050,44 @@ def _is_module_header(statement):
     if line_numbers:
         first_line_number = min(line_numbers)
         last_line_number = max(line_numbers)
-        handler_body = [self._create_context_call('exception'),
-                        Raise()]
-        handler = ExceptHandler(body=handler_body,
-                                lineno=last_line_number)
-        new_body.append(TryExcept(body=try_body,
-                                  handlers=[handler],
-                                  orelse=[],
-                                  finalbody=[]))
+        handler_body = [self._create_context_call('exception'), Raise()]
+        handler = ExceptHandler(body=handler_body, lineno=last_line_number)
+        new_body.append(TryExcept(
+            body=try_body, handlers=[handler], orelse=[], finalbody=[]))
         new_node.body = new_body
         self._set_statement_line_numbers(try_body, first_line_number)
         self._set_statement_line_numbers(handler_body, last_line_number)
     return new_node
 
-# noinspection PyPep8Naming
 </t>
-<t tx="ekr.20190103112220.28">def visit_Lambda(self, node):
+<t tx="ekr.20190103112220.28"># noinspection PyPep8Naming
+
+def visit_Lambda(self, node):
     new_node = self.generic_visit(node)
 
     line_numbers = set()
     self._find_line_numbers(new_node, line_numbers)
-
-    arg_names = (getattr(old_arg, 'id', getattr(old_arg, 'arg', None))
-                 for old_arg in new_node.args.args)
-    new_args = [Num(n=min(line_numbers)),
-                Num(n=max(line_numbers))]
-    new_args.extend(Name(id=name, ctx=Load())
-                    for name in arg_names)
+    arg_names = (
+        getattr(old_arg, 'id', getattr(old_arg, 'arg', None))
+            for old_arg in new_node.args.args
+    )
+    new_args = [Num(n=min(line_numbers)), Num(n=max(line_numbers))]
+    new_args.extend(Name(id=name, ctx=Load()) for name in arg_names)
     new_args.append(new_node.body)
-    new_node.body = self._create_bare_context_call('report_lambda',
-                                                   new_args)
+    new_node.body = self._create_bare_context_call('report_lambda', new_args)
     return new_node
-
-# noinspection PyPep8Naming
 </t>
-<t tx="ekr.20190103112220.29">def visit_Return(self, node):
+<t tx="ekr.20190103112220.29"># noinspection PyPep8Naming
+def visit_Return(self, node):
     existing_node = self.generic_visit(node)
     value = existing_node.value
     if value is None:
         return existing_node
-
-    return [Assign(targets=[Name(id=RESULT_NAME, ctx=Store())],
-                   value=value),
-            self._create_context_call('return_value',
-                                      [Name(id=RESULT_NAME, ctx=Load()),
-                                       Num(n=existing_node.lineno)]),
-            Return(value=Name(id=RESULT_NAME, ctx=Load()))]
-
+    return [
+        Assign(targets=[Name(id=RESULT_NAME, ctx=Store())], value=value),
+        self._create_context_call('return_value',
+            [Name(id=RESULT_NAME, ctx=Load()), Num(n=existing_node.lineno)]),
+        Return(value=Name(id=RESULT_NAME, ctx=Load()))]
 </t>
 <t tx="ekr.20190103112220.3">class Canvas(object):
     @others
@@ -1164,19 +1097,17 @@ def _is_module_header(statement):
     for handler in existing_node.handlers:
         handler_name = getattr(handler.name, 'id', handler.name)
         if handler_name is not None:
-            handler.body.insert(0, self._create_context_call(
-                'assign',
-                [Str(s=handler_name),
-                 Name(id=handler_name, ctx=Load()),
-                 Num(n=handler.lineno)]))
+            handler.body.insert(0, self._create_context_call('assign', [
+                Str(s=handler_name),
+                Name(id=handler_name, ctx=Load()),
+                Num(n=handler.lineno)
+            ]))
         handler.body.insert(0, self._create_context_call('exception'))
     return existing_node
-
 </t>
 <t tx="ekr.20190103112220.31">def visit_Try(self, node):
     # Python 3.3 renamed TryExcept and TryFinally to Try
     return self.visit_TryExcept(node)
-
 </t>
 <t tx="ekr.20190103112220.32">def visit_Raise(self, node):
     existing_node = self.generic_visit(node)
@@ -1185,32 +1116,24 @@ def _is_module_header(statement):
     node_exc = getattr(node, 'exc', node_exc)
     if node_exc is None:
         # Reraising the current exception, so we have to report this line.
-
         new_nodes.insert(0, self._create_context_call(
-            'exception',
-            [Num(n=existing_node.lineno)]))
+            'exception', [Num(n=existing_node.lineno)]))
     return new_nodes
-
 </t>
 <t tx="ekr.20190103112220.33">def visit_Yield(self, node):
     existing_node = self.generic_visit(node)
     value = existing_node.value
     if value is None:
         value = Name(id='None', ctx=Load())
-
-    return Yield(value=self._create_bare_context_call(
-                'yield_value',
-                [value, Num(n=existing_node.lineno)]))
-
+    return Yield(value=self._create_bare_context_call('yield_value',
+        [value, Num(n=existing_node.lineno)]))
 </t>
 <t tx="ekr.20190103112220.34">def visit_YieldFrom(self, node):
     existing_node = self.generic_visit(node)
     value = existing_node.value
-    existing_node.value = self._create_bare_context_call(
-        'yield_from',
+    existing_node.value = self._create_bare_context_call('yield_from',
         [value, Num(n=existing_node.lineno)])
     return existing_node
-
 </t>
 <t tx="ekr.20190103112220.35">def _trace_assignment_list(self, targets):
     """ Build a list of assignment calls based on the contents of targets.
@@ -1232,7 +1155,6 @@ def _is_module_header(statement):
     for target in todo:
         new_nodes.extend(self._trace_assignment_list(target))
     return new_nodes
-
 </t>
 <t tx="ekr.20190103112220.36">def _trace_assignment(self, target, default_lineno=None):
     lineno = getattr(target, 'lineno', default_lineno)
@@ -1245,10 +1167,7 @@ def _is_module_header(statement):
         assert_message = 'Target type was {}.'.format(type(target))
         assert isinstance(target, str), assert_message
         arg_name = target
-
-    args = [Str(s=arg_name),
-            Name(id=arg_name, ctx=Load()),
-            Num(n=lineno)]
+    args = [Str(s=arg_name), Name(id=arg_name, ctx=Load()), Num(n=lineno)]
     return self._create_context_call('assign', args)
 
 </t>
@@ -1278,7 +1197,6 @@ def _is_module_header(statement):
     assert isinstance(target, Attribute), assert_message
     names = self._get_attribute_names(target)
     return '.'.join(names)
-
 </t>
 <t tx="ekr.20190103112220.38">def _wrap_assignment_targets(self, targets):
     """ Build string describing assignment targets and wrap indexes.
@@ -1301,7 +1219,6 @@ def _is_module_header(statement):
 <t tx="ekr.20190103112220.39">def _create_context_call(self, function_name, args=None):
     """ Create a method call expression on the live coding context object. """
     return Expr(value=self._create_bare_context_call(function_name, args))
-
 </t>
 <t tx="ekr.20190103112220.4">def __init__(self, width=0, height=0):
     self.options = {'width': width,
@@ -1330,23 +1247,22 @@ def _create_bare_context_call(function_name, args=None):
     if args is None:
         args = []
     context_name = Name(id=CONTEXT_NAME, ctx=Load())
-    func = Attribute(value=context_name,
-                     attr=function_name,
-                     ctx=Load())
-    return Call(func=func,
-                args=args,
-                keywords=[],
-                starargs=None,
-                kwargs=None)
-
-
+    func = Attribute(
+        value=context_name,
+        attr=function_name,
+        ctx=Load())
+    return Call(
+        func=func,
+        args=args,
+        keywords=[],
+        starargs=None,
+        kwargs=None)
 </t>
 <t tx="ekr.20190103112220.41">class LineNumberCleaner(NodeTransformer):
     @others
 </t>
 <t tx="ekr.20190103112220.42">def __init__(self):
     self.max_line = 0
-
 </t>
 <t tx="ekr.20190103112220.43">def visit(self, node):
     lineno = getattr(node, 'lineno', None)
@@ -1356,11 +1272,10 @@ def _create_bare_context_call(function_name, args=None):
         else:
             self.max_line = lineno
     return self.generic_visit(node)
-
-
-\\-4.# noinspection PyAbstractClass
 </t>
-<t tx="ekr.20190103112220.44">class TracedModuleImporter(MetaPathFinder, Loader):
+<t tx="ekr.20190103112220.44"># noinspection PyAbstractClass
+
+class TracedModuleImporter(MetaPathFinder, Loader):
     is_desperate = False
 
     @others
@@ -1389,11 +1304,12 @@ def _create_bare_context_call(function_name, args=None):
     self.filename = filename
     self.is_own_driver = is_own_driver
     self.is_zoomed = is_zoomed
-
 </t>
 <t tx="ekr.20190103112220.46">def find_spec(self, fullname, path, target=None):
-    if (fullname == self.module_name or
-            (fullname == SCOPE_NAME and self.is_own_driver)):
+    if (
+        fullname == self.module_name or
+        (fullname == SCOPE_NAME and self.is_own_driver)
+    ):
         return ModuleSpec(fullname, self)
     if fullname not in ('matplotlib', 'matplotlib.pyplot', 'numpy.random'):
         return None
@@ -1406,9 +1322,8 @@ def _create_bare_context_call(function_name, args=None):
         if finder_find_spec:
             spec = finder_find_spec(fullname, path, target)
             if spec is not None:
-                spec.loader = PatchedModuleLoader(fullname,
-                                                  spec.loader,
-                                                  self.is_zoomed)
+                spec.loader = PatchedModuleLoader(
+                    fullname, spec.loader, self.is_zoomed)
                 return spec
     return None
 
@@ -1427,11 +1342,14 @@ def _create_bare_context_call(function_name, args=None):
 
     exec(self.traced_code, self.environment)
 
-# find_module() and load_module() are used in Python 2.
 </t>
-<t tx="ekr.20190103112220.48">def find_module(self, fullname, path=None):
-    if (fullname == self.module_name or
-            (fullname == SCOPE_NAME and self.is_own_driver)):
+<t tx="ekr.20190103112220.48"># find_module() and load_module() are used in Python 2.
+
+def find_module(self, fullname, path=None):
+    if (
+        fullname == self.module_name or
+        (fullname == SCOPE_NAME and self.is_own_driver)
+    ):
         return self
     if fullname not in ('matplotlib', 'matplotlib.pyplot', 'numpy.random'):
         return None
@@ -1449,16 +1367,14 @@ def _create_bare_context_call(function_name, args=None):
         return PatchedModuleLoader(fullname, None, self.is_zoomed)
 
 </t>
-<t tx="ekr.20190103112220.49">def load_module(self, fullname):
+<t tx="ekr.20190103112220.49"># find_module() and load_module() are used in Python 2.
+
+def load_module(self, fullname):
     # noinspection PyDeprecation
     new_mod = imp.new_module(fullname)
     sys.modules[fullname] = new_mod
-
     self.exec_module(new_mod)
     return new_mod
-
-
-\\-4.# noinspection PyAbstractClass
 </t>
 <t tx="ekr.20190103112220.5">def call(self, method_name, *args, **kwargs):
     self.report.append(method_name)
@@ -1471,7 +1387,9 @@ def _create_bare_context_call(function_name, args=None):
         self.report.append("    %s=%r" % (key, value))
 
 </t>
-<t tx="ekr.20190103112220.50">class PatchedModuleLoader(Loader):
+<t tx="ekr.20190103112220.50"># noinspection PyAbstractClass
+
+class PatchedModuleLoader(Loader):
     @others
 </t>
 <t tx="ekr.20190103112220.51">def __init__(self, fullname, main_loader, is_zoomed):
@@ -1479,7 +1397,6 @@ def _create_bare_context_call(function_name, args=None):
     self.main_loader = main_loader
     self.is_zoomed = is_zoomed
     self.plt = None
-
 </t>
 <t tx="ekr.20190103112220.52">def exec_module(self, module):
     if self.main_loader is not None:
@@ -1499,7 +1416,6 @@ def _create_bare_context_call(function_name, args=None):
         module.live_coding_zoom = self.live_coding_zoom
         if self.is_zoomed:
             self.live_coding_zoom()
-
 </t>
 <t tx="ekr.20190103112220.53">def load_module(self, fullname):
     if self.main_loader is not None:
@@ -1509,7 +1425,6 @@ def _create_bare_context_call(function_name, args=None):
         TracedModuleImporter.is_desperate = False
     self.exec_module(module)
     return module
-
 </t>
 <t tx="ekr.20190103112220.54">def mock_show(self, *_args, **_kwargs):
     figure = self.plt.gcf()
@@ -1535,7 +1450,6 @@ def _create_bare_context_call(function_name, args=None):
     encoded = standard_b64encode(image)
     image_text = str(encoded.decode('UTF-8'))
     MockTurtle.display_image(x, y, image=image_text)
-
 </t>
 <t tx="ekr.20190103112220.55">def live_coding_zoom(self):
     screen_width, screen_height = self.plt.live_coding_size
@@ -1544,8 +1458,6 @@ def _create_bare_context_call(function_name, args=None):
     x_dpi = screen_width/fig_width
     y_dpi = screen_height/fig_height
     fig.dpi = min(x_dpi, y_dpi)
-
-
 </t>
 <t tx="ekr.20190103112220.56">@contextmanager
 def swallow_output():
@@ -1576,7 +1488,6 @@ def swallow_output():
         MockTurtle.monkey_patch(canvas)
     self.environment = {}
     self.return_code = None
-
 </t>
 <t tx="ekr.20190103112220.59">def run_python_module(self, modulename):
     """Run a python module, as though with ``python -m name args...``.
@@ -1616,7 +1527,6 @@ def swallow_output():
                 searchpath = None  # "top-level search" in imp.find_module()
             # noinspection PyDeprecation
             openfile, pathname, _ = imp.find_module(name, searchpath)
-
             # If `modulename` is actually a package, not a mere module,
             # then we pretend to be Python 2.7 and try running its
             # __main__.py script.
@@ -1630,7 +1540,6 @@ def swallow_output():
         finally:
             if openfile:
                 openfile.close()
-
     # Finally, hand the file off to run_python_file for execution.
     pathname = os.path.abspath(pathname)
     self.run_python_file(pathname, package=packagename)
@@ -1653,10 +1562,8 @@ def swallow_output():
     main_mod.__builtins__ = builtins
     if package:
         main_mod.__package__ = package
-
     try:
         code = self.make_code_from_py(filename)
-
         # Execute the code object.
         exec(code, main_mod.__dict__)
     finally:
@@ -1669,24 +1576,18 @@ def make_code_from_py(filename):
     """Get source from `filename` and make a code object of it."""
     with open(filename, 'rU') as f:
         source = f.read()
-
     code = compile(source, filename, "exec")
-
     return code
-
 </t>
 <t tx="ekr.20190103112220.62">@staticmethod
 def split_lines(messages):
     for message in messages:
         for line in message.splitlines():
             yield line
-
 </t>
 <t tx="ekr.20190103112220.63">def trace_turtle(self, source):
     self.trace_code(source)
-
     return '\n'.join(MockTurtle.get_all_reports())
-
 </t>
 <t tx="ekr.20190103112220.64">def report_driver_result(self, builder, messages):
     messages = list(self.split_lines(messages))
@@ -1696,12 +1597,10 @@ def split_lines(messages):
     for lineno, message in enumerate(messages, 2):
         message_width = max(len(message), message_width)
         builder.add_message(message, lineno)
-
     header = '-' * message_width + ' '
     builder.add_message(header, 1)
     builder.add_message(header, block_size)
     builder.start_block(1, block_size)
-
 </t>
 <t tx="ekr.20190103112220.65">def trace_code(self,
                source,
@@ -1732,31 +1631,21 @@ def split_lines(messages):
 
     try:
         tree = parse(source, PSEUDO_FILENAME)
-
         new_tree = Tracer().visit(tree)
         fix_missing_locations(new_tree)
         LineNumberCleaner().visit(new_tree)
         # from ast import dump
         # print(dump(new_tree, include_attributes=True))
         code = compile(new_tree, PSEUDO_FILENAME, 'exec')
-
         # Set sys.argv properly.
         old_argv = sys.argv
         sys.argv = driver or [filename or load_as]
-
         try:
-            self.run_code(code,
-                          builder,
-                          load_as,
-                          is_module,
-                          driver,
-                          filename,
-                          bad_driver,
-                          is_zoomed)
+            self.run_code(code, builder, load_as, is_module, driver,
+                filename, bad_driver, is_zoomed)
         finally:
             # Restore the old argv and path
             sys.argv = old_argv
-
             # During testing, we import these modules for every test case,
             # so force a reload. This is only likely to happen during testing.
             for target in (load_as, SCOPE_NAME):
@@ -1765,7 +1654,6 @@ def split_lines(messages):
             for i in reversed(range(len(sys.meta_path))):
                 if isinstance(sys.meta_path[i], TracedModuleImporter):
                     sys.meta_path.pop(i)
-
         for value in self.environment.values():
             if isinstance(value, types.GeneratorType):
                 value.close()
@@ -1778,9 +1666,8 @@ def split_lines(messages):
             line_number = ex.lineno
         else:
             line_number = 1
-            message = '{} line {}: {}'.format(ex.filename,
-                                              ex.lineno,
-                                              message)
+            message = '{} line {}: {}'.format(
+                ex.filename, ex.lineno, message)
         builder.add_message(message, line_number)
     except BaseException as ex:
         self.return_code = getattr(ex, 'code', 1)
@@ -1811,27 +1698,26 @@ def split_lines(messages):
         dump_lines = []
         source_width = max(map(len, source_lines))
         indent = 4
-        for source_line, report_line in izip_longest(source_lines,
-                                                     report_lines,
-                                                     fillvalue=''):
+        for source_line, report_line in izip_longest(
+            source_lines, report_lines, fillvalue=''):
             line = (indent * ' ' + source_line +
                     (source_width-len(source_line))*' ' +
                     ' | ' + report_line)
             dump_lines.append(line)
         report = '\n'.join(dump_lines)
-
     return report
 
 </t>
 <t tx="ekr.20190103112220.66">def run_code(self,
-             code,
-             builder,
-             load_as,
-             is_module,
-             driver,
-             filename,
-             bad_driver,
-             is_zoomed):
+    code,
+    builder,
+    load_as,
+    is_module,
+    driver,
+    filename,
+    bad_driver,
+    is_zoomed,
+):
     """ Run the traced module, plus its driver.
 
     :param code: the compiled code for the traced module
@@ -1873,18 +1759,16 @@ def split_lines(messages):
             except SystemExit as ex:
                 if ex.code:
                     self.return_code = ex.code
-                    messages = traceback.format_exception_only(type(ex),
-                                                               ex)
+                    messages = traceback.format_exception_only(type(ex), ex)
                     message = messages[-1].strip()
                     self.report_driver_result(builder, [message])
         if load_as not in sys.modules:
             driver_name = os.path.basename(driver[0])
-            message = (bad_driver or "{} doesn't call the {} module."
-                                     " Try a different driver.".format(driver_name,
-                                                                       load_as))
+            message = (bad_driver or
+                "{} doesn't call the {} module."
+                " Try a different driver.".format(driver_name, load_as))
             self.report_driver_result(builder, [message])
     self.environment = module_importer.environment
-
 
 </t>
 <t tx="ekr.20190103112220.67">class FileSwallower(object):
@@ -1947,9 +1831,10 @@ elif IS_PYODIDE:
                 yield 'self.' + attr_name, attr_value
 
 
-# noinspection PyUnresolvedReferences
 </t>
-<t tx="ekr.20190103112220.72">class TracedStringIO(io.StringIO):
+<t tx="ekr.20190103112220.72"># noinspection PyUnresolvedReferences
+
+class TracedStringIO(io.StringIO):
     @others
 </t>
 <t tx="ekr.20190103112220.73">def write(self, text):
@@ -1960,13 +1845,10 @@ elif IS_PYODIDE:
         if report_builder is not None:
             for name, value in find_string_io_targets(frame):
                 if value is self:
-                    report_builder.add_output(text,
-                                              frame.f_lineno,
-                                              target_name=name)
+                    report_builder.add_output(
+                        text, frame.f_lineno, target_name=name)
                     return
         frame = frame.f_back
-
-
 </t>
 <t tx="ekr.20190103112220.74">def web_main():
     display()
@@ -1987,41 +1869,7 @@ elif IS_PYODIDE:
     parser = argparse.ArgumentParser(
         description='Trace Python code.',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('-c', '--canvas',
-        action='store_true',
-        help='Should canvas commands be printed?')
-    parser.add_argument('-x', '--width',
-        type=int,
-        default=800,
-        help='width of the canvas in pixels')
-    parser.add_argument('-y', '--height',
-        type=int,
-        default=600,
-        help='height of the canvas in pixels')
-    parser.add_argument('-z', '--zoomed',
-        action='store_true',
-        help='matplotlib is zoomed to fit the canvas size')
-    parser.add_argument('-d', '--dump',
-        action='store_true',
-        help='dump source code with report')
-    parser.add_argument('-f', '--filename',
-        help='file name to save in __file__')
-    parser.add_argument('-b', '--bad_driver',
-        help="message to display if driver doesn't call module")
-    parser.add_argument('-m', '--module',
-        action='store_true',
-        help='driver is an importable module, not a script')
-    parser.add_argument('source',
-        nargs=argparse.OPTIONAL,
-        default='-',
-        help='source file to trace, or - for stdin')
-    parser.add_argument('load_as',
-        nargs=argparse.OPTIONAL,
-        default=SCOPE_NAME,
-        help='load traced code as a module with this name')
-    parser.add_argument('driver',
-        nargs=argparse.REMAINDER,
-        help='script to call traced code, plus any arguments')
+    &lt;&lt; add args &gt;&gt;
     args = parser.parse_args()
     if args.driver and args.driver[0] in ('-m', '--module'):
         args.module = True
@@ -3106,5 +2954,40 @@ def display_image(cls, x, y, image):
     self.fill(False)
 
 </t>
+<t tx="ekr.20190104113125.1">parser.add_argument('-c', '--canvas',
+    action='store_true',
+    help='Should canvas commands be printed?')
+parser.add_argument('-x', '--width',
+    type=int,
+    default=800,
+    help='width of the canvas in pixels')
+parser.add_argument('-y', '--height',
+    type=int,
+    default=600,
+    help='height of the canvas in pixels')
+parser.add_argument('-z', '--zoomed',
+    action='store_true',
+    help='matplotlib is zoomed to fit the canvas size')
+parser.add_argument('-d', '--dump',
+    action='store_true',
+    help='dump source code with report')
+parser.add_argument('-f', '--filename',
+    help='file name to save in __file__')
+parser.add_argument('-b', '--bad_driver',
+    help="message to display if driver doesn't call module")
+parser.add_argument('-m', '--module',
+    action='store_true',
+    help='driver is an importable module, not a script')
+parser.add_argument('source',
+    nargs=argparse.OPTIONAL,
+    default='-',
+    help='source file to trace, or - for stdin')
+parser.add_argument('load_as',
+    nargs=argparse.OPTIONAL,
+    default=SCOPE_NAME,
+    help='load traced code as a module with this name')
+parser.add_argument('driver',
+    nargs=argparse.REMAINDER,
+    help='script to call traced code, plus any arguments')</t>
 </tnodes>
 </leo_file>
