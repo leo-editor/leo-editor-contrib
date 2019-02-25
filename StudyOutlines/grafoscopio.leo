@@ -607,7 +607,15 @@ updateRecentNotebooksWith: aFileReference
 	category: 'Grafoscopio-Model'!
 
 !A Node is and administrator of all node operations in a tree.!
-</t>
+
+GrafoscopioNode&gt;&gt;initialize
+	"Create a empty new node"
+	super initialize.
+	self 
+		header: 'newHeader';
+		tagAs: 'text';
+		body: '';
+		level: 0</t>
 <t tx="ekr.20190224024804.20">
 ComposableModel subclass: #GrafoscopioButtonModel
 	instanceVariableNames: 'button'
@@ -3079,15 +3087,6 @@ becomeDefaultTestTree
 	node1 addNode: node2.
 	self 
 		addNode: node1.
-        
-initialize
-	"Create a empty new node"
-	super initialize.
-	self 
-		header: 'newHeader';
-		tagAs: 'text';
-		body: '';
-		level: 0
 </t>
 <t tx="ekr.20190224024804.5"></t>
 <t tx="ekr.20190224024804.6">ancestors
