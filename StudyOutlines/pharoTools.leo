@@ -6,21 +6,10 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20190225121333.1"><vh>@button file-out</vh>
-<v t="ekr.20190225121333.2"><vh>fo.run</vh></v>
-<v t="ekr.20190225121333.3"><vh>fo.file_out &amp; helpers</vh>
-<v t="ekr.20190225121333.4"><vh>fo.compute_fn</vh></v>
-<v t="ekr.20190225121333.5"><vh>fo.write_file</vh></v>
-<v t="ekr.20190225121333.6"><vh>fo.write_node</vh></v>
-</v>
-</v>
-<v t="ekr.20190225121341.1"><vh>@button file-in</vh>
-<v t="ekr.20190225121341.2"><vh>fi.is_chunk</vh></v>
-<v t="ekr.20190225121341.3"><vh>fi.run</vh></v>
-<v t="ekr.20190225121341.4"><vh>fi.read_file</vh></v>
-<v t="ekr.20190225121341.5"><vh>fi.read_line</vh></v>
-</v>
+<v t="ekr.20190225121958.1"><vh>Notes</vh>
 <v t="ekr.20190225121816.1"><vh>Cheat Sheet: Pharo collections</vh></v>
+<v t="ekr.20190225121753.1"><vh>Grafoscopio Install Script</vh></v>
+</v>
 <v t="ekr.20190225121737.1"><vh>LeoNodes (Pharo)</vh>
 <v t="ekr.20190225121737.2"><vh>class LeoNodeIndices</vh>
 <v t="ekr.20190225121737.3"><vh>@ignore</vh>
@@ -283,7 +272,24 @@
 </v>
 </v>
 </v>
-<v t="ekr.20190225121753.1"><vh>Grafoscopio Install Script</vh></v>
+<v t="ekr.20190225121333.1"><vh>@button file-out</vh>
+<v t="ekr.20190225121333.2"><vh>fo.run</vh></v>
+<v t="ekr.20190225121333.3"><vh>fo.file_out &amp; helpers</vh>
+<v t="ekr.20190225121333.4"><vh>fo.compute_fn</vh></v>
+<v t="ekr.20190225121333.5"><vh>fo.write_file</vh></v>
+<v t="ekr.20190225121333.6"><vh>fo.write_node</vh></v>
+</v>
+</v>
+<v t="ekr.20190225121341.1"><vh>@button file-in</vh>
+<v t="ekr.20190225121341.2"><vh>fi.is_chunk</vh></v>
+<v t="ekr.20190225122134.1"><vh>fi.is_class</vh></v>
+<v t="ekr.20190225121341.3"><vh>fi.run</vh></v>
+<v t="ekr.20190225121341.4"><vh>fi.read_file</vh></v>
+<v t="ekr.20190225121341.5"><vh>fi.read_line</vh>
+<v t="ekr.20190225122907.1"><vh>fi.new_class</vh></v>
+<v t="ekr.20190225123049.1"><vh>fi.plain_line</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20190225121333.1">'''Convert the marked trees to a .st file.'''
@@ -356,10 +362,11 @@ class Controller:
     
 Controller(c, fn).run()
 </t>
-<t tx="ekr.20190225121341.2"># !GrafoscopioNode methodsFor: 'adding' stamp: 'OffrayLuna 11/30/2017 12:45'!
-# !ManifestGrafoscopio class methodsFor: 'code-critics' stamp: 'OffrayLuna 10/7/2016 20:34'!
+<t tx="ekr.20190225121341.2"># Examples:
+    # !GrafoscopioNode methodsFor: 'adding' stamp: 'OffrayLuna 11/30/2017 12:45'!
+    # !ManifestGrafoscopio class methodsFor: 'code-critics' stamp: 'OffrayLuna 10/7/2016 20:34'!
 
-chunk_pat = re.compile(r"\!(\w+)\s+(class\s*)?methodsFor:\s+\'(\w+)\'\s+stamp:\s+\'(\w+)\s+(.*)\'\!")
+chunk_pat = re.compile(r"\!(\w+)\s+(class)?\s*methodsFor:\s*'([\w-]+)\'\s+stamp:\s+\'(\w+)\s+(.*)\'\!")
 
 def is_chunk(self, line):
     m = self.chunk_pat.match(line)
@@ -390,23 +397,17 @@ def is_chunk(self, line):
         self.read_line(line)</t>
 <t tx="ekr.20190225121341.5">def read_line(self, line):
     
+    class_name, super_class_name = self.is_class(line)
+    if class_name:
+        self.new_class(class_name)
+        self.plain_line(line)
+        return
     is_chunk, class_name, is_class_method, organizer_name, user_name = self.is_chunk(line)
     if not is_chunk:
-        if not self.class_parent:
-            self.class_parent = self.parent.insertAsLastChild()
-            self.p = None
-        if not self.p:
-            if self.organizer_p:
-                self.p = self.organizer_p.insertAsLastChild()
-                self.p.h = '' ###
-            else:
-                self.p = self.class_parent.copy()
-        if line.strip() and self.p and not self.p.h:
-            self.p.h = line.strip()
-        self.p.b = self.p.b + line
+        self.plain_line(line)
         return
     #
-    # Clean up the previous node.
+    # A new chunk: Clean up the previous node.
     if self.p:
         self.p.b = self.p.b.strip()+'\n'
         self.p = None
@@ -414,11 +415,8 @@ def is_chunk(self, line):
     # Allocate a new class node if necessary.
     old_class_name = self.class_parent and self.class_parent.h
     if old_class_name != class_name:
-        g.trace('CLASS', class_name)
-        self.class_parent = self.parent.insertAsLastChild()
-        self.class_parent.h = class_name
-        self.p = None
-        self.organizer_p = None
+        g.trace('UNEXPECTED CLASS', class_name)
+        self.new_class(class_name)
         return
     #
     # Allocate a new organizer node if necessary.
@@ -3069,5 +3067,38 @@ converting    asArray, asBag, asSet, asOrderedCollection,
               asSortedCollection, asSortedCollection:
 creation      with: ... with:with:with:with:, withAll:
 </t>
+<t tx="ekr.20190225121958.1"></t>
+<t tx="ekr.20190225122134.1"># Example: Object subclass: #FileUtils
+
+class_pat = re.compile(r"(\w+)\s+subclass:\s+#(\w+)")
+
+def is_class(self, line):
+    m = self.class_pat.match(line)
+    if m:
+        super_class_name = m.group(1)
+        class_name = m.group(2)
+        return class_name, super_class_name
+    return None, None
+</t>
+<t tx="ekr.20190225122907.1">def new_class(self, class_name):
+    g.trace('CLASS', class_name)
+    self.class_parent = self.parent.insertAsLastChild()
+    self.class_parent.h = class_name
+    self.p = None
+    self.organizer_p = None</t>
+<t tx="ekr.20190225123049.1">def plain_line(self, line):
+    '''Handle a plain line.'''
+    if not self.class_parent:
+        self.class_parent = self.parent.insertAsLastChild()
+        self.p = None
+    if not self.p:
+        if self.organizer_p:
+            self.p = self.organizer_p.insertAsLastChild()
+            self.p.h = ''
+        else:
+            self.p = self.class_parent.copy()
+    if line.strip() and self.p and not self.p.h:
+        self.p.h = line.strip()
+    self.p.b = self.p.b + line</t>
 </tnodes>
 </leo_file>
