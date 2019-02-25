@@ -285,7 +285,7 @@
 <v t="ekr.20190225122134.1"><vh>fi.is_class</vh></v>
 <v t="ekr.20190225121341.3"><vh>fi.run</vh></v>
 <v t="ekr.20190225121341.4"><vh>fi.read_file</vh></v>
-<v t="ekr.20190225121341.5"><vh>fi.read_line</vh>
+<v t="ekr.20190225121341.5"><vh>fi.read_line &amp; helpers</vh>
 <v t="ekr.20190225122907.1"><vh>fi.new_class</vh></v>
 <v t="ekr.20190225123049.1"><vh>fi.plain_line</vh></v>
 </v>
@@ -396,9 +396,10 @@ def is_chunk(self, line):
     for line in g.splitLines(lines):
         self.read_line(line)</t>
 <t tx="ekr.20190225121341.5">def read_line(self, line):
-    
+    '''Read the next line of the input.'''
     class_name, super_class_name = self.is_class(line)
     if class_name:
+        # A new class declaration.
         self.new_class(class_name)
         self.plain_line(line)
         return
@@ -415,6 +416,7 @@ def is_chunk(self, line):
     # Allocate a new class node if necessary.
     old_class_name = self.class_parent and self.class_parent.h
     if old_class_name != class_name:
+        # probably should not happen.
         g.trace('UNEXPECTED CLASS', class_name)
         self.new_class(class_name)
         return
