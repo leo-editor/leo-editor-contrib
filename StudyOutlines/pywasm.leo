@@ -8,7 +8,6 @@
 <vnodes>
 <v t="ekr.20190302133319.1"><vh>pywasm</vh>
 <v t="ekr.20190302133319.2"><vh>@@clean __init__.py</vh>
-<v t="ekr.20190302133319.3"><vh>Declarations</vh></v>
 <v t="ekr.20190302133319.4"><vh>class VirtualMachine</vh>
 <v t="ekr.20190302133319.5"><vh>VirtualMachine.__init__</vh></v>
 <v t="ekr.20190302133319.6"><vh>VirtualMachine.func_addr</vh></v>
@@ -1934,7 +1933,6 @@ extern_type = {
 
 
 </t>
-<t tx="ekr.20190302133319.3"></t>
 <t tx="ekr.20190302133319.30">class ExternValue:
     # An external value is the runtime representation of an entity that can be imported or exported. It is an address
     # denoting either a function instance, table instance, memory instance, or global instances in the shared store.
