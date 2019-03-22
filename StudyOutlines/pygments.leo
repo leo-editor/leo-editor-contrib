@@ -7,7 +7,12 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20190320063830.1"><vh>Read me</vh></v>
+<v t="ekr.20190322041510.1"><vh>@settings</vh>
+<v t="ekr.20190322041515.1"><vh>@string pygments-style-name = leonine</vh></v>
+</v>
+<v t="ekr.20190322041515.1"></v>
 <v t="ekr.20190320063902.1"><vh>Recursive import script</vh></v>
+<v t="ekr.20190320124023.1"><vh>Anaconda3/Lib/site-packages/pygments</vh>
 <v t="ekr.20190320063830.2"><vh>@@clean cmdline.py</vh>
 <v t="ekr.20190320063830.3"><vh>Declarations</vh></v>
 <v t="ekr.20190320063830.4"><vh>_parse_options</vh></v>
@@ -158,7 +163,7 @@
 <v t="ekr.20190320063830.121"><vh>setup</vh></v>
 </v>
 <v t="ekr.20190320063830.122"><vh>@@clean style.py</vh>
-<v t="ekr.20190320063830.123"><vh>Declarations</vh></v>
+<v t="ekr.20190320063830.123"><vh>&lt;&lt; define _ansimap &gt;&gt;</vh></v>
 <v t="ekr.20190320063830.124"><vh>class StyleMeta(type)</vh>
 <v t="ekr.20190320063830.125"><vh>StyleMeta.__new__</vh></v>
 <v t="ekr.20190320063830.126"><vh>StyleMeta.style_for_token</vh></v>
@@ -2152,6 +2157,620 @@
 <v t="ekr.20190320063830.1669"><vh>get_all_styles</vh></v>
 </v>
 </v>
+</v>
+<v t="ekr.20190320124833.2"><vh>Anaconda3/Lib/site-packages/qtconsole</vh>
+<v t="ekr.20190320124833.3"><vh>@@clean ansi_code_processor.py</vh>
+<v t="ekr.20190320124833.4"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.5"><vh>class AnsiCodeProcessor(object)</vh>
+<v t="ekr.20190320124833.6"><vh>AnsiCodeProcessor.__init__</vh></v>
+<v t="ekr.20190320124833.7"><vh>AnsiCodeProcessor.reset_sgr</vh></v>
+<v t="ekr.20190320124833.8"><vh>AnsiCodeProcessor.split_string</vh></v>
+<v t="ekr.20190320124833.9"><vh>AnsiCodeProcessor.set_csi_code</vh></v>
+<v t="ekr.20190320124833.10"><vh>AnsiCodeProcessor.set_osc_code</vh></v>
+<v t="ekr.20190320124833.11"><vh>AnsiCodeProcessor.set_sgr_code</vh></v>
+<v t="ekr.20190320124833.12"><vh>AnsiCodeProcessor._parse_xterm_color_spec</vh></v>
+<v t="ekr.20190320124833.13"><vh>AnsiCodeProcessor._replace_special</vh></v>
+</v>
+<v t="ekr.20190320124833.14"><vh>class QtAnsiCodeProcessor(AnsiCodeProcessor)</vh>
+<v t="ekr.20190320124833.15"><vh>QtAnsiCodeProcessor.get_color</vh></v>
+<v t="ekr.20190320124833.16"><vh>QtAnsiCodeProcessor.get_format</vh></v>
+<v t="ekr.20190320124833.17"><vh>QtAnsiCodeProcessor.set_background_color</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.18"><vh>@@clean base_frontend_mixin.py</vh>
+<v t="ekr.20190320124833.19"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.20"><vh>class BaseFrontendMixin(object)</vh>
+<v t="ekr.20190320124833.21"><vh>BaseFrontendMixin.kernel_client</vh></v>
+<v t="ekr.20190320124833.22"><vh>BaseFrontendMixin.kernel_client</vh></v>
+<v t="ekr.20190320124833.23"><vh>BaseFrontendMixin._make_blocking_client</vh></v>
+<v t="ekr.20190320124833.24"><vh>BaseFrontendMixin.blocking_client</vh></v>
+<v t="ekr.20190320124833.25"><vh>BaseFrontendMixin.kernel_manager</vh></v>
+<v t="ekr.20190320124833.26"><vh>BaseFrontendMixin.kernel_manager</vh></v>
+<v t="ekr.20190320124833.27"><vh>BaseFrontendMixin._handle_kernel_died</vh></v>
+<v t="ekr.20190320124833.28"><vh>BaseFrontendMixin._handle_kernel_restarted</vh></v>
+<v t="ekr.20190320124833.29"><vh>BaseFrontendMixin._started_kernel</vh></v>
+<v t="ekr.20190320124833.30"><vh>BaseFrontendMixin._started_channels</vh></v>
+<v t="ekr.20190320124833.31"><vh>BaseFrontendMixin._stopped_channels</vh></v>
+<v t="ekr.20190320124833.32"><vh>BaseFrontendMixin._dispatch</vh></v>
+<v t="ekr.20190320124833.33"><vh>BaseFrontendMixin.from_here</vh></v>
+<v t="ekr.20190320124833.34"><vh>BaseFrontendMixin.include_output</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.35"><vh>@@clean bracket_matcher.py</vh>
+<v t="ekr.20190320124833.36"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.37"><vh>class BracketMatcher(QtCore.QObject)</vh>
+<v t="ekr.20190320124833.38"><vh>BracketMatcher.__init__</vh></v>
+<v t="ekr.20190320124833.39"><vh>BracketMatcher._find_match</vh></v>
+<v t="ekr.20190320124833.40"><vh>BracketMatcher._selection_for_character</vh></v>
+<v t="ekr.20190320124833.41"><vh>BracketMatcher._cursor_position_changed</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.42"><vh>@@clean call_tip_widget.py</vh>
+<v t="ekr.20190320124833.43"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.44"><vh>class CallTipWidget(QtGui.QLabel)</vh>
+<v t="ekr.20190320124833.45"><vh>CallTipWidget.__init__</vh></v>
+<v t="ekr.20190320124833.46"><vh>CallTipWidget.eventFilter</vh></v>
+<v t="ekr.20190320124833.47"><vh>CallTipWidget.timerEvent</vh></v>
+<v t="ekr.20190320124833.48"><vh>CallTipWidget.enterEvent</vh></v>
+<v t="ekr.20190320124833.49"><vh>CallTipWidget.hideEvent</vh></v>
+<v t="ekr.20190320124833.50"><vh>CallTipWidget.leaveEvent</vh></v>
+<v t="ekr.20190320124833.51"><vh>CallTipWidget.paintEvent</vh></v>
+<v t="ekr.20190320124833.52"><vh>CallTipWidget.setFont</vh></v>
+<v t="ekr.20190320124833.53"><vh>CallTipWidget.showEvent</vh></v>
+<v t="ekr.20190320124833.54"><vh>CallTipWidget.show_inspect_data</vh></v>
+<v t="ekr.20190320124833.55"><vh>CallTipWidget.show_tip</vh></v>
+<v t="ekr.20190320124833.56"><vh>CallTipWidget._find_parenthesis</vh></v>
+<v t="ekr.20190320124833.57"><vh>CallTipWidget._leave_event_hide</vh></v>
+<v t="ekr.20190320124833.58"><vh>CallTipWidget._format_tooltip</vh></v>
+<v t="ekr.20190320124833.59"><vh>CallTipWidget._cursor_position_changed</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.60"><vh>@@clean client.py</vh>
+<v t="ekr.20190320124833.61"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.62"><vh>class QtHBChannel</vh>
+<v t="ekr.20190320124833.63"><vh>QtHBChannel.call_handlers</vh></v>
+</v>
+<v t="ekr.20190320124833.64"><vh>class QtZMQSocketChannel</vh>
+<v t="ekr.20190320124833.65"><vh>QtZMQSocketChannel.process_events</vh></v>
+<v t="ekr.20190320124833.66"><vh>QtZMQSocketChannel.call_handlers</vh></v>
+</v>
+<v t="ekr.20190320124833.67"><vh>class QtKernelClient</vh></v>
+</v>
+<v t="ekr.20190320124833.68"><vh>@@clean completion_html.py</vh>
+<v t="ekr.20190320124833.69"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.70"><vh>html_tableify</vh></v>
+<v t="ekr.20190320124833.71"><vh>class SlidingInterval(object)</vh>
+<v t="ekr.20190320124833.72"><vh>SlidingInterval.__init__</vh></v>
+<v t="ekr.20190320124833.73"><vh>SlidingInterval.current</vh></v>
+<v t="ekr.20190320124833.74"><vh>SlidingInterval.current</vh></v>
+<v t="ekr.20190320124833.75"><vh>SlidingInterval.start</vh></v>
+<v t="ekr.20190320124833.76"><vh>SlidingInterval.stop</vh></v>
+<v t="ekr.20190320124833.77"><vh>SlidingInterval.width</vh></v>
+<v t="ekr.20190320124833.78"><vh>SlidingInterval.nth</vh></v>
+</v>
+<v t="ekr.20190320124833.79"><vh>class CompletionHtml(QtGui.QWidget)</vh>
+<v t="ekr.20190320124833.80"><vh>CompletionHtml.__init__</vh></v>
+<v t="ekr.20190320124833.81"><vh>CompletionHtml.eventFilter</vh></v>
+<v t="ekr.20190320124833.82"><vh>CompletionHtml.cancel_completion</vh></v>
+<v t="ekr.20190320124833.83"><vh>CompletionHtml._select_index</vh></v>
+<v t="ekr.20190320124833.84"><vh>CompletionHtml._slice_end</vh></v>
+<v t="ekr.20190320124833.85"><vh>CompletionHtml.select_up</vh></v>
+<v t="ekr.20190320124833.86"><vh>CompletionHtml.select_down</vh></v>
+<v t="ekr.20190320124833.87"><vh>CompletionHtml.select_left</vh></v>
+<v t="ekr.20190320124833.88"><vh>CompletionHtml.select_right</vh></v>
+<v t="ekr.20190320124833.89"><vh>CompletionHtml.show_items</vh></v>
+<v t="ekr.20190320124833.90"><vh>CompletionHtml._update_list</vh></v>
+<v t="ekr.20190320124833.91"><vh>CompletionHtml._complete_current</vh></v>
+<v t="ekr.20190320124833.92"><vh>CompletionHtml._current_text_cursor</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.93"><vh>@@clean completion_plain.py</vh>
+<v t="ekr.20190320124833.94"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.95"><vh>class CompletionPlain(QtGui.QWidget)</vh>
+<v t="ekr.20190320124833.96"><vh>CompletionPlain.__init__</vh></v>
+<v t="ekr.20190320124833.97"><vh>CompletionPlain.eventFilter</vh></v>
+<v t="ekr.20190320124833.98"><vh>CompletionPlain.cancel_completion</vh></v>
+<v t="ekr.20190320124833.99"><vh>CompletionPlain.show_items</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.100"><vh>@@clean completion_widget.py</vh>
+<v t="ekr.20190320124833.101"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.102"><vh>class CompletionWidget(QtGui.QListWidget)</vh>
+<v t="ekr.20190320124833.103"><vh>CompletionWidget.__init__</vh></v>
+<v t="ekr.20190320124833.104"><vh>CompletionWidget.eventFilter</vh></v>
+<v t="ekr.20190320124833.105"><vh>CompletionWidget.keyPressEvent</vh></v>
+<v t="ekr.20190320124833.106"><vh>CompletionWidget.hideEvent</vh></v>
+<v t="ekr.20190320124833.107"><vh>CompletionWidget.showEvent</vh></v>
+<v t="ekr.20190320124833.108"><vh>CompletionWidget.show_items</vh></v>
+<v t="ekr.20190320124833.109"><vh>CompletionWidget._complete_current</vh></v>
+<v t="ekr.20190320124833.110"><vh>CompletionWidget._current_text_cursor</vh></v>
+<v t="ekr.20190320124833.111"><vh>CompletionWidget._update_current</vh></v>
+<v t="ekr.20190320124833.112"><vh>CompletionWidget.cancel_completion</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.113"><vh>@@clean console_widget.py</vh>
+<v t="ekr.20190320124833.114"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.115"><vh>is_letter_or_number</vh></v>
+<v t="ekr.20190320124833.116"><vh>class ConsoleWidget</vh>
+<v t="ekr.20190320124833.117"><vh>ConsoleWidget._font_family_default</vh></v>
+<v t="ekr.20190320124833.118"><vh>ConsoleWidget.__init__</vh></v>
+<v t="ekr.20190320124833.119"><vh>ConsoleWidget.dragEnterEvent</vh></v>
+<v t="ekr.20190320124833.120"><vh>ConsoleWidget.dragMoveEvent</vh></v>
+<v t="ekr.20190320124833.121"><vh>ConsoleWidget.dropEvent</vh></v>
+<v t="ekr.20190320124833.122"><vh>ConsoleWidget.eventFilter</vh></v>
+<v t="ekr.20190320124833.123"><vh>ConsoleWidget.sizeHint</vh></v>
+<v t="ekr.20190320124833.124"><vh>ConsoleWidget.can_copy</vh></v>
+<v t="ekr.20190320124833.125"><vh>ConsoleWidget.can_cut</vh></v>
+<v t="ekr.20190320124833.126"><vh>ConsoleWidget.can_paste</vh></v>
+<v t="ekr.20190320124833.127"><vh>ConsoleWidget.clear</vh></v>
+<v t="ekr.20190320124833.128"><vh>ConsoleWidget.copy</vh></v>
+<v t="ekr.20190320124833.129"><vh>ConsoleWidget.copy_anchor</vh></v>
+<v t="ekr.20190320124833.130"><vh>ConsoleWidget.cut</vh></v>
+<v t="ekr.20190320124833.131"><vh>ConsoleWidget.execute</vh></v>
+<v t="ekr.20190320124833.132"><vh>ConsoleWidget.export_html</vh></v>
+<v t="ekr.20190320124833.133"><vh>ConsoleWidget._get_input_buffer</vh></v>
+<v t="ekr.20190320124833.134"><vh>ConsoleWidget._set_input_buffer</vh></v>
+<v t="ekr.20190320124833.135"><vh>ConsoleWidget._get_font</vh></v>
+<v t="ekr.20190320124833.136"><vh>ConsoleWidget._set_font</vh></v>
+<v t="ekr.20190320124833.137"><vh>ConsoleWidget.open_anchor</vh></v>
+<v t="ekr.20190320124833.138"><vh>ConsoleWidget.paste</vh></v>
+<v t="ekr.20190320124833.139"><vh>ConsoleWidget.print_</vh></v>
+<v t="ekr.20190320124833.140"><vh>ConsoleWidget.prompt_to_top</vh></v>
+<v t="ekr.20190320124833.141"><vh>ConsoleWidget.redo</vh></v>
+<v t="ekr.20190320124833.142"><vh>ConsoleWidget.reset_font</vh></v>
+<v t="ekr.20190320124833.143"><vh>ConsoleWidget.change_font_size</vh></v>
+<v t="ekr.20190320124833.144"><vh>ConsoleWidget._increase_font_size</vh></v>
+<v t="ekr.20190320124833.145"><vh>ConsoleWidget._decrease_font_size</vh></v>
+<v t="ekr.20190320124833.146"><vh>ConsoleWidget.select_all</vh></v>
+<v t="ekr.20190320124833.147"><vh>ConsoleWidget._get_tab_width</vh></v>
+<v t="ekr.20190320124833.148"><vh>ConsoleWidget._set_tab_width</vh></v>
+<v t="ekr.20190320124833.149"><vh>ConsoleWidget.undo</vh></v>
+<v t="ekr.20190320124833.150"><vh>ConsoleWidget._is_complete</vh></v>
+<v t="ekr.20190320124833.151"><vh>ConsoleWidget._execute</vh></v>
+<v t="ekr.20190320124833.152"><vh>ConsoleWidget._prompt_started_hook</vh></v>
+<v t="ekr.20190320124833.153"><vh>ConsoleWidget._prompt_finished_hook</vh></v>
+<v t="ekr.20190320124833.154"><vh>ConsoleWidget._up_pressed</vh></v>
+<v t="ekr.20190320124833.155"><vh>ConsoleWidget._down_pressed</vh></v>
+<v t="ekr.20190320124833.156"><vh>ConsoleWidget._tab_pressed</vh></v>
+<v t="ekr.20190320124833.157"><vh>ConsoleWidget._append_custom</vh></v>
+<v t="ekr.20190320124833.158"><vh>ConsoleWidget._append_block</vh></v>
+<v t="ekr.20190320124833.159"><vh>ConsoleWidget._append_html</vh></v>
+<v t="ekr.20190320124833.160"><vh>ConsoleWidget._append_html_fetching_plain_text</vh></v>
+<v t="ekr.20190320124833.161"><vh>ConsoleWidget._append_plain_text</vh></v>
+<v t="ekr.20190320124833.162"><vh>ConsoleWidget._cancel_completion</vh></v>
+<v t="ekr.20190320124833.163"><vh>ConsoleWidget._clear_temporary_buffer</vh></v>
+<v t="ekr.20190320124833.164"><vh>ConsoleWidget._complete_with_items</vh></v>
+<v t="ekr.20190320124833.165"><vh>ConsoleWidget._fill_temporary_buffer</vh></v>
+<v t="ekr.20190320124833.166"><vh>ConsoleWidget._context_menu_make</vh></v>
+<v t="ekr.20190320124833.167"><vh>ConsoleWidget._control_key_down</vh></v>
+<v t="ekr.20190320124833.168"><vh>ConsoleWidget._create_control</vh></v>
+<v t="ekr.20190320124833.169"><vh>ConsoleWidget._create_page_control</vh></v>
+<v t="ekr.20190320124833.170"><vh>ConsoleWidget._event_filter_console_keypress</vh></v>
+<v t="ekr.20190320124833.171"><vh>ConsoleWidget._event_filter_page_keypress</vh></v>
+<v t="ekr.20190320124833.172"><vh>ConsoleWidget._on_flush_pending_stream_timer</vh></v>
+<v t="ekr.20190320124833.173"><vh>ConsoleWidget._flush_pending_stream</vh></v>
+<v t="ekr.20190320124833.174"><vh>ConsoleWidget._format_as_columns</vh></v>
+<v t="ekr.20190320124833.175"><vh>ConsoleWidget._get_block_plain_text</vh></v>
+<v t="ekr.20190320124833.176"><vh>ConsoleWidget._get_cursor</vh></v>
+<v t="ekr.20190320124833.177"><vh>ConsoleWidget._get_end_cursor</vh></v>
+<v t="ekr.20190320124833.178"><vh>ConsoleWidget._get_end_pos</vh></v>
+<v t="ekr.20190320124833.179"><vh>ConsoleWidget._get_input_buffer_cursor_column</vh></v>
+<v t="ekr.20190320124833.180"><vh>ConsoleWidget._get_input_buffer_cursor_line</vh></v>
+<v t="ekr.20190320124833.181"><vh>ConsoleWidget._get_input_buffer_cursor_pos</vh></v>
+<v t="ekr.20190320124833.182"><vh>ConsoleWidget._get_input_buffer_cursor_prompt</vh></v>
+<v t="ekr.20190320124833.183"><vh>ConsoleWidget._get_last_lines</vh></v>
+<v t="ekr.20190320124833.184"><vh>ConsoleWidget._get_last_lines_from_list</vh></v>
+<v t="ekr.20190320124833.185"><vh>ConsoleWidget._get_leading_spaces</vh></v>
+<v t="ekr.20190320124833.186"><vh>ConsoleWidget._prompt_pos</vh></v>
+<v t="ekr.20190320124833.187"><vh>ConsoleWidget._append_before_prompt_pos</vh></v>
+<v t="ekr.20190320124833.188"><vh>ConsoleWidget._get_prompt_cursor</vh></v>
+<v t="ekr.20190320124833.189"><vh>ConsoleWidget._get_selection_cursor</vh></v>
+<v t="ekr.20190320124833.190"><vh>ConsoleWidget._get_word_start_cursor</vh></v>
+<v t="ekr.20190320124833.191"><vh>ConsoleWidget._get_word_end_cursor</vh></v>
+<v t="ekr.20190320124833.192"><vh>ConsoleWidget._insert_continuation_prompt</vh></v>
+<v t="ekr.20190320124833.193"><vh>ConsoleWidget._insert_block</vh></v>
+<v t="ekr.20190320124833.194"><vh>ConsoleWidget._insert_html</vh></v>
+<v t="ekr.20190320124833.195"><vh>ConsoleWidget._insert_html_fetching_plain_text</vh></v>
+<v t="ekr.20190320124833.196"><vh>ConsoleWidget._insert_plain_text</vh></v>
+<v t="ekr.20190320124833.197"><vh>ConsoleWidget._insert_plain_text_into_buffer</vh></v>
+<v t="ekr.20190320124833.198"><vh>ConsoleWidget._in_buffer</vh></v>
+<v t="ekr.20190320124833.199"><vh>ConsoleWidget._keep_cursor_in_buffer</vh></v>
+<v t="ekr.20190320124833.200"><vh>ConsoleWidget._keyboard_quit</vh></v>
+<v t="ekr.20190320124833.201"><vh>ConsoleWidget._page</vh></v>
+<v t="ekr.20190320124833.202"><vh>ConsoleWidget._set_paging</vh></v>
+<v t="ekr.20190320124833.203"><vh>ConsoleWidget._prompt_finished</vh></v>
+<v t="ekr.20190320124833.204"><vh>ConsoleWidget._prompt_started</vh></v>
+<v t="ekr.20190320124833.205"><vh>ConsoleWidget._readline</vh></v>
+<v t="ekr.20190320124833.206"><vh>ConsoleWidget._set_continuation_prompt</vh></v>
+<v t="ekr.20190320124833.207"><vh>ConsoleWidget._set_cursor</vh></v>
+<v t="ekr.20190320124833.208"><vh>ConsoleWidget._set_top_cursor</vh></v>
+<v t="ekr.20190320124833.209"><vh>ConsoleWidget._show_prompt</vh></v>
+<v t="ekr.20190320124833.210"><vh>ConsoleWidget._adjust_scrollbars</vh></v>
+<v t="ekr.20190320124833.211"><vh>ConsoleWidget._custom_context_menu_requested</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.212"><vh>@@clean frontend_widget.py</vh>
+<v t="ekr.20190320124833.213"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.214"><vh>transform_classic_prompt</vh></v>
+<v t="ekr.20190320124833.215"><vh>transform_ipy_prompt</vh></v>
+<v t="ekr.20190320124833.216"><vh>class FrontendHighlighter(PygmentsHighlighter)</vh>
+<v t="ekr.20190320124833.217"><vh>FrontendHighlighter.__init__</vh></v>
+<v t="ekr.20190320124833.218"><vh>FrontendHighlighter.highlightBlock</vh></v>
+<v t="ekr.20190320124833.219"><vh>FrontendHighlighter.rehighlightBlock</vh></v>
+<v t="ekr.20190320124833.220"><vh>FrontendHighlighter.setFormat</vh></v>
+</v>
+<v t="ekr.20190320124833.221"><vh>class FrontendWidget</vh>
+<v t="ekr.20190320124833.222"><vh>FrontendWidget._lexer_class_changed</vh></v>
+<v t="ekr.20190320124833.223"><vh>FrontendWidget._lexer_class_default</vh></v>
+<v t="ekr.20190320124833.224"><vh>FrontendWidget._lexer_default</vh></v>
+<v t="ekr.20190320124833.225"><vh>FrontendWidget.__init__</vh></v>
+<v t="ekr.20190320124833.226"><vh>FrontendWidget.copy</vh></v>
+<v t="ekr.20190320124833.227"><vh>FrontendWidget._is_complete</vh></v>
+<v t="ekr.20190320124833.228"><vh>FrontendWidget._execute</vh></v>
+<v t="ekr.20190320124833.229"><vh>FrontendWidget._prompt_started_hook</vh></v>
+<v t="ekr.20190320124833.230"><vh>FrontendWidget._prompt_finished_hook</vh></v>
+<v t="ekr.20190320124833.231"><vh>FrontendWidget._tab_pressed</vh></v>
+<v t="ekr.20190320124833.232"><vh>FrontendWidget._context_menu_make</vh></v>
+<v t="ekr.20190320124833.233"><vh>FrontendWidget.request_interrupt_kernel</vh></v>
+<v t="ekr.20190320124833.234"><vh>FrontendWidget.request_restart_kernel</vh></v>
+<v t="ekr.20190320124833.235"><vh>FrontendWidget._event_filter_console_keypress</vh></v>
+<v t="ekr.20190320124833.236"><vh>FrontendWidget._insert_continuation_prompt</vh></v>
+<v t="ekr.20190320124833.237"><vh>FrontendWidget._handle_clear_output</vh></v>
+<v t="ekr.20190320124833.238"><vh>FrontendWidget._silent_exec_callback</vh></v>
+<v t="ekr.20190320124833.239"><vh>FrontendWidget._handle_exec_callback</vh></v>
+<v t="ekr.20190320124833.240"><vh>FrontendWidget._handle_execute_reply</vh></v>
+<v t="ekr.20190320124833.241"><vh>FrontendWidget._handle_error</vh></v>
+<v t="ekr.20190320124833.242"><vh>FrontendWidget._handle_input_request</vh></v>
+<v t="ekr.20190320124833.243"><vh>FrontendWidget._kernel_restarted_message</vh></v>
+<v t="ekr.20190320124833.244"><vh>FrontendWidget._handle_kernel_died</vh></v>
+<v t="ekr.20190320124833.245"><vh>FrontendWidget._handle_kernel_restarted</vh></v>
+<v t="ekr.20190320124833.246"><vh>FrontendWidget._handle_inspect_reply</vh></v>
+<v t="ekr.20190320124833.247"><vh>FrontendWidget._handle_execute_result</vh></v>
+<v t="ekr.20190320124833.248"><vh>FrontendWidget._handle_stream</vh></v>
+<v t="ekr.20190320124833.249"><vh>FrontendWidget._handle_shutdown_reply</vh></v>
+<v t="ekr.20190320124833.250"><vh>FrontendWidget._handle_status</vh></v>
+<v t="ekr.20190320124833.251"><vh>FrontendWidget._started_channels</vh></v>
+<v t="ekr.20190320124833.252"><vh>FrontendWidget.copy_raw</vh></v>
+<v t="ekr.20190320124833.253"><vh>FrontendWidget.interrupt_kernel</vh></v>
+<v t="ekr.20190320124833.254"><vh>FrontendWidget.reset</vh></v>
+<v t="ekr.20190320124833.255"><vh>FrontendWidget.restart_kernel</vh></v>
+<v t="ekr.20190320124833.256"><vh>FrontendWidget.append_stream</vh></v>
+<v t="ekr.20190320124833.257"><vh>FrontendWidget.flush_clearoutput</vh></v>
+<v t="ekr.20190320124833.258"><vh>FrontendWidget.clear_output</vh></v>
+<v t="ekr.20190320124833.259"><vh>FrontendWidget._auto_call_tip</vh></v>
+<v t="ekr.20190320124833.260"><vh>FrontendWidget._call_tip</vh></v>
+<v t="ekr.20190320124833.261"><vh>FrontendWidget._complete</vh></v>
+<v t="ekr.20190320124833.262"><vh>FrontendWidget._process_execute_abort</vh></v>
+<v t="ekr.20190320124833.263"><vh>FrontendWidget._process_execute_error</vh></v>
+<v t="ekr.20190320124833.264"><vh>FrontendWidget._process_execute_ok</vh></v>
+<v t="ekr.20190320124833.265"><vh>FrontendWidget._process_execute_payload</vh></v>
+<v t="ekr.20190320124833.266"><vh>FrontendWidget._show_interpreter_prompt</vh></v>
+<v t="ekr.20190320124833.267"><vh>FrontendWidget._show_interpreter_prompt_for_reply</vh></v>
+<v t="ekr.20190320124833.268"><vh>FrontendWidget._document_contents_change</vh></v>
+<v t="ekr.20190320124833.269"><vh>FrontendWidget._banner_default</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.270"><vh>@@clean history_console_widget.py</vh>
+<v t="ekr.20190320124833.271"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.272"><vh>class HistoryConsoleWidget(ConsoleWidget)</vh>
+<v t="ekr.20190320124833.273"><vh>HistoryConsoleWidget.__init__</vh></v>
+<v t="ekr.20190320124833.274"><vh>HistoryConsoleWidget.execute</vh></v>
+<v t="ekr.20190320124833.275"><vh>HistoryConsoleWidget._up_pressed</vh></v>
+<v t="ekr.20190320124833.276"><vh>HistoryConsoleWidget._down_pressed</vh></v>
+<v t="ekr.20190320124833.277"><vh>HistoryConsoleWidget.history_previous</vh></v>
+<v t="ekr.20190320124833.278"><vh>HistoryConsoleWidget.history_next</vh></v>
+<v t="ekr.20190320124833.279"><vh>HistoryConsoleWidget.history_tail</vh></v>
+<v t="ekr.20190320124833.280"><vh>HistoryConsoleWidget._history_locked</vh></v>
+<v t="ekr.20190320124833.281"><vh>HistoryConsoleWidget._get_edited_history</vh></v>
+<v t="ekr.20190320124833.282"><vh>HistoryConsoleWidget._set_history</vh></v>
+<v t="ekr.20190320124833.283"><vh>HistoryConsoleWidget._store_edits</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.284"><vh>@@clean inprocess.py</vh>
+<v t="ekr.20190320124833.285"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.286"><vh>class QtInProcessChannel</vh>
+<v t="ekr.20190320124833.287"><vh>QtInProcessChannel.start</vh></v>
+<v t="ekr.20190320124833.288"><vh>QtInProcessChannel.stop</vh></v>
+<v t="ekr.20190320124833.289"><vh>QtInProcessChannel.call_handlers_later</vh></v>
+<v t="ekr.20190320124833.290"><vh>QtInProcessChannel.call_handlers</vh></v>
+<v t="ekr.20190320124833.291"><vh>QtInProcessChannel.process_events</vh></v>
+<v t="ekr.20190320124833.292"><vh>QtInProcessChannel.flush</vh></v>
+</v>
+<v t="ekr.20190320124833.293"><vh>class QtInProcessHBChannel</vh></v>
+<v t="ekr.20190320124833.294"><vh>class QtInProcessKernelClient</vh></v>
+<v t="ekr.20190320124833.295"><vh>class QtInProcessKernelManager</vh></v>
+<v t="ekr.20190320124833.296"><vh>class QtInProcessRichJupyterWidget(RichJupyterWidget)</vh>
+<v t="ekr.20190320124833.297"><vh>QtInProcessRichJupyterWidget._is_complete</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.298"><vh>@@clean ipython_widget.py</vh>
+<v t="ekr.20190320124833.299"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124833.300"><vh>@@clean jupyter_widget.py</vh>
+<v t="ekr.20190320124833.301"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.302"><vh>class IPythonWidget(FrontendWidget)</vh></v>
+<v t="ekr.20190320124833.303"><vh>class JupyterWidget(IPythonWidget)</vh>
+<v t="ekr.20190320124833.304"><vh>JupyterWidget.__init__</vh></v>
+<v t="ekr.20190320124833.305"><vh>JupyterWidget._handle_complete_reply</vh></v>
+<v t="ekr.20190320124833.306"><vh>JupyterWidget._handle_execute_reply</vh></v>
+<v t="ekr.20190320124833.307"><vh>JupyterWidget._handle_history_reply</vh></v>
+<v t="ekr.20190320124833.308"><vh>JupyterWidget._insert_other_input</vh></v>
+<v t="ekr.20190320124833.309"><vh>JupyterWidget._handle_execute_input</vh></v>
+<v t="ekr.20190320124833.310"><vh>JupyterWidget._handle_execute_result</vh></v>
+<v t="ekr.20190320124833.311"><vh>JupyterWidget._handle_display_data</vh></v>
+<v t="ekr.20190320124833.312"><vh>JupyterWidget._handle_kernel_info_reply</vh></v>
+<v t="ekr.20190320124833.313"><vh>JupyterWidget._started_channels</vh></v>
+<v t="ekr.20190320124833.314"><vh>JupyterWidget._process_execute_error</vh></v>
+<v t="ekr.20190320124833.315"><vh>JupyterWidget._process_execute_payload</vh></v>
+<v t="ekr.20190320124833.316"><vh>JupyterWidget._show_interpreter_prompt</vh></v>
+<v t="ekr.20190320124833.317"><vh>JupyterWidget._show_interpreter_prompt_for_reply</vh></v>
+<v t="ekr.20190320124833.318"><vh>JupyterWidget.set_default_style</vh></v>
+<v t="ekr.20190320124833.319"><vh>JupyterWidget._edit</vh></v>
+<v t="ekr.20190320124833.320"><vh>JupyterWidget._make_in_prompt</vh></v>
+<v t="ekr.20190320124833.321"><vh>JupyterWidget._make_continuation_prompt</vh></v>
+<v t="ekr.20190320124833.322"><vh>JupyterWidget._make_out_prompt</vh></v>
+<v t="ekr.20190320124833.323"><vh>JupyterWidget._handle_payload_edit</vh></v>
+<v t="ekr.20190320124833.324"><vh>JupyterWidget._handle_payload_exit</vh></v>
+<v t="ekr.20190320124833.325"><vh>JupyterWidget._handle_payload_next_input</vh></v>
+<v t="ekr.20190320124833.326"><vh>JupyterWidget._handle_payload_page</vh></v>
+<v t="ekr.20190320124833.327"><vh>JupyterWidget._style_sheet_changed</vh></v>
+<v t="ekr.20190320124833.328"><vh>JupyterWidget._syntax_style_changed</vh></v>
+<v t="ekr.20190320124833.329"><vh>JupyterWidget._banner_default</vh></v>
+</v>
+<v t="ekr.20190320124833.330"><vh>class IPythonWidget(JupyterWidget)</vh>
+<v t="ekr.20190320124833.331"><vh>IPythonWidget.__init__</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.332"><vh>@@clean kernel_mixins.py</vh>
+<v t="ekr.20190320124833.333"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.334"><vh>class QtKernelRestarterMixin</vh></v>
+<v t="ekr.20190320124833.335"><vh>class QtKernelManagerMixin</vh></v>
+<v t="ekr.20190320124833.336"><vh>class QtKernelClientMixin</vh>
+<v t="ekr.20190320124833.337"><vh>QtKernelClientMixin.start_channels</vh></v>
+<v t="ekr.20190320124833.338"><vh>QtKernelClientMixin.stop_channels</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124833.339"><vh>@@clean kill_ring.py</vh>
+<v t="ekr.20190320124833.340"><vh>Declarations</vh></v>
+<v t="ekr.20190320124833.341"><vh>class KillRing(object)</vh>
+<v t="ekr.20190320124833.342"><vh>KillRing.__init__</vh></v>
+<v t="ekr.20190320124833.343"><vh>KillRing.clear</vh></v>
+<v t="ekr.20190320124833.344"><vh>KillRing.kill</vh></v>
+<v t="ekr.20190320124833.345"><vh>KillRing.yank</vh></v>
+<v t="ekr.20190320124833.346"><vh>KillRing.rotate</vh></v>
+</v>
+<v t="ekr.20190320124833.347"><vh>class QtKillRing(QtCore.QObject)</vh>
+<v t="ekr.20190320124833.348"><vh>QtKillRing.__init__</vh></v>
+<v t="ekr.20190320124833.349"><vh>QtKillRing.clear</vh></v>
+<v t="ekr.20190320124833.350"><vh>QtKillRing.kill</vh></v>
+<v t="ekr.20190320124833.351"><vh>QtKillRing.kill_cursor</vh></v>
+<v t="ekr.20190320124833.352"><vh>QtKillRing.yank</vh></v>
+<v t="ekr.20190320124833.353"><vh>QtKillRing.rotate</vh></v>
+<v t="ekr.20190320124833.354"><vh>QtKillRing._cursor_position_changed</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124834.1"><vh>@@clean mainwindow.py</vh>
+<v t="ekr.20190320124834.2"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.3"><vh>background</vh></v>
+<v t="ekr.20190320124834.4"><vh>class MainWindow(QtGui.QMainWindow)</vh>
+<v t="ekr.20190320124834.5"><vh>MainWindow.__init__</vh></v>
+<v t="ekr.20190320124834.6"><vh>MainWindow.update_tab_bar_visibility</vh></v>
+<v t="ekr.20190320124834.7"><vh>MainWindow.next_kernel_id</vh></v>
+<v t="ekr.20190320124834.8"><vh>MainWindow.next_external_kernel_id</vh></v>
+<v t="ekr.20190320124834.9"><vh>MainWindow.active_frontend</vh></v>
+<v t="ekr.20190320124834.10"><vh>MainWindow.create_tab_with_new_frontend</vh></v>
+<v t="ekr.20190320124834.11"><vh>MainWindow.set_window_title</vh></v>
+<v t="ekr.20190320124834.12"><vh>MainWindow.create_tab_with_existing_kernel</vh></v>
+<v t="ekr.20190320124834.13"><vh>MainWindow.create_tab_with_current_kernel</vh></v>
+<v t="ekr.20190320124834.14"><vh>MainWindow.set_tab_title</vh></v>
+<v t="ekr.20190320124834.15"><vh>MainWindow.close_tab</vh></v>
+<v t="ekr.20190320124834.16"><vh>MainWindow.add_tab_with_frontend</vh></v>
+<v t="ekr.20190320124834.17"><vh>MainWindow.next_tab</vh></v>
+<v t="ekr.20190320124834.18"><vh>MainWindow.prev_tab</vh></v>
+<v t="ekr.20190320124834.19"><vh>MainWindow.make_frontend_visible</vh></v>
+<v t="ekr.20190320124834.20"><vh>MainWindow.find_master_tab</vh></v>
+<v t="ekr.20190320124834.21"><vh>MainWindow.find_slave_widgets</vh></v>
+<v t="ekr.20190320124834.22"><vh>MainWindow.add_menu_action</vh></v>
+<v t="ekr.20190320124834.23"><vh>MainWindow.init_menu_bar</vh></v>
+<v t="ekr.20190320124834.24"><vh>MainWindow.init_file_menu</vh></v>
+<v t="ekr.20190320124834.25"><vh>MainWindow.init_edit_menu</vh></v>
+<v t="ekr.20190320124834.26"><vh>MainWindow.init_view_menu</vh></v>
+<v t="ekr.20190320124834.27"><vh>MainWindow.init_kernel_menu</vh></v>
+<v t="ekr.20190320124834.28"><vh>MainWindow.init_window_menu</vh></v>
+<v t="ekr.20190320124834.29"><vh>MainWindow.init_help_menu</vh></v>
+<v t="ekr.20190320124834.30"><vh>MainWindow._set_active_frontend_focus</vh></v>
+<v t="ekr.20190320124834.31"><vh>MainWindow.toggle_menu_bar</vh></v>
+<v t="ekr.20190320124834.32"><vh>MainWindow.toggleMinimized</vh></v>
+<v t="ekr.20190320124834.33"><vh>MainWindow._show_help</vh></v>
+<v t="ekr.20190320124834.34"><vh>MainWindow._open_online_help</vh></v>
+<v t="ekr.20190320124834.35"><vh>MainWindow.toggleMaximized</vh></v>
+<v t="ekr.20190320124834.36"><vh>MainWindow.toggleFullScreen</vh></v>
+<v t="ekr.20190320124834.37"><vh>MainWindow.set_paging_active_frontend</vh></v>
+<v t="ekr.20190320124834.38"><vh>MainWindow.close_active_frontend</vh></v>
+<v t="ekr.20190320124834.39"><vh>MainWindow.restart_kernel_active_frontend</vh></v>
+<v t="ekr.20190320124834.40"><vh>MainWindow.interrupt_kernel_active_frontend</vh></v>
+<v t="ekr.20190320124834.41"><vh>MainWindow.toggle_confirm_restart_active_frontend</vh></v>
+<v t="ekr.20190320124834.42"><vh>MainWindow.update_restart_checkbox</vh></v>
+<v t="ekr.20190320124834.43"><vh>MainWindow.clear_active_frontend</vh></v>
+<v t="ekr.20190320124834.44"><vh>MainWindow.cut_active_frontend</vh></v>
+<v t="ekr.20190320124834.45"><vh>MainWindow.copy_active_frontend</vh></v>
+<v t="ekr.20190320124834.46"><vh>MainWindow.copy_raw_active_frontend</vh></v>
+<v t="ekr.20190320124834.47"><vh>MainWindow.paste_active_frontend</vh></v>
+<v t="ekr.20190320124834.48"><vh>MainWindow.undo_active_frontend</vh></v>
+<v t="ekr.20190320124834.49"><vh>MainWindow.redo_active_frontend</vh></v>
+<v t="ekr.20190320124834.50"><vh>MainWindow.print_action_active_frontend</vh></v>
+<v t="ekr.20190320124834.51"><vh>MainWindow.export_action_active_frontend</vh></v>
+<v t="ekr.20190320124834.52"><vh>MainWindow.select_all_active_frontend</vh></v>
+<v t="ekr.20190320124834.53"><vh>MainWindow.increase_font_size_active_frontend</vh></v>
+<v t="ekr.20190320124834.54"><vh>MainWindow.decrease_font_size_active_frontend</vh></v>
+<v t="ekr.20190320124834.55"><vh>MainWindow.reset_font_size_active_frontend</vh></v>
+<v t="ekr.20190320124834.56"><vh>MainWindow.closeEvent</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124834.57"><vh>@@clean manager.py</vh>
+<v t="ekr.20190320124834.58"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.59"><vh>class QtKernelRestarter</vh>
+<v t="ekr.20190320124834.60"><vh>QtKernelRestarter.start</vh></v>
+<v t="ekr.20190320124834.61"><vh>QtKernelRestarter.stop</vh></v>
+<v t="ekr.20190320124834.62"><vh>QtKernelRestarter.poll</vh></v>
+</v>
+<v t="ekr.20190320124834.63"><vh>class QtKernelManager</vh>
+<v t="ekr.20190320124834.64"><vh>QtKernelManager.start_restarter</vh></v>
+<v t="ekr.20190320124834.65"><vh>QtKernelManager.stop_restarter</vh></v>
+<v t="ekr.20190320124834.66"><vh>QtKernelManager._handle_kernel_restarted</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124834.67"><vh>@@clean pygments_highlighter.py</vh>
+<v t="ekr.20190320124834.68"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.69"><vh>get_tokens_unprocessed</vh></v>
+<v t="ekr.20190320124834.70"><vh>class PygmentsBlockUserData(QtGui.QTextBlockUserData)</vh>
+<v t="ekr.20190320124834.71"><vh>PygmentsBlockUserData.__init__</vh></v>
+<v t="ekr.20190320124834.72"><vh>PygmentsBlockUserData.__repr__</vh></v>
+</v>
+<v t="ekr.20190320124834.73"><vh>class PygmentsHighlighter(QtGui.QSyntaxHighlighter)</vh>
+<v t="ekr.20190320124834.74"><vh>PygmentsHighlighter.__init__</vh></v>
+<v t="ekr.20190320124834.75"><vh>PygmentsHighlighter.highlightBlock</vh></v>
+<v t="ekr.20190320124834.76"><vh>PygmentsHighlighter.set_style</vh></v>
+<v t="ekr.20190320124834.77"><vh>PygmentsHighlighter.set_style_sheet</vh></v>
+<v t="ekr.20190320124834.78"><vh>PygmentsHighlighter._clear_caches</vh></v>
+<v t="ekr.20190320124834.79"><vh>PygmentsHighlighter._get_format</vh></v>
+<v t="ekr.20190320124834.80"><vh>PygmentsHighlighter._get_format_from_document</vh></v>
+<v t="ekr.20190320124834.81"><vh>PygmentsHighlighter._get_format_from_style</vh></v>
+<v t="ekr.20190320124834.82"><vh>PygmentsHighlighter._get_brush</vh></v>
+<v t="ekr.20190320124834.83"><vh>PygmentsHighlighter._get_color</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124834.84"><vh>@@clean qt.py</vh>
+<v t="ekr.20190320124834.85"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124834.86"><vh>@@clean qtconsoleapp.py</vh>
+<v t="ekr.20190320124834.87"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.88"><vh>class JupyterQtConsoleApp</vh>
+<v t="ekr.20190320124834.89"><vh>JupyterQtConsoleApp._plain_changed</vh></v>
+<v t="ekr.20190320124834.90"><vh>JupyterQtConsoleApp.parse_command_line</vh></v>
+<v t="ekr.20190320124834.91"><vh>JupyterQtConsoleApp.new_frontend_master</vh></v>
+<v t="ekr.20190320124834.92"><vh>JupyterQtConsoleApp.new_frontend_connection</vh></v>
+<v t="ekr.20190320124834.93"><vh>JupyterQtConsoleApp.new_frontend_slave</vh></v>
+<v t="ekr.20190320124834.94"><vh>JupyterQtConsoleApp.init_qt_app</vh></v>
+<v t="ekr.20190320124834.95"><vh>JupyterQtConsoleApp.init_qt_elements</vh></v>
+<v t="ekr.20190320124834.96"><vh>JupyterQtConsoleApp.init_colors</vh></v>
+<v t="ekr.20190320124834.97"><vh>JupyterQtConsoleApp.init_signal</vh></v>
+<v t="ekr.20190320124834.98"><vh>JupyterQtConsoleApp._deprecate_config</vh></v>
+<v t="ekr.20190320124834.99"><vh>JupyterQtConsoleApp.initialize</vh></v>
+<v t="ekr.20190320124834.100"><vh>JupyterQtConsoleApp.start</vh></v>
+</v>
+<v t="ekr.20190320124834.101"><vh>class IPythonQtConsoleApp(JupyterQtConsoleApp)</vh>
+<v t="ekr.20190320124834.102"><vh>IPythonQtConsoleApp.__init__</vh></v>
+</v>
+<v t="ekr.20190320124834.103"><vh>main</vh></v>
+</v>
+<v t="ekr.20190320124834.104"><vh>@@clean qt_loaders.py</vh>
+<v t="ekr.20190320124834.105"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.106"><vh>check_version</vh></v>
+<v t="ekr.20190320124834.107"><vh>class ImportDenier(object)</vh>
+<v t="ekr.20190320124834.108"><vh>ImportDenier.__init__</vh></v>
+<v t="ekr.20190320124834.109"><vh>ImportDenier.forbid</vh></v>
+<v t="ekr.20190320124834.110"><vh>ImportDenier.find_module</vh></v>
+<v t="ekr.20190320124834.111"><vh>ImportDenier.load_module</vh></v>
+</v>
+<v t="ekr.20190320124834.112"><vh>commit_api</vh></v>
+<v t="ekr.20190320124834.113"><vh>loaded_api</vh></v>
+<v t="ekr.20190320124834.114"><vh>has_binding</vh></v>
+<v t="ekr.20190320124834.115"><vh>has_binding_new</vh></v>
+<v t="ekr.20190320124834.116"><vh>qtapi_version</vh></v>
+<v t="ekr.20190320124834.117"><vh>can_import</vh></v>
+<v t="ekr.20190320124834.118"><vh>import_pyqt4</vh></v>
+<v t="ekr.20190320124834.119"><vh>import_pyqt5</vh></v>
+<v t="ekr.20190320124834.120"><vh>import_pyside</vh></v>
+<v t="ekr.20190320124834.121"><vh>import_pyside2</vh></v>
+<v t="ekr.20190320124834.122"><vh>load_qt</vh></v>
+<v t="ekr.20190320124834.123"><vh>load_qtest</vh></v>
+</v>
+<v t="ekr.20190320124834.124"><vh>@@clean rich_ipython_widget.py</vh>
+<v t="ekr.20190320124834.125"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124834.126"><vh>@@clean rich_jupyter_widget.py</vh>
+<v t="ekr.20190320124834.127"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.128"><vh>class LatexError(Exception)</vh></v>
+<v t="ekr.20190320124834.129"><vh>class RichIPythonWidget(JupyterWidget)</vh></v>
+<v t="ekr.20190320124834.130"><vh>class RichJupyterWidget(RichIPythonWidget)</vh>
+<v t="ekr.20190320124834.131"><vh>RichJupyterWidget.__init__</vh></v>
+<v t="ekr.20190320124834.132"><vh>RichJupyterWidget.export_html</vh></v>
+<v t="ekr.20190320124834.133"><vh>RichJupyterWidget._context_menu_make</vh></v>
+<v t="ekr.20190320124834.134"><vh>RichJupyterWidget._pre_image_append</vh></v>
+<v t="ekr.20190320124834.135"><vh>RichJupyterWidget._handle_execute_result</vh></v>
+<v t="ekr.20190320124834.136"><vh>RichJupyterWidget._handle_display_data</vh></v>
+<v t="ekr.20190320124834.137"><vh>RichJupyterWidget._is_latex_math</vh></v>
+<v t="ekr.20190320124834.138"><vh>RichJupyterWidget._append_latex</vh></v>
+<v t="ekr.20190320124834.139"><vh>RichJupyterWidget._append_jpg</vh></v>
+<v t="ekr.20190320124834.140"><vh>RichJupyterWidget._append_png</vh></v>
+<v t="ekr.20190320124834.141"><vh>RichJupyterWidget._append_svg</vh></v>
+<v t="ekr.20190320124834.142"><vh>RichJupyterWidget._add_image</vh></v>
+<v t="ekr.20190320124834.143"><vh>RichJupyterWidget._copy_image</vh></v>
+<v t="ekr.20190320124834.144"><vh>RichJupyterWidget._get_image</vh></v>
+<v t="ekr.20190320124834.145"><vh>RichJupyterWidget._get_image_tag</vh></v>
+<v t="ekr.20190320124834.146"><vh>RichJupyterWidget._insert_jpg</vh></v>
+<v t="ekr.20190320124834.147"><vh>RichJupyterWidget._insert_png</vh></v>
+<v t="ekr.20190320124834.148"><vh>RichJupyterWidget._insert_img</vh></v>
+<v t="ekr.20190320124834.149"><vh>RichJupyterWidget._insert_svg</vh></v>
+<v t="ekr.20190320124834.150"><vh>RichJupyterWidget._save_image</vh></v>
+</v>
+<v t="ekr.20190320124834.151"><vh>class RichIPythonWidget(RichJupyterWidget)</vh>
+<v t="ekr.20190320124834.152"><vh>RichIPythonWidget.__init__</vh></v>
+</v>
+</v>
+<v t="ekr.20190320124834.153"><vh>@@clean rich_text.py</vh>
+<v t="ekr.20190320124834.154"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.155"><vh>class HtmlExporter(object)</vh>
+<v t="ekr.20190320124834.156"><vh>HtmlExporter.__init__</vh></v>
+<v t="ekr.20190320124834.157"><vh>HtmlExporter.export</vh></v>
+</v>
+<v t="ekr.20190320124834.158"><vh>export_html</vh></v>
+<v t="ekr.20190320124834.159"><vh>export_xhtml</vh></v>
+<v t="ekr.20190320124834.160"><vh>default_image_tag</vh></v>
+<v t="ekr.20190320124834.161"><vh>fix_html</vh></v>
+</v>
+<v t="ekr.20190320124834.162"><vh>@@clean styles.py</vh>
+<v t="ekr.20190320124834.163"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.164"><vh>hex_to_rgb</vh></v>
+<v t="ekr.20190320124834.165"><vh>dark_color</vh></v>
+<v t="ekr.20190320124834.166"><vh>dark_style</vh></v>
+<v t="ekr.20190320124834.167"><vh>get_colors</vh></v>
+<v t="ekr.20190320124834.168"><vh>sheet_from_template</vh></v>
+</v>
+<v t="ekr.20190320124834.169"><vh>@@clean svg.py</vh>
+<v t="ekr.20190320124834.170"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.171"><vh>save_svg</vh></v>
+<v t="ekr.20190320124834.172"><vh>svg_to_clipboard</vh></v>
+<v t="ekr.20190320124834.173"><vh>svg_to_image</vh></v>
+</v>
+<v t="ekr.20190320124834.174"><vh>@@clean usage.py</vh>
+<v t="ekr.20190320124834.175"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124834.176"><vh>@@clean util.py</vh>
+<v t="ekr.20190320124834.177"><vh>Declarations</vh></v>
+<v t="ekr.20190320124834.178"><vh>class MetaQObjectHasTraits</vh>
+<v t="ekr.20190320124834.179"><vh>MetaQObjectHasTraits.__new__</vh></v>
+<v t="ekr.20190320124834.180"><vh>MetaQObjectHasTraits.__init__</vh></v>
+</v>
+<v t="ekr.20190320124834.181"><vh>superQ</vh></v>
+<v t="ekr.20190320124834.182"><vh>get_font</vh></v>
+</v>
+<v t="ekr.20190320124834.183"><vh>@@clean _version.py</vh>
+<v t="ekr.20190320124834.184"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124834.185"><vh>@@clean __init__.py</vh>
+<v t="ekr.20190320124834.186"><vh>Declarations</vh></v>
+</v>
+<v t="ekr.20190320124834.187"><vh>@@clean __main__.py</vh></v>
+</v>
+<v t="ekr.20190322033009.1"><vh>----- pygments/styles</vh>
+<v t="ekr.20190320063830.1572"></v>
+<v t="ekr.20190320063830.1618"></v>
+<v t="ekr.20190321181356.1"><vh>@@clean solarized.py</vh></v>
+</v>
+<v t="ekr.20190322041546.1"><vh>----- Live leonine style</vh></v>
+<v t="ekr.20190321180417.1"><vh>@clean styles/leonine.py</vh></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20190320063830.1">@language rest
@@ -10626,6 +11245,11 @@ __all__ = ['SmalltalkLexer', 'NewspeakLexer']
 </t>
 <t tx="ekr.20190320063830.122">@path C:/Anaconda3/Lib/site-packages/pygments/
 # -*- coding: utf-8 -*-
+"""Basic style object."""
+
+from pygments.token import Token, STANDARD_TYPES
+from pygments.util import add_metaclass
+&lt;&lt; define _ansimap &gt;&gt;
 @others
 @language python
 @tabwidth -4
@@ -10852,20 +11476,7 @@ line_re = re.compile(b'.*?\n')
     return TextLexer.priority
 
 </t>
-<t tx="ekr.20190320063830.123">"""
-    pygments.style
-    ~~~~~~~~~~~~~~
-
-    Basic style object.
-
-    :copyright: Copyright 2006-2017 by the Pygments team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
-"""
-
-from pygments.token import Token, STANDARD_TYPES
-from pygments.util import add_metaclass
-
-# Default mapping of #ansixxx to RGB colors.
+<t tx="ekr.20190320063830.123"># Default mapping of #ansixxx to RGB colors.
 _ansimap = {
     # dark
     '#ansiblack': '000000',
@@ -10887,8 +11498,6 @@ _ansimap = {
     '#ansiwhite': 'ffffff',
 }
 ansicolors = set(_ansimap)
-
-
 </t>
 <t tx="ekr.20190320063830.1230">class RawTokenLexer(Lexer):
     """
@@ -11411,7 +12020,6 @@ next = __next__
                     ndef[8] = 1
                 else:
                     ndef[0] = colorformat(styledef)
-
     return obj
 
 </t>
@@ -13408,6 +14016,7 @@ class Style(object):
     parent = None
 
     @others
+
 Token = _TokenType()
 
 # Special token types
@@ -13436,8 +14045,6 @@ Generic = Token.Generic
 Token.Token = Token
 Token.String = String
 Token.Number = Number
-
-
 </t>
 <t tx="ekr.20190320063830.1340">def __init__(self, **options):
     super(HtmlPhpLexer, self).__init__(HtmlLexer, PhpLexer, **options)
@@ -88818,7 +89425,8 @@ __all__ = ['SourcePawnLexer', 'PawnLexer']
 g.cls()
 c.recursiveImport(
     # r'C:\leo.repo\pywasm\pywasm',
-    r'C:\Anaconda3\Lib\site-packages\pygments',
+    # r'C:\Anaconda3\Lib\site-packages\pygments',
+    r'C:\Anaconda3\Lib\site-packages\qtconsole',
     kind = '@clean', # '@auto', '@clean', '@nosent','@file',
     add_path = True,
     recursive = True,
@@ -88827,5 +89435,9739 @@ c.recursiveImport(
 )
 # c.expandAllSubheads()
 </t>
+<t tx="ekr.20190320124023.1"></t>
+<t tx="ekr.20190320124833.10">def set_osc_code(self, params):
+    """ Set attributes based on OSC (Operating System Command) parameters.
+
+    Parameters
+    ----------
+    params : sequence of str
+        The parameters for the command.
+    """
+    try:
+        command = int(params.pop(0))
+    except (IndexError, ValueError):
+        return
+
+    if command == 4:
+        # xterm-specific: set color number to color spec.
+        try:
+            color = int(params.pop(0))
+            spec = params.pop(0)
+            self.color_map[color] = self._parse_xterm_color_spec(spec)
+        except (IndexError, ValueError):
+            pass
+
+</t>
+<t tx="ekr.20190320124833.100">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.101">"""A dropdown completer widget for the qtconsole."""
+
+from qtconsole.qt import QtCore, QtGui
+
+
+</t>
+<t tx="ekr.20190320124833.102">class CompletionWidget(QtGui.QListWidget):
+    """ A widget for GUI tab completion.
+    """
+
+    #--------------------------------------------------------------------------
+    # 'QObject' interface
+    #--------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.103">def __init__(self, console_widget):
+    """ Create a completion widget that is attached to the specified Qt
+        text edit widget.
+    """
+    text_edit = console_widget._control
+    assert isinstance(text_edit, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(CompletionWidget, self).__init__()
+
+    self._text_edit = text_edit
+    self.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+    self.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+    self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+    self.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+
+    # We need Popup style to ensure correct mouse interaction
+    # (dialog would dissappear on mouse click with ToolTip style)
+    self.setWindowFlags(QtCore.Qt.Popup)
+
+    self.setAttribute(QtCore.Qt.WA_StaticContents)
+    original_policy = text_edit.focusPolicy()
+
+    self.setFocusPolicy(QtCore.Qt.NoFocus)
+    text_edit.setFocusPolicy(original_policy)
+
+    # Ensure that the text edit keeps focus when widget is displayed.
+    self.setFocusProxy(self._text_edit)
+
+    self.setFrameShadow(QtGui.QFrame.Plain)
+    self.setFrameShape(QtGui.QFrame.StyledPanel)
+
+    self.itemActivated.connect(self._complete_current)
+
+</t>
+<t tx="ekr.20190320124833.104">def eventFilter(self, obj, event):
+    """ Reimplemented to handle mouse input and to auto-hide when the
+        text edit loses focus.
+    """
+    if obj is self:
+        if event.type() == QtCore.QEvent.MouseButtonPress:
+            pos = self.mapToGlobal(event.pos())
+            target = QtGui.QApplication.widgetAt(pos)
+            if (target and self.isAncestorOf(target) or target is self):
+                return False
+            else:
+                self.cancel_completion()
+
+    return super(CompletionWidget, self).eventFilter(obj, event)
+
+</t>
+<t tx="ekr.20190320124833.105">def keyPressEvent(self, event):
+    key = event.key()
+    if key in (QtCore.Qt.Key_Return, QtCore.Qt.Key_Enter,
+               QtCore.Qt.Key_Tab):
+        self._complete_current()
+    elif key == QtCore.Qt.Key_Escape:
+        self.hide()
+    elif key in (QtCore.Qt.Key_Up, QtCore.Qt.Key_Down,
+                 QtCore.Qt.Key_PageUp, QtCore.Qt.Key_PageDown,
+                 QtCore.Qt.Key_Home, QtCore.Qt.Key_End):
+        return super(CompletionWidget, self).keyPressEvent(event)
+    else:
+        QtGui.QApplication.sendEvent(self._text_edit, event)
+
+#--------------------------------------------------------------------------
+# 'QWidget' interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.106">def hideEvent(self, event):
+    """ Reimplemented to disconnect signal handlers and event filter.
+    """
+    super(CompletionWidget, self).hideEvent(event)
+    self._text_edit.cursorPositionChanged.disconnect(self._update_current)
+    self.removeEventFilter(self)
+
+</t>
+<t tx="ekr.20190320124833.107">def showEvent(self, event):
+    """ Reimplemented to connect signal handlers and event filter.
+    """
+    super(CompletionWidget, self).showEvent(event)
+    self._text_edit.cursorPositionChanged.connect(self._update_current)
+    self.installEventFilter(self)
+
+#--------------------------------------------------------------------------
+# 'CompletionWidget' interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.108">def show_items(self, cursor, items):
+    """ Shows the completion widget with 'items' at the position specified
+        by 'cursor'.
+    """
+    text_edit = self._text_edit
+    point = text_edit.cursorRect(cursor).bottomRight()
+    point = text_edit.mapToGlobal(point)
+    self.clear()
+    self.addItems(items)
+    height = self.sizeHint().height()
+    screen_rect = QtGui.QApplication.desktop().availableGeometry(self)
+    if (screen_rect.size().height() + screen_rect.y() -
+            point.y() - height &lt; 0):
+        point = text_edit.mapToGlobal(text_edit.cursorRect().topRight())
+        point.setY(point.y() - height)
+    w = (self.sizeHintForColumn(0) +
+         self.verticalScrollBar().sizeHint().width())
+    self.setGeometry(point.x(), point.y(), w, height)
+    self._start_position = cursor.position()
+    self.setCurrentRow(0)
+    self.raise_()
+    self.show()
+
+#--------------------------------------------------------------------------
+# Protected interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.109">def _complete_current(self):
+    """ Perform the completion with the currently selected item.
+    """
+    self._current_text_cursor().insertText(self.currentItem().text())
+    self.hide()
+
+</t>
+<t tx="ekr.20190320124833.11">def set_sgr_code(self, params):
+    """ Set attributes based on SGR (Select Graphic Rendition) codes.
+
+    Parameters
+    ----------
+    params : sequence of ints
+        A list of SGR codes for one or more SGR commands. Usually this
+        sequence will have one element per command, although certain
+        xterm-specific commands requires multiple elements.
+    """
+    # Always consume the first parameter.
+    if not params:
+        return
+    code = params.pop(0)
+
+    if code == 0:
+        self.reset_sgr()
+    elif code == 1:
+        if self.bold_text_enabled:
+            self.bold = True
+        else:
+            self.intensity = 1
+    elif code == 2:
+        self.intensity = 0
+    elif code == 3:
+        self.italic = True
+    elif code == 4:
+        self.underline = True
+    elif code == 22:
+        self.intensity = 0
+        self.bold = False
+    elif code == 23:
+        self.italic = False
+    elif code == 24:
+        self.underline = False
+    elif code &gt;= 30 and code &lt;= 37:
+        self.foreground_color = code - 30
+    elif code == 38 and params:
+        _color_type = params.pop(0)
+        if _color_type == 5 and params:
+            # xterm-specific: 256 color support.
+            self.foreground_color = params.pop(0)
+        elif _color_type == 2:
+            # 24bit true colour support.
+            self.foreground_color = params[:3]
+            params[:3] = []
+    elif code == 39:
+        self.foreground_color = None
+    elif code &gt;= 40 and code &lt;= 47:
+        self.background_color = code - 40
+    elif code == 48 and params:
+        _color_type = params.pop(0)
+        if _color_type == 5 and params:
+            # xterm-specific: 256 color support.
+            self.background_color = params.pop(0)
+        elif _color_type == 2:
+            # 24bit true colour support.
+            self.background_color = params[:3]
+            params[:3] = []
+    elif code == 49:
+        self.background_color = None
+
+    # Recurse with unconsumed parameters.
+    self.set_sgr_code(params)
+
+#---------------------------------------------------------------------------
+# Protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.110">def _current_text_cursor(self):
+    """ Returns a cursor with text between the start position and the
+        current position selected.
+    """
+    cursor = self._text_edit.textCursor()
+    if cursor.position() &gt;= self._start_position:
+        cursor.setPosition(self._start_position,
+                           QtGui.QTextCursor.KeepAnchor)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.111">def _update_current(self):
+    """ Updates the current item based on the current text.
+    """
+    prefix = self._current_text_cursor().selection().toPlainText()
+    if prefix:
+        items = self.findItems(prefix, (QtCore.Qt.MatchStartsWith |
+                                        QtCore.Qt.MatchCaseSensitive))
+        if items:
+            self.setCurrentItem(items[0])
+        else:
+            self.hide()
+    else:
+        self.hide()
+
+</t>
+<t tx="ekr.20190320124833.112">def cancel_completion(self):
+    self.hide()
+</t>
+<t tx="ekr.20190320124833.113">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.114">"""An abstract base class for console-type widgets."""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+import os
+import os.path
+import re
+import sys
+from textwrap import dedent
+import time
+from unicodedata import category
+import webbrowser
+
+from qtconsole.qt import QtCore, QtGui
+
+from traitlets.config.configurable import LoggingConfigurable
+from qtconsole.rich_text import HtmlExporter
+from qtconsole.util import MetaQObjectHasTraits, get_font, superQ
+from ipython_genutils.text import columnize
+from traitlets import Bool, Enum, Integer, Unicode
+from .ansi_code_processor import QtAnsiCodeProcessor
+from .completion_widget import CompletionWidget
+from .completion_html import CompletionHtml
+from .completion_plain import CompletionPlain
+from .kill_ring import QtKillRing
+
+
+</t>
+<t tx="ekr.20190320124833.115">def is_letter_or_number(char):
+    """ Returns whether the specified unicode character is a letter or a number.
+    """
+    cat = category(char)
+    return cat.startswith('L') or cat.startswith('N')
+
+#-----------------------------------------------------------------------------
+# Classes
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.116">class ConsoleWidget(MetaQObjectHasTraits('NewBase', (LoggingConfigurable, superQ(QtGui.QWidget)), {})):
+    """ An abstract base class for console-type widgets. This class has
+        functionality for:
+
+            * Maintaining a prompt and editing region
+            * Providing the traditional Unix-style console keyboard shortcuts
+            * Performing tab completion
+            * Paging text
+            * Handling ANSI escape codes
+
+        ConsoleWidget also provides a number of utility methods that will be
+        convenient to implementors of a console-style widget.
+    """
+
+    #------ Configuration ------------------------------------------------------
+
+    ansi_codes = Bool(True, config=True,
+        help="Whether to process ANSI escape codes."
+    )
+    buffer_size = Integer(500, config=True,
+        help="""
+        The maximum number of lines of text before truncation. Specifying a
+        non-positive number disables text truncation (not recommended).
+        """
+    )
+    execute_on_complete_input = Bool(True, config=True,
+        help="""Whether to automatically execute on syntactically complete input.
+        
+        If False, Shift-Enter is required to submit each execution.
+        Disabling this is mainly useful for non-Python kernels,
+        where the completion check would be wrong.
+        """
+    )
+    gui_completion = Enum(['plain', 'droplist', 'ncurses'], config=True,
+                    default_value = 'ncurses',
+                    help="""
+                    The type of completer to use. Valid values are:
+
+                    'plain'   : Show the available completion as a text list
+                                Below the editing area.
+                    'droplist': Show the completion in a drop down list navigable
+                                by the arrow keys, and from which you can select
+                                completion by pressing Return.
+                    'ncurses' : Show the completion as a text list which is navigable by
+                                `tab` and arrow keys.
+                    """
+    )
+    # NOTE: this value can only be specified during initialization.
+    kind = Enum(['plain', 'rich'], default_value='plain', config=True,
+        help="""
+        The type of underlying text widget to use. Valid values are 'plain',
+        which specifies a QPlainTextEdit, and 'rich', which specifies a
+        QTextEdit.
+        """
+    )
+    # NOTE: this value can only be specified during initialization.
+    paging = Enum(['inside', 'hsplit', 'vsplit', 'custom', 'none'],
+                  default_value='inside', config=True,
+        help="""
+        The type of paging to use. Valid values are:
+
+        'inside'
+           The widget pages like a traditional terminal.
+        'hsplit'
+           When paging is requested, the widget is split horizontally. The top
+           pane contains the console, and the bottom pane contains the paged text.
+        'vsplit'
+           Similar to 'hsplit', except that a vertical splitter is used.
+        'custom'
+           No action is taken by the widget beyond emitting a
+           'custom_page_requested(str)' signal.
+        'none'
+           The text is written directly to the console.
+        """)
+
+    font_family = Unicode(config=True,
+        help="""The font family to use for the console.
+        On OSX this defaults to Monaco, on Windows the default is
+        Consolas with fallback of Courier, and on other platforms
+        the default is Monospace.
+        """)
+    @others
+</t>
+<t tx="ekr.20190320124833.117">def _font_family_default(self):
+    if sys.platform == 'win32':
+        # Consolas ships with Vista/Win7, fallback to Courier if needed
+        return 'Consolas'
+    elif sys.platform == 'darwin':
+        # OSX always has Monaco, no need for a fallback
+        return 'Monaco'
+    else:
+        # Monospace should always exist, no need for a fallback
+        return 'Monospace'
+
+font_size = Integer(config=True,
+    help="""The font size. If unconfigured, Qt will be entrusted
+    with the size of the font.
+    """)
+
+console_width = Integer(81, config=True,
+    help="""The width of the console at start time in number
+    of characters (will double with `hsplit` paging)
+    """)
+
+console_height = Integer(25, config=True,
+    help="""The height of the console at start time in number
+    of characters (will double with `vsplit` paging)
+    """)
+
+# Whether to override ShortcutEvents for the keybindings defined by this
+# widget (Ctrl+n, Ctrl+a, etc). Enable this if you want this widget to take
+# priority (when it has focus) over, e.g., window-level menu shortcuts.
+override_shortcuts = Bool(False)
+
+# ------ Custom Qt Widgets -------------------------------------------------
+
+# For other projects to easily override the Qt widgets used by the console
+# (e.g. Spyder)
+custom_control = None
+custom_page_control = None
+
+#------ Signals ------------------------------------------------------------
+
+# Signals that indicate ConsoleWidget state.
+copy_available = QtCore.Signal(bool)
+redo_available = QtCore.Signal(bool)
+undo_available = QtCore.Signal(bool)
+
+# Signal emitted when paging is needed and the paging style has been
+# specified as 'custom'.
+custom_page_requested = QtCore.Signal(object)
+
+# Signal emitted when the font is changed.
+font_changed = QtCore.Signal(QtGui.QFont)
+
+#------ Protected class variables ------------------------------------------
+
+# control handles
+_control = None
+_page_control = None
+_splitter = None
+
+# When the control key is down, these keys are mapped.
+_ctrl_down_remap = { QtCore.Qt.Key_B : QtCore.Qt.Key_Left,
+                     QtCore.Qt.Key_F : QtCore.Qt.Key_Right,
+                     QtCore.Qt.Key_A : QtCore.Qt.Key_Home,
+                     QtCore.Qt.Key_P : QtCore.Qt.Key_Up,
+                     QtCore.Qt.Key_N : QtCore.Qt.Key_Down,
+                     QtCore.Qt.Key_H : QtCore.Qt.Key_Backspace, }
+if not sys.platform == 'darwin':
+    # On OS X, Ctrl-E already does the right thing, whereas End moves the
+    # cursor to the bottom of the buffer.
+    _ctrl_down_remap[QtCore.Qt.Key_E] = QtCore.Qt.Key_End
+
+# The shortcuts defined by this widget. We need to keep track of these to
+# support 'override_shortcuts' above.
+_shortcuts = set(_ctrl_down_remap.keys()) | \
+                 { QtCore.Qt.Key_C, QtCore.Qt.Key_G, QtCore.Qt.Key_O,
+                   QtCore.Qt.Key_V }
+
+_temp_buffer_filled = False
+
+#---------------------------------------------------------------------------
+# 'QObject' interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.118">def __init__(self, parent=None, **kw):
+    """ Create a ConsoleWidget.
+
+    Parameters
+    ----------
+    parent : QWidget, optional [default None]
+        The parent for this widget.
+    """
+    super(ConsoleWidget, self).__init__(**kw)
+    if parent:
+        self.setParent(parent)
+
+    # While scrolling the pager on Mac OS X, it tears badly.  The
+    # NativeGesture is platform and perhaps build-specific hence
+    # we take adequate precautions here.
+    self._pager_scroll_events = [QtCore.QEvent.Wheel]
+    if hasattr(QtCore.QEvent, 'NativeGesture'):
+        self._pager_scroll_events.append(QtCore.QEvent.NativeGesture)
+
+    # Create the layout and underlying text widget.
+    layout = QtGui.QStackedLayout(self)
+    layout.setContentsMargins(0, 0, 0, 0)
+    self._control = self._create_control()
+    if self.paging in ('hsplit', 'vsplit'):
+        self._splitter = QtGui.QSplitter()
+        if self.paging == 'hsplit':
+            self._splitter.setOrientation(QtCore.Qt.Horizontal)
+        else:
+            self._splitter.setOrientation(QtCore.Qt.Vertical)
+        self._splitter.addWidget(self._control)
+        layout.addWidget(self._splitter)
+    else:
+        layout.addWidget(self._control)
+
+    # Create the paging widget, if necessary.
+    if self.paging in ('inside', 'hsplit', 'vsplit'):
+        self._page_control = self._create_page_control()
+        if self._splitter:
+            self._page_control.hide()
+            self._splitter.addWidget(self._page_control)
+        else:
+            layout.addWidget(self._page_control)
+
+    # Initialize protected variables. Some variables contain useful state
+    # information for subclasses; they should be considered read-only.
+    self._append_before_prompt_cursor = self._control.textCursor()
+    self._ansi_processor = QtAnsiCodeProcessor()
+    if self.gui_completion == 'ncurses':
+        self._completion_widget = CompletionHtml(self)
+    elif self.gui_completion == 'droplist':
+        self._completion_widget = CompletionWidget(self)
+    elif self.gui_completion == 'plain':
+        self._completion_widget = CompletionPlain(self)
+
+    self._continuation_prompt = '&gt; '
+    self._continuation_prompt_html = None
+    self._executing = False
+    self._filter_resize = False
+    self._html_exporter = HtmlExporter(self._control)
+    self._input_buffer_executing = ''
+    self._input_buffer_pending = ''
+    self._kill_ring = QtKillRing(self._control)
+    self._prompt = ''
+    self._prompt_html = None
+    self._prompt_cursor = self._control.textCursor()
+    self._prompt_sep = ''
+    self._reading = False
+    self._reading_callback = None
+    self._tab_width = 8
+
+    # List of strings pending to be appended as plain text in the widget.
+    # The text is not immediately inserted when available to not
+    # choke the Qt event loop with paint events for the widget in
+    # case of lots of output from kernel.
+    self._pending_insert_text = []
+
+    # Timer to flush the pending stream messages. The interval is adjusted
+    # later based on actual time taken for flushing a screen (buffer_size)
+    # of output text.
+    self._pending_text_flush_interval = QtCore.QTimer(self._control)
+    self._pending_text_flush_interval.setInterval(100)
+    self._pending_text_flush_interval.setSingleShot(True)
+    self._pending_text_flush_interval.timeout.connect(
+                                        self._on_flush_pending_stream_timer)
+
+    # Set a monospaced font.
+    self.reset_font()
+
+    # Configure actions.
+    action = QtGui.QAction('Print', None)
+    action.setEnabled(True)
+    printkey = QtGui.QKeySequence(QtGui.QKeySequence.Print)
+    if printkey.matches("Ctrl+P") and sys.platform != 'darwin':
+        # Only override the default if there is a collision.
+        # Qt ctrl = cmd on OSX, so the match gets a false positive on OSX.
+        printkey = "Ctrl+Shift+P"
+    action.setShortcut(printkey)
+    action.setShortcutContext(QtCore.Qt.WidgetWithChildrenShortcut)
+    action.triggered.connect(self.print_)
+    self.addAction(action)
+    self.print_action = action
+
+    action = QtGui.QAction('Save as HTML/XML', None)
+    action.setShortcut(QtGui.QKeySequence.Save)
+    action.setShortcutContext(QtCore.Qt.WidgetWithChildrenShortcut)
+    action.triggered.connect(self.export_html)
+    self.addAction(action)
+    self.export_action = action
+
+    action = QtGui.QAction('Select All', None)
+    action.setEnabled(True)
+    selectall = QtGui.QKeySequence(QtGui.QKeySequence.SelectAll)
+    if selectall.matches("Ctrl+A") and sys.platform != 'darwin':
+        # Only override the default if there is a collision.
+        # Qt ctrl = cmd on OSX, so the match gets a false positive on OSX.
+        selectall = "Ctrl+Shift+A"
+    action.setShortcut(selectall)
+    action.setShortcutContext(QtCore.Qt.WidgetWithChildrenShortcut)
+    action.triggered.connect(self.select_all)
+    self.addAction(action)
+    self.select_all_action = action
+
+    self.increase_font_size = QtGui.QAction("Bigger Font",
+            self,
+            shortcut=QtGui.QKeySequence.ZoomIn,
+            shortcutContext=QtCore.Qt.WidgetWithChildrenShortcut,
+            statusTip="Increase the font size by one point",
+            triggered=self._increase_font_size)
+    self.addAction(self.increase_font_size)
+
+    self.decrease_font_size = QtGui.QAction("Smaller Font",
+            self,
+            shortcut=QtGui.QKeySequence.ZoomOut,
+            shortcutContext=QtCore.Qt.WidgetWithChildrenShortcut,
+            statusTip="Decrease the font size by one point",
+            triggered=self._decrease_font_size)
+    self.addAction(self.decrease_font_size)
+
+    self.reset_font_size = QtGui.QAction("Normal Font",
+            self,
+            shortcut="Ctrl+0",
+            shortcutContext=QtCore.Qt.WidgetWithChildrenShortcut,
+            statusTip="Restore the Normal font size",
+            triggered=self.reset_font)
+    self.addAction(self.reset_font_size)
+
+    # Accept drag and drop events here. Drops were already turned off
+    # in self._control when that widget was created.
+    self.setAcceptDrops(True)
+
+#---------------------------------------------------------------------------
+# Drag and drop support
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.119">def dragEnterEvent(self, e):
+    if e.mimeData().hasUrls():
+        # The link action should indicate to that the drop will insert
+        # the file anme.
+        e.setDropAction(QtCore.Qt.LinkAction)
+        e.accept()
+    elif e.mimeData().hasText():
+        # By changing the action to copy we don't need to worry about
+        # the user accidentally moving text around in the widget.
+        e.setDropAction(QtCore.Qt.CopyAction)
+        e.accept()
+
+</t>
+<t tx="ekr.20190320124833.12">def _parse_xterm_color_spec(self, spec):
+    if spec.startswith('rgb:'):
+        return tuple(map(lambda x: int(x, 16), spec[4:].split('/')))
+    elif spec.startswith('rgbi:'):
+        return tuple(map(lambda x: int(float(x) * 255),
+                         spec[5:].split('/')))
+    elif spec == '?':
+        raise ValueError('Unsupported xterm color spec')
+    return spec
+
+</t>
+<t tx="ekr.20190320124833.120">def dragMoveEvent(self, e):
+    if e.mimeData().hasUrls():
+        pass
+    elif e.mimeData().hasText():
+        cursor = self._control.cursorForPosition(e.pos())
+        if self._in_buffer(cursor.position()):
+            e.setDropAction(QtCore.Qt.CopyAction)
+            self._control.setTextCursor(cursor)
+        else:
+            e.setDropAction(QtCore.Qt.IgnoreAction)
+        e.accept()
+
+</t>
+<t tx="ekr.20190320124833.121">def dropEvent(self, e):
+    if e.mimeData().hasUrls():
+        self._keep_cursor_in_buffer()
+        cursor = self._control.textCursor()
+        filenames = [url.toLocalFile() for url in e.mimeData().urls()]
+        text = ', '.join("'" + f.replace("'", "'\"'\"'") + "'"
+                         for f in filenames)
+        self._insert_plain_text_into_buffer(cursor, text)
+    elif e.mimeData().hasText():
+        cursor = self._control.cursorForPosition(e.pos())
+        if self._in_buffer(cursor.position()):
+            text = e.mimeData().text()
+            self._insert_plain_text_into_buffer(cursor, text)
+
+</t>
+<t tx="ekr.20190320124833.122">def eventFilter(self, obj, event):
+    """ Reimplemented to ensure a console-like behavior in the underlying
+        text widgets.
+    """
+    etype = event.type()
+    if etype == QtCore.QEvent.KeyPress:
+
+        # Re-map keys for all filtered widgets.
+        key = event.key()
+        if self._control_key_down(event.modifiers()) and \
+                key in self._ctrl_down_remap:
+            new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                        self._ctrl_down_remap[key],
+                                        QtCore.Qt.NoModifier)
+            QtGui.qApp.sendEvent(obj, new_event)
+            return True
+
+        elif obj == self._control:
+            return self._event_filter_console_keypress(event)
+
+        elif obj == self._page_control:
+            return self._event_filter_page_keypress(event)
+
+    # Make middle-click paste safe.
+    elif etype == QtCore.QEvent.MouseButtonRelease and \
+            event.button() == QtCore.Qt.MidButton and \
+            obj == self._control.viewport():
+        cursor = self._control.cursorForPosition(event.pos())
+        self._control.setTextCursor(cursor)
+        self.paste(QtGui.QClipboard.Selection)
+        return True
+
+    # Manually adjust the scrollbars *after* a resize event is dispatched.
+    elif etype == QtCore.QEvent.Resize and not self._filter_resize:
+        self._filter_resize = True
+        QtGui.QApplication.instance().sendEvent(obj, event)
+        self._adjust_scrollbars()
+        self._filter_resize = False
+        return True
+
+    # Override shortcuts for all filtered widgets.
+    elif etype == QtCore.QEvent.ShortcutOverride and \
+            self.override_shortcuts and \
+            self._control_key_down(event.modifiers()) and \
+            event.key() in self._shortcuts:
+        event.accept()
+
+    # Handle scrolling of the vsplit pager. This hack attempts to solve
+    # problems with tearing of the help text inside the pager window.  This
+    # happens only on Mac OS X with both PySide and PyQt. This fix isn't
+    # perfect but makes the pager more usable.
+    elif etype in self._pager_scroll_events and \
+            obj == self._page_control:
+        self._page_control.repaint()
+        return True
+
+    elif etype == QtCore.QEvent.MouseMove:
+        anchor = self._control.anchorAt(event.pos())
+        QtGui.QToolTip.showText(event.globalPos(), anchor)
+
+    return super(ConsoleWidget, self).eventFilter(obj, event)
+
+#---------------------------------------------------------------------------
+# 'QWidget' interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.123">def sizeHint(self):
+    """ Reimplemented to suggest a size that is 80 characters wide and
+        25 lines high.
+    """
+    font_metrics = QtGui.QFontMetrics(self.font)
+    margin = (self._control.frameWidth() +
+              self._control.document().documentMargin()) * 2
+    style = self.style()
+    splitwidth = style.pixelMetric(QtGui.QStyle.PM_SplitterWidth)
+
+    # Note 1: Despite my best efforts to take the various margins into
+    # account, the width is still coming out a bit too small, so we include
+    # a fudge factor of one character here.
+    # Note 2: QFontMetrics.maxWidth is not used here or anywhere else due
+    # to a Qt bug on certain Mac OS systems where it returns 0.
+    width = font_metrics.width(' ') * self.console_width + margin
+    width += style.pixelMetric(QtGui.QStyle.PM_ScrollBarExtent)
+    if self.paging == 'hsplit':
+        width = width * 2 + splitwidth
+
+    height = font_metrics.height() * self.console_height + margin
+    if self.paging == 'vsplit':
+        height = height * 2 + splitwidth
+
+    return QtCore.QSize(width, height)
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' public interface
+#---------------------------------------------------------------------------
+
+include_other_output = Bool(False, config=True,
+    help="""Whether to include output from clients
+    other than this one sharing the same kernel.
+    
+    Outputs are not displayed until enter is pressed.
+    """
+)
+
+</t>
+<t tx="ekr.20190320124833.124">def can_copy(self):
+    """ Returns whether text can be copied to the clipboard.
+    """
+    return self._control.textCursor().hasSelection()
+
+</t>
+<t tx="ekr.20190320124833.125">def can_cut(self):
+    """ Returns whether text can be cut to the clipboard.
+    """
+    cursor = self._control.textCursor()
+    return (cursor.hasSelection() and
+            self._in_buffer(cursor.anchor()) and
+            self._in_buffer(cursor.position()))
+
+</t>
+<t tx="ekr.20190320124833.126">def can_paste(self):
+    """ Returns whether text can be pasted from the clipboard.
+    """
+    if self._control.textInteractionFlags() &amp; QtCore.Qt.TextEditable:
+        return bool(QtGui.QApplication.clipboard().text())
+    return False
+
+</t>
+<t tx="ekr.20190320124833.127">def clear(self, keep_input=True):
+    """ Clear the console.
+
+    Parameters
+    ----------
+    keep_input : bool, optional (default True)
+        If set, restores the old input buffer if a new prompt is written.
+    """
+    if self._executing:
+        self._control.clear()
+    else:
+        if keep_input:
+            input_buffer = self.input_buffer
+        self._control.clear()
+        self._show_prompt()
+        if keep_input:
+            self.input_buffer = input_buffer
+
+</t>
+<t tx="ekr.20190320124833.128">def copy(self):
+    """ Copy the currently selected text to the clipboard.
+    """
+    self.layout().currentWidget().copy()
+
+</t>
+<t tx="ekr.20190320124833.129">def copy_anchor(self, anchor):
+    """ Copy anchor text to the clipboard
+    """
+    QtGui.QApplication.clipboard().setText(anchor)
+
+</t>
+<t tx="ekr.20190320124833.13">def _replace_special(self, match):
+    special = match.group(1)
+    if special == '\f':
+        self.actions.append(ScrollAction('scroll', 'down', 'page', 1))
+    return ''
+
+
+</t>
+<t tx="ekr.20190320124833.130">def cut(self):
+    """ Copy the currently selected text to the clipboard and delete it
+        if it's inside the input buffer.
+    """
+    self.copy()
+    if self.can_cut():
+        self._control.textCursor().removeSelectedText()
+
+</t>
+<t tx="ekr.20190320124833.131">def execute(self, source=None, hidden=False, interactive=False):
+    """ Executes source or the input buffer, possibly prompting for more
+    input.
+
+    Parameters
+    ----------
+    source : str, optional
+
+        The source to execute. If not specified, the input buffer will be
+        used. If specified and 'hidden' is False, the input buffer will be
+        replaced with the source before execution.
+
+    hidden : bool, optional (default False)
+
+        If set, no output will be shown and the prompt will not be modified.
+        In other words, it will be completely invisible to the user that
+        an execution has occurred.
+
+    interactive : bool, optional (default False)
+
+        Whether the console is to treat the source as having been manually
+        entered by the user. The effect of this parameter depends on the
+        subclass implementation.
+
+    Raises
+    ------
+    RuntimeError
+        If incomplete input is given and 'hidden' is True. In this case,
+        it is not possible to prompt for more input.
+
+    Returns
+    -------
+    A boolean indicating whether the source was executed.
+    """
+    # WARNING: The order in which things happen here is very particular, in
+    # large part because our syntax highlighting is fragile. If you change
+    # something, test carefully!
+
+    # Decide what to execute.
+    if source is None:
+        source = self.input_buffer
+        if not hidden:
+            # A newline is appended later, but it should be considered part
+            # of the input buffer.
+            source += '\n'
+    elif not hidden:
+        self.input_buffer = source
+
+    # Execute the source or show a continuation prompt if it is incomplete.
+    if interactive and self.execute_on_complete_input:
+        complete, indent = self._is_complete(source, interactive)
+    else:
+        complete = True
+        indent = ''
+    if hidden:
+        if complete or not self.execute_on_complete_input:
+            self._execute(source, hidden)
+        else:
+            error = 'Incomplete noninteractive input: "%s"'
+            raise RuntimeError(error % source)
+    else:
+        if complete:
+            self._append_plain_text('\n')
+            self._input_buffer_executing = self.input_buffer
+            self._executing = True
+            self._prompt_finished()
+
+            # The maximum block count is only in effect during execution.
+            # This ensures that _prompt_pos does not become invalid due to
+            # text truncation.
+            self._control.document().setMaximumBlockCount(self.buffer_size)
+
+            # Setting a positive maximum block count will automatically
+            # disable the undo/redo history, but just to be safe:
+            self._control.setUndoRedoEnabled(False)
+
+            # Perform actual execution.
+            self._execute(source, hidden)
+
+        else:
+            # Do this inside an edit block so continuation prompts are
+            # removed seamlessly via undo/redo.
+            cursor = self._get_end_cursor()
+            cursor.beginEditBlock()
+            cursor.insertText('\n')
+            self._insert_continuation_prompt(cursor, indent)
+            cursor.endEditBlock()
+
+            # Do not do this inside the edit block. It works as expected
+            # when using a QPlainTextEdit control, but does not have an
+            # effect when using a QTextEdit. I believe this is a Qt bug.
+            self._control.moveCursor(QtGui.QTextCursor.End)
+
+    return complete
+
+</t>
+<t tx="ekr.20190320124833.132">def export_html(self):
+    """ Shows a dialog to export HTML/XML in various formats.
+    """
+    self._html_exporter.export()
+
+</t>
+<t tx="ekr.20190320124833.133">def _get_input_buffer(self, force=False):
+    """ The text that the user has entered entered at the current prompt.
+
+    If the console is currently executing, the text that is executing will
+    always be returned.
+    """
+    # If we're executing, the input buffer may not even exist anymore due to
+    # the limit imposed by 'buffer_size'. Therefore, we store it.
+    if self._executing and not force:
+        return self._input_buffer_executing
+
+    cursor = self._get_end_cursor()
+    cursor.setPosition(self._prompt_pos, QtGui.QTextCursor.KeepAnchor)
+    input_buffer = cursor.selection().toPlainText()
+
+    # Strip out continuation prompts.
+    return input_buffer.replace('\n' + self._continuation_prompt, '\n')
+
+</t>
+<t tx="ekr.20190320124833.134">def _set_input_buffer(self, string):
+    """ Sets the text in the input buffer.
+
+    If the console is currently executing, this call has no *immediate*
+    effect. When the execution is finished, the input buffer will be updated
+    appropriately.
+    """
+    # If we're executing, store the text for later.
+    if self._executing:
+        self._input_buffer_pending = string
+        return
+
+    # Remove old text.
+    cursor = self._get_end_cursor()
+    cursor.beginEditBlock()
+    cursor.setPosition(self._prompt_pos, QtGui.QTextCursor.KeepAnchor)
+    cursor.removeSelectedText()
+
+    # Insert new text with continuation prompts.
+    self._insert_plain_text_into_buffer(self._get_prompt_cursor(), string)
+    cursor.endEditBlock()
+    self._control.moveCursor(QtGui.QTextCursor.End)
+
+input_buffer = property(_get_input_buffer, _set_input_buffer)
+
+</t>
+<t tx="ekr.20190320124833.135">def _get_font(self):
+    """ The base font being used by the ConsoleWidget.
+    """
+    return self._control.document().defaultFont()
+
+</t>
+<t tx="ekr.20190320124833.136">def _set_font(self, font):
+    """ Sets the base font for the ConsoleWidget to the specified QFont.
+    """
+    font_metrics = QtGui.QFontMetrics(font)
+    self._control.setTabStopWidth(self.tab_width * font_metrics.width(' '))
+
+    self._completion_widget.setFont(font)
+    self._control.document().setDefaultFont(font)
+    if self._page_control:
+        self._page_control.document().setDefaultFont(font)
+
+    self.font_changed.emit(font)
+
+font = property(_get_font, _set_font)
+
+</t>
+<t tx="ekr.20190320124833.137">def open_anchor(self, anchor):
+    """ Open selected anchor in the default webbrowser
+    """
+    webbrowser.open( anchor )
+
+</t>
+<t tx="ekr.20190320124833.138">def paste(self, mode=QtGui.QClipboard.Clipboard):
+    """ Paste the contents of the clipboard into the input region.
+
+    Parameters
+    ----------
+    mode : QClipboard::Mode, optional [default QClipboard::Clipboard]
+
+        Controls which part of the system clipboard is used. This can be
+        used to access the selection clipboard in X11 and the Find buffer
+        in Mac OS. By default, the regular clipboard is used.
+    """
+    if self._control.textInteractionFlags() &amp; QtCore.Qt.TextEditable:
+        # Make sure the paste is safe.
+        self._keep_cursor_in_buffer()
+        cursor = self._control.textCursor()
+
+        # Remove any trailing newline, which confuses the GUI and forces the
+        # user to backspace.
+        text = QtGui.QApplication.clipboard().text(mode).rstrip()
+        self._insert_plain_text_into_buffer(cursor, dedent(text))
+
+</t>
+<t tx="ekr.20190320124833.139">def print_(self, printer = None):
+    """ Print the contents of the ConsoleWidget to the specified QPrinter.
+    """
+    if (not printer):
+        printer = QtGui.QPrinter()
+        if(QtGui.QPrintDialog(printer).exec_() != QtGui.QDialog.Accepted):
+            return
+    self._control.print_(printer)
+
+</t>
+<t tx="ekr.20190320124833.14">class QtAnsiCodeProcessor(AnsiCodeProcessor):
+    """ Translates ANSI escape codes into QTextCharFormats.
+    """
+
+    # A map from ANSI color codes to SVG color names or RGB(A) tuples.
+    darkbg_color_map = {
+        0  : 'black',       # black
+        1  : 'darkred',     # red
+        2  : 'darkgreen',   # green
+        3  : 'brown',       # yellow
+        4  : 'darkblue',    # blue
+        5  : 'darkviolet',  # magenta
+        6  : 'steelblue',   # cyan
+        7  : 'grey',        # white
+        8  : 'grey',        # black (bright)
+        9  : 'red',         # red (bright)
+        10 : 'lime',        # green (bright)
+        11 : 'yellow',      # yellow (bright)
+        12 : 'deepskyblue', # blue (bright)
+        13 : 'magenta',     # magenta (bright)
+        14 : 'cyan',        # cyan (bright)
+        15 : 'white' }      # white (bright)
+
+    # Set the default color map for super class.
+    default_color_map = darkbg_color_map.copy()
+
+    @others
+</t>
+<t tx="ekr.20190320124833.140">def prompt_to_top(self):
+    """ Moves the prompt to the top of the viewport.
+    """
+    if not self._executing:
+        prompt_cursor = self._get_prompt_cursor()
+        if self._get_cursor().blockNumber() &lt; prompt_cursor.blockNumber():
+            self._set_cursor(prompt_cursor)
+        self._set_top_cursor(prompt_cursor)
+
+</t>
+<t tx="ekr.20190320124833.141">def redo(self):
+    """ Redo the last operation. If there is no operation to redo, nothing
+        happens.
+    """
+    self._control.redo()
+
+</t>
+<t tx="ekr.20190320124833.142">def reset_font(self):
+    """ Sets the font to the default fixed-width font for this platform.
+    """
+    if sys.platform == 'win32':
+        # Consolas ships with Vista/Win7, fallback to Courier if needed
+        fallback = 'Courier'
+    elif sys.platform == 'darwin':
+        # OSX always has Monaco
+        fallback = 'Monaco'
+    else:
+        # Monospace should always exist
+        fallback = 'Monospace'
+    font = get_font(self.font_family, fallback)
+    if self.font_size:
+        font.setPointSize(self.font_size)
+    else:
+        font.setPointSize(QtGui.QApplication.instance().font().pointSize())
+    font.setStyleHint(QtGui.QFont.TypeWriter)
+    self._set_font(font)
+
+</t>
+<t tx="ekr.20190320124833.143">def change_font_size(self, delta):
+    """Change the font size by the specified amount (in points).
+    """
+    font = self.font
+    size = max(font.pointSize() + delta, 1) # minimum 1 point
+    font.setPointSize(size)
+    self._set_font(font)
+
+</t>
+<t tx="ekr.20190320124833.144">def _increase_font_size(self):
+    self.change_font_size(1)
+
+</t>
+<t tx="ekr.20190320124833.145">def _decrease_font_size(self):
+    self.change_font_size(-1)
+
+</t>
+<t tx="ekr.20190320124833.146">def select_all(self):
+    """ Selects all the text in the buffer.
+    """
+    self._control.selectAll()
+
+</t>
+<t tx="ekr.20190320124833.147">def _get_tab_width(self):
+    """ The width (in terms of space characters) for tab characters.
+    """
+    return self._tab_width
+
+</t>
+<t tx="ekr.20190320124833.148">def _set_tab_width(self, tab_width):
+    """ Sets the width (in terms of space characters) for tab characters.
+    """
+    font_metrics = QtGui.QFontMetrics(self.font)
+    self._control.setTabStopWidth(tab_width * font_metrics.width(' '))
+
+    self._tab_width = tab_width
+
+tab_width = property(_get_tab_width, _set_tab_width)
+
+</t>
+<t tx="ekr.20190320124833.149">def undo(self):
+    """ Undo the last operation. If there is no operation to undo, nothing
+        happens.
+    """
+    self._control.undo()
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' abstract interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.15">def get_color(self, color, intensity=0):
+    """ Returns a QColor for a given color code or rgb list, or None if one
+        cannot be constructed.
+    """
+
+    if isinstance(color, int):
+        # Adjust for intensity, if possible.
+        if color &lt; 8 and intensity &gt; 0:
+            color += 8
+        constructor = self.color_map.get(color, None)
+    elif isinstance(color, (tuple, list)):
+        constructor = color
+    else:
+        return None
+
+    if isinstance(constructor, string_types):
+        # If this is an X11 color name, we just hope there is a close SVG
+        # color name. We could use QColor's static method
+        # 'setAllowX11ColorNames()', but this is global and only available
+        # on X11. It seems cleaner to aim for uniformity of behavior.
+        return QtGui.QColor(constructor)
+
+    elif isinstance(constructor, (tuple, list)):
+        return QtGui.QColor(*constructor)
+
+    return None
+
+</t>
+<t tx="ekr.20190320124833.150">def _is_complete(self, source, interactive):
+    """ Returns whether 'source' can be executed. When triggered by an
+        Enter/Return key press, 'interactive' is True; otherwise, it is
+        False.
+    """
+    raise NotImplementedError
+
+</t>
+<t tx="ekr.20190320124833.151">def _execute(self, source, hidden):
+    """ Execute 'source'. If 'hidden', do not show any output.
+    """
+    raise NotImplementedError
+
+</t>
+<t tx="ekr.20190320124833.152">def _prompt_started_hook(self):
+    """ Called immediately after a new prompt is displayed.
+    """
+    pass
+
+</t>
+<t tx="ekr.20190320124833.153">def _prompt_finished_hook(self):
+    """ Called immediately after a prompt is finished, i.e. when some input
+        will be processed and a new prompt displayed.
+    """
+    pass
+
+</t>
+<t tx="ekr.20190320124833.154">def _up_pressed(self, shift_modifier):
+    """ Called when the up key is pressed. Returns whether to continue
+        processing the event.
+    """
+    return True
+
+</t>
+<t tx="ekr.20190320124833.155">def _down_pressed(self, shift_modifier):
+    """ Called when the down key is pressed. Returns whether to continue
+        processing the event.
+    """
+    return True
+
+</t>
+<t tx="ekr.20190320124833.156">def _tab_pressed(self):
+    """ Called when the tab key is pressed. Returns whether to continue
+        processing the event.
+    """
+    return False
+
+#--------------------------------------------------------------------------
+# 'ConsoleWidget' protected interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.157">def _append_custom(self, insert, input, before_prompt=False, *args, **kwargs):
+    """ A low-level method for appending content to the end of the buffer.
+
+    If 'before_prompt' is enabled, the content will be inserted before the
+    current prompt, if there is one.
+    """
+    # Determine where to insert the content.
+    cursor = self._control.textCursor()
+    if before_prompt and (self._reading or not self._executing):
+        self._flush_pending_stream()
+        cursor.setPosition(self._append_before_prompt_pos)
+    else:
+        if insert != self._insert_plain_text:
+            self._flush_pending_stream()
+        cursor.movePosition(QtGui.QTextCursor.End)
+
+    # Perform the insertion.
+    result = insert(cursor, input, *args, **kwargs)
+
+    return result
+
+</t>
+<t tx="ekr.20190320124833.158">def _append_block(self, block_format=None, before_prompt=False):
+    """ Appends an new QTextBlock to the end of the console buffer.
+    """
+    self._append_custom(self._insert_block, block_format, before_prompt)
+
+</t>
+<t tx="ekr.20190320124833.159">def _append_html(self, html, before_prompt=False):
+    """ Appends HTML at the end of the console buffer.
+    """
+    self._append_custom(self._insert_html, html, before_prompt)
+
+</t>
+<t tx="ekr.20190320124833.16">def get_format(self):
+    """ Returns a QTextCharFormat that encodes the current style attributes.
+    """
+    format = QtGui.QTextCharFormat()
+
+    # Set foreground color
+    qcolor = self.get_color(self.foreground_color, self.intensity)
+    if qcolor is not None:
+        format.setForeground(qcolor)
+
+    # Set background color
+    qcolor = self.get_color(self.background_color, self.intensity)
+    if qcolor is not None:
+        format.setBackground(qcolor)
+
+    # Set font weight/style options
+    if self.bold:
+        format.setFontWeight(QtGui.QFont.Bold)
+    else:
+        format.setFontWeight(QtGui.QFont.Normal)
+    format.setFontItalic(self.italic)
+    format.setFontUnderline(self.underline)
+
+    return format
+
+</t>
+<t tx="ekr.20190320124833.160">def _append_html_fetching_plain_text(self, html, before_prompt=False):
+    """ Appends HTML, then returns the plain text version of it.
+    """
+    return self._append_custom(self._insert_html_fetching_plain_text,
+                               html, before_prompt)
+
+</t>
+<t tx="ekr.20190320124833.161">def _append_plain_text(self, text, before_prompt=False):
+    """ Appends plain text, processing ANSI codes if enabled.
+    """
+    self._append_custom(self._insert_plain_text, text, before_prompt)
+
+</t>
+<t tx="ekr.20190320124833.162">def _cancel_completion(self):
+    """ If text completion is progress, cancel it.
+    """
+    self._completion_widget.cancel_completion()
+
+</t>
+<t tx="ekr.20190320124833.163">def _clear_temporary_buffer(self):
+    """ Clears the "temporary text" buffer, i.e. all the text following
+        the prompt region.
+    """
+    # Select and remove all text below the input buffer.
+    cursor = self._get_prompt_cursor()
+    prompt = self._continuation_prompt.lstrip()
+    if(self._temp_buffer_filled):
+        self._temp_buffer_filled = False
+        while cursor.movePosition(QtGui.QTextCursor.NextBlock):
+            temp_cursor = QtGui.QTextCursor(cursor)
+            temp_cursor.select(QtGui.QTextCursor.BlockUnderCursor)
+            text = temp_cursor.selection().toPlainText().lstrip()
+            if not text.startswith(prompt):
+                break
+    else:
+        # We've reached the end of the input buffer and no text follows.
+        return
+    cursor.movePosition(QtGui.QTextCursor.Left) # Grab the newline.
+    cursor.movePosition(QtGui.QTextCursor.End,
+                        QtGui.QTextCursor.KeepAnchor)
+    cursor.removeSelectedText()
+
+    # After doing this, we have no choice but to clear the undo/redo
+    # history. Otherwise, the text is not "temporary" at all, because it
+    # can be recalled with undo/redo. Unfortunately, Qt does not expose
+    # fine-grained control to the undo/redo system.
+    if self._control.isUndoRedoEnabled():
+        self._control.setUndoRedoEnabled(False)
+        self._control.setUndoRedoEnabled(True)
+
+</t>
+<t tx="ekr.20190320124833.164">def _complete_with_items(self, cursor, items):
+    """ Performs completion with 'items' at the specified cursor location.
+    """
+    self._cancel_completion()
+
+    if len(items) == 1:
+        cursor.setPosition(self._control.textCursor().position(),
+                           QtGui.QTextCursor.KeepAnchor)
+        cursor.insertText(items[0])
+
+    elif len(items) &gt; 1:
+        current_pos = self._control.textCursor().position()
+        prefix = os.path.commonprefix(items)
+        if prefix:
+            cursor.setPosition(current_pos, QtGui.QTextCursor.KeepAnchor)
+            cursor.insertText(prefix)
+            current_pos = cursor.position()
+
+        cursor.movePosition(QtGui.QTextCursor.Left, n=len(prefix))
+        self._completion_widget.show_items(cursor, items)
+
+
+</t>
+<t tx="ekr.20190320124833.165">def _fill_temporary_buffer(self, cursor, text, html=False):
+    """fill the area below the active editting zone with text"""
+
+    current_pos = self._control.textCursor().position()
+
+    cursor.beginEditBlock()
+    self._append_plain_text('\n')
+    self._page(text, html=html)
+    cursor.endEditBlock()
+
+    cursor.setPosition(current_pos)
+    self._control.moveCursor(QtGui.QTextCursor.End)
+    self._control.setTextCursor(cursor)
+
+    self._temp_buffer_filled = True
+
+
+</t>
+<t tx="ekr.20190320124833.166">def _context_menu_make(self, pos):
+    """ Creates a context menu for the given QPoint (in widget coordinates).
+    """
+    menu = QtGui.QMenu(self)
+
+    self.cut_action = menu.addAction('Cut', self.cut)
+    self.cut_action.setEnabled(self.can_cut())
+    self.cut_action.setShortcut(QtGui.QKeySequence.Cut)
+
+    self.copy_action = menu.addAction('Copy', self.copy)
+    self.copy_action.setEnabled(self.can_copy())
+    self.copy_action.setShortcut(QtGui.QKeySequence.Copy)
+
+    self.paste_action = menu.addAction('Paste', self.paste)
+    self.paste_action.setEnabled(self.can_paste())
+    self.paste_action.setShortcut(QtGui.QKeySequence.Paste)
+
+    anchor = self._control.anchorAt(pos)
+    if anchor:
+        menu.addSeparator()
+        self.copy_link_action = menu.addAction(
+            'Copy Link Address', lambda: self.copy_anchor(anchor=anchor))
+        self.open_link_action = menu.addAction(
+            'Open Link', lambda: self.open_anchor(anchor=anchor))
+
+    menu.addSeparator()
+    menu.addAction(self.select_all_action)
+
+    menu.addSeparator()
+    menu.addAction(self.export_action)
+    menu.addAction(self.print_action)
+
+    return menu
+
+</t>
+<t tx="ekr.20190320124833.167">def _control_key_down(self, modifiers, include_command=False):
+    """ Given a KeyboardModifiers flags object, return whether the Control
+    key is down.
+
+    Parameters
+    ----------
+    include_command : bool, optional (default True)
+        Whether to treat the Command key as a (mutually exclusive) synonym
+        for Control when in Mac OS.
+    """
+    # Note that on Mac OS, ControlModifier corresponds to the Command key
+    # while MetaModifier corresponds to the Control key.
+    if sys.platform == 'darwin':
+        down = include_command and (modifiers &amp; QtCore.Qt.ControlModifier)
+        return bool(down) ^ bool(modifiers &amp; QtCore.Qt.MetaModifier)
+    else:
+        return bool(modifiers &amp; QtCore.Qt.ControlModifier)
+
+</t>
+<t tx="ekr.20190320124833.168">def _create_control(self):
+    """ Creates and connects the underlying text widget.
+    """
+    # Create the underlying control.
+    if self.custom_control:
+        control = self.custom_control()
+    elif self.kind == 'plain':
+        control = QtGui.QPlainTextEdit()
+    elif self.kind == 'rich':
+        control = QtGui.QTextEdit()
+        control.setAcceptRichText(False)
+        control.setMouseTracking(True)
+
+    # Prevent the widget from handling drops, as we already provide
+    # the logic in this class.
+    control.setAcceptDrops(False)
+
+    # Install event filters. The filter on the viewport is needed for
+    # mouse events.
+    control.installEventFilter(self)
+    control.viewport().installEventFilter(self)
+
+    # Connect signals.
+    control.customContextMenuRequested.connect(
+        self._custom_context_menu_requested)
+    control.copyAvailable.connect(self.copy_available)
+    control.redoAvailable.connect(self.redo_available)
+    control.undoAvailable.connect(self.undo_available)
+
+    # Hijack the document size change signal to prevent Qt from adjusting
+    # the viewport's scrollbar. We are relying on an implementation detail
+    # of Q(Plain)TextEdit here, which is potentially dangerous, but without
+    # this functionality we cannot create a nice terminal interface.
+    layout = control.document().documentLayout()
+    layout.documentSizeChanged.disconnect()
+    layout.documentSizeChanged.connect(self._adjust_scrollbars)
+
+    # Configure the control.
+    control.setAttribute(QtCore.Qt.WA_InputMethodEnabled, True)
+    control.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+    control.setReadOnly(True)
+    control.setUndoRedoEnabled(False)
+    control.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
+    return control
+
+</t>
+<t tx="ekr.20190320124833.169">def _create_page_control(self):
+    """ Creates and connects the underlying paging widget.
+    """
+    if self.custom_page_control:
+        control = self.custom_page_control()
+    elif self.kind == 'plain':
+        control = QtGui.QPlainTextEdit()
+    elif self.kind == 'rich':
+        control = QtGui.QTextEdit()
+    control.installEventFilter(self)
+    viewport = control.viewport()
+    viewport.installEventFilter(self)
+    control.setReadOnly(True)
+    control.setUndoRedoEnabled(False)
+    control.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
+    return control
+
+</t>
+<t tx="ekr.20190320124833.17">def set_background_color(self, style):
+    """
+    Given a syntax style, attempt to set a color map that will be
+    aesthetically pleasing.
+    """
+    # Set a new default color map.
+    self.default_color_map = self.darkbg_color_map.copy()
+
+    if not dark_style(style):
+        # Colors appropriate for a terminal with a light background. For
+        # now, only use non-bright colors...
+        for i in range(8):
+            self.default_color_map[i + 8] = self.default_color_map[i]
+
+        # ...and replace white with black.
+        self.default_color_map[7] = self.default_color_map[15] = 'black'
+
+    # Update the current color map with the new defaults.
+    self.color_map.update(self.default_color_map)
+</t>
+<t tx="ekr.20190320124833.170">def _event_filter_console_keypress(self, event):
+    """ Filter key events for the underlying text widget to create a
+        console-like interface.
+    """
+    intercepted = False
+    cursor = self._control.textCursor()
+    position = cursor.position()
+    key = event.key()
+    ctrl_down = self._control_key_down(event.modifiers())
+    alt_down = event.modifiers() &amp; QtCore.Qt.AltModifier
+    shift_down = event.modifiers() &amp; QtCore.Qt.ShiftModifier
+
+    #------ Special modifier logic -----------------------------------------
+
+    if key in (QtCore.Qt.Key_Return, QtCore.Qt.Key_Enter):
+        intercepted = True
+
+        # Special handling when tab completing in text mode.
+        self._cancel_completion()
+
+        if self._in_buffer(position):
+            # Special handling when a reading a line of raw input.
+            if self._reading:
+                self._append_plain_text('\n')
+                self._reading = False
+                if self._reading_callback:
+                    self._reading_callback()
+
+            # If the input buffer is a single line or there is only
+            # whitespace after the cursor, execute. Otherwise, split the
+            # line with a continuation prompt.
+            elif not self._executing:
+                cursor.movePosition(QtGui.QTextCursor.End,
+                                    QtGui.QTextCursor.KeepAnchor)
+                at_end = len(cursor.selectedText().strip()) == 0
+                single_line = (self._get_end_cursor().blockNumber() ==
+                               self._get_prompt_cursor().blockNumber())
+                if (at_end or shift_down or single_line) and not ctrl_down:
+                    self.execute(interactive = not shift_down)
+                else:
+                    # Do this inside an edit block for clean undo/redo.
+                    pos = self._get_input_buffer_cursor_pos()
+                    complete, indent = self._is_complete(
+                        self._get_input_buffer()[:pos], True)
+                    cursor.beginEditBlock()
+                    cursor.setPosition(position)
+                    cursor.insertText('\n')
+                    self._insert_continuation_prompt(cursor)
+                    if indent:
+                        cursor.insertText(indent)
+                    cursor.endEditBlock()
+
+                    # Ensure that the whole input buffer is visible.
+                    # FIXME: This will not be usable if the input buffer is
+                    # taller than the console widget.
+                    self._control.moveCursor(QtGui.QTextCursor.End)
+                    self._control.setTextCursor(cursor)
+
+    #------ Control/Cmd modifier -------------------------------------------
+
+    elif ctrl_down:
+        if key == QtCore.Qt.Key_G:
+            self._keyboard_quit()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_K:
+            if self._in_buffer(position):
+                cursor.clearSelection()
+                cursor.movePosition(QtGui.QTextCursor.EndOfLine,
+                                    QtGui.QTextCursor.KeepAnchor)
+                if not cursor.hasSelection():
+                    # Line deletion (remove continuation prompt)
+                    cursor.movePosition(QtGui.QTextCursor.NextBlock,
+                                        QtGui.QTextCursor.KeepAnchor)
+                    cursor.movePosition(QtGui.QTextCursor.Right,
+                                        QtGui.QTextCursor.KeepAnchor,
+                                        len(self._continuation_prompt))
+                self._kill_ring.kill_cursor(cursor)
+                self._set_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_L:
+            self.prompt_to_top()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_O:
+            if self._page_control and self._page_control.isVisible():
+                self._page_control.setFocus()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_U:
+            if self._in_buffer(position):
+                cursor.clearSelection()
+                start_line = cursor.blockNumber()
+                if start_line == self._get_prompt_cursor().blockNumber():
+                    offset = len(self._prompt)
+                else:
+                    offset = len(self._continuation_prompt)
+                cursor.movePosition(QtGui.QTextCursor.StartOfBlock,
+                                    QtGui.QTextCursor.KeepAnchor)
+                cursor.movePosition(QtGui.QTextCursor.Right,
+                                    QtGui.QTextCursor.KeepAnchor, offset)
+                self._kill_ring.kill_cursor(cursor)
+                self._set_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Y:
+            self._keep_cursor_in_buffer()
+            self._kill_ring.yank()
+            intercepted = True
+
+        elif key in (QtCore.Qt.Key_Backspace, QtCore.Qt.Key_Delete):
+            if key == QtCore.Qt.Key_Backspace:
+                cursor = self._get_word_start_cursor(position)
+            else: # key == QtCore.Qt.Key_Delete
+                cursor = self._get_word_end_cursor(position)
+            cursor.setPosition(position, QtGui.QTextCursor.KeepAnchor)
+            self._kill_ring.kill_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_D:
+            if len(self.input_buffer) == 0:
+                self.exit_requested.emit(self)
+            else:
+                new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                            QtCore.Qt.Key_Delete,
+                                            QtCore.Qt.NoModifier)
+                QtGui.qApp.sendEvent(self._control, new_event)
+                intercepted = True
+
+    #------ Alt modifier ---------------------------------------------------
+
+    elif alt_down:
+        if key == QtCore.Qt.Key_B:
+            self._set_cursor(self._get_word_start_cursor(position))
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_F:
+            self._set_cursor(self._get_word_end_cursor(position))
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Y:
+            self._kill_ring.rotate()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Backspace:
+            cursor = self._get_word_start_cursor(position)
+            cursor.setPosition(position, QtGui.QTextCursor.KeepAnchor)
+            self._kill_ring.kill_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_D:
+            cursor = self._get_word_end_cursor(position)
+            cursor.setPosition(position, QtGui.QTextCursor.KeepAnchor)
+            self._kill_ring.kill_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Delete:
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Greater:
+            self._control.moveCursor(QtGui.QTextCursor.End)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Less:
+            self._control.setTextCursor(self._get_prompt_cursor())
+            intercepted = True
+
+    #------ No modifiers ---------------------------------------------------
+
+    else:
+        if shift_down:
+            anchormode = QtGui.QTextCursor.KeepAnchor
+        else:
+            anchormode = QtGui.QTextCursor.MoveAnchor
+
+        if key == QtCore.Qt.Key_Escape:
+            self._keyboard_quit()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Up:
+            if self._reading or not self._up_pressed(shift_down):
+                intercepted = True
+            else:
+                prompt_line = self._get_prompt_cursor().blockNumber()
+                intercepted = cursor.blockNumber() &lt;= prompt_line
+
+        elif key == QtCore.Qt.Key_Down:
+            if self._reading or not self._down_pressed(shift_down):
+                intercepted = True
+            else:
+                end_line = self._get_end_cursor().blockNumber()
+                intercepted = cursor.blockNumber() == end_line
+
+        elif key == QtCore.Qt.Key_Tab:
+            if not self._reading:
+                if self._tab_pressed():
+                    # real tab-key, insert four spaces
+                    step = 4 - (self._get_cursor().columnNumber() -
+                                len(self._continuation_prompt)) % 4
+                    cursor.insertText(' '*step)
+                intercepted = True
+
+        elif key == QtCore.Qt.Key_Backtab:
+            cur = self._get_cursor()
+            cur.movePosition(QtGui.QTextCursor.StartOfLine)
+            cur.movePosition(QtGui.QTextCursor.Right,
+                             QtGui.QTextCursor.MoveAnchor,
+                             self._get_prompt_cursor().columnNumber())
+            spaces = self._get_leading_spaces()
+            step = spaces % 4
+            cur.movePosition(QtGui.QTextCursor.Right,
+                             QtGui.QTextCursor.KeepAnchor,
+                             min(spaces, step if step != 0 else 4))
+            cur.removeSelectedText()
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Left:
+
+            # Move to the previous line
+            line, col = cursor.blockNumber(), cursor.columnNumber()
+            if line &gt; self._get_prompt_cursor().blockNumber() and \
+                    col == len(self._continuation_prompt):
+                self._control.moveCursor(QtGui.QTextCursor.PreviousBlock,
+                                         mode=anchormode)
+                self._control.moveCursor(QtGui.QTextCursor.EndOfBlock,
+                                         mode=anchormode)
+                intercepted = True
+
+            # Regular left movement
+            else:
+                intercepted = not self._in_buffer(position - 1)
+
+        elif key == QtCore.Qt.Key_Right:
+            original_block_number = cursor.blockNumber()
+            self._control.moveCursor(QtGui.QTextCursor.Right,
+                            mode=anchormode)
+            if cursor.blockNumber() != original_block_number:
+                self._control.moveCursor(QtGui.QTextCursor.Right,
+                                    n=len(self._continuation_prompt),
+                                    mode=anchormode)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Home:
+            start_line = cursor.blockNumber()
+            if start_line == self._get_prompt_cursor().blockNumber():
+                start_pos = self._prompt_pos
+            else:
+                cursor.movePosition(QtGui.QTextCursor.StartOfBlock,
+                                    QtGui.QTextCursor.KeepAnchor)
+                start_pos = cursor.position()
+                start_pos += len(self._continuation_prompt)
+                cursor.setPosition(position)
+
+            c = self._get_cursor()
+            spaces = self._get_leading_spaces()
+            if (c.position() &gt; start_pos + spaces or
+                    c.columnNumber() == len(self._continuation_prompt)):
+                start_pos += spaces     # Beginning of text
+
+            if shift_down and self._in_buffer(position):
+                if c.selectedText():
+                    sel_max = max(c.selectionStart(), c.selectionEnd())
+                    cursor.setPosition(sel_max,
+                                       QtGui.QTextCursor.MoveAnchor)
+                cursor.setPosition(start_pos, QtGui.QTextCursor.KeepAnchor)
+            else:
+                cursor.setPosition(start_pos)
+            self._set_cursor(cursor)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Backspace:
+
+            # Line deletion (remove continuation prompt)
+            line, col = cursor.blockNumber(), cursor.columnNumber()
+            if not self._reading and \
+                    col == len(self._continuation_prompt) and \
+                    line &gt; self._get_prompt_cursor().blockNumber():
+                cursor.beginEditBlock()
+                cursor.movePosition(QtGui.QTextCursor.StartOfBlock,
+                                    QtGui.QTextCursor.KeepAnchor)
+                cursor.removeSelectedText()
+                cursor.deletePreviousChar()
+                cursor.endEditBlock()
+                intercepted = True
+
+            # Regular backwards deletion
+            else:
+                anchor = cursor.anchor()
+                if anchor == position:
+                    intercepted = not self._in_buffer(position - 1)
+                else:
+                    intercepted = not self._in_buffer(min(anchor, position))
+
+        elif key == QtCore.Qt.Key_Delete:
+
+            # Line deletion (remove continuation prompt)
+            if not self._reading and self._in_buffer(position) and \
+                    cursor.atBlockEnd() and not cursor.hasSelection():
+                cursor.movePosition(QtGui.QTextCursor.NextBlock,
+                                    QtGui.QTextCursor.KeepAnchor)
+                cursor.movePosition(QtGui.QTextCursor.Right,
+                                    QtGui.QTextCursor.KeepAnchor,
+                                    len(self._continuation_prompt))
+                cursor.removeSelectedText()
+                intercepted = True
+
+            # Regular forwards deletion:
+            else:
+                anchor = cursor.anchor()
+                intercepted = (not self._in_buffer(anchor) or
+                               not self._in_buffer(position))
+
+    #------ Special sequences ----------------------------------------------
+
+    if not intercepted:
+        if event.matches(QtGui.QKeySequence.Copy):
+            self.copy()
+            intercepted = True
+
+        elif event.matches(QtGui.QKeySequence.Cut):
+            self.cut()
+            intercepted = True
+
+        elif event.matches(QtGui.QKeySequence.Paste):
+            self.paste()
+            intercepted = True
+
+    # Don't move the cursor if Control/Cmd is pressed to allow copy-paste
+    # using the keyboard in any part of the buffer. Also, permit scrolling
+    # with Page Up/Down keys. Finally, if we're executing, don't move the
+    # cursor (if even this made sense, we can't guarantee that the prompt
+    # position is still valid due to text truncation).
+    if not (self._control_key_down(event.modifiers(), include_command=True)
+            or key in (QtCore.Qt.Key_PageUp, QtCore.Qt.Key_PageDown)
+            or (self._executing and not self._reading)):
+        self._keep_cursor_in_buffer()
+
+    return intercepted
+
+</t>
+<t tx="ekr.20190320124833.171">def _event_filter_page_keypress(self, event):
+    """ Filter key events for the paging widget to create console-like
+        interface.
+    """
+    key = event.key()
+    ctrl_down = self._control_key_down(event.modifiers())
+    alt_down = event.modifiers() &amp; QtCore.Qt.AltModifier
+
+    if ctrl_down:
+        if key == QtCore.Qt.Key_O:
+            self._control.setFocus()
+            intercept = True
+
+    elif alt_down:
+        if key == QtCore.Qt.Key_Greater:
+            self._page_control.moveCursor(QtGui.QTextCursor.End)
+            intercepted = True
+
+        elif key == QtCore.Qt.Key_Less:
+            self._page_control.moveCursor(QtGui.QTextCursor.Start)
+            intercepted = True
+
+    elif key in (QtCore.Qt.Key_Q, QtCore.Qt.Key_Escape):
+        if self._splitter:
+            self._page_control.hide()
+            self._control.setFocus()
+        else:
+            self.layout().setCurrentWidget(self._control)
+            # re-enable buffer truncation after paging
+            self._control.document().setMaximumBlockCount(self.buffer_size)
+        return True
+
+    elif key in (QtCore.Qt.Key_Enter, QtCore.Qt.Key_Return,
+                 QtCore.Qt.Key_Tab):
+        new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                    QtCore.Qt.Key_PageDown,
+                                    QtCore.Qt.NoModifier)
+        QtGui.qApp.sendEvent(self._page_control, new_event)
+        return True
+
+    elif key == QtCore.Qt.Key_Backspace:
+        new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                    QtCore.Qt.Key_PageUp,
+                                    QtCore.Qt.NoModifier)
+        QtGui.qApp.sendEvent(self._page_control, new_event)
+        return True
+
+    # vi/less -like key bindings
+    elif key == QtCore.Qt.Key_J:
+        new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                    QtCore.Qt.Key_Down,
+                                    QtCore.Qt.NoModifier)
+        QtGui.qApp.sendEvent(self._page_control, new_event)
+        return True
+
+    # vi/less -like key bindings
+    elif key == QtCore.Qt.Key_K:
+        new_event = QtGui.QKeyEvent(QtCore.QEvent.KeyPress,
+                                    QtCore.Qt.Key_Up,
+                                    QtCore.Qt.NoModifier)
+        QtGui.qApp.sendEvent(self._page_control, new_event)
+        return True
+
+    return False
+
+</t>
+<t tx="ekr.20190320124833.172">def _on_flush_pending_stream_timer(self):
+    """ Flush the pending stream output and change the
+    prompt position appropriately.
+    """
+    cursor = self._control.textCursor()
+    cursor.movePosition(QtGui.QTextCursor.End)
+    pos = cursor.position()
+    self._flush_pending_stream()
+    cursor.movePosition(QtGui.QTextCursor.End)
+
+</t>
+<t tx="ekr.20190320124833.173">def _flush_pending_stream(self):
+    """ Flush out pending text into the widget. """
+    text = self._pending_insert_text
+    self._pending_insert_text = []
+    buffer_size = self._control.document().maximumBlockCount()
+    if buffer_size &gt; 0:
+        text = self._get_last_lines_from_list(text, buffer_size)
+    text = ''.join(text)
+    t = time.time()
+    self._insert_plain_text(self._get_end_cursor(), text, flush=True)
+    # Set the flush interval to equal the maximum time to update text.
+    self._pending_text_flush_interval.setInterval(max(100,
+                                             (time.time()-t)*1000))
+
+</t>
+<t tx="ekr.20190320124833.174">def _format_as_columns(self, items, separator='  '):
+    """ Transform a list of strings into a single string with columns.
+
+    Parameters
+    ----------
+    items : sequence of strings
+        The strings to process.
+
+    separator : str, optional [default is two spaces]
+        The string that separates columns.
+
+    Returns
+    -------
+    The formatted string.
+    """
+    # Calculate the number of characters available.
+    width = self._control.document().textWidth()
+    char_width = QtGui.QFontMetrics(self.font).width(' ')
+    displaywidth = max(10, (width / char_width) - 1)
+
+    return columnize(items, separator, displaywidth)
+
+</t>
+<t tx="ekr.20190320124833.175">def _get_block_plain_text(self, block):
+    """ Given a QTextBlock, return its unformatted text.
+    """
+    cursor = QtGui.QTextCursor(block)
+    cursor.movePosition(QtGui.QTextCursor.StartOfBlock)
+    cursor.movePosition(QtGui.QTextCursor.EndOfBlock,
+                        QtGui.QTextCursor.KeepAnchor)
+    return cursor.selection().toPlainText()
+
+</t>
+<t tx="ekr.20190320124833.176">def _get_cursor(self):
+    """ Convenience method that returns a cursor for the current position.
+    """
+    return self._control.textCursor()
+
+</t>
+<t tx="ekr.20190320124833.177">def _get_end_cursor(self):
+    """ Convenience method that returns a cursor for the last character.
+    """
+    cursor = self._control.textCursor()
+    cursor.movePosition(QtGui.QTextCursor.End)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.178">def _get_end_pos(self):
+    """ Convenience method that returns the position of the last character.
+    """
+    return self._get_end_cursor().position()
+
+</t>
+<t tx="ekr.20190320124833.179">def _get_input_buffer_cursor_column(self):
+    """ Returns the column of the cursor in the input buffer, excluding the
+        contribution by the prompt, or -1 if there is no such column.
+    """
+    prompt = self._get_input_buffer_cursor_prompt()
+    if prompt is None:
+        return -1
+    else:
+        cursor = self._control.textCursor()
+        return cursor.columnNumber() - len(prompt)
+
+</t>
+<t tx="ekr.20190320124833.18">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.180">def _get_input_buffer_cursor_line(self):
+    """ Returns the text of the line of the input buffer that contains the
+        cursor, or None if there is no such line.
+    """
+    prompt = self._get_input_buffer_cursor_prompt()
+    if prompt is None:
+        return None
+    else:
+        cursor = self._control.textCursor()
+        text = self._get_block_plain_text(cursor.block())
+        return text[len(prompt):]
+
+</t>
+<t tx="ekr.20190320124833.181">def _get_input_buffer_cursor_pos(self):
+    """Return the cursor position within the input buffer."""
+    cursor = self._control.textCursor()
+    cursor.setPosition(self._prompt_pos, QtGui.QTextCursor.KeepAnchor)
+    input_buffer = cursor.selection().toPlainText()
+    
+    # Don't count continuation prompts
+    return len(input_buffer.replace('\n' + self._continuation_prompt, '\n'))
+
+</t>
+<t tx="ekr.20190320124833.182">def _get_input_buffer_cursor_prompt(self):
+    """ Returns the (plain text) prompt for line of the input buffer that
+        contains the cursor, or None if there is no such line.
+    """
+    if self._executing:
+        return None
+    cursor = self._control.textCursor()
+    if cursor.position() &gt;= self._prompt_pos:
+        if cursor.blockNumber() == self._get_prompt_cursor().blockNumber():
+            return self._prompt
+        else:
+            return self._continuation_prompt
+    else:
+        return None
+
+</t>
+<t tx="ekr.20190320124833.183">def _get_last_lines(self, text, num_lines, return_count=False):
+    """ Return last specified number of lines of text (like `tail -n`).
+    If return_count is True, returns a tuple of clipped text and the
+    number of lines in the clipped text.
+    """
+    pos = len(text)
+    if pos &lt; num_lines:
+        if return_count:
+            return text, text.count('\n') if return_count else text
+        else:
+            return text
+    i = 0
+    while i &lt; num_lines:
+        pos = text.rfind('\n', None, pos)
+        if pos == -1:
+            pos = None
+            break
+        i += 1
+    if return_count:
+        return text[pos:], i
+    else:
+        return text[pos:]
+
+</t>
+<t tx="ekr.20190320124833.184">def _get_last_lines_from_list(self, text_list, num_lines):
+    """ Return the list of text clipped to last specified lines.
+    """
+    ret = []
+    lines_pending = num_lines
+    for text in reversed(text_list):
+        text, lines_added = self._get_last_lines(text, lines_pending,
+                                                 return_count=True)
+        ret.append(text)
+        lines_pending -= lines_added
+        if lines_pending &lt;= 0:
+            break
+    return ret[::-1]
+
+</t>
+<t tx="ekr.20190320124833.185">def _get_leading_spaces(self):
+    """ Convenience method that returns the number of leading spaces.
+    """
+    cur = self._get_cursor()
+    cur.select(QtGui.QTextCursor.LineUnderCursor)
+    text = cur.selectedText()[len(self._continuation_prompt):]
+    return len(text) - len(text.lstrip())
+
+
+</t>
+<t tx="ekr.20190320124833.186">@property
+def _prompt_pos(self):
+    """Find the position in the text right after the prompt"""
+    return min(self._prompt_cursor.position() + 1, self._get_end_pos())
+
+</t>
+<t tx="ekr.20190320124833.187">@property
+def _append_before_prompt_pos(self):
+    """Find the position in the text right before the prompt"""
+    return min(self._append_before_prompt_cursor.position(),
+               self._get_end_pos())
+
+</t>
+<t tx="ekr.20190320124833.188">def _get_prompt_cursor(self):
+    """ Convenience method that returns a cursor for the prompt position.
+    """
+    cursor = self._control.textCursor()
+    cursor.setPosition(self._prompt_pos)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.189">def _get_selection_cursor(self, start, end):
+    """ Convenience method that returns a cursor with text selected between
+        the positions 'start' and 'end'.
+    """
+    cursor = self._control.textCursor()
+    cursor.setPosition(start)
+    cursor.setPosition(end, QtGui.QTextCursor.KeepAnchor)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.19">"""Defines a convenient mix-in class for implementing Qt frontends."""
+
+from jupyter_client import BlockingKernelClient
+
+</t>
+<t tx="ekr.20190320124833.190">def _get_word_start_cursor(self, position):
+    """ Find the start of the word to the left the given position. If a
+        sequence of non-word characters precedes the first word, skip over
+        them. (This emulates the behavior of bash, emacs, etc.)
+    """
+    document = self._control.document()
+    position -= 1
+    while position &gt;= self._prompt_pos and \
+              not is_letter_or_number(document.characterAt(position)):
+        position -= 1
+    while position &gt;= self._prompt_pos and \
+              is_letter_or_number(document.characterAt(position)):
+        position -= 1
+    cursor = self._control.textCursor()
+    cursor.setPosition(position + 1)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.191">def _get_word_end_cursor(self, position):
+    """ Find the end of the word to the right the given position. If a
+        sequence of non-word characters precedes the first word, skip over
+        them. (This emulates the behavior of bash, emacs, etc.)
+    """
+    document = self._control.document()
+    end = self._get_end_pos()
+    while position &lt; end and \
+              not is_letter_or_number(document.characterAt(position)):
+        position += 1
+    while position &lt; end and \
+              is_letter_or_number(document.characterAt(position)):
+        position += 1
+    cursor = self._control.textCursor()
+    cursor.setPosition(position)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.192">def _insert_continuation_prompt(self, cursor):
+    """ Inserts new continuation prompt using the specified cursor.
+    """
+    if self._continuation_prompt_html is None:
+        self._insert_plain_text(cursor, self._continuation_prompt)
+    else:
+        self._continuation_prompt = self._insert_html_fetching_plain_text(
+            cursor, self._continuation_prompt_html)
+
+</t>
+<t tx="ekr.20190320124833.193">def _insert_block(self, cursor, block_format=None):
+    """ Inserts an empty QTextBlock using the specified cursor.
+    """
+    if block_format is None:
+        block_format = QtGui.QTextBlockFormat()
+    cursor.insertBlock(block_format)
+
+</t>
+<t tx="ekr.20190320124833.194">def _insert_html(self, cursor, html):
+    """ Inserts HTML using the specified cursor in such a way that future
+        formatting is unaffected.
+    """
+    cursor.beginEditBlock()
+    cursor.insertHtml(html)
+
+    # After inserting HTML, the text document "remembers" it's in "html
+    # mode", which means that subsequent calls adding plain text will result
+    # in unwanted formatting, lost tab characters, etc. The following code
+    # hacks around this behavior, which I consider to be a bug in Qt, by
+    # (crudely) resetting the document's style state.
+    cursor.movePosition(QtGui.QTextCursor.Left,
+                        QtGui.QTextCursor.KeepAnchor)
+    if cursor.selection().toPlainText() == ' ':
+        cursor.removeSelectedText()
+    else:
+        cursor.movePosition(QtGui.QTextCursor.Right)
+    cursor.insertText(' ', QtGui.QTextCharFormat())
+    cursor.endEditBlock()
+
+</t>
+<t tx="ekr.20190320124833.195">def _insert_html_fetching_plain_text(self, cursor, html):
+    """ Inserts HTML using the specified cursor, then returns its plain text
+        version.
+    """
+    cursor.beginEditBlock()
+    cursor.removeSelectedText()
+
+    start = cursor.position()
+    self._insert_html(cursor, html)
+    end = cursor.position()
+    cursor.setPosition(start, QtGui.QTextCursor.KeepAnchor)
+    text = cursor.selection().toPlainText()
+
+    cursor.setPosition(end)
+    cursor.endEditBlock()
+    return text
+
+</t>
+<t tx="ekr.20190320124833.196">def _insert_plain_text(self, cursor, text, flush=False):
+    """ Inserts plain text using the specified cursor, processing ANSI codes
+        if enabled.
+    """
+    # maximumBlockCount() can be different from self.buffer_size in
+    # case input prompt is active.
+    buffer_size = self._control.document().maximumBlockCount()
+
+    if (self._executing and not flush and
+            self._pending_text_flush_interval.isActive() and
+            cursor.position() == self._get_end_pos()):
+        # Queue the text to insert in case it is being inserted at end
+        self._pending_insert_text.append(text)
+        if buffer_size &gt; 0:
+            self._pending_insert_text = self._get_last_lines_from_list(
+                                    self._pending_insert_text, buffer_size)
+        return
+
+    if self._executing and not self._pending_text_flush_interval.isActive():
+        self._pending_text_flush_interval.start()
+
+    # Clip the text to last `buffer_size` lines.
+    if buffer_size &gt; 0:
+        text = self._get_last_lines(text, buffer_size)
+
+    cursor.beginEditBlock()
+    if self.ansi_codes:
+        for substring in self._ansi_processor.split_string(text):
+            for act in self._ansi_processor.actions:
+
+                # Unlike real terminal emulators, we don't distinguish
+                # between the screen and the scrollback buffer. A screen
+                # erase request clears everything.
+                if act.action == 'erase' and act.area == 'screen':
+                    cursor.select(QtGui.QTextCursor.Document)
+                    cursor.removeSelectedText()
+
+                # Simulate a form feed by scrolling just past the last line.
+                elif act.action == 'scroll' and act.unit == 'page':
+                    cursor.insertText('\n')
+                    cursor.endEditBlock()
+                    self._set_top_cursor(cursor)
+                    cursor.joinPreviousEditBlock()
+                    cursor.deletePreviousChar()
+
+                    if os.name == 'nt':
+                        cursor.select(QtGui.QTextCursor.Document)
+                        cursor.removeSelectedText()
+
+                elif act.action == 'carriage-return':
+                    cursor.movePosition(
+                        cursor.StartOfLine, cursor.KeepAnchor)
+
+                elif act.action == 'beep':
+                    QtGui.qApp.beep()
+
+                elif act.action == 'backspace':
+                    if not cursor.atBlockStart():
+                        cursor.movePosition(
+                            cursor.PreviousCharacter, cursor.KeepAnchor)
+
+                elif act.action == 'newline':
+                    cursor.movePosition(cursor.EndOfLine)
+
+            format = self._ansi_processor.get_format()
+
+            selection = cursor.selectedText()
+            if len(selection) == 0:
+                cursor.insertText(substring, format)
+            elif substring is not None:
+                # BS and CR are treated as a change in print
+                # position, rather than a backwards character
+                # deletion for output equivalence with (I)Python
+                # terminal.
+                if len(substring) &gt;= len(selection):
+                    cursor.insertText(substring, format)
+                else:
+                    old_text = selection[len(substring):]
+                    cursor.insertText(substring + old_text, format)
+                    cursor.movePosition(cursor.PreviousCharacter,
+                           cursor.KeepAnchor, len(old_text))
+    else:
+        cursor.insertText(text)
+    cursor.endEditBlock()
+
+</t>
+<t tx="ekr.20190320124833.197">def _insert_plain_text_into_buffer(self, cursor, text):
+    """ Inserts text into the input buffer using the specified cursor (which
+        must be in the input buffer), ensuring that continuation prompts are
+        inserted as necessary.
+    """
+    lines = text.splitlines(True)
+    if lines:
+        if lines[-1].endswith('\n'):
+            # If the text ends with a newline, add a blank line so a new
+            # continuation prompt is produced.
+            lines.append('')
+        cursor.beginEditBlock()
+        cursor.insertText(lines[0])
+        for line in lines[1:]:
+            if self._continuation_prompt_html is None:
+                cursor.insertText(self._continuation_prompt)
+            else:
+                self._continuation_prompt = \
+                    self._insert_html_fetching_plain_text(
+                        cursor, self._continuation_prompt_html)
+            cursor.insertText(line)
+        cursor.endEditBlock()
+
+</t>
+<t tx="ekr.20190320124833.198">def _in_buffer(self, position=None):
+    """ Returns whether the current cursor (or, if specified, a position) is
+        inside the editing region.
+    """
+    cursor = self._control.textCursor()
+    if position is None:
+        position = cursor.position()
+    else:
+        cursor.setPosition(position)
+    line = cursor.blockNumber()
+    prompt_line = self._get_prompt_cursor().blockNumber()
+    if line == prompt_line:
+        return position &gt;= self._prompt_pos
+    elif line &gt; prompt_line:
+        cursor.movePosition(QtGui.QTextCursor.StartOfBlock)
+        prompt_pos = cursor.position() + len(self._continuation_prompt)
+        return position &gt;= prompt_pos
+    return False
+
+</t>
+<t tx="ekr.20190320124833.199">def _keep_cursor_in_buffer(self):
+    """ Ensures that the cursor is inside the editing region. Returns
+        whether the cursor was moved.
+    """
+    moved = not self._in_buffer()
+    if moved:
+        cursor = self._control.textCursor()
+        cursor.movePosition(QtGui.QTextCursor.End)
+        self._control.setTextCursor(cursor)
+    return moved
+
+</t>
+<t tx="ekr.20190320124833.2"></t>
+<t tx="ekr.20190320124833.20">class BaseFrontendMixin(object):
+    """ A mix-in class for implementing Qt frontends.
+
+    To handle messages of a particular type, frontends need only define an
+    appropriate handler method. For example, to handle 'stream' messaged, define
+    a '_handle_stream(msg)' method.
+    """
+
+    #---------------------------------------------------------------------------
+    # 'BaseFrontendMixin' concrete interface
+    #---------------------------------------------------------------------------
+    _kernel_client = None
+    _kernel_manager = None
+    _blocking_client = None
+
+    @others
+</t>
+<t tx="ekr.20190320124833.200">def _keyboard_quit(self):
+    """ Cancels the current editing task ala Ctrl-G in Emacs.
+    """
+    if self._temp_buffer_filled :
+        self._cancel_completion()
+        self._clear_temporary_buffer()
+    else:
+        self.input_buffer = ''
+
+</t>
+<t tx="ekr.20190320124833.201">def _page(self, text, html=False):
+    """ Displays text using the pager if it exceeds the height of the
+    viewport.
+
+    Parameters
+    ----------
+    html : bool, optional (default False)
+        If set, the text will be interpreted as HTML instead of plain text.
+    """
+    line_height = QtGui.QFontMetrics(self.font).height()
+    minlines = self._control.viewport().height() / line_height
+    if self.paging != 'none' and \
+            re.match("(?:[^\n]*\n){%i}" % minlines, text):
+        if self.paging == 'custom':
+            self.custom_page_requested.emit(text)
+        else:
+            # disable buffer truncation during paging
+            self._control.document().setMaximumBlockCount(0)
+            self._page_control.clear()
+            cursor = self._page_control.textCursor()
+            if html:
+                self._insert_html(cursor, text)
+            else:
+                self._insert_plain_text(cursor, text)
+            self._page_control.moveCursor(QtGui.QTextCursor.Start)
+
+            self._page_control.viewport().resize(self._control.size())
+            if self._splitter:
+                self._page_control.show()
+                self._page_control.setFocus()
+            else:
+                self.layout().setCurrentWidget(self._page_control)
+    elif html:
+        self._append_html(text)
+    else:
+        self._append_plain_text(text)
+
+</t>
+<t tx="ekr.20190320124833.202">def _set_paging(self, paging):
+    """
+    Change the pager to `paging` style.
+
+    Parameters
+    ----------
+    paging : string
+        Either "hsplit", "vsplit", or "inside"
+    """
+    if self._splitter is None:
+        raise NotImplementedError("""can only switch if --paging=hsplit or
+                --paging=vsplit is used.""")
+    if paging == 'hsplit':
+        self._splitter.setOrientation(QtCore.Qt.Horizontal)
+    elif paging == 'vsplit':
+        self._splitter.setOrientation(QtCore.Qt.Vertical)
+    elif paging == 'inside':
+        raise NotImplementedError("""switching to 'inside' paging not
+                supported yet.""")
+    else:
+        raise ValueError("unknown paging method '%s'" % paging)
+    self.paging = paging
+
+</t>
+<t tx="ekr.20190320124833.203">def _prompt_finished(self):
+    """ Called immediately after a prompt is finished, i.e. when some input
+        will be processed and a new prompt displayed.
+    """
+    self._control.setReadOnly(True)
+    self._prompt_finished_hook()
+
+</t>
+<t tx="ekr.20190320124833.204">def _prompt_started(self):
+    """ Called immediately after a new prompt is displayed.
+    """
+    # Temporarily disable the maximum block count to permit undo/redo and
+    # to ensure that the prompt position does not change due to truncation.
+    self._control.document().setMaximumBlockCount(0)
+    self._control.setUndoRedoEnabled(True)
+
+    # Work around bug in QPlainTextEdit: input method is not re-enabled
+    # when read-only is disabled.
+    self._control.setReadOnly(False)
+    self._control.setAttribute(QtCore.Qt.WA_InputMethodEnabled, True)
+
+    if not self._reading:
+        self._executing = False
+    self._prompt_started_hook()
+
+    # If the input buffer has changed while executing, load it.
+    if self._input_buffer_pending:
+        self.input_buffer = self._input_buffer_pending
+        self._input_buffer_pending = ''
+
+    self._control.moveCursor(QtGui.QTextCursor.End)
+
+</t>
+<t tx="ekr.20190320124833.205">def _readline(self, prompt='', callback=None, password=False):
+    """ Reads one line of input from the user.
+
+    Parameters
+    ----------
+    prompt : str, optional
+        The prompt to print before reading the line.
+
+    callback : callable, optional
+        A callback to execute with the read line. If not specified, input is
+        read *synchronously* and this method does not return until it has
+        been read.
+
+    Returns
+    -------
+    If a callback is specified, returns nothing. Otherwise, returns the
+    input string with the trailing newline stripped.
+    """
+    if self._reading:
+        raise RuntimeError('Cannot read a line. Widget is already reading.')
+
+    if not callback and not self.isVisible():
+        # If the user cannot see the widget, this function cannot return.
+        raise RuntimeError('Cannot synchronously read a line if the widget '
+                           'is not visible!')
+
+    self._reading = True
+    if password:
+        self._show_prompt('Warning: QtConsole does not support password mode, '\
+                          'the text you type will be visible.', newline=True)
+    self._show_prompt(prompt, newline=False)
+
+    if callback is None:
+        self._reading_callback = None
+        while self._reading:
+            QtCore.QCoreApplication.processEvents()
+        return self._get_input_buffer(force=True).rstrip('\n')
+
+    else:
+        self._reading_callback = lambda: \
+            callback(self._get_input_buffer(force=True).rstrip('\n'))
+
+</t>
+<t tx="ekr.20190320124833.206">def _set_continuation_prompt(self, prompt, html=False):
+    """ Sets the continuation prompt.
+
+    Parameters
+    ----------
+    prompt : str
+        The prompt to show when more input is needed.
+
+    html : bool, optional (default False)
+        If set, the prompt will be inserted as formatted HTML. Otherwise,
+        the prompt will be treated as plain text, though ANSI color codes
+        will be handled.
+    """
+    if html:
+        self._continuation_prompt_html = prompt
+    else:
+        self._continuation_prompt = prompt
+        self._continuation_prompt_html = None
+
+</t>
+<t tx="ekr.20190320124833.207">def _set_cursor(self, cursor):
+    """ Convenience method to set the current cursor.
+    """
+    self._control.setTextCursor(cursor)
+
+</t>
+<t tx="ekr.20190320124833.208">def _set_top_cursor(self, cursor):
+    """ Scrolls the viewport so that the specified cursor is at the top.
+    """
+    scrollbar = self._control.verticalScrollBar()
+    scrollbar.setValue(scrollbar.maximum())
+    original_cursor = self._control.textCursor()
+    self._control.setTextCursor(cursor)
+    self._control.ensureCursorVisible()
+    self._control.setTextCursor(original_cursor)
+
+</t>
+<t tx="ekr.20190320124833.209">def _show_prompt(self, prompt=None, html=False, newline=True):
+    """ Writes a new prompt at the end of the buffer.
+
+    Parameters
+    ----------
+    prompt : str, optional
+        The prompt to show. If not specified, the previous prompt is used.
+
+    html : bool, optional (default False)
+        Only relevant when a prompt is specified. If set, the prompt will
+        be inserted as formatted HTML. Otherwise, the prompt will be treated
+        as plain text, though ANSI color codes will be handled.
+
+    newline : bool, optional (default True)
+        If set, a new line will be written before showing the prompt if
+        there is not already a newline at the end of the buffer.
+    """
+    self._flush_pending_stream()
+    cursor = self._get_end_cursor()
+
+    # Save the current position to support _append*(before_prompt=True).
+    # We can't leave the cursor at the end of the document though, because
+    # that would cause any further additions to move the cursor. Therefore,
+    # we move it back one place and move it forward again at the end of
+    # this method. However, we only do this if the cursor isn't already
+    # at the start of the text.
+    if cursor.position() == 0:
+        move_forward = False
+    else:
+        move_forward = True
+        self._append_before_prompt_cursor.setPosition(cursor.position() - 1)
+
+    # Insert a preliminary newline, if necessary.
+    if newline and cursor.position() &gt; 0:
+        cursor.movePosition(QtGui.QTextCursor.Left,
+                            QtGui.QTextCursor.KeepAnchor)
+        if cursor.selection().toPlainText() != '\n':
+            self._append_block()
+
+    # Write the prompt.
+    self._append_plain_text(self._prompt_sep)
+    if prompt is None:
+        if self._prompt_html is None:
+            self._append_plain_text(self._prompt)
+        else:
+            self._append_html(self._prompt_html)
+    else:
+        if html:
+            self._prompt = self._append_html_fetching_plain_text(prompt)
+            self._prompt_html = prompt
+        else:
+            self._append_plain_text(prompt)
+            self._prompt = prompt
+            self._prompt_html = None
+
+    self._flush_pending_stream()
+    self._prompt_cursor.setPosition(self._get_end_pos() - 1)
+
+    if move_forward:
+        self._append_before_prompt_cursor.setPosition(
+            self._append_before_prompt_cursor.position() + 1)
+    self._prompt_started()
+
+#------ Signal handlers ----------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.21">@property
+def kernel_client(self):
+    """Returns the current kernel client."""
+    return self._kernel_client
+
+</t>
+<t tx="ekr.20190320124833.210">def _adjust_scrollbars(self):
+    """ Expands the vertical scrollbar beyond the range set by Qt.
+    """
+    # This code is adapted from _q_adjustScrollbars in qplaintextedit.cpp
+    # and qtextedit.cpp.
+    document = self._control.document()
+    scrollbar = self._control.verticalScrollBar()
+    viewport_height = self._control.viewport().height()
+    if isinstance(self._control, QtGui.QPlainTextEdit):
+        maximum = max(0, document.lineCount() - 1)
+        step = viewport_height / self._control.fontMetrics().lineSpacing()
+    else:
+        # QTextEdit does not do line-based layout and blocks will not in
+        # general have the same height. Therefore it does not make sense to
+        # attempt to scroll in line height increments.
+        maximum = document.size().height()
+        step = viewport_height
+    diff = maximum - scrollbar.maximum()
+    scrollbar.setRange(0, maximum)
+    scrollbar.setPageStep(step)
+
+    # Compensate for undesirable scrolling that occurs automatically due to
+    # maximumBlockCount() text truncation.
+    if diff &lt; 0 and document.blockCount() == document.maximumBlockCount():
+        scrollbar.setValue(scrollbar.value() + diff)
+
+</t>
+<t tx="ekr.20190320124833.211">def _custom_context_menu_requested(self, pos):
+    """ Shows a context menu at the given QPoint (in widget coordinates).
+    """
+    menu = self._context_menu_make(pos)
+    menu.exec_(self._control.mapToGlobal(pos))
+</t>
+<t tx="ekr.20190320124833.212">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.213">"""Frontend widget for the Qt Console"""
+
+# Copyright (c) Jupyter Development Team
+# Distributed under the terms of the Modified BSD License.
+
+from __future__ import print_function
+
+from collections import namedtuple
+import sys
+import uuid
+try:
+    from queue import Empty
+except ImportError:
+    from Queue import Empty
+import re
+
+from qtconsole import qt
+from qtconsole.qt import QtCore, QtGui
+from ipython_genutils import py3compat
+from ipython_genutils.importstring import import_item
+
+from qtconsole.base_frontend_mixin import BaseFrontendMixin
+from traitlets import Any, Bool, Float, Instance, Unicode, DottedObjectName
+from .bracket_matcher import BracketMatcher
+from .call_tip_widget import CallTipWidget
+from .history_console_widget import HistoryConsoleWidget
+from .pygments_highlighter import PygmentsHighlighter
+
+_classic_prompt_re = re.compile(r'^([ \t]*&gt;&gt;&gt; |^[ \t]*\.\.\. )')
+
+</t>
+<t tx="ekr.20190320124833.214">def transform_classic_prompt(line):
+    """Handle inputs that start with '&gt;&gt;&gt; ' syntax."""
+
+    if not line or line.isspace():
+        return line
+    m = _classic_prompt_re.match(line)
+    if m:
+        return line[len(m.group(0)):]
+    else:
+        return line
+
+
+_ipy_prompt_re = re.compile(r'^([ \t]*In \[\d+\]: |^[ \t]*\ \ \ \.\.\.+: )')
+
+</t>
+<t tx="ekr.20190320124833.215">def transform_ipy_prompt(line):
+    """Handle inputs that start classic IPython prompt syntax."""
+
+    if not line or line.isspace():
+        return line
+    m = _ipy_prompt_re.match(line)
+    if m:
+        return line[len(m.group(0)):]
+    else:
+        return line
+
+
+</t>
+<t tx="ekr.20190320124833.216">class FrontendHighlighter(PygmentsHighlighter):
+    """ A PygmentsHighlighter that understands and ignores prompts.
+    """
+
+    @others
+</t>
+<t tx="ekr.20190320124833.217">def __init__(self, frontend, lexer=None):
+    super(FrontendHighlighter, self).__init__(frontend._control.document(), lexer=lexer)
+    self._current_offset = 0
+    self._frontend = frontend
+    self.highlighting_on = False
+
+</t>
+<t tx="ekr.20190320124833.218">def highlightBlock(self, string):
+    """ Highlight a block of text. Reimplemented to highlight selectively.
+    """
+    if not self.highlighting_on:
+        return
+
+    # The input to this function is a unicode string that may contain
+    # paragraph break characters, non-breaking spaces, etc. Here we acquire
+    # the string as plain text so we can compare it.
+    current_block = self.currentBlock()
+    string = self._frontend._get_block_plain_text(current_block)
+
+    # Decide whether to check for the regular or continuation prompt.
+    if current_block.contains(self._frontend._prompt_pos):
+        prompt = self._frontend._prompt
+    else:
+        prompt = self._frontend._continuation_prompt
+
+    # Only highlight if we can identify a prompt, but make sure not to
+    # highlight the prompt.
+    if string.startswith(prompt):
+        self._current_offset = len(prompt)
+        string = string[len(prompt):]
+        super(FrontendHighlighter, self).highlightBlock(string)
+
+</t>
+<t tx="ekr.20190320124833.219">def rehighlightBlock(self, block):
+    """ Reimplemented to temporarily enable highlighting if disabled.
+    """
+    old = self.highlighting_on
+    self.highlighting_on = True
+    super(FrontendHighlighter, self).rehighlightBlock(block)
+    self.highlighting_on = old
+
+</t>
+<t tx="ekr.20190320124833.22">@kernel_client.setter
+def kernel_client(self, kernel_client):
+    """Disconnect from the current kernel client (if any) and set a new
+        kernel client.
+    """
+    # Disconnect the old kernel client, if necessary.
+    old_client = self._kernel_client
+    if old_client is not None:
+        old_client.started_channels.disconnect(self._started_channels)
+        old_client.stopped_channels.disconnect(self._stopped_channels)
+
+        # Disconnect the old kernel client's channels.
+        old_client.iopub_channel.message_received.disconnect(self._dispatch)
+        old_client.shell_channel.message_received.disconnect(self._dispatch)
+        old_client.stdin_channel.message_received.disconnect(self._dispatch)
+        old_client.hb_channel.kernel_died.disconnect(
+            self._handle_kernel_died)
+
+        # Handle the case where the old kernel client is still listening.
+        if old_client.channels_running:
+            self._stopped_channels()
+
+    # Set the new kernel client.
+    self._kernel_client = kernel_client
+    if kernel_client is None:
+        return
+
+    # Connect the new kernel client.
+    kernel_client.started_channels.connect(self._started_channels)
+    kernel_client.stopped_channels.connect(self._stopped_channels)
+
+    # Connect the new kernel client's channels.
+    kernel_client.iopub_channel.message_received.connect(self._dispatch)
+    kernel_client.shell_channel.message_received.connect(self._dispatch)
+    kernel_client.stdin_channel.message_received.connect(self._dispatch)
+    # hb_channel
+    kernel_client.hb_channel.kernel_died.connect(self._handle_kernel_died)
+
+    # Handle the case where the kernel client started channels before
+    # we connected.
+    if kernel_client.channels_running:
+        self._started_channels()
+
+</t>
+<t tx="ekr.20190320124833.220">def setFormat(self, start, count, format):
+    """ Reimplemented to highlight selectively.
+    """
+    start += self._current_offset
+    super(FrontendHighlighter, self).setFormat(start, count, format)
+
+
+</t>
+<t tx="ekr.20190320124833.221">class FrontendWidget(HistoryConsoleWidget, BaseFrontendMixin):
+    """ A Qt frontend for a generic Python kernel.
+    """
+
+    # The text to show when the kernel is (re)started.
+    banner = Unicode(config=True)
+    kernel_banner = Unicode()
+    # Whether to show the banner
+    _display_banner = Bool(False)
+
+    # An option and corresponding signal for overriding the default kernel
+    # interrupt behavior.
+    custom_interrupt = Bool(False)
+    custom_interrupt_requested = QtCore.Signal()
+
+    # An option and corresponding signals for overriding the default kernel
+    # restart behavior.
+    custom_restart = Bool(False)
+    custom_restart_kernel_died = QtCore.Signal(float)
+    custom_restart_requested = QtCore.Signal()
+
+    # Whether to automatically show calltips on open-parentheses.
+    enable_calltips = Bool(True, config=True,
+        help="Whether to draw information calltips on open-parentheses.")
+
+    clear_on_kernel_restart = Bool(True, config=True,
+        help="Whether to clear the console when the kernel is restarted")
+
+    confirm_restart = Bool(True, config=True,
+        help="Whether to ask for user confirmation when restarting kernel")
+    
+    lexer_class = DottedObjectName(config=True,
+        help="The pygments lexer class to use."
+    )
+    is_complete_timeout = Float(0.25, config=True,
+        help="Seconds to wait for is_complete replies from the kernel."
+    )
+    @others
+</t>
+<t tx="ekr.20190320124833.222">def _lexer_class_changed(self, name, old, new):
+    lexer_class = import_item(new)
+    self.lexer = lexer_class()
+
+</t>
+<t tx="ekr.20190320124833.223">def _lexer_class_default(self):
+    if py3compat.PY3:
+        return 'pygments.lexers.Python3Lexer'
+    else:
+        return 'pygments.lexers.PythonLexer'
+
+lexer = Any()
+</t>
+<t tx="ekr.20190320124833.224">def _lexer_default(self):
+    lexer_class = import_item(self.lexer_class)
+    return lexer_class()
+
+# Emitted when a user visible 'execute_request' has been submitted to the
+# kernel from the FrontendWidget. Contains the code to be executed.
+executing = QtCore.Signal(object)
+
+# Emitted when a user-visible 'execute_reply' has been received from the
+# kernel and processed by the FrontendWidget. Contains the response message.
+executed = QtCore.Signal(object)
+
+# Emitted when an exit request has been received from the kernel.
+exit_requested = QtCore.Signal(object)
+
+_CallTipRequest = namedtuple('_CallTipRequest', ['id', 'pos'])
+_CompletionRequest = namedtuple('_CompletionRequest', ['id', 'pos'])
+_ExecutionRequest = namedtuple('_ExecutionRequest', ['id', 'kind'])
+_local_kernel = False
+_highlighter = Instance(FrontendHighlighter, allow_none=True)
+
+#---------------------------------------------------------------------------
+# 'object' interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.225">def __init__(self, *args, **kw):
+    super(FrontendWidget, self).__init__(*args, **kw)
+    # FIXME: remove this when PySide min version is updated past 1.0.7
+    # forcefully disable calltips if PySide is &lt; 1.0.7, because they crash
+    if qt.QT_API == qt.QT_API_PYSIDE:
+        import PySide
+        if PySide.__version_info__ &lt; (1,0,7):
+            self.log.warn("PySide %s &lt; 1.0.7 detected, disabling calltips" % PySide.__version__)
+            self.enable_calltips = False
+
+    # FrontendWidget protected variables.
+    self._bracket_matcher = BracketMatcher(self._control)
+    self._call_tip_widget = CallTipWidget(self._control)
+    self._copy_raw_action = QtGui.QAction('Copy (Raw Text)', None)
+    self._hidden = False
+    self._highlighter = FrontendHighlighter(self, lexer=self.lexer)
+    self._kernel_manager = None
+    self._kernel_client = None
+    self._request_info = {}
+    self._request_info['execute'] = {}
+    self._callback_dict = {}
+    self._display_banner = True
+
+    # Configure the ConsoleWidget.
+    self.tab_width = 4
+    self._set_continuation_prompt('... ')
+
+    # Configure the CallTipWidget.
+    self._call_tip_widget.setFont(self.font)
+    self.font_changed.connect(self._call_tip_widget.setFont)
+
+    # Configure actions.
+    action = self._copy_raw_action
+    key = QtCore.Qt.CTRL | QtCore.Qt.SHIFT | QtCore.Qt.Key_C
+    action.setEnabled(False)
+    action.setShortcut(QtGui.QKeySequence(key))
+    action.setShortcutContext(QtCore.Qt.WidgetWithChildrenShortcut)
+    action.triggered.connect(self.copy_raw)
+    self.copy_available.connect(action.setEnabled)
+    self.addAction(action)
+
+    # Connect signal handlers.
+    document = self._control.document()
+    document.contentsChange.connect(self._document_contents_change)
+
+    # Set flag for whether we are connected via localhost.
+    self._local_kernel = kw.get('local_kernel',
+                                FrontendWidget._local_kernel)
+
+    # Whether or not a clear_output call is pending new output.
+    self._pending_clearoutput = False
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' public interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.226">def copy(self):
+    """ Copy the currently selected text to the clipboard, removing prompts.
+    """
+    if self._page_control is not None and self._page_control.hasFocus():
+        self._page_control.copy()
+    elif self._control.hasFocus():
+        text = self._control.textCursor().selection().toPlainText()
+        if text:
+            # Remove prompts.
+            lines = text.splitlines()
+            lines = map(transform_classic_prompt, lines)
+            lines = map(transform_ipy_prompt, lines)
+            text = '\n'.join(lines)
+            was_newline = text[-1] == '\n'
+            if was_newline:  # user doesn't need newline
+                text = text[:-1]
+            QtGui.QApplication.clipboard().setText(text)
+    else:
+        self.log.debug("frontend widget : unknown copy target")
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' abstract interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.227">def _is_complete(self, source, interactive):
+    """ Returns whether 'source' can be completely processed and a new
+        prompt created. When triggered by an Enter/Return key press,
+        'interactive' is True; otherwise, it is False.
+        
+        Returns
+        -------
+        
+        (complete, indent): (bool, str)
+        complete is a bool, indicating whether the input is complete or not.
+        indent is the current indentation string for autoindent.
+        If complete is True, indent will be '', and should be ignored.
+    """
+    kc = self.blocking_client
+    if kc is None:
+        self.log.warn("No blocking client to make is_complete requests")
+        return False, u''
+    msg_id = kc.is_complete(source)
+    while True:
+        try:
+            reply = kc.shell_channel.get_msg(block=True, timeout=self.is_complete_timeout)
+        except Empty:
+            # assume incomplete output if we get no reply in time
+            return False, u''
+        if reply['parent_header'].get('msg_id', None) == msg_id:
+            status = reply['content'].get('status', u'complete')
+            indent = reply['content'].get('indent', u'')
+            return status != 'incomplete', indent
+
+</t>
+<t tx="ekr.20190320124833.228">def _execute(self, source, hidden):
+    """ Execute 'source'. If 'hidden', do not show any output.
+
+    See parent class :meth:`execute` docstring for full details.
+    """
+    msg_id = self.kernel_client.execute(source, hidden)
+    self._request_info['execute'][msg_id] = self._ExecutionRequest(msg_id, 'user')
+    self._hidden = hidden
+    if not hidden:
+        self.executing.emit(source)
+
+</t>
+<t tx="ekr.20190320124833.229">def _prompt_started_hook(self):
+    """ Called immediately after a new prompt is displayed.
+    """
+    if not self._reading:
+        self._highlighter.highlighting_on = True
+
+</t>
+<t tx="ekr.20190320124833.23">def _make_blocking_client(self):
+    kc = self.kernel_client
+    if kc is None:
+        return
+    
+    try:
+        blocking_client = kc.blocking_client
+    except AttributeError:
+        def blocking_client():
+            info = kc.get_connection_info()
+            bc = BlockingKernelClient(**info)
+            bc.session.key = kc.session.key
+            return bc
+
+    self._blocking_client = blocking_client()
+    self._blocking_client.shell_channel.start()
+
+</t>
+<t tx="ekr.20190320124833.230">def _prompt_finished_hook(self):
+    """ Called immediately after a prompt is finished, i.e. when some input
+        will be processed and a new prompt displayed.
+    """
+    if not self._reading:
+        self._highlighter.highlighting_on = False
+
+</t>
+<t tx="ekr.20190320124833.231">def _tab_pressed(self):
+    """ Called when the tab key is pressed. Returns whether to continue
+        processing the event.
+    """
+    # Perform tab completion if:
+    # 1) The cursor is in the input buffer.
+    # 2) There is a non-whitespace character before the cursor.
+    text = self._get_input_buffer_cursor_line()
+    if text is None:
+        return False
+    complete = bool(text[:self._get_input_buffer_cursor_column()].strip())
+    if complete:
+        self._complete()
+    return not complete
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.232">def _context_menu_make(self, pos):
+    """ Reimplemented to add an action for raw copy.
+    """
+    menu = super(FrontendWidget, self)._context_menu_make(pos)
+    for before_action in menu.actions():
+        if before_action.shortcut().matches(QtGui.QKeySequence.Paste) == \
+                QtGui.QKeySequence.ExactMatch:
+            menu.insertAction(before_action, self._copy_raw_action)
+            break
+    return menu
+
+</t>
+<t tx="ekr.20190320124833.233">def request_interrupt_kernel(self):
+    if self._executing:
+        self.interrupt_kernel()
+
+</t>
+<t tx="ekr.20190320124833.234">def request_restart_kernel(self):
+    message = 'Are you sure you want to restart the kernel?'
+    self.restart_kernel(message, now=False)
+
+</t>
+<t tx="ekr.20190320124833.235">def _event_filter_console_keypress(self, event):
+    """ Reimplemented for execution interruption and smart backspace.
+    """
+    key = event.key()
+    if self._control_key_down(event.modifiers(), include_command=False):
+
+        if key == QtCore.Qt.Key_C and self._executing:
+            self.request_interrupt_kernel()
+            return True
+
+        elif key == QtCore.Qt.Key_Period:
+            self.request_restart_kernel()
+            return True
+
+    elif not event.modifiers() &amp; QtCore.Qt.AltModifier:
+
+        # Smart backspace: remove four characters in one backspace if:
+        # 1) everything left of the cursor is whitespace
+        # 2) the four characters immediately left of the cursor are spaces
+        if key == QtCore.Qt.Key_Backspace:
+            col = self._get_input_buffer_cursor_column()
+            cursor = self._control.textCursor()
+            if col &gt; 3 and not cursor.hasSelection():
+                text = self._get_input_buffer_cursor_line()[:col]
+                if text.endswith('    ') and not text.strip():
+                    cursor.movePosition(QtGui.QTextCursor.Left,
+                                        QtGui.QTextCursor.KeepAnchor, 4)
+                    cursor.removeSelectedText()
+                    return True
+
+    return super(FrontendWidget, self)._event_filter_console_keypress(event)
+
+</t>
+<t tx="ekr.20190320124833.236">def _insert_continuation_prompt(self, cursor, indent=''):
+    """ Reimplemented for auto-indentation.
+    """
+    super(FrontendWidget, self)._insert_continuation_prompt(cursor)
+    if indent:
+        cursor.insertText(indent)
+
+#---------------------------------------------------------------------------
+# 'BaseFrontendMixin' abstract interface
+#---------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124833.237">def _handle_clear_output(self, msg):
+    """Handle clear output messages."""
+    if self.include_output(msg):
+        wait = msg['content'].get('wait', True)
+        if wait:
+            self._pending_clearoutput = True
+        else:
+            self.clear_output()
+
+</t>
+<t tx="ekr.20190320124833.238">def _silent_exec_callback(self, expr, callback):
+    """Silently execute `expr` in the kernel and call `callback` with reply
+
+    the `expr` is evaluated silently in the kernel (without) output in
+    the frontend. Call `callback` with the
+    `repr &lt;http://docs.python.org/library/functions.html#repr&gt; `_ as first argument
+
+    Parameters
+    ----------
+    expr : string
+        valid string to be executed by the kernel.
+    callback : function
+        function accepting one argument, as a string. The string will be
+        the `repr` of the result of evaluating `expr`
+
+    The `callback` is called with the `repr()` of the result of `expr` as
+    first argument. To get the object, do `eval()` on the passed value.
+
+    See Also
+    --------
+    _handle_exec_callback : private method, deal with calling callback with reply
+
+    """
+
+    # generate uuid, which would be used as an indication of whether or
+    # not the unique request originated from here (can use msg id ?)
+    local_uuid = str(uuid.uuid1())
+    msg_id = self.kernel_client.execute('',
+        silent=True, user_expressions={ local_uuid:expr })
+    self._callback_dict[local_uuid] = callback
+    self._request_info['execute'][msg_id] = self._ExecutionRequest(msg_id, 'silent_exec_callback')
+
+</t>
+<t tx="ekr.20190320124833.239">def _handle_exec_callback(self, msg):
+    """Execute `callback` corresponding to `msg` reply, after ``_silent_exec_callback``
+
+    Parameters
+    ----------
+    msg : raw message send by the kernel containing an `user_expressions`
+            and having a 'silent_exec_callback' kind.
+
+    Notes
+    -----
+    This function will look for a `callback` associated with the
+    corresponding message id. Association has been made by
+    `_silent_exec_callback`. `callback` is then called with the `repr()`
+    of the value of corresponding `user_expressions` as argument.
+    `callback` is then removed from the known list so that any message
+    coming again with the same id won't trigger it.
+    """
+    user_exp = msg['content'].get('user_expressions')
+    if not user_exp:
+        return
+    for expression in user_exp:
+        if expression in self._callback_dict:
+            self._callback_dict.pop(expression)(user_exp[expression])
+
+</t>
+<t tx="ekr.20190320124833.24">@property
+def blocking_client(self):
+    if self._blocking_client is None:
+        self._make_blocking_client()
+    return self._blocking_client
+
+</t>
+<t tx="ekr.20190320124833.240">def _handle_execute_reply(self, msg):
+    """ Handles replies for code execution.
+    """
+    self.log.debug("execute: %s", msg.get('content', ''))
+    msg_id = msg['parent_header']['msg_id']
+    info = self._request_info['execute'].get(msg_id)
+    # unset reading flag, because if execute finished, raw_input can't
+    # still be pending.
+    self._reading = False
+    # Note:  If info is NoneType, this is ignored
+    if info and info.kind == 'user' and not self._hidden:
+        # Make sure that all output from the SUB channel has been processed
+        # before writing a new prompt.
+        self.kernel_client.iopub_channel.flush()
+
+        # Reset the ANSI style information to prevent bad text in stdout
+        # from messing up our colors. We're not a true terminal so we're
+        # allowed to do this.
+        if self.ansi_codes:
+            self._ansi_processor.reset_sgr()
+
+        content = msg['content']
+        status = content['status']
+        if status == 'ok':
+            self._process_execute_ok(msg)
+        elif status == 'aborted':
+            self._process_execute_abort(msg)
+
+        self._show_interpreter_prompt_for_reply(msg)
+        self.executed.emit(msg)
+        self._request_info['execute'].pop(msg_id)
+    elif info and info.kind == 'silent_exec_callback' and not self._hidden:
+        self._handle_exec_callback(msg)
+        self._request_info['execute'].pop(msg_id)
+    elif info and not self._hidden:
+        raise RuntimeError("Unknown handler for %s" % info.kind)
+
+</t>
+<t tx="ekr.20190320124833.241">def _handle_error(self, msg):
+    """ Handle error messages.
+    """
+    self._process_execute_error(msg)
+
+</t>
+<t tx="ekr.20190320124833.242">def _handle_input_request(self, msg):
+    """ Handle requests for raw_input.
+    """
+    self.log.debug("input: %s", msg.get('content', ''))
+    if self._hidden:
+        raise RuntimeError('Request for raw input during hidden execution.')
+
+    # Make sure that all output from the SUB channel has been processed
+    # before entering readline mode.
+    self.kernel_client.iopub_channel.flush()
+
+    def callback(line):
+        self.kernel_client.input(line)
+    if self._reading:
+        self.log.debug("Got second input request, assuming first was interrupted.")
+        self._reading = False
+    self._readline(msg['content']['prompt'], callback=callback, password=msg['content']['password'])
+
+</t>
+<t tx="ekr.20190320124833.243">def _kernel_restarted_message(self, died=True):
+    msg = "Kernel died, restarting" if died else "Kernel restarting"
+    self._append_html("&lt;br&gt;%s&lt;hr&gt;&lt;br&gt;" % msg,
+        before_prompt=False
+    )
+
+</t>
+<t tx="ekr.20190320124833.244">def _handle_kernel_died(self, since_last_heartbeat):
+    """Handle the kernel's death (if we do not own the kernel).
+    """
+    self.log.warn("kernel died: %s", since_last_heartbeat)
+    if self.custom_restart:
+        self.custom_restart_kernel_died.emit(since_last_heartbeat)
+    else:
+        self._kernel_restarted_message(died=True)
+        self.reset()
+
+</t>
+<t tx="ekr.20190320124833.245">def _handle_kernel_restarted(self, died=True):
+    """Notice that the autorestarter restarted the kernel.
+
+    There's nothing to do but show a message.
+    """
+    self.log.warn("kernel restarted")
+    self._kernel_restarted_message(died=died)
+    self.reset()
+
+</t>
+<t tx="ekr.20190320124833.246">def _handle_inspect_reply(self, rep):
+    """Handle replies for call tips."""
+    self.log.debug("oinfo: %s", rep.get('content', ''))
+    cursor = self._get_cursor()
+    info = self._request_info.get('call_tip')
+    if info and info.id == rep['parent_header']['msg_id'] and \
+            info.pos == cursor.position():
+        content = rep['content']
+        if content.get('status') == 'ok' and content.get('found', False):
+            self._call_tip_widget.show_inspect_data(content)
+
+</t>
+<t tx="ekr.20190320124833.247">def _handle_execute_result(self, msg):
+    """ Handle display hook output.
+    """
+    self.log.debug("execute_result: %s", msg.get('content', ''))
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        text = msg['content']['data']
+        self._append_plain_text(text + '\n', before_prompt=True)
+
+</t>
+<t tx="ekr.20190320124833.248">def _handle_stream(self, msg):
+    """ Handle stdout, stderr, and stdin.
+    """
+    self.log.debug("stream: %s", msg.get('content', ''))
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        self.append_stream(msg['content']['text'])
+
+</t>
+<t tx="ekr.20190320124833.249">def _handle_shutdown_reply(self, msg):
+    """ Handle shutdown signal, only if from other console.
+    """
+    self.log.debug("shutdown: %s", msg.get('content', ''))
+    restart = msg.get('content', {}).get('restart', False)
+    if not self._hidden and not self.from_here(msg):
+        # got shutdown reply, request came from session other than ours
+        if restart:
+            # someone restarted the kernel, handle it
+            self._handle_kernel_restarted(died=False)
+        else:
+            # kernel was shutdown permanently
+            # this triggers exit_requested if the kernel was local,
+            # and a dialog if the kernel was remote,
+            # so we don't suddenly clear the qtconsole without asking.
+            if self._local_kernel:
+                self.exit_requested.emit(self)
+            else:
+                title = self.window().windowTitle()
+                reply = QtGui.QMessageBox.question(self, title,
+                    "Kernel has been shutdown permanently. "
+                    "Close the Console?",
+                    QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
+                if reply == QtGui.QMessageBox.Yes:
+                    self.exit_requested.emit(self)
+
+</t>
+<t tx="ekr.20190320124833.25">@property
+def kernel_manager(self):
+    """The kernel manager, if any"""
+    return self._kernel_manager
+
+</t>
+<t tx="ekr.20190320124833.250">def _handle_status(self, msg):
+    """Handle status message"""
+    # This is where a busy/idle indicator would be triggered,
+    # when we make one.
+    state = msg['content'].get('execution_state', '')
+    if state == 'starting':
+        # kernel started while we were running
+        if self._executing:
+            self._handle_kernel_restarted(died=True)
+    elif state == 'idle':
+        pass
+    elif state == 'busy':
+        pass
+
+</t>
+<t tx="ekr.20190320124833.251">def _started_channels(self):
+    """ Called when the KernelManager channels have started listening or
+        when the frontend is assigned an already listening KernelManager.
+    """
+    self.reset(clear=True)
+
+#---------------------------------------------------------------------------
+# 'FrontendWidget' public interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.252">def copy_raw(self):
+    """ Copy the currently selected text to the clipboard without attempting
+        to remove prompts or otherwise alter the text.
+    """
+    self._control.copy()
+
+</t>
+<t tx="ekr.20190320124833.253">def interrupt_kernel(self):
+    """ Attempts to interrupt the running kernel.
+    
+    Also unsets _reading flag, to avoid runtime errors
+    if raw_input is called again.
+    """
+    if self.custom_interrupt:
+        self._reading = False
+        self.custom_interrupt_requested.emit()
+    elif self.kernel_manager:
+        self._reading = False
+        self.kernel_manager.interrupt_kernel()
+    else:
+        self._append_plain_text('Cannot interrupt a kernel I did not start.\n')
+
+</t>
+<t tx="ekr.20190320124833.254">def reset(self, clear=False):
+    """ Resets the widget to its initial state if ``clear`` parameter
+    is True, otherwise
+    prints a visual indication of the fact that the kernel restarted, but
+    does not clear the traces from previous usage of the kernel before it
+    was restarted.  With ``clear=True``, it is similar to ``%clear``, but
+    also re-writes the banner and aborts execution if necessary.
+    """
+    if self._executing:
+        self._executing = False
+        self._request_info['execute'] = {}
+    self._reading = False
+    self._highlighter.highlighting_on = False
+
+    if clear:
+        self._control.clear()
+        if self._display_banner:
+            self._append_plain_text(self.banner)
+            if self.kernel_banner:
+                self._append_plain_text(self.kernel_banner)
+
+    # update output marker for stdout/stderr, so that startup
+    # messages appear after banner:
+    self._show_interpreter_prompt()
+
+</t>
+<t tx="ekr.20190320124833.255">def restart_kernel(self, message, now=False):
+    """ Attempts to restart the running kernel.
+    """
+    # FIXME: now should be configurable via a checkbox in the dialog.  Right
+    # now at least the heartbeat path sets it to True and the manual restart
+    # to False.  But those should just be the pre-selected states of a
+    # checkbox that the user could override if so desired.  But I don't know
+    # enough Qt to go implementing the checkbox now.
+
+    if self.custom_restart:
+        self.custom_restart_requested.emit()
+        return
+
+    if self.kernel_manager:
+        # Pause the heart beat channel to prevent further warnings.
+        self.kernel_client.hb_channel.pause()
+
+        # Prompt the user to restart the kernel. Un-pause the heartbeat if
+        # they decline. (If they accept, the heartbeat will be un-paused
+        # automatically when the kernel is restarted.)
+        if self.confirm_restart:
+            buttons = QtGui.QMessageBox.Yes | QtGui.QMessageBox.No
+            result = QtGui.QMessageBox.question(self, 'Restart kernel?',
+                                                message, buttons)
+            do_restart = result == QtGui.QMessageBox.Yes
+        else:
+            # confirm_restart is False, so we don't need to ask user
+            # anything, just do the restart
+            do_restart = True
+        if do_restart:
+            try:
+                self.kernel_manager.restart_kernel(now=now)
+            except RuntimeError as e:
+                self._append_plain_text(
+                    'Error restarting kernel: %s\n' % e,
+                    before_prompt=True
+                )
+            else:
+                self._append_html("&lt;br&gt;Restarting kernel...\n&lt;hr&gt;&lt;br&gt;",
+                    before_prompt=True,
+                )
+        else:
+            self.kernel_client.hb_channel.unpause()
+
+    else:
+        self._append_plain_text(
+            'Cannot restart a Kernel I did not start\n',
+            before_prompt=True
+        )
+
+</t>
+<t tx="ekr.20190320124833.256">def append_stream(self, text):
+    """Appends text to the output stream."""
+    # Most consoles treat tabs as being 8 space characters. Convert tabs
+    # to spaces so that output looks as expected regardless of this
+    # widget's tab width.
+    text = text.expandtabs(8)
+    self._append_plain_text(text, before_prompt=True)
+    self._control.moveCursor(QtGui.QTextCursor.End)
+
+</t>
+<t tx="ekr.20190320124833.257">def flush_clearoutput(self):
+    """If a clearoutput is pending, execute it."""
+    if self._pending_clearoutput:
+        self._pending_clearoutput = False
+        self.clear_output()
+
+</t>
+<t tx="ekr.20190320124833.258">def clear_output(self):
+    """Clears the current line of output."""
+    cursor = self._control.textCursor()
+    cursor.beginEditBlock()
+    cursor.movePosition(cursor.StartOfLine, cursor.KeepAnchor)
+    cursor.insertText('')
+    cursor.endEditBlock()
+
+#---------------------------------------------------------------------------
+# 'FrontendWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.259">def _auto_call_tip(self):
+    """Trigger call tip automatically on open parenthesis
+    
+    Call tips can be requested explcitly with `_call_tip`.
+    """
+    cursor = self._get_cursor()
+    cursor.movePosition(QtGui.QTextCursor.Left)
+    if cursor.document().characterAt(cursor.position()) == '(':
+        # trigger auto call tip on open paren
+        self._call_tip()
+
+</t>
+<t tx="ekr.20190320124833.26">@kernel_manager.setter
+def kernel_manager(self, kernel_manager):
+    old_man = self._kernel_manager
+    if old_man is not None:
+        old_man.kernel_restarted.disconnect(self._handle_kernel_restarted)
+
+    self._kernel_manager = kernel_manager
+    if kernel_manager is None:
+        return
+
+    kernel_manager.kernel_restarted.connect(self._handle_kernel_restarted)
+
+#---------------------------------------------------------------------------
+# 'BaseFrontendMixin' abstract interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.260">def _call_tip(self):
+    """Shows a call tip, if appropriate, at the current cursor location."""
+    # Decide if it makes sense to show a call tip
+    if not self.enable_calltips or not self.kernel_client.shell_channel.is_alive():
+        return False
+    cursor_pos = self._get_input_buffer_cursor_pos()
+    code = self.input_buffer
+    # Send the metadata request to the kernel
+    msg_id = self.kernel_client.inspect(code, cursor_pos)
+    pos = self._get_cursor().position()
+    self._request_info['call_tip'] = self._CallTipRequest(msg_id, pos)
+    return True
+
+</t>
+<t tx="ekr.20190320124833.261">def _complete(self):
+    """ Performs completion at the current cursor location.
+    """
+    # Send the completion request to the kernel
+    msg_id = self.kernel_client.complete(
+        code=self.input_buffer,
+        cursor_pos=self._get_input_buffer_cursor_pos(),
+    )
+    pos = self._get_cursor().position()
+    info = self._CompletionRequest(msg_id, pos)
+    self._request_info['complete'] = info
+
+</t>
+<t tx="ekr.20190320124833.262">def _process_execute_abort(self, msg):
+    """ Process a reply for an aborted execution request.
+    """
+    self._append_plain_text("ERROR: execution aborted\n")
+
+</t>
+<t tx="ekr.20190320124833.263">def _process_execute_error(self, msg):
+    """ Process a reply for an execution request that resulted in an error.
+    """
+    content = msg['content']
+    # If a SystemExit is passed along, this means exit() was called - also
+    # all the ipython %exit magic syntax of '-k' to be used to keep
+    # the kernel running
+    if content['ename']=='SystemExit':
+        keepkernel = content['evalue']=='-k' or content['evalue']=='True'
+        self._keep_kernel_on_exit = keepkernel
+        self.exit_requested.emit(self)
+    else:
+        traceback = ''.join(content['traceback'])
+        self._append_plain_text(traceback)
+
+</t>
+<t tx="ekr.20190320124833.264">def _process_execute_ok(self, msg):
+    """ Process a reply for a successful execution request.
+    """
+    payload = msg['content'].get('payload', [])
+    for item in payload:
+        if not self._process_execute_payload(item):
+            warning = 'Warning: received unknown payload of type %s'
+            print(warning % repr(item['source']))
+
+</t>
+<t tx="ekr.20190320124833.265">def _process_execute_payload(self, item):
+    """ Process a single payload item from the list of payload items in an
+        execution reply. Returns whether the payload was handled.
+    """
+    # The basic FrontendWidget doesn't handle payloads, as they are a
+    # mechanism for going beyond the standard Python interpreter model.
+    return False
+
+</t>
+<t tx="ekr.20190320124833.266">def _show_interpreter_prompt(self):
+    """ Shows a prompt for the interpreter.
+    """
+    self._show_prompt('&gt;&gt;&gt; ')
+
+</t>
+<t tx="ekr.20190320124833.267">def _show_interpreter_prompt_for_reply(self, msg):
+    """ Shows a prompt for the interpreter given an 'execute_reply' message.
+    """
+    self._show_interpreter_prompt()
+
+#------ Signal handlers ----------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.268">def _document_contents_change(self, position, removed, added):
+    """ Called whenever the document's content changes. Display a call tip
+        if appropriate.
+    """
+    # Calculate where the cursor should be *after* the change:
+    position += added
+
+    document = self._control.document()
+    if position == self._get_cursor().position():
+        self._auto_call_tip()
+
+#------ Trait default initializers -----------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.269">def _banner_default(self):
+    """ Returns the standard Python banner.
+    """
+    banner = 'Python %s on %s\nType "help", "copyright", "credits" or ' \
+        '"license" for more information.'
+    return banner % (sys.version, sys.platform)
+</t>
+<t tx="ekr.20190320124833.27">def _handle_kernel_died(self, since_last_heartbeat):
+    """ This is called when the ``kernel_died`` signal is emitted.
+
+    This method is called when the kernel heartbeat has not been
+    active for a certain amount of time.
+    This is a strictly passive notification -
+    the kernel is likely being restarted by its KernelManager.
+
+    Parameters
+    ----------
+    since_last_heartbeat : float
+        The time since the heartbeat was last received.
+    """
+
+</t>
+<t tx="ekr.20190320124833.270">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.271">from qtconsole.qt import QtGui
+
+from ipython_genutils.py3compat import unicode_type
+from traitlets import Bool
+from .console_widget import ConsoleWidget
+
+
+</t>
+<t tx="ekr.20190320124833.272">class HistoryConsoleWidget(ConsoleWidget):
+    """ A ConsoleWidget that keeps a history of the commands that have been
+        executed and provides a readline-esque interface to this history.
+    """
+
+    #------ Configuration ------------------------------------------------------
+
+    # If enabled, the input buffer will become "locked" to history movement when
+    # an edit is made to a multi-line input buffer. To override the lock, use
+    # Shift in conjunction with the standard history cycling keys.
+    history_lock = Bool(False, config=True)
+
+    #---------------------------------------------------------------------------
+    # 'object' interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.273">def __init__(self, *args, **kw):
+    super(HistoryConsoleWidget, self).__init__(*args, **kw)
+
+    # HistoryConsoleWidget protected variables.
+    self._history = []
+    self._history_edits = {}
+    self._history_index = 0
+    self._history_prefix = ''
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' public interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.274">def execute(self, source=None, hidden=False, interactive=False):
+    """ Reimplemented to the store history.
+    """
+    if not hidden:
+        history = self.input_buffer if source is None else source
+
+    executed = super(HistoryConsoleWidget, self).execute(
+        source, hidden, interactive)
+
+    if executed and not hidden:
+        # Save the command unless it was an empty string or was identical
+        # to the previous command.
+        history = history.rstrip()
+        if history and (not self._history or self._history[-1] != history):
+            self._history.append(history)
+
+        # Emulate readline: reset all history edits.
+        self._history_edits = {}
+
+        # Move the history index to the most recent item.
+        self._history_index = len(self._history)
+
+    return executed
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' abstract interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.275">def _up_pressed(self, shift_modifier):
+    """ Called when the up key is pressed. Returns whether to continue
+        processing the event.
+    """
+    prompt_cursor = self._get_prompt_cursor()
+    if self._get_cursor().blockNumber() == prompt_cursor.blockNumber():
+        # Bail out if we're locked.
+        if self._history_locked() and not shift_modifier:
+            return False
+
+        # Set a search prefix based on the cursor position.
+        pos = self._get_input_buffer_cursor_pos()
+        input_buffer = self.input_buffer
+        # use the *shortest* of the cursor column and the history prefix
+        # to determine if the prefix has changed
+        n = min(pos, len(self._history_prefix))
+
+        # prefix changed, restart search from the beginning
+        if (self._history_prefix[:n] != input_buffer[:n]):
+            self._history_index = len(self._history)
+
+        # the only time we shouldn't set the history prefix
+        # to the line up to the cursor is if we are already
+        # in a simple scroll (no prefix),
+        # and the cursor is at the end of the first line
+
+        # check if we are at the end of the first line
+        c = self._get_cursor()
+        current_pos = c.position()
+        c.movePosition(QtGui.QTextCursor.EndOfBlock)
+        at_eol = (c.position() == current_pos)
+
+        if self._history_index == len(self._history) or \
+            not (self._history_prefix == '' and at_eol) or \
+            not (self._get_edited_history(self._history_index)[:pos] == input_buffer[:pos]):
+            self._history_prefix = input_buffer[:pos]
+
+        # Perform the search.
+        self.history_previous(self._history_prefix,
+                                as_prefix=not shift_modifier)
+
+        # Go to the first line of the prompt for seemless history scrolling.
+        # Emulate readline: keep the cursor position fixed for a prefix
+        # search.
+        cursor = self._get_prompt_cursor()
+        if self._history_prefix:
+            cursor.movePosition(QtGui.QTextCursor.Right,
+                                n=len(self._history_prefix))
+        else:
+            cursor.movePosition(QtGui.QTextCursor.EndOfBlock)
+        self._set_cursor(cursor)
+
+        return False
+
+    return True
+
+</t>
+<t tx="ekr.20190320124833.276">def _down_pressed(self, shift_modifier):
+    """ Called when the down key is pressed. Returns whether to continue
+        processing the event.
+    """
+    end_cursor = self._get_end_cursor()
+    if self._get_cursor().blockNumber() == end_cursor.blockNumber():
+        # Bail out if we're locked.
+        if self._history_locked() and not shift_modifier:
+            return False
+
+        # Perform the search.
+        replaced = self.history_next(self._history_prefix,
+                                        as_prefix=not shift_modifier)
+
+        # Emulate readline: keep the cursor position fixed for a prefix
+        # search. (We don't need to move the cursor to the end of the buffer
+        # in the other case because this happens automatically when the
+        # input buffer is set.)
+        if self._history_prefix and replaced:
+            cursor = self._get_prompt_cursor()
+            cursor.movePosition(QtGui.QTextCursor.Right,
+                                n=len(self._history_prefix))
+            self._set_cursor(cursor)
+
+        return False
+
+    return True
+
+#---------------------------------------------------------------------------
+# 'HistoryConsoleWidget' public interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.277">def history_previous(self, substring='', as_prefix=True):
+    """ If possible, set the input buffer to a previous history item.
+
+    Parameters
+    ----------
+    substring : str, optional
+        If specified, search for an item with this substring.
+    as_prefix : bool, optional
+        If True, the substring must match at the beginning (default).
+
+    Returns
+    -------
+    Whether the input buffer was changed.
+    """
+    index = self._history_index
+    replace = False
+    while index &gt; 0:
+        index -= 1
+        history = self._get_edited_history(index)
+        if (as_prefix and history.startswith(substring)) \
+            or (not as_prefix and substring in history):
+            replace = True
+            break
+
+    if replace:
+        self._store_edits()
+        self._history_index = index
+        self.input_buffer = history
+
+    return replace
+
+</t>
+<t tx="ekr.20190320124833.278">def history_next(self, substring='', as_prefix=True):
+    """ If possible, set the input buffer to a subsequent history item.
+
+    Parameters
+    ----------
+    substring : str, optional
+        If specified, search for an item with this substring.
+    as_prefix : bool, optional
+        If True, the substring must match at the beginning (default).
+
+    Returns
+    -------
+    Whether the input buffer was changed.
+    """
+    index = self._history_index
+    replace = False
+    while index &lt; len(self._history):
+        index += 1
+        history = self._get_edited_history(index)
+        if (as_prefix and history.startswith(substring)) \
+            or (not as_prefix and substring in history):
+            replace = True
+            break
+
+    if replace:
+        self._store_edits()
+        self._history_index = index
+        self.input_buffer = history
+
+    return replace
+
+</t>
+<t tx="ekr.20190320124833.279">def history_tail(self, n=10):
+    """ Get the local history list.
+
+    Parameters
+    ----------
+    n : int
+        The (maximum) number of history items to get.
+    """
+    return self._history[-n:]
+
+#---------------------------------------------------------------------------
+# 'HistoryConsoleWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.28">def _handle_kernel_restarted(self):
+    """ This is called when the ``kernel_restarted`` signal is emitted.
+
+    This method is called when the kernel has been restarted by the
+    autorestart mechanism.
+
+    Parameters
+    ----------
+    since_last_heartbeat : float
+        The time since the heartbeat was last received.
+    """
+</t>
+<t tx="ekr.20190320124833.280">def _history_locked(self):
+    """ Returns whether history movement is locked.
+    """
+    return (self.history_lock and
+            (self._get_edited_history(self._history_index) !=
+             self.input_buffer) and
+            (self._get_prompt_cursor().blockNumber() !=
+             self._get_end_cursor().blockNumber()))
+
+</t>
+<t tx="ekr.20190320124833.281">def _get_edited_history(self, index):
+    """ Retrieves a history item, possibly with temporary edits.
+    """
+    if index in self._history_edits:
+        return self._history_edits[index]
+    elif index == len(self._history):
+        return unicode_type()
+    return self._history[index]
+
+</t>
+<t tx="ekr.20190320124833.282">def _set_history(self, history):
+    """ Replace the current history with a sequence of history items.
+    """
+    self._history = list(history)
+    self._history_edits = {}
+    self._history_index = len(self._history)
+
+</t>
+<t tx="ekr.20190320124833.283">def _store_edits(self):
+    """ If there are edits to the current input buffer, store them.
+    """
+    current = self.input_buffer
+    if self._history_index == len(self._history) or \
+            self._history[self._history_index] != current:
+        self._history_edits[self._history_index] = current
+</t>
+<t tx="ekr.20190320124833.284">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.285">""" Defines an in-process KernelManager with signals and slots.
+"""
+
+from qtconsole.qt import QtCore
+from ipykernel.inprocess import (
+    InProcessHBChannel, InProcessKernelClient, InProcessKernelManager,
+)
+from ipykernel.inprocess.channels import InProcessChannel
+
+from traitlets import Type
+from .util import SuperQObject
+from .kernel_mixins import (
+    QtKernelClientMixin, QtKernelManagerMixin,
+)
+from .rich_jupyter_widget import RichJupyterWidget
+
+</t>
+<t tx="ekr.20190320124833.286">class QtInProcessChannel(SuperQObject, InProcessChannel):
+    # Emitted when the channel is started.
+    started = QtCore.Signal()
+
+    # Emitted when the channel is stopped.
+    stopped = QtCore.Signal()
+
+    # Emitted when any message is received.
+    message_received = QtCore.Signal(object)
+
+    @others
+</t>
+<t tx="ekr.20190320124833.287">def start(self):
+    """ Reimplemented to emit signal.
+    """
+    super(QtInProcessChannel, self).start()
+    self.started.emit()
+
+</t>
+<t tx="ekr.20190320124833.288">def stop(self):
+    """ Reimplemented to emit signal.
+    """
+    super(QtInProcessChannel, self).stop()
+    self.stopped.emit()
+
+</t>
+<t tx="ekr.20190320124833.289">def call_handlers_later(self, *args, **kwds):
+    """ Call the message handlers later.
+    """
+    do_later = lambda: self.call_handlers(*args, **kwds)
+    QtCore.QTimer.singleShot(0, do_later)
+
+</t>
+<t tx="ekr.20190320124833.29">def _started_kernel(self):
+    """Called when the KernelManager starts (or restarts) the kernel subprocess.
+    Channels may or may not be running at this point.
+    """
+
+</t>
+<t tx="ekr.20190320124833.290">def call_handlers(self, msg):
+    self.message_received.emit(msg)
+
+</t>
+<t tx="ekr.20190320124833.291">def process_events(self):
+    """ Process any pending GUI events.
+    """
+    QtCore.QCoreApplication.instance().processEvents()
+
+</t>
+<t tx="ekr.20190320124833.292">def flush(self, timeout=1.0):
+    """ Reimplemented to ensure that signals are dispatched immediately.
+    """
+    super(QtInProcessChannel, self).flush()
+    self.process_events()
+
+
+</t>
+<t tx="ekr.20190320124833.293">class QtInProcessHBChannel(SuperQObject, InProcessHBChannel):
+    # This signal will never be fired, but it needs to exist
+    kernel_died = QtCore.Signal()
+
+
+</t>
+<t tx="ekr.20190320124833.294">class QtInProcessKernelClient(QtKernelClientMixin, InProcessKernelClient):
+    """ An in-process KernelManager with signals and slots.
+    """
+
+    iopub_channel_class = Type(QtInProcessChannel)
+    shell_channel_class = Type(QtInProcessChannel)
+    stdin_channel_class = Type(QtInProcessChannel)
+    hb_channel_class = Type(QtInProcessHBChannel)
+
+</t>
+<t tx="ekr.20190320124833.295">class QtInProcessKernelManager(QtKernelManagerMixin, InProcessKernelManager):
+    client_class = __module__ + '.QtInProcessKernelClient'
+
+
+</t>
+<t tx="ekr.20190320124833.296">class QtInProcessRichJupyterWidget(RichJupyterWidget):
+    """ An in-process Jupyter Widget that enables multiline editing
+    """
+
+    @others
+</t>
+<t tx="ekr.20190320124833.297">def _is_complete(self, source, interactive=True):
+    shell = self.kernel_manager.kernel.shell
+    status, indent_spaces = \
+        shell.input_transformer_manager.check_complete(source)
+    if indent_spaces is None:
+        indent = ''
+    else:
+        indent = ' ' * indent_spaces
+    return status != 'incomplete', indent
+</t>
+<t tx="ekr.20190320124833.298">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.299">import warnings
+warnings.warn("qtconsole.ipython_widget is deprecated. use qtconsole.jupyter_widget", DeprecationWarning)
+from .jupyter_widget import *
+</t>
+<t tx="ekr.20190320124833.3">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.30">def _started_channels(self):
+    """ Called when the KernelManager channels have started listening or
+        when the frontend is assigned an already listening KernelManager.
+    """
+
+</t>
+<t tx="ekr.20190320124833.300">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.301">"""A FrontendWidget that emulates a repl for a Jupyter kernel.
+
+This supports the additional functionality provided by Jupyter kernel.
+"""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+from collections import namedtuple
+import os.path
+import re
+from subprocess import Popen
+import sys
+import time
+from textwrap import dedent
+
+from qtconsole.qt import QtCore, QtGui
+
+from IPython.lib.lexers import IPythonLexer, IPython3Lexer
+from pygments.lexers import get_lexer_by_name
+from pygments.util import ClassNotFound
+from qtconsole import __version__
+from traitlets import Bool, Unicode
+from .frontend_widget import FrontendWidget
+from . import styles
+
+#-----------------------------------------------------------------------------
+# Constants
+#-----------------------------------------------------------------------------
+
+# Default strings to build and display input and output prompts (and separators
+# in between)
+default_in_prompt = 'In [&lt;span class="in-prompt-number"&gt;%i&lt;/span&gt;]: '
+default_out_prompt = 'Out[&lt;span class="out-prompt-number"&gt;%i&lt;/span&gt;]: '
+default_input_sep = '\n'
+default_output_sep = ''
+default_output_sep2 = ''
+
+# Base path for most payload sources.
+zmq_shell_source = 'ipykernel.zmqshell.ZMQInteractiveShell'
+
+if sys.platform.startswith('win'):
+    default_editor = 'notepad'
+else:
+    default_editor = ''
+
+#-----------------------------------------------------------------------------
+# JupyterWidget class
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.302">class IPythonWidget(FrontendWidget):
+    """Dummy class for config inheritance. Destroyed below."""
+
+
+</t>
+<t tx="ekr.20190320124833.303">class JupyterWidget(IPythonWidget):
+    """A FrontendWidget for a Jupyter kernel."""
+
+    # If set, the 'custom_edit_requested(str, int)' signal will be emitted when
+    # an editor is needed for a file. This overrides 'editor' and 'editor_line'
+    # settings.
+    custom_edit = Bool(False)
+    custom_edit_requested = QtCore.Signal(object, object)
+
+    editor = Unicode(default_editor, config=True,
+        help="""
+        A command for invoking a system text editor. If the string contains a
+        {filename} format specifier, it will be used. Otherwise, the filename
+        will be appended to the end the command.
+        """)
+
+    editor_line = Unicode(config=True,
+        help="""
+        The editor command to use when a specific line number is requested. The
+        string should contain two format specifiers: {line} and {filename}. If
+        this parameter is not specified, the line number option to the %edit
+        magic will be ignored.
+        """)
+
+    style_sheet = Unicode(config=True,
+        help="""
+        A CSS stylesheet. The stylesheet can contain classes for:
+            1. Qt: QPlainTextEdit, QFrame, QWidget, etc
+            2. Pygments: .c, .k, .o, etc. (see PygmentsHighlighter)
+            3. QtConsole: .error, .in-prompt, .out-prompt, etc
+        """)
+
+    syntax_style = Unicode(config=True,
+        help="""
+        If not empty, use this Pygments style for syntax highlighting.
+        Otherwise, the style sheet is queried for Pygments style
+        information.
+        """)
+
+    # Prompts.
+    in_prompt = Unicode(default_in_prompt, config=True)
+    out_prompt = Unicode(default_out_prompt, config=True)
+    input_sep = Unicode(default_input_sep, config=True)
+    output_sep = Unicode(default_output_sep, config=True)
+    output_sep2 = Unicode(default_output_sep2, config=True)
+
+    # JupyterWidget protected class variables.
+    _PromptBlock = namedtuple('_PromptBlock', ['block', 'length', 'number'])
+    _payload_source_edit = 'edit_magic'
+    _payload_source_exit = 'ask_exit'
+    _payload_source_next_input = 'set_next_input'
+    _payload_source_page = 'page'
+    _retrying_history_request = False
+    _starting = False
+
+    #---------------------------------------------------------------------------
+    # 'object' interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.304">def __init__(self, *args, **kw):
+    super(JupyterWidget, self).__init__(*args, **kw)
+
+    # JupyterWidget protected variables.
+    self._payload_handlers = {
+        self._payload_source_edit : self._handle_payload_edit,
+        self._payload_source_exit : self._handle_payload_exit,
+        self._payload_source_page : self._handle_payload_page,
+        self._payload_source_next_input : self._handle_payload_next_input }
+    self._previous_prompt_obj = None
+    self._keep_kernel_on_exit = None
+
+    # Initialize widget styling.
+    if self.style_sheet:
+        self._style_sheet_changed()
+        self._syntax_style_changed()
+    else:
+        self.set_default_style()
+
+#---------------------------------------------------------------------------
+# 'BaseFrontendMixin' abstract interface
+#
+# For JupyterWidget,  override FrontendWidget methods which implement the
+# BaseFrontend Mixin abstract interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.305">def _handle_complete_reply(self, rep):
+    """Support Jupyter's improved completion machinery.
+    """
+    self.log.debug("complete: %s", rep.get('content', ''))
+    cursor = self._get_cursor()
+    info = self._request_info.get('complete')
+    if info and info.id == rep['parent_header']['msg_id'] and \
+            info.pos == cursor.position():
+        content = rep['content']
+        matches = content['matches']
+        start = content['cursor_start']
+        end = content['cursor_end']
+        
+        start = max(start, 0)
+        end = max(end, start)
+
+        # Move the control's cursor to the desired end point
+        cursor_pos = self._get_input_buffer_cursor_pos()
+        if end &lt; cursor_pos:
+            cursor.movePosition(QtGui.QTextCursor.Left,
+                                n=(cursor_pos - end))
+        elif end &gt; cursor_pos:
+            cursor.movePosition(QtGui.QTextCursor.Right,
+                                n=(end - cursor_pos))
+        # This line actually applies the move to control's cursor
+        self._control.setTextCursor(cursor)
+
+        offset = end - start
+        # Move the local cursor object to the start of the match and
+        # complete.
+        cursor.movePosition(QtGui.QTextCursor.Left, n=offset)
+        self._complete_with_items(cursor, matches)
+
+</t>
+<t tx="ekr.20190320124833.306">def _handle_execute_reply(self, msg):
+    """Support prompt requests.
+    """
+    msg_id = msg['parent_header'].get('msg_id')
+    info = self._request_info['execute'].get(msg_id)
+    if info and info.kind == 'prompt':
+        content = msg['content']
+        if content['status'] == 'aborted':
+            self._show_interpreter_prompt()
+        else:
+            number = content['execution_count'] + 1
+            self._show_interpreter_prompt(number)
+        self._request_info['execute'].pop(msg_id)
+    else:
+        super(JupyterWidget, self)._handle_execute_reply(msg)
+
+</t>
+<t tx="ekr.20190320124833.307">def _handle_history_reply(self, msg):
+    """ Handle history tail replies, which are only supported
+        by Jupyter kernels.
+    """
+    content = msg['content']
+    if 'history' not in content:
+        self.log.error("History request failed: %r"%content)
+        if content.get('status', '') == 'aborted' and \
+                                        not self._retrying_history_request:
+            # a *different* action caused this request to be aborted, so
+            # we should try again.
+            self.log.error("Retrying aborted history request")
+            # prevent multiple retries of aborted requests:
+            self._retrying_history_request = True
+            # wait out the kernel's queue flush, which is currently timed at 0.1s
+            time.sleep(0.25)
+            self.kernel_client.history(hist_access_type='tail',n=1000)
+        else:
+            self._retrying_history_request = False
+        return
+    # reset retry flag
+    self._retrying_history_request = False
+    history_items = content['history']
+    self.log.debug("Received history reply with %i entries", len(history_items))
+    items = []
+    last_cell = u""
+    for _, _, cell in history_items:
+        cell = cell.rstrip()
+        if cell != last_cell:
+            items.append(cell)
+            last_cell = cell
+    self._set_history(items)
+
+</t>
+<t tx="ekr.20190320124833.308">def _insert_other_input(self, cursor, content):
+    """Insert function for input from other frontends"""
+    cursor.beginEditBlock()
+    start = cursor.position()
+    n = content.get('execution_count', 0)
+    cursor.insertText('\n')
+    self._insert_html(cursor, self._make_in_prompt(n))
+    cursor.insertText(content['code'])
+    self._highlighter.rehighlightBlock(cursor.block())
+    cursor.endEditBlock()
+    
+</t>
+<t tx="ekr.20190320124833.309">def _handle_execute_input(self, msg):
+    """Handle an execute_input message"""
+    self.log.debug("execute_input: %s", msg.get('content', ''))
+    if self.include_output(msg):
+        self._append_custom(self._insert_other_input, msg['content'], before_prompt=True)
+
+</t>
+<t tx="ekr.20190320124833.31">def _stopped_channels(self):
+    """ Called when the KernelManager channels have stopped listening or
+        when a listening KernelManager is removed from the frontend.
+    """
+
+#---------------------------------------------------------------------------
+# 'BaseFrontendMixin' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.310">def _handle_execute_result(self, msg):
+    """Handle an execute_result message"""
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        content = msg['content']
+        prompt_number = content.get('execution_count', 0)
+        data = content['data']
+        if 'text/plain' in data:
+            self._append_plain_text(self.output_sep, True)
+            self._append_html(self._make_out_prompt(prompt_number), True)
+            text = data['text/plain']
+            # If the repr is multiline, make sure we start on a new line,
+            # so that its lines are aligned.
+            if "\n" in text and not self.output_sep.endswith("\n"):
+                self._append_plain_text('\n', True)
+            self._append_plain_text(text + self.output_sep2, True)
+
+</t>
+<t tx="ekr.20190320124833.311">def _handle_display_data(self, msg):
+    """The base handler for the ``display_data`` message."""
+    # For now, we don't display data from other frontends, but we
+    # eventually will as this allows all frontends to monitor the display
+    # data. But we need to figure out how to handle this in the GUI.
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        data = msg['content']['data']
+        metadata = msg['content']['metadata']
+        # In the regular JupyterWidget, we simply print the plain text
+        # representation.
+        if 'text/plain' in data:
+            text = data['text/plain']
+            self._append_plain_text(text, True)
+        # This newline seems to be needed for text and html output.
+        self._append_plain_text(u'\n', True)
+
+</t>
+<t tx="ekr.20190320124833.312">def _handle_kernel_info_reply(self, rep):
+    """Handle kernel info replies."""
+    content = rep['content']
+    language_name = content['language_info']['name']
+    pygments_lexer = content['language_info'].get('pygments_lexer', '')
+
+    try:
+        # Other kernels with pygments_lexer info will have to be
+        # added here by hand.
+        if pygments_lexer == 'ipython3':
+            lexer = IPython3Lexer()
+        elif pygments_lexer == 'ipython2':
+            lexer = IPythonLexer()
+        else:
+            lexer = get_lexer_by_name(language_name)
+        self._highlighter._lexer = lexer
+    except ClassNotFound:
+        pass
+
+    self.kernel_banner = content.get('banner', '')
+    if self._starting:
+        # finish handling started channels
+        self._starting = False
+        super(JupyterWidget, self)._started_channels()
+
+</t>
+<t tx="ekr.20190320124833.313">def _started_channels(self):
+    """Make a history request"""
+    self._starting = True
+    self.kernel_client.kernel_info()
+    self.kernel_client.history(hist_access_type='tail', n=1000)
+
+
+#---------------------------------------------------------------------------
+# 'FrontendWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.314">def _process_execute_error(self, msg):
+    """Handle an execute_error message"""
+    content = msg['content']
+
+    traceback = '\n'.join(content['traceback']) + '\n'
+    if False:
+        # FIXME: For now, tracebacks come as plain text, so we can't
+        # use the html renderer yet.  Once we refactor ultratb to
+        # produce properly styled tracebacks, this branch should be the
+        # default
+        traceback = traceback.replace(' ', '&amp;nbsp;')
+        traceback = traceback.replace('\n', '&lt;br/&gt;')
+
+        ename = content['ename']
+        ename_styled = '&lt;span class="error"&gt;%s&lt;/span&gt;' % ename
+        traceback = traceback.replace(ename, ename_styled)
+
+        self._append_html(traceback)
+    else:
+        # This is the fallback for now, using plain text with ansi
+        # escapes
+        self._append_plain_text(traceback)
+
+</t>
+<t tx="ekr.20190320124833.315">def _process_execute_payload(self, item):
+    """ Reimplemented to dispatch payloads to handler methods.
+    """
+    handler = self._payload_handlers.get(item['source'])
+    if handler is None:
+        # We have no handler for this type of payload, simply ignore it
+        return False
+    else:
+        handler(item)
+        return True
+
+</t>
+<t tx="ekr.20190320124833.316">def _show_interpreter_prompt(self, number=None):
+    """ Reimplemented for IPython-style prompts.
+    """
+    # If a number was not specified, make a prompt number request.
+    if number is None:
+        msg_id = self.kernel_client.execute('', silent=True)
+        info = self._ExecutionRequest(msg_id, 'prompt')
+        self._request_info['execute'][msg_id] = info
+        return
+
+    # Show a new prompt and save information about it so that it can be
+    # updated later if the prompt number turns out to be wrong.
+    self._prompt_sep = self.input_sep
+    self._show_prompt(self._make_in_prompt(number), html=True)
+    block = self._control.document().lastBlock()
+    length = len(self._prompt)
+    self._previous_prompt_obj = self._PromptBlock(block, length, number)
+
+    # Update continuation prompt to reflect (possibly) new prompt length.
+    self._set_continuation_prompt(
+        self._make_continuation_prompt(self._prompt), html=True)
+
+</t>
+<t tx="ekr.20190320124833.317">def _show_interpreter_prompt_for_reply(self, msg):
+    """ Reimplemented for IPython-style prompts.
+    """
+    # Update the old prompt number if necessary.
+    content = msg['content']
+    # abort replies do not have any keys:
+    if content['status'] == 'aborted':
+        if self._previous_prompt_obj:
+            previous_prompt_number = self._previous_prompt_obj.number
+        else:
+            previous_prompt_number = 0
+    else:
+        previous_prompt_number = content['execution_count']
+    if self._previous_prompt_obj and \
+            self._previous_prompt_obj.number != previous_prompt_number:
+        block = self._previous_prompt_obj.block
+
+        # Make sure the prompt block has not been erased.
+        if block.isValid() and block.text():
+
+            # Remove the old prompt and insert a new prompt.
+            cursor = QtGui.QTextCursor(block)
+            cursor.movePosition(QtGui.QTextCursor.Right,
+                                QtGui.QTextCursor.KeepAnchor,
+                                self._previous_prompt_obj.length)
+            prompt = self._make_in_prompt(previous_prompt_number)
+            self._prompt = self._insert_html_fetching_plain_text(
+                cursor, prompt)
+
+            # When the HTML is inserted, Qt blows away the syntax
+            # highlighting for the line, so we need to rehighlight it.
+            self._highlighter.rehighlightBlock(cursor.block())
+
+        self._previous_prompt_obj = None
+
+    # Show a new prompt with the kernel's estimated prompt number.
+    self._show_interpreter_prompt(previous_prompt_number + 1)
+
+#---------------------------------------------------------------------------
+# 'JupyterWidget' interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.318">def set_default_style(self, colors='lightbg'):
+    """ Sets the widget style to the class defaults.
+
+    Parameters
+    ----------
+    colors : str, optional (default lightbg)
+        Whether to use the default light background or dark
+        background or B&amp;W style.
+    """
+    colors = colors.lower()
+    if colors=='lightbg':
+        self.style_sheet = styles.default_light_style_sheet
+        self.syntax_style = styles.default_light_syntax_style
+    elif colors=='linux':
+        self.style_sheet = styles.default_dark_style_sheet
+        self.syntax_style = styles.default_dark_syntax_style
+    elif colors=='nocolor':
+        self.style_sheet = styles.default_bw_style_sheet
+        self.syntax_style = styles.default_bw_syntax_style
+    else:
+        raise KeyError("No such color scheme: %s"%colors)
+
+#---------------------------------------------------------------------------
+# 'JupyterWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.319">def _edit(self, filename, line=None):
+    """ Opens a Python script for editing.
+
+    Parameters
+    ----------
+    filename : str
+        A path to a local system file.
+
+    line : int, optional
+        A line of interest in the file.
+    """
+    if self.custom_edit:
+        self.custom_edit_requested.emit(filename, line)
+    elif not self.editor:
+        self._append_plain_text('No default editor available.\n'
+        'Specify a GUI text editor in the `JupyterWidget.editor` '
+        'configurable to enable the %edit magic')
+    else:
+        try:
+            filename = '"%s"' % filename
+            if line and self.editor_line:
+                command = self.editor_line.format(filename=filename,
+                                                  line=line)
+            else:
+                try:
+                    command = self.editor.format()
+                except KeyError:
+                    command = self.editor.format(filename=filename)
+                else:
+                    command += ' ' + filename
+        except KeyError:
+            self._append_plain_text('Invalid editor command.\n')
+        else:
+            try:
+                Popen(command, shell=True)
+            except OSError:
+                msg = 'Opening editor with command "%s" failed.\n'
+                self._append_plain_text(msg % command)
+
+</t>
+<t tx="ekr.20190320124833.32">def _dispatch(self, msg):
+    """ Calls the frontend handler associated with the message type of the
+        given message.
+    """
+    msg_type = msg['header']['msg_type']
+    handler = getattr(self, '_handle_' + msg_type, None)
+    if handler:
+        handler(msg)
+
+</t>
+<t tx="ekr.20190320124833.320">def _make_in_prompt(self, number):
+    """ Given a prompt number, returns an HTML In prompt.
+    """
+    try:
+        body = self.in_prompt % number
+    except TypeError:
+        # allow in_prompt to leave out number, e.g. '&gt;&gt;&gt; '
+        from xml.sax.saxutils import escape
+        body = escape(self.in_prompt)
+    return '&lt;span class="in-prompt"&gt;%s&lt;/span&gt;' % body
+
+</t>
+<t tx="ekr.20190320124833.321">def _make_continuation_prompt(self, prompt):
+    """ Given a plain text version of an In prompt, returns an HTML
+        continuation prompt.
+    """
+    end_chars = '...: '
+    space_count = len(prompt.lstrip('\n')) - len(end_chars)
+    body = '&amp;nbsp;' * space_count + end_chars
+    return '&lt;span class="in-prompt"&gt;%s&lt;/span&gt;' % body
+
+</t>
+<t tx="ekr.20190320124833.322">def _make_out_prompt(self, number):
+    """ Given a prompt number, returns an HTML Out prompt.
+    """
+    try:
+        body = self.out_prompt % number
+    except TypeError:
+        # allow out_prompt to leave out number, e.g. '&lt;&lt;&lt; '
+        from xml.sax.saxutils import escape
+        body = escape(self.out_prompt)
+    return '&lt;span class="out-prompt"&gt;%s&lt;/span&gt;' % body
+
+#------ Payload handlers --------------------------------------------------
+
+# Payload handlers with a generic interface: each takes the opaque payload
+# dict, unpacks it and calls the underlying functions with the necessary
+# arguments.
+
+</t>
+<t tx="ekr.20190320124833.323">def _handle_payload_edit(self, item):
+    self._edit(item['filename'], item['line_number'])
+
+</t>
+<t tx="ekr.20190320124833.324">def _handle_payload_exit(self, item):
+    self._keep_kernel_on_exit = item['keepkernel']
+    self.exit_requested.emit(self)
+
+</t>
+<t tx="ekr.20190320124833.325">def _handle_payload_next_input(self, item):
+    self.input_buffer = item['text']
+
+</t>
+<t tx="ekr.20190320124833.326">def _handle_payload_page(self, item):
+    # Since the plain text widget supports only a very small subset of HTML
+    # and we have no control over the HTML source, we only page HTML
+    # payloads in the rich text widget.
+    data = item['data']
+    if 'text/html' in data and self.kind == 'rich':
+        self._page(data['text/html'], html=True)
+    else:
+        self._page(data['text/plain'], html=False)
+
+#------ Trait change handlers --------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.327">def _style_sheet_changed(self):
+    """ Set the style sheets of the underlying widgets.
+    """
+    self.setStyleSheet(self.style_sheet)
+    if self._control is not None:
+        self._control.document().setDefaultStyleSheet(self.style_sheet)
+    
+    if self._page_control is not None:
+        self._page_control.document().setDefaultStyleSheet(self.style_sheet)
+
+</t>
+<t tx="ekr.20190320124833.328">def _syntax_style_changed(self):
+    """ Set the style for the syntax highlighter.
+    """
+    if self._highlighter is None:
+        # ignore premature calls
+        return
+    if self.syntax_style:
+        self._highlighter.set_style(self.syntax_style)
+        self._ansi_processor.set_background_color(self.syntax_style)
+    else:
+        self._highlighter.set_style_sheet(self.style_sheet)
+
+#------ Trait default initializers -----------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.329">def _banner_default(self):
+    return "Jupyter QtConsole {version}\n".format(version=__version__)
+
+
+\\-4.# clobber IPythonWidget above:
+
+</t>
+<t tx="ekr.20190320124833.33">def from_here(self, msg):
+    """Return whether a message is from this session"""
+    session_id = self._kernel_client.session.session
+    return msg['parent_header'].get("session", session_id) == session_id
+
+</t>
+<t tx="ekr.20190320124833.330">class IPythonWidget(JupyterWidget):
+    """Deprecated class. Use JupyterWidget"""
+    @others
+</t>
+<t tx="ekr.20190320124833.331">def __init__(self, *a, **kw):
+    warn("IPythonWidget is deprecated, use JupyterWidget")
+    super(IPythonWidget, self).__init__(*a, **kw)
+
+</t>
+<t tx="ekr.20190320124833.332">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.333">"""Defines a KernelManager that provides signals and slots."""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+from qtconsole.qt import QtCore
+
+from traitlets import HasTraits, Type
+from .util import MetaQObjectHasTraits, SuperQObject
+
+
+</t>
+<t tx="ekr.20190320124833.334">class QtKernelRestarterMixin(MetaQObjectHasTraits('NewBase', (HasTraits, SuperQObject), {})):
+
+    _timer = None
+
+
+</t>
+<t tx="ekr.20190320124833.335">class QtKernelManagerMixin(MetaQObjectHasTraits('NewBase', (HasTraits, SuperQObject), {})):
+    """ A KernelClient that provides signals and slots.
+    """
+
+    kernel_restarted = QtCore.Signal()
+
+
+</t>
+<t tx="ekr.20190320124833.336">class QtKernelClientMixin(MetaQObjectHasTraits('NewBase', (HasTraits, SuperQObject), {})):
+    """ A KernelClient that provides signals and slots.
+    """
+
+    # Emitted when the kernel client has started listening.
+    started_channels = QtCore.Signal()
+
+    # Emitted when the kernel client has stopped listening.
+    stopped_channels = QtCore.Signal()
+
+    #---------------------------------------------------------------------------
+    # 'KernelClient' interface
+    #---------------------------------------------------------------------------
+
+    #------ Channel management -------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.337">def start_channels(self, *args, **kw):
+    """ Reimplemented to emit signal.
+    """
+    super(QtKernelClientMixin, self).start_channels(*args, **kw)
+    self.started_channels.emit()
+
+</t>
+<t tx="ekr.20190320124833.338">def stop_channels(self):
+    """ Reimplemented to emit signal.
+    """
+    super(QtKernelClientMixin, self).stop_channels()
+    self.stopped_channels.emit()
+</t>
+<t tx="ekr.20190320124833.339">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.34">def include_output(self, msg):
+    """Return whether we should include a given output message"""
+    if self._hidden:
+        return False
+    from_here = self.from_here(msg)
+    if msg['msg_type'] == 'execute_input':
+        # only echo inputs not from here
+        return self.include_other_output and not from_here
+    
+    if self.include_other_output:
+        return True
+    else:
+        return from_here
+
+</t>
+<t tx="ekr.20190320124833.340">""" A generic Emacs-style kill ring, as well as a Qt-specific version.
+"""
+#-----------------------------------------------------------------------------
+# Imports
+#-----------------------------------------------------------------------------
+
+# System library imports
+from qtconsole.qt import QtCore, QtGui
+
+#-----------------------------------------------------------------------------
+# Classes
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.341">class KillRing(object):
+    """ A generic Emacs-style kill ring.
+    """
+
+    @others
+</t>
+<t tx="ekr.20190320124833.342">def __init__(self):
+    self.clear()
+
+</t>
+<t tx="ekr.20190320124833.343">def clear(self):
+    """ Clears the kill ring.
+    """
+    self._index = -1
+    self._ring = []
+
+</t>
+<t tx="ekr.20190320124833.344">def kill(self, text):
+    """ Adds some killed text to the ring.
+    """
+    self._ring.append(text)
+
+</t>
+<t tx="ekr.20190320124833.345">def yank(self):
+    """ Yank back the most recently killed text.
+
+    Returns
+    -------
+    A text string or None.
+    """
+    self._index = len(self._ring)
+    return self.rotate()
+
+</t>
+<t tx="ekr.20190320124833.346">def rotate(self):
+    """ Rotate the kill ring, then yank back the new top.
+
+    Returns
+    -------
+    A text string or None.
+    """
+    self._index -= 1
+    if self._index &gt;= 0:
+        return self._ring[self._index]
+    return None
+
+</t>
+<t tx="ekr.20190320124833.347">class QtKillRing(QtCore.QObject):
+    """ A kill ring attached to Q[Plain]TextEdit.
+    """
+
+    #--------------------------------------------------------------------------
+    # QtKillRing interface
+    #--------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.348">def __init__(self, text_edit):
+    """ Create a kill ring attached to the specified Qt text edit.
+    """
+    assert isinstance(text_edit, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(QtKillRing, self).__init__()
+
+    self._ring = KillRing()
+    self._prev_yank = None
+    self._skip_cursor = False
+    self._text_edit = text_edit
+
+    text_edit.cursorPositionChanged.connect(self._cursor_position_changed)
+
+</t>
+<t tx="ekr.20190320124833.349">def clear(self):
+    """ Clears the kill ring.
+    """
+    self._ring.clear()
+    self._prev_yank = None
+
+</t>
+<t tx="ekr.20190320124833.35">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.350">def kill(self, text):
+    """ Adds some killed text to the ring.
+    """
+    self._ring.kill(text)
+
+</t>
+<t tx="ekr.20190320124833.351">def kill_cursor(self, cursor):
+    """ Kills the text selected by the give cursor.
+    """
+    text = cursor.selectedText()
+    if text:
+        cursor.removeSelectedText()
+        self.kill(text)
+
+</t>
+<t tx="ekr.20190320124833.352">def yank(self):
+    """ Yank back the most recently killed text.
+    """
+    text = self._ring.yank()
+    if text:
+        self._skip_cursor = True
+        cursor = self._text_edit.textCursor()
+        cursor.insertText(text)
+        self._prev_yank = text
+
+</t>
+<t tx="ekr.20190320124833.353">def rotate(self):
+    """ Rotate the kill ring, then yank back the new top.
+    """
+    if self._prev_yank:
+        text = self._ring.rotate()
+        if text:
+            self._skip_cursor = True
+            cursor = self._text_edit.textCursor()
+            cursor.movePosition(QtGui.QTextCursor.Left,
+                                QtGui.QTextCursor.KeepAnchor,
+                                n = len(self._prev_yank))
+            cursor.insertText(text)
+            self._prev_yank = text
+
+#--------------------------------------------------------------------------
+# Protected interface
+#--------------------------------------------------------------------------
+
+#------ Signal handlers ----------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.354">def _cursor_position_changed(self):
+    if self._skip_cursor:
+        self._skip_cursor = False
+    else:
+        self._prev_yank = None
+</t>
+<t tx="ekr.20190320124833.36">""" Provides bracket matching for Q[Plain]TextEdit widgets.
+"""
+
+# System library imports
+from qtconsole.qt import QtCore, QtGui
+
+
+</t>
+<t tx="ekr.20190320124833.37">class BracketMatcher(QtCore.QObject):
+    """ Matches square brackets, braces, and parentheses based on cursor
+        position.
+    """
+
+    # Protected class variables.
+    _opening_map = { '(':')', '{':'}', '[':']' }
+    _closing_map = { ')':'(', '}':'{', ']':'[' }
+
+    #--------------------------------------------------------------------------
+    # 'QObject' interface
+    #--------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.38">def __init__(self, text_edit):
+    """ Create a call tip manager that is attached to the specified Qt
+        text edit widget.
+    """
+    assert isinstance(text_edit, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(BracketMatcher, self).__init__()
+
+    # The format to apply to matching brackets.
+    self.format = QtGui.QTextCharFormat()
+    self.format.setBackground(QtGui.QColor('silver'))
+
+    self._text_edit = text_edit
+    text_edit.cursorPositionChanged.connect(self._cursor_position_changed)
+
+#--------------------------------------------------------------------------
+# Protected interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.39">def _find_match(self, position):
+    """ Given a valid position in the text document, try to find the
+        position of the matching bracket. Returns -1 if unsuccessful.
+    """
+    # Decide what character to search for and what direction to search in.
+    document = self._text_edit.document()
+    start_char = document.characterAt(position)
+    search_char = self._opening_map.get(start_char)
+    if search_char:
+        increment = 1
+    else:
+        search_char = self._closing_map.get(start_char)
+        if search_char:
+            increment = -1
+        else:
+            return -1
+
+    # Search for the character.
+    char = start_char
+    depth = 0
+    while position &gt;= 0 and position &lt; document.characterCount():
+        if char == start_char:
+            depth += 1
+        elif char == search_char:
+            depth -= 1
+        if depth == 0:
+            break
+        position += increment
+        char = document.characterAt(position)
+    else:
+        position = -1
+    return position
+
+</t>
+<t tx="ekr.20190320124833.4">""" Utilities for processing ANSI escape codes and special ASCII characters.
+"""
+#-----------------------------------------------------------------------------
+# Imports
+#-----------------------------------------------------------------------------
+
+# Standard library imports
+from collections import namedtuple
+import re
+
+# System library imports
+from qtconsole.qt import QtGui
+
+# Local imports
+from ipython_genutils.py3compat import string_types
+from qtconsole.styles import dark_style
+
+#-----------------------------------------------------------------------------
+# Constants and datatypes
+#-----------------------------------------------------------------------------
+
+# An action for erase requests (ED and EL commands).
+EraseAction = namedtuple('EraseAction', ['action', 'area', 'erase_to'])
+
+# An action for cursor move requests (CUU, CUD, CUF, CUB, CNL, CPL, CHA, CUP,
+# and HVP commands).
+# FIXME: Not implemented in AnsiCodeProcessor.
+MoveAction = namedtuple('MoveAction', ['action', 'dir', 'unit', 'count'])
+
+# An action for scroll requests (SU and ST) and form feeds.
+ScrollAction = namedtuple('ScrollAction', ['action', 'dir', 'unit', 'count'])
+
+# An action for the carriage return character
+CarriageReturnAction = namedtuple('CarriageReturnAction', ['action'])
+
+# An action for the \n character
+NewLineAction = namedtuple('NewLineAction', ['action'])
+
+# An action for the beep character
+BeepAction = namedtuple('BeepAction', ['action'])
+
+# An action for backspace
+BackSpaceAction = namedtuple('BackSpaceAction', ['action'])
+
+# Regular expressions.
+CSI_COMMANDS = 'ABCDEFGHJKSTfmnsu'
+CSI_SUBPATTERN = '\[(.*?)([%s])' % CSI_COMMANDS
+OSC_SUBPATTERN = '\](.*?)[\x07\x1b]'
+ANSI_PATTERN = ('\x01?\x1b(%s|%s)\x02?' % \
+                (CSI_SUBPATTERN, OSC_SUBPATTERN))
+ANSI_OR_SPECIAL_PATTERN = re.compile('(\a|\b|\r(?!\n)|\r?\n)|(?:%s)' % ANSI_PATTERN)
+SPECIAL_PATTERN = re.compile('([\f])')
+
+#-----------------------------------------------------------------------------
+# Classes
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.40">def _selection_for_character(self, position):
+    """ Convenience method for selecting a character.
+    """
+    selection = QtGui.QTextEdit.ExtraSelection()
+    cursor = self._text_edit.textCursor()
+    cursor.setPosition(position)
+    cursor.movePosition(QtGui.QTextCursor.NextCharacter,
+                        QtGui.QTextCursor.KeepAnchor)
+    selection.cursor = cursor
+    selection.format = self.format
+    return selection
+
+#------ Signal handlers ----------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.41">def _cursor_position_changed(self):
+    """ Updates the document formatting based on the new cursor position.
+    """
+    # Clear out the old formatting.
+    self._text_edit.setExtraSelections([])
+
+    # Attempt to match a bracket for the new cursor position.
+    cursor = self._text_edit.textCursor()
+    if not cursor.hasSelection():
+        position = cursor.position() - 1
+        match_position = self._find_match(position)
+        if match_position != -1:
+            extra_selections = [ self._selection_for_character(pos)
+                                 for pos in (position, match_position) ]
+            self._text_edit.setExtraSelections(extra_selections)
+</t>
+<t tx="ekr.20190320124833.42">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+# Standard library imports
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.43">import re
+from unicodedata import category
+
+# System library imports
+from qtconsole.qt import QtCore, QtGui
+
+
+</t>
+<t tx="ekr.20190320124833.44">class CallTipWidget(QtGui.QLabel):
+    """ Shows call tips by parsing the current text of Q[Plain]TextEdit.
+    """
+
+    #--------------------------------------------------------------------------
+    # 'QObject' interface
+    #--------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.45">def __init__(self, text_edit):
+    """ Create a call tip manager that is attached to the specified Qt
+        text edit widget.
+    """
+    assert isinstance(text_edit, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(CallTipWidget, self).__init__(None, QtCore.Qt.ToolTip)
+
+    self._hide_timer = QtCore.QBasicTimer()
+    self._text_edit = text_edit
+
+    self.setFont(text_edit.document().defaultFont())
+    self.setForegroundRole(QtGui.QPalette.ToolTipText)
+    self.setBackgroundRole(QtGui.QPalette.ToolTipBase)
+    self.setPalette(QtGui.QToolTip.palette())
+
+    self.setAlignment(QtCore.Qt.AlignLeft)
+    self.setIndent(1)
+    self.setFrameStyle(QtGui.QFrame.NoFrame)
+    self.setMargin(1 + self.style().pixelMetric(
+            QtGui.QStyle.PM_ToolTipLabelFrameWidth, None, self))
+    self.setWindowOpacity(self.style().styleHint(
+            QtGui.QStyle.SH_ToolTipLabel_Opacity, None, self, None) / 255.0)
+    self.setWordWrap(True)
+
+</t>
+<t tx="ekr.20190320124833.46">def eventFilter(self, obj, event):
+    """ Reimplemented to hide on certain key presses and on text edit focus
+        changes.
+    """
+    if obj == self._text_edit:
+        etype = event.type()
+
+        if etype == QtCore.QEvent.KeyPress:
+            key = event.key()
+            if key in (QtCore.Qt.Key_Enter, QtCore.Qt.Key_Return):
+                self.hide()
+            elif key == QtCore.Qt.Key_Escape:
+                self.hide()
+                return True
+
+        elif etype == QtCore.QEvent.FocusOut:
+            self.hide()
+
+        elif etype == QtCore.QEvent.Enter:
+            self._hide_timer.stop()
+
+        elif etype == QtCore.QEvent.Leave:
+            self._leave_event_hide()
+
+    return super(CallTipWidget, self).eventFilter(obj, event)
+
+</t>
+<t tx="ekr.20190320124833.47">def timerEvent(self, event):
+    """ Reimplemented to hide the widget when the hide timer fires.
+    """
+    if event.timerId() == self._hide_timer.timerId():
+        self._hide_timer.stop()
+        self.hide()
+
+#--------------------------------------------------------------------------
+# 'QWidget' interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.48">def enterEvent(self, event):
+    """ Reimplemented to cancel the hide timer.
+    """
+    super(CallTipWidget, self).enterEvent(event)
+    self._hide_timer.stop()
+
+</t>
+<t tx="ekr.20190320124833.49">def hideEvent(self, event):
+    """ Reimplemented to disconnect signal handlers and event filter.
+    """
+    super(CallTipWidget, self).hideEvent(event)
+    self._text_edit.cursorPositionChanged.disconnect(
+        self._cursor_position_changed)
+    self._text_edit.removeEventFilter(self)
+
+</t>
+<t tx="ekr.20190320124833.5">class AnsiCodeProcessor(object):
+    """ Translates special ASCII characters and ANSI escape codes into readable
+        attributes. It also supports a few non-standard, xterm-specific codes.
+    """
+
+    # Whether to increase intensity or set boldness for SGR code 1.
+    # (Different terminals handle this in different ways.)
+    bold_text_enabled = False
+
+    # We provide an empty default color map because subclasses will likely want
+    # to use a custom color format.
+    default_color_map = {}
+
+    #---------------------------------------------------------------------------
+    # AnsiCodeProcessor interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.50">def leaveEvent(self, event):
+    """ Reimplemented to start the hide timer.
+    """
+    super(CallTipWidget, self).leaveEvent(event)
+    self._leave_event_hide()
+
+</t>
+<t tx="ekr.20190320124833.51">def paintEvent(self, event):
+    """ Reimplemented to paint the background panel.
+    """
+    painter = QtGui.QStylePainter(self)
+    option = QtGui.QStyleOptionFrame()
+    option.initFrom(self)
+    painter.drawPrimitive(QtGui.QStyle.PE_PanelTipLabel, option)
+    painter.end()
+
+    super(CallTipWidget, self).paintEvent(event)
+
+</t>
+<t tx="ekr.20190320124833.52">def setFont(self, font):
+    """ Reimplemented to allow use of this method as a slot.
+    """
+    super(CallTipWidget, self).setFont(font)
+
+</t>
+<t tx="ekr.20190320124833.53">def showEvent(self, event):
+    """ Reimplemented to connect signal handlers and event filter.
+    """
+    super(CallTipWidget, self).showEvent(event)
+    self._text_edit.cursorPositionChanged.connect(
+        self._cursor_position_changed)
+    self._text_edit.installEventFilter(self)
+
+#--------------------------------------------------------------------------
+# 'CallTipWidget' interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.54">def show_inspect_data(self, content, maxlines=20):
+    """Show inspection data as a tooltip"""
+    data = content.get('data', {})
+    text = data.get('text/plain', '')
+    match = re.match("(?:[^\n]*\n){%i}" % maxlines, text)
+    if match:
+        text = text[:match.end()] + '\n[Documentation continues...]'
+
+    return self.show_tip(self._format_tooltip(text))
+
+</t>
+<t tx="ekr.20190320124833.55">def show_tip(self, tip):
+    """ Attempts to show the specified tip at the current cursor location.
+    """
+    # Attempt to find the cursor position at which to show the call tip.
+    text_edit = self._text_edit
+    document = text_edit.document()
+    cursor = text_edit.textCursor()
+    search_pos = cursor.position() - 1
+    self._start_position, _ = self._find_parenthesis(search_pos,
+                                                     forward=False)
+    if self._start_position == -1:
+        return False
+
+    # Set the text and resize the widget accordingly.
+    self.setText(tip)
+    self.resize(self.sizeHint())
+
+    # Locate and show the widget. Place the tip below the current line
+    # unless it would be off the screen.  In that case, decide the best
+    # location based trying to minimize the  area that goes off-screen.
+    padding = 3 # Distance in pixels between cursor bounds and tip box.
+    cursor_rect = text_edit.cursorRect(cursor)
+    screen_rect = QtGui.qApp.desktop().screenGeometry(text_edit)
+    point = text_edit.mapToGlobal(cursor_rect.bottomRight())
+    point.setY(point.y() + padding)
+    tip_height = self.size().height()
+    tip_width = self.size().width()
+
+    vertical = 'bottom'
+    horizontal = 'Right'
+    if point.y() + tip_height &gt; screen_rect.height() + screen_rect.y():
+        point_ = text_edit.mapToGlobal(cursor_rect.topRight())
+        # If tip is still off screen, check if point is in top or bottom
+        # half of screen.
+        if point_.y() - tip_height &lt; padding:
+            # If point is in upper half of screen, show tip below it.
+            # otherwise above it.
+            if 2*point.y() &lt; screen_rect.height():
+                vertical = 'bottom'
+            else:
+                vertical = 'top'
+        else:
+            vertical = 'top'
+    if point.x() + tip_width &gt; screen_rect.width() + screen_rect.x():
+        point_ = text_edit.mapToGlobal(cursor_rect.topRight())
+        # If tip is still off-screen, check if point is in the right or
+        # left half of the screen.
+        if point_.x() - tip_width &lt; padding:
+            if 2*point.x() &lt; screen_rect.width():
+                horizontal = 'Right'
+            else:
+                horizontal = 'Left'
+        else:
+            horizontal = 'Left'
+    pos = getattr(cursor_rect, '%s%s' %(vertical, horizontal))
+    point = text_edit.mapToGlobal(pos())
+    point.setY(point.y() + padding)
+    if vertical == 'top':
+        point.setY(point.y() - tip_height)
+    if horizontal == 'Left':
+        point.setX(point.x() - tip_width - padding)
+
+    self.move(point)
+    self.show()
+    return True
+
+#--------------------------------------------------------------------------
+# Protected interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.56">def _find_parenthesis(self, position, forward=True):
+    """ If 'forward' is True (resp. False), proceed forwards
+        (resp. backwards) through the line that contains 'position' until an
+        unmatched closing (resp. opening) parenthesis is found. Returns a
+        tuple containing the position of this parenthesis (or -1 if it is
+        not found) and the number commas (at depth 0) found along the way.
+    """
+    commas = depth = 0
+    document = self._text_edit.document()
+    char = document.characterAt(position)
+    # Search until a match is found or a non-printable character is
+    # encountered.
+    while category(char) != 'Cc' and position &gt; 0:
+        if char == ',' and depth == 0:
+            commas += 1
+        elif char == ')':
+            if forward and depth == 0:
+                break
+            depth += 1
+        elif char == '(':
+            if not forward and depth == 0:
+                break
+            depth -= 1
+        position += 1 if forward else -1
+        char = document.characterAt(position)
+    else:
+        position = -1
+    return position, commas
+
+</t>
+<t tx="ekr.20190320124833.57">def _leave_event_hide(self):
+    """ Hides the tooltip after some time has passed (assuming the cursor is
+        not over the tooltip).
+    """
+    if (not self._hide_timer.isActive() and
+        # If Enter events always came after Leave events, we wouldn't need
+        # this check. But on Mac OS, it sometimes happens the other way
+        # around when the tooltip is created.
+        QtGui.qApp.topLevelAt(QtGui.QCursor.pos()) != self):
+        self._hide_timer.start(300, self)
+
+</t>
+<t tx="ekr.20190320124833.58">def _format_tooltip(self, doc):
+    doc = re.sub(r'\033\[(\d|;)+?m', '', doc)
+    return doc
+
+#------ Signal handlers ----------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.59">def _cursor_position_changed(self):
+    """ Updates the tip based on user cursor movement.
+    """
+    cursor = self._text_edit.textCursor()
+    if cursor.position() &lt;= self._start_position:
+        self.hide()
+    else:
+        position, commas = self._find_parenthesis(self._start_position + 1)
+        if position != -1:
+            self.hide()
+</t>
+<t tx="ekr.20190320124833.6">def __init__(self):
+    self.actions = []
+    self.color_map = self.default_color_map.copy()
+    self.reset_sgr()
+
+</t>
+<t tx="ekr.20190320124833.60">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.61">""" Defines a KernelClient that provides signals and slots.
+"""
+import atexit
+import errno
+from threading import Thread
+import time
+
+import zmq
+# import ZMQError in top-level namespace, to avoid ugly attribute-error messages
+# during garbage collection of threads at exit:
+from zmq import ZMQError
+from zmq.eventloop import ioloop, zmqstream
+
+from qtconsole.qt import QtCore
+
+# Local imports
+from traitlets import Type, Instance
+from jupyter_client.channels import HBChannel
+from jupyter_client import KernelClient
+from jupyter_client.channels import InvalidPortNumber
+from jupyter_client.threaded import ThreadedKernelClient, ThreadedZMQSocketChannel
+
+from .kernel_mixins import QtKernelClientMixin
+from .util import SuperQObject
+
+</t>
+<t tx="ekr.20190320124833.62">class QtHBChannel(SuperQObject, HBChannel):
+    # A longer timeout than the base class
+    time_to_dead = 3.0
+
+    # Emitted when the kernel has died.
+    kernel_died = QtCore.Signal(object)
+
+    @others
+from jupyter_client import protocol_version_info
+
+major_protocol_version = protocol_version_info[0]
+
+</t>
+<t tx="ekr.20190320124833.63">def call_handlers(self, since_last_heartbeat):
+    """ Reimplemented to emit signals instead of making callbacks.
+    """
+    # Emit the generic signal.
+    self.kernel_died.emit(since_last_heartbeat)
+
+</t>
+<t tx="ekr.20190320124833.64">class QtZMQSocketChannel(ThreadedZMQSocketChannel,SuperQObject):
+    """A ZMQ socket emitting a Qt signal when a message is received."""
+    message_received = QtCore.Signal(object)
+
+    @others
+</t>
+<t tx="ekr.20190320124833.65">def process_events(self):
+    """ Process any pending GUI events.
+    """
+    QtCore.QCoreApplication.instance().processEvents()
+
+
+</t>
+<t tx="ekr.20190320124833.66">def call_handlers(self, msg):
+    """This method is called in the ioloop thread when a message arrives.
+
+    It is important to remember that this method is called in the thread
+    so that some logic must be done to ensure that the application level
+    handlers are called in the application thread.
+    """
+    # Emit the generic signal.
+    self.message_received.emit(msg)
+
+
+</t>
+<t tx="ekr.20190320124833.67">class QtKernelClient(QtKernelClientMixin, ThreadedKernelClient):
+    """ A KernelClient that provides signals and slots.
+    """
+
+    iopub_channel_class = Type(QtZMQSocketChannel)
+    shell_channel_class = Type(QtZMQSocketChannel)
+    stdin_channel_class = Type(QtZMQSocketChannel)
+    hb_channel_class = Type(QtHBChannel)
+</t>
+<t tx="ekr.20190320124833.68">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.69">"""A navigable completer for the qtconsole"""
+# coding : utf-8
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+import ipython_genutils.text as text
+
+from qtconsole.qt import QtCore, QtGui
+
+#--------------------------------------------------------------------------
+# Return an HTML table with selected item in a special class
+#--------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124833.7">def reset_sgr(self):
+    """ Reset graphics attributs to their default values.
+    """
+    self.intensity = 0
+    self.italic = False
+    self.bold = False
+    self.underline = False
+    self.foreground_color = None
+    self.background_color = None
+
+</t>
+<t tx="ekr.20190320124833.70">def html_tableify(item_matrix, select=None, header=None , footer=None) :
+    """ returnr a string for an html table"""
+    if not item_matrix :
+        return ''
+    html_cols = []
+    tds = lambda text : u'&lt;td&gt;'+text+u'  &lt;/td&gt;'
+    trs = lambda text : u'&lt;tr&gt;'+text+u'&lt;/tr&gt;'
+    tds_items = [list(map(tds, row)) for row in item_matrix]
+    if select :
+        row, col = select
+        tds_items[row][col] = u'&lt;td class="inverted"&gt;'\
+                +item_matrix[row][col]\
+                +u'  &lt;/td&gt;'
+    #select the right item
+    html_cols = map(trs, (u''.join(row) for row in tds_items))
+    head = ''
+    foot = ''
+    if header :
+        head = (u'&lt;tr&gt;'\
+            +''.join((u'&lt;td&gt;'+header+u'&lt;/td&gt;')*len(item_matrix[0]))\
+            +'&lt;/tr&gt;')
+
+    if footer : 
+        foot = (u'&lt;tr&gt;'\
+            +''.join((u'&lt;td&gt;'+footer+u'&lt;/td&gt;')*len(item_matrix[0]))\
+            +'&lt;/tr&gt;')
+    html = (u'&lt;table class="completion" style="white-space:pre"'
+            'cellspacing=0&gt;' +
+            head + (u''.join(html_cols)) + foot + u'&lt;/table&gt;')
+    return html
+
+</t>
+<t tx="ekr.20190320124833.71">class SlidingInterval(object): 
+    """a bound interval that follows a cursor
+    
+    internally used to scoll the completion view when the cursor 
+    try to go beyond the edges, and show '...' when rows are hidden
+    """
+    
+    _min = 0
+    _max = 1
+    _current = 0
+    @others
+</t>
+<t tx="ekr.20190320124833.72">def __init__(self, maximum=1, width=6, minimum=0, sticky_lenght=1):
+    """Create a new bounded interval
+    
+    any value return by this will be bound between maximum and 
+    minimum. usual width will be 'width', and sticky_length 
+    set when the return  interval should expand to max and min
+    """
+    self._min = minimum 
+    self._max = maximum
+    self._start = 0
+    self._width = width
+    self._stop = self._start+self._width+1
+    self._sticky_lenght = sticky_lenght
+    
+</t>
+<t tx="ekr.20190320124833.73">@property
+def current(self):
+    """current cursor position"""
+    return self._current
+
+</t>
+<t tx="ekr.20190320124833.74">@current.setter
+def current(self, value):
+    """set current cursor position"""
+    current = min(max(self._min, value), self._max)
+
+    self._current = current
+
+    if current &gt; self._stop : 
+        self._stop = current
+        self._start = current-self._width
+    elif current &lt; self._start : 
+        self._start = current
+        self._stop = current + self._width
+
+    if abs(self._start - self._min) &lt;= self._sticky_lenght :
+        self._start = self._min
+    
+    if abs(self._stop - self._max) &lt;= self._sticky_lenght :
+        self._stop = self._max
+
+</t>
+<t tx="ekr.20190320124833.75">@property 
+def start(self):
+    """begiiing of interval to show"""
+    return self._start
+    
+</t>
+<t tx="ekr.20190320124833.76">@property
+def stop(self):
+    """end of interval to show"""
+    return self._stop
+
+</t>
+<t tx="ekr.20190320124833.77">@property
+def width(self):
+    return self._stop - self._start
+
+</t>
+<t tx="ekr.20190320124833.78">@property 
+def nth(self):
+    return self.current - self.start
+
+</t>
+<t tx="ekr.20190320124833.79">class CompletionHtml(QtGui.QWidget):
+    """ A widget for tab completion,  navigable by arrow keys """
+
+    #--------------------------------------------------------------------------
+    # 'QObject' interface
+    #--------------------------------------------------------------------------
+
+    _items = ()
+    _index = (0, 0)
+    _consecutive_tab = 0
+    _size = (1, 1)
+    _old_cursor = None
+    _start_position = 0
+    _slice_start = 0
+    _slice_len = 4
+
+    @others
+</t>
+<t tx="ekr.20190320124833.8">def split_string(self, string):
+    """ Yields substrings for which the same escape code applies.
+    """
+    self.actions = []
+    start = 0
+
+    # strings ending with \r are assumed to be ending in \r\n since
+    # \n is appended to output strings automatically.  Accounting
+    # for that, here.
+    last_char = '\n' if len(string) &gt; 0 and string[-1] == '\n' else None
+    string = string[:-1] if last_char is not None else string
+
+    for match in ANSI_OR_SPECIAL_PATTERN.finditer(string):
+        raw = string[start:match.start()]
+        substring = SPECIAL_PATTERN.sub(self._replace_special, raw)
+        if substring or self.actions:
+            yield substring
+            self.actions = []
+        start = match.end()
+
+        groups = [g for g in match.groups() if (g is not None)]
+        g0 = groups[0]
+        if g0 == '\a':
+            self.actions.append(BeepAction('beep'))
+            yield None
+            self.actions = []
+        elif g0 == '\r':
+            self.actions.append(CarriageReturnAction('carriage-return'))
+            yield None
+            self.actions = []
+        elif g0 == '\b':
+            self.actions.append(BackSpaceAction('backspace'))
+            yield None
+            self.actions = []
+        elif g0 == '\n' or g0 == '\r\n':
+            self.actions.append(NewLineAction('newline'))
+            yield g0
+            self.actions = []
+        else:
+            params = [ param for param in groups[1].split(';') if param ]
+            if g0.startswith('['):
+                # Case 1: CSI code.
+                try:
+                    params = list(map(int, params))
+                except ValueError:
+                    # Silently discard badly formed codes.
+                    pass
+                else:
+                    self.set_csi_code(groups[2], params)
+
+            elif g0.startswith(']'):
+                # Case 2: OSC code.
+                self.set_osc_code(params)
+
+    raw = string[start:]
+    substring = SPECIAL_PATTERN.sub(self._replace_special, raw)
+    if substring or self.actions:
+        yield substring
+
+    if last_char is not None:
+        self.actions.append(NewLineAction('newline'))
+        yield last_char
+
+</t>
+<t tx="ekr.20190320124833.80">def __init__(self, console_widget):
+    """ Create a completion widget that is attached to the specified Qt
+        text edit widget.
+    """
+    assert isinstance(console_widget._control, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(CompletionHtml, self).__init__()
+
+    self._text_edit = console_widget._control
+    self._console_widget = console_widget
+    self._text_edit.installEventFilter(self)
+    self._sliding_interval = None
+    self._justified_items = None
+
+    # Ensure that the text edit keeps focus when widget is displayed.
+    self.setFocusProxy(self._text_edit)
+
+
+</t>
+<t tx="ekr.20190320124833.81">def eventFilter(self, obj, event):
+    """ Reimplemented to handle keyboard input and to auto-hide when the
+        text edit loses focus.
+    """
+    if obj == self._text_edit:
+        etype = event.type()
+        if etype == QtCore.QEvent.KeyPress:
+            key = event.key()
+            if self._consecutive_tab == 0 and key in (QtCore.Qt.Key_Tab,):
+                return False
+            elif self._consecutive_tab == 1 and key in (QtCore.Qt.Key_Tab,):
+                # ok , called twice, we grab focus, and show the cursor
+                self._consecutive_tab = self._consecutive_tab+1
+                self._update_list()
+                return True
+            elif self._consecutive_tab == 2:
+                if key in (QtCore.Qt.Key_Return, QtCore.Qt.Key_Enter):
+                    self._complete_current()
+                    return True
+                if key in (QtCore.Qt.Key_Tab,):
+                    self.select_right()
+                    self._update_list()
+                    return True
+                elif key in ( QtCore.Qt.Key_Down,):
+                    self.select_down()
+                    self._update_list()
+                    return True
+                elif key in (QtCore.Qt.Key_Right,):
+                    self.select_right()
+                    self._update_list()
+                    return True
+                elif key in ( QtCore.Qt.Key_Up,):
+                    self.select_up()
+                    self._update_list()
+                    return True
+                elif key in ( QtCore.Qt.Key_Left,):
+                    self.select_left()
+                    self._update_list()
+                    return True
+                elif key in ( QtCore.Qt.Key_Escape,):
+                    self.cancel_completion()
+                    return True
+                else :
+                    self.cancel_completion()
+            else:
+                self.cancel_completion()
+
+        elif etype == QtCore.QEvent.FocusOut:
+            self.cancel_completion()
+
+    return super(CompletionHtml, self).eventFilter(obj, event)
+
+#--------------------------------------------------------------------------
+# 'CompletionHtml' interface
+#--------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124833.82">def cancel_completion(self):
+    """Cancel the completion
+
+    should be called when the completer have to be dismissed
+
+    This reset internal variable, clearing the temporary buffer
+    of the console where the completion are shown.
+    """
+    self._consecutive_tab = 0
+    self._slice_start = 0
+    self._console_widget._clear_temporary_buffer()
+    self._index = (0, 0)
+    if(self._sliding_interval):
+        self._sliding_interval = None
+
+#
+#  ...  2 4 4 4 4 4 4 4 4 4 4  4  4
+#   2   2 4 4 4 4 4 4 4 4 4 4  4  4
+#
+#2  2   x x x x x x x x x x x  5  5
+#6  6   x x x x x x x x x x x  5  5
+#6  6   x x x x x x x x x x ?  5  5
+#6  6   x x x x x x x x x x ?  1  1
+#
+#3  3   3 3 3 3 3 3 3 3 3 3 1  1  1 ...
+#3  3   3 3 3 3 3 3 3 3 3 3 1  1  1 ...
+</t>
+<t tx="ekr.20190320124833.83">def _select_index(self, row, col):
+    """Change the selection index, and make sure it stays in the right range
+
+    A little more complicated than just dooing modulo the number of row columns
+    to be sure to cycle through all element.
+
+    horizontaly, the element are maped like this :
+    to r &lt;-- a b c d e f --&gt; to g
+    to f &lt;-- g h i j k l --&gt; to m
+    to l &lt;-- m n o p q r --&gt; to a
+
+    and vertically
+    a d g j m p
+    b e h k n q
+    c f i l o r
+    """
+
+    nr, nc = self._size
+    nr = nr-1
+    nc = nc-1
+
+    # case 1
+    if (row &gt; nr and col &gt;= nc) or (row &gt;= nr and col &gt; nc):
+        self._select_index(0, 0)
+    # case 2
+    elif (row &lt;= 0 and col &lt; 0) or  (row &lt; 0 and col &lt;= 0):
+        self._select_index(nr, nc)
+    # case 3
+    elif row &gt; nr :
+        self._select_index(0, col+1)
+    # case 4
+    elif row &lt; 0 :
+        self._select_index(nr, col-1)
+    # case 5
+    elif col &gt; nc :
+        self._select_index(row+1, 0)
+    # case 6
+    elif col &lt; 0 :
+        self._select_index(row-1, nc)
+    elif 0 &lt;= row and row &lt;= nr and 0 &lt;= col and col &lt;= nc :
+        self._index = (row, col)
+    else :
+        raise NotImplementedError("you'r trying to go where no completion\
+                       have gone before : %d:%d (%d:%d)"%(row, col, nr, nc) )
+
+
+</t>
+<t tx="ekr.20190320124833.84">@property
+def _slice_end(self):
+    end = self._slice_start+self._slice_len
+    if end &gt; len(self._items) :
+        return None
+    return end
+
+</t>
+<t tx="ekr.20190320124833.85">def select_up(self):
+    """move cursor up"""
+    r, c = self._index
+    self._select_index(r-1, c)
+
+</t>
+<t tx="ekr.20190320124833.86">def select_down(self):
+    """move cursor down"""
+    r, c = self._index
+    self._select_index(r+1, c)
+
+</t>
+<t tx="ekr.20190320124833.87">def select_left(self):
+    """move cursor left"""
+    r, c = self._index
+    self._select_index(r, c-1)
+
+</t>
+<t tx="ekr.20190320124833.88">def select_right(self):
+    """move cursor right"""
+    r, c = self._index
+    self._select_index(r, c+1)
+
+</t>
+<t tx="ekr.20190320124833.89">def show_items(self, cursor, items):
+    """ Shows the completion widget with 'items' at the position specified
+        by 'cursor'.
+    """
+    if not items :
+        return
+    self._start_position = cursor.position()
+    self._consecutive_tab = 1
+    # Calculate the number of characters available.
+    width = self._text_edit.document().textWidth()
+    char_width = QtGui.QFontMetrics(self._console_widget.font).width(' ')
+    displaywidth = int(max(10, (width / char_width) - 1))
+    items_m, ci = text.compute_item_matrix(items, empty=' ',
+                                           displaywidth=displaywidth)
+    self._sliding_interval = SlidingInterval(len(items_m)-1)
+
+    self._items = items_m
+    self._size = (ci['rows_numbers'], ci['columns_numbers'])
+    self._old_cursor = cursor
+    self._index = (0, 0)
+    sjoin = lambda x : [ y.ljust(w, ' ') for y, w in zip(x, ci['columns_width'])]
+    self._justified_items = list(map(sjoin, items_m))
+    self._update_list(hilight=False)
+
+
+
+
+</t>
+<t tx="ekr.20190320124833.9">def set_csi_code(self, command, params=[]):
+    """ Set attributes based on CSI (Control Sequence Introducer) code.
+
+    Parameters
+    ----------
+    command : str
+        The code identifier, i.e. the final character in the sequence.
+
+    params : sequence of integers, optional
+        The parameter codes for the command.
+    """
+    if command == 'm':   # SGR - Select Graphic Rendition
+        if params:
+            self.set_sgr_code(params)
+        else:
+            self.set_sgr_code([0])
+
+    elif (command == 'J' or # ED - Erase Data
+          command == 'K'):  # EL - Erase in Line
+        code = params[0] if params else 0
+        if 0 &lt;= code &lt;= 2:
+            area = 'screen' if command == 'J' else 'line'
+            if code == 0:
+                erase_to = 'end'
+            elif code == 1:
+                erase_to = 'start'
+            elif code == 2:
+                erase_to = 'all'
+            self.actions.append(EraseAction('erase', area, erase_to))
+
+    elif (command == 'S' or # SU - Scroll Up
+          command == 'T'):  # SD - Scroll Down
+        dir = 'up' if command == 'S' else 'down'
+        count = params[0] if params else 1
+        self.actions.append(ScrollAction('scroll', dir, 'line', count))
+
+</t>
+<t tx="ekr.20190320124833.90">def _update_list(self, hilight=True):
+    """ update the list of completion and hilight the currently selected completion """
+    self._sliding_interval.current = self._index[0]
+    head = None
+    foot = None
+    if self._sliding_interval.start &gt; 0 : 
+        head = '...'
+
+    if self._sliding_interval.stop &lt; self._sliding_interval._max:
+        foot = '...'
+    items_m = self._justified_items[\
+                   self._sliding_interval.start:\
+                   self._sliding_interval.stop+1\
+                                   ]
+
+    self._console_widget._clear_temporary_buffer()
+    if(hilight):
+        sel = (self._sliding_interval.nth, self._index[1])
+    else :
+        sel = None
+
+    strng = html_tableify(items_m, select=sel, header=head, footer=foot)
+    self._console_widget._fill_temporary_buffer(self._old_cursor, strng, html=True)
+
+#--------------------------------------------------------------------------
+# Protected interface
+#--------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124833.91">def _complete_current(self):
+    """ Perform the completion with the currently selected item.
+    """
+    i = self._index
+    item = self._items[i[0]][i[1]]
+    item = item.strip()
+    if item :
+        self._current_text_cursor().insertText(item)
+    self.cancel_completion()
+
+</t>
+<t tx="ekr.20190320124833.92">def _current_text_cursor(self):
+    """ Returns a cursor with text between the start position and the
+        current position selected.
+    """
+    cursor = self._text_edit.textCursor()
+    if cursor.position() &gt;= self._start_position:
+        cursor.setPosition(self._start_position,
+                           QtGui.QTextCursor.KeepAnchor)
+    return cursor
+
+</t>
+<t tx="ekr.20190320124833.93">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124833.94">"""A simple completer for the qtconsole"""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+from qtconsole.qt import QtCore, QtGui
+import ipython_genutils.text as text
+
+
+</t>
+<t tx="ekr.20190320124833.95">class CompletionPlain(QtGui.QWidget):
+    """ A widget for tab completion,  navigable by arrow keys """
+
+    #--------------------------------------------------------------------------
+    # 'QObject' interface
+    #--------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124833.96">def __init__(self, console_widget):
+    """ Create a completion widget that is attached to the specified Qt
+        text edit widget.
+    """
+    assert isinstance(console_widget._control, (QtGui.QTextEdit, QtGui.QPlainTextEdit))
+    super(CompletionPlain, self).__init__()
+
+    self._text_edit = console_widget._control
+    self._console_widget = console_widget
+
+    self._text_edit.installEventFilter(self)
+
+</t>
+<t tx="ekr.20190320124833.97">def eventFilter(self, obj, event):
+    """ Reimplemented to handle keyboard input and to auto-hide when the
+        text edit loses focus.
+    """
+    if obj == self._text_edit:
+        etype = event.type()
+
+        if etype in( QtCore.QEvent.KeyPress, QtCore.QEvent.FocusOut ):
+            self.cancel_completion()
+
+    return super(CompletionPlain, self).eventFilter(obj, event)
+
+#--------------------------------------------------------------------------
+# 'CompletionPlain' interface
+#--------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124833.98">def cancel_completion(self):
+    """Cancel the completion, reseting internal variable, clearing buffer """
+    self._console_widget._clear_temporary_buffer()
+
+
+</t>
+<t tx="ekr.20190320124833.99">def show_items(self, cursor, items):
+    """ Shows the completion widget with 'items' at the position specified
+        by 'cursor'.
+    """
+    if not items :
+        return
+    self.cancel_completion()
+    strng = text.columnize(items)
+    self._console_widget._fill_temporary_buffer(cursor, strng, html=False)
+</t>
+<t tx="ekr.20190320124834.1">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.10">def create_tab_with_new_frontend(self):
+    """create a new frontend and attach it to a new tab"""
+    widget = self.new_frontend_factory()
+    self.add_tab_with_frontend(widget)
+
+</t>
+<t tx="ekr.20190320124834.100">def start(self):
+    super(JupyterQtConsoleApp, self).start()
+
+    # draw the window
+    if self.maximize:
+        self.window.showMaximized()
+    else:
+        self.window.show()
+    self.window.raise_()
+
+    # Start the application main loop.
+    self.app.exec_()
+
+
+</t>
+<t tx="ekr.20190320124834.101">class IPythonQtConsoleApp(JupyterQtConsoleApp):
+    @others
+</t>
+<t tx="ekr.20190320124834.102">def __init__(self, *a, **kw):
+    warn("IPythonQtConsoleApp is deprecated, use JupyterQtConsoleApp")
+    super(IPythonQtConsoleApp, self).__init__(*a, **kw)
+
+
+\\-4.#-----------------------------------------------------------------------------
+\\-4.# Main entry point
+\\-4.#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.103">def main():
+    JupyterQtConsoleApp.launch_instance()
+
+
+</t>
+<t tx="ekr.20190320124834.104">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.105">"""
+This module contains factory functions that attempt
+to return Qt submodules from the various python Qt bindings.
+
+It also protects against double-importing Qt with different
+bindings, which is unstable and likely to crash
+
+This is used primarily by qt and qt_for_kernel, and shouldn't
+be accessed directly from the outside
+"""
+import sys
+import types
+from functools import partial
+
+from distutils.version import LooseVersion
+
+</t>
+<t tx="ekr.20190320124834.106">def check_version(a, b):
+    """compare versions"""
+    try:
+        return LooseVersion(a) &gt;= LooseVersion(b)
+    except TypeError:
+        # assume unparseable versions are latest dev
+        return True
+
+# Available APIs.
+QT_API_PYQT = 'pyqt'
+QT_API_PYQT5 = 'pyqt5'
+QT_API_PYQTv1 = 'pyqtv1'
+QT_API_PYQT_DEFAULT = 'pyqtdefault' # don't set SIP explicitly
+QT_API_PYSIDE = 'pyside'
+QT_API_PYSIDE2 = 'pyside2'
+
+api_to_module = {QT_API_PYSIDE2: 'PySide2',
+                 QT_API_PYSIDE: 'PySide',
+                 QT_API_PYQT: 'PyQt4',
+                 QT_API_PYQTv1: 'PyQt4',
+                 QT_API_PYQT5: 'PyQt5',
+                 QT_API_PYQT_DEFAULT: 'PyQt4',
+                }
+
+</t>
+<t tx="ekr.20190320124834.107">class ImportDenier(object):
+    """Import Hook that will guard against bad Qt imports
+    once committed to a specific binding
+    """
+
+    @others
+ID = ImportDenier()
+sys.meta_path.append(ID)
+
+
+</t>
+<t tx="ekr.20190320124834.108">def __init__(self):
+    self.__forbidden = set()
+
+</t>
+<t tx="ekr.20190320124834.109">def forbid(self, module_name):
+    sys.modules.pop(module_name, None)
+    self.__forbidden.add(module_name)
+
+</t>
+<t tx="ekr.20190320124834.11">def set_window_title(self):
+    """Set the title of the console window"""
+    old_title = self.windowTitle()
+    title, ok = QtGui.QInputDialog.getText(self,
+                                           "Rename Window",
+                                           "New title:",
+                                           text=old_title)
+    if ok:
+        self.setWindowTitle(title)
+
+</t>
+<t tx="ekr.20190320124834.110">def find_module(self, fullname, path=None):
+    if path:
+        return
+    if fullname in self.__forbidden:
+        return self
+
+</t>
+<t tx="ekr.20190320124834.111">def load_module(self, fullname):
+    raise ImportError("""
+Importing %s disabled by QtConsole, which has
+already imported an incompatible Qt Binding: %s
+""" % (fullname, loaded_api()))
+
+</t>
+<t tx="ekr.20190320124834.112">def commit_api(api):
+    """Commit to a particular API, and trigger ImportErrors on subsequent
+       dangerous imports"""
+
+    if api == QT_API_PYSIDE2:
+        ID.forbid('PySide')
+        ID.forbid('PyQt4')
+        ID.forbid('PyQt5')
+    if api == QT_API_PYSIDE:
+        ID.forbid('PySide2')
+        ID.forbid('PyQt4')
+        ID.forbid('PyQt5')
+    elif api == QT_API_PYQT5:
+        ID.forbid('PySide2')
+        ID.forbid('PySide')
+        ID.forbid('PyQt4')
+    else:   # There are three other possibilities, all representing PyQt4
+        ID.forbid('PySide2')
+        ID.forbid('PyQt5')
+        ID.forbid('PySide')
+
+
+</t>
+<t tx="ekr.20190320124834.113">def loaded_api():
+    """Return which API is loaded, if any
+
+    If this returns anything besides None,
+    importing any other Qt binding is unsafe.
+
+    Returns
+    -------
+    None, 'pyside2', 'pyside', 'pyqt', or 'pyqtv1'
+    """
+    if 'PyQt4.QtCore' in sys.modules:
+        if qtapi_version() == 2:
+            return QT_API_PYQT
+        else:
+            return QT_API_PYQTv1
+    elif 'PySide.QtCore' in sys.modules:
+        return QT_API_PYSIDE
+    elif 'PySide2.QtCore' in sys.modules:
+        return QT_API_PYSIDE2
+    elif 'PyQt5.QtCore' in sys.modules:
+        return QT_API_PYQT5
+    return None
+
+
+</t>
+<t tx="ekr.20190320124834.114">def has_binding(api):
+    """Safely check for PyQt4/5, PySide or PySide2, without importing
+       submodules
+
+    Supports Python &lt;= 3.3
+
+       Parameters
+       ----------
+       api : str [ 'pyqtv1' | 'pyqt' | 'pyqt5' | 'pyside' | 'pyside2' | 'pyqtdefault']
+            Which module to check for
+
+       Returns
+       -------
+       True if the relevant module appears to be importable
+    """
+    # we can't import an incomplete pyside and pyqt4
+    # this will cause a crash in sip (#1431)
+    # check for complete presence before importing
+    module_name = api_to_module[api]
+
+    import imp
+    try:
+        #importing top level PyQt4/PySide module is ok...
+        mod = __import__(module_name)
+        #...importing submodules is not
+        imp.find_module('QtCore', list(mod.__path__))
+        imp.find_module('QtGui', list(mod.__path__))
+        imp.find_module('QtSvg', list(mod.__path__))
+        if api == QT_API_PYQT5 or api == QT_API_PYSIDE2:
+            # QT5 requires QtWidgets too
+            imp.find_module('QtWidgets', list(mod.__path__))
+
+        #we can also safely check PySide version
+        if api == QT_API_PYSIDE:
+            return check_version(mod.__version__, '1.0.3')
+        else:
+            return True
+    except ImportError:
+        return False
+
+</t>
+<t tx="ekr.20190320124834.115">def has_binding_new(api):
+    """Safely check for PyQt4/5 or PySide, without importing submodules
+
+    Supports Python &gt;= 3.4
+
+        Parameters
+        ----------
+        api : str [ 'pyqtv1' | 'pyqt' | 'pyqt5' | 'pyside' | 'pyqtdefault']
+             Which module to check for
+
+        Returns
+        -------
+        True if the relevant module appears to be importable
+     """
+    module_name = api_to_module[api]
+    from importlib.util import find_spec
+
+    required = ['QtCore', 'QtGui', 'QtSvg']
+    if api in (QT_API_PYQT5, QT_API_PYSIDE2):
+        # QT5 requires QtWidgets too
+        required.append('QtWidgets')
+
+    for submod in required:
+        try:
+            spec = find_spec('%s.%s' % (module_name, submod))
+        except ImportError:
+            # Package (e.g. PyQt5) not found
+            return False
+        else:
+            if spec is None:
+                # Submodule (e.g. PyQt5.QtCore) not found
+                return False
+
+    if api == QT_API_PYSIDE:
+        # We can also safely check PySide version
+        import PySide
+        return check_version(PySide.__version__, '1.0.3')
+
+    return True
+
+if sys.version_info &gt;= (3, 4):
+    has_binding = has_binding_new
+
+</t>
+<t tx="ekr.20190320124834.116">def qtapi_version():
+    """Return which QString API has been set, if any
+
+    Returns
+    -------
+    The QString API version (1 or 2), or None if not set
+    """
+    try:
+        import sip
+    except ImportError:
+        return
+    try:
+        return sip.getapi('QString')
+    except ValueError:
+        return
+
+
+</t>
+<t tx="ekr.20190320124834.117">def can_import(api):
+    """Safely query whether an API is importable, without importing it"""
+    if not has_binding(api):
+        return False
+
+    current = loaded_api()
+    if api == QT_API_PYQT_DEFAULT:
+        return current in [QT_API_PYQT, QT_API_PYQTv1, None]
+    else:
+        return current in [api, None]
+
+
+</t>
+<t tx="ekr.20190320124834.118">def import_pyqt4(version=2):
+    """
+    Import PyQt4
+
+    Parameters
+    ----------
+    version : 1, 2, or None
+      Which QString/QVariant API to use. Set to None to use the system
+      default
+
+    ImportErrors rasied within this function are non-recoverable
+    """
+    # The new-style string API (version=2) automatically
+    # converts QStrings to Unicode Python strings. Also, automatically unpacks
+    # QVariants to their underlying objects.
+    import sip
+
+    if version is not None:
+        sip.setapi('QString', version)
+        sip.setapi('QVariant', version)
+
+    from PyQt4 import QtGui, QtCore, QtSvg
+
+    if not check_version(QtCore.PYQT_VERSION_STR, '4.7'):
+        raise ImportError("QtConsole requires PyQt4 &gt;= 4.7, found %s" %
+                          QtCore.PYQT_VERSION_STR)
+
+    # Alias PyQt-specific functions for PySide compatibility.
+    QtCore.Signal = QtCore.pyqtSignal
+    QtCore.Slot = QtCore.pyqtSlot
+
+    # query for the API version (in case version == None)
+    version = sip.getapi('QString')
+    api = QT_API_PYQTv1 if version == 1 else QT_API_PYQT
+    return QtCore, QtGui, QtSvg, api
+
+
+</t>
+<t tx="ekr.20190320124834.119">def import_pyqt5():
+    """
+    Import PyQt5
+
+    ImportErrors rasied within this function are non-recoverable
+    """
+    import sip
+
+    from PyQt5 import QtCore, QtSvg, QtWidgets, QtGui, QtPrintSupport
+
+    # Alias PyQt-specific functions for PySide compatibility.
+    QtCore.Signal = QtCore.pyqtSignal
+    QtCore.Slot = QtCore.pyqtSlot
+
+    # Join QtGui and QtWidgets for Qt4 compatibility.
+    QtGuiCompat = types.ModuleType('QtGuiCompat')
+    QtGuiCompat.__dict__.update(QtGui.__dict__)
+    QtGuiCompat.__dict__.update(QtWidgets.__dict__)
+    QtGuiCompat.__dict__.update(QtPrintSupport.__dict__)
+
+    api = QT_API_PYQT5
+    return QtCore, QtGuiCompat, QtSvg, api
+
+
+</t>
+<t tx="ekr.20190320124834.12">def create_tab_with_existing_kernel(self):
+    """create a new frontend attached to an external kernel in a new tab"""
+    connection_file, file_type = QtGui.QFileDialog.getOpenFileName(self,
+                                                 "Connect to Existing Kernel",
+                                                 jupyter_runtime_dir(),
+                                                 "Connection file (*.json)")
+    if not connection_file:
+        return
+    widget = self.connection_frontend_factory(connection_file)
+    name = "external {}".format(self.next_external_kernel_id)
+    self.add_tab_with_frontend(widget, name=name)
+
+</t>
+<t tx="ekr.20190320124834.120">def import_pyside():
+    """
+    Import PySide
+
+    ImportErrors raised within this function are non-recoverable
+    """
+    from PySide import QtGui, QtCore, QtSvg
+    return QtCore, QtGui, QtSvg, QT_API_PYSIDE
+
+
+</t>
+<t tx="ekr.20190320124834.121">def import_pyside2():
+    """
+    Import PySide2
+
+    ImportErrors raised within this function are non-recoverable
+    """
+    from PySide2 import QtGui, QtCore, QtSvg, QtWidgets, QtPrintSupport
+
+    # Join QtGui and QtWidgets for Qt4 compatibility.
+    QtGuiCompat = types.ModuleType('QtGuiCompat')
+    QtGuiCompat.__dict__.update(QtGui.__dict__)
+    QtGuiCompat.__dict__.update(QtWidgets.__dict__)
+    QtGuiCompat.__dict__.update(QtPrintSupport.__dict__)
+
+    return QtCore, QtGuiCompat, QtSvg, QT_API_PYSIDE2
+
+
+</t>
+<t tx="ekr.20190320124834.122">def load_qt(api_options):
+    """
+    Import Qt, given a preference list of permissible bindings.
+
+    It is safe to call this function multiple times.  If a Qt binding
+    has already been loaded, it will be returned regardless of the
+    preference list.
+
+    Parameters
+    ----------
+    api_options: List of strings
+        The order of APIs to try. Valid items are 'pyside2', 'pyside', 'pyqt',
+        'pyqt5', 'pyqtv1' and 'pyqtdefault'
+
+    Returns
+    -------
+
+    A tuple of QtCore, QtGui, QtSvg, QT_API
+    The first three are the Qt modules. The last is the string
+    indicating which module was loaded.
+
+    Raises
+    ------
+    ImportError, if it isn't possible to import any requested bindings
+    (because they aren't installed).
+    """
+
+    loaders = {QT_API_PYSIDE2: import_pyside2,
+               QT_API_PYSIDE: import_pyside,
+               QT_API_PYQT: import_pyqt4,
+               QT_API_PYQT5: import_pyqt5,
+               QT_API_PYQTv1: partial(import_pyqt4, version=1),
+               QT_API_PYQT_DEFAULT: partial(import_pyqt4, version=None)
+               }
+
+    loaded = loaded_api()
+    if loaded:
+        api_options = [loaded]
+
+    for api in api_options:
+
+        if api not in loaders:
+            raise RuntimeError(
+                "Invalid Qt API %r, valid values are: %s" %
+                (api, ", ".join(["%r" % k for k in loaders.keys()])))
+
+        if not can_import(api):
+            continue
+
+        #cannot safely recover from an ImportError during this
+        result = loaders[api]()
+        api = result[-1]  # changed if api = QT_API_PYQT_DEFAULT
+        commit_api(api)
+        return result
+    else:
+        raise ImportError("""
+    Could not load requested Qt binding. Please ensure that
+    PyQt4 &gt;= 4.7, PyQt5, PySide &gt;= 1.0.3 or PySide2 is available,
+    and only one is imported per session.
+
+    Currently-imported Qt library:   %r
+    PyQt4 installed:                 %s
+    PyQt5 installed:                 %s
+    PySide &gt;= 1.0.3 installed:       %s
+    PySide2 installed:               %s
+    Tried to load:                   %r
+    """ % (loaded,
+           has_binding(QT_API_PYQT),
+           has_binding(QT_API_PYQT5),
+           has_binding(QT_API_PYSIDE),
+           has_binding(QT_API_PYSIDE2),
+           api_options))
+
+</t>
+<t tx="ekr.20190320124834.123">def load_qtest():
+    """Load QTest module from the loaded QT API."""
+    api = loaded_api()
+    if api == QT_API_PYQT5:
+        from PyQt5.QtTest import QTest
+    elif api == QT_API_PYSIDE:
+        from PySide.QtTest import QTest
+    elif api == QT_API_PYSIDE2:
+        from PySide2.QtTest import QTest
+    else:
+        from PyQt4.QtTest import QTest
+    return QTest
+</t>
+<t tx="ekr.20190320124834.124">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.125">import warnings
+warnings.warn("qtconsole.rich_ipython_widget is deprecated. use qtconsole.rich_jupyter_widget", DeprecationWarning)
+from .rich_jupyter_widget import *
+</t>
+<t tx="ekr.20190320124834.126">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+# Copyright (c) IPython Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.127">from base64 import decodestring
+import os
+import re
+from warnings import warn
+
+from qtconsole.qt import QtCore, QtGui
+
+from ipython_genutils.path import ensure_dir_exists
+from traitlets import Bool
+from qtconsole.svg import save_svg, svg_to_clipboard, svg_to_image
+from .jupyter_widget import JupyterWidget
+
+
+try:
+    from IPython.lib.latextools import latex_to_png
+except ImportError:
+    latex_to_png = None
+
+
+</t>
+<t tx="ekr.20190320124834.128">class LatexError(Exception):
+    """Exception for Latex errors"""
+
+
+</t>
+<t tx="ekr.20190320124834.129">class RichIPythonWidget(JupyterWidget):
+    """Dummy class for config inheritance. Destroyed below."""
+
+
+</t>
+<t tx="ekr.20190320124834.13">def create_tab_with_current_kernel(self):
+    """create a new frontend attached to the same kernel as the current tab"""
+    current_widget = self.tab_widget.currentWidget()
+    current_widget_index = self.tab_widget.indexOf(current_widget)
+    current_widget_name = self.tab_widget.tabText(current_widget_index)
+    widget = self.slave_frontend_factory(current_widget)
+    if 'slave' in current_widget_name:
+        # don't keep stacking slaves
+        name = current_widget_name
+    else:
+        name = '(%s) slave' % current_widget_name
+    self.add_tab_with_frontend(widget,name=name)
+
+</t>
+<t tx="ekr.20190320124834.130">class RichJupyterWidget(RichIPythonWidget):
+    """ An JupyterWidget that supports rich text, including lists, images, and
+        tables. Note that raw performance will be reduced compared to the plain
+        text version.
+    """
+
+    # RichJupyterWidget protected class variables.
+    _payload_source_plot = 'ipykernel.pylab.backend_payload.add_plot_payload'
+    _jpg_supported = Bool(False)
+
+    # Used to determine whether a given html export attempt has already
+    # displayed a warning about being unable to convert a png to svg.
+    _svg_warning_displayed = False
+
+    #---------------------------------------------------------------------------
+    # 'object' interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124834.131">def __init__(self, *args, **kw):
+    """ Create a RichJupyterWidget.
+    """
+    kw['kind'] = 'rich'
+    super(RichJupyterWidget, self).__init__(*args, **kw)
+
+    # Configure the ConsoleWidget HTML exporter for our formats.
+    self._html_exporter.image_tag = self._get_image_tag
+
+    # Dictionary for resolving document resource names to SVG data.
+    self._name_to_svg_map = {}
+
+    # Do we support jpg ?
+    # it seems that sometime jpg support is a plugin of QT, so try to assume
+    # it is not always supported.
+    self._jpg_supported = 'jpeg' in QtGui.QImageReader.supportedImageFormats()
+
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' public interface overides
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.132">def export_html(self):
+    """ Shows a dialog to export HTML/XML in various formats.
+
+    Overridden in order to reset the _svg_warning_displayed flag prior
+    to the export running.
+    """
+    self._svg_warning_displayed = False
+    super(RichJupyterWidget, self).export_html()
+
+
+#---------------------------------------------------------------------------
+# 'ConsoleWidget' protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.133">def _context_menu_make(self, pos):
+    """ Reimplemented to return a custom context menu for images.
+    """
+    format = self._control.cursorForPosition(pos).charFormat()
+    name = format.stringProperty(QtGui.QTextFormat.ImageName)
+    if name:
+        menu = QtGui.QMenu()
+
+        menu.addAction('Copy Image', lambda: self._copy_image(name))
+        menu.addAction('Save Image As...', lambda: self._save_image(name))
+        menu.addSeparator()
+
+        svg = self._name_to_svg_map.get(name, None)
+        if svg is not None:
+            menu.addSeparator()
+            menu.addAction('Copy SVG', lambda: svg_to_clipboard(svg))
+            menu.addAction('Save SVG As...',
+                           lambda: save_svg(svg, self._control))
+    else:
+        menu = super(RichJupyterWidget, self)._context_menu_make(pos)
+    return menu
+
+#---------------------------------------------------------------------------
+# 'BaseFrontendMixin' abstract interface
+#---------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124834.134">def _pre_image_append(self, msg, prompt_number):
+    """Append the Out[] prompt  and make the output nicer
+
+    Shared code for some the following if statement
+    """
+    self._append_plain_text(self.output_sep, True)
+    self._append_html(self._make_out_prompt(prompt_number), True)
+    self._append_plain_text('\n', True)
+
+</t>
+<t tx="ekr.20190320124834.135">def _handle_execute_result(self, msg):
+    """Overridden to handle rich data types, like SVG."""
+    self.log.debug("execute_result: %s", msg.get('content', ''))
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        content = msg['content']
+        prompt_number = content.get('execution_count', 0)
+        data = content['data']
+        metadata = msg['content']['metadata']
+        if 'image/svg+xml' in data:
+            self._pre_image_append(msg, prompt_number)
+            self._append_svg(data['image/svg+xml'], True)
+            self._append_html(self.output_sep2, True)
+        elif 'image/png' in data:
+            self._pre_image_append(msg, prompt_number)
+            png = decodestring(data['image/png'].encode('ascii'))
+            self._append_png(png, True, metadata=metadata.get('image/png', None))
+            self._append_html(self.output_sep2, True)
+        elif 'image/jpeg' in data and self._jpg_supported:
+            self._pre_image_append(msg, prompt_number)
+            jpg = decodestring(data['image/jpeg'].encode('ascii'))
+            self._append_jpg(jpg, True, metadata=metadata.get('image/jpeg', None))
+            self._append_html(self.output_sep2, True)
+        elif 'text/latex' in data:
+            self._pre_image_append(msg, prompt_number)
+            try:
+                self._append_latex(data['text/latex'], True)
+            except LatexError:
+                return super(RichJupyterWidget, self)._handle_display_data(msg)
+            self._append_html(self.output_sep2, True)
+        else:
+            # Default back to the plain text representation.
+            return super(RichJupyterWidget, self)._handle_execute_result(msg)
+
+</t>
+<t tx="ekr.20190320124834.136">def _handle_display_data(self, msg):
+    """Overridden to handle rich data types, like SVG."""
+    self.log.debug("display_data: %s", msg.get('content', ''))
+    if self.include_output(msg):
+        self.flush_clearoutput()
+        data = msg['content']['data']
+        metadata = msg['content']['metadata']
+        # Try to use the svg or html representations.
+        # FIXME: Is this the right ordering of things to try?
+        self.log.debug("display: %s", msg.get('content', ''))
+        if 'image/svg+xml' in data:
+            svg = data['image/svg+xml']
+            self._append_svg(svg, True)
+        elif 'image/png' in data:
+            # PNG data is base64 encoded as it passes over the network
+            # in a JSON structure so we decode it.
+            png = decodestring(data['image/png'].encode('ascii'))
+            self._append_png(png, True, metadata=metadata.get('image/png', None))
+        elif 'image/jpeg' in data and self._jpg_supported:
+            jpg = decodestring(data['image/jpeg'].encode('ascii'))
+            self._append_jpg(jpg, True, metadata=metadata.get('image/jpeg', None))
+        elif 'text/latex' in data and latex_to_png:
+            try:
+                self._append_latex(data['text/latex'], True)
+            except LatexError:
+                return super(RichJupyterWidget, self)._handle_display_data(msg)
+        else:
+            # Default back to the plain text representation.
+            return super(RichJupyterWidget, self)._handle_display_data(msg)
+
+#---------------------------------------------------------------------------
+# 'RichJupyterWidget' protected interface
+#---------------------------------------------------------------------------
+</t>
+<t tx="ekr.20190320124834.137">def _is_latex_math(self, latex):
+    """
+    Determine if a Latex string is in math mode
+
+    This is the only mode supported by qtconsole
+    """
+    basic_envs = ['math', 'displaymath']
+    starable_envs = ['equation', 'eqnarray' 'multline', 'gather', 'align',
+                     'flalign', 'alignat']
+    star_envs = [env + '*' for env in starable_envs]
+    envs = basic_envs + starable_envs + star_envs
+
+    env_syntax = [r'\begin{{{0}}} \end{{{0}}}'.format(env).split() for env in envs]
+
+    math_syntax = [
+        (r'\[', r'\]'), (r'\(', r'\)'),
+        ('$$', '$$'), ('$', '$'),
+    ]
+
+    for start, end in math_syntax + env_syntax:
+        inner = latex[len(start):-len(end)]
+        if start in inner or end in inner:
+            return False
+        if latex.startswith(start) and latex.endswith(end):
+            return True
+    return False
+
+</t>
+<t tx="ekr.20190320124834.138">def _append_latex(self, latex, before_prompt=False, metadata=None):
+    """ Append latex data to the widget."""
+    png = None
+    if self._is_latex_math(latex):
+        png = latex_to_png(latex, wrap=False, backend='dvipng')
+    if png is None and latex.startswith('$') and latex.endswith('$'):
+        # matplotlib only supports strings enclosed in dollar signs
+        png = latex_to_png(latex, wrap=False, backend='matplotlib')
+
+    if png:
+        self._append_png(png, before_prompt, metadata)
+    else:
+        raise LatexError
+
+</t>
+<t tx="ekr.20190320124834.139">def _append_jpg(self, jpg, before_prompt=False, metadata=None):
+    """ Append raw JPG data to the widget."""
+    self._append_custom(self._insert_jpg, jpg, before_prompt, metadata=metadata)
+
+</t>
+<t tx="ekr.20190320124834.14">def set_tab_title(self):
+    """Set the title of the current tab"""
+    old_title = self.tab_widget.tabText(self.tab_widget.currentIndex())
+    title, ok = QtGui.QInputDialog.getText(self,
+                                           "Rename Tab",
+                                           "New title:",
+                                           text=old_title)
+    if ok:
+        self.tab_widget.setTabText(self.tab_widget.currentIndex(), title)
+
+</t>
+<t tx="ekr.20190320124834.140">def _append_png(self, png, before_prompt=False, metadata=None):
+    """ Append raw PNG data to the widget.
+    """
+    self._append_custom(self._insert_png, png, before_prompt, metadata=metadata)
+
+</t>
+<t tx="ekr.20190320124834.141">def _append_svg(self, svg, before_prompt=False):
+    """ Append raw SVG data to the widget.
+    """
+    self._append_custom(self._insert_svg, svg, before_prompt)
+
+</t>
+<t tx="ekr.20190320124834.142">def _add_image(self, image):
+    """ Adds the specified QImage to the document and returns a
+        QTextImageFormat that references it.
+    """
+    document = self._control.document()
+    name = str(image.cacheKey())
+    document.addResource(QtGui.QTextDocument.ImageResource,
+                         QtCore.QUrl(name), image)
+    format = QtGui.QTextImageFormat()
+    format.setName(name)
+    return format
+
+</t>
+<t tx="ekr.20190320124834.143">def _copy_image(self, name):
+    """ Copies the ImageResource with 'name' to the clipboard.
+    """
+    image = self._get_image(name)
+    QtGui.QApplication.clipboard().setImage(image)
+
+</t>
+<t tx="ekr.20190320124834.144">def _get_image(self, name):
+    """ Returns the QImage stored as the ImageResource with 'name'.
+    """
+    document = self._control.document()
+    image = document.resource(QtGui.QTextDocument.ImageResource,
+                              QtCore.QUrl(name))
+    return image
+
+</t>
+<t tx="ekr.20190320124834.145">def _get_image_tag(self, match, path = None, format = "png"):
+    """ Return (X)HTML mark-up for the image-tag given by match.
+
+    Parameters
+    ----------
+    match : re.SRE_Match
+        A match to an HTML image tag as exported by Qt, with
+        match.group("Name") containing the matched image ID.
+
+    path : string|None, optional [default None]
+        If not None, specifies a path to which supporting files may be
+        written (e.g., for linked images).  If None, all images are to be
+        included inline.
+
+    format : "png"|"svg"|"jpg", optional [default "png"]
+        Format for returned or referenced images.
+    """
+    if format in ("png","jpg"):
+        try:
+            image = self._get_image(match.group("name"))
+        except KeyError:
+            return "&lt;b&gt;Couldn't find image %s&lt;/b&gt;" % match.group("name")
+
+        if path is not None:
+            ensure_dir_exists(path)
+            relpath = os.path.basename(path)
+            if image.save("%s/qt_img%s.%s" % (path, match.group("name"), format),
+                          "PNG"):
+                return '&lt;img src="%s/qt_img%s.%s"&gt;' % (relpath,
+                                                        match.group("name"),format)
+            else:
+                return "&lt;b&gt;Couldn't save image!&lt;/b&gt;"
+        else:
+            ba = QtCore.QByteArray()
+            buffer_ = QtCore.QBuffer(ba)
+            buffer_.open(QtCore.QIODevice.WriteOnly)
+            image.save(buffer_, format.upper())
+            buffer_.close()
+            return '&lt;img src="data:image/%s;base64,\n%s\n" /&gt;' % (
+                format,re.sub(r'(.{60})',r'\1\n', str(ba.toBase64().data().decode())))
+
+    elif format == "svg":
+        try:
+            svg = str(self._name_to_svg_map[match.group("name")])
+        except KeyError:
+            if not self._svg_warning_displayed:
+                QtGui.QMessageBox.warning(self, 'Error converting PNG to SVG.',
+                    'Cannot convert PNG images to SVG, export with PNG figures instead. '
+                    'If you want to export matplotlib figures as SVG, add '
+                    'to your ipython config:\n\n'
+                    '\tc.InlineBackend.figure_format = \'svg\'\n\n'
+                    'And regenerate the figures.',
+                                          QtGui.QMessageBox.Ok)
+                self._svg_warning_displayed = True
+            return ("&lt;b&gt;Cannot convert  PNG images to SVG.&lt;/b&gt;  "
+                    "You must export this session with PNG images. "
+                    "If you want to export matplotlib figures as SVG, add to your config "
+                    "&lt;span&gt;c.InlineBackend.figure_format = 'svg'&lt;/span&gt; "
+                    "and regenerate the figures.")
+
+        # Not currently checking path, because it's tricky to find a
+        # cross-browser way to embed external SVG images (e.g., via
+        # object or embed tags).
+
+        # Chop stand-alone header from matplotlib SVG
+        offset = svg.find("&lt;svg")
+        assert(offset &gt; -1)
+
+        return svg[offset:]
+
+    else:
+        return '&lt;b&gt;Unrecognized image format&lt;/b&gt;'
+
+</t>
+<t tx="ekr.20190320124834.146">def _insert_jpg(self, cursor, jpg, metadata=None):
+    """ Insert raw PNG data into the widget."""
+    self._insert_img(cursor, jpg, 'jpg', metadata=metadata)
+
+</t>
+<t tx="ekr.20190320124834.147">def _insert_png(self, cursor, png, metadata=None):
+    """ Insert raw PNG data into the widget.
+    """
+    self._insert_img(cursor, png, 'png', metadata=metadata)
+
+</t>
+<t tx="ekr.20190320124834.148">def _insert_img(self, cursor, img, fmt, metadata=None):
+    """ insert a raw image, jpg or png """
+    if metadata:
+        width = metadata.get('width', None)
+        height = metadata.get('height', None)
+    else:
+        width = height = None
+    try:
+        image = QtGui.QImage()
+        image.loadFromData(img, fmt.upper())
+        if width and height:
+            image = image.scaled(width, height, transformMode=QtCore.Qt.SmoothTransformation)
+        elif width and not height:
+            image = image.scaledToWidth(width, transformMode=QtCore.Qt.SmoothTransformation)
+        elif height and not width:
+            image = image.scaledToHeight(height, transformMode=QtCore.Qt.SmoothTransformation)
+    except ValueError:
+        self._insert_plain_text(cursor, 'Received invalid %s data.'%fmt)
+    else:
+        format = self._add_image(image)
+        cursor.insertBlock()
+        cursor.insertImage(format)
+        cursor.insertBlock()
+
+</t>
+<t tx="ekr.20190320124834.149">def _insert_svg(self, cursor, svg):
+    """ Insert raw SVG data into the widet.
+    """
+    try:
+        image = svg_to_image(svg)
+    except ValueError:
+        self._insert_plain_text(cursor, 'Received invalid SVG data.')
+    else:
+        format = self._add_image(image)
+        self._name_to_svg_map[format.name()] = svg
+        cursor.insertBlock()
+        cursor.insertImage(format)
+        cursor.insertBlock()
+
+</t>
+<t tx="ekr.20190320124834.15">def close_tab(self,current_tab):
+    """ Called when you need to try to close a tab.
+
+    It takes the number of the tab to be closed as argument, or a reference
+    to the widget inside this tab
+    """
+
+    # let's be sure "tab" and "closing widget" are respectively the index
+    # of the tab to close and a reference to the frontend to close
+    if type(current_tab) is not int :
+        current_tab = self.tab_widget.indexOf(current_tab)
+    closing_widget=self.tab_widget.widget(current_tab)
+
+
+    # when trying to be closed, widget might re-send a request to be
+    # closed again, but will be deleted when event will be processed. So
+    # need to check that widget still exists and skip if not. One example
+    # of this is when 'exit' is sent in a slave tab. 'exit' will be
+    # re-sent by this function on the master widget, which ask all slave
+    # widgets to exit
+    if closing_widget is None:
+        return
+
+    #get a list of all slave widgets on the same kernel.
+    slave_tabs = self.find_slave_widgets(closing_widget)
+
+    keepkernel = None #Use the prompt by default
+    if hasattr(closing_widget,'_keep_kernel_on_exit'): #set by exit magic
+        keepkernel = closing_widget._keep_kernel_on_exit
+        # If signal sent by exit magic (_keep_kernel_on_exit, exist and not None)
+        # we set local slave tabs._hidden to True to avoid prompting for kernel
+        # restart when they get the signal. and then "forward" the 'exit'
+        # to the main window
+        if keepkernel is not None:
+            for tab in slave_tabs:
+                tab._hidden = True
+            if closing_widget in slave_tabs:
+                try :
+                    self.find_master_tab(closing_widget).execute('exit')
+                except AttributeError:
+                    self.log.info("Master already closed or not local, closing only current tab")
+                    self.tab_widget.removeTab(current_tab)
+                self.update_tab_bar_visibility()
+                return
+
+    kernel_client = closing_widget.kernel_client
+    kernel_manager = closing_widget.kernel_manager
+
+    if keepkernel is None and not closing_widget._confirm_exit:
+        # don't prompt, just terminate the kernel if we own it
+        # or leave it alone if we don't
+        keepkernel = closing_widget._existing
+    if keepkernel is None: #show prompt
+        if kernel_client and kernel_client.channels_running:
+            title = self.window().windowTitle()
+            cancel = QtGui.QMessageBox.Cancel
+            okay = QtGui.QMessageBox.Ok
+            if closing_widget._may_close:
+                msg = "You are closing the tab : "+'"'+self.tab_widget.tabText(current_tab)+'"'
+                info = "Would you like to quit the Kernel and close all attached Consoles as well?"
+                justthis = QtGui.QPushButton("&amp;No, just this Tab", self)
+                justthis.setShortcut('N')
+                closeall = QtGui.QPushButton("&amp;Yes, close all", self)
+                closeall.setShortcut('Y')
+                # allow ctrl-d ctrl-d exit, like in terminal
+                closeall.setShortcut('Ctrl+D')
+                box = QtGui.QMessageBox(QtGui.QMessageBox.Question,
+                                        title, msg)
+                box.setInformativeText(info)
+                box.addButton(cancel)
+                box.addButton(justthis, QtGui.QMessageBox.NoRole)
+                box.addButton(closeall, QtGui.QMessageBox.YesRole)
+                box.setDefaultButton(closeall)
+                box.setEscapeButton(cancel)
+                pixmap = QtGui.QPixmap(self._app.icon.pixmap(QtCore.QSize(64,64)))
+                box.setIconPixmap(pixmap)
+                reply = box.exec_()
+                if reply == 1: # close All
+                    for slave in slave_tabs:
+                        background(slave.kernel_client.stop_channels)
+                        self.tab_widget.removeTab(self.tab_widget.indexOf(slave))
+                    kernel_manager.shutdown_kernel()
+                    self.tab_widget.removeTab(current_tab)
+                    background(kernel_client.stop_channels)
+                elif reply == 0: # close Console
+                    if not closing_widget._existing:
+                        # Have kernel: don't quit, just close the tab
+                        closing_widget.execute("exit True")
+                    self.tab_widget.removeTab(current_tab)
+                    background(kernel_client.stop_channels)
+            else:
+                reply = QtGui.QMessageBox.question(self, title,
+                    "Are you sure you want to close this Console?"+
+                    "\nThe Kernel and other Consoles will remain active.",
+                    okay|cancel,
+                    defaultButton=okay
+                    )
+                if reply == okay:
+                    self.tab_widget.removeTab(current_tab)
+    elif keepkernel: #close console but leave kernel running (no prompt)
+        self.tab_widget.removeTab(current_tab)
+        background(kernel_client.stop_channels)
+    else: #close console and kernel (no prompt)
+        self.tab_widget.removeTab(current_tab)
+        if kernel_client and kernel_client.channels_running:
+            for slave in slave_tabs:
+                background(slave.kernel_client.stop_channels)
+                self.tab_widget.removeTab(self.tab_widget.indexOf(slave))
+            if kernel_manager:
+                kernel_manager.shutdown_kernel()
+            background(kernel_client.stop_channels)
+
+    self.update_tab_bar_visibility()
+
+</t>
+<t tx="ekr.20190320124834.150">def _save_image(self, name, format='PNG'):
+    """ Shows a save dialog for the ImageResource with 'name'.
+    """
+    dialog = QtGui.QFileDialog(self._control, 'Save Image')
+    dialog.setAcceptMode(QtGui.QFileDialog.AcceptSave)
+    dialog.setDefaultSuffix(format.lower())
+    dialog.setNameFilter('%s file (*.%s)' % (format, format.lower()))
+    if dialog.exec_():
+        filename = dialog.selectedFiles()[0]
+        image = self._get_image(name)
+        image.save(filename, format)
+
+
+\\-4.# clobber RichIPythonWidget above:
+
+</t>
+<t tx="ekr.20190320124834.151">class RichIPythonWidget(RichJupyterWidget):
+    """Deprecated class. Use RichJupyterWidget"""
+    @others
+</t>
+<t tx="ekr.20190320124834.152">def __init__(self, *a, **kw):
+    warn("RichIPythonWidget is deprecated, use RichJupyterWidget")
+    super(RichIPythonWidget, self).__init__(*a, **kw)
+</t>
+<t tx="ekr.20190320124834.153">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.154">""" Defines classes and functions for working with Qt's rich text system.
+"""
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+import io
+import os
+import re
+
+from qtconsole.qt import QtGui
+
+from ipython_genutils import py3compat
+
+#-----------------------------------------------------------------------------
+# Constants
+#-----------------------------------------------------------------------------
+
+# A regular expression for an HTML paragraph with no content.
+EMPTY_P_RE = re.compile(r'&lt;p[^/&gt;]*&gt;\s*&lt;/p&gt;')
+
+# A regular expression for matching images in rich text HTML.
+# Note that this is overly restrictive, but Qt's output is predictable...
+IMG_RE = re.compile(r'&lt;img src="(?P&lt;name&gt;[\d]+)" /&gt;')
+
+#-----------------------------------------------------------------------------
+# Classes
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.155">class HtmlExporter(object):
+    """ A stateful HTML exporter for a Q(Plain)TextEdit.
+
+    This class is designed for convenient user interaction.
+    """
+
+    @others
+</t>
+<t tx="ekr.20190320124834.156">def __init__(self, control):
+    """ Creates an HtmlExporter for the given Q(Plain)TextEdit.
+    """
+    assert isinstance(control, (QtGui.QPlainTextEdit, QtGui.QTextEdit))
+    self.control = control
+    self.filename = 'ipython.html'
+    self.image_tag = None
+    self.inline_png = None
+
+</t>
+<t tx="ekr.20190320124834.157">def export(self):
+    """ Displays a dialog for exporting HTML generated by Qt's rich text
+    system.
+
+    Returns
+    -------
+    The name of the file that was saved, or None if no file was saved.
+    """
+    parent = self.control.window()
+    dialog = QtGui.QFileDialog(parent, 'Save as...')
+    dialog.setAcceptMode(QtGui.QFileDialog.AcceptSave)
+    filters = [
+        'HTML with PNG figures (*.html *.htm)',
+        'XHTML with inline SVG figures (*.xhtml *.xml)'
+    ]
+    dialog.setNameFilters(filters)
+    if self.filename:
+        dialog.selectFile(self.filename)
+        root,ext = os.path.splitext(self.filename)
+        if ext.lower() in ('.xml', '.xhtml'):
+            dialog.selectNameFilter(filters[-1])
+
+    if dialog.exec_():
+        self.filename = dialog.selectedFiles()[0]
+        choice = dialog.selectedNameFilter()
+        html = py3compat.cast_unicode(self.control.document().toHtml())
+
+        # Configure the exporter.
+        if choice.startswith('XHTML'):
+            exporter = export_xhtml
+        else:
+            # If there are PNGs, decide how to export them.
+            inline = self.inline_png
+            if inline is None and IMG_RE.search(html):
+                dialog = QtGui.QDialog(parent)
+                dialog.setWindowTitle('Save as...')
+                layout = QtGui.QVBoxLayout(dialog)
+                msg = "Exporting HTML with PNGs"
+                info = "Would you like inline PNGs (single large html " \
+                    "file) or external image files?"
+                checkbox = QtGui.QCheckBox("&amp;Don't ask again")
+                checkbox.setShortcut('D')
+                ib = QtGui.QPushButton("&amp;Inline")
+                ib.setShortcut('I')
+                eb = QtGui.QPushButton("&amp;External")
+                eb.setShortcut('E')
+                box = QtGui.QMessageBox(QtGui.QMessageBox.Question,
+                                        dialog.windowTitle(), msg)
+                box.setInformativeText(info)
+                box.addButton(ib, QtGui.QMessageBox.NoRole)
+                box.addButton(eb, QtGui.QMessageBox.YesRole)
+                layout.setSpacing(0)
+                layout.addWidget(box)
+                layout.addWidget(checkbox)
+                dialog.setLayout(layout)
+                dialog.show()
+                reply = box.exec_()
+                dialog.hide()
+                inline = (reply == 0)
+                if checkbox.checkState():
+                    # Don't ask anymore; always use this choice.
+                    self.inline_png = inline
+            exporter = lambda h, f, i: export_html(h, f, i, inline)
+
+        # Perform the export!
+        try:
+            return exporter(html, self.filename, self.image_tag)
+        except Exception as e:
+            msg = "Error exporting HTML to %s\n" % self.filename + str(e)
+            reply = QtGui.QMessageBox.warning(parent, 'Error', msg,
+                QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok)
+
+    return None
+
+\\-4.#-----------------------------------------------------------------------------
+\\-4.# Functions
+\\-4.#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.158">def export_html(html, filename, image_tag = None, inline = True):
+    """ Export the contents of the ConsoleWidget as HTML.
+
+    Parameters
+    ----------
+    html : unicode,
+        A Python unicode string containing the Qt HTML to export.
+
+    filename : str
+        The file to be saved.
+
+    image_tag : callable, optional (default None)
+        Used to convert images. See ``default_image_tag()`` for information.
+
+    inline : bool, optional [default True]
+        If True, include images as inline PNGs.  Otherwise, include them as
+        links to external PNG files, mimicking web browsers' "Web Page,
+        Complete" behavior.
+    """
+    if image_tag is None:
+        image_tag = default_image_tag
+
+    if inline:
+        path = None
+    else:
+        root,ext = os.path.splitext(filename)
+        path = root + "_files"
+        if os.path.isfile(path):
+            raise OSError("%s exists, but is not a directory." % path)
+
+    with io.open(filename, 'w', encoding='utf-8') as f:
+        html = fix_html(html)
+        f.write(IMG_RE.sub(lambda x: image_tag(x, path = path, format = "png"),
+                           html))
+
+
+</t>
+<t tx="ekr.20190320124834.159">def export_xhtml(html, filename, image_tag=None):
+    """ Export the contents of the ConsoleWidget as XHTML with inline SVGs.
+
+    Parameters
+    ----------
+    html : unicode,
+        A Python unicode string containing the Qt HTML to export.
+
+    filename : str
+        The file to be saved.
+
+    image_tag : callable, optional (default None)
+        Used to convert images. See ``default_image_tag()`` for information.
+    """
+    if image_tag is None:
+        image_tag = default_image_tag
+
+    with io.open(filename, 'w', encoding='utf-8') as f:
+        # Hack to make xhtml header -- note that we are not doing any check for
+        # valid XML.
+        offset = html.find("&lt;html&gt;")
+        assert offset &gt; -1, 'Invalid HTML string: no &lt;html&gt; tag.'
+        html = (u'&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;\n'+
+                html[offset+6:])
+
+        html = fix_html(html)
+        f.write(IMG_RE.sub(lambda x: image_tag(x, path = None, format = "svg"),
+                           html))
+
+
+</t>
+<t tx="ekr.20190320124834.16">def add_tab_with_frontend(self,frontend,name=None):
+    """ insert a tab with a given frontend in the tab bar, and give it a name
+
+    """
+    if not name:
+        name = 'kernel %i' % self.next_kernel_id
+    self.tab_widget.addTab(frontend,name)
+    self.update_tab_bar_visibility()
+    self.make_frontend_visible(frontend)
+    frontend.exit_requested.connect(self.close_tab)
+
+</t>
+<t tx="ekr.20190320124834.160">def default_image_tag(match, path = None, format = "png"):
+    """ Return (X)HTML mark-up for the image-tag given by match.
+
+    This default implementation merely removes the image, and exists mostly
+    for documentation purposes. More information than is present in the Qt
+    HTML is required to supply the images.
+
+    Parameters
+    ----------
+    match : re.SRE_Match
+        A match to an HTML image tag as exported by Qt, with match.group("Name")
+        containing the matched image ID.
+
+    path : string|None, optional [default None]
+        If not None, specifies a path to which supporting files may be written
+        (e.g., for linked images).  If None, all images are to be included
+        inline.
+
+    format : "png"|"svg", optional [default "png"]
+        Format for returned or referenced images.
+    """
+    return u''
+
+
+</t>
+<t tx="ekr.20190320124834.161">def fix_html(html):
+    """ Transforms a Qt-generated HTML string into a standards-compliant one.
+
+    Parameters
+    ----------
+    html : unicode,
+        A Python unicode string containing the Qt HTML.
+    """
+    # A UTF-8 declaration is needed for proper rendering of some characters
+    # (e.g., indented commands) when viewing exported HTML on a local system
+    # (i.e., without seeing an encoding declaration in an HTTP header).
+    # C.f. http://www.w3.org/International/O-charset for details.
+    offset = html.find('&lt;head&gt;')
+    if offset &gt; -1:
+        html = (html[:offset+6]+
+                '\n&lt;meta http-equiv="Content-Type" '+
+                'content="text/html; charset=utf-8" /&gt;\n'+
+                html[offset+6:])
+
+    # Replace empty paragraphs tags with line breaks.
+    html = re.sub(EMPTY_P_RE, '&lt;br/&gt;', html)
+
+    return html
+</t>
+<t tx="ekr.20190320124834.162">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.163">""" Style utilities, templates, and defaults for syntax highlighting widgets.
+"""
+#-----------------------------------------------------------------------------
+# Imports
+#-----------------------------------------------------------------------------
+
+from colorsys import rgb_to_hls
+from pygments.styles import get_style_by_name
+from pygments.token import Token
+
+#-----------------------------------------------------------------------------
+# Constants
+#-----------------------------------------------------------------------------
+
+default_template = '''\
+    QPlainTextEdit, QTextEdit {
+        background-color: %(bgcolor)s;
+        background-clip: padding;
+        color: %(fgcolor)s;
+        selection-background-color: %(select)s;
+    }
+    .inverted {
+        background-color: %(fgcolor)s;
+        color: %(bgcolor)s;
+    }
+    .error { color: red; }
+    .in-prompt-number { font-weight: bold; }
+    .out-prompt-number { font-weight: bold; }
+'''
+
+# The default light style sheet: black text on a white background.
+default_light_style_template = default_template + '''\
+    .in-prompt { color: navy; }
+    .out-prompt { color: darkred; }
+'''
+default_light_style_sheet = default_light_style_template%dict(
+                bgcolor='white', fgcolor='black', select="#ccc")
+default_light_syntax_style = 'default'
+
+# The default dark style sheet: white text on a black background.
+default_dark_style_template = default_template + '''\
+    .in-prompt,
+    .in-prompt-number { color: lime; }
+    .out-prompt,
+    .out-prompt-number { color: red; }
+'''
+default_dark_style_sheet = default_dark_style_template%dict(
+                bgcolor='black', fgcolor='white', select="#555")
+default_dark_syntax_style = 'monokai'
+
+# The default monochrome
+default_bw_style_sheet = default_template%dict(
+                bgcolor='white', fgcolor='black', select="#ccc")
+default_bw_syntax_style = 'bw'
+
+
+</t>
+<t tx="ekr.20190320124834.164">def hex_to_rgb(color):
+    """Convert a hex color to rgb integer tuple."""
+    if color.startswith('#'):
+        color = color[1:]
+    if len(color) == 3:
+        color = ''.join([c*2 for c in color])
+    if len(color) != 6:
+        return False
+    try:
+        r = int(color[:2],16)
+        g = int(color[2:4],16)
+        b = int(color[4:],16)
+    except ValueError:
+        return False
+    else:
+        return r,g,b
+
+</t>
+<t tx="ekr.20190320124834.165">def dark_color(color):
+    """Check whether a color is 'dark'.
+
+    Currently, this is simply whether the luminance is &lt;50%"""
+    rgb = hex_to_rgb(color)
+    if rgb:
+        return rgb_to_hls(*rgb)[1] &lt; 128
+    else: # default to False
+        return False
+
+</t>
+<t tx="ekr.20190320124834.166">def dark_style(stylename):
+    """Guess whether the background of the style with name 'stylename'
+    counts as 'dark'."""
+    return dark_color(get_style_by_name(stylename).background_color)
+
+</t>
+<t tx="ekr.20190320124834.167">def get_colors(stylename):
+    """Construct the keys to be used building the base stylesheet
+    from a templatee."""
+    style = get_style_by_name(stylename)
+    fgcolor = style.style_for_token(Token.Text)['color'] or ''
+    if len(fgcolor) in (3,6):
+        # could be 'abcdef' or 'ace' hex, which needs '#' prefix
+        try:
+            int(fgcolor, 16)
+        except TypeError:
+            pass
+        else:
+            fgcolor = "#"+fgcolor
+
+    return dict(
+        bgcolor = style.background_color,
+        select = style.highlight_color,
+        fgcolor = fgcolor
+    )
+
+</t>
+<t tx="ekr.20190320124834.168">def sheet_from_template(name, colors='lightbg'):
+    """Use one of the base templates, and set bg/fg/select colors."""
+    colors = colors.lower()
+    if colors=='lightbg':
+        return default_light_style_template%get_colors(name)
+    elif colors=='linux':
+        return default_dark_style_template%get_colors(name)
+    elif colors=='nocolor':
+        return default_bw_style_sheet
+    else:
+        raise KeyError("No such color scheme: %s"%colors)
+</t>
+<t tx="ekr.20190320124834.169">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.17">def next_tab(self):
+    self.tab_widget.setCurrentIndex((self.tab_widget.currentIndex()+1))
+
+</t>
+<t tx="ekr.20190320124834.170">""" Defines utility functions for working with SVG documents in Qt.
+"""
+
+# System library imports.
+from qtconsole.qt import QtCore, QtGui, QtSvg
+
+# Our own imports
+from ipython_genutils.py3compat import unicode_type
+
+</t>
+<t tx="ekr.20190320124834.171">def save_svg(string, parent=None):
+    """ Prompts the user to save an SVG document to disk.
+
+    Parameters
+    ----------
+    string : basestring
+        A Python string containing a SVG document.
+
+    parent : QWidget, optional
+        The parent to use for the file dialog.
+
+    Returns
+    -------
+    The name of the file to which the document was saved, or None if the save
+    was cancelled.
+    """
+    if isinstance(string, unicode_type):
+        string = string.encode('utf-8')
+
+    dialog = QtGui.QFileDialog(parent, 'Save SVG Document')
+    dialog.setAcceptMode(QtGui.QFileDialog.AcceptSave)
+    dialog.setDefaultSuffix('svg')
+    dialog.setNameFilter('SVG document (*.svg)')
+    if dialog.exec_():
+        filename = dialog.selectedFiles()[0]
+        f = open(filename, 'wb')
+        try:
+            f.write(string)
+        finally:
+            f.close()
+        return filename
+    return None
+
+</t>
+<t tx="ekr.20190320124834.172">def svg_to_clipboard(string):
+    """ Copy a SVG document to the clipboard.
+
+    Parameters
+    ----------
+    string : basestring
+        A Python string containing a SVG document.
+    """
+    if isinstance(string, unicode_type):
+        string = string.encode('utf-8')
+
+    mime_data = QtCore.QMimeData()
+    mime_data.setData('image/svg+xml', string)
+    QtGui.QApplication.clipboard().setMimeData(mime_data)
+        
+</t>
+<t tx="ekr.20190320124834.173">def svg_to_image(string, size=None):
+    """ Convert a SVG document to a QImage.
+
+    Parameters
+    ----------
+    string : basestring
+        A Python string containing a SVG document.
+
+    size : QSize, optional
+        The size of the image that is produced. If not specified, the SVG
+        document's default size is used.
+    
+    Raises
+    ------
+    ValueError
+        If an invalid SVG string is provided.
+
+    Returns
+    -------
+    A QImage of format QImage.Format_ARGB32.
+    """
+    if isinstance(string, unicode_type):
+        string = string.encode('utf-8')
+
+    renderer = QtSvg.QSvgRenderer(QtCore.QByteArray(string))
+    if not renderer.isValid():
+        raise ValueError('Invalid SVG data.')
+
+    if size is None:
+        size = renderer.defaultSize()
+    image = QtGui.QImage(size, QtGui.QImage.Format_ARGB32)
+    image.fill(0)
+    painter = QtGui.QPainter(image)
+    renderer.render(painter)
+    return image
+</t>
+<t tx="ekr.20190320124834.174">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.175">"""
+Usage information for QtConsole
+"""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+
+gui_reference = """\
+=====================
+The Jupyter QtConsole
+=====================
+
+This console is designed to emulate the look, feel and workflow of a terminal
+environment. Beyond this basic design, the console also implements
+functionality not currently found in most terminal emulators. Some examples of
+these console enhancements are inline syntax highlighting, multiline editing,
+inline graphics, and others.
+
+This quick reference document contains the basic information you'll need to
+know to make the most efficient use of it.  For the various command line
+options available at startup, type ``jupyter qtconsole --help`` at the command
+line.
+
+
+Multiline editing
+=================
+
+The graphical console is capable of true multiline editing, but it also tries
+to behave intuitively like a terminal when possible.  If you are used to
+IPython's old terminal behavior, you should find the transition painless. If
+you learn to use a few basic keybindings, the console provides even greater
+efficiency.
+
+For single expressions or indented blocks, the console behaves almost like the
+IPython terminal: single expressions are immediately evaluated, and indented
+blocks are evaluated once a single blank line is entered::
+
+    In [1]: print ("Hello Jupyter!")  # Enter was pressed at the end of the line
+    Hello Jupyter!
+
+    In [2]: for num in range(10):
+       ...:     print(num)
+       ...:
+    0 1 2 3 4 5 6 7 8 9
+
+If you want to enter more than one expression in a single input block
+(something not possible in the terminal), you can use ``Control-Enter`` at the
+end of your first line instead of ``Enter``.  At that point the console goes
+into 'cell mode' and even if your inputs are not indented, it will continue
+accepting lines until either you enter an extra blank line or
+you hit ``Shift-Enter`` (the key binding that forces execution).  When a
+multiline cell is entered, the console analyzes it and executes its code producing
+an ``Out[n]`` prompt only for the last expression in it, while the rest of the
+cell is executed as if it was a script.  An example should clarify this::
+
+    In [3]: x=1  # Hit Ctrl-Enter here
+       ...: y=2  # from now on, regular Enter is sufficient
+       ...: z=3
+       ...: x**2  # This does *not* produce an Out[] value
+       ...: x+y+z  # Only the last expression does
+       ...:
+    Out[3]: 6
+
+The behavior where an extra blank line forces execution is only active if you
+are actually typing at the keyboard each line, and is meant to make it mimic
+the IPython terminal behavior.  If you paste a long chunk of input (for example
+a long script copied form an editor or web browser), it can contain arbitrarily
+many intermediate blank lines and they won't cause any problems.  As always,
+you can then make it execute by appending a blank line *at the end* or hitting
+``Shift-Enter`` anywhere within the cell.
+
+With the up arrow key, you can retrieve previous blocks of input that contain
+multiple lines.  You can move inside of a multiline cell like you would in any
+text editor.  When you want it executed, the simplest thing to do is to hit the
+force execution key, ``Shift-Enter`` (though you can also navigate to the end
+and append a blank line by using ``Enter`` twice).
+
+If you are editing a multiline cell and accidentally navigate out of it using the
+up or down arrow keys, the console clears the cell and replaces it with the
+contents of the cell which the up or down arrow key stopped on.  If you wish to
+to undo this action,  perhaps because of an accidental keypress, use the Undo
+keybinding, ``Control-z``, to restore the original cell.
+
+
+Key bindings
+============
+
+The Jupyter QtConsole supports most of the basic Emacs line-oriented keybindings,
+in addition to some of its own.
+
+The keybindings themselves are:
+
+- ``Enter``: insert new line (may cause execution, see above).
+- ``Ctrl-Enter``: *force* new line, *never* causes execution.
+- ``Shift-Enter``: *force* execution regardless of where cursor is, no newline added.
+- ``Up``: step backwards through the history.
+- ``Down``: step forwards through the history.
+- ``Shift-Up``: search backwards through the history (like ``Control-r`` in bash).
+- ``Shift-Down``: search forwards through the history.
+- ``Control-c``: copy highlighted text to clipboard (prompts are automatically stripped).
+- ``Control-Shift-c``: copy highlighted text to clipboard (prompts are not stripped).
+- ``Control-v``: paste text from clipboard.
+- ``Control-z``: undo (retrieves lost text if you move out of a cell with the arrows).
+- ``Control-Shift-z``: redo.
+- ``Control-o``: move to 'other' area, between pager and terminal.
+- ``Control-l``: clear terminal.
+- ``Control-a``: go to beginning of line.
+- ``Control-e``: go to end of line.
+- ``Control-u``: kill from cursor to the begining of the line.
+- ``Control-k``: kill from cursor to the end of the line.
+- ``Control-y``: yank (paste)
+- ``Control-p``: previous line (like up arrow)
+- ``Control-n``: next line (like down arrow)
+- ``Control-f``: forward (like right arrow)
+- ``Control-b``: back (like left arrow)
+- ``Control-d``: delete next character, or exits if input is empty
+- ``Alt-&lt;``: move to the beginning of the input region.
+- ``alt-&gt;``: move to the end of the input region.
+- ``Alt-d``: delete next word.
+- ``Alt-Backspace``: delete previous word.
+- ``Control-.``: force a kernel restart (a confirmation dialog appears).
+- ``Control-+``: increase font size.
+- ``Control--``: decrease font size.
+- ``Control-Alt-Space``: toggle full screen. (Command-Control-Space on Mac OS X)
+
+The pager
+=========
+
+The Jupyter QtConsole will show long blocks of text from many sources using a
+built-in pager. You can control where this pager appears with the ``--paging``
+command-line flag:
+
+- ``inside`` [default]: the pager is overlaid on top of the main terminal. You
+  must quit the pager to get back to the terminal (similar to how a pager such
+  as ``less`` or ``more`` pagers behave).
+
+- ``vsplit``: the console is made double height, and the pager appears on the
+  bottom area when needed.  You can view its contents while using the terminal.
+
+- ``hsplit``: the console is made double width, and the pager appears on the
+  right area when needed.  You can view its contents while using the terminal.
+
+- ``none``: the console displays output without paging.
+
+If you use the vertical or horizontal paging modes, you can navigate between
+terminal and pager as follows:
+
+- Tab key: goes from pager to terminal (but not the other way around).
+- Control-o: goes from one to another always.
+- Mouse: click on either.
+
+In all cases, the ``q`` or ``Escape`` keys quit the pager (when used with the
+focus on the pager area).
+
+Running subprocesses
+====================
+
+When running a subprocess from the kernel, you can not interact with it as if
+it was running in a terminal.  So anything that invokes a pager or expects
+you to type input into it will block and hang (you can kill it with ``Control-C``).
+
+The console can use magics provided by the IPython kernel. These magics include
+``%less`` to page files (aliased to ``%more``),
+``%clear`` to clear the terminal, and ``%man`` on Linux/OSX.  These cover the
+most common commands you'd want to call in your subshell and that would cause
+problems if invoked via ``!cmd``, but you need to be aware of this limitation.
+
+Display
+=======
+
+For example, if using the IPython kernel, there are functions available for
+object display:
+
+
+    In [4]: from IPython.display import display
+
+    In [5]: from IPython.display import display_png, display_svg
+
+Python objects can simply be passed to these functions and the appropriate
+representations will be displayed in the console as long as the objects know
+how to compute those representations. The easiest way of teaching objects how
+to format themselves in various representations is to define special methods
+such as: ``_repr_svg_`` and ``_repr_png_``. IPython's display formatters
+can also be given custom formatter functions for various types::
+
+    In [6]: ip = get_ipython()
+
+    In [7]: png_formatter = ip.display_formatter.formatters['image/png']
+
+    In [8]: png_formatter.for_type(Foo, foo_to_png)
+
+For further details, see ``IPython.core.formatters``.
+"""
+</t>
+<t tx="ekr.20190320124834.176">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.177">""" Defines miscellaneous Qt-related helper classes and functions.
+"""
+
+import inspect
+
+from qtconsole.qt import QtCore, QtGui
+
+from ipython_genutils.py3compat import iteritems
+from traitlets import HasTraits, TraitType
+
+#-----------------------------------------------------------------------------
+# Metaclasses
+#-----------------------------------------------------------------------------
+
+MetaHasTraits = type(HasTraits)
+MetaQObject = type(QtCore.QObject)
+
+</t>
+<t tx="ekr.20190320124834.178">class MetaQObjectHasTraits(MetaQObject, MetaHasTraits):
+    """ A metaclass that inherits from the metaclasses of HasTraits and QObject.
+
+    Using this metaclass allows a class to inherit from both HasTraits and
+    QObject. Using SuperQObject instead of QObject is highly recommended. See
+    QtKernelManager for an example.
+    """
+    @others
+</t>
+<t tx="ekr.20190320124834.179">def __new__(mcls, name, bases, classdict):
+    # FIXME: this duplicates the code from MetaHasTraits.
+    # I don't think a super() call will help me here.
+    for k,v in iteritems(classdict):
+        if isinstance(v, TraitType):
+            v.name = k
+        elif inspect.isclass(v):
+            if issubclass(v, TraitType):
+                vinst = v()
+                vinst.name = k
+                classdict[k] = vinst
+    cls = MetaQObject.__new__(mcls, name, bases, classdict)
+    return cls
+
+</t>
+<t tx="ekr.20190320124834.18">def prev_tab(self):
+    self.tab_widget.setCurrentIndex((self.tab_widget.currentIndex()-1))
+
+</t>
+<t tx="ekr.20190320124834.180">def __init__(mcls, name, bases, classdict):
+    # Note: super() did not work, so we explicitly call these.
+    MetaQObject.__init__(mcls, name, bases, classdict)
+    MetaHasTraits.__init__(mcls, name, bases, classdict)
+
+\\-4.#-----------------------------------------------------------------------------
+\\-4.# Classes
+\\-4.#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.181">def superQ(QClass):
+    """ Permits the use of super() in class hierarchies that contain Qt classes.
+
+    Unlike QObject, SuperQObject does not accept a QObject parent. If it did,
+    super could not be emulated properly (all other classes in the heierarchy
+    would have to accept the parent argument--they don't, of course, because
+    they don't inherit QObject.)
+
+    This class is primarily useful for attaching signals to existing non-Qt
+    classes. See QtKernelManagerMixin for an example.
+    """
+    class SuperQClass(QClass):
+
+        def __new__(cls, *args, **kw):
+            # We initialize QClass as early as possible. Without this, Qt complains
+            # if SuperQClass is not the first class in the super class list.
+            inst = QClass.__new__(cls)
+            QClass.__init__(inst)
+            return inst
+
+        def __init__(self, *args, **kw):
+            # Emulate super by calling the next method in the MRO, if there is one.
+            mro = self.__class__.mro()
+            for qt_class in QClass.mro():
+                mro.remove(qt_class)
+            next_index = mro.index(SuperQClass) + 1
+            if next_index &lt; len(mro):
+                mro[next_index].__init__(self, *args, **kw)
+
+    return SuperQClass
+
+SuperQObject = superQ(QtCore.QObject)
+
+#-----------------------------------------------------------------------------
+# Functions
+#-----------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.182">def get_font(family, fallback=None):
+    """Return a font of the requested family, using fallback as alternative.
+
+    If a fallback is provided, it is used in case the requested family isn't
+    found.  If no fallback is given, no alternative is chosen and Qt's internal
+    algorithms may automatically choose a fallback font.
+
+    Parameters
+    ----------
+    family : str
+      A font name.
+    fallback : str
+      A font name.
+
+    Returns
+    -------
+    font : QFont object
+    """
+    font = QtGui.QFont(family)
+    # Check whether we got what we wanted using QFontInfo, since exactMatch()
+    # is overly strict and returns false in too many cases.
+    font_info = QtGui.QFontInfo(font)
+    if fallback is not None and font_info.family() != family:
+        font = QtGui.QFont(fallback)
+    return font
+</t>
+<t tx="ekr.20190320124834.183">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.184">version_info = (4, 3, 1)
+__version__ = '.'.join(map(str, version_info))
+</t>
+<t tx="ekr.20190320124834.185">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.186">from ._version import version_info, __version__
+</t>
+<t tx="ekr.20190320124834.187">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+if __name__ == '__main__':
+    from qtconsole.qtconsoleapp import main
+    main()
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.19">def make_frontend_visible(self,frontend):
+    widget_index=self.tab_widget.indexOf(frontend)
+    if widget_index &gt; 0 :
+        self.tab_widget.setCurrentIndex(widget_index)
+
+</t>
+<t tx="ekr.20190320124834.2">"""The Qt MainWindow for the QtConsole
+
+This is a tabbed pseudo-terminal of Jupyter sessions, with a menu bar for
+common actions.
+"""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+import sys
+import webbrowser
+from threading import Thread
+
+from jupyter_core.paths import jupyter_runtime_dir
+
+from qtconsole.qt import QtGui,QtCore
+from qtconsole.usage import gui_reference
+
+
+</t>
+<t tx="ekr.20190320124834.20">def find_master_tab(self,tab,as_list=False):
+    """
+    Try to return the frontend that owns the kernel attached to the given widget/tab.
+
+        Only finds frontend owned by the current application. Selection
+        based on port of the kernel might be inaccurate if several kernel
+        on different ip use same port number.
+
+        This function does the conversion tabNumber/widget if needed.
+        Might return None if no master widget (non local kernel)
+        Will crash if more than 1 masterWidget
+
+        When asList set to True, always return a list of widget(s) owning
+        the kernel. The list might be empty or containing several Widget.
+    """
+
+    #convert from/to int/richIpythonWidget if needed
+    if isinstance(tab, int):
+        tab = self.tab_widget.widget(tab)
+    km=tab.kernel_client
+
+    #build list of all widgets
+    widget_list = [self.tab_widget.widget(i) for i in range(self.tab_widget.count())]
+
+    # widget that are candidate to be the owner of the kernel does have all the same port of the curent widget
+    # And should have a _may_close attribute
+    filtered_widget_list = [ widget for widget in widget_list if
+                            widget.kernel_client.connection_file == km.connection_file and
+                            hasattr(widget,'_may_close') ]
+    # the master widget is the one that may close the kernel
+    master_widget= [ widget for widget in filtered_widget_list if widget._may_close]
+    if as_list:
+        return master_widget
+    assert(len(master_widget)&lt;=1 )
+    if len(master_widget)==0:
+        return None
+
+    return master_widget[0]
+
+</t>
+<t tx="ekr.20190320124834.21">def find_slave_widgets(self,tab):
+    """return all the frontends that do not own the kernel attached to the given widget/tab.
+
+        Only find frontends owned by the current application. Selection
+        based on connection file of the kernel.
+
+        This function does the conversion tabNumber/widget if needed.
+    """
+    #convert from/to int/richIpythonWidget if needed
+    if isinstance(tab, int):
+        tab = self.tab_widget.widget(tab)
+    km=tab.kernel_client
+
+    #build list of all widgets
+    widget_list = [self.tab_widget.widget(i) for i in range(self.tab_widget.count())]
+
+    # widget that are candidate not to be the owner of the kernel does have all the same port of the curent widget
+    filtered_widget_list = ( widget for widget in widget_list if
+                            widget.kernel_client.connection_file == km.connection_file)
+    # Get a list of all widget owning the same kernel and removed it from
+    # the previous cadidate. (better using sets ?)
+    master_widget_list = self.find_master_tab(tab, as_list=True)
+    slave_list = [widget for widget in filtered_widget_list if widget not in master_widget_list]
+
+    return slave_list
+
+# Populate the menu bar with common actions and shortcuts
+</t>
+<t tx="ekr.20190320124834.22">def add_menu_action(self, menu, action, defer_shortcut=False):
+    """Add action to menu as well as self
+    
+    So that when the menu bar is invisible, its actions are still available.
+    
+    If defer_shortcut is True, set the shortcut context to widget-only,
+    where it will avoid conflict with shortcuts already bound to the
+    widgets themselves.
+    """
+    menu.addAction(action)
+    self.addAction(action)
+
+    if defer_shortcut:
+        action.setShortcutContext(QtCore.Qt.WidgetShortcut)
+
+</t>
+<t tx="ekr.20190320124834.23">def init_menu_bar(self):
+    #create menu in the order they should appear in the menu bar
+    self.init_file_menu()
+    self.init_edit_menu()
+    self.init_view_menu()
+    self.init_kernel_menu()
+    self.init_window_menu()
+    self.init_help_menu()
+
+</t>
+<t tx="ekr.20190320124834.24">def init_file_menu(self):
+    self.file_menu = self.menuBar().addMenu("&amp;File")
+
+    self.new_kernel_tab_act = QtGui.QAction("New Tab with &amp;New kernel",
+        self,
+        shortcut="Ctrl+T",
+        triggered=self.create_tab_with_new_frontend)
+    self.add_menu_action(self.file_menu, self.new_kernel_tab_act)
+
+    self.slave_kernel_tab_act = QtGui.QAction("New Tab with Sa&amp;me kernel",
+        self,
+        shortcut="Ctrl+Shift+T",
+        triggered=self.create_tab_with_current_kernel)
+    self.add_menu_action(self.file_menu, self.slave_kernel_tab_act)
+
+    self.existing_kernel_tab_act = QtGui.QAction("New Tab with &amp;Existing kernel",
+                                                 self,
+                                                 shortcut="Alt+T",
+                                                 triggered=self.create_tab_with_existing_kernel)
+    self.add_menu_action(self.file_menu, self.existing_kernel_tab_act)
+
+    self.file_menu.addSeparator()
+
+    self.close_action=QtGui.QAction("&amp;Close Tab",
+        self,
+        shortcut=QtGui.QKeySequence.Close,
+        triggered=self.close_active_frontend
+        )
+    self.add_menu_action(self.file_menu, self.close_action)
+
+    self.export_action=QtGui.QAction("&amp;Save to HTML/XHTML",
+        self,
+        shortcut=QtGui.QKeySequence.Save,
+        triggered=self.export_action_active_frontend
+        )
+    self.add_menu_action(self.file_menu, self.export_action, True)
+
+    self.file_menu.addSeparator()
+
+    printkey = QtGui.QKeySequence(QtGui.QKeySequence.Print)
+    if printkey.matches("Ctrl+P") and sys.platform != 'darwin':
+        # Only override the default if there is a collision.
+        # Qt ctrl = cmd on OSX, so the match gets a false positive on OSX.
+        printkey = "Ctrl+Shift+P"
+    self.print_action = QtGui.QAction("&amp;Print",
+        self,
+        shortcut=printkey,
+        triggered=self.print_action_active_frontend)
+    self.add_menu_action(self.file_menu, self.print_action, True)
+
+    if sys.platform != 'darwin':
+        # OSX always has Quit in the Application menu, only add it
+        # to the File menu elsewhere.
+
+        self.file_menu.addSeparator()
+
+        self.quit_action = QtGui.QAction("&amp;Quit",
+            self,
+            shortcut=QtGui.QKeySequence.Quit,
+            triggered=self.close,
+        )
+        self.add_menu_action(self.file_menu, self.quit_action)
+
+
+</t>
+<t tx="ekr.20190320124834.25">def init_edit_menu(self):
+    self.edit_menu = self.menuBar().addMenu("&amp;Edit")
+
+    self.undo_action = QtGui.QAction("&amp;Undo",
+        self,
+        shortcut=QtGui.QKeySequence.Undo,
+        statusTip="Undo last action if possible",
+        triggered=self.undo_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.undo_action)
+
+    self.redo_action = QtGui.QAction("&amp;Redo",
+        self,
+        shortcut=QtGui.QKeySequence.Redo,
+        statusTip="Redo last action if possible",
+        triggered=self.redo_active_frontend)
+    self.add_menu_action(self.edit_menu, self.redo_action)
+
+    self.edit_menu.addSeparator()
+
+    self.cut_action = QtGui.QAction("&amp;Cut",
+        self,
+        shortcut=QtGui.QKeySequence.Cut,
+        triggered=self.cut_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.cut_action, True)
+
+    self.copy_action = QtGui.QAction("&amp;Copy",
+        self,
+        shortcut=QtGui.QKeySequence.Copy,
+        triggered=self.copy_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.copy_action, True)
+
+    self.copy_raw_action = QtGui.QAction("Copy (&amp;Raw Text)",
+        self,
+        shortcut="Ctrl+Shift+C",
+        triggered=self.copy_raw_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.copy_raw_action, True)
+
+    self.paste_action = QtGui.QAction("&amp;Paste",
+        self,
+        shortcut=QtGui.QKeySequence.Paste,
+        triggered=self.paste_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.paste_action, True)
+
+    self.edit_menu.addSeparator()
+
+    selectall = QtGui.QKeySequence(QtGui.QKeySequence.SelectAll)
+    if selectall.matches("Ctrl+A") and sys.platform != 'darwin':
+        # Only override the default if there is a collision.
+        # Qt ctrl = cmd on OSX, so the match gets a false positive on OSX.
+        selectall = "Ctrl+Shift+A"
+    self.select_all_action = QtGui.QAction("Select &amp;All",
+        self,
+        shortcut=selectall,
+        triggered=self.select_all_active_frontend
+        )
+    self.add_menu_action(self.edit_menu, self.select_all_action, True)
+
+
+</t>
+<t tx="ekr.20190320124834.26">def init_view_menu(self):
+    self.view_menu = self.menuBar().addMenu("&amp;View")
+
+    if sys.platform != 'darwin':
+        # disable on OSX, where there is always a menu bar
+        self.toggle_menu_bar_act = QtGui.QAction("Toggle &amp;Menu Bar",
+            self,
+            shortcut="Ctrl+Shift+M",
+            statusTip="Toggle visibility of menubar",
+            triggered=self.toggle_menu_bar)
+        self.add_menu_action(self.view_menu, self.toggle_menu_bar_act)
+
+    fs_key = "Ctrl+Meta+F" if sys.platform == 'darwin' else "F11"
+    self.full_screen_act = QtGui.QAction("&amp;Full Screen",
+        self,
+        shortcut=fs_key,
+        statusTip="Toggle between Fullscreen and Normal Size",
+        triggered=self.toggleFullScreen)
+    self.add_menu_action(self.view_menu, self.full_screen_act)
+
+    self.view_menu.addSeparator()
+
+    self.increase_font_size = QtGui.QAction("Zoom &amp;In",
+        self,
+        shortcut=QtGui.QKeySequence.ZoomIn,
+        triggered=self.increase_font_size_active_frontend
+        )
+    self.add_menu_action(self.view_menu, self.increase_font_size, True)
+
+    self.decrease_font_size = QtGui.QAction("Zoom &amp;Out",
+        self,
+        shortcut=QtGui.QKeySequence.ZoomOut,
+        triggered=self.decrease_font_size_active_frontend
+        )
+    self.add_menu_action(self.view_menu, self.decrease_font_size, True)
+
+    self.reset_font_size = QtGui.QAction("Zoom &amp;Reset",
+        self,
+        shortcut="Ctrl+0",
+        triggered=self.reset_font_size_active_frontend
+        )
+    self.add_menu_action(self.view_menu, self.reset_font_size, True)
+
+    self.view_menu.addSeparator()
+
+    self.clear_action = QtGui.QAction("&amp;Clear Screen",
+        self,
+        shortcut='Ctrl+L',
+        statusTip="Clear the console",
+        triggered=self.clear_active_frontend)
+    self.add_menu_action(self.view_menu, self.clear_action)
+
+    self.pager_menu = self.view_menu.addMenu("&amp;Pager")
+
+    hsplit_action = QtGui.QAction(".. &amp;Horizontal Split",
+        self,
+        triggered=lambda: self.set_paging_active_frontend('hsplit'))
+
+    vsplit_action = QtGui.QAction(" : &amp;Vertical Split",
+        self,
+        triggered=lambda: self.set_paging_active_frontend('vsplit'))
+
+    inside_action = QtGui.QAction("   &amp;Inside Pager",
+        self,
+        triggered=lambda: self.set_paging_active_frontend('inside'))
+
+    self.pager_menu.addAction(hsplit_action)
+    self.pager_menu.addAction(vsplit_action)
+    self.pager_menu.addAction(inside_action)
+
+</t>
+<t tx="ekr.20190320124834.27">def init_kernel_menu(self):
+    self.kernel_menu = self.menuBar().addMenu("&amp;Kernel")
+    # Qt on OSX maps Ctrl to Cmd, and Meta to Ctrl
+    # keep the signal shortcuts to ctrl, rather than 
+    # platform-default like we do elsewhere.
+
+    ctrl = "Meta" if sys.platform == 'darwin' else "Ctrl"
+
+    self.interrupt_kernel_action = QtGui.QAction("&amp;Interrupt current Kernel",
+        self,
+        triggered=self.interrupt_kernel_active_frontend,
+        shortcut=ctrl+"+C",
+        )
+    self.add_menu_action(self.kernel_menu, self.interrupt_kernel_action)
+
+    self.restart_kernel_action = QtGui.QAction("&amp;Restart current Kernel",
+        self,
+        triggered=self.restart_kernel_active_frontend,
+        shortcut=ctrl+"+.",
+        )
+    self.add_menu_action(self.kernel_menu, self.restart_kernel_action)
+
+    self.kernel_menu.addSeparator()
+
+    self.confirm_restart_kernel_action = QtGui.QAction("&amp;Confirm kernel restart",
+        self,
+        checkable=True,
+        checked=self.active_frontend.confirm_restart,
+        triggered=self.toggle_confirm_restart_active_frontend
+        )
+
+    self.add_menu_action(self.kernel_menu, self.confirm_restart_kernel_action)
+    self.tab_widget.currentChanged.connect(self.update_restart_checkbox)
+
+</t>
+<t tx="ekr.20190320124834.28">def init_window_menu(self):
+    self.window_menu = self.menuBar().addMenu("&amp;Window")
+    if sys.platform == 'darwin':
+        # add min/maximize actions to OSX, which lacks default bindings.
+        self.minimizeAct = QtGui.QAction("Mini&amp;mize",
+            self,
+            shortcut="Ctrl+m",
+            statusTip="Minimize the window/Restore Normal Size",
+            triggered=self.toggleMinimized)
+        # maximize is called 'Zoom' on OSX for some reason
+        self.maximizeAct = QtGui.QAction("&amp;Zoom",
+            self,
+            shortcut="Ctrl+Shift+M",
+            statusTip="Maximize the window/Restore Normal Size",
+            triggered=self.toggleMaximized)
+
+        self.add_menu_action(self.window_menu, self.minimizeAct)
+        self.add_menu_action(self.window_menu, self.maximizeAct)
+        self.window_menu.addSeparator()
+
+    prev_key = "Ctrl+Alt+Left" if sys.platform == 'darwin' else "Ctrl+PgUp"
+    self.prev_tab_act = QtGui.QAction("Pre&amp;vious Tab",
+        self,
+        shortcut=prev_key,
+        statusTip="Select previous tab",
+        triggered=self.prev_tab)
+    self.add_menu_action(self.window_menu, self.prev_tab_act)
+
+    next_key = "Ctrl+Alt+Right" if sys.platform == 'darwin' else "Ctrl+PgDown"
+    self.next_tab_act = QtGui.QAction("Ne&amp;xt Tab",
+        self,
+        shortcut=next_key,
+        statusTip="Select next tab",
+        triggered=self.next_tab)
+    self.add_menu_action(self.window_menu, self.next_tab_act)
+
+    self.rename_window_act = QtGui.QAction("Rename &amp;Window",
+                                           self,
+                                           shortcut="Alt+R",
+                                           statusTip="Rename window",
+                                           triggered=self.set_window_title)
+    self.add_menu_action(self.window_menu, self.rename_window_act)
+
+
+    self.rename_current_tab_act = QtGui.QAction("&amp;Rename Current Tab",
+                                                self,
+                                                shortcut="Ctrl+R",
+                                                statusTip="Rename current tab",
+                                                triggered=self.set_tab_title)
+    self.add_menu_action(self.window_menu, self.rename_current_tab_act)
+
+</t>
+<t tx="ekr.20190320124834.29">def init_help_menu(self):
+    # please keep the Help menu in Mac Os even if empty. It will
+    # automatically contain a search field to search inside menus and
+    # please keep it spelled in English, as long as Qt Doesn't support
+    # a QAction.MenuRole like HelpMenuRole otherwise it will lose
+    # this search field functionality
+    self.help_menu = self.menuBar().addMenu("&amp;Help")
+
+    # Help Menu
+    self.help_action = QtGui.QAction("Show &amp;QtConsole help", self,
+                                     triggered=self._show_help)
+    self.online_help_action = QtGui.QAction("Open online &amp;help", self,
+                                            triggered=self._open_online_help)
+    self.add_menu_action(self.help_menu, self.help_action)
+    self.add_menu_action(self.help_menu, self.online_help_action)
+
+</t>
+<t tx="ekr.20190320124834.3">def background(f):
+    """call a function in a simple thread, to prevent blocking"""
+    t = Thread(target=f)
+    t.start()
+    return t
+
+
+</t>
+<t tx="ekr.20190320124834.30">def _set_active_frontend_focus(self):
+    # this is a hack, self.active_frontend._control seems to be 
+    # a private member. Unfortunately this is the only method 
+    # to set focus reliably
+    QtCore.QTimer.singleShot(200, self.active_frontend._control.setFocus)
+
+# minimize/maximize/fullscreen actions:
+
+</t>
+<t tx="ekr.20190320124834.31">def toggle_menu_bar(self):
+    menu_bar = self.menuBar()
+    if menu_bar.isVisible():
+        menu_bar.setVisible(False)
+    else:
+        menu_bar.setVisible(True)
+
+</t>
+<t tx="ekr.20190320124834.32">def toggleMinimized(self):
+    if not self.isMinimized():
+        self.showMinimized()
+    else:
+        self.showNormal()
+
+</t>
+<t tx="ekr.20190320124834.33">def _show_help(self):
+    self.active_frontend._page(gui_reference)
+
+</t>
+<t tx="ekr.20190320124834.34">def _open_online_help(self):
+    webbrowser.open("https://qtconsole.readthedocs.io", new=1, autoraise=True)
+
+</t>
+<t tx="ekr.20190320124834.35">def toggleMaximized(self):
+    if not self.isMaximized():
+        self.showMaximized()
+    else:
+        self.showNormal()
+
+# Min/Max imizing while in full screen give a bug
+# when going out of full screen, at least on OSX
+</t>
+<t tx="ekr.20190320124834.36">def toggleFullScreen(self):
+    if not self.isFullScreen():
+        self.showFullScreen()
+        if sys.platform == 'darwin':
+            self.maximizeAct.setEnabled(False)
+            self.minimizeAct.setEnabled(False)
+    else:
+        self.showNormal()
+        if sys.platform == 'darwin':
+            self.maximizeAct.setEnabled(True)
+            self.minimizeAct.setEnabled(True)
+
+</t>
+<t tx="ekr.20190320124834.37">def set_paging_active_frontend(self, paging):
+    self.active_frontend._set_paging(paging)
+
+</t>
+<t tx="ekr.20190320124834.38">def close_active_frontend(self):
+    self.close_tab(self.active_frontend)
+
+</t>
+<t tx="ekr.20190320124834.39">def restart_kernel_active_frontend(self):
+    self.active_frontend.request_restart_kernel()
+
+</t>
+<t tx="ekr.20190320124834.4">class MainWindow(QtGui.QMainWindow):
+
+    #---------------------------------------------------------------------------
+    # 'object' interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124834.40">def interrupt_kernel_active_frontend(self):
+    self.active_frontend.request_interrupt_kernel()
+
+</t>
+<t tx="ekr.20190320124834.41">def toggle_confirm_restart_active_frontend(self):
+    widget = self.active_frontend
+    widget.confirm_restart = not widget.confirm_restart
+    self.confirm_restart_kernel_action.setChecked(widget.confirm_restart)
+
+</t>
+<t tx="ekr.20190320124834.42">def update_restart_checkbox(self):
+    if self.active_frontend is None:
+        return
+    widget = self.active_frontend
+    self.confirm_restart_kernel_action.setChecked(widget.confirm_restart)
+
+</t>
+<t tx="ekr.20190320124834.43">def clear_active_frontend(self):
+    self.active_frontend.clear()
+
+</t>
+<t tx="ekr.20190320124834.44">def cut_active_frontend(self):
+    widget = self.active_frontend
+    if widget.can_cut():
+        widget.cut()
+
+</t>
+<t tx="ekr.20190320124834.45">def copy_active_frontend(self):
+    widget = self.active_frontend
+    widget.copy()
+
+</t>
+<t tx="ekr.20190320124834.46">def copy_raw_active_frontend(self):
+    self.active_frontend._copy_raw_action.trigger()
+
+</t>
+<t tx="ekr.20190320124834.47">def paste_active_frontend(self):
+    widget = self.active_frontend
+    if widget.can_paste():
+        widget.paste()
+
+</t>
+<t tx="ekr.20190320124834.48">def undo_active_frontend(self):
+    self.active_frontend.undo()
+
+</t>
+<t tx="ekr.20190320124834.49">def redo_active_frontend(self):
+    self.active_frontend.redo()
+
+</t>
+<t tx="ekr.20190320124834.5">def __init__(self, app,
+                confirm_exit=True,
+                new_frontend_factory=None, slave_frontend_factory=None,
+                connection_frontend_factory=None,
+            ):
+    """ Create a tabbed MainWindow for managing FrontendWidgets
+    
+    Parameters
+    ----------
+    
+    app : reference to QApplication parent
+    confirm_exit : bool, optional
+        Whether we should prompt on close of tabs
+    new_frontend_factory : callable
+        A callable that returns a new JupyterWidget instance, attached to
+        its own running kernel.
+    slave_frontend_factory : callable
+        A callable that takes an existing JupyterWidget, and  returns a new 
+        JupyterWidget instance, attached to the same kernel.
+    """
+
+    super(MainWindow, self).__init__()
+    self._kernel_counter = 0
+    self._external_kernel_counter = 0
+    self._app = app
+    self.confirm_exit = confirm_exit
+    self.new_frontend_factory = new_frontend_factory
+    self.slave_frontend_factory = slave_frontend_factory
+    self.connection_frontend_factory = connection_frontend_factory
+
+    self.tab_widget = QtGui.QTabWidget(self)
+    self.tab_widget.setDocumentMode(True)
+    self.tab_widget.setTabsClosable(True)
+    self.tab_widget.tabCloseRequested[int].connect(self.close_tab)
+
+    self.setCentralWidget(self.tab_widget)
+    # hide tab bar at first, since we have no tabs:
+    self.tab_widget.tabBar().setVisible(False)
+    # prevent focus in tab bar
+    self.tab_widget.setFocusPolicy(QtCore.Qt.NoFocus)
+
+</t>
+<t tx="ekr.20190320124834.50">def print_action_active_frontend(self):
+    self.active_frontend.print_action.trigger()
+
+</t>
+<t tx="ekr.20190320124834.51">def export_action_active_frontend(self):
+    self.active_frontend.export_action.trigger()
+
+</t>
+<t tx="ekr.20190320124834.52">def select_all_active_frontend(self):
+    self.active_frontend.select_all_action.trigger()
+
+</t>
+<t tx="ekr.20190320124834.53">def increase_font_size_active_frontend(self):
+    self.active_frontend.increase_font_size.trigger()
+
+</t>
+<t tx="ekr.20190320124834.54">def decrease_font_size_active_frontend(self):
+    self.active_frontend.decrease_font_size.trigger()
+
+</t>
+<t tx="ekr.20190320124834.55">def reset_font_size_active_frontend(self):
+    self.active_frontend.reset_font_size.trigger()
+
+#---------------------------------------------------------------------------
+# QWidget interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.56">def closeEvent(self, event):
+    """ Forward the close event to every tabs contained by the windows
+    """
+    if self.tab_widget.count() == 0:
+        # no tabs, just close
+        event.accept()
+        return
+    # Do Not loop on the widget count as it change while closing
+    title = self.window().windowTitle()
+    cancel = QtGui.QMessageBox.Cancel
+    okay = QtGui.QMessageBox.Ok
+    accept_role = QtGui.QMessageBox.AcceptRole
+
+    if self.confirm_exit:
+        if self.tab_widget.count() &gt; 1:
+            msg = "Close all tabs, stop all kernels, and Quit?"
+        else:
+            msg = "Close console, stop kernel, and Quit?"
+        info = "Kernels not started here (e.g. notebooks) will be left alone."
+        closeall = QtGui.QPushButton("&amp;Quit", self)
+        closeall.setShortcut('Q')
+        box = QtGui.QMessageBox(QtGui.QMessageBox.Question,
+                                title, msg)
+        box.setInformativeText(info)
+        box.addButton(cancel)
+        box.addButton(closeall, QtGui.QMessageBox.YesRole)
+        box.setDefaultButton(closeall)
+        box.setEscapeButton(cancel)
+        pixmap = QtGui.QPixmap(self._app.icon.pixmap(QtCore.QSize(64,64)))
+        box.setIconPixmap(pixmap)
+        reply = box.exec_()
+    else:
+        reply = okay
+
+    if reply == cancel:
+        event.ignore()
+        return
+    if reply == okay or reply == accept_role:
+        while self.tab_widget.count() &gt;= 1:
+            # prevent further confirmations:
+            widget = self.active_frontend
+            widget._confirm_exit = False
+            self.close_tab(widget)
+        event.accept()
+
+</t>
+<t tx="ekr.20190320124834.57">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.58">""" Defines a KernelClient that provides signals and slots.
+"""
+
+from qtconsole.qt import QtCore
+
+# Local imports
+from traitlets import Bool, DottedObjectName
+
+from jupyter_client import KernelManager
+from jupyter_client.restarter import KernelRestarter
+
+from .kernel_mixins import QtKernelManagerMixin, QtKernelRestarterMixin
+
+
+</t>
+<t tx="ekr.20190320124834.59">class QtKernelRestarter(KernelRestarter, QtKernelRestarterMixin):
+
+    @others
+</t>
+<t tx="ekr.20190320124834.6">def update_tab_bar_visibility(self):
+    """ update visibility of the tabBar depending of the number of tab
+
+    0 or 1 tab, tabBar hidden
+    2+ tabs, tabBar visible
+
+    send a self.close if number of tab ==0
+
+    need to be called explicitly, or be connected to tabInserted/tabRemoved
+    """
+    if self.tab_widget.count() &lt;= 1:
+        self.tab_widget.tabBar().setVisible(False)
+    else:
+        self.tab_widget.tabBar().setVisible(True)
+    if self.tab_widget.count()==0 :
+        self.close()
+
+</t>
+<t tx="ekr.20190320124834.60">def start(self):
+    if self._timer is None:
+        self._timer = QtCore.QTimer()
+        self._timer.timeout.connect(self.poll)
+    self._timer.start(self.time_to_dead * 1000)
+
+</t>
+<t tx="ekr.20190320124834.61">def stop(self):
+    self._timer.stop()
+
+</t>
+<t tx="ekr.20190320124834.62">def poll(self):
+    super(QtKernelRestarter, self).poll()
+
+
+</t>
+<t tx="ekr.20190320124834.63">class QtKernelManager(KernelManager, QtKernelManagerMixin):
+    """A KernelManager with Qt signals for restart"""
+
+    client_class = DottedObjectName('qtconsole.client.QtKernelClient')
+    autorestart = Bool(True, config=True)
+
+    @others
+</t>
+<t tx="ekr.20190320124834.64">def start_restarter(self):
+    if self.autorestart and self.has_kernel:
+        if self._restarter is None:
+            self._restarter = QtKernelRestarter(
+                kernel_manager=self,
+                parent=self,
+                log=self.log,
+            )
+            self._restarter.add_callback(self._handle_kernel_restarted)
+        self._restarter.start()
+
+</t>
+<t tx="ekr.20190320124834.65">def stop_restarter(self):
+    if self.autorestart:
+        if self._restarter is not None:
+            self._restarter.stop()
+
+</t>
+<t tx="ekr.20190320124834.66">def _handle_kernel_restarted(self):
+    self.kernel_restarted.emit()
+</t>
+<t tx="ekr.20190320124834.67">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.68">from qtconsole.qt import QtGui
+
+from ipython_genutils.py3compat import PY3, string_types
+from pygments.formatters.html import HtmlFormatter
+from pygments.lexer import RegexLexer, _TokenType, Text, Error
+from pygments.lexers import PythonLexer, Python3Lexer
+from pygments.styles import get_style_by_name
+
+
+</t>
+<t tx="ekr.20190320124834.69">def get_tokens_unprocessed(self, text, stack=('root',)):
+    """ Split ``text`` into (tokentype, text) pairs.
+
+        Monkeypatched to store the final stack on the object itself.
+
+        The `text` parameter this gets passed is only the current line, so to
+        highlight things like multiline strings correctly, we need to retrieve
+        the state from the previous line (this is done in PygmentsHighlighter,
+        below), and use it to continue processing the current line.
+    """
+    pos = 0
+    tokendefs = self._tokens
+    if hasattr(self, '_saved_state_stack'):
+        statestack = list(self._saved_state_stack)
+    else:
+        statestack = list(stack)
+    statetokens = tokendefs[statestack[-1]]
+    while 1:
+        for rexmatch, action, new_state in statetokens:
+            m = rexmatch(text, pos)
+            if m:
+                if action is not None:
+                    if type(action) is _TokenType:
+                        yield pos, action, m.group()
+                    else:
+                        for item in action(self, m):
+                            yield item
+                pos = m.end()
+                if new_state is not None:
+                    # state transition
+                    if isinstance(new_state, tuple):
+                        for state in new_state:
+                            if state == '#pop':
+                                statestack.pop()
+                            elif state == '#push':
+                                statestack.append(statestack[-1])
+                            else:
+                                statestack.append(state)
+                    elif isinstance(new_state, int):
+                        # pop
+                        del statestack[new_state:]
+                    elif new_state == '#push':
+                        statestack.append(statestack[-1])
+                    else:
+                        assert False, "wrong state def: %r" % new_state
+                    statetokens = tokendefs[statestack[-1]]
+                break
+        else:
+            try:
+                if text[pos] == '\n':
+                    # at EOL, reset state to "root"
+                    pos += 1
+                    statestack = ['root']
+                    statetokens = tokendefs['root']
+                    yield pos, Text, u'\n'
+                    continue
+                yield pos, Error, text[pos]
+                pos += 1
+            except IndexError:
+                break
+    self._saved_state_stack = list(statestack)
+
+
+# Monkeypatch!
+RegexLexer.get_tokens_unprocessed = get_tokens_unprocessed
+
+
+</t>
+<t tx="ekr.20190320124834.7">@property
+def next_kernel_id(self):
+    """constantly increasing counter for kernel IDs"""
+    c = self._kernel_counter
+    self._kernel_counter += 1
+    return c
+
+</t>
+<t tx="ekr.20190320124834.70">class PygmentsBlockUserData(QtGui.QTextBlockUserData):
+    """ Storage for the user data associated with each line.
+    """
+
+    syntax_stack = ('root',)
+
+    @others
+</t>
+<t tx="ekr.20190320124834.71">def __init__(self, **kwds):
+    for key, value in kwds.items():
+        setattr(self, key, value)
+    QtGui.QTextBlockUserData.__init__(self)
+
+</t>
+<t tx="ekr.20190320124834.72">def __repr__(self):
+    attrs = ['syntax_stack']
+    kwds = ', '.join([ '%s=%r' % (attr, getattr(self, attr))
+                       for attr in attrs ])
+    return 'PygmentsBlockUserData(%s)' % kwds
+
+
+</t>
+<t tx="ekr.20190320124834.73">class PygmentsHighlighter(QtGui.QSyntaxHighlighter):
+    """ Syntax highlighter that uses Pygments for parsing. """
+
+    #---------------------------------------------------------------------------
+    # 'QSyntaxHighlighter' interface
+    #---------------------------------------------------------------------------
+
+    @others
+</t>
+<t tx="ekr.20190320124834.74">def __init__(self, parent, lexer=None):
+    super(PygmentsHighlighter, self).__init__(parent)
+
+    self._document = self.document()
+    self._formatter = HtmlFormatter(nowrap=True)
+    self.set_style('default')
+    if lexer is not None:
+        self._lexer = lexer
+    else:
+        if PY3:
+            self._lexer = Python3Lexer()
+        else:
+            self._lexer = PythonLexer()
+
+</t>
+<t tx="ekr.20190320124834.75">def highlightBlock(self, string):
+    """ Highlight a block of text.
+    """
+    prev_data = self.currentBlock().previous().userData()
+    if prev_data is not None:
+        self._lexer._saved_state_stack = prev_data.syntax_stack
+    elif hasattr(self._lexer, '_saved_state_stack'):
+        del self._lexer._saved_state_stack
+
+    # Lex the text using Pygments
+    index = 0
+    for token, text in self._lexer.get_tokens(string):
+        length = len(text)
+        self.setFormat(index, length, self._get_format(token))
+        index += length
+
+    if hasattr(self._lexer, '_saved_state_stack'):
+        data = PygmentsBlockUserData(
+            syntax_stack=self._lexer._saved_state_stack)
+        self.currentBlock().setUserData(data)
+        # Clean up for the next go-round.
+        del self._lexer._saved_state_stack
+
+#---------------------------------------------------------------------------
+# 'PygmentsHighlighter' interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.76">def set_style(self, style):
+    """ Sets the style to the specified Pygments style.
+    """
+    if isinstance(style, string_types):
+        style = get_style_by_name(style)
+    self._style = style
+    self._clear_caches()
+
+</t>
+<t tx="ekr.20190320124834.77">def set_style_sheet(self, stylesheet):
+    """ Sets a CSS stylesheet. The classes in the stylesheet should
+    correspond to those generated by:
+
+        pygmentize -S &lt;style&gt; -f html
+
+    Note that 'set_style' and 'set_style_sheet' completely override each
+    other, i.e. they cannot be used in conjunction.
+    """
+    self._document.setDefaultStyleSheet(stylesheet)
+    self._style = None
+    self._clear_caches()
+
+#---------------------------------------------------------------------------
+# Protected interface
+#---------------------------------------------------------------------------
+
+</t>
+<t tx="ekr.20190320124834.78">def _clear_caches(self):
+    """ Clear caches for brushes and formats.
+    """
+    self._brushes = {}
+    self._formats = {}
+
+</t>
+<t tx="ekr.20190320124834.79">def _get_format(self, token):
+    """ Returns a QTextCharFormat for token or None.
+    """
+    if token in self._formats:
+        return self._formats[token]
+
+    if self._style is None:
+        result = self._get_format_from_document(token, self._document)
+    else:
+        result = self._get_format_from_style(token, self._style)
+
+    self._formats[token] = result
+    return result
+
+</t>
+<t tx="ekr.20190320124834.8">@property
+def next_external_kernel_id(self):
+    """constantly increasing counter for external kernel IDs"""
+    c = self._external_kernel_counter
+    self._external_kernel_counter += 1
+    return c
+
+</t>
+<t tx="ekr.20190320124834.80">def _get_format_from_document(self, token, document):
+    """ Returns a QTextCharFormat for token by
+    """
+    code, html = next(self._formatter._format_lines([(token, u'dummy')]))
+    self._document.setHtml(html)
+    return QtGui.QTextCursor(self._document).charFormat()
+
+</t>
+<t tx="ekr.20190320124834.81">def _get_format_from_style(self, token, style):
+    """ Returns a QTextCharFormat for token by reading a Pygments style.
+    """
+    result = QtGui.QTextCharFormat()
+    for key, value in style.style_for_token(token).items():
+        if value:
+            if key == 'color':
+                result.setForeground(self._get_brush(value))
+            elif key == 'bgcolor':
+                result.setBackground(self._get_brush(value))
+            elif key == 'bold':
+                result.setFontWeight(QtGui.QFont.Bold)
+            elif key == 'italic':
+                result.setFontItalic(True)
+            elif key == 'underline':
+                result.setUnderlineStyle(
+                    QtGui.QTextCharFormat.SingleUnderline)
+            elif key == 'sans':
+                result.setFontStyleHint(QtGui.QFont.SansSerif)
+            elif key == 'roman':
+                result.setFontStyleHint(QtGui.QFont.Times)
+            elif key == 'mono':
+                result.setFontStyleHint(QtGui.QFont.TypeWriter)
+    return result
+
+</t>
+<t tx="ekr.20190320124834.82">def _get_brush(self, color):
+    """ Returns a brush for the color.
+    """
+    result = self._brushes.get(color)
+    if result is None:
+        qcolor = self._get_color(color)
+        result = QtGui.QBrush(qcolor)
+        self._brushes[color] = result
+    return result
+
+</t>
+<t tx="ekr.20190320124834.83">def _get_color(self, color):
+    """ Returns a QColor built from a Pygments color string.
+    """
+    qcolor = QtGui.QColor()
+    qcolor.setRgb(int(color[:2], base=16),
+                  int(color[2:4], base=16),
+                  int(color[4:6], base=16))
+    return qcolor
+
+</t>
+<t tx="ekr.20190320124834.84">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+if QT_API not in [QT_API_PYSIDE, QT_API_PYSIDE2, QT_API_PYQT, QT_API_PYQT5, None]:
+    raise RuntimeError("Invalid Qt API %r, valid values are: %r, %r, %r, %r" %
+                       (QT_API, QT_API_PYSIDE, QT_API_PYSIDE2, QT_API_PYQT, QT_API_PYQT5))
+if QT_API is None:
+    api_opts = [QT_API_PYQT5, QT_API_PYSIDE2, QT_API_PYSIDE, QT_API_PYQT]
+else:
+    api_opts = [QT_API]
+
+QtCore, QtGui, QtSvg, QT_API = load_qt(api_opts)
+@language python
+@tabwidth -4
+</t>
+<t tx="ekr.20190320124834.85">""" A Qt API selector that can be used to switch between PyQt4/5 and PySide.
+
+This uses the ETS 4.0 selection pattern of:
+PySide first, PyQt4 (API v2.) second, then PyQt5.
+
+Do not use this if you need PyQt4 with the old QString/QVariant API.
+"""
+
+import os
+
+from qtconsole.qt_loaders import (load_qt, QT_API_PYSIDE, QT_API_PYSIDE2,
+                                         QT_API_PYQT, QT_API_PYQT5)
+
+QT_API = os.environ.get('QT_API', None)
+</t>
+<t tx="ekr.20190320124834.86">@path C:/Anaconda3/Lib/site-packages/qtconsole/
+@others
+if __name__ == '__main__':
+    main()
+@language python
+@tabwidth -4
+@ignore
+</t>
+<t tx="ekr.20190320124834.87">""" A minimal application using the Qt console-style Jupyter frontend.
+
+This is not a complete console app, as subprocess will not be able to receive
+input, there is no real readline support, among other limitations.
+"""
+
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+import os
+import signal
+import sys
+from warnings import warn
+
+# If run on Windows:
+#
+# 1. Install an exception hook which pops up a message box.
+# Pythonw.exe hides the console, so without this the application
+# silently fails to load.
+#
+# We always install this handler, because the expectation is for
+# qtconsole to bring up a GUI even if called from the console.
+# The old handler is called, so the exception is printed as well.
+# If desired, check for pythonw with an additional condition
+# (sys.executable.lower().find('pythonw.exe') &gt;= 0).
+#
+# 2. Set AppUserModelID for Windows 7 and later so that qtconsole
+# uses its assigned taskbar icon instead of grabbing the one with
+# the same AppUserModelID
+#
+if os.name == 'nt':
+    # 1.
+    old_excepthook = sys.excepthook
+
+    # Exclude this from our autogenerated API docs.
+    undoc = lambda func: func
+
+    def gui_excepthook(exctype, value, tb):
+        try:
+            import ctypes, traceback
+            MB_ICONERROR = 0x00000010
+            title = u'Error starting QtConsole'
+            msg = u''.join(traceback.format_exception(exctype, value, tb))
+            ctypes.windll.user32.MessageBoxW(0, msg, title, MB_ICONERROR)
+        finally:
+            # Also call the old exception hook to let it do
+            # its thing too.
+            old_excepthook(exctype, value, tb)
+
+    sys.excepthook = gui_excepthook
+
+    # 2.
+    try:
+        from ctypes import windll
+        windll.shell32.SetCurrentProcessExplicitAppUserModelID("Jupyter.Qtconsole")
+    except AttributeError:
+        pass
+
+from qtconsole.qt import QtCore, QtGui
+
+from traitlets.config.application import boolean_flag
+from traitlets.config.application import catch_config_error
+from qtconsole.jupyter_widget import JupyterWidget
+from qtconsole.rich_jupyter_widget import RichJupyterWidget
+from qtconsole import styles, __version__
+from qtconsole.mainwindow import MainWindow
+from qtconsole.client import QtKernelClient
+from qtconsole.manager import QtKernelManager
+from traitlets import (
+    Dict, Unicode, CBool, Any
+)
+
+from jupyter_core.application import JupyterApp, base_flags, base_aliases
+from jupyter_client.consoleapp import (
+        JupyterConsoleApp, app_aliases, app_flags,
+    )
+
+
+from jupyter_client.localinterfaces import is_local_ip
+
+
+_examples = """
+jupyter qtconsole                      # start the qtconsole
+"""
+
+#-----------------------------------------------------------------------------
+# Aliases and Flags
+#-----------------------------------------------------------------------------
+
+# FIXME: workaround bug in jupyter_client &lt; 4.1 excluding base_flags,aliases
+flags = dict(base_flags)
+qt_flags = {
+    'plain' : ({'JupyterQtConsoleApp' : {'plain' : True}},
+            "Disable rich text support."),
+}
+qt_flags.update(boolean_flag(
+    'banner', 'JupyterQtConsoleApp.display_banner',
+    "Display a banner upon starting the QtConsole.",
+    "Don't display a banner upon starting the QtConsole."
+))
+
+# and app_flags from the Console Mixin
+qt_flags.update(app_flags)
+# add frontend flags to the full set
+flags.update(qt_flags)
+
+# start with copy of base jupyter aliases
+aliases = dict(base_aliases)
+qt_aliases = dict(
+    style = 'JupyterWidget.syntax_style',
+    stylesheet = 'JupyterQtConsoleApp.stylesheet',
+
+    editor = 'JupyterWidget.editor',
+    paging = 'ConsoleWidget.paging',
+)
+# and app_aliases from the Console Mixin
+qt_aliases.update(app_aliases)
+qt_aliases.update({'gui-completion':'ConsoleWidget.gui_completion'})
+# add frontend aliases to the full set
+aliases.update(qt_aliases)
+
+# get flags&amp;aliases into sets, and remove a couple that
+# shouldn't be scrubbed from backend flags:
+qt_aliases = set(qt_aliases.keys())
+qt_flags = set(qt_flags.keys())
+
+</t>
+<t tx="ekr.20190320124834.88">@undoc
+\\-4.class JupyterQtConsoleApp(JupyterApp, JupyterConsoleApp):
+name = 'jupyter-qtconsole'
+version = __version__
+description = """
+    The Jupyter QtConsole.
+    
+    This launches a Console-style application using Qt.  It is not a full
+    console, in that launched terminal subprocesses will not be able to accept
+    input.
+    
+"""
+examples = _examples
+
+classes = [JupyterWidget] + JupyterConsoleApp.classes
+flags = Dict(flags)
+aliases = Dict(aliases)
+frontend_flags = Any(qt_flags)
+frontend_aliases = Any(qt_aliases)
+kernel_client_class = QtKernelClient
+kernel_manager_class = QtKernelManager
+
+stylesheet = Unicode('', config=True,
+    help="path to a custom CSS stylesheet")
+
+hide_menubar = CBool(False, config=True,
+    help="Start the console window with the menu bar hidden.")
+
+maximize = CBool(False, config=True,
+    help="Start the console window maximized.")
+
+plain = CBool(False, config=True,
+    help="Use a plaintext widget instead of rich text (plain can't print/save).")
+
+display_banner = CBool(True, config=True,
+    help="Whether to display a banner upon starting the QtConsole."
+)
+
+@others
+</t>
+<t tx="ekr.20190320124834.89">def _plain_changed(self, name, old, new):
+    kind = 'plain' if new else 'rich'
+    self.config.ConsoleWidget.kind = kind
+    if new:
+        self.widget_factory = JupyterWidget
+    else:
+        self.widget_factory = RichJupyterWidget
+
+# the factory for creating a widget
+widget_factory = Any(RichJupyterWidget)
+
+</t>
+<t tx="ekr.20190320124834.9">@property
+def active_frontend(self):
+    return self.tab_widget.currentWidget()
+
+</t>
+<t tx="ekr.20190320124834.90">def parse_command_line(self, argv=None):
+    super(JupyterQtConsoleApp, self).parse_command_line(argv)
+    self.build_kernel_argv(self.extra_args)
+
+
+</t>
+<t tx="ekr.20190320124834.91">def new_frontend_master(self):
+    """ Create and return new frontend attached to new kernel, launched on localhost.
+    """
+    kernel_manager = self.kernel_manager_class(
+                            connection_file=self._new_connection_file(),
+                            parent=self,
+                            autorestart=True,
+    )
+    # start the kernel
+    kwargs = {}
+    # FIXME: remove special treatment of IPython kernels
+    if self.kernel_manager.ipykernel:
+        kwargs['extra_arguments'] = self.kernel_argv
+    kernel_manager.start_kernel(**kwargs)
+    kernel_manager.client_factory = self.kernel_client_class
+    kernel_client = kernel_manager.client()
+    kernel_client.start_channels(shell=True, iopub=True)
+    widget = self.widget_factory(config=self.config,
+                               local_kernel=True)
+    self.init_colors(widget)
+    widget.kernel_manager = kernel_manager
+    widget.kernel_client = kernel_client
+    widget._existing = False
+    widget._may_close = True
+    widget._confirm_exit = self.confirm_exit
+    widget._display_banner = self.display_banner
+    return widget
+
+</t>
+<t tx="ekr.20190320124834.92">def new_frontend_connection(self, connection_file):
+    """Create and return a new frontend attached to an existing kernel.
+
+    Parameters
+    ----------
+    connection_file : str
+        The connection_file path this frontend is to connect to
+    """
+    kernel_client = self.kernel_client_class(
+        connection_file=connection_file,
+        config=self.config,
+    )
+    kernel_client.load_connection_file()
+    kernel_client.start_channels()
+    widget = self.widget_factory(config=self.config,
+                                 local_kernel=False)
+    self.init_colors(widget)
+    widget._existing = True
+    widget._may_close = False
+    widget._confirm_exit = False
+    widget._display_banner = self.display_banner
+    widget.kernel_client = kernel_client
+    widget.kernel_manager = None
+    return widget
+
+</t>
+<t tx="ekr.20190320124834.93">def new_frontend_slave(self, current_widget):
+    """Create and return a new frontend attached to an existing kernel.
+    
+    Parameters
+    ----------
+    current_widget : JupyterWidget
+        The JupyterWidget whose kernel this frontend is to share
+    """
+    kernel_client = self.kernel_client_class(
+                            connection_file=current_widget.kernel_client.connection_file,
+                            config = self.config,
+    )
+    kernel_client.load_connection_file()
+    kernel_client.start_channels()
+    widget = self.widget_factory(config=self.config,
+                            local_kernel=False)
+    self.init_colors(widget)
+    widget._existing = True
+    widget._may_close = False
+    widget._confirm_exit = False
+    widget._display_banner = self.display_banner
+    widget.kernel_client = kernel_client
+    widget.kernel_manager = current_widget.kernel_manager
+    return widget
+
+</t>
+<t tx="ekr.20190320124834.94">def init_qt_app(self):
+    # separate from qt_elements, because it must run first
+    self.app = QtGui.QApplication(['jupyter-qtconsole'])
+    self.app.setApplicationName('jupyter-qtconsole')
+
+</t>
+<t tx="ekr.20190320124834.95">def init_qt_elements(self):
+    # Create the widget.
+
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    icon_path = os.path.join(base_path, 'resources', 'icon', 'JupyterConsole.svg')
+    self.app.icon = QtGui.QIcon(icon_path)
+    QtGui.QApplication.setWindowIcon(self.app.icon)
+
+    ip = self.ip
+    local_kernel = (not self.existing) or is_local_ip(ip)
+    self.widget = self.widget_factory(config=self.config,
+                                    local_kernel=local_kernel)
+    self.init_colors(self.widget)
+    self.widget._existing = self.existing
+    self.widget._may_close = not self.existing
+    self.widget._confirm_exit = self.confirm_exit
+    self.widget._display_banner = self.display_banner
+
+    self.widget.kernel_manager = self.kernel_manager
+    self.widget.kernel_client = self.kernel_client
+    self.window = MainWindow(self.app,
+                            confirm_exit=self.confirm_exit,
+                            new_frontend_factory=self.new_frontend_master,
+                            slave_frontend_factory=self.new_frontend_slave,
+                            connection_frontend_factory=self.new_frontend_connection,
+                            )
+    self.window.log = self.log
+    self.window.add_tab_with_frontend(self.widget)
+    self.window.init_menu_bar()
+
+    # Ignore on OSX, where there is always a menu bar
+    if sys.platform != 'darwin' and self.hide_menubar:
+        self.window.menuBar().setVisible(False)
+
+    self.window.setWindowTitle('Jupyter QtConsole')
+
+</t>
+<t tx="ekr.20190320124834.96">def init_colors(self, widget):
+    """Configure the coloring of the widget"""
+    # Note: This will be dramatically simplified when colors
+    # are removed from the backend.
+
+    # parse the colors arg down to current known labels
+    cfg = self.config
+    colors = cfg.ZMQInteractiveShell.colors if 'ZMQInteractiveShell.colors' in cfg else None
+    style = cfg.JupyterWidget.syntax_style if 'JupyterWidget.syntax_style' in cfg else None
+    sheet = cfg.JupyterWidget.style_sheet if 'JupyterWidget.style_sheet' in cfg else None
+
+    # find the value for colors:
+    if colors:
+        colors=colors.lower()
+        if colors in ('lightbg', 'light'):
+            colors='lightbg'
+        elif colors in ('dark', 'linux'):
+            colors='linux'
+        else:
+            colors='nocolor'
+    elif style:
+        if style=='bw':
+            colors='nocolor'
+        elif styles.dark_style(style):
+            colors='linux'
+        else:
+            colors='lightbg'
+    else:
+        colors=None
+
+    # Configure the style
+    if style:
+        widget.style_sheet = styles.sheet_from_template(style, colors)
+        widget.syntax_style = style
+        widget._syntax_style_changed()
+        widget._style_sheet_changed()
+    elif colors:
+        # use a default dark/light/bw style
+        widget.set_default_style(colors=colors)
+
+    if self.stylesheet:
+        # we got an explicit stylesheet
+        if os.path.isfile(self.stylesheet):
+            with open(self.stylesheet) as f:
+                sheet = f.read()
+        else:
+            raise IOError("Stylesheet %r not found." % self.stylesheet)
+    if sheet:
+        widget.style_sheet = sheet
+        widget._style_sheet_changed()
+        
+
+</t>
+<t tx="ekr.20190320124834.97">def init_signal(self):
+    """allow clean shutdown on sigint"""
+    signal.signal(signal.SIGINT, lambda sig, frame: self.exit(-2))
+    # need a timer, so that QApplication doesn't block until a real
+    # Qt event fires (can require mouse movement)
+    # timer trick from http://stackoverflow.com/q/4938723/938949
+    timer = QtCore.QTimer()
+     # Let the interpreter run each 200 ms:
+    timer.timeout.connect(lambda: None)
+    timer.start(200)
+    # hold onto ref, so the timer doesn't get cleaned up
+    self._sigint_timer = timer
+
+</t>
+<t tx="ekr.20190320124834.98">def _deprecate_config(self, cfg, old_name, new_name):
+    """Warn about deprecated config"""
+    if old_name in cfg:
+        self.log.warn("Use %s in config, not %s. Outdated config:\n    %s",
+            new_name, old_name,
+            '\n    '.join('{name}.{key} = {value!r}'.format(key=key, value=value, name=old_name)
+                for key, value in self.config[old_name].items()
+            )
+        )
+        cfg = cfg.copy()
+        cfg[new_name].merge(cfg[old_name])
+        return cfg
+
+</t>
+<t tx="ekr.20190320124834.99">@catch_config_error
+def initialize(self, argv=None):
+    self.init_qt_app()
+    super(JupyterQtConsoleApp, self).initialize(argv)
+    if self._dispatching:
+        return
+    # handle deprecated renames
+    for old_name, new_name in [
+        ('IPythonQtConsoleApp', 'JupyterQtConsole'),
+        ('IPythonWidget', 'JupyterWidget'),
+        ('RichIPythonWidget', 'RichJupyterWidget'),
+    ]:
+        cfg = self._deprecate_config(self.config, old_name, new_name)
+        if cfg:
+            self.update_config(cfg)
+    JupyterConsoleApp.initialize(self,argv)
+    self.init_qt_elements()
+    self.init_signal()
+
+</t>
+<t tx="ekr.20190321180417.1"># -*- coding: utf-8 -*-
+"""Leonine pygments theme."""
+from pygments.style import Style
+import pygments.token as tok # *not* token.
+from leo.core.leoColor import leo_color_database as d
+
+def tr (color):
+    '''Translate a Leo color name to a color constant.'''
+    if color in d:
+        return d.get(color)
+    print('unknown color: %r, using white' % color)
+    return d.get('white')
+
+class LeonineStyle(Style):
+    """Leonine pygments theme."""
+    styles = {
+        tok.Comment:        tr('solarized-red'),
+        tok.Keyword:        tr('solarized-blue'),
+        tok.Name.Decorator: tr('solarized-orange'),
+        tok.Name:           tr('white'),
+        tok.Name.Entity:    tr('solarized-blue'),
+            # Defined section name.
+        tok.Name.Other:     'underline ' + tr('solarized-red'),
+            # Undefined section name.
+        tok.String:         tr('alt-solarized-green'),
+    }
+
+@language python
+@tabwidth -4
+@path C:/Anaconda3/Lib/site-packages/pygments
+</t>
+<t tx="ekr.20190321181356.1">"""
+A Pygments_ style based on the dark background variant of Solarized_.
+
+.. _Pygments: http://pygments.org/
+.. _Solarized: http://ethanschoonover.com/solarized
+"""
+from pygments.style import Style
+from pygments.token import Token, Comment, Name, Keyword, Generic, Number, Operator, String
+
+BASE03 = '#002B36'
+BASE02 = '#073642'
+BASE01 = '#586E75'
+BASE00 = '#657B83'
+BASE0 = '#839496'
+BASE1 = '#93A1A1'
+BASE2 = '#EEE8D5'
+BASE3 = '#FDF6E3'
+YELLOW = '#B58900'
+ORANGE = '#CB4B16'
+RED = '#DC322F'
+MAGENTA = '#D33682'
+VIOLET = '#6C71C4'
+BLUE = '#268BD2'
+CYAN = '#2AA198'
+GREEN = '#859900'
+
+class SolarizedStyle(Style):
+    background_color = BASE03
+    styles = {
+        Keyword: GREEN,
+        Keyword.Constant: ORANGE,
+        Keyword.Declaration: BLUE,
+        #Keyword.Namespace
+        #Keyword.Pseudo
+        Keyword.Reserved: BLUE,
+        Keyword.Type: RED,
+
+        #Name
+        Name.Attribute: BASE1,
+        Name.Builtin: YELLOW,
+        Name.Builtin.Pseudo: BLUE,
+        Name.Class: BLUE,
+        Name.Constant: ORANGE,
+        Name.Decorator: BLUE,
+        Name.Entity: ORANGE,
+        Name.Exception: ORANGE,
+        Name.Function: BLUE,
+        #Name.Label
+        #Name.Namespace
+        #Name.Other
+        Name.Tag: BLUE,
+        Name.Variable: BLUE,
+        #Name.Variable.Class
+        #Name.Variable.Global
+        #Name.Variable.Instance
+
+        #Literal
+        #Literal.Date
+        String: CYAN,
+        String.Backtick: BASE01,
+        String.Char: CYAN,
+        String.Doc: BASE1,
+        #String.Double
+        String.Escape: ORANGE,
+        String.Heredoc: BASE1,
+        #String.Interpol
+        #String.Other
+        String.Regex: RED,
+        #String.Single
+        #String.Symbol
+        Number: CYAN,
+        #Number.Float
+        #Number.Hex
+        #Number.Integer
+        #Number.Integer.Long
+        #Number.Oct
+
+        Operator: GREEN,
+        #Operator.Word
+
+        #Punctuation: ORANGE,
+
+        Comment: BASE01,
+        #Comment.Multiline
+        Comment.Preproc: GREEN,
+        #Comment.Single
+        Comment.Special: GREEN,
+
+        #Generic
+        Generic.Deleted: CYAN,
+        Generic.Emph: 'italic',
+        Generic.Error: RED,
+        Generic.Heading: ORANGE,
+        Generic.Inserted: GREEN,
+        #Generic.Output
+        #Generic.Prompt
+        Generic.Strong: 'bold',
+        Generic.Subheading: ORANGE,
+        #Generic.Traceback
+
+        Token: BASE1,
+        Token.Other: ORANGE,
+    }
+</t>
+<t tx="ekr.20190322033009.1"></t>
+<t tx="ekr.20190322041510.1"></t>
+<t tx="ekr.20190322041515.1"></t>
+<t tx="ekr.20190322041546.1"></t>
 </tnodes>
 </leo_file>
