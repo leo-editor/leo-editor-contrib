@@ -99066,14 +99066,14 @@ class LeonineStyle(Style):
         #
         # For rest: see styles/markup.py
         Generic.Emph:           'italic ' + tr('solarized-blue'),
-        Generic.Heading:        'underline ' + tr('solarized-magenta'),
+        Generic.Heading:        'underline ' + tr('solarized-magenta'), # Used??
         Generic.Strong:         'bold ' + tr('solarized-blue'),
-        Name.Tag:               'italic ' + tr('solarized-magenta'), # Hyperlink
+        Name.Tag:               'italic underline' + tr('solarized-magenta'), # Hyperlink
         #
         # For diff.
-        Generic.Deleted:        "#A00000",
-        Generic.Inserted:       "#00A000",
-        Generic.Subheading:     "bold #800080",
+        Generic.Deleted:        tr('solarized-red'),
+        Generic.Inserted:       tr('alt-solarized-green'),
+        Generic.Subheading:     tr('solarized-magenta'), # @@ line.
         #
         # Remaining tokens from default...
         # Comment.Preproc:           "noitalic #BC7A00",
