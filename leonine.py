@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """Leonine pygments theme."""
 from pygments.style import Style
-from pygments.token import Comment, Keyword, Name, String
-    # For python, Leo.
-from pygments.token import Generic # Number, Operator, Text,  Punctuation
-    # For rest, in markup.py.
-# from pygments.token import Error, Whitespace
-    # For default
+from pygments.token import Comment, Generic, Keyword, Name, String
+    # Error, Whitespace
 from leo.core.leoColor import leo_color_database as d
 
 def tr (color):
@@ -34,14 +30,14 @@ class LeonineStyle(Style):
         #
         # For rest: see styles/markup.py
         Generic.Emph:           'italic ' + tr('solarized-blue'),
-        Generic.Heading:        'underline ' + tr('solarized-magenta'),
+        Generic.Heading:        'underline ' + tr('solarized-magenta'), # Used??
         Generic.Strong:         'bold ' + tr('solarized-blue'),
         Name.Tag:               'italic ' + tr('solarized-magenta'), # Hyperlink
         #
         # For diff.
-        Generic.Deleted:        "#A00000",
-        Generic.Inserted:       "#00A000",
-        Generic.Subheading:     "bold #800080",
+        Generic.Deleted:        tr('solarized-red'),
+        Generic.Inserted:       tr('alt-solarized-green'),
+        Generic.Subheading:     tr('solarized-magenta'), # @@ line.
         #
         # Remaining tokens from default...
         # Comment.Preproc:           "noitalic #BC7A00",

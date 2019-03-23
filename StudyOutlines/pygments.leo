@@ -99033,12 +99033,8 @@ def initialize(self, argv=None):
 <t tx="ekr.20190321180417.1"># -*- coding: utf-8 -*-
 """Leonine pygments theme."""
 from pygments.style import Style
-from pygments.token import Comment, Keyword, Name, String
-    # For python, Leo.
-from pygments.token import Generic # Number, Operator, Text,  Punctuation
-    # For rest, in markup.py.
-# from pygments.token import Error, Whitespace
-    # For default
+from pygments.token import Comment, Generic, Keyword, Name, String
+    # Error, Whitespace
 from leo.core.leoColor import leo_color_database as d
 
 def tr (color):
@@ -99068,7 +99064,7 @@ class LeonineStyle(Style):
         Generic.Emph:           'italic ' + tr('solarized-blue'),
         Generic.Heading:        'underline ' + tr('solarized-magenta'), # Used??
         Generic.Strong:         'bold ' + tr('solarized-blue'),
-        Name.Tag:               'italic underline' + tr('solarized-magenta'), # Hyperlink
+        Name.Tag:               'italic ' + tr('solarized-magenta'), # Hyperlink
         #
         # For diff.
         Generic.Deleted:        tr('solarized-red'),
