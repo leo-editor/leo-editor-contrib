@@ -7,9 +7,10 @@ from leo.core.leoColor import leo_color_database as d
 
 def tr (color):
     '''Translate a Leo color name to a color constant.'''
+    color = color.replace('-','')
     if color in d:
         return d.get(color)
-    print('unknown color: %r, using white' % color)
+    print('leonine.py: unknown color: %r, using white' % color)
     return d.get('white')
 
 class LeonineStyle(Style):
