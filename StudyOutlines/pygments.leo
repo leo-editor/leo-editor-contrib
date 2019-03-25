@@ -99039,9 +99039,10 @@ from leo.core.leoColor import leo_color_database as d
 
 def tr (color):
     '''Translate a Leo color name to a color constant.'''
+    color = color.replace('-','')
     if color in d:
         return d.get(color)
-    print('unknown color: %r, using white' % color)
+    print('leonine.py: unknown color: %r, using white' % color)
     return d.get('white')
 
 class LeonineStyle(Style):
@@ -99052,7 +99053,9 @@ class LeonineStyle(Style):
         Name.Decorator:     tr('solarized-orange'),
         Name:               tr('white'),
         String:             tr('alt-solarized-green'),
+        String.Double:      tr('alt-solarized-green'),
         String.Interpol:    tr('alt-solarized-green'),
+        String.Single:      tr('alt-solarized-green'),
         #
         # Leo constructs...
         Name.Entity:        tr('solarized-blue'),

@@ -21,7 +21,9 @@ class LeonineStyle(Style):
         Name.Decorator:     tr('solarized-orange'),
         Name:               tr('white'),
         String:             tr('alt-solarized-green'),
+        String.Double:      tr('alt-solarized-green'),
         String.Interpol:    tr('alt-solarized-green'),
+        String.Single:      tr('alt-solarized-green'),
         #
         # Leo constructs...
         Name.Entity:        tr('solarized-blue'),
