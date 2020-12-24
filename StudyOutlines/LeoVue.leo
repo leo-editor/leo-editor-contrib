@@ -14,6 +14,26 @@
 </v>
 <v t="ekr.20180130165105.1"><vh>Recursive import script</vh></v>
 <v t="ekr.20180828135907.1"><vh>Notes</vh></v>
+<v t="ekr.20201224071854.1"><vh>Other files</vh>
+<v t="ekr.20201121054023.1"><vh>@@clean index.html</vh>
+<v t="ekr.20201121054023.2"><vh>&lt;&lt;head&gt;&gt;</vh>
+<v t="ekr.20201121054222.1"><vh>&lt;&lt; set window.lconfig &gt;&gt;</vh></v>
+</v>
+<v t="ekr.20201121054023.3"><vh>&lt;&lt; body &gt;&gt;</vh>
+<v t="ekr.20201121054023.4"><vh>&lt;&lt; static footer &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.5"><vh>&lt;&lt; templates &gt;&gt;</vh>
+<v t="ekr.20201121054023.6"><vh>&lt;&lt; rgarticle &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.7"><vh>&lt;&lt; rgarticle-brief &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.8"><vh>&lt;&lt; repec &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.9"><vh>&lt;&lt; rgauthor &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.10"><vh>&lt;&lt; rgarticles &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.11"><vh>&lt;&lt; repec-articles &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.12"><vh>&lt;&lt; rgcitiations &gt;&gt;</vh></v>
+</v>
+<v t="ekr.20201121054023.13"><vh>&lt;&lt; global site tag &gt;&gt;</vh></v>
+<v t="ekr.20201121054023.14"><vh>&lt;&lt; style &gt;&gt;</vh></v>
+</v>
+</v>
 <v t="ekr.20180824114057.2"><vh>repo/leovue</vh>
 <v t="ekr.20180824114057.3"><vh>@@clean .eslintrc.js</vh></v>
 <v t="ekr.20180824114057.4"><vh>@@clean .postcssrc.js</vh></v>
@@ -59,6 +79,7 @@
 <v t="ekr.20201121055856.1"><vh>&lt;&lt; plugins &gt;&gt;</vh></v>
 </v>
 <v t="ekr.20180824113325.28"><vh>@@clean webpack.test.conf.js</vh></v>
+</v>
 </v>
 <v t="ekr.20180130165259.2"><vh>leovue/src</vh>
 <v t="ekr.20180213115426.1"><vh>top level</vh>
@@ -231,20 +252,23 @@
 </v>
 <v t="ekr.20180130165259.129"><vh>@@clean services/leo.js</vh>
 <v t="ekr.20180213114346.1"><vh>&lt;&lt; xslTemplate &gt;&gt;</vh></v>
-<v t="ekr.20180130165259.130"><vh>function transform</vh>
-<v t="ekr.20180130165259.131"><vh>function serverTransform(resolve, reject)</vh></v>
-<v t="ekr.20180130165259.132"><vh>function clientTransform(resolve, reject)</vh></v>
-</v>
-<v t="ekr.20180130165259.133"><vh>function loadDoc </vh>
-<v t="ekr.20180130165259.134"><vh>.then(function (response)</vh></v>
-<v t="ekr.20180130165259.135"><vh>.catch(function (error)</vh></v>
-</v>
-<v t="ekr.20180130165259.136"><vh>function cleanText</vh></v>
+<v t="ekr.20180130165259.138"><vh>function getLeoJSON &amp; helpers</vh>
 <v t="ekr.20180130165259.137"><vh>function isRelative</vh></v>
-<v t="ekr.20180130165259.138"><vh>function getLeoJSON</vh></v>
-<v t="ekr.20180130165259.139"><vh>function transformLeoXML2XML</vh></v>
+<v t="ekr.20180130165259.133"><vh>function loadDoc</vh></v>
+</v>
+<v t="ekr.20180130165259.130"><vh>function transform</vh>
+<v t="ekr.20180130165259.131"><vh>function serverTransform</vh></v>
+<v t="ekr.20180130165259.132"><vh>function clientTransform</vh></v>
+</v>
+<v t="ekr.20180130165259.141"><vh>function transformLeoXML &amp; helpers</vh>
+<v t="ekr.20180130165259.136"><vh>function cleanText</vh></v>
 <v t="ekr.20180130165259.140"><vh>function transformLeoXML2JSON</vh></v>
-<v t="ekr.20180130165259.141"><vh>function transformLeoXML</vh></v>
+</v>
+<v t="ekr.20180130165259.139"><vh>function transformLeoXML2XML</vh>
+<v t="ekr.20201224073436.1"><vh>&lt;&lt; Create the parser &gt;&gt;</vh></v>
+<v t="ekr.20201224073243.1"><vh>&lt;&lt; Create tnodes in textItems &gt;&gt;</vh></v>
+<v t="ekr.20201224073343.1"><vh>&lt;&lt; Create vnodes &gt;&gt;</vh></v>
+</v>
 </v>
 <v t="ekr.20180130165259.143"><vh>@@clean store/index.js</vh>
 <v t="ekr.20180130165259.144"><vh>function loadIndex &amp; helper</vh>
@@ -288,25 +312,8 @@
 </v>
 </v>
 </v>
-<v t="ekr.20201121054023.1"><vh>@@clean index.html</vh>
-<v t="ekr.20201121054023.2"><vh>&lt;&lt;head&gt;&gt;</vh>
-<v t="ekr.20201121054222.1"><vh>&lt;&lt; set window.lconfig &gt;&gt;</vh></v>
-</v>
-<v t="ekr.20201121054023.3"><vh>&lt;&lt; body &gt;&gt;</vh>
-<v t="ekr.20201121054023.4"><vh>&lt;&lt; static footer &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.5"><vh>&lt;&lt; templates &gt;&gt;</vh>
-<v t="ekr.20201121054023.6"><vh>&lt;&lt; rgarticle &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.7"><vh>&lt;&lt; rgarticle-brief &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.8"><vh>&lt;&lt; repec &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.9"><vh>&lt;&lt; rgauthor &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.10"><vh>&lt;&lt; rgarticles &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.11"><vh>&lt;&lt; repec-articles &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.12"><vh>&lt;&lt; rgcitiations &gt;&gt;</vh></v>
-</v>
-<v t="ekr.20201121054023.13"><vh>&lt;&lt; global site tag &gt;&gt;</vh></v>
-<v t="ekr.20201121054023.14"><vh>&lt;&lt; style &gt;&gt;</vh></v>
-</v>
-</v>
+<v t="ekr.20201224071404.1"><vh>----- Loading .leo files</vh></v>
+<v t="ekr.20180130165259.129"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20180130165105.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -4384,11 +4391,22 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
 
 </t>
 <t tx="ekr.20180130165259.130">function transform (xml, xslString, transformer, serializer) {
-  @others
+  @others  // Define client/serverTransform.
+
+  const p = new Promise((resolve, reject) =&gt; {
+    if (transformer) {
+      return serverTransform(resolve, reject)
+    } else {
+      return clientTransform(resolve, reject)
+    }
+  })
+  return p
 }
 
 </t>
-<t tx="ekr.20180130165259.131">function serverTransform(resolve, reject) {
+<t tx="ekr.20180130165259.131">// EKR: args: xml, xslString, transformer, serializer
+
+function serverTransform(resolve, reject) {
   const xmlString = new serializer().serializeToString(xml)
   const config = {
     xslt: xslString,
@@ -4406,9 +4424,9 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
     resolve(result)
   })
 }
-
 </t>
 <t tx="ekr.20180130165259.132">function clientTransform(resolve, reject) {
+
   const oParser = new DOMParser()
   const xsl = oParser.parseFromString(xslString, 'text/xml')
   const xsltProcessor = new XSLTProcessor()
@@ -4417,32 +4435,21 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
   resolve(resultDocument.textContent)
 }
 
-const p = new Promise((resolve, reject) =&gt; {
-  if (transformer) {
-    return serverTransform(resolve, reject)
-  } else {
-    return clientTransform(resolve, reject)
-  }
-})
-return p
 </t>
 <t tx="ekr.20180130165259.133">function loadDoc (filename) {
   console.log('loading file:', filename)
   var p = new Promise((resolve, reject) =&gt; {
     axios.get(filename)
-    @others
+    .then(function (response) {
+      resolve(response.data)
+    })
+    .catch(function (error) {
+      console.log(error)
+      reject()
+    })
   })
   return p
 }
-</t>
-<t tx="ekr.20180130165259.134">.then(function (response) {
-  resolve(response.data)
-})
-</t>
-<t tx="ekr.20180130165259.135">.catch(function (error) {
-  console.log(error)
-  reject()
-})
 </t>
 <t tx="ekr.20180130165259.136">function cleanText(data, startId){
   data.name = data.name.replace(/&lt;&lt;/g, '\u00AB')
@@ -4462,14 +4469,14 @@ return p
     data.t = startId + '-' + data.t + ''
   }
 }
-/**
+</t>
+<t tx="ekr.20180130165259.137">/**
  * TODO: move to util, also is in store/index, review logic for relative / subtrees
  * Is url relative
  * @param url {string}
  * @returns {boolean} - if is relative
  */
-</t>
-<t tx="ekr.20180130165259.137">function isRelative (url) {
+function isRelative (url) {
   var ok = true
   if (/^http/.test(url)) {
     ok = false
@@ -4498,48 +4505,16 @@ return p
 }
 </t>
 <t tx="ekr.20180130165259.139">function transformLeoXML2XML(xmlString, startId, parser) {
+
   const p = new Promise((resolve, reject) =&gt; {
-
-    let oParser = null
-    if (parser) {
-      oParser = new parser()
-    } else {
-      oParser = new DOMParser()
-    }
+    &lt;&lt; Create the parser &gt;&gt;
+    // Parse the string into an xml *object*.
     const xml = oParser.parseFromString(xmlString, 'text/xml')
-    const tnodes = xml.getElementsByTagName('t')
-    let textItems = {}
-    for (let i = 0; i &lt; tnodes.length; i++) {
-      let el = tnodes[i]
-      let elText = el.textContent
-      let a = el.getAttribute('tx')
-      a = a.replace(/\./g, '_')
-      a = a.replace(/^.*?_/, '')
-      if (startId) {
-        a = startId + '-' + a
-      }
-      if (
-        (/^@language /.test(elText)) &amp;&amp;
-        (!/^@language html/.test(elText)) &amp;&amp;
-        (!/^@language md/.test(elText))
-      ) {
-        // elText = escape(elText)
-      }
-      textItems[a] = elText
-    }
-    const vnodes = xml.getElementsByTagName('v')
-    let pid
-    for (let i = 0; i &lt; vnodes.length; i++) {
-      pid = i + 1
-      if (startId) {
-        pid = startId + '-' + pid
-      }
-      vnodes[i].setAttribute('id', '"' + pid + '"')
-    }
+    &lt;&lt; Create tnodes in textItems &gt;&gt;
+    &lt;&lt; Create vnodes &gt;&gt;
     resolve({xml, textItems})
-
   })
-  return p
+  return p  // Return the promise.
 }
 </t>
 <t tx="ekr.20180130165259.14">function getLanguage (text) {
@@ -4573,6 +4548,7 @@ return p
 }
 </t>
 <t tx="ekr.20180130165259.141">function transformLeoXML(xmlString, startId, parser, transformer, serializer){
+
   return transformLeoXML2XML(xmlString, startId, parser)
     .then(data =&gt; transformLeoXML2JSON(data, startId, parser, transformer, serializer))
 }
@@ -12918,6 +12894,43 @@ export default {
     }
     this.$store.dispatch('setMessages')
   }
+}</t>
+<t tx="ekr.20201224071404.1"></t>
+<t tx="ekr.20201224071854.1"></t>
+<t tx="ekr.20201224073243.1">const tnodes = xml.getElementsByTagName('t')
+let textItems = {}
+for (let i = 0; i &lt; tnodes.length; i++) {
+  let el = tnodes[i]
+  let elText = el.textContent
+  let a = el.getAttribute('tx')
+  a = a.replace(/\./g, '_')
+  a = a.replace(/^.*?_/, '')
+  if (startId) {
+    a = startId + '-' + a
+  }
+  if (
+    (/^@language /.test(elText)) &amp;&amp;
+    (!/^@language html/.test(elText)) &amp;&amp;
+    (!/^@language md/.test(elText))
+  ) {
+    // elText = escape(elText)
+  }
+  textItems[a] = elText
+}</t>
+<t tx="ekr.20201224073343.1">const vnodes = xml.getElementsByTagName('v')
+let pid
+for (let i = 0; i &lt; vnodes.length; i++) {
+  pid = i + 1
+  if (startId) {
+    pid = startId + '-' + pid
+  }
+  vnodes[i].setAttribute('id', '"' + pid + '"')
+}</t>
+<t tx="ekr.20201224073436.1">let oParser = null
+if (parser) {
+  oParser = new parser()
+} else {
+  oParser = new DOMParser()
 }</t>
 </tnodes>
 </leo_file>
