@@ -65,7 +65,14 @@
 <v t="ekr.20201219054931.54"><vh>Generator.visit_Break</vh></v>
 <v t="ekr.20201219054931.55"><vh>Generator.visit_Bytes</vh></v>
 <v t="ekr.20201219054931.56"><vh>Generator.visit_Call</vh></v>
-<v t="ekr.20201219054931.57"><vh>Generator.visit_ClassDef</vh></v>
+<v t="ekr.20201219054931.57"><vh>Generator.visit_ClassDef</vh>
+<v t="ekr.20201226151328.1"><vh>&lt;&lt; parse decorators &gt;&gt;</vh></v>
+<v t="ekr.20201226151343.1"><vh>&lt;&lt; generator decorators &gt;&gt;</vh></v>
+<v t="ekr.20201226151908.1"><vh>&lt;&lt; define lists &gt;&gt;</vh></v>
+<v t="ekr.20201226151532.1"><vh>&lt;&lt; Handle one statement in node.body &gt;&gt;</vh></v>
+<v t="ekr.20201226151714.1"><vh>&lt;&lt; Handle class var assigns &gt;&gt;</vh></v>
+<v t="ekr.20201226151440.1"><vh>&lt;&lt; define emitters &gt;&gt;</vh></v>
+</v>
 <v t="ekr.20201219054931.58"><vh>Generator.visit_Compare</vh></v>
 <v t="ekr.20201219054931.59"><vh>Generator.visit_Continue</vh></v>
 <v t="ekr.20201219054931.60"><vh>Generator.visit_Delete</vh></v>
@@ -75,7 +82,10 @@
 <v t="ekr.20201219054931.64"><vh>Generator.visit_For</vh></v>
 <v t="ekr.20201219054931.65"><vh>Generator.visit_FormattedValue</vh></v>
 <v t="ekr.20201219054931.66"><vh>Generator.visit_AsyncFunctionDef</vh></v>
-<v t="ekr.20201219054931.67"><vh>Generator.visit_FunctionDef</vh></v>
+<v t="ekr.20201219054931.67"><vh>Generator.visit_FunctionDef</vh>
+<v t="ekr.20201226150311.1"><vh>&lt;&lt; parse decorators &gt;&gt;</vh></v>
+<v t="ekr.20201226145856.1"><vh>&lt;&lt; generate decorator &gt;&gt;</vh></v>
+</v>
 <v t="ekr.20201219054931.68"><vh>Generator.visit_GeneratorExp</vh></v>
 <v t="ekr.20201219054931.69"><vh>Generator.visit_Global</vh></v>
 <v t="ekr.20201219054931.70"><vh>Generator.visit_If</vh></v>
@@ -155,84 +165,84 @@
 <v t="ekr.20201219054931.136"><vh>digestJavascript</vh></v>
 </v>
 <v t="ekr.20201219054931.137"><vh>@@clean __builtin__.js</vh>
-<v t="ekr.20201219061022.1"><vh>function __call__</vh></v>
-<v t="ekr.20201219061022.2"><vh>function __kwargtrans__</vh></v>
-<v t="ekr.20201219061022.3"><vh>function __super__</vh></v>
-<v t="ekr.20201219061023.1"><vh>function property</vh></v>
-<v t="ekr.20201219061023.2"><vh>function __setproperty__</vh></v>
-<v t="ekr.20201219061023.3"><vh>function assert</vh></v>
-<v t="ekr.20201219061309.1"><vh>function __mergekwargtrans__ </vh></v>
-<v t="ekr.20201219061309.2"><vh>function __mergefields__</vh></v>
-<v t="ekr.20201219061310.1"><vh>function __withblock__</vh></v>
-<v t="ekr.20201219061310.2"><vh>function dir</vh></v>
-<v t="ekr.20201219061310.3"><vh>fucntion setattr, getattr, hasattr, delattr</vh></v>
-<v t="ekr.20201219061310.4"><vh>function __in__</vh></v>
-<v t="ekr.20201219061814.1"><vh>function __specialattrib__</vh></v>
-<v t="ekr.20201219061814.2"><vh>function len</vh></v>
-<v t="ekr.20201219062144.1"><vh>Type conversions...</vh>
-<v t="ekr.20201219061814.3"><vh>function __i__</vh></v>
-<v t="ekr.20201219062158.1"><vh>function __k__</vh></v>
-<v t="ekr.20201219062158.2"><vh>function __t__ (truthyness)</vh></v>
-<v t="ekr.20201219062158.3"><vh>function float &amp; int</vh></v>
-</v>
+<v t="ekr.20201219061022.1"><vh>__call__</vh></v>
+<v t="ekr.20201219061022.2"><vh>__kwargtrans__</vh></v>
+<v t="ekr.20201219061022.3"><vh>__super__</vh></v>
+<v t="ekr.20201219061023.1"><vh>property</vh></v>
+<v t="ekr.20201219061023.2"><vh>__setproperty__</vh></v>
+<v t="ekr.20201219061023.3"><vh>assert</vh></v>
+<v t="ekr.20201219061309.1"><vh>__mergekwargtrans__ </vh></v>
+<v t="ekr.20201219061309.2"><vh>__mergefields__</vh></v>
+<v t="ekr.20201219061310.1"><vh>__withblock__</vh></v>
+<v t="ekr.20201219061310.2"><vh>dir</vh></v>
+<v t="ekr.20201219061310.3"><vh>setattr, getattr, hasattr, delattr</vh></v>
+<v t="ekr.20201219061310.4"><vh>__in__</vh></v>
+<v t="ekr.20201219061814.1"><vh>__specialattrib__</vh></v>
+<v t="ekr.20201219061814.2"><vh>len</vh></v>
+<v t="ekr.20201219062144.1"><vh>Type stuff...</vh>
+<v t="ekr.20201219061814.3"><vh>__i__</vh></v>
+<v t="ekr.20201219062158.1"><vh>__k__</vh></v>
+<v t="ekr.20201219062158.2"><vh>__t__ (truthyness)</vh></v>
+<v t="ekr.20201219062158.3"><vh>float &amp; int</vh></v>
 <v t="ekr.20201219054931.138"><vh>Number.prototype.__format__</vh>
-<v t="ekr.20201219054931.139"><vh>function pad</vh></v>
-<v t="ekr.20201219054931.140"><vh>function format_float</vh></v>
+<v t="ekr.20201219054931.139"><vh>pad</vh></v>
+<v t="ekr.20201219054931.140"><vh>format_float</vh></v>
 </v>
-<v t="ekr.20201219073300.1"><vh>function bool</vh></v>
-<v t="ekr.20201219073301.1"><vh>function py_typeof</vh></v>
-<v t="ekr.20201219073301.2"><vh>function issubclass</vh></v>
-<v t="ekr.20201219073411.1"><vh>function isinstance</vh></v>
-<v t="ekr.20201219073411.2"><vh>function callable</vh></v>
-<v t="ekr.20201219073411.3"><vh>function repr, chr, ord</vh></v>
-<v t="ekr.20201219073301.3"><vh>function max, min, abs, round</vh></v>
-<v t="ekr.20201219073525.1"><vh>function format</vh></v>
+<v t="ekr.20201219073300.1"><vh>bool</vh></v>
+<v t="ekr.20201219073301.1"><vh>py_typeof</vh></v>
+<v t="ekr.20201219073301.2"><vh>issubclass</vh></v>
+<v t="ekr.20201219073411.1"><vh>isinstance</vh></v>
+<v t="ekr.20201219073411.2"><vh>callable</vh></v>
+</v>
+<v t="ekr.20201219073411.3"><vh>repr, chr, ord</vh></v>
+<v t="ekr.20201219073301.3"><vh>max, min, abs, round</vh></v>
+<v t="ekr.20201219073525.1"><vh>format</vh></v>
 <v t="ekr.20201219073625.1"><vh>Unified iterator model</vh>
-<v t="ekr.20201219073525.2"><vh>function __jsUsePyNext__ &amp; __pyUseJsNext__</vh></v>
-<v t="ekr.20201219073525.3"><vh>function py_iter</vh></v>
-<v t="ekr.20201219073819.1"><vh>function py_next</vh></v>
-<v t="ekr.20201219073820.1"><vh>function __PyIterator__</vh></v>
+<v t="ekr.20201219073525.2"><vh>__jsUsePyNext__ &amp; __pyUseJsNext__</vh></v>
+<v t="ekr.20201219073525.3"><vh>py_iter</vh></v>
+<v t="ekr.20201219073819.1"><vh>py_next</vh></v>
+<v t="ekr.20201219073820.1"><vh>__PyIterator__</vh></v>
 <v t="ekr.20201219054931.141"><vh>__PyIterator__.prototype.__next__ &amp; __JsIterator__</vh></v>
 <v t="ekr.20201219054931.142"><vh>__JsIterator__.prototype.next</vh></v>
 </v>
-<v t="ekr.20201219062645.1"><vh>function py_reversed</vh></v>
-<v t="ekr.20201219062645.2"><vh>function zip</vh></v>
-<v t="ekr.20201219062646.1"><vh>function range</vh></v>
-<v t="ekr.20201219062646.2"><vh>function any, all, sum</vh></v>
-<v t="ekr.20201219062646.3"><vh>function enumerate</vh></v>
-<v t="ekr.20201219063107.1"><vh>function copy, deepcopy</vh></v>
-<v t="ekr.20201219063107.2"><vh>function list</vh></v>
+<v t="ekr.20201219062645.1"><vh>py_reversed</vh></v>
+<v t="ekr.20201219062645.2"><vh>zip</vh></v>
+<v t="ekr.20201219062646.1"><vh>range</vh></v>
+<v t="ekr.20201219062646.2"><vh>any, all, sum</vh></v>
+<v t="ekr.20201219062646.3"><vh>enumerate</vh></v>
+<v t="ekr.20201219063107.1"><vh>copy, deepcopy</vh></v>
+<v t="ekr.20201219063107.2"><vh>list</vh></v>
 <v t="ekr.20201219063312.1"><vh>Array.prototype...</vh>
-<v t="ekr.20201219054931.145"><vh>Array.prototype.__getslice__ = function</vh></v>
-<v t="ekr.20201219054931.146"><vh>Array.prototype.__setslice__ = function</vh></v>
-<v t="ekr.20201219054931.147"><vh>Array.prototype.__repr__ = function</vh></v>
-<v t="ekr.20201219054931.148"><vh>Array.prototype.append = function</vh></v>
-<v t="ekr.20201219054931.149"><vh>Array.prototype.py_clear = function</vh></v>
-<v t="ekr.20201219054931.150"><vh>Array.prototype.extend = function</vh></v>
-<v t="ekr.20201219054931.151"><vh>Array.prototype.insert = function</vh></v>
-<v t="ekr.20201219054931.152"><vh>Array.prototype.remove = function</vh></v>
-<v t="ekr.20201219054931.153"><vh>Array.prototype.index = function</vh></v>
-<v t="ekr.20201219054931.154"><vh>Array.prototype.py_pop = function</vh></v>
-<v t="ekr.20201219054931.155"><vh>Array.prototype.py_sort = function</vh></v>
-<v t="ekr.20201219054931.156"><vh>Array.prototype.__add__ = function</vh></v>
-<v t="ekr.20201219054931.157"><vh>Array.prototype.__mul__ = function</vh></v>
-<v t="ekr.20201219054931.158"><vh>Array.prototype.__bindexOf__ = function</vh></v>
-<v t="ekr.20201219054931.159"><vh>Array.prototype.add = function</vh></v>
-<v t="ekr.20201219054931.160"><vh>Array.prototype.discard = function</vh></v>
-<v t="ekr.20201219054931.161"><vh>Array.prototype.isdisjoint = function</vh></v>
-<v t="ekr.20201219054931.162"><vh>Array.prototype.issuperset = function</vh></v>
-<v t="ekr.20201219054931.163"><vh>Array.prototype.issubset = function</vh></v>
-<v t="ekr.20201219054931.164"><vh>Array.prototype.union = function</vh></v>
-<v t="ekr.20201219054931.165"><vh>Array.prototype.intersection = function</vh></v>
-<v t="ekr.20201219054931.166"><vh>Array.prototype.difference = function</vh></v>
-<v t="ekr.20201219054931.167"><vh>Array.prototype.symmetric_difference = function</vh></v>
-<v t="ekr.20201219054931.168"><vh>Array.prototype.py_update = function</vh></v>
-<v t="ekr.20201219054931.169"><vh>Array.prototype.__eq__ = function</vh></v>
-<v t="ekr.20201219054931.170"><vh>Array.prototype.__ne__ = function</vh></v>
-<v t="ekr.20201219054931.171"><vh>Array.prototype.__le__ = function</vh></v>
-<v t="ekr.20201219054931.172"><vh>Array.prototype.__ge__ = function</vh></v>
-<v t="ekr.20201219054931.173"><vh>Array.prototype.__lt__ = function</vh></v>
-<v t="ekr.20201219054931.174"><vh>Array.prototype.__gt__ = function</vh></v>
+<v t="ekr.20201219054931.145"><vh>Array.prototype.__getslice__</vh></v>
+<v t="ekr.20201219054931.146"><vh>Array.prototype.__setslice__</vh></v>
+<v t="ekr.20201219054931.147"><vh>Array.prototype.__repr__</vh></v>
+<v t="ekr.20201219054931.148"><vh>Array.prototype.append</vh></v>
+<v t="ekr.20201219054931.149"><vh>Array.prototype.py_clear</vh></v>
+<v t="ekr.20201219054931.150"><vh>Array.prototype.extend</vh></v>
+<v t="ekr.20201219054931.151"><vh>Array.prototype.insert</vh></v>
+<v t="ekr.20201219054931.152"><vh>Array.prototype.remove</vh></v>
+<v t="ekr.20201219054931.153"><vh>Array.prototype.index</vh></v>
+<v t="ekr.20201219054931.154"><vh>Array.prototype.py_pop</vh></v>
+<v t="ekr.20201219054931.155"><vh>Array.prototype.py_sort</vh></v>
+<v t="ekr.20201219054931.156"><vh>Array.prototype.__add__</vh></v>
+<v t="ekr.20201219054931.157"><vh>Array.prototype.__mul__</vh></v>
+<v t="ekr.20201219054931.158"><vh>Array.prototype.__bindexOf__</vh></v>
+<v t="ekr.20201219054931.159"><vh>Array.prototype.add</vh></v>
+<v t="ekr.20201219054931.160"><vh>Array.prototype.discard</vh></v>
+<v t="ekr.20201219054931.161"><vh>Array.prototype.isdisjoint</vh></v>
+<v t="ekr.20201219054931.162"><vh>Array.prototype.issuperset</vh></v>
+<v t="ekr.20201219054931.163"><vh>Array.prototype.issubset</vh></v>
+<v t="ekr.20201219054931.164"><vh>Array.prototype.union</vh></v>
+<v t="ekr.20201219054931.165"><vh>Array.prototype.intersection</vh></v>
+<v t="ekr.20201219054931.166"><vh>Array.prototype.difference</vh></v>
+<v t="ekr.20201219054931.167"><vh>Array.prototype.symmetric_difference</vh></v>
+<v t="ekr.20201219054931.168"><vh>Array.prototype.py_update</vh></v>
+<v t="ekr.20201219054931.169"><vh>Array.prototype.__eq__</vh></v>
+<v t="ekr.20201219054931.170"><vh>Array.prototype.__ne__</vh></v>
+<v t="ekr.20201219054931.171"><vh>Array.prototype.__le__</vh></v>
+<v t="ekr.20201219054931.172"><vh>Array.prototype.__ge__</vh></v>
+<v t="ekr.20201219054931.173"><vh>Array.prototype.__lt__</vh></v>
+<v t="ekr.20201219054931.174"><vh>Array.prototype.__gt__</vh></v>
 </v>
 <v t="ekr.20201219063343.1"><vh>bytearray &amp; bytes</vh></v>
 <v t="ekr.20201219063457.1"><vh>Uint8Array...</vh>
@@ -240,52 +250,52 @@
 <v t="ekr.20201219054931.176"><vh>Uint8Array.prototype.__mul__ &amp; __rmul__</vh></v>
 </v>
 <v t="ekr.20201219074532.1"><vh>String extensions...</vh>
-<v t="ekr.20201219063510.1"><vh>function str</vh></v>
-<v t="ekr.20201219054931.177"><vh>String.prototype.__repr__ = function</vh></v>
-<v t="ekr.20201219054931.178"><vh>String.prototype.__str__ = function</vh></v>
-<v t="ekr.20201219054931.179"><vh>String.prototype.capitalize = function</vh></v>
-<v t="ekr.20201219054931.180"><vh>String.prototype.endswith = function</vh></v>
-<v t="ekr.20201219054931.181"><vh>String.prototype.find = function</vh></v>
-<v t="ekr.20201219054931.182"><vh>String.prototype.__getslice__ = function</vh></v>
-<v t="ekr.20201219054931.183"><vh>String.prototype.__format__ = function</vh></v>
+<v t="ekr.20201219063510.1"><vh>str</vh></v>
+<v t="ekr.20201219054931.177"><vh>String.prototype.__repr__</vh></v>
+<v t="ekr.20201219054931.178"><vh>String.prototype.__str__</vh></v>
+<v t="ekr.20201219054931.179"><vh>String.prototype.capitalize</vh></v>
+<v t="ekr.20201219054931.180"><vh>String.prototype.endswith</vh></v>
+<v t="ekr.20201219054931.181"><vh>String.prototype.find</vh></v>
+<v t="ekr.20201219054931.182"><vh>String.prototype.__getslice__</vh></v>
+<v t="ekr.20201219054931.183"><vh>String.prototype.__format__</vh></v>
 <v t="ekr.20201219063829.1"><vh>__setproperty__</vh></v>
-<v t="ekr.20201219054931.187"><vh>String.prototype.isalnum = function</vh></v>
-<v t="ekr.20201219054931.188"><vh>String.prototype.isalpha = function</vh></v>
-<v t="ekr.20201219054931.189"><vh>String.prototype.isdecimal = function</vh></v>
-<v t="ekr.20201219054931.190"><vh>String.prototype.isdigit = function</vh></v>
-<v t="ekr.20201219054931.191"><vh>String.prototype.islower = function</vh></v>
-<v t="ekr.20201219054931.192"><vh>String.prototype.isupper = function</vh></v>
-<v t="ekr.20201219054931.193"><vh>String.prototype.isspace = function</vh></v>
-<v t="ekr.20201219054931.194"><vh>String.prototype.isnumeric = function</vh></v>
-<v t="ekr.20201219054931.195"><vh>String.prototype.join = function</vh></v>
-<v t="ekr.20201219054931.196"><vh>String.prototype.lower = function</vh></v>
-<v t="ekr.20201219054931.197"><vh>String.prototype.py_replace = function</vh></v>
-<v t="ekr.20201219054931.198"><vh>String.prototype.lstrip = function</vh></v>
-<v t="ekr.20201219054931.199"><vh>String.prototype.rfind = function</vh></v>
-<v t="ekr.20201219054931.200"><vh>String.prototype.rsplit = function</vh></v>
-<v t="ekr.20201219054931.201"><vh>String.prototype.rstrip = function</vh></v>
-<v t="ekr.20201219054931.202"><vh>String.prototype.py_split = function</vh></v>
-<v t="ekr.20201219054931.203"><vh>String.prototype.startswith = function</vh></v>
-<v t="ekr.20201219054931.204"><vh>String.prototype.strip = function</vh></v>
-<v t="ekr.20201219054931.205"><vh>String.prototype.upper = function</vh></v>
-<v t="ekr.20201219054931.206"><vh>String.prototype.__mul__ = function</vh></v>
+<v t="ekr.20201219054931.187"><vh>String.prototype.isalnum</vh></v>
+<v t="ekr.20201219054931.188"><vh>String.prototype.isalpha</vh></v>
+<v t="ekr.20201219054931.189"><vh>String.prototype.isdecimal</vh></v>
+<v t="ekr.20201219054931.190"><vh>String.prototype.isdigit</vh></v>
+<v t="ekr.20201219054931.191"><vh>String.prototype.islower</vh></v>
+<v t="ekr.20201219054931.192"><vh>String.prototype.isupper</vh></v>
+<v t="ekr.20201219054931.193"><vh>String.prototype.isspace</vh></v>
+<v t="ekr.20201219054931.194"><vh>String.prototype.isnumeric</vh></v>
+<v t="ekr.20201219054931.195"><vh>String.prototype.join</vh></v>
+<v t="ekr.20201219054931.196"><vh>String.prototype.lower</vh></v>
+<v t="ekr.20201219054931.197"><vh>String.prototype.py_replace</vh></v>
+<v t="ekr.20201219054931.198"><vh>String.prototype.lstrip</vh></v>
+<v t="ekr.20201219054931.199"><vh>String.prototype.rfind</vh></v>
+<v t="ekr.20201219054931.200"><vh>String.prototype.rsplit</vh></v>
+<v t="ekr.20201219054931.201"><vh>String.prototype.rstrip</vh></v>
+<v t="ekr.20201219054931.202"><vh>String.prototype.py_split</vh></v>
+<v t="ekr.20201219054931.203"><vh>String.prototype.startswith</vh></v>
+<v t="ekr.20201219054931.204"><vh>String.prototype.strip</vh></v>
+<v t="ekr.20201219054931.205"><vh>String.prototype.upper</vh></v>
+<v t="ekr.20201219054931.206"><vh>String.prototype.__mul__</vh></v>
 </v>
 <v t="ekr.20201219064825.1"><vh>Dict extensions to object</vh>
-<v t="ekr.20201219054931.207"><vh>function __contains__</vh></v>
-<v t="ekr.20201219054931.208"><vh>function __keys__</vh></v>
-<v t="ekr.20201219054931.209"><vh>function __items__</vh></v>
-<v t="ekr.20201219054931.210"><vh>function __del__</vh></v>
-<v t="ekr.20201219054931.211"><vh>function __clear__</vh></v>
-<v t="ekr.20201219054931.212"><vh>function __getdefault__</vh></v>
-<v t="ekr.20201219054931.213"><vh>function __setdefault__</vh></v>
-<v t="ekr.20201219054931.214"><vh>function __pop__</vh></v>
-<v t="ekr.20201219054931.215"><vh>function __popitem__</vh></v>
-<v t="ekr.20201219054931.216"><vh>function __update__</vh></v>
-<v t="ekr.20201219054931.217"><vh>function __values__</vh></v>
-<v t="ekr.20201219054931.218"><vh>function __dgetitem__</vh></v>
-<v t="ekr.20201219054931.219"><vh>function __dsetitem__</vh></v>
-<v t="ekr.20201219064950.1"><vh>function dict</vh></v>
-<v t="ekr.20201219054931.220"><vh>function __setdoc__</vh></v>
+<v t="ekr.20201219054931.207"><vh>__contains__</vh></v>
+<v t="ekr.20201219054931.208"><vh>__keys__</vh></v>
+<v t="ekr.20201219054931.209"><vh>__items__</vh></v>
+<v t="ekr.20201219054931.210"><vh>__del__</vh></v>
+<v t="ekr.20201219054931.211"><vh>__clear__</vh></v>
+<v t="ekr.20201219054931.212"><vh>__getdefault__</vh></v>
+<v t="ekr.20201219054931.213"><vh>__setdefault__</vh></v>
+<v t="ekr.20201219054931.214"><vh>__pop__</vh></v>
+<v t="ekr.20201219054931.215"><vh>__popitem__</vh></v>
+<v t="ekr.20201219054931.216"><vh>__update__</vh></v>
+<v t="ekr.20201219054931.217"><vh>__values__</vh></v>
+<v t="ekr.20201219054931.218"><vh>__dgetitem__</vh></v>
+<v t="ekr.20201219054931.219"><vh>__dsetitem__</vh></v>
+<v t="ekr.20201219064950.1"><vh>dict</vh></v>
+<v t="ekr.20201219054931.220"><vh>__setdoc__</vh></v>
 <v t="ekr.20201219065042.1"><vh>General operator overloading</vh>
 <v t="ekr.20201219065216.1"><vh>Math operators (ifndef __xtiny__)</vh>
 <v t="ekr.20201219065440.1"><vh>Overloaded binary ops</vh></v>
@@ -301,17 +311,18 @@
 </v>
 <v t="ekr.20201219054931.221"><vh>@@clean __core__.js</vh>
 <v t="ekr.20201219070835.1"><vh>&lt;&lt; overview &gt;&gt;</vh></v>
-<v t="ekr.20201219070811.1"><vh>function __nest__</vh></v>
-<v t="ekr.20201219070813.1"><vh>function __init__</vh></v>
+<v t="ekr.20201219070811.1"><vh>__nest__</vh></v>
+<v t="ekr.20201219070813.1"><vh>__init__</vh></v>
 <v t="ekr.20201219070813.2"><vh>var __proxy__</vh></v>
-<v t="ekr.20201219070814.1"><vh>function __get__</vh></v>
-<v t="ekr.20201219071110.1"><vh>function __getcm__ &amp; __getsm__</vh></v>
+<v t="ekr.20201219070814.1"><vh>__get__</vh></v>
+<v t="ekr.20201219071110.1"><vh>__getcm__ &amp; __getsm__</vh></v>
 <v t="ekr.20201219071113.1"><vh>var py_metatype (mother of all metaclasses)</vh></v>
 <v t="ekr.20201219071113.2"><vh>var object (mother of all classes)</vh></v>
-<v t="ekr.20201219071258.1"><vh>function __class__ &amp; __pragma__</vh></v>
+<v t="ekr.20201219071258.1"><vh>__class__ &amp; __pragma__</vh></v>
 </v>
 <v t="ekr.20201219054931.223"><vh>@@clean __envir__.js</vh></v>
 <v t="ekr.20201219054931.224"><vh>@@clean __runtime__.py</vh>
+<v t="ekr.20201227054945.1"><vh>Exception classes...</vh>
 <v t="ekr.20201219054931.226"><vh>class BaseException</vh></v>
 <v t="ekr.20201219054931.227"><vh>class Exception(BaseException)</vh>
 <v t="ekr.20201219054931.228"><vh>Exception.__init__</vh></v>
@@ -349,12 +360,13 @@
 <v t="ekr.20201219054931.250"><vh>class UserWarning(Warning)</vh></v>
 <v t="ekr.20201219054931.251"><vh>class DeprecationWarning(Warning)</vh></v>
 <v t="ekr.20201219054931.252"><vh>class RuntimeWarning(Warning)</vh></v>
+</v>
 <v t="ekr.20201219054931.253"><vh>__sort__</vh></v>
 <v t="ekr.20201219054931.254"><vh>sorted</vh></v>
 <v t="ekr.20201219054931.255"><vh>map</vh></v>
 <v t="ekr.20201219054931.256"><vh>filter</vh></v>
 <v t="ekr.20201219054931.257"><vh>divmod</vh></v>
-<v t="ekr.20201219054931.258"><vh>class complex</vh>
+<v t="ekr.20201219054931.258"><vh>complex numbers...</vh>
 <v t="ekr.20201219054931.259"><vh>complex.__init__</vh></v>
 <v t="ekr.20201219054931.260"><vh>complex.__neg__</vh></v>
 <v t="ekr.20201219054931.261"><vh>complex.__exp__</vh></v>
@@ -375,12 +387,26 @@
 <v t="ekr.20201219054931.276"><vh>complex.__ne__</vh></v>
 <v t="ekr.20201219054931.277"><vh>complex.conjugate</vh></v>
 </v>
-<v t="ekr.20201219054931.278"><vh>__conj__</vh></v>
-<v t="ekr.20201219054931.279"><vh>class __Terminal__</vh>
+<v t="ekr.20201219054931.279"><vh>class __Terminal__ (print &amp; input)</vh>
 <v t="ekr.20201219054931.280"><vh>__Terminal__.__init__</vh></v>
 <v t="ekr.20201219054931.281"><vh>__Terminal__.print</vh></v>
 <v t="ekr.20201219054931.282"><vh>__Terminal__.input</vh></v>
 </v>
+</v>
+<v t="ekr.20201227054732.1"><vh>----- code generation</vh>
+<v t="ekr.20201226145950.1"><vh>Found:allOwnNames</vh>
+<v t="ekr.20201226145856.1"></v>
+<v t="ekr.20201219054931.16"></v>
+<v t="ekr.20201219054931.73"></v>
+<v t="ekr.20201219054931.75"></v>
+<v t="ekr.20201219054931.48"></v>
+<v t="ekr.20201219054931.57"></v>
+<v t="ekr.20201219054931.67"></v>
+<v t="ekr.20201219054931.80"></v>
+<v t="ekr.20201219054931.81"></v>
+</v>
+<v t="ekr.20201219054931.67"></v>
+<v t="ekr.20201219054931.57"></v>
 </v>
 </vnodes>
 <tnodes>
@@ -1504,8 +1530,7 @@ Number.prototype.__format__ = function (fmt_spec) {
 };
 
 __pragma__ ('endif')
-   
-</t>
+   </t>
 <t tx="ekr.20201219054931.139">function pad (s, width, fill, align) {
     if (fill == undefined) {
         fill = ' ';
@@ -2877,11 +2902,19 @@ class Warning (Exception):
 <t tx="ekr.20201219054931.257">def divmod (n, d):
     return n // d, n % d
     
-#__pragma__ ('ifdef', '__complex__')
-
 </t>
-<t tx="ekr.20201219054931.258">class complex:
+<t tx="ekr.20201219054931.258">#__pragma__ ('ifdef', '__complex__')
+
+class complex:
     @others
+
+def __conj__ (aNumber):
+    if isinstance (aNumber, complex):
+        return complex (aNumber.real, -aNumber.imag)
+    else:
+        return complex (aNumber, 0)
+        
+#__pragma__ ('endif')
 </t>
 <t tx="ekr.20201219054931.259">def __init__ (self, real, imag = None):
     if imag == None:
@@ -3018,26 +3051,26 @@ class Warning (Exception):
     return complex (self.real, -self.imag)
     
 </t>
-<t tx="ekr.20201219054931.278">def __conj__ (aNumber):
-    if isinstance (aNumber, complex):
-        return complex (aNumber.real, -aNumber.imag)
-    else:
-        return complex (aNumber, 0)
-        
-#__pragma__ ('endif')
-
-</t>
 <t tx="ekr.20201219054931.279">class __Terminal__:
     '''
-    Printing to either the console or to html happens async, but is blocked by calling window.prompt.
-    So while all input and print statements are encountered in normal order, the print's exit immediately without yet having actually printed
-    This means the next input takes control, blocking actual printing and so on indefinitely
-    The effect is that everything's only printed after all inputs are done
-    To prevent that, what's needed is to only execute the next window.prompt after actual printing has been done
+    Printing to either the console or to html happens async, but is blocked
+    by calling window.prompt.
+    
+    So while all input and print statements are encountered in normal
+    order, the print's exit immediately without yet having actually printed.
+    
+    This means the next input takes control, blocking actual printing and
+    so on indefinitely The effect is that everything's only printed after
+    all inputs are done.
+    
+    To prevent that, what's needed is to only execute the next
+    window.prompt after actual printing has been done.
+    
     Since we've no way to find out when that is, a timeout is used.
     '''
 
     @others
+
 __terminal__ = __Terminal__ ()
 
 print = __terminal__.print
@@ -4264,8 +4297,17 @@ dataClassDefaultArgTuple = (
 
 </t>
 <t tx="ekr.20201219054931.57">def visit_ClassDef (self, node):
+
     self.adaptLineNrString (node)
 
+    ### EKR:
+    ### Apparently vs code doesn't like 'export'.
+    ### Instead, it wants the following at the end:
+        # module.exports = {
+        #   exported_symbol_1,
+        #   exported_symbol_2,
+        #   ...
+        # }
     if type (self.getScope () .node) == ast.Module:
         self.emit ('export var {} = '.format (self.filterId (node.name)))
         self.allOwnNames.add (node.name)
@@ -4279,33 +4321,14 @@ dataClassDefaultArgTuple = (
     # Pop dataclass decorator from decorator list
     isDataClass = False
     if node.decorator_list:
-        if type (node.decorator_list [-1]) == ast.Name and node.decorator_list [-1] .id == 'dataclass':
-            isDataClass = True
-            dataClassArgDict = dict (dataClassDefaultArgTuple)              # Use default decorator args (or rather there are no args)
-            node.decorator_list.pop ()
-        elif type (node.decorator_list [-1]) == ast.Call and node.decorator_list [-1] .func.id == 'dataclass':
-            isDataClass = True
-            dataClassArgDict = {}
-            self.visit_Call (node.decorator_list.pop (), dataClassArgDict)   # Adapt dataClassArgDict to decorator args
+        &lt;&lt; parse decorators &gt;&gt;
 
     decoratorsUsed = 0
     if node.decorator_list:
-        self.emit (' ')
-        if self.allowOperatorOverloading:
-            self.emit ('__call__ (')    # The decorator is called, it may be a ast.Name (paramless) of a function or the result of an ast.Call (with params)
-
-        for decorator in node.decorator_list:
-            if decoratorsUsed &gt; 0:
-                self.emit (' (')
-            self.visit (decorator)      # This can either be a ast.Name (paramless dec) or and ast.Call (dec with params)
-            decoratorsUsed += 1
-
-        if self.allowOperatorOverloading:
-            self.emit (', null, ')
-        else:
-            self.emit (' (')
+        &lt;&lt; generator decorators &gt;&gt;
 
     self.emit (' __class__ (\'{}\', [', self.filterId (node.name))
+
     if node.bases:
         for index, expr in enumerate (node.bases):
             try:
@@ -4324,21 +4347,8 @@ dataClassDefaultArgTuple = (
 
     self.indent ()
     self.emit ('\n__module__: __name__,')
-
-    # LHS plays a role in a.o. __repr__ in a dataclass
-    inlineAssigns = []      # LHS is simple name, class var assignment generates initialisation of field in object literal
-    propertyAssigns = []    # LHS is simple name, RHS is property constructor call
-    initAssigns = []        # Dataclass instance var assignment, these are also the params to the generated __init__
-
-    # LHS plays no role in a.o. __repr__ in a dataclass
-    delayedAssigns = []     # LHS is array element, attribute or compound destructuring target, class var assignement generates statement after class object literal
-
-    # Assignments whose LHS name is used in __repr__, have to be in ordere encountered, so can't be computed by concatenation of &lt;other&gt;VarAssigns
-    reprAssigns = []       # Representation consists of instance vars, class vars and properties, in the order encountered
-
-    # Assignments whose LHS names is used in comparisons, have to be in ordere encountered, so can't be computed by concatenation of &lt;other&gt;VarAssigns
-    # Class vars shouln't be included, as only objects of the same class can be compared
-    compareAssigns = []     # Comparing is done by instance vars and properties, in the order encountered
+    
+    &lt;&lt; Define lists &gt;&gt;
 
     index = 0
 
@@ -4347,70 +4357,7 @@ dataClassDefaultArgTuple = (
         initHoistIndentLevel = self.indentLevel
 
     for statement in node.body:
-        if self.isCommentString (statement):
-            pass
-        elif type (statement) in (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef):
-            self.emitComma (index, False)
-            self.visit (statement)
-            index += 1
-
-        elif type (statement) == ast.Assign:
-            if len (statement.targets) == 1 and type (statement.targets [0]) == ast.Name:
-                # LHS is simply a name
-                if type (statement.value) == ast.Call and type (statement.value.func) == ast.Name and statement.value.func.id == 'property':
-                    # Property construction, should be generated after the class
-                    propertyAssigns.append (statement)
-                else:
-                    # Simple class var assignment, can be generated in-line as initialisation field of a JavaScript object literal
-                    inlineAssigns.append (statement)
-                    self.emitComma (index, False)
-                    self.emit ('\n{}: ', self.filterId (statement.targets [0] .id))
-                    self.visit (statement.value)
-                    self.adaptLineNrString (statement)
-                    index += 1
-            else:
-                # LHS is attribute, array element or compound destructuring target
-                # Has to be generated after the class because it requires the use of an algorithm and can't be initialisation of field of an object literal
-                # Limitation: Can't properly deal with line number in this case
-                delayedAssigns.append (statement)
-
-        elif type (statement) == ast.AnnAssign:
-            # An annotated assignment is never a destructuring assignment
-            if type (statement.value) == ast.Call and type (statement.value.func) == ast.Name and statement.value.func.id == 'property':
-                # Property construction, should be generated after the class
-                propertyAssigns.append (statement)
-                if isDataClass:
-                    reprAssigns.append (statement)
-                    compareAssigns.append (statement)
-            elif isDataClass and type (statement.annotation) == ast.Name and statement.annotation.id != 'ClassVar':
-                # Possible data class assignment
-                inlineAssigns.append (statement)    # For defaults a class var will do
-                initAssigns.append (statement)
-                reprAssigns.append (statement)
-                compareAssigns.append (statement)
-                self.emitComma (index, False)
-                self.emit ('\n{}: ', self.filterId (statement.target.id))
-                self.visit (statement.value)
-                self.adaptLineNrString (statement)
-                index += 1
-            elif type (statement.target) == ast.Name:
-                try:
-                    # Simple class var assignment
-                    inlineAssigns.append (statement)
-                    self.emitComma (index, False)
-                    self.emit ('\n{}: ', self.filterId (statement.target.id))
-                    self.visit (statement.value)
-                    self.adaptLineNrString (statement)
-                    index += 1
-                except:
-                    print (traceback.format_exc ())
-            else:
-                # LHS is attribute or array element, we can't use it for representation or comparison
-                delayedAssigns.append (statement)
-
-        elif self.getPragmaFromExpr (statement):
-            # It's a pragma
-            self.visit (statement)
+        &lt;&lt; Handle one statement in node.body &gt;&gt;
     self.dedent ()
 
     self.emit ('\n}}')
@@ -4437,200 +4384,7 @@ dataClassDefaultArgTuple = (
         if docString:
            self.emit (' .__setdoc__ (\'{}\')', docString.replace ('\n', '\\n '))
 
-    # Deal with data class var assigns, a flavor of special class var assigns
-    if isDataClass: # Constructor + params have to be generated, no real class vars, just syntactically
-        nrOfFragmentsToJump = self.fragmentIndex - initHoistFragmentIndex
-        self.fragmentIndex = initHoistFragmentIndex
-
-        originalIndentLevel = self.indentLevel
-        self.indentLevel = initHoistIndentLevel
-
-        initArgs = [(
-            (
-                    initAssign.targets [0]
-                if type (initAssign) == ast.Assign else
-                    initAssign.target
-            ) .id,
-            initAssign.value
-         ) for initAssign in initAssigns]
-
-        reprNames = [
-        (
-            reprAssign.targets [0]
-        if type (reprAssign) == ast.Assign else
-            reprAssign.target
-        ) .id
-        for reprAssign in reprAssigns]
-
-        compareNames = [
-        (
-                compareAssign.targets [0]
-            if type (compareAssign) == ast.Assign else
-                compareAssign.target
-        ) .id
-        for compareAssign in compareAssigns]
-
-        # Generate __init__
-        if dataClassArgDict ['repr']:
-            originalAllowKeywordArgs = self.allowKeywordArgs
-            self.allowKeywordArgs = True
-            self.visit (ast.FunctionDef (
-                name = '__init__',
-                args = ast.arguments (
-                    args = [ast.arg (arg = 'self', annotation = None)],
-                    vararg = ast.arg (arg = 'args', annotation = None),
-                    kwonlyargs = [],
-                    kw_defaults = [],
-                    kwarg = ast.arg (arg = 'kwargs', annotation = None),
-                    defaults = []
-                ),
-                body = [
-                    ast.Expr (
-                        value = ast.Call (
-                            func = ast.Name (
-                                id = '__pragma__',
-                                ctx = ast.Load
-                            ),
-                            args = [
-                                ast.Str (
-                                    s = 'js'
-                                ),
-                                ast.Str (
-                                    s = '{}'
-                                ),
-                                ast.Str (
-                                    s = '''
-let names = self.__initfields__.values ();
-for (let arg of args) {
-     self [names.next () .value] = arg;
-}
-for (let name of kwargs.py_keys ()) {
-    self [name] = kwargs [name];
-}
-                                    '''.strip ()
-                                )
-                            ],
-                            keywords = []
-                        )
-                    )
-                ],
-                decorator_list = [],
-                returns = None,
-                docstring = None
-            ))
-            self.emit (',')
-            self.allowKeywordArgs = originalAllowKeywordArgs
-
-        # Generate __repr__
-        if dataClassArgDict ['repr']:
-            self.visit (ast.FunctionDef (
-                name = '__repr__',
-                args = ast.arguments (
-                    args = [ast.arg (arg = 'self', annotation = None)],
-                    vararg = None,
-                    kwonlyargs = [],
-                    kw_defaults = [],
-                    kwarg = None,
-                    defaults = []
-                ),
-                body = [
-                    ast.Expr (
-                        value = ast.Call (
-                            func = ast.Name (
-                                id = '__pragma__',
-                                ctx = ast.Load
-                            ),
-                            args = [
-                                ast.Str (
-                                    s = 'js'
-                                ),
-                                ast.Str (
-                                    s = '{}'
-                                ),
-                                ast.Str (
-                                    s = '''
-let names = self.__reprfields__.values ();
-let fields = [];
-for (let name of names) {{
-    fields.push (name + '=' + repr (self [name]));
-}}
-return  self.__name__ + '(' + ', '.join (fields) + ')'
-                                    '''.strip ()
-                                )
-                            ],
-                            keywords = []
-                        )
-                    )
-                ],
-                decorator_list = [],
-                returns = None,
-                docstring = None
-            ))
-            self.emit (',')
-
-         # Generate comparators   !!! TODO: Add check that self and other are of same class
-        comparatorNames = []
-        if 'eq' in dataClassArgDict:
-            comparatorNames += ['__eq__', '__ne__']
-        if 'order' in dataClassArgDict:
-            comparatorNames += ['__lt__', '__le__', '__gt__', '__ge__']
-        for comparatorName in comparatorNames:
-            self.visit (ast.FunctionDef (
-                name = comparatorName,
-                args = ast.arguments (
-                    args = [
-                        ast.arg (arg = 'self', annotation = None),
-                        ast.arg (arg = 'other', annotation = None)
-                    ],
-                    vararg = None,
-                    kwonlyargs = [],
-                    kw_defaults = [],
-                    kwarg = None,
-                    defaults = []
-                ),
-                body = [
-                    ast.Expr (
-                        value = ast.Call (
-                            func = ast.Name (
-                                id = '__pragma__',
-                                ctx = ast.Load
-                            ),
-                            args = [
-                                ast.Str (
-                                    s = 'js'
-                                ),
-                                ast.Str (
-                                    s = '{}'
-                                ),
-                                ast.Str (
-### Perfect import failed here.
-                                    s = ('''
-let names = self.__comparefields__.values ();
-let selfFields = [];
-let otherFields = [];
-for (let name of names) {
-    selfFields.push (self [name]);
-    otherFields.push (other [name]);
-}
-return list (selfFields).''' + comparatorName + '''(list (otherFields));
-                                    ''').strip ()   # ... Adding is ugly, repair __pragma__
-                                )
-                            ],
-                            keywords = []
-                        )
-                    )
-                 ],
-                decorator_list = []
-            ))
-            returns = None,
-            self.emit (',')
-
-        # After inserting at init hoist location, jump forward as much as we jumped back
-        # Simply going back to the original fragment index won't work, since fragments were prepended
-        self.fragmentIndex += nrOfFragmentsToJump
-
-        # And restore indent level to where we were
-        self.indentLevel = originalIndentLevel
+    &lt;&lt; Handle class var assigns &gt;&gt;
 
     # Deal with delayed assigns and property assigns
     # Property assigns will be pushed onto a stack
@@ -4648,75 +4402,13 @@ return list (selfFields).''' + comparatorName + '''(list (otherFields));
     ))
 
     self.descope () # No earlier, class vars need it
+    
+    &lt;&lt; define emitters &gt;&gt;
 
-    def emitMerges ():
-        def emitMerge (merge):
-            # Merge dataclass fields for any class, since parents or descendants may be dataclasses
-            # ??? Should __bases__ hold complete dotted classnames in case of local classes?
-            if merge.isDataClass:
-                self.emit ('\nfor (let aClass of {}.__bases__) {{\n', self.filterId (merge.className))
-                self.indent ()
-                self.emit ('__mergefields__ ({}, aClass);\n', self.filterId (merge.className))
-                self.dedent ()
-                self.emit ('}}')
-
-                # Merge dataclass fields for current class
-                self.emit (';\n__mergefields__ ({}, {{', self.filterId (merge.className))
-                self.emit ('__reprfields__: new Set ([{}]), ', ', '.join ('\'{}\''.format (reprAssign.target.id) for reprAssign in merge.reprAssigns))
-                self.emit ('__comparefields__: new Set ([{}]), ', ', '.join ('\'{}\''.format (compareAssign.target.id) for compareAssign in merge.compareAssigns))
-                self.emit ('__initfields__: new Set ([{}])', ', '.join ('\'{}\''.format (initAssign.target.id) for initAssign in merge.initAssigns))
-                self.emit ('}})')
-
-        for merge in self.mergeList:
-            emitMerge (merge)
-
-        self.mergeList = []
-
-    def emitProperties ():
-        def emitProperty (className, propertyName, getterName, setterName = None):
-            self.emit ('\nObject.defineProperty ({}, \'{}\', '.format (className, propertyName))
-            if setterName:
-                self.emit ('property.call ({0}, {0}.{1}, {0}.{2})'.format (className, getterName, setterName))
-            else:
-                self.emit ('property.call ({0}, {0}.{1})'.format (className, getterName))
-            self.emit (');')
-
-        if self.propertyAccessorList:
-            self.emit (';')
-        while self.propertyAccessorList:
-            propertyAccessor = self.propertyAccessorList.pop ()
-            className = propertyAccessor.className
-            functionName = propertyAccessor.functionName
-            propertyName = functionName [5:]
-            isGetter = functionName [:5] == '_get_'
-
-            # Find a pair
-            for propertyAccessor2 in self.propertyAccessorList:
-                className2 = propertyAccessor2.className
-                functionName2 = propertyAccessor2.functionName
-                propertyName2 = functionName2 [5:]
-                isGetter2 = functionName2 [:5] == '_get_'
-
-                if className == className2 and propertyName == propertyName2 and isGetter != isGetter2:
-                    # Remove pair
-                    self.propertyAccessorList.remove (propertyAccessor2)
-                    if isGetter:
-                        emitProperty (className, propertyName, functionName, functionName2)
-                    else:
-                        emitProperty (className, propertyName, functionName2, functionName)
-                    break
-            else:
-                if isGetter:
-                    emitProperty (className, propertyName, functionName)
-                else:
-                    raise utils.Error(
-                        message='\n\tProperty setter declared without getter\n'
-                    )
-
-    if type (self.getScope ().node) != ast.ClassDef:  # Emit properties if this class isn't directly local to another class
+    # Emit properties if this class isn't directly local to another class
+    if type (self.getScope ().node) != ast.ClassDef:  
         emitProperties ()
         emitMerges ()
-
 </t>
 <t tx="ekr.20201219054931.58">def visit_Compare (self, node):
     if len (node.comparators) &gt; 1:
@@ -5034,177 +4726,126 @@ return list (selfFields).''' + comparatorName + '''(list (otherFields));
 
     nodeName = node.name
 
-    if not nodeName == '__pragma__':
-        # Don't generate code for the dummy pragma definition starting the extraLines in utils
-        # Pragma should never be defined, except once directly in JavaScript to support __pragma__ ('&lt;all&gt;')
-        # The rest of its use is only at compile time
+    # Don't generate code for the dummy pragma definition starting the extraLines in utils
+    # Pragma should never be defined, except once directly in JavaScript to support __pragma__ ('&lt;all&gt;')
+    # The rest of its use is only at compile time
+    
+    ### EKR: Why not just return?
+    ### if not nodeName == '__pragma__':
+    if nodeName == '__pragma__':
+        return
 
-        isGlobal = type (self.getScope () .node) == ast.Module
+    isGlobal = type (self.getScope () .node) == ast.Module
 
-        isMethod = not (isGlobal or type (self.getScope () .node) in (ast.FunctionDef, ast.AsyncFunctionDef))
-            # Global or function scope, so it's no method
+    isMethod = not (isGlobal or type (self.getScope () .node) in (ast.FunctionDef, ast.AsyncFunctionDef))
+        # Global or function scope, so it's no method
 
+    if isMethod:
+        self.emit ('\n')
+    self.adaptLineNrString (node)
+
+    decorate = False
+    isClassMethod = False
+    isStaticMethod = False
+    isProperty = False
+    getter = '__get__'
+
+    if node.decorator_list:
+        &lt;&lt; parse decorators &gt;&gt;
+
+    if sum ([isClassMethod, isStaticMethod, isProperty]) &gt; 1:
+        raise utils.Error (
+            lineNr = self.lineNr,
+            message = '\n\tstaticmethod, classmethod and property decorators can\'t be mixed\n'
+        )
+
+    jsCall = self.allowJavaScriptCall and nodeName != '__init__'
+
+    decoratorsUsed = 0
+    if decorate:
+        &lt;&lt; generate decorator &gt;&gt;
+    else:
         if isMethod:
-            self.emit ('\n')
-        self.adaptLineNrString (node)
-
-        decorate = False
-        isClassMethod = False
-        isStaticMethod = False
-        isProperty = False
-        getter = '__get__'
-
-        if node.decorator_list:
-            for decorator in node.decorator_list:
-                decoratorNode = decorator
-                decoratorType = type (decoratorNode)
-                nameCheck = ''
-                while decoratorType != ast.Name:
-                    if decoratorType == ast.Call:
-                        decoratorNode = decoratorNode.func
-                    elif decoratorType == ast.Attribute:
-                        nameCheck = '.' + decoratorNode.attr + nameCheck
-                        decoratorNode = decoratorNode.value
-                    decoratorType = type (decoratorNode)
-
-                nameCheck = decoratorNode.id + nameCheck
-
-                if nameCheck == 'classmethod':
-                    isClassMethod = True
-                    getter = '__getcm__'
-                elif nameCheck == 'staticmethod':
-                    isStaticMethod = True
-                    getter = '__getsm__'
-                elif nameCheck == 'property':
-                    isProperty = True
-                    nodeName = '_get_' + node.name
-                    pushPropertyAccessor (nodeName)
-                elif re.match ('[a-zA-Z0-9_]+\.setter', nameCheck):
-                    isProperty = True
-                    nodeName = '_set_' + re.match ('([a-zA-Z0-9_]+)\.setter', nameCheck).group (1)
-                    pushPropertyAccessor (nodeName)
-                else:
-                    decorate = True
-
-        if sum ([isClassMethod, isStaticMethod, isProperty]) &gt; 1:
-            raise utils.Error (
-                lineNr = self.lineNr,
-                message = '\n\tstaticmethod, classmethod and property decorators can\'t be mixed\n'
-            )
-
-        jsCall = self.allowJavaScriptCall and nodeName != '__init__'
-
-        decoratorsUsed = 0
-        if decorate:
-            if isMethod:
-                if jsCall:
-                    # Decorators are not supported until we resolve, how to pass self or cls
-                    raise utils.Error (
-                        lineNr=self.lineNr,
-                        message='\n\tdecorators are not supported with jscall\n'
-                    )
-
-                    self.emit ('{}: ', self.filterId (nodeName))
-                else:
-                    self.emit ('get {} () {{return {} (this, ', self.filterId (nodeName), getter)
-            elif isGlobal:
-                if type (node.parentNode) == ast.Module and not nodeName in self.allOwnNames:
-                    self.emit ('export ')
-                self.emit ('var {} = ', self.filterId (nodeName))
+            if jsCall:
+                self.emit ('{}: function', self.filterId (nodeName), 'async ' if anAsync else '')
             else:
-                self.emit ('var {} = ', self.filterId (nodeName))
-
-            if self.allowOperatorOverloading:
-                self.emit ('__call__ (')
-
-            for decorator in node.decorator_list:
-                if not (type (decorator) == ast.Name and decorator.id in ('classmethod', 'staticmethod')):
-                    if decoratorsUsed &gt; 0:
-                        self.emit (' (')
-                    self.visit (decorator)
-                    decoratorsUsed += 1
-
-            if self.allowOperatorOverloading:
-                self.emit (', null, ')
-            else:
-                self.emit (' (')
-
-            self.emit ('{}function', 'async ' if anAsync else '')
-
-        else:
-            if isMethod:
-                if jsCall:
-                    self.emit ('{}: function', self.filterId (nodeName), 'async ' if anAsync else '')
-                else:
-                    if isStaticMethod:
-                        self.emit ('get {} () {{return {}function', self.filterId (nodeName), 'async ' if anAsync else '')
-                    else:
-                        self.emit ('get {} () {{return {} (this, {}function', self.filterId (nodeName), getter, 'async ' if anAsync else '')
-            elif isGlobal:
-                if type (node.parentNode) == ast.Module and not nodeName in self.allOwnNames:
-                    self.emit ('export ')
-                self.emit ('var {} = {}function', self.filterId (nodeName), 'async ' if anAsync else '')
-            else:
-                self.emit ('var {} = {}function', self.filterId (nodeName), 'async ' if anAsync else '')
-
-        yieldStarIndex = self.fragmentIndex
-
-        self.emit (' ')
-
-        skipFirstArg = jsCall and not (not isMethod or isStaticMethod or isProperty)
-
-        if skipFirstArg:
-            # Remove first argument from methods when jscall enabled
-            # Exceptions:
-            #   1. staticmethods - don't have "self" or "cls" as first parameter
-            #   2. properties - "self" is passed from property getters, setters
-            #   3. __init__ methods don't work with jscall
-            firstArg = node.args.args [0].arg
-            node.args.args = node.args.args [1:]
-
-        self.visit (node.args)
-
-        if skipFirstArg:
-            # Assign first removed parameter when jscall enabled
-            # Exceptions:
-            #   1. classmethods - need to resolve who is the caller, class or instance
-            if isClassMethod:
-                self.emit ('var {} = \'__class__\' in this ? this.__class__ : this;\n', firstArg)
-            else:
-                self.emit ('var {} = this;\n', firstArg)
-
-        emitScopedBody ()
-        self.emit ('}}')
-
-        if self.allowDocAttribs:
-            docString = ast.get_docstring (node)
-            if docString:
-                self.emit (' .__setdoc__ (\'{}\')', docString.replace ('\n', '\\n '))
-
-
-        if decorate:
-            self.emit (')' * decoratorsUsed)
-
-        if isMethod:
-            if not jsCall:
                 if isStaticMethod:
-                    self.emit (';}}')
+                    self.emit ('get {} () {{return {}function', self.filterId (nodeName), 'async ' if anAsync else '')
                 else:
-                    if self.allowMemoizeCalls:
-                        self.emit (', \'{}\'', nodeName)
-                            # Name will be used as attribute name to add bound function to instance
+                    self.emit ('get {} () {{return {} (this, {}function', self.filterId (nodeName), getter, 'async ' if anAsync else '')
+        elif isGlobal:
+            ### EKR:
+            ### Apparently vs code doesn't like 'export'.
+            ### Instead, it wants the following at the end:
+                # module.exports = {
+                #   exported_symbol_1,
+                #   exported_symbol_2,
+                #   ...
+                # }
+            if type (node.parentNode) == ast.Module and not nodeName in self.allOwnNames:
+                self.emit ('export ')
+            self.emit ('var {} = {}function', self.filterId (nodeName), 'async ' if anAsync else '')
+        else:
+            self.emit ('var {} = {}function', self.filterId (nodeName), 'async ' if anAsync else '')
 
-                    self.emit (');}}')
+    yieldStarIndex = self.fragmentIndex
 
-            if nodeName == '__iter__':
-                self.emit (',\n[Symbol.iterator] () {{return this.__iter__ ()}}')
+    self.emit (' ')
 
-            if nodeName == '__next__':
-                self.emit (',\nnext: __jsUsePyNext__')
-                    # ??? Shouldn't this be a property, to allow bound method pointers
+    skipFirstArg = jsCall and not (not isMethod or isStaticMethod or isProperty)
 
-        if isGlobal:
-            self.allOwnNames.add (nodeName)
+    if skipFirstArg:
+        # Remove first argument from methods when jscall enabled
+        # Exceptions:
+        #   1. staticmethods - don't have "self" or "cls" as first parameter
+        #   2. properties - "self" is passed from property getters, setters
+        #   3. __init__ methods don't work with jscall
+        firstArg = node.args.args [0].arg
+        node.args.args = node.args.args [1:]
+
+    self.visit (node.args)
+
+    if skipFirstArg:
+        # Assign first removed parameter when jscall enabled
+        # Exceptions:
+        #   1. classmethods - need to resolve who is the caller, class or instance
+        if isClassMethod:
+            self.emit ('var {} = \'__class__\' in this ? this.__class__ : this;\n', firstArg)
+        else:
+            self.emit ('var {} = this;\n', firstArg)
+
+    emitScopedBody ()
+    self.emit ('}}')
+
+    if self.allowDocAttribs:
+        docString = ast.get_docstring (node)
+        if docString:
+            self.emit (' .__setdoc__ (\'{}\')', docString.replace ('\n', '\\n '))
+
+
+    if decorate:
+        self.emit (')' * decoratorsUsed)
+
+    if isMethod:
+        if not jsCall:
+            if isStaticMethod:
+                self.emit (';}}')
+            else:
+                if self.allowMemoizeCalls:
+                    self.emit (', \'{}\'', nodeName)
+                        # Name will be used as attribute name to add bound function to instance
+
+                self.emit (');}}')
+
+        if nodeName == '__iter__':
+            self.emit (',\n[Symbol.iterator] () {{return this.__iter__ ()}}')
+
+        if nodeName == '__next__':
+            self.emit (',\nnext: __jsUsePyNext__')
+                # ??? Shouldn't this be a property, to allow bound method pointers
+
+    if isGlobal:
+        self.allOwnNames.add (nodeName)
 
 </t>
 <t tx="ekr.20201219054931.68">def visit_GeneratorExp (self, node):
@@ -5581,10 +5222,13 @@ return list (selfFields).''' + comparatorName + '''(list (otherFields));
     '''
     if self.allowGlobals:
         self.emit (
-            'var __all__ = dict ({{' # Has nothing to do with emitting an export list, just another importable (so exported) module level variable __all__
+            'var __all__ = dict ({{'
+                # Has nothing to do with emitting an export list,
+                # just another importable (so exported) module level variable __all__
             +
             ', '.join ([
-                f'get {name} () {{{{return {name};}}}}, set {name} (value) {{{{{name} = value;}}}}' for name in sorted (self.allOwnNames)
+                f'get {name} () {{{{return {name};}}}}, set {name} (value) {{{{{name} = value;}}}}'
+                    for name in sorted (self.allOwnNames)
             ])
             +
             '}});\n'
@@ -8028,5 +7672,443 @@ export function __pyUseJsNext__ () {
 
 </t>
 <t tx="ekr.20201219074532.1"></t>
+<t tx="ekr.20201226145856.1">if isMethod:
+    if jsCall:
+        # Decorators are not supported until we resolve, how to pass self or cls
+        raise utils.Error (
+            lineNr=self.lineNr,
+            message='\n\tdecorators are not supported with jscall\n'
+        )
+
+        self.emit ('{}: ', self.filterId (nodeName))
+    else:
+        self.emit ('get {} () {{return {} (this, ', self.filterId (nodeName), getter)
+elif isGlobal:
+    ###
+    ### EKR: vs doesn't like export: see note in parent node.
+    ###
+    if type (node.parentNode) == ast.Module and not nodeName in self.allOwnNames:
+        self.emit ('export ')
+    self.emit ('var {} = ', self.filterId (nodeName))
+else:
+    self.emit ('var {} = ', self.filterId (nodeName))
+
+if self.allowOperatorOverloading:
+    self.emit ('__call__ (')
+
+for decorator in node.decorator_list:
+    if not (type (decorator) == ast.Name and decorator.id in ('classmethod', 'staticmethod')):
+        if decoratorsUsed &gt; 0:
+            self.emit (' (')
+        self.visit (decorator)
+        decoratorsUsed += 1
+
+if self.allowOperatorOverloading:
+    self.emit (', null, ')
+else:
+    self.emit (' (')
+
+self.emit ('{}function', 'async ' if anAsync else '')</t>
+<t tx="ekr.20201226145950.1">@nosearch
+
+# flattened, word, ignore-case, head, body
+
+# found 9 nodes</t>
+<t tx="ekr.20201226150311.1">for decorator in node.decorator_list:
+    decoratorNode = decorator
+    decoratorType = type (decoratorNode)
+    nameCheck = ''
+    while decoratorType != ast.Name:
+        if decoratorType == ast.Call:
+            decoratorNode = decoratorNode.func
+        elif decoratorType == ast.Attribute:
+            nameCheck = '.' + decoratorNode.attr + nameCheck
+            decoratorNode = decoratorNode.value
+        decoratorType = type (decoratorNode)
+
+    nameCheck = decoratorNode.id + nameCheck
+
+    if nameCheck == 'classmethod':
+        isClassMethod = True
+        getter = '__getcm__'
+    elif nameCheck == 'staticmethod':
+        isStaticMethod = True
+        getter = '__getsm__'
+    elif nameCheck == 'property':
+        isProperty = True
+        nodeName = '_get_' + node.name
+        pushPropertyAccessor (nodeName)
+    elif re.match ('[a-zA-Z0-9_]+\.setter', nameCheck):
+        isProperty = True
+        nodeName = '_set_' + re.match ('([a-zA-Z0-9_]+)\.setter', nameCheck).group (1)
+        pushPropertyAccessor (nodeName)
+    else:
+        decorate = True</t>
+<t tx="ekr.20201226151328.1">if type (node.decorator_list [-1]) == ast.Name and node.decorator_list [-1] .id == 'dataclass':
+    isDataClass = True
+    dataClassArgDict = dict (dataClassDefaultArgTuple)              # Use default decorator args (or rather there are no args)
+    node.decorator_list.pop ()
+elif type (node.decorator_list [-1]) == ast.Call and node.decorator_list [-1] .func.id == 'dataclass':
+    isDataClass = True
+    dataClassArgDict = {}
+    self.visit_Call (node.decorator_list.pop (), dataClassArgDict)   # Adapt dataClassArgDict to decorator args</t>
+<t tx="ekr.20201226151343.1">self.emit (' ')
+if self.allowOperatorOverloading:
+    self.emit ('__call__ (')    # The decorator is called, it may be a ast.Name (paramless) of a function or the result of an ast.Call (with params)
+
+for decorator in node.decorator_list:
+    if decoratorsUsed &gt; 0:
+        self.emit (' (')
+    self.visit (decorator)      # This can either be a ast.Name (paramless dec) or and ast.Call (dec with params)
+    decoratorsUsed += 1
+
+if self.allowOperatorOverloading:
+    self.emit (', null, ')
+else:
+    self.emit (' (')</t>
+<t tx="ekr.20201226151440.1">
+def emitMerges ():
+    def emitMerge (merge):
+        # Merge dataclass fields for any class, since parents or descendants may be dataclasses
+        # ??? Should __bases__ hold complete dotted classnames in case of local classes?
+        if merge.isDataClass:
+            self.emit ('\nfor (let aClass of {}.__bases__) {{\n', self.filterId (merge.className))
+            self.indent ()
+            self.emit ('__mergefields__ ({}, aClass);\n', self.filterId (merge.className))
+            self.dedent ()
+            self.emit ('}}')
+
+            # Merge dataclass fields for current class
+            self.emit (';\n__mergefields__ ({}, {{', self.filterId (merge.className))
+            self.emit ('__reprfields__: new Set ([{}]), ', ', '.join ('\'{}\''.format (reprAssign.target.id) for reprAssign in merge.reprAssigns))
+            self.emit ('__comparefields__: new Set ([{}]), ', ', '.join ('\'{}\''.format (compareAssign.target.id) for compareAssign in merge.compareAssigns))
+            self.emit ('__initfields__: new Set ([{}])', ', '.join ('\'{}\''.format (initAssign.target.id) for initAssign in merge.initAssigns))
+            self.emit ('}})')
+
+    for merge in self.mergeList:
+        emitMerge (merge)
+
+    self.mergeList = []
+
+def emitProperties ():
+    def emitProperty (className, propertyName, getterName, setterName = None):
+        self.emit ('\nObject.defineProperty ({}, \'{}\', '.format (className, propertyName))
+        if setterName:
+            self.emit ('property.call ({0}, {0}.{1}, {0}.{2})'.format (className, getterName, setterName))
+        else:
+            self.emit ('property.call ({0}, {0}.{1})'.format (className, getterName))
+        self.emit (');')
+
+    if self.propertyAccessorList:
+        self.emit (';')
+    while self.propertyAccessorList:
+        propertyAccessor = self.propertyAccessorList.pop ()
+        className = propertyAccessor.className
+        functionName = propertyAccessor.functionName
+        propertyName = functionName [5:]
+        isGetter = functionName [:5] == '_get_'
+
+        # Find a pair
+        for propertyAccessor2 in self.propertyAccessorList:
+            className2 = propertyAccessor2.className
+            functionName2 = propertyAccessor2.functionName
+            propertyName2 = functionName2 [5:]
+            isGetter2 = functionName2 [:5] == '_get_'
+
+            if className == className2 and propertyName == propertyName2 and isGetter != isGetter2:
+                # Remove pair
+                self.propertyAccessorList.remove (propertyAccessor2)
+                if isGetter:
+                    emitProperty (className, propertyName, functionName, functionName2)
+                else:
+                    emitProperty (className, propertyName, functionName2, functionName)
+                break
+        else:
+            if isGetter:
+                emitProperty (className, propertyName, functionName)
+            else:
+                raise utils.Error(
+                    message='\n\tProperty setter declared without getter\n'
+                )</t>
+<t tx="ekr.20201226151532.1">if self.isCommentString (statement):
+    pass
+elif type (statement) in (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef):
+    self.emitComma (index, False)
+    self.visit (statement)
+    index += 1
+
+elif type (statement) == ast.Assign:
+    if len (statement.targets) == 1 and type (statement.targets [0]) == ast.Name:
+        # LHS is simply a name
+        if type (statement.value) == ast.Call and type (statement.value.func) == ast.Name and statement.value.func.id == 'property':
+            # Property construction, should be generated after the class
+            propertyAssigns.append (statement)
+        else:
+            # Simple class var assignment, can be generated in-line as initialisation field of a JavaScript object literal
+            inlineAssigns.append (statement)
+            self.emitComma (index, False)
+            self.emit ('\n{}: ', self.filterId (statement.targets [0] .id))
+            self.visit (statement.value)
+            self.adaptLineNrString (statement)
+            index += 1
+    else:
+        # LHS is attribute, array element or compound destructuring target
+        # Has to be generated after the class because it requires the use of an algorithm and can't be initialisation of field of an object literal
+        # Limitation: Can't properly deal with line number in this case
+        delayedAssigns.append (statement)
+
+elif type (statement) == ast.AnnAssign:
+    # An annotated assignment is never a destructuring assignment
+    if type (statement.value) == ast.Call and type (statement.value.func) == ast.Name and statement.value.func.id == 'property':
+        # Property construction, should be generated after the class
+        propertyAssigns.append (statement)
+        if isDataClass:
+            reprAssigns.append (statement)
+            compareAssigns.append (statement)
+    elif isDataClass and type (statement.annotation) == ast.Name and statement.annotation.id != 'ClassVar':
+        # Possible data class assignment
+        inlineAssigns.append (statement)    # For defaults a class var will do
+        initAssigns.append (statement)
+        reprAssigns.append (statement)
+        compareAssigns.append (statement)
+        self.emitComma (index, False)
+        self.emit ('\n{}: ', self.filterId (statement.target.id))
+        self.visit (statement.value)
+        self.adaptLineNrString (statement)
+        index += 1
+    elif type (statement.target) == ast.Name:
+        try:
+            # Simple class var assignment
+            inlineAssigns.append (statement)
+            self.emitComma (index, False)
+            self.emit ('\n{}: ', self.filterId (statement.target.id))
+            self.visit (statement.value)
+            self.adaptLineNrString (statement)
+            index += 1
+        except:
+            print (traceback.format_exc ())
+    else:
+        # LHS is attribute or array element, we can't use it for representation or comparison
+        delayedAssigns.append (statement)
+
+elif self.getPragmaFromExpr (statement):
+    # It's a pragma
+    self.visit (statement)</t>
+<t tx="ekr.20201226151714.1"># Deal with data class var assigns, a flavor of special class var assigns
+if isDataClass: # Constructor + params have to be generated, no real class vars, just syntactically
+    nrOfFragmentsToJump = self.fragmentIndex - initHoistFragmentIndex
+    self.fragmentIndex = initHoistFragmentIndex
+
+    originalIndentLevel = self.indentLevel
+    self.indentLevel = initHoistIndentLevel
+
+    initArgs = [(
+        (
+                initAssign.targets [0]
+            if type (initAssign) == ast.Assign else
+                initAssign.target
+        ) .id,
+        initAssign.value
+     ) for initAssign in initAssigns]
+
+    reprNames = [
+    (
+        reprAssign.targets [0]
+    if type (reprAssign) == ast.Assign else
+        reprAssign.target
+    ) .id
+    for reprAssign in reprAssigns]
+
+    compareNames = [
+    (
+            compareAssign.targets [0]
+        if type (compareAssign) == ast.Assign else
+            compareAssign.target
+    ) .id
+    for compareAssign in compareAssigns]
+
+    # Generate __init__
+    if dataClassArgDict ['repr']:
+        originalAllowKeywordArgs = self.allowKeywordArgs
+        self.allowKeywordArgs = True
+        self.visit (ast.FunctionDef (
+            name = '__init__',
+            args = ast.arguments (
+                args = [ast.arg (arg = 'self', annotation = None)],
+                vararg = ast.arg (arg = 'args', annotation = None),
+                kwonlyargs = [],
+                kw_defaults = [],
+                kwarg = ast.arg (arg = 'kwargs', annotation = None),
+                defaults = []
+            ),
+            body = [
+                ast.Expr (
+                    value = ast.Call (
+                        func = ast.Name (
+                            id = '__pragma__',
+                            ctx = ast.Load
+                        ),
+                        args = [
+                            ast.Str (
+                                s = 'js'
+                            ),
+                            ast.Str (
+                                s = '{}'
+                            ),
+                            ast.Str (
+                                s = '''
+let names = self.__initfields__.values ();
+for (let arg of args) {
+ self [names.next () .value] = arg;
+}
+for (let name of kwargs.py_keys ()) {
+self [name] = kwargs [name];
+}
+                                '''.strip ()
+                            )
+                        ],
+                        keywords = []
+                    )
+                )
+            ],
+            decorator_list = [],
+            returns = None,
+            docstring = None
+        ))
+        self.emit (',')
+        self.allowKeywordArgs = originalAllowKeywordArgs
+
+    # Generate __repr__
+    if dataClassArgDict ['repr']:
+        self.visit (ast.FunctionDef (
+            name = '__repr__',
+            args = ast.arguments (
+                args = [ast.arg (arg = 'self', annotation = None)],
+                vararg = None,
+                kwonlyargs = [],
+                kw_defaults = [],
+                kwarg = None,
+                defaults = []
+            ),
+            body = [
+                ast.Expr (
+                    value = ast.Call (
+                        func = ast.Name (
+                            id = '__pragma__',
+                            ctx = ast.Load
+                        ),
+                        args = [
+                            ast.Str (
+                                s = 'js'
+                            ),
+                            ast.Str (
+                                s = '{}'
+                            ),
+                            ast.Str (
+                                s = '''
+let names = self.__reprfields__.values ();
+let fields = [];
+for (let name of names) {{
+fields.push (name + '=' + repr (self [name]));
+}}
+return  self.__name__ + '(' + ', '.join (fields) + ')'
+                                '''.strip ()
+                            )
+                        ],
+                        keywords = []
+                    )
+                )
+            ],
+            decorator_list = [],
+            returns = None,
+            docstring = None
+        ))
+        self.emit (',')
+
+     # Generate comparators   !!! TODO: Add check that self and other are of same class
+    comparatorNames = []
+    if 'eq' in dataClassArgDict:
+        comparatorNames += ['__eq__', '__ne__']
+    if 'order' in dataClassArgDict:
+        comparatorNames += ['__lt__', '__le__', '__gt__', '__ge__']
+    for comparatorName in comparatorNames:
+        self.visit (ast.FunctionDef (
+            name = comparatorName,
+            args = ast.arguments (
+                args = [
+                    ast.arg (arg = 'self', annotation = None),
+                    ast.arg (arg = 'other', annotation = None)
+                ],
+                vararg = None,
+                kwonlyargs = [],
+                kw_defaults = [],
+                kwarg = None,
+                defaults = []
+            ),
+            body = [
+                ast.Expr (
+                    value = ast.Call (
+                        func = ast.Name (
+                            id = '__pragma__',
+                            ctx = ast.Load
+                        ),
+                        args = [
+                            ast.Str (
+                                s = 'js'
+                            ),
+                            ast.Str (
+                                s = '{}'
+                            ),
+                            ast.Str (
+### Perfect import failed here.
+                                s = ('''
+let names = self.__comparefields__.values ();
+let selfFields = [];
+let otherFields = [];
+for (let name of names) {
+selfFields.push (self [name]);
+otherFields.push (other [name]);
+}
+return list (selfFields).''' + comparatorName + '''(list (otherFields));
+                                ''').strip ()   # ... Adding is ugly, repair __pragma__
+                            )
+                        ],
+                        keywords = []
+                    )
+                )
+             ],
+            decorator_list = []
+        ))
+        returns = None,
+        self.emit (',')
+
+    # After inserting at init hoist location, jump forward as much as we jumped back
+    # Simply going back to the original fragment index won't work, since fragments were prepended
+    self.fragmentIndex += nrOfFragmentsToJump
+
+    # And restore indent level to where we were
+    self.indentLevel = originalIndentLevel</t>
+<t tx="ekr.20201226151908.1"># LHS plays a role in a.o. __repr__ in a dataclass
+
+inlineAssigns = []      # LHS is simple name, class var assignment generates initialisation of field in object literal
+propertyAssigns = []    # LHS is simple name, RHS is property constructor call
+initAssigns = []        # Dataclass instance var assignment, these are also the params to the generated __init__
+
+# LHS plays no role in a.o. __repr__ in a dataclass
+
+delayedAssigns = []     # LHS is array element, attribute or compound destructuring target, class var assignement generates statement after class object literal
+
+# Assignments whose LHS name is used in __repr__, have to be in ordere encountered,
+# so can't be computed by concatenation of &lt;other&gt;VarAssigns
+
+reprAssigns = []       # Representation consists of instance vars, class vars and properties, in the order encountered
+
+# Assignments whose LHS names is used in comparisons, have to be in ordere encountered,
+# so can't be computed by concatenation of &lt;other&gt;VarAssigns
+# Class vars shouln't be included, as only objects of the same class can be compared.
+
+compareAssigns = []     # Comparing is done by instance vars and properties, in the order encountered</t>
+<t tx="ekr.20201227054732.1"></t>
+<t tx="ekr.20201227054945.1"></t>
 </tnodes>
 </leo_file>
