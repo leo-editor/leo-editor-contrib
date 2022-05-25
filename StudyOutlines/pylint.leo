@@ -7,6 +7,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20220312061835.1"><vh>python39/Lib/site-packages/pylint</vh></v>
+<v t="ekr.20220406143448.1"><vh>Files...</vh>
 <v t="ekr.20220312061835.2"><vh>@@clean constants.py</vh>
 <v t="ekr.20220312061835.3"><vh>class WarningScope</vh></v>
 </v>
@@ -2141,7 +2142,8 @@
 </v>
 <v t="ekr.20220312061835.1868"><vh>@@clean __init__.py</vh></v>
 </v>
-<v t="ekr.20220404133153.1"><vh>--- Recent</vh></v>
+</v>
+<v t="ekr.20220404133153.1"><vh>Recent</vh>
 <v t="ekr.20220312061835.1817"></v>
 <v t="ekr.20220404130423.1"><vh>Found 43: yield</vh>
 <v t="ekr.20220404130439.1"><vh>--- 18: not real yield statement</vh>
@@ -2203,6 +2205,13 @@
 <v t="ekr.20220312061835.1465"></v>
 <v t="ekr.20220312061835.1463"></v>
 </v>
+</v>
+<v t="ekr.20220406143529.1"><vh>** To do</vh></v>
+<v t="ekr.20220406180853.1"><vh>** Testing (See children for logs)</vh>
+<v t="ekr.20220406180809.1"><vh>LOG: pip install -e ekr-pylint</vh></v>
+<v t="ekr.20220406181846.1"><vh>LOG: python -m tox --recreate</vh></v>
+</v>
+<v t="ekr.20220408204716.1"><vh>@button test-all</vh></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20220312061835.1"></t>
@@ -39098,5 +39107,2414 @@ def _and_or_ternary_arguments(node):
 # Word, Ignore Case, Head, Body
 
 # found 2 nodes</t>
+<t tx="ekr.20220406143448.1"></t>
+<t tx="ekr.20220406143529.1">@language rest
+@wrap
+
+repo:  c:\leo.repo\ekr-pylint
+
+
+
+
+- Add @test-one
+- Add @cover-all node.
+
+@language python
+</t>
+<t tx="ekr.20220406180809.1">c:\leo.repo\leo-editor&gt;cd c:\leo.repo
+
+c:\leo.repo&gt;git clone https://github.com/PyCQA/pylint.git ekr-pylint
+
+c:\leo.repo&gt;c:\Apps\Git\bin\git.exe clone https://github.com/PyCQA/pylint.git ekr-pylint
+Cloning into 'ekr-pylint'...
+remote: Enumerating objects: 58264, done.
+remote: Counting objects: 100% (2018/2018), done.
+remote: Compressing objects: 100% (951/951), done.
+remote: Total 58264 (delta 1239), reused 1590 (delta 974), pack-reused 56246
+Receiving objects: 100% (58264/58264), 32.02 MiB | 17.97 MiB/s, done.
+Resolving deltas: 100% (36682/36682), done.
+
+c:\leo.repo&gt;pip install -e ekr-pylint
+
+c:\leo.repo&gt;rem "C:\Users\Edward Ream\Python\Python39\Scripts\pip.exe" install -e ekr-pylint
+
+c:\leo.repo&gt;python -m pip install -e ekr-pylint
+
+c:\leo.repo&gt;echo off
+Obtaining file:///C:/leo.repo/ekr-pylint
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: dill&gt;=0.2 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (0.3.4)
+Requirement already satisfied: platformdirs&gt;=2.2.0 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (2.5.1)
+Requirement already satisfied: astroid&lt;=2.12.0-dev0,&gt;=2.11.2 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (2.11.2)
+Requirement already satisfied: isort&lt;6,&gt;=4.2.5 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (5.10.1)
+Requirement already satisfied: mccabe&lt;0.8,&gt;=0.6 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (0.7.0)
+Requirement already satisfied: tomli&gt;=1.1.0 in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (2.0.1)
+Requirement already satisfied: colorama in c:\users\edward ream\python\python310\lib\site-packages (from pylint==2.14.0.dev0) (0.4.4)
+Requirement already satisfied: lazy-object-proxy&gt;=1.4.0 in c:\users\edward ream\python\python310\lib\site-packages (from astroid&lt;=2.12.0-dev0,&gt;=2.11.2-&gt;pylint==2.14.0.dev0) (1.7.1)
+Requirement already satisfied: wrapt&lt;2,&gt;=1.11 in c:\users\edward ream\python\python310\lib\site-packages (from astroid&lt;=2.12.0-dev0,&gt;=2.11.2-&gt;pylint==2.14.0.dev0) (1.14.0)
+Requirement already satisfied: setuptools&gt;=20.0 in c:\users\edward ream\python\python310\lib\site-packages (from astroid&lt;=2.12.0-dev0,&gt;=2.11.2-&gt;pylint==2.14.0.dev0) (58.1.0)
+Installing collected packages: pylint
+  Attempting uninstall: pylint
+    Found existing installation: pylint 2.13.2
+    Uninstalling pylint-2.13.2:
+      Successfully uninstalled pylint-2.13.2
+  Running setup.py develop for pylint
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+leo 6.6 requires asttokens, which is not installed.
+leo 6.6 requires build&gt;=0.6.0, which is not installed.
+leo 6.6 requires meta, which is not installed.
+leo 6.6 requires pyflakes, which is not installed.
+leo 6.6 requires PyQtWebEngine, which is not installed.
+leo 6.6 requires pyshortcuts&gt;=1.7, which is not installed.
+leo 6.6 requires sphinx, which is not installed.
+Successfully installed pylint-2.14.0.dev0
+</t>
+<t tx="ekr.20220406180853.1">@language rest
+@wrap
+
+How to run pylint unit tests:
+https://pylint.pycqa.org/en/latest/development_guide/testing.html
+
+==== install ekr-pylint repo and install the required pylint environment.
+
+cd c:\leo.repo
+git clone https://github.com/PyCQA/pylint.git ekr-pylint
+pip install -e ekr-pylint
+
+=== install tox
+
+pip install tox
+
+=== run the unit tests with tox
+
+cd ekr-pylint
+python -m tox --recreate -epy39 -e py39
+python -m tox --recreate</t>
+<t tx="ekr.20220406181846.1">@killcolor
+@wrap
+
+c:\leo.repo\ekr-pylint&gt;python -m tox --recreate
+
+c:\leo.repo\ekr-pylint&gt;echo off
+GLOB sdist-make: c:\leo.repo\ekr-pylint\setup.py
+formatting create: c:\leo.repo\ekr-pylint\.tox\formatting
+formatting installdeps: -rc:\leo.repo\ekr-pylint/requirements_test_min.txt, pre-commit~=2.13
+formatting inst: c:\leo.repo\ekr-pylint\.tox\.tmp\package\1\pylint-2.14.0.dev0.zip
+formatting installed: astroid==2.11.2,atomicwrites==1.4.0,attrs==21.4.0,beautifulsoup4==4.10.0,black==22.3.0,bleach==4.1.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,click==8.1.0,colorama==0.4.4,coverage==6.3.2,cycler==0.11.0,defusedxml==0.7.1,dialite==0.5.3,dill==0.3.4,distlib==0.3.4,docutils==0.18.1,entrypoints==0.4,feedparser==6.0.8,filelock==3.6.0,flexx==0.8.3,fonttools==4.31.2,gitdb==4.0.9,GitPython==3.1.27,identify==2.4.12,idna==3.3,ImageHash==4.2.1,iniconfig==1.1.1,isort==5.10.1,Jinja2==3.1.1,jsonschema==4.4.0,jupyter-client==7.2.1,jupyter-core==4.9.2,jupyterlab-pygments==0.1.2,kiwisolver==1.4.1,lazy-object-proxy==1.7.1,leo==6.6,lxml==4.8.0,Markdown==3.3.6,MarkupSafe==2.1.1,matplotlib==3.5.1,mccabe==0.7.0,mistune==0.8.4,mypy-extensions==0.4.3,nbclient==0.5.13,nbconvert==6.4.5,nbformat==5.2.0,nest-asyncio==1.5.5,nodeenv==1.6.0,numpy==1.22.3,packaging==21.3,pandocfilters==1.5.0,pathspec==0.9.0,Pillow==9.0.1,platformdirs==2.5.1,pluggy==1.0.0,pre-commit==2.18.1,pscript==0.7.7,py==1.11.0,py-cpuinfo==8.0.0,pyenchant==3.2.2,Pygments==2.11.2,pylint @ file:///C:/leo.repo/ekr-pylint/.tox/.tmp/package/1/pylint-2.14.0.dev0.zip,pyparsing==3.0.7,PyQt5==5.15.6,PyQt5-Qt5==5.15.2,PyQt5-sip==12.9.1,PyQt6==6.2.3,PyQt6-Qt6==6.2.4,PyQt6-sip==13.2.1,PyQt6-WebEngine==6.2.1,PyQt6-WebEngine-Qt6==6.2.4,pyrsistent==0.18.1,pytest==7.1.1,pytest-benchmark==3.4.1,pytest-cov==3.0.0,pytest-timeout==2.1.0,python-dateutil==2.8.2,PyWavelets==1.3.0,pywin32==303,PyYAML==6.0,pyzmq==22.3.0,requests==2.27.1,scipy==1.8.0,Send2Trash==1.8.0,sgmllib3k==1.0.0,six==1.16.0,smmap==5.0.0,soupsieve==2.3.1,testpath==0.6.0,toml==0.10.2,tomli==2.0.1,tornado==6.1,tox==3.24.5,traitlets==5.1.1,types-docutils==0.18.0,types-requests==2.27.15,types-urllib3==1.26.11,typing_extensions==4.1.1,urllib3==1.26.9,virtualenv==20.14.0,webencodings==0.5.1,webruntime==0.5.8,websockets==10.2,windows-curses==2.3.0,wrapt==1.14.0
+formatting run-test-pre: PYTHONHASHSEED='743'
+formatting run-test: commands[0] | pre-commit run --all-files
+An error has occurred: FatalError: git toplevel unexpectedly empty! make sure you are not inside the `.git` directory of your repository.
+Check the log at C:\Users\Edward Ream\.cache\pre-commit\pre-commit.log
+ERROR: InvocationError for command 'c:\leo.repo\ekr-pylint\.tox\formatting\Scripts\pre-commit.EXE' run --all-files (exited with code 1)
+py36 create: c:\leo.repo\ekr-pylint\.tox\py36
+py36 installdeps: -rc:\leo.repo\ekr-pylint/requirements_test.txt
+py36 inst: c:\leo.repo\ekr-pylint\.tox\.tmp\package\1\pylint-2.14.0.dev0.zip
+py36 installed: astroid==2.11.2,atomicwrites==1.4.0,attrs==21.4.0,black==22.3.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,cli-ui==0.15.2,click==8.0.4,colorama==0.4.4,contextlib2==21.6.0,contributors-txt==0.7.5,coverage==6.2,coveralls==3.3.1,dataclasses==0.8,dill==0.3.4,distlib==0.3.4,docopt==0.6.2,execnet==1.9.0,filelock==3.4.1,flake8==4.0.1,flake8-typing-imports==1.12.0,gitdb==4.0.9,GitPython==3.1.18,gprof2dot==2021.2.21,identify==2.4.4,idna==3.3,importlib-metadata==4.2.0,importlib-resources==5.2.3,iniconfig==1.1.1,isort==5.10.1,lazy-object-proxy==1.7.1,mccabe==0.6.1,mypy==0.942,mypy-extensions==0.4.3,nodeenv==1.6.0,packaging==21.3,pathspec==0.9.0,platformdirs==2.4.0,pluggy==1.0.0,pre-commit==2.17.0,py==1.11.0,py-cpuinfo==8.0.0,pycodestyle==2.8.0,pyenchant==3.2.2,pyflakes==2.4.0,pylint @ file:///C:/leo.repo/ekr-pylint/.tox/.tmp/package/1/pylint-2.14.0.dev0.zip,pyparsing==3.0.7,pytest==7.0.1,pytest-benchmark==3.4.1,pytest-cov==3.0.0,pytest-forked==1.4.0,pytest-profiling==1.7.0,pytest-timeout==2.1.0,pytest-xdist==2.5.0,PyYAML==6.0,requests==2.27.1,schema==0.7.5,six==1.16.0,smmap==5.0.0,tabulate==0.8.9,tbump==6.6.1,toml==0.10.2,tomli==1.2.3,tomlkit==0.10.1,typed-ast==1.5.2,types-pkg-resources==0.1.3,typing_extensions==4.1.1,Unidecode==1.3.4,urllib3==1.26.9,virtualenv==20.14.0,wrapt==1.14.0,zipp==3.6.0
+py36 run-test-pre: PYTHONHASHSEED='743'
+py36 run-test: commands[0] | pytest --benchmark-disable 'c:\leo.repo\ekr-pylint/tests/'
+================================================= test session starts =================================================
+platform win32 -- Python 3.6.8, pytest-7.0.1, pluggy-1.0.0
+cachedir: .tox\py36\.pytest_cache
+benchmark: 3.4.1 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: c:\leo.repo\ekr-pylint, configfile: setup.cfg, testpaths: tests
+plugins: benchmark-3.4.1, cov-3.0.0, forked-1.4.0, profiling-1.7.0, timeout-2.1.0, xdist-2.5.0
+collected 1880 items
+
+tests\test_check_parallel.py ..................................                                                  [  1%]
+tests\test_epylint.py FF                                                                                         [  1%]
+tests\test_func.py ............                                                                                  [  2%]
+tests\test_functional.py ............s.......s.sss.ss...........s..........s...s................................ [  7%]
+......sss.......................sss.ss..ss...................................................................... [ 13%]
+........sss.s.ssssss......s..s........ssssssssss........................................................s....... [ 19%]
+......s................................s..........................s...ss............s..sss..s...............ss.. [ 25%]
+.ss.ss..s...........s.sssssss.........s.....s............................s.........s................s........s.. [ 31%]
+..s...............s...s...................ss..F.s...s....ss.....s..s..........s..................s..s..s.......s [ 36%]
+..........s.....s.s.............s.......ss....................s.........s...............................         [ 42%]
+tests\test_functional_directories.py .                                                                           [ 42%]
+tests\test_import_graph.py .....x                                                                                [ 42%]
+tests\test_numversion.py ...........                                                                             [ 43%]
+tests\test_pragma_parser.py ............                                                                         [ 44%]
+tests\test_pylint_runners.py ........                                                                            [ 44%]
+tests\test_regr.py ...................                                                                           [ 45%]
+tests\test_self.py ...........................s................................................................. [ 50%]
+..........FFFFFFFFF....                                                                                          [ 51%]
+tests\test_similar.py ..........                                                                                 [ 52%]
+tests\unittest_reporters_json.py ..                                                                              [ 52%]
+tests\unittest_reporting.py .........                                                                            [ 52%]
+tests\benchmark\test_baseline_benchmarks.py ...........                                                          [ 53%]
+tests\checkers\unittest_base_checker.py ..                                                                       [ 53%]
+tests\checkers\unittest_deprecated.py ........................                                                   [ 54%]
+tests\checkers\unittest_design.py ...                                                                            [ 54%]
+tests\checkers\unittest_format.py .........                                                                      [ 55%]
+tests\checkers\unittest_imports.py ......                                                                        [ 55%]
+tests\checkers\unittest_misc.py ...........                                                                      [ 56%]
+tests\checkers\unittest_non_ascii_name.py s.........................x                                            [ 57%]
+tests\checkers\unittest_refactoring.py ..                                                                        [ 57%]
+tests\checkers\unittest_similar.py ..................                                                            [ 58%]
+tests\checkers\unittest_spelling.py ...s..............................                                           [ 60%]
+tests\checkers\unittest_stdlib.py .                                                                              [ 60%]
+tests\checkers\unittest_strings.py .                                                                             [ 60%]
+tests\checkers\unittest_typecheck.py ...                                                                         [ 60%]
+tests\checkers\unittest_utils.py ......................................                                          [ 62%]
+tests\checkers\unittest_variables.py ..........                                                                  [ 63%]
+tests\checkers\base\unittest_base.py s                                                                           [ 63%]
+tests\checkers\base\unittest_multi_naming_style.py ....                                                          [ 63%]
+tests\checkers\base\unittest_name_preset.py ....                                                                 [ 63%]
+tests\checkers\unittest_unicode\unittest_bad_chars.py ....................................................       [ 66%]
+tests\checkers\unittest_unicode\unittest_bidirectional_unicode.py .............................................. [ 69%]
+.....                                                                                                            [ 69%]
+tests\checkers\unittest_unicode\unittest_functions.py .......................................................... [ 72%]
+..................................                                                                               [ 74%]
+tests\checkers\unittest_unicode\unittest_invalid_encoding.py xx........x...........                              [ 75%]
+tests\config\test_argparse_config.py ......                                                                      [ 75%]
+tests\config\test_config.py .                                                                                    [ 75%]
+tests\config\test_find_default_config_files.py .FF........                                                       [ 76%]
+tests\config\test_functional_config_loading.py ...............                                                   [ 77%]
+tests\config\unittest_config.py ........                                                                         [ 77%]
+tests\extensions\test_check_docs_utils.py ..............                                                         [ 78%]
+tests\extensions\test_private_import.py .....                                                                    [ 78%]
+tests\functional\r\redundant_unittest_assert.py ss                                                               [ 78%]
+tests\lint\test_pylinter.py ..                                                                                   [ 78%]
+tests\lint\test_utils.py ...                                                                                     [ 79%]
+tests\lint\unittest_expand_modules.py .....                                                                      [ 79%]
+tests\lint\unittest_lint.py .......................................FF.....                                       [ 81%]
+tests\message\test_no_removed_msgid_or_symbol_used.py .                                                          [ 81%]
+tests\message\unittest_message.py .                                                                              [ 81%]
+tests\message\unittest_message_definition.py ......                                                              [ 82%]
+tests\message\unittest_message_definition_store.py .................                                             [ 83%]
+tests\message\unittest_message_id_store.py ........                                                              [ 83%]
+tests\primer\test_primer_external.py sssssssssss                                                                 [ 84%]
+tests\primer\test_primer_stdlib.py sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 88%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 94%]
+sssssssss                                                                                                        [ 94%]
+tests\profile\test_profile_against_externals.py s                                                                [ 94%]
+tests\pyreverse\test_diadefs.py ........s                                                                        [ 95%]
+tests\pyreverse\test_diagrams.py .                                                                               [ 95%]
+tests\pyreverse\test_inspector.py ........                                                                       [ 95%]
+tests\pyreverse\test_main.py .....                                                                               [ 95%]
+tests\pyreverse\test_printer.py ..............                                                                   [ 96%]
+tests\pyreverse\test_printer_factory.py .....                                                                    [ 96%]
+tests\pyreverse\test_utils.py ......................                                                             [ 98%]
+tests\pyreverse\test_writer.py ...............                                                                   [ 98%]
+tests\testutils\test_configuration_test.py .                                                                     [ 98%]
+tests\testutils\test_functional_testutils.py ..                                                                  [ 99%]
+tests\testutils\test_lint_module_output_update.py .sss                                                           [ 99%]
+tests\testutils\test_output_line.py ........                                                                     [ 99%]
+tests\testutils\test_package_to_lint.py ..                                                                       [ 99%]
+tests\utils\unittest_ast_walker.py ..                                                                            [ 99%]
+tests\utils\unittest_utils.py ..                                                                                 [100%]
+
+====================================================== FAILURES =======================================================
+______________________________________________ test_epylint_good_command ______________________________________________
+
+example_path = WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/pytest-of-unknown/pytest-0/test_epylint_good_command0/my_app.py')
+
+    def test_epylint_good_command(example_path: PosixPath) -&gt; None:
+        out, err = lint.py_run(
+            # pylint: disable-next=consider-using-f-string
+            "%s -E --disable=E1111 --msg-template '{category} {module} {obj} {line} {column} {msg}'"
+            % example_path,
+            return_std=True,
+        )
+        msg = out.read()
+&gt;       assert (
+            msg
+            == """\
+    ************* Module my_app
+     error my_app IvrAudioApp.run 4 8 Instance of 'IvrAudioApp' has no 'hassan' member
+     """
+        )
+E       assert 'C:\\Users\\E...s not exist\n' == "************...an' member\n "
+E         + C:\Users\Edward does not exist
+E         - ************* Module my_app
+E         -  error my_app IvrAudioApp.run 4 8 Instance of 'IvrAudioApp' has no 'hassan' member
+E         -
+
+tests\test_epylint.py:35: AssertionError
+____________________________________________ test_epylint_strange_command _____________________________________________
+
+example_path = WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/pytest-of-unknown/pytest-0/test_epylint_strange_command0/my_app.py')
+
+    def test_epylint_strange_command(example_path: PosixPath) -&gt; None:
+        out, err = lint.py_run(
+            # pylint: disable-next=consider-using-f-string
+            "%s -E --disable=E1111 --msg-template={category} {module} {obj} {line} {column} {msg}"
+            % example_path,
+            return_std=True,
+        )
+&gt;       assert (
+            out.read()
+            == """\
+    ************* Module {module}
+     fatal
+     ************* Module {obj}
+     fatal
+     ************* Module {line}
+     fatal
+     ************* Module {column}
+     fatal
+     ************* Module {msg}
+     fatal
+     ************* Module my_app
+     error
+     """
+        )
+E       AssertionError: assert 'C:\\Users\\E...s not exist\n' == '************...pp\n error\n '
+E         + C:\Users\Edward does not exist
+E         - ************* Module {module}
+E         -  fatal
+E         -  ************* Module {obj}
+E         -  fatal
+E         -  ************* Module {line}
+E         -  fatal...
+E
+E         ...Full output truncated (8 lines hidden), use '-vv' to show
+
+tests\test_epylint.py:52: AssertionError
+__________________________________________ test_functional[symlink_module1] ___________________________________________
+
+self = &lt;pylint.testutils.lint_module_test.LintModuleTest object at 0x0000026AAC0D3668&gt;
+
+    def runTest(self) -&gt; None:
+&gt;       self._runTest()
+E       AssertionError: Wrong results for file "symlink_module":
+E
+E       Unexpected in testdata:
+E          1: syntax-error
+
+.tox\py36\lib\site-packages\pylint\testutils\lint_module_test.py:95: AssertionError
+_____ TestCallbackOptions.test_output_of_callback_options[command0-Emittable messages with current interpreter:] ______
+
+command = ['--list-msgs'], expected = 'Emittable messages with current interpreter:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Emittable messages with current interpreter:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--list-msgs'], re...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+___________________ TestCallbackOptions.test_output_of_callback_options[command1-Enabled messages:] ___________________
+
+command = ['--list-msgs-enabled'], expected = 'Enabled messages:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Enabled messages:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--list-msgs-enabl...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+___________________ TestCallbackOptions.test_output_of_callback_options[command2-nonascii-checker] ____________________
+
+command = ['--list-groups'], expected = 'nonascii-checker'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'nonascii-checker' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--list-groups'], ...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+_________ TestCallbackOptions.test_output_of_callback_options[command3-Confidence(name='HIGH', description=] __________
+
+command = ['--list-conf-levels'], expected = "Confidence(name='HIGH', description="
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       assert "Confidence(name='HIGH', description=" in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--list-conf-level...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+____________ TestCallbackOptions.test_output_of_callback_options[command4-pylint.extensions.empty_comment] ____________
+
+command = ['--list-extensions'], expected = 'pylint.extensions.empty_comment'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'pylint.extensions.empty_comment' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--list-extensions...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+__________ TestCallbackOptions.test_output_of_callback_options[command5-Pylint global options and switches] ___________
+
+command = ['--full-documentation'], expected = 'Pylint global options and switches'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Pylint global options and switches' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--full-documentat...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+________________ TestCallbackOptions.test_output_of_callback_options[command6-Environment variables:] _________________
+
+command = ['--long-help'], expected = 'Environment variables:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Environment variables:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--long-help'], re...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+__________________________________________ TestCallbackOptions.test_help_msg __________________________________________
+
+    @staticmethod
+    def test_help_msg() -&gt; None:
+        """Test the --help-msg flag."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint", "--help-msg", "W0101"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert ":unreachable (W0101)" in process.stdout
+E       AssertionError: assert ':unreachable (W0101)' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--help-msg', 'W01...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1305: AssertionError
+______________________________________ TestCallbackOptions.test_generate_rcfile _______________________________________
+
+    @staticmethod
+    def test_generate_rcfile() -&gt; None:
+        """Test the --generate-rcfile flag."""
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint", "--generate-rcfile"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert "[MASTER]" in process.stdout
+E       AssertionError: assert '[MASTER]' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py36\\Scripts\\python.EXE', '-m', 'pylint', '--generate-rcfile...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1335: AssertionError
+_______________________________________________ test_pylintrc_parentdir _______________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir() -&gt; None:
+        """Test that the first pylintrc we find is the first parent directory."""
+        with tempdir() as chroot:
+            chroot_path = Path(chroot)
+            testutils.create_files(
+                [
+                    "a/pylintrc",
+                    "a/b/__init__.py",
+                    "a/b/pylintrc",
+                    "a/b/c/__init__.py",
+                    "a/b/c/d/__init__.py",
+                    "a/b/c/d/e/.pylintrc",
+                ]
+            )
+
+            with fake_home():
+                assert not list(config.find_default_config_files())
+
+            results = {
+                "a": chroot_path / "a" / "pylintrc",
+                "a/b": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c/d": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c/d/e": chroot_path / "a" / "b" / "c" / "d" / "e" / ".pylintrc",
+            }
+            for basedir, expected in results.items():
+                os.chdir(chroot_path / basedir)
+&gt;               assert next(config.find_default_config_files()) == expected
+E               AssertionError: assert WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmp6xgltepa/a/pylintrc') == WindowsPath('C:/Users/EDWARD~1/AppData/Local/Temp/tmp6xgltepa/a/pylintrc')
+E                +  where WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmp6xgltepa/a/pylintrc') = next(&lt;generator object find_default_config_files at 0x0000026AB60A3830&gt;)
+E                +    where &lt;generator object find_default_config_files at 0x0000026AB60A3830&gt; = &lt;function find_default_config_files at 0x0000026A8CE3E488&gt;()
+E                +      where &lt;function find_default_config_files at 0x0000026A8CE3E488&gt; = config.find_default_config_files
+
+tests\config\test_find_default_config_files.py:119: AssertionError
+_________________________________________ test_pylintrc_parentdir_no_package __________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir_no_package() -&gt; None:
+        """Test that we don't find a pylintrc in sub-packages."""
+        with tempdir() as chroot:
+            with fake_home():
+                chroot_path = Path(chroot)
+                testutils.create_files(
+                    ["a/pylintrc", "a/b/pylintrc", "a/b/c/d/__init__.py"]
+                )
+                assert config.find_pylintrc() is None
+                results = {
+                    "a": chroot_path / "a" / "pylintrc",
+                    "a/b": chroot_path / "a" / "b" / "pylintrc",
+                    "a/b/c": None,
+                    "a/b/c/d": None,
+                }
+                for basedir, expected in results.items():
+                    os.chdir(chroot_path / basedir)
+&gt;                   assert next(config.find_default_config_files(), None) == expected
+E                   AssertionError: assert WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmpgixqeu7g/a/pylintrc') == WindowsPath('C:/Users/EDWARD~1/AppData/Local/Temp/tmpgixqeu7g/a/pylintrc')
+E                    +  where WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmpgixqeu7g/a/pylintrc') = next(&lt;generator object find_default_config_files at 0x0000026AB6014410&gt;, None)
+E                    +    where &lt;generator object find_default_config_files at 0x0000026AB6014410&gt; = &lt;function find_default_config_files at 0x0000026A8CE3E488&gt;()
+E                    +      where &lt;function find_default_config_files at 0x0000026A8CE3E488&gt; = config.find_default_config_files
+
+tests\config\test_find_default_config_files.py:140: AssertionError
+_______________________________________________ test_pylintrc_parentdir _______________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir() -&gt; None:
+        with tempdir() as chroot:
+
+            create_files(
+                [
+                    "a/pylintrc",
+                    "a/b/__init__.py",
+                    "a/b/pylintrc",
+                    "a/b/c/__init__.py",
+                    "a/b/c/d/__init__.py",
+                    "a/b/c/d/e/.pylintrc",
+                ]
+            )
+            with fake_home():
+                with pytest.warns(DeprecationWarning):
+                    assert config.find_pylintrc() is None
+            results = {
+                "a": join(chroot, "a", "pylintrc"),
+                "a/b": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c/d": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c/d/e": join(chroot, "a", "b", "c", "d", "e", ".pylintrc"),
+            }
+            for basedir, expected in results.items():
+                os.chdir(join(chroot, basedir))
+                with pytest.warns(DeprecationWarning):
+&gt;                   assert config.find_pylintrc() == expected
+E                   AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' == 'C:\\Users\\E...\\a\\pylintrc'
+E                     - C:\Users\EDWARD~1\AppData\Local\Temp\tmpb5r8f8kh\a\pylintrc
+E                     ?           ^^^ ^^^
+E                     + C:\Users\Edward Ream\AppData\Local\Temp\tmpb5r8f8kh\a\pylintrc
+E                     ?           ^^^^^^ ^^^
+
+tests\lint\unittest_lint.py:691: AssertionError
+_________________________________________ test_pylintrc_parentdir_no_package __________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir_no_package() -&gt; None:
+        with tempdir() as chroot:
+            with fake_home():
+                create_files(["a/pylintrc", "a/b/pylintrc", "a/b/c/d/__init__.py"])
+                with pytest.warns(DeprecationWarning):
+                    assert config.find_pylintrc() is None
+                results = {
+                    "a": join(chroot, "a", "pylintrc"),
+                    "a/b": join(chroot, "a", "b", "pylintrc"),
+                    "a/b/c": None,
+                    "a/b/c/d": None,
+                }
+                for basedir, expected in results.items():
+                    os.chdir(join(chroot, basedir))
+                    with pytest.warns(DeprecationWarning):
+&gt;                       assert config.find_pylintrc() == expected
+E                       AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' == 'C:\\Users\\E...\\a\\pylintrc'
+E                         - C:\Users\EDWARD~1\AppData\Local\Temp\tmpzefjktvy\a\pylintrc
+E                         ?           ^^^ ^^^
+E                         + C:\Users\Edward Ream\AppData\Local\Temp\tmpzefjktvy\a\pylintrc
+E                         ?           ^^^^^^ ^^^
+
+tests\lint\unittest_lint.py:710: AssertionError
+================================================== warnings summary ===================================================
+tests/config/test_find_default_config_files.py::test_pylintrc_parentdir_no_package
+  c:\leo.repo\ekr-pylint\.tox\py36\lib\site-packages\pylint\config\find_default_config_files.py:85: DeprecationWarning: find_pylintrc and the PYLINTRC constant have been deprecated. Use find_default_config_files if you want access to pylint's configuration file finding logic.
+    DeprecationWarning,
+
+tests/testutils/test_output_line.py::test_output_line_from_csv_error
+tests/testutils/test_output_line.py::test_output_line_from_csv_error
+  c:\leo.repo\ekr-pylint\.tox\py36\lib\site-packages\pylint\testutils\output_line.py:134: DeprecationWarning: In pylint 3.0 functional tests expected output should always include the expected confidence level, expected end_line and expected end_column. An OutputLine should thus have a length of 8.
+    DeprecationWarning,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================================== short test summary info ===============================================
+FAILED tests/test_epylint.py::test_epylint_good_command - assert 'C:\\Users\\E...s not exist\n' == "************...an...
+FAILED tests/test_epylint.py::test_epylint_strange_command - AssertionError: assert 'C:\\Users\\E...s not exist\n' ==...
+FAILED tests/test_functional.py::test_functional[symlink_module1] - AssertionError: Wrong results for file "symlink_m...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command0-Emittable messages with current interpreter:]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command1-Enabled messages:] - Asserti...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command2-nonascii-checker] - Assertio...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command3-Confidence(name='HIGH', description=]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command4-pylint.extensions.empty_comment]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command5-Pylint global options and switches]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command6-Environment variables:] - As...
+FAILED tests/test_self.py::TestCallbackOptions::test_help_msg - AssertionError: assert ':unreachable (W0101)' in ''
+FAILED tests/test_self.py::TestCallbackOptions::test_generate_rcfile - AssertionError: assert '[MASTER]' in ''
+FAILED tests/config/test_find_default_config_files.py::test_pylintrc_parentdir - AssertionError: assert WindowsPath('...
+FAILED tests/config/test_find_default_config_files.py::test_pylintrc_parentdir_no_package - AssertionError: assert Wi...
+FAILED tests/lint/unittest_lint.py::test_pylintrc_parentdir - AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' =...
+FAILED tests/lint/unittest_lint.py::test_pylintrc_parentdir_no_package - AssertionError: assert 'C:\\Users\\E...\\a\\...
+=================== 16 failed, 1541 passed, 318 skipped, 5 xfailed, 3 warnings in 114.98s (0:01:54) ===================
+ERROR: InvocationError for command 'c:\leo.repo\ekr-pylint\.tox\py36\Scripts\pytest.EXE' --benchmark-disable tests (exited with code 1)
+py37 create: c:\leo.repo\ekr-pylint\.tox\py37
+SKIPPED: InterpreterNotFound: python3.7
+py38 create: c:\leo.repo\ekr-pylint\.tox\py38
+SKIPPED: InterpreterNotFound: python3.8
+py39 create: c:\leo.repo\ekr-pylint\.tox\py39
+py39 installdeps: -rc:\leo.repo\ekr-pylint/requirements_test.txt
+py39 inst: c:\leo.repo\ekr-pylint\.tox\.tmp\package\1\pylint-2.14.0.dev0.zip
+py39 installed: astroid==2.11.2,atomicwrites==1.4.0,attrs==21.4.0,black==22.3.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,cli-ui==0.16.1,click==8.1.2,colorama==0.4.4,contextlib2==21.6.0,contributors-txt==0.7.5,coverage==6.3.2,coveralls==3.3.1,dill==0.3.4,distlib==0.3.4,docopt==0.6.2,execnet==1.9.0,filelock==3.6.0,flake8==4.0.1,flake8-typing-imports==1.12.0,gitdb==4.0.9,GitPython==3.1.27,gprof2dot==2021.2.21,identify==2.4.12,idna==3.3,iniconfig==1.1.1,isort==5.10.1,lazy-object-proxy==1.7.1,mccabe==0.6.1,mypy==0.942,mypy-extensions==0.4.3,nodeenv==1.6.0,packaging==21.3,pathspec==0.9.0,platformdirs==2.5.1,pluggy==1.0.0,pre-commit==2.18.1,py==1.11.0,py-cpuinfo==8.0.0,pycodestyle==2.8.0,pyenchant==3.2.2,pyflakes==2.4.0,pylint @ file:///C:/leo.repo/ekr-pylint/.tox/.tmp/package/1/pylint-2.14.0.dev0.zip,pyparsing==3.0.7,pytest==7.1.1,pytest-benchmark==3.4.1,pytest-cov==3.0.0,pytest-forked==1.4.0,pytest-profiling==1.7.0,pytest-timeout==2.1.0,pytest-xdist==2.5.0,PyYAML==6.0,requests==2.27.1,schema==0.7.5,six==1.16.0,smmap==5.0.0,tabulate==0.8.9,tbump==6.6.1,toml==0.10.2,tomli==2.0.1,tomlkit==0.10.1,types-pkg-resources==0.1.3,typing_extensions==4.1.1,Unidecode==1.3.4,urllib3==1.26.9,virtualenv==20.14.0,wrapt==1.14.0
+py39 run-test-pre: PYTHONHASHSEED='743'
+py39 run-test: commands[0] | pytest --benchmark-disable 'c:\leo.repo\ekr-pylint/tests/'
+================================================= test session starts =================================================
+platform win32 -- Python 3.9.6, pytest-7.1.1, pluggy-1.0.0
+cachedir: .tox\py39\.pytest_cache
+benchmark: 3.4.1 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: c:\leo.repo\ekr-pylint, configfile: setup.cfg, testpaths: tests
+plugins: benchmark-3.4.1, cov-3.0.0, forked-1.4.0, profiling-1.7.0, timeout-2.1.0, xdist-2.5.0
+collected 1885 items
+
+tests\test_check_parallel.py ..................................                                                  [  1%]
+tests\test_epylint.py FF                                                                                         [  1%]
+tests\test_func.py ............                                                                                  [  2%]
+tests\test_functional.py .........s............s...............s...........s...................s................ [  7%]
+..............................s.s.s.ss.......................................................................... [ 13%]
+.................s.....................sss.s.................................................................... [ 19%]
+................................................................................................................ [ 24%]
+.s..s.................s...ss.................................................................................... [ 30%]
+...............................s.........ss...F.s...s............................................s.............. [ 36%]
+..................s.....................................................................................         [ 42%]
+tests\test_functional_directories.py .                                                                           [ 42%]
+tests\test_import_graph.py .....x                                                                                [ 42%]
+tests\test_numversion.py ...........                                                                             [ 43%]
+tests\test_pragma_parser.py ............                                                                         [ 43%]
+tests\test_pylint_runners.py ........                                                                            [ 44%]
+tests\test_regr.py ...................                                                                           [ 45%]
+tests\test_self.py ...........................s................................................................. [ 50%]
+..........FFFFFFFFF....                                                                                          [ 51%]
+tests\test_similar.py ..........                                                                                 [ 52%]
+tests\unittest_reporters_json.py ..                                                                              [ 52%]
+tests\unittest_reporting.py .......F.                                                                            [ 52%]
+tests\benchmark\test_baseline_benchmarks.py ...........                                                          [ 53%]
+tests\checkers\unittest_base_checker.py ..                                                                       [ 53%]
+tests\checkers\unittest_deprecated.py ........................                                                   [ 54%]
+tests\checkers\unittest_design.py ...                                                                            [ 54%]
+tests\checkers\unittest_format.py .........                                                                      [ 55%]
+tests\checkers\unittest_imports.py ......                                                                        [ 55%]
+tests\checkers\unittest_misc.py ...........                                                                      [ 56%]
+tests\checkers\unittest_non_ascii_name.py ..........................x                                            [ 57%]
+tests\checkers\unittest_refactoring.py ..                                                                        [ 57%]
+tests\checkers\unittest_similar.py ..................                                                            [ 58%]
+tests\checkers\unittest_spelling.py ...s..............................                                           [ 60%]
+tests\checkers\unittest_stdlib.py .                                                                              [ 60%]
+tests\checkers\unittest_strings.py .                                                                             [ 60%]
+tests\checkers\unittest_typecheck.py ...                                                                         [ 60%]
+tests\checkers\unittest_utils.py ......................................                                          [ 62%]
+tests\checkers\unittest_variables.py ..........                                                                  [ 63%]
+tests\checkers\base\unittest_base.py s                                                                           [ 63%]
+tests\checkers\base\unittest_multi_naming_style.py ....                                                          [ 63%]
+tests\checkers\base\unittest_name_preset.py ....                                                                 [ 63%]
+tests\checkers\unittest_unicode\unittest_bad_chars.py ....................................................       [ 66%]
+tests\checkers\unittest_unicode\unittest_bidirectional_unicode.py .............................................. [ 68%]
+.....                                                                                                            [ 69%]
+tests\checkers\unittest_unicode\unittest_functions.py .......................................................... [ 72%]
+..................................                                                                               [ 74%]
+tests\checkers\unittest_unicode\unittest_invalid_encoding.py xx........x...........                              [ 75%]
+tests\config\test_argparse_config.py ......                                                                      [ 75%]
+tests\config\test_config.py .                                                                                    [ 75%]
+tests\config\test_find_default_config_files.py .FF........                                                       [ 76%]
+tests\config\test_functional_config_loading.py ...............                                                   [ 77%]
+tests\config\unittest_config.py ........                                                                         [ 77%]
+tests\extensions\test_check_docs_utils.py ..............                                                         [ 78%]
+tests\extensions\test_private_import.py .....                                                                    [ 78%]
+tests\functional\r\redundant_unittest_assert.py ss                                                               [ 78%]
+tests\lint\test_pylinter.py ..                                                                                   [ 78%]
+tests\lint\test_utils.py ...                                                                                     [ 78%]
+tests\lint\unittest_expand_modules.py .....                                                                      [ 79%]
+tests\lint\unittest_lint.py .FFFFFFFFFFFF..........................FF.....                                       [ 81%]
+tests\message\test_no_removed_msgid_or_symbol_used.py .                                                          [ 81%]
+tests\message\unittest_message.py .                                                                              [ 81%]
+tests\message\unittest_message_definition.py ......                                                              [ 81%]
+tests\message\unittest_message_definition_store.py .................                                             [ 82%]
+tests\message\unittest_message_id_store.py ........                                                              [ 83%]
+tests\primer\test_primer_external.py sssssssssss                                                                 [ 83%]
+tests\primer\test_primer_stdlib.py sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 87%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 93%]
+ssssssssssssss                                                                                                   [ 94%]
+tests\profile\test_profile_against_externals.py s                                                                [ 94%]
+tests\pyreverse\test_diadefs.py ..FF.....                                                                        [ 95%]
+tests\pyreverse\test_diagrams.py .                                                                               [ 95%]
+tests\pyreverse\test_inspector.py ........                                                                       [ 95%]
+tests\pyreverse\test_main.py FF...                                                                               [ 95%]
+tests\pyreverse\test_printer.py ..............                                                                   [ 96%]
+tests\pyreverse\test_printer_factory.py .....                                                                    [ 96%]
+tests\pyreverse\test_utils.py ......................                                                             [ 98%]
+tests\pyreverse\test_writer.py .F.F.F.F.F.F.F.                                                                   [ 98%]
+tests\testutils\test_configuration_test.py .                                                                     [ 98%]
+tests\testutils\test_functional_testutils.py ..                                                                  [ 99%]
+tests\testutils\test_lint_module_output_update.py s...                                                           [ 99%]
+tests\testutils\test_output_line.py ........                                                                     [ 99%]
+tests\testutils\test_package_to_lint.py ..                                                                       [ 99%]
+tests\utils\unittest_ast_walker.py ..                                                                            [ 99%]
+tests\utils\unittest_utils.py ..                                                                                 [100%]
+
+====================================================== FAILURES =======================================================
+______________________________________________ test_epylint_good_command ______________________________________________
+
+example_path = WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/pytest-of-unknown/pytest-1/test_epylint_good_command0/my_app.py')
+
+    def test_epylint_good_command(example_path: PosixPath) -&gt; None:
+        out, err = lint.py_run(
+            # pylint: disable-next=consider-using-f-string
+            "%s -E --disable=E1111 --msg-template '{category} {module} {obj} {line} {column} {msg}'"
+            % example_path,
+            return_std=True,
+        )
+        msg = out.read()
+&gt;       assert (
+            msg
+            == """\
+    ************* Module my_app
+     error my_app IvrAudioApp.run 4 8 Instance of 'IvrAudioApp' has no 'hassan' member
+     """
+        )
+E       assert 'C:\\Users\\E...s not exist\n' == "************...an' member\n "
+E         + C:\Users\Edward does not exist
+E         - ************* Module my_app
+E         -  error my_app IvrAudioApp.run 4 8 Instance of 'IvrAudioApp' has no 'hassan' member
+E         -
+
+tests\test_epylint.py:35: AssertionError
+____________________________________________ test_epylint_strange_command _____________________________________________
+
+example_path = WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/pytest-of-unknown/pytest-1/test_epylint_strange_command0/my_app.py')
+
+    def test_epylint_strange_command(example_path: PosixPath) -&gt; None:
+        out, err = lint.py_run(
+            # pylint: disable-next=consider-using-f-string
+            "%s -E --disable=E1111 --msg-template={category} {module} {obj} {line} {column} {msg}"
+            % example_path,
+            return_std=True,
+        )
+&gt;       assert (
+            out.read()
+            == """\
+    ************* Module {module}
+     fatal
+     ************* Module {obj}
+     fatal
+     ************* Module {line}
+     fatal
+     ************* Module {column}
+     fatal
+     ************* Module {msg}
+     fatal
+     ************* Module my_app
+     error
+     """
+        )
+E       AssertionError: assert 'C:\\Users\\E...s not exist\n' == '************...pp\n error\n '
+E         + C:\Users\Edward does not exist
+E         - ************* Module {module}
+E         -  fatal
+E         -  ************* Module {obj}
+E         -  fatal
+E         -  ************* Module {line}
+E         -  fatal...
+E
+E         ...Full output truncated (8 lines hidden), use '-vv' to show
+
+tests\test_epylint.py:52: AssertionError
+__________________________________________ test_functional[symlink_module1] ___________________________________________
+
+self = &lt;pylint.testutils.lint_module_test.LintModuleTest object at 0x00000198FDC92610&gt;
+
+    def runTest(self) -&gt; None:
+&gt;       self._runTest()
+E       AssertionError: Wrong results for file "symlink_module":
+E
+E       Unexpected in testdata:
+E          1: syntax-error
+
+.tox\py39\lib\site-packages\pylint\testutils\lint_module_test.py:95: AssertionError
+_____ TestCallbackOptions.test_output_of_callback_options[command0-Emittable messages with current interpreter:] ______
+
+command = ['--list-msgs'], expected = 'Emittable messages with current interpreter:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Emittable messages with current interpreter:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--list-msgs'], re...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+___________________ TestCallbackOptions.test_output_of_callback_options[command1-Enabled messages:] ___________________
+
+command = ['--list-msgs-enabled'], expected = 'Enabled messages:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Enabled messages:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--list-msgs-enabl...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+___________________ TestCallbackOptions.test_output_of_callback_options[command2-nonascii-checker] ____________________
+
+command = ['--list-groups'], expected = 'nonascii-checker'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'nonascii-checker' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--list-groups'], ...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+_________ TestCallbackOptions.test_output_of_callback_options[command3-Confidence(name='HIGH', description=] __________
+
+command = ['--list-conf-levels'], expected = "Confidence(name='HIGH', description="
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       assert "Confidence(name='HIGH', description=" in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--list-conf-level...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+____________ TestCallbackOptions.test_output_of_callback_options[command4-pylint.extensions.empty_comment] ____________
+
+command = ['--list-extensions'], expected = 'pylint.extensions.empty_comment'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'pylint.extensions.empty_comment' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--list-extensions...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+__________ TestCallbackOptions.test_output_of_callback_options[command5-Pylint global options and switches] ___________
+
+command = ['--full-documentation'], expected = 'Pylint global options and switches'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Pylint global options and switches' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--full-documentat...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+________________ TestCallbackOptions.test_output_of_callback_options[command6-Environment variables:] _________________
+
+command = ['--long-help'], expected = 'Environment variables:'
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "command,expected",
+        [
+            (["--list-msgs"], "Emittable messages with current interpreter:"),
+            (["--list-msgs-enabled"], "Enabled messages:"),
+            (["--list-groups"], "nonascii-checker"),
+            (["--list-conf-levels"], "Confidence(name='HIGH', description="),
+            (["--list-extensions"], "pylint.extensions.empty_comment"),
+            (["--full-documentation"], "Pylint global options and switches"),
+            (["--long-help"], "Environment variables:"),
+        ],
+    )
+    def test_output_of_callback_options(command: List[str], expected: str) -&gt; None:
+        """Test whether certain strings are in the output of a callback command."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint"] + command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert expected in process.stdout
+E       AssertionError: assert 'Environment variables:' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--long-help'], re...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1292: AssertionError
+__________________________________________ TestCallbackOptions.test_help_msg __________________________________________
+
+    @staticmethod
+    def test_help_msg() -&gt; None:
+        """Test the --help-msg flag."""
+
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint", "--help-msg", "W0101"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert ":unreachable (W0101)" in process.stdout
+E       AssertionError: assert ':unreachable (W0101)' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--help-msg', 'W01...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1305: AssertionError
+______________________________________ TestCallbackOptions.test_generate_rcfile _______________________________________
+
+    @staticmethod
+    def test_generate_rcfile() -&gt; None:
+        """Test the --generate-rcfile flag."""
+        process = subprocess.run(
+            [sys.executable, "-m", "pylint", "--generate-rcfile"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            check=False,
+        )
+&gt;       assert "[MASTER]" in process.stdout
+E       AssertionError: assert '[MASTER]' in ''
+E        +  where '' = CompletedProcess(args=['c:\\leo.repo\\ekr-pylint\\.tox\\py39\\Scripts\\python.EXE', '-m', 'pylint', '--generate-rcfile...ageError(error_msg)\npylint.exceptions.UnknownMessageError: No such message id or symbol \'c-extension-no-member\'.\n').stdout
+
+tests\test_self.py:1335: AssertionError
+______________________________________________ test_multi_format_output _______________________________________________
+
+tmp_path = WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/pytest-of-unknown/pytest-1/test_multi_format_output0')
+
+    def test_multi_format_output(tmp_path):
+        text = StringIO(newline=None)
+        json = tmp_path / "somefile.json"
+
+        source_file = tmp_path / "somemodule.py"
+        source_file.write_text('NOT_EMPTY = "This module is not empty"\n')
+        escaped_source_file = dumps(str(source_file))
+
+        nop_format = NopReporter.__module__ + "." + NopReporter.__name__
+        formats = ",".join(["json:" + str(json), "text", nop_format])
+
+        with redirect_stdout(text):
+            linter = PyLinter()
+            linter.load_default_plugins()
+            linter.set_option("persistent", False)
+            linter.set_option("output-format", formats)
+            linter.set_option("reports", True)
+            linter.set_option("score", True)
+
+            assert linter.reporter.linter is linter
+            with pytest.raises(NotImplementedError):
+                linter.reporter.out = text
+
+            linter.open()
+            linter.check_single_file_item(FileItem("somemodule", source_file, "somemodule"))
+            linter.add_message("line-too-long", line=1, args=(1, 2))
+            linter.generate_reports()
+            linter.reporter.writeln("direct output")
+
+            # Ensure the output files are flushed and closed
+            linter.reporter.close_output_files()
+            del linter.reporter
+
+        with open(json, encoding="utf-8") as f:
+            assert (
+                f.read() == "[\n"
+                "    {\n"
+                '        "type": "convention",\n'
+                '        "module": "somemodule",\n'
+                '        "obj": "",\n'
+                '        "line": 1,\n'
+                '        "column": 0,\n'
+                '        "endLine": null,\n'
+                '        "endColumn": null,\n'
+                f'        "path": {escaped_source_file},\n'
+                '        "symbol": "missing-module-docstring",\n'
+                '        "message": "Missing module docstring",\n'
+                '        "message-id": "C0114"\n'
+                "    },\n"
+                "    {\n"
+                '        "type": "convention",\n'
+                '        "module": "somemodule",\n'
+                '        "obj": "",\n'
+                '        "line": 1,\n'
+                '        "column": 0,\n'
+                '        "endLine": null,\n'
+                '        "endColumn": null,\n'
+                f'        "path": {escaped_source_file},\n'
+                '        "symbol": "line-too-long",\n'
+                '        "message": "Line too long (1/2)",\n'
+                '        "message-id": "C0301"\n'
+                "    }\n"
+                "]\n"
+                "direct output\n"
+            )
+
+&gt;       assert (
+            text.getvalue() == "A NopReporter was initialized.\n"
+            "************* Module somemodule\n"
+            f"{source_file}:1:0: C0114: Missing module docstring (missing-module-docstring)\n"
+            f"{source_file}:1:0: C0301: Line too long (1/2) (line-too-long)\n"
+            "\n"
+            "\n"
+            "Report\n"
+            "======\n"
+            "1 statements analysed.\n"
+            "\n"
+            "Statistics by type\n"
+            "------------------\n"
+            "\n"
+            "+---------+-------+-----------+-----------+------------+---------+\n"
+            "|type     |number |old number |difference |%documented |%badname |\n"
+            "+=========+=======+===========+===========+============+=========+\n"
+            "|module   |1      |NC         |NC         |0.00        |0.00     |\n"
+            "+---------+-------+-----------+-----------+------------+---------+\n"
+            "|class    |0      |NC         |NC         |0           |0        |\n"
+            "+---------+-------+-----------+-----------+------------+---------+\n"
+            "|method   |0      |NC         |NC         |0           |0        |\n"
+            "+---------+-------+-----------+-----------+------------+---------+\n"
+            "|function |0      |NC         |NC         |0           |0        |\n"
+            "+---------+-------+-----------+-----------+------------+---------+\n"
+            "\n"
+            "\n"
+            "\n"
+            "Raw metrics\n"
+            "-----------\n"
+            "\n"
+            "+----------+-------+------+---------+-----------+\n"
+            "|type      |number |%     |previous |difference |\n"
+            "+==========+=======+======+=========+===========+\n"
+            "|code      |2      |66.67 |NC       |NC         |\n"
+            "+----------+-------+------+---------+-----------+\n"
+            "|docstring |0      |0.00  |NC       |NC         |\n"
+            "+----------+-------+------+---------+-----------+\n"
+            "|comment   |0      |0.00  |NC       |NC         |\n"
+            "+----------+-------+------+---------+-----------+\n"
+            "|empty     |1      |33.33 |NC       |NC         |\n"
+            "+----------+-------+------+---------+-----------+\n"
+            "\n"
+            "\n"
+            "\n"
+            "Duplication\n"
+            "-----------\n"
+            "\n"
+            "+-------------------------+------+---------+-----------+\n"
+            "|                         |now   |previous |difference |\n"
+            "+=========================+======+=========+===========+\n"
+            "|nb duplicated lines      |0     |NC       |NC         |\n"
+            "+-------------------------+------+---------+-----------+\n"
+            "|percent duplicated lines |0.000 |NC       |NC         |\n"
+            "+-------------------------+------+---------+-----------+\n"
+            "\n"
+            "\n"
+            "\n"
+            "Messages by category\n"
+            "--------------------\n"
+            "\n"
+            "+-----------+-------+---------+-----------+\n"
+            "|type       |number |previous |difference |\n"
+            "+===========+=======+=========+===========+\n"
+            "|convention |2      |NC       |NC         |\n"
+            "+-----------+-------+---------+-----------+\n"
+            "|refactor   |0      |NC       |NC         |\n"
+            "+-----------+-------+---------+-----------+\n"
+            "|warning    |0      |NC       |NC         |\n"
+            "+-----------+-------+---------+-----------+\n"
+            "|error      |0      |NC       |NC         |\n"
+            "+-----------+-------+---------+-----------+\n"
+            "\n"
+            "\n"
+            "\n"
+            "Messages\n"
+            "--------\n"
+            "\n"
+            "+-------------------------+------------+\n"
+            "|message id               |occurrences |\n"
+            "+=========================+============+\n"
+            "|missing-module-docstring |1           |\n"
+            "+-------------------------+------------+\n"
+            "|line-too-long            |1           |\n"
+            "+-------------------------+------------+\n"
+            "\n"
+            "\n"
+            "\n"
+            "\n"
+            "-----------------------------------\n"
+            "Your code has been rated at 0.00/10\n"
+            "\n"
+            "direct output\n"
+        )
+E       AssertionError: assert 'A NopReporte...rect output\n' == 'A NopReporte...rect output\n'
+E         Skipping 678 identical leading characters in diff, use -v to show
+E         -  |1      |NC         |NC         |0.00        |0.00     |
+E         ?           ^^          ^^
+E         +  |1      |1          |=          |0.00        |0.00     |
+E         ?           ^^          ^^
+E           +---------+-------+-----------+-----------+------------+---------+
+E           |class    |0      |NC         |NC         |0           |0        |...
+E
+E         ...Full output truncated (100 lines hidden), use '-vv' to show
+
+tests\unittest_reporting.py:232: AssertionError
+_______________________________________________ test_pylintrc_parentdir _______________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir() -&gt; None:
+        """Test that the first pylintrc we find is the first parent directory."""
+        with tempdir() as chroot:
+            chroot_path = Path(chroot)
+            testutils.create_files(
+                [
+                    "a/pylintrc",
+                    "a/b/__init__.py",
+                    "a/b/pylintrc",
+                    "a/b/c/__init__.py",
+                    "a/b/c/d/__init__.py",
+                    "a/b/c/d/e/.pylintrc",
+                ]
+            )
+
+            with fake_home():
+                assert not list(config.find_default_config_files())
+
+            results = {
+                "a": chroot_path / "a" / "pylintrc",
+                "a/b": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c/d": chroot_path / "a" / "b" / "pylintrc",
+                "a/b/c/d/e": chroot_path / "a" / "b" / "c" / "d" / "e" / ".pylintrc",
+            }
+            for basedir, expected in results.items():
+                os.chdir(chroot_path / basedir)
+&gt;               assert next(config.find_default_config_files()) == expected
+E               AssertionError: assert WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmphh4giygt/a/pylintrc') == WindowsPath('C:/Users/EDWARD~1/AppData/Local/Temp/tmphh4giygt/a/pylintrc')
+E                +  where WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmphh4giygt/a/pylintrc') = next(&lt;generator object find_default_config_files at 0x0000019889590270&gt;)
+E                +    where &lt;generator object find_default_config_files at 0x0000019889590270&gt; = &lt;function find_default_config_files at 0x00000198DEBA7280&gt;()
+E                +      where &lt;function find_default_config_files at 0x00000198DEBA7280&gt; = config.find_default_config_files
+
+tests\config\test_find_default_config_files.py:119: AssertionError
+_________________________________________ test_pylintrc_parentdir_no_package __________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir_no_package() -&gt; None:
+        """Test that we don't find a pylintrc in sub-packages."""
+        with tempdir() as chroot:
+            with fake_home():
+                chroot_path = Path(chroot)
+                testutils.create_files(
+                    ["a/pylintrc", "a/b/pylintrc", "a/b/c/d/__init__.py"]
+                )
+                assert config.find_pylintrc() is None
+                results = {
+                    "a": chroot_path / "a" / "pylintrc",
+                    "a/b": chroot_path / "a" / "b" / "pylintrc",
+                    "a/b/c": None,
+                    "a/b/c/d": None,
+                }
+                for basedir, expected in results.items():
+                    os.chdir(chroot_path / basedir)
+&gt;                   assert next(config.find_default_config_files(), None) == expected
+E                   AssertionError: assert WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmpuq_p2dzs/a/pylintrc') == WindowsPath('C:/Users/EDWARD~1/AppData/Local/Temp/tmpuq_p2dzs/a/pylintrc')
+E                    +  where WindowsPath('C:/Users/Edward Ream/AppData/Local/Temp/tmpuq_p2dzs/a/pylintrc') = next(&lt;generator object find_default_config_files at 0x0000019889672BA0&gt;, None)
+E                    +    where &lt;generator object find_default_config_files at 0x0000019889672BA0&gt; = &lt;function find_default_config_files at 0x00000198DEBA7280&gt;()
+E                    +      where &lt;function find_default_config_files at 0x00000198DEBA7280&gt; = config.find_default_config_files
+
+tests\config\test_find_default_config_files.py:140: AssertionError
+_________________________________________________ test_one_arg[case0] _________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/']
+
+    @pytest.mark.parametrize(
+        "case", [["a/b/"], ["a/b"], ["a/b/__init__.py"], ["a/"], ["a"]]
+    )
+    def test_one_arg(fake_path: List[str], case: List[str]) -&gt; None:
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmp4bl25ja0\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmp4bl25ja0\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:125: AssertionError
+_________________________________________________ test_one_arg[case1] _________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b']
+
+    @pytest.mark.parametrize(
+        "case", [["a/b/"], ["a/b"], ["a/b/__init__.py"], ["a/"], ["a"]]
+    )
+    def test_one_arg(fake_path: List[str], case: List[str]) -&gt; None:
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpykkoa2wy\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpykkoa2wy\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:125: AssertionError
+_________________________________________________ test_one_arg[case2] _________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/__init__.py']
+
+    @pytest.mark.parametrize(
+        "case", [["a/b/"], ["a/b"], ["a/b/__init__.py"], ["a/"], ["a"]]
+    )
+    def test_one_arg(fake_path: List[str], case: List[str]) -&gt; None:
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmp7wktpsgr\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmp7wktpsgr\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:125: AssertionError
+_________________________________________________ test_one_arg[case3] _________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/']
+
+    @pytest.mark.parametrize(
+        "case", [["a/b/"], ["a/b"], ["a/b/__init__.py"], ["a/"], ["a"]]
+    )
+    def test_one_arg(fake_path: List[str], case: List[str]) -&gt; None:
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpva95iiv1\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpva95iiv1\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:125: AssertionError
+_________________________________________________ test_one_arg[case4] _________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a']
+
+    @pytest.mark.parametrize(
+        "case", [["a/b/"], ["a/b"], ["a/b/__init__.py"], ["a/"], ["a"]]
+    )
+    def test_one_arg(fake_path: List[str], case: List[str]) -&gt; None:
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmp3qmrf_sx\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmp3qmrf_sx\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:125: AssertionError
+____________________________________________ test_two_similar_args[case0] _____________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b', 'a/c']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b", "a/c"],
+            ["a/c/", "a/b/"],
+            ["a/b/__init__.py", "a/c/__init__.py"],
+            ["a", "a/c/__init__.py"],
+        ],
+    )
+    def test_two_similar_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py", "a/c/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmp5m3cheb8\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmp5m3cheb8\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:145: AssertionError
+____________________________________________ test_two_similar_args[case1] _____________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/c/', 'a/b/']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b", "a/c"],
+            ["a/c/", "a/b/"],
+            ["a/b/__init__.py", "a/c/__init__.py"],
+            ["a", "a/c/__init__.py"],
+        ],
+    )
+    def test_two_similar_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py", "a/c/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmp5f7qftr8\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmp5f7qftr8\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:145: AssertionError
+____________________________________________ test_two_similar_args[case2] _____________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/__init__.py', 'a/c/__init__.py']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b", "a/c"],
+            ["a/c/", "a/b/"],
+            ["a/b/__init__.py", "a/c/__init__.py"],
+            ["a", "a/c/__init__.py"],
+        ],
+    )
+    def test_two_similar_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py", "a/c/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpol3jwq3n\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpol3jwq3n\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:145: AssertionError
+____________________________________________ test_two_similar_args[case3] _____________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a', 'a/c/__init__.py']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b", "a/c"],
+            ["a/c/", "a/b/"],
+            ["a/b/__init__.py", "a/c/__init__.py"],
+            ["a", "a/c/__init__.py"],
+        ],
+    )
+    def test_two_similar_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/__init__.py", "a/c/__init__.py"])
+            expected = [join(chroot, "a")] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpccho3geo\\a' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpccho3geo\\a'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:145: AssertionError
+________________________________________________ test_more_args[case0] ________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/c/__init__.py', 'a/d/__init__.py', 'a/e/f.py']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"],
+            ["a/b/c", "a", "a/e"],
+            ["a/b/c", "a", "a/b/c", "a/e", "a"],
+        ],
+    )
+    def test_more_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"])
+            expected = [
+                join(chroot, suffix)
+                for suffix in (sep.join(("a", "b")), "a", sep.join(("a", "e")))
+            ] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpqgrgp7d9\\a\\b' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpqgrgp7d9\\a\\b'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:167: AssertionError
+________________________________________________ test_more_args[case1] ________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/c', 'a', 'a/e']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"],
+            ["a/b/c", "a", "a/e"],
+            ["a/b/c", "a", "a/b/c", "a/e", "a"],
+        ],
+    )
+    def test_more_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"])
+            expected = [
+                join(chroot, suffix)
+                for suffix in (sep.join(("a", "b")), "a", sep.join(("a", "e")))
+            ] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpjmw68th3\\a\\b' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpjmw68th3\\a\\b'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:167: AssertionError
+________________________________________________ test_more_args[case2] ________________________________________________
+
+fake_path = ['1', '2', '3'], case = ['a/b/c', 'a', 'a/b/c', 'a/e', 'a']
+
+    @pytest.mark.parametrize(
+        "case",
+        [
+            ["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"],
+            ["a/b/c", "a", "a/e"],
+            ["a/b/c", "a", "a/b/c", "a/e", "a"],
+        ],
+    )
+    def test_more_args(fake_path, case):
+        with tempdir() as chroot:
+            create_files(["a/b/c/__init__.py", "a/d/__init__.py", "a/e/f.py"])
+            expected = [
+                join(chroot, suffix)
+                for suffix in (sep.join(("a", "b")), "a", sep.join(("a", "e")))
+            ] + fake_path
+
+            assert sys.path == fake_path
+            with lint.fix_import_path(case):
+&gt;               assert sys.path == expected
+E               AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['C:\\Users\\...'1', '2', '3']
+E                 At index 0 diff: 'C:\\Users\\Edward Ream\\AppData\\Local\\Temp\\tmpugfrx_qr\\a\\b' != 'C:\\Users\\EDWARD~1\\AppData\\Local\\Temp\\tmpugfrx_qr\\a\\b'
+E                 Use -v to get more diff
+
+tests\lint\unittest_lint.py:167: AssertionError
+_______________________________________________ test_pylintrc_parentdir _______________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir() -&gt; None:
+        with tempdir() as chroot:
+
+            create_files(
+                [
+                    "a/pylintrc",
+                    "a/b/__init__.py",
+                    "a/b/pylintrc",
+                    "a/b/c/__init__.py",
+                    "a/b/c/d/__init__.py",
+                    "a/b/c/d/e/.pylintrc",
+                ]
+            )
+            with fake_home():
+                with pytest.warns(DeprecationWarning):
+                    assert config.find_pylintrc() is None
+            results = {
+                "a": join(chroot, "a", "pylintrc"),
+                "a/b": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c/d": join(chroot, "a", "b", "pylintrc"),
+                "a/b/c/d/e": join(chroot, "a", "b", "c", "d", "e", ".pylintrc"),
+            }
+            for basedir, expected in results.items():
+                os.chdir(join(chroot, basedir))
+                with pytest.warns(DeprecationWarning):
+&gt;                   assert config.find_pylintrc() == expected
+E                   AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' == 'C:\\Users\\E...\\a\\pylintrc'
+E                     - C:\Users\EDWARD~1\AppData\Local\Temp\tmpfe08k1bt\a\pylintrc
+E                     ?           ^^^ ^^^
+E                     + C:\Users\Edward Ream\AppData\Local\Temp\tmpfe08k1bt\a\pylintrc
+E                     ?           ^^^^^^ ^^^
+
+tests\lint\unittest_lint.py:691: AssertionError
+_________________________________________ test_pylintrc_parentdir_no_package __________________________________________
+
+    @pytest.mark.usefixtures("pop_pylintrc")
+    def test_pylintrc_parentdir_no_package() -&gt; None:
+        with tempdir() as chroot:
+            with fake_home():
+                create_files(["a/pylintrc", "a/b/pylintrc", "a/b/c/d/__init__.py"])
+                with pytest.warns(DeprecationWarning):
+                    assert config.find_pylintrc() is None
+                results = {
+                    "a": join(chroot, "a", "pylintrc"),
+                    "a/b": join(chroot, "a", "b", "pylintrc"),
+                    "a/b/c": None,
+                    "a/b/c/d": None,
+                }
+                for basedir, expected in results.items():
+                    os.chdir(join(chroot, basedir))
+                    with pytest.warns(DeprecationWarning):
+&gt;                       assert config.find_pylintrc() == expected
+E                       AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' == 'C:\\Users\\E...\\a\\pylintrc'
+E                         - C:\Users\EDWARD~1\AppData\Local\Temp\tmplr0aeiy3\a\pylintrc
+E                         ?           ^^^ ^^^
+E                         + C:\Users\Edward Ream\AppData\Local\Temp\tmplr0aeiy3\a\pylintrc
+E                         ?           ^^^^^^ ^^^
+
+tests\lint\unittest_lint.py:710: AssertionError
+_________________________________ TestDefaultDiadefGenerator.test_exctract_relations __________________________________
+
+self = &lt;test_diadefs.TestDefaultDiadefGenerator object at 0x00000198E0F448E0&gt;
+HANDLER = &lt;pylint.pyreverse.diadefslib.DiadefsHandler object at 0x000001988A8D9A60&gt;
+PROJECT = &lt;Project 'No Name' at 1756117777088 (4 modules)&gt;
+
+    def test_exctract_relations(
+        self, HANDLER: DiadefsHandler, PROJECT: Project
+    ) -&gt; None:
+        """Test extract_relations between classes."""
+        cd = DefaultDiadefGenerator(Linker(PROJECT), HANDLER).visit(PROJECT)[1]
+        cd.extract_relationships()
+        relations = _process_relations(cd.relationships)
+&gt;       assert relations == self._should_rels
+E       AssertionError: assert [('specializa..., 'Ancestor')] == [('associatio..., 'Ancestor')]
+E         At index 0 diff: ('specialization', 'Specialization', 'Ancestor') != ('association', 'DoNothing', 'Ancestor')
+E         Right contains 4 more items, first extra item: ('association', 'DoNothing', 'Specialization')
+E         Use -v to get more diff
+
+tests\pyreverse\test_diadefs.py:106: AssertionError
+___________________________ TestDefaultDiadefGenerator.test_functional_relation_extraction ____________________________
+
+self = &lt;test_diadefs.TestDefaultDiadefGenerator object at 0x00000198E0F447F0&gt;
+default_config = &lt;pylint.testutils.pyreverse.PyreverseConfig object at 0x000001988A7ED7F0&gt;
+get_project = &lt;function get_project.&lt;locals&gt;._get_project at 0x000001988A1F9B80&gt;
+
+    def test_functional_relation_extraction(
+        self, default_config: PyreverseConfig, get_project: Callable
+    ) -&gt; None:
+        """Functional test of relations extraction;
+        different classes possibly in different modules
+        """
+        # XXX should be catching pyreverse environment problem but doesn't
+        # pyreverse doesn't extract the relations but this test ok
+        project = get_project("data")
+        handler = DiadefsHandler(default_config)
+        diadefs = handler.get_diadefs(project, Linker(project, tag=True))
+        cd = diadefs[1]
+        relations = _process_relations(cd.relationships)
+&gt;       assert relations == self._should_rels
+E       AssertionError: assert [('specializa..., 'Ancestor')] == [('associatio..., 'Ancestor')]
+E         At index 0 diff: ('specialization', 'Specialization', 'Ancestor') != ('association', 'DoNothing', 'Ancestor')
+E         Right contains 4 more items, first extra item: ('association', 'DoNothing', 'Specialization')
+E         Use -v to get more diff
+
+tests\pyreverse\test_diadefs.py:121: AssertionError
+___________________________ test_project_root_in_sys_path[c:\\leo.repo\\ekr-pylint\\tests] ____________________________
+
+    @pytest.mark.usefixtures("setup_path")
+    def test_project_root_in_sys_path():
+        """Test the context manager adds the project root directory to sys.path.
+        This should happen when pyreverse is run from any directory
+        """
+        with fix_import_path([TEST_DATA_DIR]):
+&gt;           assert sys.path == [PROJECT_ROOT_DIR]
+E           AssertionError: assert ['C:\\leo.rep...ylint\\tests'] == ['c:\\leo.rep...ylint\\tests']
+E             At index 0 diff: 'C:\\leo.repo\\ekr-pylint\\tests' != 'c:\\leo.repo\\ekr-pylint\\tests'
+E             Use -v to get more diff
+
+c:\leo.repo\ekr-pylint\tests\pyreverse\test_main.py:59: AssertionError
+________________________ test_project_root_in_sys_path[c:\\leo.repo\\ekr-pylint\\tests\\data] _________________________
+
+    @pytest.mark.usefixtures("setup_path")
+    def test_project_root_in_sys_path():
+        """Test the context manager adds the project root directory to sys.path.
+        This should happen when pyreverse is run from any directory
+        """
+        with fix_import_path([TEST_DATA_DIR]):
+&gt;           assert sys.path == [PROJECT_ROOT_DIR]
+E           AssertionError: assert ['C:\\leo.rep...ylint\\tests'] == ['c:\\leo.rep...ylint\\tests']
+E             At index 0 diff: 'C:\\leo.repo\\ekr-pylint\\tests' != 'c:\\leo.repo\\ekr-pylint\\tests'
+E             Use -v to get more diff
+
+c:\leo.repo\ekr-pylint\tests\pyreverse\test_main.py:59: AssertionError
+_________________________________________ test_dot_files[classes_No_Name.dot] _________________________________________
+
+generated_file = 'classes_No_Name.dot'
+
+    @pytest.mark.usefixtures("setup_dot")
+    @pytest.mark.parametrize("generated_file", DOT_FILES)
+    def test_dot_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:153:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_No_Name.dot'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_No_Name.dot, generated : classes_No_Name.dot
+E         ---
+E
+E         +++
+E
+E         @@ -1,17 +1,13 @@
+E
+E          digraph "classes_No_Name" {
+E          rankdir=BT
+E          charset="utf-8"
+E         -"data.clientmodule_test.Ancestor" [color="black", fontcolor="black", label="{Ancestor|attr : str\lcls_member\l|get_value()\lset_value(value)\l}", shape="record", style="solid"];
+E         +"data.clientmodule_test.Ancestor" [color="black", fontcolor="black", label="{Ancestor|attr : str\lcls_member : DoNothing\l|get_value()\lset_value(value)\l}", shape="record", style="solid"];
+E          "data.suppliermodule_test.CustomException" [color="black", fontcolor="red", label="{CustomException|\l|}", shape="record", style="solid"];
+E          "data.suppliermodule_test.DoNothing" [color="black", fontcolor="black", label="{DoNothing|\l|}", shape="record", style="solid"];
+E          "data.suppliermodule_test.DoNothing2" [color="black", fontcolor="black", label="{DoNothing2|\l|}", shape="record", style="solid"];
+E          "data.suppliermodule_test.DoSomething" [color="black", fontcolor="black", label="{DoSomething|my_int : Optional[int]\lmy_int_2 : Optional[int]\lmy_string : str\l|do_it(new_int: int): int\l}", shape="record", style="solid"];
+E          "data.suppliermodule_test.Interface" [color="black", fontcolor="black", label="{Interface|\l|get_value()\lset_value(value)\l}", shape="record", style="solid"];
+E          "data.property_pattern.PropertyPatterns" [color="black", fontcolor="black", label="{PropertyPatterns|prop1\lprop2\l|}", shape="record", style="solid"];
+E         -"data.clientmodule_test.Specialization" [color="black", fontcolor="black", label="{Specialization|TYPE : str\lrelation\lrelation2\ltop : str\l|from_value(value: int)\lincrement_value(): None\ltransform_value(value: int): int\l}", shape="record", style="solid"];
+E         +"data.clientmodule_test.Specialization" [color="black", fontcolor="black", label="{Specialization|TYPE : str\lrelation : DoNothing\lrelation2 : DoNothing2\ltop : str\l|from_value(value: int)\lincrement_value(): None\ltransform_value(value: int): int\l}", shape="record", style="solid"];
+E          "data.clientmodule_test.Specialization" -&gt; "data.clientmodule_test.Ancestor" [arrowhead="empty", arrowtail="none"];
+E         -"data.clientmodule_test.Ancestor" -&gt; "data.suppliermodule_test.Interface" [arrowhead="empty", arrowtail="node", style="dashed"];
+E         -"data.suppliermodule_test.DoNothing" -&gt; "data.clientmodule_test.Ancestor" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="cls_member", style="solid"];
+E         -"data.suppliermodule_test.DoNothing" -&gt; "data.clientmodule_test.Specialization" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="relation", style="solid"];
+E         -"data.suppliermodule_test.DoNothing2" -&gt; "data.clientmodule_test.Specialization" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="relation2", style="solid"];
+E          }
+E       assert 'digraph "cla...="solid"];\n}' == 'digraph "cla...l="none"];\n}'
+E         Skipping 153 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing\l|get_value()\lset_value(value)\l}", shape="record", style="solid"];
+E         ?           ------------
+E         + cls_member\l|get_value()\lset_value(value)\l}", shape="record", style="solid"];
+E           "data.suppliermodule_test.CustomException" [color="black", fontcolor="red", label="{CustomException|\l|}", shape="record", style="solid"];
+E           "data.suppliermodule_test.DoNothing" [color="black", fontcolor="black", label="{DoNothing|\l|}", shape="record", style="solid"];
+E           "data.suppliermodule_test.DoNothing2" [co...
+E
+E         ...Full output truncated (14 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+___________________________________ test_colorized_dot_files[classes_colorized.dot] ___________________________________
+
+generated_file = 'classes_colorized.dot'
+
+    @pytest.mark.usefixtures("setup_colorized_dot")
+    @pytest.mark.parametrize("generated_file", COLORIZED_DOT_FILES)
+    def test_colorized_dot_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:159:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_colorized.dot'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_colorized.dot, generated : classes_colorized.dot
+E         ---
+E
+E         +++
+E
+E         @@ -1,17 +1,13 @@
+E
+E          digraph "classes_colorized" {
+E          rankdir=BT
+E          charset="utf-8"
+E         -"data.clientmodule_test.Ancestor" [color="aliceblue", fontcolor="black", label="{Ancestor|attr : str\lcls_member\l|get_value()\lset_value(value)\l}", shape="record", style="filled"];
+E         +"data.clientmodule_test.Ancestor" [color="aliceblue", fontcolor="black", label="{Ancestor|attr : str\lcls_member : DoNothing\l|get_value()\lset_value(value)\l}", shape="record", style="filled"];
+E          "data.suppliermodule_test.CustomException" [color="aliceblue", fontcolor="red", label="{CustomException|\l|}", shape="record", style="filled"];
+E          "data.suppliermodule_test.DoNothing" [color="aliceblue", fontcolor="black", label="{DoNothing|\l|}", shape="record", style="filled"];
+E          "data.suppliermodule_test.DoNothing2" [color="aliceblue", fontcolor="black", label="{DoNothing2|\l|}", shape="record", style="filled"];
+E          "data.suppliermodule_test.DoSomething" [color="aliceblue", fontcolor="black", label="{DoSomething|my_int : Optional[int]\lmy_int_2 : Optional[int]\lmy_string : str\l|do_it(new_int: int): int\l}", shape="record", style="filled"];
+E          "data.suppliermodule_test.Interface" [color="aliceblue", fontcolor="black", label="{Interface|\l|get_value()\lset_value(value)\l}", shape="record", style="filled"];
+E          "data.property_pattern.PropertyPatterns" [color="aliceblue", fontcolor="black", label="{PropertyPatterns|prop1\lprop2\l|}", shape="record", style="filled"];
+E         -"data.clientmodule_test.Specialization" [color="aliceblue", fontcolor="black", label="{Specialization|TYPE : str\lrelation\lrelation2\ltop : str\l|from_value(value: int)\lincrement_value(): None\ltransform_value(value: int): int\l}", shape="record", style="filled"];
+E         +"data.clientmodule_test.Specialization" [color="aliceblue", fontcolor="black", label="{Specialization|TYPE : str\lrelation : DoNothing\lrelation2 : DoNothing2\ltop : str\l|from_value(value: int)\lincrement_value(): None\ltransform_value(value: int): int\l}", shape="record", style="filled"];
+E          "data.clientmodule_test.Specialization" -&gt; "data.clientmodule_test.Ancestor" [arrowhead="empty", arrowtail="none"];
+E         -"data.clientmodule_test.Ancestor" -&gt; "data.suppliermodule_test.Interface" [arrowhead="empty", arrowtail="node", style="dashed"];
+E         -"data.suppliermodule_test.DoNothing" -&gt; "data.clientmodule_test.Ancestor" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="cls_member", style="solid"];
+E         -"data.suppliermodule_test.DoNothing" -&gt; "data.clientmodule_test.Specialization" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="relation", style="solid"];
+E         -"data.suppliermodule_test.DoNothing2" -&gt; "data.clientmodule_test.Specialization" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="relation2", style="solid"];
+E          }
+E       assert 'digraph "cla...="solid"];\n}' == 'digraph "cla...l="none"];\n}'
+E         Skipping 159 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing\l|get_value()\lset_value(value)\l}", shape="record", style="filled"];
+E         ?           ------------
+E         + cls_member\l|get_value()\lset_value(value)\l}", shape="record", style="filled"];
+E           "data.suppliermodule_test.CustomException" [color="aliceblue", fontcolor="red", label="{CustomException|\l|}", shape="record", style="filled"];
+E           "data.suppliermodule_test.DoNothing" [color="aliceblue", fontcolor="black", label="{DoNothing|\l|}", shape="record", style="filled"];
+E           "data.suppliermodule_test.DoN...
+E
+E         ...Full output truncated (14 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+_________________________________________ test_vcg_files[classes_No_Name.vcg] _________________________________________
+
+generated_file = 'classes_No_Name.vcg'
+
+    @pytest.mark.usefixtures("setup_vcg")
+    @pytest.mark.parametrize("generated_file", VCG_FILES)
+    def test_vcg_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:165:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_No_Name.vcg'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_No_Name.vcg, generated : classes_No_Name.vcg
+E         ---
+E
+E         +++
+E
+E         @@ -4,7 +4,7 @@
+E
+E          late_edge_labels:yes
+E          port_sharing:no
+E          manhattan_edges:yes
+E         -node: {title:"data.clientmodule_test.Ancestor"  label:"\fbAncestor\fn\n\f____________\n\f08attr : str\n\f08cls_member\n\f____________\n\f10get_value()\n\f10set_value()"
+E         +node: {title:"data.clientmodule_test.Ancestor"  label:"\fbAncestor\fn\n\f________________________\n\f08attr : str\n\f08cls_member : DoNothing\n\f________________________\n\f10get_value()\n\f10set_value()"
+E          shape:box
+E          }
+E          node: {title:"data.suppliermodule_test.CustomException"  label:"\fb
+E         @@ -26,31 +26,11 @@
+E
+E          node: {title:"data.property_pattern.PropertyPatterns"  label:"\fbPropertyPatterns\fn\n\f__________________\n\f08prop1\n\f08prop2\n\f__________________"
+E          shape:box
+E          }
+E         -node: {title:"data.clientmodule_test.Specialization"  label:"\fbSpecialization\fn\n\f_________________\n\f08TYPE : str\n\f08relation\n\f08relation2\n\f08top : str\n\f_________________\n\f10from_value()\n\f10increment_value()\n\f10transform_value()"
+E         +node: {title:"data.clientmodule_test.Specialization"  label:"\fbSpecialization\fn\n\f________________________\n\f08TYPE : str\n\f08relation : DoNothing\n\f08relation2 : DoNothing2\n\f08top : str\n\f________________________\n\f10from_value()\n\f10increment_value()\n\f10transform_value()"
+E          shape:box
+E          }
+E          edge: {sourcename:"data.clientmodule_test.Specialization" targetname:"data.clientmodule_test.Ancestor"  arrowstyle:solid
+E          backarrowstyle:none
+E          backarrowsize:10
+E          }
+E         -edge: {sourcename:"data.clientmodule_test.Ancestor" targetname:"data.suppliermodule_test.Interface"  arrowstyle:solid
+E         -backarrowstyle:none
+E         -linestyle:dotted
+E         -backarrowsize:10
+E          }
+E         -edge: {sourcename:"data.suppliermodule_test.DoNothing" targetname:"data.clientmodule_test.Ancestor"  arrowstyle:solid
+E         -backarrowstyle:none
+E         -textcolor:green
+E         -label:"cls_member"
+E         -}
+E         -edge: {sourcename:"data.suppliermodule_test.DoNothing" targetname:"data.clientmodule_test.Specialization"  arrowstyle:solid
+E         -backarrowstyle:none
+E         -textcolor:green
+E         -label:"relation"
+E         -}
+E         -edge: {sourcename:"data.suppliermodule_test.DoNothing2" targetname:"data.clientmodule_test.Specialization"  arrowstyle:solid
+E         -backarrowstyle:none
+E         -textcolor:green
+E         -label:"relation2"
+E         -}
+E         -}
+E       assert 'graph:{\ntit...ation2"\n}\n}' == 'graph:{\ntit...size:10\n}\n}'
+E         Skipping 184 identical leading characters in diff, use -v to show
+E         - ______________________\n\f08attr : str\n\f08cls_member : DoNothing\n\f________________________\n\f10get_value()\n\f10set_value()"
+E         ? ------------                                          ------------    ------------
+E         + __________\n\f08attr : str\n\f08cls_member\n\f____________\n\f10get_value()\n\f10set_value()"
+E           shape:box
+E           }
+E           node: {title:"data.suppliermodule_test.CustomException"  label:"\fb...
+E
+E         ...Full output truncated (49 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+________________________________________ test_puml_files[classes_No_Name.puml] ________________________________________
+
+generated_file = 'classes_No_Name.puml'
+
+    @pytest.mark.usefixtures("setup_puml")
+    @pytest.mark.parametrize("generated_file", PUML_FILES)
+    def test_puml_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:171:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_No_Name.puml'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_No_Name.puml, generated : classes_No_Name.puml
+E         ---
+E
+E         +++
+E
+E         @@ -2,7 +2,7 @@
+E
+E          set namespaceSeparator none
+E          class "Ancestor" as data.clientmodule_test.Ancestor {
+E          attr : str
+E         -cls_member
+E         +cls_member : DoNothing
+E          get_value()
+E          set_value(value)
+E          }
+E         @@ -28,16 +28,12 @@
+E
+E          }
+E          class "Specialization" as data.clientmodule_test.Specialization {
+E          TYPE : str
+E         -relation
+E         -relation2
+E         +relation : DoNothing
+E         +relation2 : DoNothing2
+E          top : str
+E          from_value(value: int)
+E          increment_value() -&gt; None
+E          transform_value(value: int) -&gt; int
+E          }
+E          data.clientmodule_test.Specialization --|&gt; data.clientmodule_test.Ancestor
+E         -data.clientmodule_test.Ancestor ..|&gt; data.suppliermodule_test.Interface
+E         -data.suppliermodule_test.DoNothing --* data.clientmodule_test.Ancestor : cls_member
+E         -data.suppliermodule_test.DoNothing --* data.clientmodule_test.Specialization : relation
+E         -data.suppliermodule_test.DoNothing2 --* data.clientmodule_test.Specialization : relation2
+E          @enduml
+E       assert '@startuml cl...ion2\n@enduml' == '@startuml cl...stor\n@enduml'
+E         Skipping 119 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing
+E         + cls_member
+E           get_value()
+E           set_value(value)
+E           }
+E           class "&lt;color:red&gt;CustomException&lt;/color&gt;" as data.suppliermodule_test.CustomException {...
+E
+E         ...Full output truncated (37 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+_________________________________________ test_mmd_files[classes_No_Name.mmd] _________________________________________
+
+generated_file = 'classes_No_Name.mmd'
+
+    @pytest.mark.usefixtures("setup_mmd")
+    @pytest.mark.parametrize("generated_file", MMD_FILES)
+    def test_mmd_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:177:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_No_Name.mmd'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_No_Name.mmd, generated : classes_No_Name.mmd
+E         ---
+E
+E         +++
+E
+E         @@ -1,7 +1,7 @@
+E
+E          classDiagram
+E          class Ancestor {
+E          attr : str
+E         -cls_member
+E         +cls_member : DoNothing
+E          get_value()
+E          set_value(value)
+E          }
+E         @@ -27,15 +27,11 @@
+E
+E          }
+E          class Specialization {
+E          TYPE : str
+E         -relation
+E         -relation2
+E         +relation : DoNothing
+E         +relation2 : DoNothing2
+E          top : str
+E          from_value(value: int)
+E          increment_value() -&gt; None
+E          transform_value(value: int) -&gt; int
+E          }
+E          Specialization --|&gt; Ancestor
+E         -Ancestor ..|&gt; Interface
+E         -DoNothing --* Ancestor : cls_member
+E         -DoNothing --* Specialization : relation
+E         -DoNothing2 --* Specialization : relation2
+E       assert 'classDiagram...n : relation2' == 'classDiagram...--|&gt; Ancestor'
+E         Skipping 41 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing
+E         + cls_member
+E           get_value()
+E           set_value(value)
+E           }
+E           class CustomException {...
+E
+E         ...Full output truncated (38 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+________________________________________ test_html_files[classes_No_Name.html] ________________________________________
+
+generated_file = 'classes_No_Name.html'
+
+    @pytest.mark.usefixtures("setup_html")
+    @pytest.mark.parametrize("generated_file", HTML_FILES)
+    def test_html_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:183:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_No_Name.html'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_No_Name.html, generated : classes_No_Name.html
+E         ---
+E
+E         +++
+E
+E         @@ -5,7 +5,7 @@
+E
+E          classDiagram
+E          class Ancestor {
+E          attr : str
+E         -cls_member
+E         +cls_member : DoNothing
+E          get_value()
+E          set_value(value)
+E          }
+E         @@ -31,18 +31,14 @@
+E
+E          }
+E          class Specialization {
+E          TYPE : str
+E         -relation
+E         -relation2
+E         +relation : DoNothing
+E         +relation2 : DoNothing2
+E          top : str
+E          from_value(value: int)
+E          increment_value() -&gt; None
+E          transform_value(value: int) -&gt; int
+E          }
+E          Specialization --|&gt; Ancestor
+E         -Ancestor ..|&gt; Interface
+E         -DoNothing --* Ancestor : cls_member
+E         -DoNothing --* Specialization : relation
+E         -DoNothing2 --* Specialization : relation2
+E          &lt;/div&gt;
+E          &lt;/body&gt;
+E          &lt;/html&gt;
+E       assert '&lt;html&gt;\n&lt;bod...ody&gt;\n&lt;/html&gt;' == '&lt;html&gt;\n&lt;bod...ody&gt;\n&lt;/html&gt;'
+E         Skipping 158 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing
+E         + cls_member
+E           get_value()
+E           set_value(value)
+E           }
+E           class CustomException {...
+E
+E         ...Full output truncated (39 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+__________________________________ test_colorized_puml_files[classes_colorized.puml] __________________________________
+
+generated_file = 'classes_colorized.puml'
+
+    @pytest.mark.usefixtures("setup_colorized_puml")
+    @pytest.mark.parametrize("generated_file", COLORIZED_PUML_FILES)
+    def test_colorized_puml_files(generated_file: str) -&gt; None:
+&gt;       _assert_files_are_equal(generated_file)
+
+tests\pyreverse\test_writer.py:189:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+generated_file = 'classes_colorized.puml'
+
+    def _assert_files_are_equal(generated_file: str) -&gt; None:
+        expected_file = os.path.join(os.path.dirname(__file__), "data", generated_file)
+        generated = _file_lines(generated_file)
+        expected = _file_lines(expected_file)
+        joined_generated = "\n".join(generated)
+        joined_expected = "\n".join(expected)
+        files = f"\n *** expected : {expected_file}, generated : {generated_file} \n"
+        diff = "\n".join(
+            line
+            for line in unified_diff(
+                joined_expected.splitlines(), joined_generated.splitlines()
+            )
+        )
+&gt;       assert joined_expected == joined_generated, f"{files}{diff}"
+E       AssertionError:
+E          *** expected : c:\leo.repo\ekr-pylint\tests\pyreverse\data\classes_colorized.puml, generated : classes_colorized.puml
+E         ---
+E
+E         +++
+E
+E         @@ -2,7 +2,7 @@
+E
+E          set namespaceSeparator none
+E          class "Ancestor" as data.clientmodule_test.Ancestor #aliceblue {
+E          attr : str
+E         -cls_member
+E         +cls_member : DoNothing
+E          get_value()
+E          set_value(value)
+E          }
+E         @@ -28,16 +28,12 @@
+E
+E          }
+E          class "Specialization" as data.clientmodule_test.Specialization #aliceblue {
+E          TYPE : str
+E         -relation
+E         -relation2
+E         +relation : DoNothing
+E         +relation2 : DoNothing2
+E          top : str
+E          from_value(value: int)
+E          increment_value() -&gt; None
+E          transform_value(value: int) -&gt; int
+E          }
+E          data.clientmodule_test.Specialization --|&gt; data.clientmodule_test.Ancestor
+E         -data.clientmodule_test.Ancestor ..|&gt; data.suppliermodule_test.Interface
+E         -data.suppliermodule_test.DoNothing --* data.clientmodule_test.Ancestor : cls_member
+E         -data.suppliermodule_test.DoNothing --* data.clientmodule_test.Specialization : relation
+E         -data.suppliermodule_test.DoNothing2 --* data.clientmodule_test.Specialization : relation2
+E          @enduml
+E       assert '@startuml cl...ion2\n@enduml' == '@startuml cl...stor\n@enduml'
+E         Skipping 132 identical leading characters in diff, use -v to show
+E         - cls_member : DoNothing
+E         + cls_member
+E           get_value()
+E           set_value(value)
+E           }
+E           class "&lt;color:red&gt;CustomException&lt;/color&gt;" as data.suppliermodule_test.CustomException #aliceblue {...
+E
+E         ...Full output truncated (37 lines hidden), use '-vv' to show
+
+tests\pyreverse\test_writer.py:205: AssertionError
+================================================== warnings summary ===================================================
+tests/config/test_find_default_config_files.py::test_pylintrc_parentdir_no_package
+  c:\leo.repo\ekr-pylint\.tox\py39\lib\site-packages\pylint\config\find_default_config_files.py:81: DeprecationWarning: find_pylintrc and the PYLINTRC constant have been deprecated. Use find_default_config_files if you want access to pylint's configuration file finding logic.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================================== short test summary info ===============================================
+FAILED tests/test_epylint.py::test_epylint_good_command - assert 'C:\\Users\\E...s not exist\n' == "************...an...
+FAILED tests/test_epylint.py::test_epylint_strange_command - AssertionError: assert 'C:\\Users\\E...s not exist\n' ==...
+FAILED tests/test_functional.py::test_functional[symlink_module1] - AssertionError: Wrong results for file "symlink_m...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command0-Emittable messages with current interpreter:]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command1-Enabled messages:] - Asserti...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command2-nonascii-checker] - Assertio...
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command3-Confidence(name='HIGH', description=]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command4-pylint.extensions.empty_comment]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command5-Pylint global options and switches]
+FAILED tests/test_self.py::TestCallbackOptions::test_output_of_callback_options[command6-Environment variables:] - As...
+FAILED tests/test_self.py::TestCallbackOptions::test_help_msg - AssertionError: assert ':unreachable (W0101)' in ''
+FAILED tests/test_self.py::TestCallbackOptions::test_generate_rcfile - AssertionError: assert '[MASTER]' in ''
+FAILED tests/unittest_reporting.py::test_multi_format_output - AssertionError: assert 'A NopReporte...rect output\n' ...
+FAILED tests/config/test_find_default_config_files.py::test_pylintrc_parentdir - AssertionError: assert WindowsPath('...
+FAILED tests/config/test_find_default_config_files.py::test_pylintrc_parentdir_no_package - AssertionError: assert Wi...
+FAILED tests/lint/unittest_lint.py::test_one_arg[case0] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['...
+FAILED tests/lint/unittest_lint.py::test_one_arg[case1] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['...
+FAILED tests/lint/unittest_lint.py::test_one_arg[case2] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['...
+FAILED tests/lint/unittest_lint.py::test_one_arg[case3] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['...
+FAILED tests/lint/unittest_lint.py::test_one_arg[case4] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ['...
+FAILED tests/lint/unittest_lint.py::test_two_similar_args[case0] - AssertionError: assert ['C:\\Users\\...'1', '2', '...
+FAILED tests/lint/unittest_lint.py::test_two_similar_args[case1] - AssertionError: assert ['C:\\Users\\...'1', '2', '...
+FAILED tests/lint/unittest_lint.py::test_two_similar_args[case2] - AssertionError: assert ['C:\\Users\\...'1', '2', '...
+FAILED tests/lint/unittest_lint.py::test_two_similar_args[case3] - AssertionError: assert ['C:\\Users\\...'1', '2', '...
+FAILED tests/lint/unittest_lint.py::test_more_args[case0] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ...
+FAILED tests/lint/unittest_lint.py::test_more_args[case1] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ...
+FAILED tests/lint/unittest_lint.py::test_more_args[case2] - AssertionError: assert ['C:\\Users\\...'1', '2', '3'] == ...
+FAILED tests/lint/unittest_lint.py::test_pylintrc_parentdir - AssertionError: assert 'C:\\Users\\E...\\a\\pylintrc' =...
+FAILED tests/lint/unittest_lint.py::test_pylintrc_parentdir_no_package - AssertionError: assert 'C:\\Users\\E...\\a\\...
+FAILED tests/pyreverse/test_diadefs.py::TestDefaultDiadefGenerator::test_exctract_relations - AssertionError: assert ...
+FAILED tests/pyreverse/test_diadefs.py::TestDefaultDiadefGenerator::test_functional_relation_extraction - AssertionEr...
+FAILED tests/pyreverse/test_main.py::test_project_root_in_sys_path[c:\\leo.repo\\ekr-pylint\\tests] - AssertionError:...
+FAILED tests/pyreverse/test_main.py::test_project_root_in_sys_path[c:\\leo.repo\\ekr-pylint\\tests\\data] - Assertion...
+FAILED tests/pyreverse/test_writer.py::test_dot_files[classes_No_Name.dot] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_colorized_dot_files[classes_colorized.dot] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_vcg_files[classes_No_Name.vcg] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_puml_files[classes_No_Name.puml] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_mmd_files[classes_No_Name.mmd] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_html_files[classes_No_Name.html] - AssertionError:
+FAILED tests/pyreverse/test_writer.py::test_colorized_puml_files[classes_colorized.puml] - AssertionError:
+=================== 40 failed, 1592 passed, 248 skipped, 5 xfailed, 1 warning in 165.03s (0:02:45) ====================
+ERROR: InvocationError for command 'c:\leo.repo\ekr-pylint\.tox\py39\Scripts\pytest.EXE' --benchmark-disable tests (exited with code 1)
+py310 create: c:\leo.repo\ekr-pylint\.tox\py310
+py310 installdeps: -rc:\leo.repo\ekr-pylint/requirements_test.txt
+py310 inst: c:\leo.repo\ekr-pylint\.tox\.tmp\package\1\pylint-2.14.0.dev0.zip
+py310 installed: astroid==2.11.2,atomicwrites==1.4.0,attrs==21.4.0,beautifulsoup4==4.10.0,black==22.3.0,bleach==4.1.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,cli-ui==0.16.1,click==8.1.0,colorama==0.4.4,contextlib2==21.6.0,contributors-txt==0.7.5,coverage==6.3.2,coveralls==3.3.1,cycler==0.11.0,defusedxml==0.7.1,dialite==0.5.3,dill==0.3.4,distlib==0.3.4,docopt==0.6.2,docutils==0.18.1,entrypoints==0.4,execnet==1.9.0,feedparser==6.0.8,filelock==3.6.0,flake8==4.0.1,flake8-typing-imports==1.12.0,flexx==0.8.3,fonttools==4.31.2,gitdb==4.0.9,GitPython==3.1.27,gprof2dot==2021.2.21,identify==2.4.12,idna==3.3,ImageHash==4.2.1,iniconfig==1.1.1,isort==5.10.1,Jinja2==3.1.1,jsonschema==4.4.0,jupyter-client==7.2.1,jupyter-core==4.9.2,jupyterlab-pygments==0.1.2,kiwisolver==1.4.1,lazy-object-proxy==1.7.1,leo==6.6,lxml==4.8.0,Markdown==3.3.6,MarkupSafe==2.1.1,matplotlib==3.5.1,mccabe==0.6.1,mistune==0.8.4,mypy==0.942,mypy-extensions==0.4.3,nbclient==0.5.13,nbconvert==6.4.5,nbformat==5.2.0,nest-asyncio==1.5.5,nodeenv==1.6.0,numpy==1.22.3,packaging==21.3,pandocfilters==1.5.0,pathspec==0.9.0,Pillow==9.0.1,platformdirs==2.5.1,pluggy==1.0.0,pre-commit==2.18.1,pscript==0.7.7,py==1.11.0,py-cpuinfo==8.0.0,pycodestyle==2.8.0,pyenchant==3.2.2,pyflakes==2.4.0,Pygments==2.11.2,pylint @ file:///C:/leo.repo/ekr-pylint/.tox/.tmp/package/1/pylint-2.14.0.dev0.zip,pyparsing==3.0.7,PyQt5==5.15.6,PyQt5-Qt5==5.15.2,PyQt5-sip==12.9.1,PyQt6==6.2.3,PyQt6-Qt6==6.2.4,PyQt6-sip==13.2.1,PyQt6-WebEngine==6.2.1,PyQt6-WebEngine-Qt6==6.2.4,pyrsistent==0.18.1,pytest==7.1.1,pytest-benchmark==3.4.1,pytest-cov==3.0.0,pytest-forked==1.4.0,pytest-profiling==1.7.0,pytest-timeout==2.1.0,pytest-xdist==2.5.0,python-dateutil==2.8.2,PyWavelets==1.3.0,pywin32==303,PyYAML==6.0,pyzmq==22.3.0,requests==2.27.1,schema==0.7.5,scipy==1.8.0,Send2Trash==1.8.0,sgmllib3k==1.0.0,six==1.16.0,smmap==5.0.0,soupsieve==2.3.1,tabulate==0.8.9,tbump==6.6.1,testpath==0.6.0,toml==0.10.2,tomli==2.0.1,tomlkit==0.10.1,tornado==6.1,tox==3.24.5,traitlets==5.1.1,types-docutils==0.18.0,types-pkg-resources==0.1.3,types-requests==2.27.15,types-urllib3==1.26.11,typing_extensions==4.1.1,Unidecode==1.3.4,urllib3==1.26.9,virtualenv==20.14.0,webencodings==0.5.1,webruntime==0.5.8,websockets==10.2,windows-curses==2.3.0,wrapt==1.14.0
+py310 run-test-pre: PYTHONHASHSEED='743'
+py310 run-test: commands[0] | pytest --benchmark-disable 'c:\leo.repo\ekr-pylint/tests/'
+ERROR: InvocationError for command could not find executable pytest
+pypy create: c:\leo.repo\ekr-pylint\.tox\pypy
+SKIPPED: InterpreterNotFound: pypy
+benchmark create: c:\leo.repo\ekr-pylint\.tox\benchmark
+benchmark installdeps: -rc:\leo.repo\ekr-pylint/requirements_test.txt, pygal
+benchmark inst: c:\leo.repo\ekr-pylint\.tox\.tmp\package\1\pylint-2.14.0.dev0.zip
+benchmark installed: astroid==2.11.2,atomicwrites==1.4.0,attrs==21.4.0,beautifulsoup4==4.10.0,black==22.3.0,bleach==4.1.0,certifi==2021.10.8,cfgv==3.3.1,charset-normalizer==2.0.12,cli-ui==0.16.1,click==8.1.0,colorama==0.4.4,contextlib2==21.6.0,contributors-txt==0.7.5,coverage==6.3.2,coveralls==3.3.1,cycler==0.11.0,defusedxml==0.7.1,dialite==0.5.3,dill==0.3.4,distlib==0.3.4,docopt==0.6.2,docutils==0.18.1,entrypoints==0.4,execnet==1.9.0,feedparser==6.0.8,filelock==3.6.0,flake8==4.0.1,flake8-typing-imports==1.12.0,flexx==0.8.3,fonttools==4.31.2,gitdb==4.0.9,GitPython==3.1.27,gprof2dot==2021.2.21,identify==2.4.12,idna==3.3,ImageHash==4.2.1,iniconfig==1.1.1,isort==5.10.1,Jinja2==3.1.1,jsonschema==4.4.0,jupyter-client==7.2.1,jupyter-core==4.9.2,jupyterlab-pygments==0.1.2,kiwisolver==1.4.1,lazy-object-proxy==1.7.1,leo==6.6,lxml==4.8.0,Markdown==3.3.6,MarkupSafe==2.1.1,matplotlib==3.5.1,mccabe==0.6.1,mistune==0.8.4,mypy==0.942,mypy-extensions==0.4.3,nbclient==0.5.13,nbconvert==6.4.5,nbformat==5.2.0,nest-asyncio==1.5.5,nodeenv==1.6.0,numpy==1.22.3,packaging==21.3,pandocfilters==1.5.0,pathspec==0.9.0,Pillow==9.0.1,platformdirs==2.5.1,pluggy==1.0.0,pre-commit==2.18.1,pscript==0.7.7,py==1.11.0,py-cpuinfo==8.0.0,pycodestyle==2.8.0,pyenchant==3.2.2,pyflakes==2.4.0,pygal==3.0.0,Pygments==2.11.2,pylint @ file:///C:/leo.repo/ekr-pylint/.tox/.tmp/package/1/pylint-2.14.0.dev0.zip,pyparsing==3.0.7,PyQt5==5.15.6,PyQt5-Qt5==5.15.2,PyQt5-sip==12.9.1,PyQt6==6.2.3,PyQt6-Qt6==6.2.4,PyQt6-sip==13.2.1,PyQt6-WebEngine==6.2.1,PyQt6-WebEngine-Qt6==6.2.4,pyrsistent==0.18.1,pytest==7.1.1,pytest-benchmark==3.4.1,pytest-cov==3.0.0,pytest-forked==1.4.0,pytest-profiling==1.7.0,pytest-timeout==2.1.0,pytest-xdist==2.5.0,python-dateutil==2.8.2,PyWavelets==1.3.0,pywin32==303,PyYAML==6.0,pyzmq==22.3.0,requests==2.27.1,schema==0.7.5,scipy==1.8.0,Send2Trash==1.8.0,sgmllib3k==1.0.0,six==1.16.0,smmap==5.0.0,soupsieve==2.3.1,tabulate==0.8.9,tbump==6.6.1,testpath==0.6.0,toml==0.10.2,tomli==2.0.1,tomlkit==0.10.1,tornado==6.1,tox==3.24.5,traitlets==5.1.1,types-docutils==0.18.0,types-pkg-resources==0.1.3,types-requests==2.27.15,types-urllib3==1.26.11,typing_extensions==4.1.1,Unidecode==1.3.4,urllib3==1.26.9,virtualenv==20.14.0,webencodings==0.5.1,webruntime==0.5.8,websockets==10.2,windows-curses==2.3.0,wrapt==1.14.0
+benchmark run-test-pre: PYTHONHASHSEED='743'
+benchmark run-test: commands[0] | pytest --exitfirst --failed-first --benchmark-only --benchmark-save=batch_files --benchmark-save-data --benchmark-autosave 'c:\leo.repo\ekr-pylint/tests' --benchmark-group-by=group
+ERROR: InvocationError for command could not find executable pytest
+_______________________________________________________ summary _______________________________________________________
+ERROR:   formatting: commands failed
+ERROR:   py36: commands failed
+SKIPPED:  py37: InterpreterNotFound: python3.7
+SKIPPED:  py38: InterpreterNotFound: python3.8
+ERROR:   py39: commands failed
+ERROR:   py310: commands failed
+SKIPPED:  pypy: InterpreterNotFound: pypy
+ERROR:   benchmark: commands failed
+
+c:\leo.repo\ekr-pylint&gt;</t>
+<t tx="ekr.20220408204716.1"># cd ekr-pylint
+# python -m tox --recreate
+g.cls()
+import os
+os.chdir(r'C:\leo.repo\ekr-pylint')
+g.execute_shell_commands('&amp;python -m tox')
+</t>
 </tnodes>
 </leo_file>
