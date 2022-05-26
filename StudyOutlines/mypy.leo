@@ -7,343 +7,8 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20220525082746.1"><vh> Recursive import script</vh></v>
+<v t="ekr.20220526075331.1"><vh>Files</vh>
 <v t="ekr.20220224065603.3"><vh>@edit C:\Repos\leo-editor\.mypy.ini</vh></v>
-<v t="ekr.20220320050830.1"><vh>Recent files</vh>
-<v t="ekr.20220525082934.502"><vh>@clean main.py</vh>
-<v t="ekr.20220525082934.503"><vh>stat_proxy</vh></v>
-<v t="ekr.20220525082934.504"><vh>main</vh></v>
-<v t="ekr.20220525082934.505"><vh>run_build</vh>
-<v t="ekr.20220525082934.506"><vh>flush_errors</vh></v>
-</v>
-<v t="ekr.20220525082934.507"><vh>show_messages</vh></v>
-<v t="ekr.20220525082934.508"><vh>class AugmentedHelpFormatter</vh>
-<v t="ekr.20220525082934.509"><vh>AugmentedHelpFormatter.__init__</vh></v>
-<v t="ekr.20220525082934.510"><vh>AugmentedHelpFormatter._fill_text</vh></v>
-</v>
-<v t="ekr.20220525082934.511"><vh>Define pairs of flag prefixes with inverse meaning.</vh></v>
-<v t="ekr.20220525082934.512"><vh>invert_flag_name</vh></v>
-<v t="ekr.20220525082934.513"><vh>class PythonExecutableInferenceError</vh></v>
-<v t="ekr.20220525082934.514"><vh>python_executable_prefix</vh></v>
-<v t="ekr.20220525082934.515"><vh>_python_executable_from_version</vh></v>
-<v t="ekr.20220525082934.516"><vh>infer_python_executable</vh></v>
-<v t="ekr.20220525082934.517"><vh>HEADER: Final = """%(prog)s [-h] [-v] [-V] [more options; see below]</vh></v>
-<v t="ekr.20220525082934.518"><vh>class CapturableArgumentParser</vh>
-<v t="ekr.20220525082934.519"><vh>CapturableArgumentParser.__init__</vh></v>
-<v t="ekr.20220525082934.520"><vh>CapturableArgumentParser.print_usage</vh></v>
-<v t="ekr.20220525082934.521"><vh>CapturableArgumentParser.print_help</vh></v>
-<v t="ekr.20220525082934.522"><vh>CapturableArgumentParser._print_message</vh></v>
-<v t="ekr.20220525082934.523"><vh>CapturableArgumentParser.exit</vh></v>
-<v t="ekr.20220525082934.524"><vh>CapturableArgumentParser.error</vh></v>
-</v>
-<v t="ekr.20220525082934.525"><vh>class CapturableVersionAction</vh>
-<v t="ekr.20220525082934.526"><vh>CapturableVersionAction.__init__</vh></v>
-<v t="ekr.20220525082934.527"><vh>CapturableVersionAction.__call__</vh></v>
-</v>
-<v t="ekr.20220525082934.528"><vh>process_options</vh>
-<v t="ekr.20220525082934.529"><vh>add_invertible_flag</vh></v>
-<v t="ekr.20220525082934.530"><vh>Unless otherwise specified, arguments will be parsed directly onto an</vh></v>
-<v t="ekr.20220525082934.531"><vh>set_strict_flags</vh></v>
-</v>
-<v t="ekr.20220525082934.532"><vh>process_package_roots</vh></v>
-<v t="ekr.20220525082934.533"><vh>process_cache_map</vh></v>
-<v t="ekr.20220525082934.534"><vh>maybe_write_junit_xml</vh></v>
-<v t="ekr.20220525082934.535"><vh>fail</vh></v>
-<v t="ekr.20220525082934.536"><vh>read_types_packages_to_install</vh></v>
-<v t="ekr.20220525082934.537"><vh>install_types</vh></v>
-</v>
-<v t="ekr.20220525082933.340"><vh>@clean checker.py</vh>
-<v t="ekr.20220525082933.341"><vh>class DeferredNode</vh></v>
-<v t="ekr.20220525082933.342"><vh>class FineGrainedDeferredNode</vh></v>
-<v t="ekr.20220525082933.343"><vh>Data structure returned by find_isinstance_check representing</vh></v>
-<v t="ekr.20220525082933.344"><vh>class TypeRange</vh></v>
-<v t="ekr.20220525082933.345"><vh>class PartialTypeScope</vh></v>
-<v t="ekr.20220525082933.346"><vh>class TypeChecker</vh>
-<v t="ekr.20220525082933.347"><vh>TypeChecker.__init__</vh></v>
-<v t="ekr.20220525082933.348"><vh>TypeChecker.type_context</vh></v>
-<v t="ekr.20220525082933.349"><vh>TypeChecker.reset</vh></v>
-<v t="ekr.20220525082933.350"><vh>TypeChecker.check_first_pass</vh></v>
-<v t="ekr.20220525082933.351"><vh>TypeChecker.check_second_pass</vh></v>
-<v t="ekr.20220525082933.352"><vh>TypeChecker.check_partial</vh></v>
-<v t="ekr.20220525082933.353"><vh>TypeChecker.check_top_level</vh></v>
-<v t="ekr.20220525082933.354"><vh>TypeChecker.defer_node</vh></v>
-<v t="ekr.20220525082933.355"><vh>TypeChecker.handle_cannot_determine_type</vh></v>
-<v t="ekr.20220525082933.356"><vh>TypeChecker.accept</vh></v>
-<v t="ekr.20220525082933.357"><vh>TypeChecker.accept_loop</vh></v>
-<v t="ekr.20220525082933.358"><vh>TypeChecker.Definitions</vh></v>
-<v t="ekr.20220525082933.359"><vh>TypeChecker.visit_overloaded_func_def</vh></v>
-<v t="ekr.20220525082933.360"><vh>TypeChecker._visit_overloaded_func_def</vh></v>
-<v t="ekr.20220525082933.361"><vh>TypeChecker.check_overlapping_overloads</vh></v>
-<v t="ekr.20220525082933.362"><vh>TypeChecker.Here's the scoop about generators and coroutines.</vh></v>
-<v t="ekr.20220525082933.363"><vh>TypeChecker.is_generator_return_type</vh></v>
-<v t="ekr.20220525082933.364"><vh>TypeChecker.is_async_generator_return_type</vh></v>
-<v t="ekr.20220525082933.365"><vh>TypeChecker.get_generator_yield_type</vh></v>
-<v t="ekr.20220525082933.366"><vh>TypeChecker.get_generator_receive_type</vh></v>
-<v t="ekr.20220525082933.367"><vh>TypeChecker.get_coroutine_return_type</vh></v>
-<v t="ekr.20220525082933.368"><vh>TypeChecker.get_generator_return_type</vh></v>
-<v t="ekr.20220525082933.369"><vh>TypeChecker.visit_func_def</vh></v>
-<v t="ekr.20220525082933.370"><vh>TypeChecker._visit_func_def</vh></v>
-<v t="ekr.20220525082933.371"><vh>TypeChecker.check_func_item</vh></v>
-<v t="ekr.20220525082933.372"><vh>TypeChecker.enter_attribute_inference_context</vh></v>
-<v t="ekr.20220525082933.373"><vh>TypeChecker.check_func_def</vh></v>
-<v t="ekr.20220525082933.374"><vh>TypeChecker.check_default_args</vh></v>
-<v t="ekr.20220525082933.375"><vh>TypeChecker.is_forward_op_method</vh></v>
-<v t="ekr.20220525082933.376"><vh>TypeChecker.is_reverse_op_method</vh></v>
-<v t="ekr.20220525082933.377"><vh>TypeChecker.check_for_missing_annotations</vh></v>
-<v t="ekr.20220525082933.378"><vh>TypeChecker.check___new___signature</vh></v>
-<v t="ekr.20220525082933.379"><vh>TypeChecker.is_trivial_body</vh></v>
-<v t="ekr.20220525082933.380"><vh>TypeChecker.check_reverse_op_method</vh></v>
-<v t="ekr.20220525082933.381"><vh>TypeChecker.check_overlapping_op_methods</vh></v>
-<v t="ekr.20220525082933.382"><vh>TypeChecker.is_unsafe_overlapping_op</vh></v>
-<v t="ekr.20220525082933.383"><vh>TypeChecker.check_inplace_operator_method</vh></v>
-<v t="ekr.20220525082933.384"><vh>TypeChecker.check_getattr_method</vh></v>
-<v t="ekr.20220525082933.385"><vh>TypeChecker.check_setattr_method</vh></v>
-<v t="ekr.20220525082933.386"><vh>TypeChecker.check_slots_definition</vh></v>
-<v t="ekr.20220525082933.387"><vh>TypeChecker.check_match_args</vh></v>
-<v t="ekr.20220525082933.388"><vh>TypeChecker.expand_typevars</vh></v>
-<v t="ekr.20220525082933.389"><vh>TypeChecker.check_method_override</vh></v>
-<v t="ekr.20220525082933.390"><vh>TypeChecker.check_method_or_accessor_override_for_base</vh></v>
-<v t="ekr.20220525082933.391"><vh>TypeChecker.check_method_override_for_base_with_name</vh></v>
-<v t="ekr.20220525082933.392"><vh>TypeChecker.bind_and_map_method</vh></v>
-<v t="ekr.20220525082933.393"><vh>TypeChecker.get_op_other_domain</vh></v>
-<v t="ekr.20220525082933.394"><vh>TypeChecker.check_override</vh></v>
-<v t="ekr.20220525082933.395"><vh>TypeChecker.check__exit__return_type</vh></v>
-<v t="ekr.20220525082933.396"><vh>TypeChecker.visit_class_def</vh></v>
-<v t="ekr.20220525082933.397"><vh>TypeChecker.check_final_deletable</vh></v>
-<v t="ekr.20220525082933.398"><vh>TypeChecker.check_init_subclass</vh></v>
-<v t="ekr.20220525082933.399"><vh>TypeChecker.check_enum</vh></v>
-<v t="ekr.20220525082933.400"><vh>TypeChecker.check_final_enum</vh></v>
-<v t="ekr.20220525082933.401"><vh>TypeChecker.is_final_enum_value</vh></v>
-<v t="ekr.20220525082933.402"><vh>TypeChecker.check_enum_bases</vh></v>
-<v t="ekr.20220525082933.403"><vh>TypeChecker.check_enum_new</vh></v>
-<v t="ekr.20220525082933.404"><vh>TypeChecker.check_protocol_variance</vh></v>
-<v t="ekr.20220525082933.405"><vh>TypeChecker.check_multiple_inheritance</vh></v>
-<v t="ekr.20220525082933.406"><vh>TypeChecker.determine_type_of_class_member</vh></v>
-<v t="ekr.20220525082933.407"><vh>TypeChecker.check_compatibility</vh></v>
-<v t="ekr.20220525082933.408"><vh>TypeChecker.visit_import_from</vh></v>
-<v t="ekr.20220525082933.409"><vh>TypeChecker.visit_import_all</vh></v>
-<v t="ekr.20220525082933.410"><vh>TypeChecker.visit_import</vh></v>
-<v t="ekr.20220525082933.411"><vh>TypeChecker.check_import</vh></v>
-<v t="ekr.20220525082933.412"><vh>TypeChecker.Statements</vh></v>
-<v t="ekr.20220525082933.413"><vh>TypeChecker.visit_block</vh></v>
-<v t="ekr.20220525082933.414"><vh>TypeChecker.should_report_unreachable_issues</vh></v>
-<v t="ekr.20220525082933.415"><vh>TypeChecker.is_raising_or_empty</vh></v>
-<v t="ekr.20220525082933.416"><vh>TypeChecker.visit_assignment_stmt</vh></v>
-<v t="ekr.20220525082933.417"><vh>TypeChecker.check_type_alias_rvalue</vh>
-<v t="ekr.20220525082933.418"><vh>TypeChecker.accept_items</vh></v>
-</v>
-<v t="ekr.20220525082933.419"><vh>TypeChecker.check_assignment</vh></v>
-<v t="ekr.20220525082933.420"><vh>TypeChecker.(type, operator) tuples for augmented assignments supported with partial types</vh></v>
-<v t="ekr.20220525082933.421"><vh>TypeChecker.try_infer_partial_generic_type_from_assignment</vh></v>
-<v t="ekr.20220525082933.422"><vh>TypeChecker.check_compatibility_all_supers</vh></v>
-<v t="ekr.20220525082933.423"><vh>TypeChecker.check_compatibility_super</vh></v>
-<v t="ekr.20220525082933.424"><vh>TypeChecker.lvalue_type_from_base</vh></v>
-<v t="ekr.20220525082933.425"><vh>TypeChecker.check_compatibility_classvar_super</vh></v>
-<v t="ekr.20220525082933.426"><vh>TypeChecker.check_compatibility_final_super</vh></v>
-<v t="ekr.20220525082933.427"><vh>TypeChecker.check_if_final_var_override_writable</vh></v>
-<v t="ekr.20220525082933.428"><vh>TypeChecker.get_final_context</vh></v>
-<v t="ekr.20220525082933.429"><vh>TypeChecker.enter_final_context</vh></v>
-<v t="ekr.20220525082933.430"><vh>TypeChecker.check_final</vh></v>
-<v t="ekr.20220525082933.431"><vh>TypeChecker.check_assignment_to_slots</vh></v>
-<v t="ekr.20220525082933.432"><vh>TypeChecker.is_assignable_slot</vh></v>
-<v t="ekr.20220525082933.433"><vh>TypeChecker.check_assignment_to_multiple_lvalues</vh></v>
-<v t="ekr.20220525082933.434"><vh>TypeChecker.check_rvalue_count_in_assignment</vh></v>
-<v t="ekr.20220525082933.435"><vh>TypeChecker.check_multi_assignment</vh></v>
-<v t="ekr.20220525082933.436"><vh>TypeChecker.check_multi_assignment_from_union</vh></v>
-<v t="ekr.20220525082933.437"><vh>TypeChecker.flatten_lvalues</vh></v>
-<v t="ekr.20220525082933.438"><vh>TypeChecker.check_multi_assignment_from_tuple</vh></v>
-<v t="ekr.20220525082933.439"><vh>TypeChecker.lvalue_type_for_inference</vh></v>
-<v t="ekr.20220525082933.440"><vh>TypeChecker.split_around_star</vh></v>
-<v t="ekr.20220525082933.441"><vh>TypeChecker.type_is_iterable</vh></v>
-<v t="ekr.20220525082933.442"><vh>TypeChecker.check_multi_assignment_from_iterable</vh></v>
-<v t="ekr.20220525082933.443"><vh>TypeChecker.check_lvalue</vh></v>
-<v t="ekr.20220525082933.444"><vh>TypeChecker.is_definition</vh></v>
-<v t="ekr.20220525082933.445"><vh>TypeChecker.infer_variable_type</vh></v>
-<v t="ekr.20220525082933.446"><vh>TypeChecker.infer_partial_type</vh></v>
-<v t="ekr.20220525082933.447"><vh>TypeChecker.is_valid_defaultdict_partial_value_type</vh></v>
-<v t="ekr.20220525082933.448"><vh>TypeChecker.set_inferred_type</vh></v>
-<v t="ekr.20220525082933.449"><vh>TypeChecker.set_inference_error_fallback_type</vh></v>
-<v t="ekr.20220525082933.450"><vh>TypeChecker.inference_error_fallback_type</vh></v>
-<v t="ekr.20220525082933.451"><vh>TypeChecker.check_simple_assignment</vh></v>
-<v t="ekr.20220525082933.452"><vh>TypeChecker.check_member_assignment</vh></v>
-<v t="ekr.20220525082933.453"><vh>TypeChecker.check_indexed_assignment</vh></v>
-<v t="ekr.20220525082933.454"><vh>TypeChecker.try_infer_partial_type_from_indexed_assignment</vh></v>
-<v t="ekr.20220525082933.455"><vh>TypeChecker.type_requires_usage</vh></v>
-<v t="ekr.20220525082933.456"><vh>TypeChecker.visit_expression_stmt</vh></v>
-<v t="ekr.20220525082933.457"><vh>TypeChecker.visit_return_stmt</vh></v>
-<v t="ekr.20220525082933.458"><vh>TypeChecker.check_return_stmt</vh></v>
-<v t="ekr.20220525082933.459"><vh>TypeChecker.visit_if_stmt</vh></v>
-<v t="ekr.20220525082933.460"><vh>TypeChecker.visit_while_stmt</vh></v>
-<v t="ekr.20220525082933.461"><vh>TypeChecker.visit_operator_assignment_stmt</vh></v>
-<v t="ekr.20220525082933.462"><vh>TypeChecker.visit_assert_stmt</vh></v>
-<v t="ekr.20220525082933.463"><vh>TypeChecker.visit_raise_stmt</vh></v>
-<v t="ekr.20220525082933.464"><vh>TypeChecker.type_check_raise</vh></v>
-<v t="ekr.20220525082933.465"><vh>TypeChecker._type_check_raise_python2</vh></v>
-<v t="ekr.20220525082933.466"><vh>TypeChecker.visit_try_stmt</vh></v>
-<v t="ekr.20220525082933.467"><vh>TypeChecker.visit_try_without_finally</vh></v>
-<v t="ekr.20220525082933.468"><vh>TypeChecker.check_except_handler_test</vh></v>
-<v t="ekr.20220525082933.469"><vh>TypeChecker.get_types_from_except_handler</vh></v>
-<v t="ekr.20220525082933.470"><vh>TypeChecker.visit_for_stmt</vh></v>
-<v t="ekr.20220525082933.471"><vh>TypeChecker.analyze_async_iterable_item_type</vh></v>
-<v t="ekr.20220525082933.472"><vh>TypeChecker.analyze_iterable_item_type</vh></v>
-<v t="ekr.20220525082933.473"><vh>TypeChecker.analyze_container_item_type</vh></v>
-<v t="ekr.20220525082933.474"><vh>TypeChecker.analyze_index_variables</vh></v>
-<v t="ekr.20220525082933.475"><vh>TypeChecker.visit_del_stmt</vh></v>
-<v t="ekr.20220525082933.476"><vh>TypeChecker.visit_decorator</vh></v>
-<v t="ekr.20220525082933.477"><vh>TypeChecker.check_for_untyped_decorator</vh></v>
-<v t="ekr.20220525082933.478"><vh>TypeChecker.check_incompatible_property_override</vh></v>
-<v t="ekr.20220525082933.479"><vh>TypeChecker.visit_with_stmt</vh></v>
-<v t="ekr.20220525082933.480"><vh>TypeChecker.check_untyped_after_decorator</vh></v>
-<v t="ekr.20220525082933.481"><vh>TypeChecker.check_async_with_item</vh></v>
-<v t="ekr.20220525082933.482"><vh>TypeChecker.check_with_item</vh></v>
-<v t="ekr.20220525082933.483"><vh>TypeChecker.visit_print_stmt</vh></v>
-<v t="ekr.20220525082933.484"><vh>TypeChecker.visit_break_stmt</vh></v>
-<v t="ekr.20220525082933.485"><vh>TypeChecker.visit_continue_stmt</vh></v>
-<v t="ekr.20220525082933.486"><vh>TypeChecker.visit_match_stmt</vh></v>
-<v t="ekr.20220525082933.487"><vh>TypeChecker.infer_variable_types_from_type_maps</vh></v>
-<v t="ekr.20220525082933.488"><vh>TypeChecker.remove_capture_conflicts</vh></v>
-<v t="ekr.20220525082933.489"><vh>TypeChecker.make_fake_typeinfo</vh></v>
-<v t="ekr.20220525082933.490"><vh>TypeChecker.intersect_instances</vh></v>
-<v t="ekr.20220525082933.491"><vh>TypeChecker.intersect_instance_callable</vh></v>
-<v t="ekr.20220525082933.492"><vh>TypeChecker.make_fake_callable</vh></v>
-<v t="ekr.20220525082933.493"><vh>TypeChecker.partition_by_callable</vh></v>
-<v t="ekr.20220525082933.494"><vh>TypeChecker.conditional_callable_type_map</vh></v>
-<v t="ekr.20220525082933.495"><vh>TypeChecker._is_truthy_type</vh></v>
-<v t="ekr.20220525082933.496"><vh>TypeChecker._check_for_truthy_type</vh></v>
-<v t="ekr.20220525082933.497"><vh>TypeChecker.find_type_equals_check</vh></v>
-<v t="ekr.20220525082933.498"><vh>TypeChecker.find_isinstance_check</vh></v>
-<v t="ekr.20220525082933.499"><vh>TypeChecker.find_isinstance_check_helper</vh></v>
-<v t="ekr.20220525082933.500"><vh>TypeChecker.propagate_up_typemap_info</vh></v>
-<v t="ekr.20220525082933.501"><vh>TypeChecker.refine_parent_types</vh></v>
-<v t="ekr.20220525082933.502"><vh>TypeChecker.refine_identity_comparison_expression</vh></v>
-<v t="ekr.20220525082933.503"><vh>TypeChecker.refine_away_none_in_comparison</vh></v>
-<v t="ekr.20220525082933.504"><vh>TypeChecker.Helpers</vh></v>
-<v t="ekr.20220525082933.505"><vh>TypeChecker.check_subtype</vh></v>
-<v t="ekr.20220525082933.506"><vh>TypeChecker.contains_none</vh></v>
-<v t="ekr.20220525082933.507"><vh>TypeChecker.should_suppress_optional_error</vh></v>
-<v t="ekr.20220525082933.508"><vh>TypeChecker.named_type</vh></v>
-<v t="ekr.20220525082933.509"><vh>TypeChecker.named_generic_type</vh></v>
-<v t="ekr.20220525082933.510"><vh>TypeChecker.lookup_typeinfo</vh></v>
-<v t="ekr.20220525082933.511"><vh>TypeChecker.type_type</vh></v>
-<v t="ekr.20220525082933.512"><vh>TypeChecker.str_type</vh></v>
-<v t="ekr.20220525082933.513"><vh>TypeChecker.store_type</vh></v>
-<v t="ekr.20220525082933.514"><vh>TypeChecker.has_type</vh></v>
-<v t="ekr.20220525082933.515"><vh>TypeChecker.lookup_type_or_none</vh></v>
-<v t="ekr.20220525082933.516"><vh>TypeChecker.lookup_type</vh></v>
-<v t="ekr.20220525082933.517"><vh>TypeChecker.store_types</vh></v>
-<v t="ekr.20220525082933.518"><vh>TypeChecker.local_type_map</vh></v>
-<v t="ekr.20220525082933.519"><vh>TypeChecker.in_checked_function</vh></v>
-<v t="ekr.20220525082933.520"><vh>TypeChecker.lookup</vh></v>
-<v t="ekr.20220525082933.521"><vh>TypeChecker.lookup_qualified</vh></v>
-<v t="ekr.20220525082933.522"><vh>TypeChecker.enter_partial_types</vh></v>
-<v t="ekr.20220525082933.523"><vh>TypeChecker.handle_partial_var_type</vh></v>
-<v t="ekr.20220525082933.524"><vh>TypeChecker.fixup_partial_type</vh></v>
-<v t="ekr.20220525082933.525"><vh>TypeChecker.is_defined_in_base_class</vh></v>
-<v t="ekr.20220525082933.526"><vh>TypeChecker.find_partial_types</vh></v>
-<v t="ekr.20220525082933.527"><vh>TypeChecker.find_partial_types_in_all_scopes</vh></v>
-<v t="ekr.20220525082933.528"><vh>TypeChecker.temp_node</vh></v>
-<v t="ekr.20220525082933.529"><vh>TypeChecker.fail</vh></v>
-<v t="ekr.20220525082933.530"><vh>TypeChecker.note</vh></v>
-<v t="ekr.20220525082933.531"><vh>TypeChecker.iterable_item_type</vh></v>
-<v t="ekr.20220525082933.532"><vh>TypeChecker.function_type</vh></v>
-<v t="ekr.20220525082933.533"><vh>TypeChecker.push_type_map</vh></v>
-<v t="ekr.20220525082933.534"><vh>TypeChecker.infer_issubclass_maps</vh></v>
-<v t="ekr.20220525082933.535"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
-<v t="ekr.20220525082933.536"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
-<v t="ekr.20220525082933.537"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
-<v t="ekr.20220525082933.538"><vh>TypeChecker.is_writable_attribute</vh></v>
-<v t="ekr.20220525082933.539"><vh>TypeChecker.get_isinstance_type</vh></v>
-<v t="ekr.20220525082933.540"><vh>TypeChecker.is_literal_enum</vh></v>
-</v>
-<v t="ekr.20220525082933.541"><vh>conditional_types</vh></v>
-<v t="ekr.20220525082933.542"><vh>conditional_types</vh></v>
-<v t="ekr.20220525082933.543"><vh>conditional_types</vh></v>
-<v t="ekr.20220525082933.544"><vh>conditional_types_to_typemaps</vh></v>
-<v t="ekr.20220525082933.545"><vh>gen_unique_name</vh></v>
-<v t="ekr.20220525082933.546"><vh>is_true_literal</vh></v>
-<v t="ekr.20220525082933.547"><vh>is_false_literal</vh></v>
-<v t="ekr.20220525082933.548"><vh>is_literal_none</vh></v>
-<v t="ekr.20220525082933.549"><vh>is_literal_not_implemented</vh></v>
-<v t="ekr.20220525082933.550"><vh>builtin_item_type</vh></v>
-<v t="ekr.20220525082933.551"><vh>and_conditional_maps</vh></v>
-<v t="ekr.20220525082933.552"><vh>or_conditional_maps</vh></v>
-<v t="ekr.20220525082933.553"><vh>reduce_conditional_maps</vh></v>
-<v t="ekr.20220525082933.554"><vh>convert_to_typetype</vh></v>
-<v t="ekr.20220525082933.555"><vh>flatten</vh></v>
-<v t="ekr.20220525082933.556"><vh>flatten_types</vh></v>
-<v t="ekr.20220525082933.557"><vh>expand_func</vh></v>
-<v t="ekr.20220525082933.558"><vh>class TypeTransformVisitor</vh></v>
-<v t="ekr.20220525082933.559"><vh>are_argument_counts_overlapping</vh></v>
-<v t="ekr.20220525082933.560"><vh>is_unsafe_overlapping_overload_signatures</vh></v>
-<v t="ekr.20220525082933.561"><vh>detach_callable</vh></v>
-<v t="ekr.20220525082933.562"><vh>overload_can_never_match</vh></v>
-<v t="ekr.20220525082933.563"><vh>is_more_general_arg_prefix</vh></v>
-<v t="ekr.20220525082933.564"><vh>is_same_arg_prefix</vh></v>
-<v t="ekr.20220525082933.565"><vh>infer_operator_assignment_method</vh></v>
-<v t="ekr.20220525082933.566"><vh>is_valid_inferred_type</vh></v>
-<v t="ekr.20220525082933.567"><vh>class NothingSeeker</vh>
-<v t="ekr.20220525082933.568"><vh>NothingSeeker.__init__</vh></v>
-<v t="ekr.20220525082933.569"><vh>NothingSeeker.visit_uninhabited_type</vh></v>
-</v>
-<v t="ekr.20220525082933.570"><vh>class SetNothingToAny</vh>
-<v t="ekr.20220525082933.571"><vh>SetNothingToAny.visit_uninhabited_type</vh></v>
-<v t="ekr.20220525082933.572"><vh>SetNothingToAny.visit_type_alias_type</vh></v>
-</v>
-<v t="ekr.20220525082933.573"><vh>is_node_static</vh></v>
-<v t="ekr.20220525082933.574"><vh>class CheckerScope</vh>
-<v t="ekr.20220525082933.575"><vh>CheckerScope.__init__</vh></v>
-<v t="ekr.20220525082933.576"><vh>CheckerScope.top_function</vh></v>
-<v t="ekr.20220525082933.577"><vh>CheckerScope.top_non_lambda_function</vh></v>
-<v t="ekr.20220525082933.578"><vh>CheckerScope.active_class</vh></v>
-<v t="ekr.20220525082933.579"><vh>CheckerScope.enclosing_class</vh></v>
-<v t="ekr.20220525082933.580"><vh>CheckerScope.active_self_type</vh></v>
-<v t="ekr.20220525082933.581"><vh>CheckerScope.push_function</vh></v>
-<v t="ekr.20220525082933.582"><vh>CheckerScope.push_class</vh></v>
-</v>
-<v t="ekr.20220525082933.583"><vh>TKey = TypeVar('TKey')</vh></v>
-<v t="ekr.20220525082933.584"><vh>class DisjointDict</vh>
-<v t="ekr.20220525082933.585"><vh>DisjointDict.__init__</vh></v>
-<v t="ekr.20220525082933.586"><vh>DisjointDict.add_mapping</vh></v>
-<v t="ekr.20220525082933.587"><vh>DisjointDict.items</vh></v>
-<v t="ekr.20220525082933.588"><vh>DisjointDict._lookup_or_make_root_id</vh></v>
-<v t="ekr.20220525082933.589"><vh>DisjointDict._lookup_root_id</vh></v>
-</v>
-<v t="ekr.20220525082933.590"><vh>group_comparison_operands</vh></v>
-<v t="ekr.20220525082933.591"><vh>is_typed_callable</vh></v>
-<v t="ekr.20220525082933.592"><vh>is_untyped_decorator</vh></v>
-<v t="ekr.20220525082933.593"><vh>is_static</vh></v>
-<v t="ekr.20220525082933.594"><vh>is_subtype_no_promote</vh></v>
-<v t="ekr.20220525082933.595"><vh>is_overlapping_types_no_promote</vh></v>
-<v t="ekr.20220525082933.596"><vh>is_private</vh></v>
-<v t="ekr.20220525082933.597"><vh>is_string_literal</vh></v>
-<v t="ekr.20220525082933.598"><vh>has_bool_item</vh></v>
-<v t="ekr.20220525082933.599"><vh>collapse_walrus</vh></v>
-</v>
-</v>
-<v t="ekr.20220319231816.1"><vh>COPIES: Recent code</vh>
-<v t="ekr.20220224065603.5521"><vh>--- handle args</vh>
-<v t="ekr.20220320082245.1861"><vh>matches_exclude</vh></v>
-<v t="ekr.20220320082245.1564"><vh>process_options</vh>
-<v t="ekr.20220320082245.1565"><vh>add_invertible_flag</vh></v>
-<v t="ekr.20220320082245.1566"><vh>Unless otherwise specified, arguments will be parsed directly onto an</vh></v>
-<v t="ekr.20220320082245.1567"><vh>set_strict_flags</vh></v>
-</v>
-<v t="ekr.20220320082245.869"><vh>parse_config_file</vh></v>
-<v t="ekr.20220320082245.873"><vh>parse_section</vh></v>
-</v>
-<v t="ekr.20220224065603.5549"><vh>--- 1 use of matches_exclude</vh>
-<v t="ekr.20220320082245.1860"><vh>FindModuleCache.find_modules_recursive</vh></v>
-</v>
-</v>
-<v t="ekr.20220320050857.1"><vh>=== #12352</vh>
-<v t="ekr.20220323094253.1"><vh>Notes</vh></v>
-<v t="ekr.20220319232947.1"><vh>--- calling sequence</vh>
-<v t="ekr.20220320082245.371"><vh>TypeChecker.check_func_def</vh></v>
-<v t="ekr.20220224065603.211"><vh>TypeChecker.check_for_missing_annotations (to be changed)</vh></v>
-<v t="ekr.20220320052000.1"><vh>function: is_unannotated_any (study only)</vh></v>
-<v t="ekr.20220320082245.3877"><vh>class ProperType</vh></v>
-</v>
-<v t="ekr.20220224065603.211"></v>
-</v>
 <v t="ekr.20220525082932.2"><vh>@path C:/Repos/mypy</vh>
 <v t="ekr.20220525082932.3"><vh>@clean conftest.py</vh>
 <v t="ekr.20220525082933.1"><vh>pytest_configure</vh></v>
@@ -721,7 +386,273 @@
 <v t="ekr.20220525082933.338"><vh>missing_stubs_file</vh></v>
 <v t="ekr.20220525082933.339"><vh>record_missing_stub_packages</vh></v>
 </v>
-<v t="ekr.20220525082933.340"></v>
+<v t="ekr.20220525082933.340"><vh>@clean checker.py</vh>
+<v t="ekr.20220525082933.341"><vh>class DeferredNode</vh></v>
+<v t="ekr.20220525082933.342"><vh>class FineGrainedDeferredNode</vh></v>
+<v t="ekr.20220525082933.343"><vh>Data structure returned by find_isinstance_check representing</vh></v>
+<v t="ekr.20220525082933.344"><vh>class TypeRange</vh></v>
+<v t="ekr.20220525082933.345"><vh>class PartialTypeScope</vh></v>
+<v t="ekr.20220525082933.346"><vh>class TypeChecker</vh>
+<v t="ekr.20220525082933.347"><vh>TypeChecker.__init__</vh></v>
+<v t="ekr.20220525082933.348"><vh>TypeChecker.type_context</vh></v>
+<v t="ekr.20220525082933.349"><vh>TypeChecker.reset</vh></v>
+<v t="ekr.20220525082933.350"><vh>TypeChecker.check_first_pass</vh></v>
+<v t="ekr.20220525082933.351"><vh>TypeChecker.check_second_pass</vh></v>
+<v t="ekr.20220525082933.352"><vh>TypeChecker.check_partial</vh></v>
+<v t="ekr.20220525082933.353"><vh>TypeChecker.check_top_level</vh></v>
+<v t="ekr.20220525082933.354"><vh>TypeChecker.defer_node</vh></v>
+<v t="ekr.20220525082933.355"><vh>TypeChecker.handle_cannot_determine_type</vh></v>
+<v t="ekr.20220525082933.356"><vh>TypeChecker.accept</vh></v>
+<v t="ekr.20220525082933.357"><vh>TypeChecker.accept_loop</vh></v>
+<v t="ekr.20220525082933.358"><vh>TypeChecker.Definitions</vh></v>
+<v t="ekr.20220525082933.359"><vh>TypeChecker.visit_overloaded_func_def</vh></v>
+<v t="ekr.20220525082933.360"><vh>TypeChecker._visit_overloaded_func_def</vh></v>
+<v t="ekr.20220525082933.361"><vh>TypeChecker.check_overlapping_overloads</vh></v>
+<v t="ekr.20220525082933.362"><vh>TypeChecker.Here's the scoop about generators and coroutines.</vh></v>
+<v t="ekr.20220525082933.363"><vh>TypeChecker.is_generator_return_type</vh></v>
+<v t="ekr.20220525082933.364"><vh>TypeChecker.is_async_generator_return_type</vh></v>
+<v t="ekr.20220525082933.365"><vh>TypeChecker.get_generator_yield_type</vh></v>
+<v t="ekr.20220525082933.366"><vh>TypeChecker.get_generator_receive_type</vh></v>
+<v t="ekr.20220525082933.367"><vh>TypeChecker.get_coroutine_return_type</vh></v>
+<v t="ekr.20220525082933.368"><vh>TypeChecker.get_generator_return_type</vh></v>
+<v t="ekr.20220525082933.369"><vh>TypeChecker.visit_func_def</vh></v>
+<v t="ekr.20220525082933.370"><vh>TypeChecker._visit_func_def</vh></v>
+<v t="ekr.20220525082933.371"><vh>TypeChecker.check_func_item</vh></v>
+<v t="ekr.20220525082933.372"><vh>TypeChecker.enter_attribute_inference_context</vh></v>
+<v t="ekr.20220525082933.373"><vh>TypeChecker.check_func_def</vh></v>
+<v t="ekr.20220525082933.374"><vh>TypeChecker.check_default_args</vh></v>
+<v t="ekr.20220525082933.375"><vh>TypeChecker.is_forward_op_method</vh></v>
+<v t="ekr.20220525082933.376"><vh>TypeChecker.is_reverse_op_method</vh></v>
+<v t="ekr.20220525082933.377"><vh>TypeChecker.check_for_missing_annotations</vh></v>
+<v t="ekr.20220525082933.378"><vh>TypeChecker.check___new___signature</vh></v>
+<v t="ekr.20220525082933.379"><vh>TypeChecker.is_trivial_body</vh></v>
+<v t="ekr.20220525082933.380"><vh>TypeChecker.check_reverse_op_method</vh></v>
+<v t="ekr.20220525082933.381"><vh>TypeChecker.check_overlapping_op_methods</vh></v>
+<v t="ekr.20220525082933.382"><vh>TypeChecker.is_unsafe_overlapping_op</vh></v>
+<v t="ekr.20220525082933.383"><vh>TypeChecker.check_inplace_operator_method</vh></v>
+<v t="ekr.20220525082933.384"><vh>TypeChecker.check_getattr_method</vh></v>
+<v t="ekr.20220525082933.385"><vh>TypeChecker.check_setattr_method</vh></v>
+<v t="ekr.20220525082933.386"><vh>TypeChecker.check_slots_definition</vh></v>
+<v t="ekr.20220525082933.387"><vh>TypeChecker.check_match_args</vh></v>
+<v t="ekr.20220525082933.388"><vh>TypeChecker.expand_typevars</vh></v>
+<v t="ekr.20220525082933.389"><vh>TypeChecker.check_method_override</vh></v>
+<v t="ekr.20220525082933.390"><vh>TypeChecker.check_method_or_accessor_override_for_base</vh></v>
+<v t="ekr.20220525082933.391"><vh>TypeChecker.check_method_override_for_base_with_name</vh></v>
+<v t="ekr.20220525082933.392"><vh>TypeChecker.bind_and_map_method</vh></v>
+<v t="ekr.20220525082933.393"><vh>TypeChecker.get_op_other_domain</vh></v>
+<v t="ekr.20220525082933.394"><vh>TypeChecker.check_override</vh></v>
+<v t="ekr.20220525082933.395"><vh>TypeChecker.check__exit__return_type</vh></v>
+<v t="ekr.20220525082933.396"><vh>TypeChecker.visit_class_def</vh></v>
+<v t="ekr.20220525082933.397"><vh>TypeChecker.check_final_deletable</vh></v>
+<v t="ekr.20220525082933.398"><vh>TypeChecker.check_init_subclass</vh></v>
+<v t="ekr.20220525082933.399"><vh>TypeChecker.check_enum</vh></v>
+<v t="ekr.20220525082933.400"><vh>TypeChecker.check_final_enum</vh></v>
+<v t="ekr.20220525082933.401"><vh>TypeChecker.is_final_enum_value</vh></v>
+<v t="ekr.20220525082933.402"><vh>TypeChecker.check_enum_bases</vh></v>
+<v t="ekr.20220525082933.403"><vh>TypeChecker.check_enum_new</vh></v>
+<v t="ekr.20220525082933.404"><vh>TypeChecker.check_protocol_variance</vh></v>
+<v t="ekr.20220525082933.405"><vh>TypeChecker.check_multiple_inheritance</vh></v>
+<v t="ekr.20220525082933.406"><vh>TypeChecker.determine_type_of_class_member</vh></v>
+<v t="ekr.20220525082933.407"><vh>TypeChecker.check_compatibility</vh></v>
+<v t="ekr.20220525082933.408"><vh>TypeChecker.visit_import_from</vh></v>
+<v t="ekr.20220525082933.409"><vh>TypeChecker.visit_import_all</vh></v>
+<v t="ekr.20220525082933.410"><vh>TypeChecker.visit_import</vh></v>
+<v t="ekr.20220525082933.411"><vh>TypeChecker.check_import</vh></v>
+<v t="ekr.20220525082933.412"><vh>TypeChecker.Statements</vh></v>
+<v t="ekr.20220525082933.413"><vh>TypeChecker.visit_block</vh></v>
+<v t="ekr.20220525082933.414"><vh>TypeChecker.should_report_unreachable_issues</vh></v>
+<v t="ekr.20220525082933.415"><vh>TypeChecker.is_raising_or_empty</vh></v>
+<v t="ekr.20220525082933.416"><vh>TypeChecker.visit_assignment_stmt</vh></v>
+<v t="ekr.20220525082933.417"><vh>TypeChecker.check_type_alias_rvalue</vh>
+<v t="ekr.20220525082933.418"><vh>TypeChecker.accept_items</vh></v>
+</v>
+<v t="ekr.20220525082933.419"><vh>TypeChecker.check_assignment</vh></v>
+<v t="ekr.20220525082933.420"><vh>TypeChecker.(type, operator) tuples for augmented assignments supported with partial types</vh></v>
+<v t="ekr.20220525082933.421"><vh>TypeChecker.try_infer_partial_generic_type_from_assignment</vh></v>
+<v t="ekr.20220525082933.422"><vh>TypeChecker.check_compatibility_all_supers</vh></v>
+<v t="ekr.20220525082933.423"><vh>TypeChecker.check_compatibility_super</vh></v>
+<v t="ekr.20220525082933.424"><vh>TypeChecker.lvalue_type_from_base</vh></v>
+<v t="ekr.20220525082933.425"><vh>TypeChecker.check_compatibility_classvar_super</vh></v>
+<v t="ekr.20220525082933.426"><vh>TypeChecker.check_compatibility_final_super</vh></v>
+<v t="ekr.20220525082933.427"><vh>TypeChecker.check_if_final_var_override_writable</vh></v>
+<v t="ekr.20220525082933.428"><vh>TypeChecker.get_final_context</vh></v>
+<v t="ekr.20220525082933.429"><vh>TypeChecker.enter_final_context</vh></v>
+<v t="ekr.20220525082933.430"><vh>TypeChecker.check_final</vh></v>
+<v t="ekr.20220525082933.431"><vh>TypeChecker.check_assignment_to_slots</vh></v>
+<v t="ekr.20220525082933.432"><vh>TypeChecker.is_assignable_slot</vh></v>
+<v t="ekr.20220525082933.433"><vh>TypeChecker.check_assignment_to_multiple_lvalues</vh></v>
+<v t="ekr.20220525082933.434"><vh>TypeChecker.check_rvalue_count_in_assignment</vh></v>
+<v t="ekr.20220525082933.435"><vh>TypeChecker.check_multi_assignment</vh></v>
+<v t="ekr.20220525082933.436"><vh>TypeChecker.check_multi_assignment_from_union</vh></v>
+<v t="ekr.20220525082933.437"><vh>TypeChecker.flatten_lvalues</vh></v>
+<v t="ekr.20220525082933.438"><vh>TypeChecker.check_multi_assignment_from_tuple</vh></v>
+<v t="ekr.20220525082933.439"><vh>TypeChecker.lvalue_type_for_inference</vh></v>
+<v t="ekr.20220525082933.440"><vh>TypeChecker.split_around_star</vh></v>
+<v t="ekr.20220525082933.441"><vh>TypeChecker.type_is_iterable</vh></v>
+<v t="ekr.20220525082933.442"><vh>TypeChecker.check_multi_assignment_from_iterable</vh></v>
+<v t="ekr.20220525082933.443"><vh>TypeChecker.check_lvalue</vh></v>
+<v t="ekr.20220525082933.444"><vh>TypeChecker.is_definition</vh></v>
+<v t="ekr.20220525082933.445"><vh>TypeChecker.infer_variable_type</vh></v>
+<v t="ekr.20220525082933.446"><vh>TypeChecker.infer_partial_type</vh></v>
+<v t="ekr.20220525082933.447"><vh>TypeChecker.is_valid_defaultdict_partial_value_type</vh></v>
+<v t="ekr.20220525082933.448"><vh>TypeChecker.set_inferred_type</vh></v>
+<v t="ekr.20220525082933.449"><vh>TypeChecker.set_inference_error_fallback_type</vh></v>
+<v t="ekr.20220525082933.450"><vh>TypeChecker.inference_error_fallback_type</vh></v>
+<v t="ekr.20220525082933.451"><vh>TypeChecker.check_simple_assignment</vh></v>
+<v t="ekr.20220525082933.452"><vh>TypeChecker.check_member_assignment</vh></v>
+<v t="ekr.20220525082933.453"><vh>TypeChecker.check_indexed_assignment</vh></v>
+<v t="ekr.20220525082933.454"><vh>TypeChecker.try_infer_partial_type_from_indexed_assignment</vh></v>
+<v t="ekr.20220525082933.455"><vh>TypeChecker.type_requires_usage</vh></v>
+<v t="ekr.20220525082933.456"><vh>TypeChecker.visit_expression_stmt</vh></v>
+<v t="ekr.20220525082933.457"><vh>TypeChecker.visit_return_stmt</vh></v>
+<v t="ekr.20220525082933.458"><vh>TypeChecker.check_return_stmt</vh></v>
+<v t="ekr.20220525082933.459"><vh>TypeChecker.visit_if_stmt</vh></v>
+<v t="ekr.20220525082933.460"><vh>TypeChecker.visit_while_stmt</vh></v>
+<v t="ekr.20220525082933.461"><vh>TypeChecker.visit_operator_assignment_stmt</vh></v>
+<v t="ekr.20220525082933.462"><vh>TypeChecker.visit_assert_stmt</vh></v>
+<v t="ekr.20220525082933.463"><vh>TypeChecker.visit_raise_stmt</vh></v>
+<v t="ekr.20220525082933.464"><vh>TypeChecker.type_check_raise</vh></v>
+<v t="ekr.20220525082933.465"><vh>TypeChecker._type_check_raise_python2</vh></v>
+<v t="ekr.20220525082933.466"><vh>TypeChecker.visit_try_stmt</vh></v>
+<v t="ekr.20220525082933.467"><vh>TypeChecker.visit_try_without_finally</vh></v>
+<v t="ekr.20220525082933.468"><vh>TypeChecker.check_except_handler_test</vh></v>
+<v t="ekr.20220525082933.469"><vh>TypeChecker.get_types_from_except_handler</vh></v>
+<v t="ekr.20220525082933.470"><vh>TypeChecker.visit_for_stmt</vh></v>
+<v t="ekr.20220525082933.471"><vh>TypeChecker.analyze_async_iterable_item_type</vh></v>
+<v t="ekr.20220525082933.472"><vh>TypeChecker.analyze_iterable_item_type</vh></v>
+<v t="ekr.20220525082933.473"><vh>TypeChecker.analyze_container_item_type</vh></v>
+<v t="ekr.20220525082933.474"><vh>TypeChecker.analyze_index_variables</vh></v>
+<v t="ekr.20220525082933.475"><vh>TypeChecker.visit_del_stmt</vh></v>
+<v t="ekr.20220525082933.476"><vh>TypeChecker.visit_decorator</vh></v>
+<v t="ekr.20220525082933.477"><vh>TypeChecker.check_for_untyped_decorator</vh></v>
+<v t="ekr.20220525082933.478"><vh>TypeChecker.check_incompatible_property_override</vh></v>
+<v t="ekr.20220525082933.479"><vh>TypeChecker.visit_with_stmt</vh></v>
+<v t="ekr.20220525082933.480"><vh>TypeChecker.check_untyped_after_decorator</vh></v>
+<v t="ekr.20220525082933.481"><vh>TypeChecker.check_async_with_item</vh></v>
+<v t="ekr.20220525082933.482"><vh>TypeChecker.check_with_item</vh></v>
+<v t="ekr.20220525082933.483"><vh>TypeChecker.visit_print_stmt</vh></v>
+<v t="ekr.20220525082933.484"><vh>TypeChecker.visit_break_stmt</vh></v>
+<v t="ekr.20220525082933.485"><vh>TypeChecker.visit_continue_stmt</vh></v>
+<v t="ekr.20220525082933.486"><vh>TypeChecker.visit_match_stmt</vh></v>
+<v t="ekr.20220525082933.487"><vh>TypeChecker.infer_variable_types_from_type_maps</vh></v>
+<v t="ekr.20220525082933.488"><vh>TypeChecker.remove_capture_conflicts</vh></v>
+<v t="ekr.20220525082933.489"><vh>TypeChecker.make_fake_typeinfo</vh></v>
+<v t="ekr.20220525082933.490"><vh>TypeChecker.intersect_instances</vh></v>
+<v t="ekr.20220525082933.491"><vh>TypeChecker.intersect_instance_callable</vh></v>
+<v t="ekr.20220525082933.492"><vh>TypeChecker.make_fake_callable</vh></v>
+<v t="ekr.20220525082933.493"><vh>TypeChecker.partition_by_callable</vh></v>
+<v t="ekr.20220525082933.494"><vh>TypeChecker.conditional_callable_type_map</vh></v>
+<v t="ekr.20220525082933.495"><vh>TypeChecker._is_truthy_type</vh></v>
+<v t="ekr.20220525082933.496"><vh>TypeChecker._check_for_truthy_type</vh></v>
+<v t="ekr.20220525082933.497"><vh>TypeChecker.find_type_equals_check</vh></v>
+<v t="ekr.20220525082933.498"><vh>TypeChecker.find_isinstance_check</vh></v>
+<v t="ekr.20220525082933.499"><vh>TypeChecker.find_isinstance_check_helper</vh></v>
+<v t="ekr.20220525082933.500"><vh>TypeChecker.propagate_up_typemap_info</vh></v>
+<v t="ekr.20220525082933.501"><vh>TypeChecker.refine_parent_types</vh></v>
+<v t="ekr.20220525082933.502"><vh>TypeChecker.refine_identity_comparison_expression</vh></v>
+<v t="ekr.20220525082933.503"><vh>TypeChecker.refine_away_none_in_comparison</vh></v>
+<v t="ekr.20220525082933.504"><vh>TypeChecker.Helpers</vh></v>
+<v t="ekr.20220525082933.505"><vh>TypeChecker.check_subtype</vh></v>
+<v t="ekr.20220525082933.506"><vh>TypeChecker.contains_none</vh></v>
+<v t="ekr.20220525082933.507"><vh>TypeChecker.should_suppress_optional_error</vh></v>
+<v t="ekr.20220525082933.508"><vh>TypeChecker.named_type</vh></v>
+<v t="ekr.20220525082933.509"><vh>TypeChecker.named_generic_type</vh></v>
+<v t="ekr.20220525082933.510"><vh>TypeChecker.lookup_typeinfo</vh></v>
+<v t="ekr.20220525082933.511"><vh>TypeChecker.type_type</vh></v>
+<v t="ekr.20220525082933.512"><vh>TypeChecker.str_type</vh></v>
+<v t="ekr.20220525082933.513"><vh>TypeChecker.store_type</vh></v>
+<v t="ekr.20220525082933.514"><vh>TypeChecker.has_type</vh></v>
+<v t="ekr.20220525082933.515"><vh>TypeChecker.lookup_type_or_none</vh></v>
+<v t="ekr.20220525082933.516"><vh>TypeChecker.lookup_type</vh></v>
+<v t="ekr.20220525082933.517"><vh>TypeChecker.store_types</vh></v>
+<v t="ekr.20220525082933.518"><vh>TypeChecker.local_type_map</vh></v>
+<v t="ekr.20220525082933.519"><vh>TypeChecker.in_checked_function</vh></v>
+<v t="ekr.20220525082933.520"><vh>TypeChecker.lookup</vh></v>
+<v t="ekr.20220525082933.521"><vh>TypeChecker.lookup_qualified</vh></v>
+<v t="ekr.20220525082933.522"><vh>TypeChecker.enter_partial_types</vh></v>
+<v t="ekr.20220525082933.523"><vh>TypeChecker.handle_partial_var_type</vh></v>
+<v t="ekr.20220525082933.524"><vh>TypeChecker.fixup_partial_type</vh></v>
+<v t="ekr.20220525082933.525"><vh>TypeChecker.is_defined_in_base_class</vh></v>
+<v t="ekr.20220525082933.526"><vh>TypeChecker.find_partial_types</vh></v>
+<v t="ekr.20220525082933.527"><vh>TypeChecker.find_partial_types_in_all_scopes</vh></v>
+<v t="ekr.20220525082933.528"><vh>TypeChecker.temp_node</vh></v>
+<v t="ekr.20220525082933.529"><vh>TypeChecker.fail</vh></v>
+<v t="ekr.20220525082933.530"><vh>TypeChecker.note</vh></v>
+<v t="ekr.20220525082933.531"><vh>TypeChecker.iterable_item_type</vh></v>
+<v t="ekr.20220525082933.532"><vh>TypeChecker.function_type</vh></v>
+<v t="ekr.20220525082933.533"><vh>TypeChecker.push_type_map</vh></v>
+<v t="ekr.20220525082933.534"><vh>TypeChecker.infer_issubclass_maps</vh></v>
+<v t="ekr.20220525082933.535"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
+<v t="ekr.20220525082933.536"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
+<v t="ekr.20220525082933.537"><vh>TypeChecker.conditional_types_with_intersection</vh></v>
+<v t="ekr.20220525082933.538"><vh>TypeChecker.is_writable_attribute</vh></v>
+<v t="ekr.20220525082933.539"><vh>TypeChecker.get_isinstance_type</vh></v>
+<v t="ekr.20220525082933.540"><vh>TypeChecker.is_literal_enum</vh></v>
+</v>
+<v t="ekr.20220525082933.541"><vh>conditional_types</vh></v>
+<v t="ekr.20220525082933.542"><vh>conditional_types</vh></v>
+<v t="ekr.20220525082933.543"><vh>conditional_types</vh></v>
+<v t="ekr.20220525082933.544"><vh>conditional_types_to_typemaps</vh></v>
+<v t="ekr.20220525082933.545"><vh>gen_unique_name</vh></v>
+<v t="ekr.20220525082933.546"><vh>is_true_literal</vh></v>
+<v t="ekr.20220525082933.547"><vh>is_false_literal</vh></v>
+<v t="ekr.20220525082933.548"><vh>is_literal_none</vh></v>
+<v t="ekr.20220525082933.549"><vh>is_literal_not_implemented</vh></v>
+<v t="ekr.20220525082933.550"><vh>builtin_item_type</vh></v>
+<v t="ekr.20220525082933.551"><vh>and_conditional_maps</vh></v>
+<v t="ekr.20220525082933.552"><vh>or_conditional_maps</vh></v>
+<v t="ekr.20220525082933.553"><vh>reduce_conditional_maps</vh></v>
+<v t="ekr.20220525082933.554"><vh>convert_to_typetype</vh></v>
+<v t="ekr.20220525082933.555"><vh>flatten</vh></v>
+<v t="ekr.20220525082933.556"><vh>flatten_types</vh></v>
+<v t="ekr.20220525082933.557"><vh>expand_func</vh></v>
+<v t="ekr.20220525082933.558"><vh>class TypeTransformVisitor</vh></v>
+<v t="ekr.20220525082933.559"><vh>are_argument_counts_overlapping</vh></v>
+<v t="ekr.20220525082933.560"><vh>is_unsafe_overlapping_overload_signatures</vh></v>
+<v t="ekr.20220525082933.561"><vh>detach_callable</vh></v>
+<v t="ekr.20220525082933.562"><vh>overload_can_never_match</vh></v>
+<v t="ekr.20220525082933.563"><vh>is_more_general_arg_prefix</vh></v>
+<v t="ekr.20220525082933.564"><vh>is_same_arg_prefix</vh></v>
+<v t="ekr.20220525082933.565"><vh>infer_operator_assignment_method</vh></v>
+<v t="ekr.20220525082933.566"><vh>is_valid_inferred_type</vh></v>
+<v t="ekr.20220525082933.567"><vh>class NothingSeeker</vh>
+<v t="ekr.20220525082933.568"><vh>NothingSeeker.__init__</vh></v>
+<v t="ekr.20220525082933.569"><vh>NothingSeeker.visit_uninhabited_type</vh></v>
+</v>
+<v t="ekr.20220525082933.570"><vh>class SetNothingToAny</vh>
+<v t="ekr.20220525082933.571"><vh>SetNothingToAny.visit_uninhabited_type</vh></v>
+<v t="ekr.20220525082933.572"><vh>SetNothingToAny.visit_type_alias_type</vh></v>
+</v>
+<v t="ekr.20220525082933.573"><vh>is_node_static</vh></v>
+<v t="ekr.20220525082933.574"><vh>class CheckerScope</vh>
+<v t="ekr.20220525082933.575"><vh>CheckerScope.__init__</vh></v>
+<v t="ekr.20220525082933.576"><vh>CheckerScope.top_function</vh></v>
+<v t="ekr.20220525082933.577"><vh>CheckerScope.top_non_lambda_function</vh></v>
+<v t="ekr.20220525082933.578"><vh>CheckerScope.active_class</vh></v>
+<v t="ekr.20220525082933.579"><vh>CheckerScope.enclosing_class</vh></v>
+<v t="ekr.20220525082933.580"><vh>CheckerScope.active_self_type</vh></v>
+<v t="ekr.20220525082933.581"><vh>CheckerScope.push_function</vh></v>
+<v t="ekr.20220525082933.582"><vh>CheckerScope.push_class</vh></v>
+</v>
+<v t="ekr.20220525082933.583"><vh>TKey = TypeVar('TKey')</vh></v>
+<v t="ekr.20220525082933.584"><vh>class DisjointDict</vh>
+<v t="ekr.20220525082933.585"><vh>DisjointDict.__init__</vh></v>
+<v t="ekr.20220525082933.586"><vh>DisjointDict.add_mapping</vh></v>
+<v t="ekr.20220525082933.587"><vh>DisjointDict.items</vh></v>
+<v t="ekr.20220525082933.588"><vh>DisjointDict._lookup_or_make_root_id</vh></v>
+<v t="ekr.20220525082933.589"><vh>DisjointDict._lookup_root_id</vh></v>
+</v>
+<v t="ekr.20220525082933.590"><vh>group_comparison_operands</vh></v>
+<v t="ekr.20220525082933.591"><vh>is_typed_callable</vh></v>
+<v t="ekr.20220525082933.592"><vh>is_untyped_decorator</vh></v>
+<v t="ekr.20220525082933.593"><vh>is_static</vh></v>
+<v t="ekr.20220525082933.594"><vh>is_subtype_no_promote</vh></v>
+<v t="ekr.20220525082933.595"><vh>is_overlapping_types_no_promote</vh></v>
+<v t="ekr.20220525082933.596"><vh>is_private</vh></v>
+<v t="ekr.20220525082933.597"><vh>is_string_literal</vh></v>
+<v t="ekr.20220525082933.598"><vh>has_bool_item</vh></v>
+<v t="ekr.20220525082933.599"><vh>collapse_walrus</vh></v>
+</v>
 <v t="ekr.20220525082933.600"><vh>@clean checkexpr.py</vh>
 <v t="ekr.20220525082933.601"><vh>class TooManyUnions</vh></v>
 <v t="ekr.20220525082933.602"><vh>allow_fast_container_literal</vh></v>
@@ -1804,7 +1735,48 @@
 <v t="ekr.20220525082934.500"><vh>@clean lookup.py</vh>
 <v t="ekr.20220525082934.501"><vh>lookup_fully_qualified</vh></v>
 </v>
-<v t="ekr.20220525082934.502"></v>
+<v t="ekr.20220525082934.502"><vh>@clean main.py</vh>
+<v t="ekr.20220525082934.503"><vh>stat_proxy</vh></v>
+<v t="ekr.20220525082934.504"><vh>main</vh></v>
+<v t="ekr.20220525082934.505"><vh>run_build</vh>
+<v t="ekr.20220525082934.506"><vh>flush_errors</vh></v>
+</v>
+<v t="ekr.20220525082934.507"><vh>show_messages</vh></v>
+<v t="ekr.20220525082934.508"><vh>class AugmentedHelpFormatter</vh>
+<v t="ekr.20220525082934.509"><vh>AugmentedHelpFormatter.__init__</vh></v>
+<v t="ekr.20220525082934.510"><vh>AugmentedHelpFormatter._fill_text</vh></v>
+</v>
+<v t="ekr.20220525082934.511"><vh>Define pairs of flag prefixes with inverse meaning.</vh></v>
+<v t="ekr.20220525082934.512"><vh>invert_flag_name</vh></v>
+<v t="ekr.20220525082934.513"><vh>class PythonExecutableInferenceError</vh></v>
+<v t="ekr.20220525082934.514"><vh>python_executable_prefix</vh></v>
+<v t="ekr.20220525082934.515"><vh>_python_executable_from_version</vh></v>
+<v t="ekr.20220525082934.516"><vh>infer_python_executable</vh></v>
+<v t="ekr.20220525082934.517"><vh>HEADER: Final = """%(prog)s [-h] [-v] [-V] [more options; see below]</vh></v>
+<v t="ekr.20220525082934.518"><vh>class CapturableArgumentParser</vh>
+<v t="ekr.20220525082934.519"><vh>CapturableArgumentParser.__init__</vh></v>
+<v t="ekr.20220525082934.520"><vh>CapturableArgumentParser.print_usage</vh></v>
+<v t="ekr.20220525082934.521"><vh>CapturableArgumentParser.print_help</vh></v>
+<v t="ekr.20220525082934.522"><vh>CapturableArgumentParser._print_message</vh></v>
+<v t="ekr.20220525082934.523"><vh>CapturableArgumentParser.exit</vh></v>
+<v t="ekr.20220525082934.524"><vh>CapturableArgumentParser.error</vh></v>
+</v>
+<v t="ekr.20220525082934.525"><vh>class CapturableVersionAction</vh>
+<v t="ekr.20220525082934.526"><vh>CapturableVersionAction.__init__</vh></v>
+<v t="ekr.20220525082934.527"><vh>CapturableVersionAction.__call__</vh></v>
+</v>
+<v t="ekr.20220525082934.528"><vh>process_options</vh>
+<v t="ekr.20220525082934.529"><vh>add_invertible_flag</vh></v>
+<v t="ekr.20220525082934.530"><vh>Unless otherwise specified, arguments will be parsed directly onto an</vh></v>
+<v t="ekr.20220525082934.531"><vh>set_strict_flags</vh></v>
+</v>
+<v t="ekr.20220525082934.532"><vh>process_package_roots</vh></v>
+<v t="ekr.20220525082934.533"><vh>process_cache_map</vh></v>
+<v t="ekr.20220525082934.534"><vh>maybe_write_junit_xml</vh></v>
+<v t="ekr.20220525082934.535"><vh>fail</vh></v>
+<v t="ekr.20220525082934.536"><vh>read_types_packages_to_install</vh></v>
+<v t="ekr.20220525082934.537"><vh>install_types</vh></v>
+</v>
 <v t="ekr.20220525082934.538"><vh>@clean maptype.py</vh>
 <v t="ekr.20220525082934.539"><vh>map_instance_to_supertype</vh></v>
 <v t="ekr.20220525082934.540"><vh>map_instance_to_supertypes</vh></v>
@@ -6515,6 +6487,32 @@
 </v>
 </v>
 </v>
+</v>
+<v t="ekr.20220320050830.1"><vh>Recent files</vh>
+<v t="ekr.20220525082934.502"></v>
+<v t="ekr.20220525082933.340"></v>
+</v>
+<v t="ekr.20220320050857.1"><vh>=== #12352</vh>
+<v t="ekr.20220323094253.1"><vh>Notes</vh></v>
+<v t="ekr.20220319232947.1"><vh>--- calling sequence</vh>
+<v t="ekr.20220320082245.371"><vh>TypeChecker.check_func_def</vh></v>
+<v t="ekr.20220224065603.211"><vh>TypeChecker.check_for_missing_annotations (to be changed)</vh></v>
+<v t="ekr.20220320052000.1"><vh>function: is_unannotated_any (study only)</vh></v>
+<v t="ekr.20220320082245.3877"><vh>class ProperType</vh></v>
+</v>
+<v t="ekr.20220224065603.211"></v>
+</v>
+<v t="ekr.20220526075427.1"><vh>Recent code</vh>
+<v t="ekr.20220526075541.1"><vh>--- handle args</vh>
+<v t="ekr.20220525082934.835"></v>
+<v t="ekr.20220525082934.528"></v>
+<v t="ekr.20220525082933.889"></v>
+<v t="ekr.20220525082933.893"></v>
+</v>
+<v t="ekr.20220526075516.1"><vh>--- 1 use of matches_exclude</vh>
+<v t="ekr.20220525082934.834"></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20220224065603.211">def check_for_missing_annotations(self, fdef: FuncItem) -&gt; None:
@@ -6565,9 +6563,6 @@
                 pass  ### New: add to fdef.type ???
 
 </t>
-<t tx="ekr.20220224065603.5521"></t>
-<t tx="ekr.20220224065603.5549"></t>
-<t tx="ekr.20220319231816.1"></t>
 <t tx="ekr.20220319232947.1"></t>
 <t tx="ekr.20220320050830.1"></t>
 <t tx="ekr.20220320050857.1">@language rest
@@ -6588,738 +6583,6 @@ python runtests.py self
     if not isinstance(t, ProperType):
         return False
     return isinstance(t, AnyType) and t.type_of_any == TypeOfAny.unannotated</t>
-<t tx="ekr.20220320082245.1564">def process_options(args: List[str],
-                    stdout: Optional[TextIO] = None,
-                    stderr: Optional[TextIO] = None,
-                    require_targets: bool = True,
-                    server_options: bool = False,
-                    fscache: Optional[FileSystemCache] = None,
-                    program: str = 'mypy',
-                    header: str = HEADER,
-                    ) -&gt; Tuple[List[BuildSource], Options]:
-    """Parse command line arguments.
-
-    If a FileSystemCache is passed in, and package_root options are given,
-    call fscache.set_package_root() to set the cache's package root.
-    """
-    stdout = stdout or sys.stdout
-    stderr = stderr or sys.stderr
-
-    parser = CapturableArgumentParser(prog=program,
-                                      usage=header,
-                                      description=DESCRIPTION,
-                                      epilog=FOOTER,
-                                      fromfile_prefix_chars='@',
-                                      formatter_class=AugmentedHelpFormatter,
-                                      add_help=False,
-                                      stdout=stdout,
-                                      stderr=stderr)
-
-    strict_flag_names: List[str] = []
-    strict_flag_assignments: List[Tuple[str, bool]] = []
-
-    @others
-    # Parse config file first, so command line can override.
-    parse_config_file(options, set_strict_flags, config_file, stdout, stderr)
-
-    # Set strict flags before parsing (if strict mode enabled), so other command
-    # line options can override.
-    if getattr(dummy, 'special-opts:strict'):  # noqa
-        set_strict_flags()
-
-    # Override cache_dir if provided in the environment
-    environ_cache_dir = os.getenv('MYPY_CACHE_DIR', '')
-    if environ_cache_dir.strip():
-        options.cache_dir = environ_cache_dir
-    options.cache_dir = os.path.expanduser(options.cache_dir)
-
-    # Parse command line for real, using a split namespace.
-    special_opts = argparse.Namespace()
-    parser.parse_args(args, SplitNamespace(options, special_opts, 'special-opts:'))
-
-    # The python_version is either the default, which can be overridden via a config file,
-    # or stored in special_opts and is passed via the command line.
-    options.python_version = special_opts.python_version or options.python_version
-    try:
-        infer_python_executable(options, special_opts)
-    except PythonExecutableInferenceError as e:
-        parser.error(str(e))
-
-    if special_opts.no_executable or options.no_site_packages:
-        options.python_executable = None
-
-    # Paths listed in the config file will be ignored if any paths, modules or packages
-    # are passed on the command line.
-    if options.files and not (special_opts.files or special_opts.packages or special_opts.modules):
-        special_opts.files = options.files
-
-    # Check for invalid argument combinations.
-    if require_targets:
-        code_methods = sum(bool(c) for c in [special_opts.modules + special_opts.packages,
-                                             special_opts.command,
-                                             special_opts.files])
-        if code_methods == 0 and not options.install_types:
-            parser.error("Missing target module, package, files, or command.")
-        elif code_methods &gt; 1:
-            parser.error("May only specify one of: module/package, files, or command.")
-    if options.explicit_package_bases and not options.namespace_packages:
-        parser.error(
-            "Can only use --explicit-package-bases with --namespace-packages, since otherwise "
-            "examining __init__.py's is sufficient to determine module names for files"
-        )
-
-    # Check for overlapping `--always-true` and `--always-false` flags.
-    overlap = set(options.always_true) &amp; set(options.always_false)
-    if overlap:
-        parser.error("You can't make a variable always true and always false (%s)" %
-                     ', '.join(sorted(overlap)))
-
-    # Process `--enable-error-code` and `--disable-error-code` flags
-    disabled_codes = set(options.disable_error_code)
-    enabled_codes = set(options.enable_error_code)
-
-    valid_error_codes = set(error_codes.keys())
-
-    invalid_codes = (enabled_codes | disabled_codes) - valid_error_codes
-    if invalid_codes:
-        parser.error("Invalid error code(s): %s" %
-                     ', '.join(sorted(invalid_codes)))
-
-    options.disabled_error_codes |= {error_codes[code] for code in disabled_codes}
-    options.enabled_error_codes |= {error_codes[code] for code in enabled_codes}
-
-    # Enabling an error code always overrides disabling
-    options.disabled_error_codes -= options.enabled_error_codes
-
-    # Set build flags.
-    if options.strict_optional_whitelist is not None:
-        # TODO: Deprecate, then kill this flag
-        options.strict_optional = True
-    if special_opts.find_occurrences:
-        state.find_occurrences = special_opts.find_occurrences.split('.')
-        assert state.find_occurrences is not None
-        if len(state.find_occurrences) &lt; 2:
-            parser.error("Can only find occurrences of class members.")
-        if len(state.find_occurrences) != 2:
-            parser.error("Can only find occurrences of non-nested class members.")
-
-    # Set reports.
-    for flag, val in vars(special_opts).items():
-        if flag.endswith('_report') and val is not None:
-            report_type = flag[:-7].replace('_', '-')
-            report_dir = val
-            options.report_dirs[report_type] = report_dir
-
-    # Process --package-root.
-    if options.package_root:
-        process_package_roots(fscache, parser, options)
-
-    # Process --cache-map.
-    if special_opts.cache_map:
-        if options.sqlite_cache:
-            parser.error("--cache-map is incompatible with --sqlite-cache")
-
-        process_cache_map(parser, special_opts, options)
-
-    # An explicitly specified cache_fine_grained implies local_partial_types
-    # (because otherwise the cache is not compatible with dmypy)
-    if options.cache_fine_grained:
-        options.local_partial_types = True
-
-    # Let logical_deps imply cache_fine_grained (otherwise the former is useless).
-    if options.logical_deps:
-        options.cache_fine_grained = True
-
-    # Set target.
-    if special_opts.modules + special_opts.packages:
-        options.build_type = BuildType.MODULE
-        egg_dirs, site_packages = get_site_packages_dirs(options.python_executable)
-        search_paths = SearchPaths((os.getcwd(),),
-                                   tuple(mypy_path() + options.mypy_path),
-                                   tuple(egg_dirs + site_packages),
-                                   ())
-        targets = []
-        # TODO: use the same cache that the BuildManager will
-        cache = FindModuleCache(search_paths, fscache, options)
-        for p in special_opts.packages:
-            if os.sep in p or os.altsep and os.altsep in p:
-                fail("Package name '{}' cannot have a slash in it.".format(p),
-                     stderr, options)
-            p_targets = cache.find_modules_recursive(p)
-            if not p_targets:
-                fail("Can't find package '{}'".format(p), stderr, options)
-            targets.extend(p_targets)
-        for m in special_opts.modules:
-            targets.append(BuildSource(None, m, None))
-        return targets, options
-    elif special_opts.command:
-        options.build_type = BuildType.PROGRAM_TEXT
-        targets = [BuildSource(None, None, '\n'.join(special_opts.command))]
-        return targets, options
-    else:
-        try:
-            targets = create_source_list(special_opts.files, options, fscache)
-        # Variable named e2 instead of e to work around mypyc bug #620
-        # which causes issues when using the same variable to catch
-        # exceptions of different types.
-        except InvalidSourceList as e2:
-            fail(str(e2), stderr, options)
-        return targets, options
-
-
-</t>
-<t tx="ekr.20220320082245.1565">def add_invertible_flag(flag: str,
-                        *,
-                        inverse: Optional[str] = None,
-                        default: bool,
-                        dest: Optional[str] = None,
-                        help: str,
-                        strict_flag: bool = False,
-                        group: Optional[argparse._ActionsContainer] = None
-                        ) -&gt; None:
-    if inverse is None:
-        inverse = invert_flag_name(flag)
-    if group is None:
-        group = parser
-
-    if help is not argparse.SUPPRESS:
-        help += " (inverse: {})".format(inverse)
-
-    arg = group.add_argument(flag,
-                             action='store_false' if default else 'store_true',
-                             dest=dest,
-                             help=help)
-    dest = arg.dest
-    arg = group.add_argument(inverse,
-                             action='store_true' if default else 'store_false',
-                             dest=dest,
-                             help=argparse.SUPPRESS)
-    if strict_flag:
-        assert dest is not None
-        strict_flag_names.append(flag)
-        strict_flag_assignments.append((dest, not default))
-
-</t>
-<t tx="ekr.20220320082245.1566"># Unless otherwise specified, arguments will be parsed directly onto an
-# Options object.  Options that require further processing should have
-# their `dest` prefixed with `special-opts:`, which will cause them to be
-# parsed into the separate special_opts namespace object.
-
-# Note: we have a style guide for formatting the mypy --help text. See
-# https://github.com/python/mypy/wiki/Documentation-Conventions
-
-general_group = parser.add_argument_group(
-    title='Optional arguments')
-general_group.add_argument(
-    '-h', '--help', action='help',
-    help="Show this help message and exit")
-general_group.add_argument(
-    '-v', '--verbose', action='count', dest='verbosity',
-    help="More verbose messages")
-
-compilation_status = "no" if __file__.endswith(".py") else "yes"
-general_group.add_argument(
-    '-V', '--version', action=CapturableVersionAction,
-    version='%(prog)s ' + __version__ + f" (compiled: {compilation_status})",
-    help="Show program's version number and exit",
-    stdout=stdout)
-
-config_group = parser.add_argument_group(
-    title='Config file',
-    description="Use a config file instead of command line arguments. "
-                "This is useful if you are using many flags or want "
-                "to set different options per each module.")
-config_group.add_argument(
-    '--config-file',
-    help="Configuration file, must have a [mypy] section "
-         "(defaults to {})".format(', '.join(defaults.CONFIG_FILES)))
-add_invertible_flag('--warn-unused-configs', default=False, strict_flag=True,
-                    help="Warn about unused '[mypy-&lt;pattern&gt;]' or '[[tool.mypy.overrides]]' "
-                         "config sections",
-                    group=config_group)
-
-imports_group = parser.add_argument_group(
-    title='Import discovery',
-    description="Configure how imports are discovered and followed.")
-add_invertible_flag(
-    '--namespace-packages', default=False,
-    help="Support namespace packages (PEP 420, __init__.py-less)",
-    group=imports_group)
-imports_group.add_argument(
-    '--ignore-missing-imports', action='store_true',
-    help="Silently ignore imports of missing modules")
-imports_group.add_argument(
-    '--follow-imports', choices=['normal', 'silent', 'skip', 'error'],
-    default='normal', help="How to treat imports (default normal)")
-imports_group.add_argument(
-    '--python-executable', action='store', metavar='EXECUTABLE',
-    help="Python executable used for finding PEP 561 compliant installed"
-         " packages and stubs",
-    dest='special-opts:python_executable')
-imports_group.add_argument(
-    '--no-site-packages', action='store_true',
-    dest='special-opts:no_executable',
-    help="Do not search for installed PEP 561 compliant packages")
-imports_group.add_argument(
-    '--no-silence-site-packages', action='store_true',
-    help="Do not silence errors in PEP 561 compliant installed packages")
-
-platform_group = parser.add_argument_group(
-    title='Platform configuration',
-    description="Type check code assuming it will be run under certain "
-                "runtime conditions. By default, mypy assumes your code "
-                "will be run using the same operating system and Python "
-                "version you are using to run mypy itself.")
-platform_group.add_argument(
-    '--python-version', type=parse_version, metavar='x.y',
-    help='Type check code assuming it will be running on Python x.y',
-    dest='special-opts:python_version')
-platform_group.add_argument(
-    '-2', '--py2', dest='special-opts:python_version', action='store_const',
-    const=defaults.PYTHON2_VERSION,
-    help="Use Python 2 mode (same as --python-version 2.7)")
-platform_group.add_argument(
-    '--platform', action='store', metavar='PLATFORM',
-    help="Type check special-cased code for the given OS platform "
-         "(defaults to sys.platform)")
-platform_group.add_argument(
-    '--always-true', metavar='NAME', action='append', default=[],
-    help="Additional variable to be considered True (may be repeated)")
-platform_group.add_argument(
-    '--always-false', metavar='NAME', action='append', default=[],
-    help="Additional variable to be considered False (may be repeated)")
-
-disallow_any_group = parser.add_argument_group(
-    title='Disallow dynamic typing',
-    description="Disallow the use of the dynamic 'Any' type under certain conditions.")
-disallow_any_group.add_argument(
-    '--disallow-any-unimported', default=False, action='store_true',
-    help="Disallow Any types resulting from unfollowed imports")
-disallow_any_group.add_argument(
-    '--disallow-any-expr', default=False, action='store_true',
-    help='Disallow all expressions that have type Any')
-disallow_any_group.add_argument(
-    '--disallow-any-decorated', default=False, action='store_true',
-    help='Disallow functions that have Any in their signature '
-         'after decorator transformation')
-disallow_any_group.add_argument(
-    '--disallow-any-explicit', default=False, action='store_true',
-    help='Disallow explicit Any in type positions')
-add_invertible_flag('--disallow-any-generics', default=False, strict_flag=True,
-                    help='Disallow usage of generic types that do not specify explicit type '
-                    'parameters', group=disallow_any_group)
-add_invertible_flag('--disallow-subclassing-any', default=False, strict_flag=True,
-                    help="Disallow subclassing values of type 'Any' when defining classes",
-                    group=disallow_any_group)
-
-untyped_group = parser.add_argument_group(
-    title='Untyped definitions and calls',
-    description="Configure how untyped definitions and calls are handled. "
-                "Note: by default, mypy ignores any untyped function definitions "
-                "and assumes any calls to such functions have a return "
-                "type of 'Any'.")
-add_invertible_flag('--disallow-untyped-calls', default=False, strict_flag=True,
-                    help="Disallow calling functions without type annotations"
-                    " from functions with type annotations",
-                    group=untyped_group)
-add_invertible_flag('--disallow-untyped-defs', default=False, strict_flag=True,
-                    help="Disallow defining functions without type annotations"
-                    " or with incomplete type annotations",
-                    group=untyped_group)
-add_invertible_flag('--disallow-incomplete-defs', default=False, strict_flag=True,
-                    help="Disallow defining functions with incomplete type annotations",
-                    group=untyped_group)
-add_invertible_flag('--check-untyped-defs', default=False, strict_flag=True,
-                    help="Type check the interior of functions without type annotations",
-                    group=untyped_group)
-add_invertible_flag('--disallow-untyped-decorators', default=False, strict_flag=True,
-                    help="Disallow decorating typed functions with untyped decorators",
-                    group=untyped_group)
-
-none_group = parser.add_argument_group(
-    title='None and Optional handling',
-    description="Adjust how values of type 'None' are handled. For more context on "
-                "how mypy handles values of type 'None', see: "
-                "https://mypy.readthedocs.io/en/stable/kinds_of_types.html#no-strict-optional")
-add_invertible_flag('--no-implicit-optional', default=False, strict_flag=True,
-                    help="Don't assume arguments with default values of None are Optional",
-                    group=none_group)
-none_group.add_argument(
-    '--strict-optional', action='store_true',
-    help=argparse.SUPPRESS)
-none_group.add_argument(
-    '--no-strict-optional', action='store_false', dest='strict_optional',
-    help="Disable strict Optional checks (inverse: --strict-optional)")
-none_group.add_argument(
-    '--strict-optional-whitelist', metavar='GLOB', nargs='*',
-    help=argparse.SUPPRESS)
-
-lint_group = parser.add_argument_group(
-    title='Configuring warnings',
-    description="Detect code that is sound but redundant or problematic.")
-add_invertible_flag('--warn-redundant-casts', default=False, strict_flag=True,
-                    help="Warn about casting an expression to its inferred type",
-                    group=lint_group)
-add_invertible_flag('--warn-unused-ignores', default=False, strict_flag=True,
-                    help="Warn about unneeded '# type: ignore' comments",
-                    group=lint_group)
-add_invertible_flag('--no-warn-no-return', dest='warn_no_return', default=True,
-                    help="Do not warn about functions that end without returning",
-                    group=lint_group)
-add_invertible_flag('--warn-return-any', default=False, strict_flag=True,
-                    help="Warn about returning values of type Any"
-                         " from non-Any typed functions",
-                    group=lint_group)
-add_invertible_flag('--warn-unreachable', default=False, strict_flag=False,
-                    help="Warn about statements or expressions inferred to be"
-                         " unreachable",
-                    group=lint_group)
-
-# Note: this group is intentionally added here even though we don't add
-# --strict to this group near the end.
-#
-# That way, this group will appear after the various strictness groups
-# but before the remaining flags.
-# We add `--strict` near the end so we don't accidentally miss any strictness
-# flags that are added after this group.
-strictness_group = parser.add_argument_group(
-    title='Miscellaneous strictness flags')
-
-add_invertible_flag('--allow-untyped-globals', default=False, strict_flag=False,
-                    help="Suppress toplevel errors caused by missing annotations",
-                    group=strictness_group)
-
-add_invertible_flag('--allow-redefinition', default=False, strict_flag=False,
-                    help="Allow unconditional variable redefinition with a new type",
-                    group=strictness_group)
-
-add_invertible_flag('--no-implicit-reexport', default=True, strict_flag=True,
-                    dest='implicit_reexport',
-                    help="Treat imports as private unless aliased",
-                    group=strictness_group)
-
-add_invertible_flag('--strict-equality', default=False, strict_flag=True,
-                    help="Prohibit equality, identity, and container checks for"
-                         " non-overlapping types",
-                    group=strictness_group)
-
-strict_help = "Strict mode; enables the following flags: {}".format(
-    ", ".join(strict_flag_names))
-strictness_group.add_argument(
-    '--strict', action='store_true', dest='special-opts:strict',
-    help=strict_help)
-
-strictness_group.add_argument(
-    '--disable-error-code', metavar='NAME', action='append', default=[],
-    help="Disable a specific error code")
-strictness_group.add_argument(
-    '--enable-error-code', metavar='NAME', action='append', default=[],
-    help="Enable a specific error code"
-)
-
-error_group = parser.add_argument_group(
-    title='Configuring error messages',
-    description="Adjust the amount of detail shown in error messages.")
-add_invertible_flag('--show-error-context', default=False,
-                    dest='show_error_context',
-                    help='Precede errors with "note:" messages explaining context',
-                    group=error_group)
-add_invertible_flag('--show-column-numbers', default=False,
-                    help="Show column numbers in error messages",
-                    group=error_group)
-add_invertible_flag('--show-error-codes', default=False,
-                    help="Show error codes in error messages",
-                    group=error_group)
-add_invertible_flag('--pretty', default=False,
-                    help="Use visually nicer output in error messages:"
-                         " Use soft word wrap, show source code snippets,"
-                         " and show error location markers",
-                    group=error_group)
-add_invertible_flag('--no-color-output', dest='color_output', default=True,
-                    help="Do not colorize error messages",
-                    group=error_group)
-add_invertible_flag('--no-error-summary', dest='error_summary', default=True,
-                    help="Do not show error stats summary",
-                    group=error_group)
-add_invertible_flag('--show-absolute-path', default=False,
-                    help="Show absolute paths to files",
-                    group=error_group)
-error_group.add_argument('--soft-error-limit', default=defaults.MANY_ERRORS_THRESHOLD,
-                         type=int, dest="many_errors_threshold", help=argparse.SUPPRESS)
-
-incremental_group = parser.add_argument_group(
-    title='Incremental mode',
-    description="Adjust how mypy incrementally type checks and caches modules. "
-                "Mypy caches type information about modules into a cache to "
-                "let you speed up future invocations of mypy. Also see "
-                "mypy's daemon mode: "
-                "mypy.readthedocs.io/en/stable/mypy_daemon.html#mypy-daemon")
-incremental_group.add_argument(
-    '-i', '--incremental', action='store_true',
-    help=argparse.SUPPRESS)
-incremental_group.add_argument(
-    '--no-incremental', action='store_false', dest='incremental',
-    help="Disable module cache (inverse: --incremental)")
-incremental_group.add_argument(
-    '--cache-dir', action='store', metavar='DIR',
-    help="Store module cache info in the given folder in incremental mode "
-         "(defaults to '{}')".format(defaults.CACHE_DIR))
-add_invertible_flag('--sqlite-cache', default=False,
-                    help="Use a sqlite database to store the cache",
-                    group=incremental_group)
-incremental_group.add_argument(
-    '--cache-fine-grained', action='store_true',
-    help="Include fine-grained dependency information in the cache for the mypy daemon")
-incremental_group.add_argument(
-    '--skip-version-check', action='store_true',
-    help="Allow using cache written by older mypy version")
-incremental_group.add_argument(
-    '--skip-cache-mtime-checks', action='store_true',
-    help="Skip cache internal consistency checks based on mtime")
-
-internals_group = parser.add_argument_group(
-    title='Advanced options',
-    description="Debug and customize mypy internals.")
-internals_group.add_argument(
-    '--pdb', action='store_true', help="Invoke pdb on fatal error")
-internals_group.add_argument(
-    '--show-traceback', '--tb', action='store_true',
-    help="Show traceback on fatal error")
-internals_group.add_argument(
-    '--raise-exceptions', action='store_true', help="Raise exception on fatal error"
-)
-internals_group.add_argument(
-    '--custom-typing-module', metavar='MODULE', dest='custom_typing_module',
-    help="Use a custom typing module")
-internals_group.add_argument(
-    '--custom-typeshed-dir', metavar='DIR',
-    help="Use the custom typeshed in DIR")
-add_invertible_flag('--warn-incomplete-stub', default=False,
-                    help="Warn if missing type annotation in typeshed, only relevant with"
-                         " --disallow-untyped-defs or --disallow-incomplete-defs enabled",
-                    group=internals_group)
-internals_group.add_argument(
-    '--shadow-file', nargs=2, metavar=('SOURCE_FILE', 'SHADOW_FILE'),
-    dest='shadow_file', action='append',
-    help="When encountering SOURCE_FILE, read and type check "
-         "the contents of SHADOW_FILE instead.")
-add_invertible_flag('--fast-exit', default=True, help=argparse.SUPPRESS,
-                    group=internals_group)
-
-report_group = parser.add_argument_group(
-    title='Report generation',
-    description='Generate a report in the specified format.')
-for report_type in sorted(defaults.REPORTER_NAMES):
-    if report_type not in {'memory-xml'}:
-        report_group.add_argument('--%s-report' % report_type.replace('_', '-'),
-                                  metavar='DIR',
-                                  dest='special-opts:%s_report' % report_type)
-
-other_group = parser.add_argument_group(
-    title='Miscellaneous')
-other_group.add_argument(
-    '--quickstart-file', help=argparse.SUPPRESS)
-other_group.add_argument(
-    '--junit-xml', help="Write junit.xml to the given file")
-other_group.add_argument(
-    '--find-occurrences', metavar='CLASS.MEMBER',
-    dest='special-opts:find_occurrences',
-    help="Print out all usages of a class member (experimental)")
-other_group.add_argument(
-    '--scripts-are-modules', action='store_true',
-    help="Script x becomes module x instead of __main__")
-
-add_invertible_flag('--install-types', default=False, strict_flag=False,
-                    help="Install detected missing library stub packages using pip",
-                    group=other_group)
-add_invertible_flag('--non-interactive', default=False, strict_flag=False,
-                    help=("Install stubs without asking for confirmation and hide " +
-                          "errors, with --install-types"),
-                    group=other_group, inverse="--interactive")
-
-if server_options:
-    # TODO: This flag is superfluous; remove after a short transition (2018-03-16)
-    other_group.add_argument(
-        '--experimental', action='store_true', dest='fine_grained_incremental',
-        help="Enable fine-grained incremental mode")
-    other_group.add_argument(
-        '--use-fine-grained-cache', action='store_true',
-        help="Use the cache in fine-grained incremental mode")
-
-# hidden options
-parser.add_argument(
-    '--stats', action='store_true', dest='dump_type_stats', help=argparse.SUPPRESS)
-parser.add_argument(
-    '--inferstats', action='store_true', dest='dump_inference_stats',
-    help=argparse.SUPPRESS)
-parser.add_argument(
-    '--dump-build-stats', action='store_true',
-    help=argparse.SUPPRESS)
-# --debug-cache will disable any cache-related compressions/optimizations,
-# which will make the cache writing process output pretty-printed JSON (which
-# is easier to debug).
-parser.add_argument('--debug-cache', action='store_true', help=argparse.SUPPRESS)
-# --dump-deps will dump all fine-grained dependencies to stdout
-parser.add_argument('--dump-deps', action='store_true', help=argparse.SUPPRESS)
-# --dump-graph will dump the contents of the graph of SCCs and exit.
-parser.add_argument('--dump-graph', action='store_true', help=argparse.SUPPRESS)
-# --semantic-analysis-only does exactly that.
-parser.add_argument('--semantic-analysis-only', action='store_true', help=argparse.SUPPRESS)
-# --local-partial-types disallows partial types spanning module top level and a function
-# (implicitly defined in fine-grained incremental mode)
-parser.add_argument('--local-partial-types', action='store_true', help=argparse.SUPPRESS)
-# --logical-deps adds some more dependencies that are not semantically needed, but
-# may be helpful to determine relative importance of classes and functions for overall
-# type precision in a code base. It also _removes_ some deps, so this flag should be never
-# used except for generating code stats. This also automatically enables --cache-fine-grained.
-# NOTE: This is an experimental option that may be modified or removed at any time.
-parser.add_argument('--logical-deps', action='store_true', help=argparse.SUPPRESS)
-# --bazel changes some behaviors for use with Bazel (https://bazel.build).
-parser.add_argument('--bazel', action='store_true', help=argparse.SUPPRESS)
-# --package-root adds a directory below which directories are considered
-# packages even without __init__.py.  May be repeated.
-parser.add_argument('--package-root', metavar='ROOT', action='append', default=[],
-                    help=argparse.SUPPRESS)
-# --cache-map FILE ... gives a mapping from source files to cache files.
-# Each triple of arguments is a source file, a cache meta file, and a cache data file.
-# Modules not mentioned in the file will go through cache_dir.
-# Must be followed by another flag or by '--' (and then only file args may follow).
-parser.add_argument('--cache-map', nargs='+', dest='special-opts:cache_map',
-                    help=argparse.SUPPRESS)
-parser.add_argument('--enable-incomplete-features', default=False,
-                    help=argparse.SUPPRESS)
-
-# options specifying code to check
-code_group = parser.add_argument_group(
-    title="Running code",
-    description="Specify the code you want to type check. For more details, see "
-                "mypy.readthedocs.io/en/stable/running_mypy.html#running-mypy")
-add_invertible_flag(
-    '--explicit-package-bases', default=False,
-    help="Use current directory and MYPYPATH to determine module names of files passed",
-    group=code_group)
-code_group.add_argument(
-    "--exclude",
-    action="append",
-    metavar="PATTERN",
-    default=[],
-    help=(
-        "Regular expression to match file names, directory names or paths which mypy should "
-        "ignore while recursively discovering files to check, e.g. --exclude '/setup\\.py$'. "
-        "May be specified more than once, eg. --exclude a --exclude b"
-    )
-)
-code_group.add_argument(
-    '-m', '--module', action='append', metavar='MODULE',
-    default=[],
-    dest='special-opts:modules',
-    help="Type-check module; can repeat for more modules")
-code_group.add_argument(
-    '-p', '--package', action='append', metavar='PACKAGE',
-    default=[],
-    dest='special-opts:packages',
-    help="Type-check package recursively; can be repeated")
-code_group.add_argument(
-    '-c', '--command', action='append', metavar='PROGRAM_TEXT',
-    dest='special-opts:command',
-    help="Type-check program passed in as string")
-code_group.add_argument(
-    metavar='files', nargs='*', dest='special-opts:files',
-    help="Type-check given files or directories")
-
-# Parse arguments once into a dummy namespace so we can get the
-# filename for the config file and know if the user requested all strict options.
-dummy = argparse.Namespace()
-parser.parse_args(args, dummy)
-config_file = dummy.config_file
-# Don't explicitly test if "config_file is not None" for this check.
-# This lets `--config-file=` (an empty string) be used to disable all config files.
-if config_file and not os.path.exists(config_file):
-    parser.error("Cannot find config file '%s'" % config_file)
-
-options = Options()
-
-</t>
-<t tx="ekr.20220320082245.1567">def set_strict_flags() -&gt; None:
-    for dest, value in strict_flag_assignments:
-        setattr(options, dest, value)
-
-</t>
-<t tx="ekr.20220320082245.1860">def find_modules_recursive(self, module: str) -&gt; List[BuildSource]:
-    module_path = self.find_module(module)
-    if isinstance(module_path, ModuleNotFoundReason):
-        return []
-    sources = [BuildSource(module_path, module, None)]
-
-    package_path = None
-    if module_path.endswith(('__init__.py', '__init__.pyi')):
-        package_path = os.path.dirname(module_path)
-    elif self.fscache.isdir(module_path):
-        package_path = module_path
-    if package_path is None:
-        return sources
-
-    # This logic closely mirrors that in find_sources. One small but important difference is
-    # that we do not sort names with keyfunc. The recursive call to find_modules_recursive
-    # calls find_module, which will handle the preference between packages, pyi and py.
-    # Another difference is it doesn't handle nested search paths / package roots.
-
-    seen: Set[str] = set()
-    names = sorted(self.fscache.listdir(package_path))
-    for name in names:
-        # Skip certain names altogether
-        if name in ("__pycache__", "site-packages", "node_modules") or name.startswith("."):
-            continue
-        subpath = os.path.join(package_path, name)
-
-        if self.options and matches_exclude(
-            subpath, self.options.exclude, self.fscache, self.options.verbosity &gt;= 2
-        ):
-            continue
-
-        if self.fscache.isdir(subpath):
-            # Only recurse into packages
-            if (self.options and self.options.namespace_packages) or (
-                self.fscache.isfile(os.path.join(subpath, "__init__.py"))
-                or self.fscache.isfile(os.path.join(subpath, "__init__.pyi"))
-            ):
-                seen.add(name)
-                sources.extend(self.find_modules_recursive(module + '.' + name))
-        else:
-            stem, suffix = os.path.splitext(name)
-            if stem == '__init__':
-                continue
-            if stem not in seen and '.' not in stem and suffix in PYTHON_EXTENSIONS:
-                # (If we sorted names by keyfunc) we could probably just make the BuildSource
-                # ourselves, but this ensures compatibility with find_module / the cache
-                seen.add(stem)
-                sources.extend(self.find_modules_recursive(module + '.' + stem))
-    return sources
-
-
-</t>
-<t tx="ekr.20220320082245.1861">def matches_exclude(subpath: str,
-                    excludes: List[str],
-                    fscache: FileSystemCache,
-                    verbose: bool) -&gt; bool:
-    if not excludes:
-        return False
-    subpath_str = os.path.relpath(subpath).replace(os.sep, "/")
-    if fscache.isdir(subpath):
-        subpath_str += "/"
-    for exclude in excludes:
-        if re.search(exclude, subpath_str):
-            if verbose:
-                print("TRACE: Excluding {} (matches pattern {})".format(subpath_str, exclude),
-                      file=sys.stderr)
-            else:
-                print("Exclude", subpath_str, file=sys.stderr) ###
-            return True
-    # print("Include", subpath_str, file=sys.stderr) ###
-    return False
-
-
-</t>
 <t tx="ekr.20220320082245.371">def check_func_def(self, defn: FuncItem, typ: CallableType, name: Optional[str]) -&gt; None:
     """Type check a function definition."""
     # Expand type variables with value restrictions to ordinary types.
@@ -7524,206 +6787,6 @@ options = Options()
     """
 
     __slots__ = ()
-
-
-</t>
-<t tx="ekr.20220320082245.869">def parse_config_file(options: Options, set_strict_flags: Callable[[], None],
-                      filename: Optional[str],
-                      stdout: Optional[TextIO] = None,
-                      stderr: Optional[TextIO] = None) -&gt; None:
-    """Parse a config file into an Options object.
-
-    Errors are written to stderr but are not fatal.
-
-    If filename is None, fall back to default config files.
-    """
-    stdout = stdout or sys.stdout
-    stderr = stderr or sys.stderr
-
-    if filename is not None:
-        config_files: Tuple[str, ...] = (filename,)
-    else:
-        config_files = tuple(map(os.path.expanduser, defaults.CONFIG_FILES))
-
-    config_parser = configparser.RawConfigParser()
-
-    for config_file in config_files:
-        if not os.path.exists(config_file):
-            continue
-        try:
-            if is_toml(config_file):
-                with open(config_file, encoding="utf-8") as f:
-                    toml_data = tomli.loads(f.read())
-                # Filter down to just mypy relevant toml keys
-                toml_data = toml_data.get('tool', {})
-                if 'mypy' not in toml_data:
-                    continue
-                toml_data = {'mypy': toml_data['mypy']}
-                parser: MutableMapping[str, Any] = destructure_overrides(toml_data)
-                config_types = toml_config_types
-            else:
-                config_parser.read(config_file)
-                parser = config_parser
-                config_types = ini_config_types
-        except (tomli.TOMLDecodeError, configparser.Error, ConfigTOMLValueError) as err:
-            print("%s: %s" % (config_file, err), file=stderr)
-        else:
-            if config_file in defaults.SHARED_CONFIG_FILES and 'mypy' not in parser:
-                continue
-            file_read = config_file
-            options.config_file = file_read
-            break
-    else:
-        return
-
-    os.environ['MYPY_CONFIG_FILE_DIR'] = os.path.dirname(
-            os.path.abspath(config_file))
-
-    if 'mypy' not in parser:
-        if filename or file_read not in defaults.SHARED_CONFIG_FILES:
-            print("%s: No [mypy] section in config file" % file_read, file=stderr)
-    else:
-        section = parser['mypy']
-        prefix = '%s: [%s]: ' % (file_read, 'mypy')
-        updates, report_dirs = parse_section(
-            prefix, options, set_strict_flags, section, config_types, stderr)
-        for k, v in updates.items():
-            setattr(options, k, v)
-        options.report_dirs.update(report_dirs)
-
-    for name, section in parser.items():
-        if name.startswith('mypy-'):
-            prefix = get_prefix(file_read, name)
-            updates, report_dirs = parse_section(
-                prefix, options, set_strict_flags, section, config_types, stderr)
-            if report_dirs:
-                print("%sPer-module sections should not specify reports (%s)" %
-                      (prefix, ', '.join(s + '_report' for s in sorted(report_dirs))),
-                      file=stderr)
-            if set(updates) - PER_MODULE_OPTIONS:
-                print("%sPer-module sections should only specify per-module flags (%s)" %
-                      (prefix, ', '.join(sorted(set(updates) - PER_MODULE_OPTIONS))),
-                      file=stderr)
-                updates = {k: v for k, v in updates.items() if k in PER_MODULE_OPTIONS}
-            globs = name[5:]
-            for glob in globs.split(','):
-                # For backwards compatibility, replace (back)slashes with dots.
-                glob = glob.replace(os.sep, '.')
-                if os.altsep:
-                    glob = glob.replace(os.altsep, '.')
-
-                if (any(c in glob for c in '?[]!') or
-                        any('*' in x and x != '*' for x in glob.split('.'))):
-                    print("%sPatterns must be fully-qualified module names, optionally "
-                          "with '*' in some components (e.g spam.*.eggs.*)"
-                          % prefix,
-                          file=stderr)
-                else:
-                    options.per_module_options[glob] = updates
-
-
-</t>
-<t tx="ekr.20220320082245.873">def parse_section(prefix: str, template: Options,
-                  set_strict_flags: Callable[[], None],
-                  section: Mapping[str, Any],
-                  config_types: Dict[str, Any],
-                  stderr: TextIO = sys.stderr
-                  ) -&gt; Tuple[Dict[str, object], Dict[str, str]]:
-    """Parse one section of a config file.
-
-    Returns a dict of option values encountered, and a dict of report directories.
-    """
-    results: Dict[str, object] = {}
-    report_dirs: Dict[str, str] = {}
-    for key in section:
-        invert = False
-        options_key = key
-        if key in config_types:
-            ct = config_types[key]
-        else:
-            dv = None
-            # We have to keep new_semantic_analyzer in Options
-            # for plugin compatibility but it is not a valid option anymore.
-            assert hasattr(template, 'new_semantic_analyzer')
-            if key != 'new_semantic_analyzer':
-                dv = getattr(template, key, None)
-            if dv is None:
-                if key.endswith('_report'):
-                    report_type = key[:-7].replace('_', '-')
-                    if report_type in defaults.REPORTER_NAMES:
-                        report_dirs[report_type] = str(section[key])
-                    else:
-                        print("%sUnrecognized report type: %s" % (prefix, key),
-                              file=stderr)
-                    continue
-                if key.startswith('x_'):
-                    pass  # Don't complain about `x_blah` flags
-                elif key.startswith('no_') and hasattr(template, key[3:]):
-                    options_key = key[3:]
-                    invert = True
-                elif key.startswith('allow') and hasattr(template, 'dis' + key):
-                    options_key = 'dis' + key
-                    invert = True
-                elif key.startswith('disallow') and hasattr(template, key[3:]):
-                    options_key = key[3:]
-                    invert = True
-                elif key == 'strict':
-                    pass  # Special handling below
-                else:
-                    print("%sUnrecognized option: %s = %s" % (prefix, key, section[key]),
-                          file=stderr)
-                if invert:
-                    dv = getattr(template, options_key, None)
-                else:
-                    continue
-            ct = type(dv)
-        v: Any = None
-        try:
-            if ct is bool:
-                if isinstance(section, dict):
-                    v = convert_to_boolean(section.get(key))
-                else:
-                    v = section.getboolean(key)  # type: ignore[attr-defined]  # Until better stub
-                if invert:
-                    v = not v
-            elif callable(ct):
-                if invert:
-                    print("%sCan not invert non-boolean key %s" % (prefix, options_key),
-                          file=stderr)
-                    continue
-                try:
-                    v = ct(section.get(key))
-                except argparse.ArgumentTypeError as err:
-                    print("%s%s: %s" % (prefix, key, err), file=stderr)
-                    continue
-            else:
-                print("%sDon't know what type %s should have" % (prefix, key), file=stderr)
-                continue
-        except ValueError as err:
-            print("%s%s: %s" % (prefix, key, err), file=stderr)
-            continue
-        if key == 'strict':
-            if v:
-                set_strict_flags()
-            continue
-        if key == 'silent_imports':
-            print("%ssilent_imports has been replaced by "
-                  "ignore_missing_imports=True; follow_imports=skip" % prefix, file=stderr)
-            if v:
-                if 'ignore_missing_imports' not in results:
-                    results['ignore_missing_imports'] = True
-                if 'follow_imports' not in results:
-                    results['follow_imports'] = 'skip'
-        if key == 'almost_silent':
-            print("%salmost_silent has been replaced by "
-                  "follow_imports=error" % prefix, file=stderr)
-            if v:
-                if 'follow_imports' not in results:
-                    results['follow_imports'] = 'error'
-        results[options_key] = v
-    # if results.get('exclude'):  ###
-    #    g.printObj(results.get('exclude'), tag=repr(section))
-    return results, report_dirs
 
 
 </t>
@@ -101385,5 +100448,9 @@ NOT_DUMPED_MODULES = (
     return result
 
 </t>
+<t tx="ekr.20220526075331.1"></t>
+<t tx="ekr.20220526075427.1"></t>
+<t tx="ekr.20220526075516.1"></t>
+<t tx="ekr.20220526075541.1"></t>
 </tnodes>
 </leo_file>
