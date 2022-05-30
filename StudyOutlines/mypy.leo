@@ -7,6 +7,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20220525082746.1"><vh> Recursive import script</vh></v>
+<v t="ekr.20220526080725.1"><vh>--- Notes</vh></v>
 <v t="ekr.20220526075331.1"><vh>Files</vh>
 <v t="ekr.20220224065603.3"><vh>@edit C:\Repos\leo-editor\.mypy.ini</vh></v>
 <v t="ekr.20220525082932.2"><vh>@path C:/Repos/mypy</vh>
@@ -6492,17 +6493,15 @@
 <v t="ekr.20220525082934.502"></v>
 <v t="ekr.20220525082933.340"></v>
 </v>
-<v t="ekr.20220320050857.1"><vh>=== #12352</vh>
-<v t="ekr.20220323094253.1"><vh>Notes</vh></v>
-<v t="ekr.20220319232947.1"><vh>--- calling sequence</vh>
-<v t="ekr.20220320082245.371"><vh>TypeChecker.check_func_def</vh></v>
+<v t="ekr.20220320050857.1"><vh>=== #12352: auto annotations</vh></v>
+<v t="ekr.20220526075427.1"><vh>Recent code</vh></v>
 <v t="ekr.20220224065603.211"><vh>TypeChecker.check_for_missing_annotations (to be changed)</vh></v>
-<v t="ekr.20220320052000.1"><vh>function: is_unannotated_any (study only)</vh></v>
-<v t="ekr.20220320082245.3877"><vh>class ProperType</vh></v>
-</v>
+<v t="ekr.20220319232947.1"><vh>--- calling sequence</vh>
+<v t="ekr.20220525082933.373"></v>
 <v t="ekr.20220224065603.211"></v>
+<v t="ekr.20220525082933.377"></v>
+<v t="ekr.20220525082933.116"></v>
 </v>
-<v t="ekr.20220526075427.1"><vh>Recent code</vh>
 <v t="ekr.20220526075541.1"><vh>--- handle args</vh>
 <v t="ekr.20220525082934.835"></v>
 <v t="ekr.20220525082934.528"></v>
@@ -6512,10 +6511,10 @@
 <v t="ekr.20220526075516.1"><vh>--- 1 use of matches_exclude</vh>
 <v t="ekr.20220525082934.834"></v>
 </v>
-</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20220224065603.211">def check_for_missing_annotations(self, fdef: FuncItem) -&gt; None:
+
     # Check for functions with unspecified/not fully specified types.
     def is_unannotated_any(t: Type) -&gt; bool:
         if not isinstance(t, ProperType):
@@ -6561,276 +6560,16 @@
                     self.fail(message_registry.ARGUMENT_TYPE_EXPECTED, fdef)  ###
             else:
                 pass  ### New: add to fdef.type ???
-
 </t>
 <t tx="ekr.20220319232947.1"></t>
 <t tx="ekr.20220320050830.1"></t>
 <t tx="ekr.20220320050857.1">@language rest
 
 https://github.com/python/mypy/issues/12352
-
-Setup: https://github.com/python/mypy/blob/master/CONTRIBUTING.md
-
-Unit tests: https://github.com/python/mypy/blob/master/test-data/unit/README.md
-
-cd c:\leo.repo\mypy
-python runtests.py self
   
 @language python
 
 </t>
-<t tx="ekr.20220320052000.1">def is_unannotated_any(t: Type) -&gt; bool:
-    if not isinstance(t, ProperType):
-        return False
-    return isinstance(t, AnyType) and t.type_of_any == TypeOfAny.unannotated</t>
-<t tx="ekr.20220320082245.371">def check_func_def(self, defn: FuncItem, typ: CallableType, name: Optional[str]) -&gt; None:
-    """Type check a function definition."""
-    # Expand type variables with value restrictions to ordinary types.
-    expanded = self.expand_typevars(defn, typ)
-    for item, typ in expanded:
-        old_binder = self.binder
-        self.binder = ConditionalTypeBinder()
-        with self.binder.top_frame_context():
-            defn.expanded.append(item)
-
-            # We may be checking a function definition or an anonymous
-            # function. In the first case, set up another reference with the
-            # precise type.
-            if isinstance(item, FuncDef):
-                fdef = item
-                # Check if __init__ has an invalid, non-None return type.
-                if (fdef.info and fdef.name in ('__init__', '__init_subclass__') and
-                        not isinstance(get_proper_type(typ.ret_type), NoneType) and
-                        not self.dynamic_funcs[-1]):
-                    self.fail(message_registry.MUST_HAVE_NONE_RETURN_TYPE.format(fdef.name),
-                              item)
-
-                # Check validity of __new__ signature
-                if fdef.info and fdef.name == '__new__':
-                    self.check___new___signature(fdef, typ)
-
-                self.check_for_missing_annotations(fdef)
-                if self.options.disallow_any_unimported:
-                    if fdef.type and isinstance(fdef.type, CallableType):
-                        ret_type = fdef.type.ret_type
-                        if has_any_from_unimported_type(ret_type):
-                            self.msg.unimported_type_becomes_any("Return type", ret_type, fdef)
-                        for idx, arg_type in enumerate(fdef.type.arg_types):
-                            if has_any_from_unimported_type(arg_type):
-                                prefix = "Argument {} to \"{}\"".format(idx + 1, fdef.name)
-                                self.msg.unimported_type_becomes_any(prefix, arg_type, fdef)
-                check_for_explicit_any(fdef.type, self.options, self.is_typeshed_stub,
-                                       self.msg, context=fdef)
-
-            if name:  # Special method names
-                if defn.info and self.is_reverse_op_method(name):
-                    self.check_reverse_op_method(item, typ, name, defn)
-                elif name in ('__getattr__', '__getattribute__'):
-                    self.check_getattr_method(typ, defn, name)
-                elif name == '__setattr__':
-                    self.check_setattr_method(typ, defn)
-
-            # Refuse contravariant return type variable
-            if isinstance(typ.ret_type, TypeVarType):
-                if typ.ret_type.variance == CONTRAVARIANT:
-                    self.fail(message_registry.RETURN_TYPE_CANNOT_BE_CONTRAVARIANT,
-                              typ.ret_type)
-
-            # Check that Generator functions have the appropriate return type.
-            if defn.is_generator:
-                if defn.is_async_generator:
-                    if not self.is_async_generator_return_type(typ.ret_type):
-                        self.fail(message_registry.INVALID_RETURN_TYPE_FOR_ASYNC_GENERATOR,
-                                  typ)
-                else:
-                    if not self.is_generator_return_type(typ.ret_type, defn.is_coroutine):
-                        self.fail(message_registry.INVALID_RETURN_TYPE_FOR_GENERATOR, typ)
-
-                # Python 2 generators aren't allowed to return values.
-                orig_ret_type = get_proper_type(typ.ret_type)
-                if (self.options.python_version[0] == 2 and
-                        isinstance(orig_ret_type, Instance) and
-                        orig_ret_type.type.fullname == 'typing.Generator'):
-                    if not isinstance(get_proper_type(orig_ret_type.args[2]),
-                                      (NoneType, AnyType)):
-                        self.fail(message_registry.INVALID_GENERATOR_RETURN_ITEM_TYPE, typ)
-
-            # Fix the type if decorated with `@types.coroutine` or `@asyncio.coroutine`.
-            if defn.is_awaitable_coroutine:
-                # Update the return type to AwaitableGenerator.
-                # (This doesn't exist in typing.py, only in typing.pyi.)
-                t = typ.ret_type
-                c = defn.is_coroutine
-                ty = self.get_generator_yield_type(t, c)
-                tc = self.get_generator_receive_type(t, c)
-                if c:
-                    tr = self.get_coroutine_return_type(t)
-                else:
-                    tr = self.get_generator_return_type(t, c)
-                ret_type = self.named_generic_type('typing.AwaitableGenerator',
-                                                   [ty, tc, tr, t])
-                typ = typ.copy_modified(ret_type=ret_type)
-                defn.type = typ
-
-            # Push return type.
-            self.return_types.append(typ.ret_type)
-
-            # Store argument types.
-            for i in range(len(typ.arg_types)):
-                arg_type = typ.arg_types[i]
-                with self.scope.push_function(defn):
-                    # We temporary push the definition to get the self type as
-                    # visible from *inside* of this function/method.
-                    ref_type: Optional[Type] = self.scope.active_self_type()
-                if (isinstance(defn, FuncDef) and ref_type is not None and i == 0
-                        and not defn.is_static
-                        and typ.arg_kinds[0] not in [nodes.ARG_STAR, nodes.ARG_STAR2]):
-                    isclass = defn.is_class or defn.name in ('__new__', '__init_subclass__')
-                    if isclass:
-                        ref_type = mypy.types.TypeType.make_normalized(ref_type)
-                    erased = get_proper_type(erase_to_bound(arg_type))
-                    if not is_subtype(ref_type, erased, ignore_type_params=True):
-                        note = None
-                        if (isinstance(erased, Instance) and erased.type.is_protocol or
-                                isinstance(erased, TypeType) and
-                                isinstance(erased.item, Instance) and
-                                erased.item.type.is_protocol):
-                            # We allow the explicit self-type to be not a supertype of
-                            # the current class if it is a protocol. For such cases
-                            # the consistency check will be performed at call sites.
-                            msg = None
-                        elif typ.arg_names[i] in {'self', 'cls'}:
-                            if (self.options.python_version[0] &lt; 3
-                                    and is_same_type(erased, arg_type) and not isclass):
-                                msg = message_registry.INVALID_SELF_TYPE_OR_EXTRA_ARG
-                                note = '(Hint: typically annotations omit the type for self)'
-                            else:
-                                msg = message_registry.ERASED_SELF_TYPE_NOT_SUPERTYPE.format(
-                                    erased, ref_type)
-                        else:
-                            msg = message_registry.MISSING_OR_INVALID_SELF_TYPE
-                        if msg:
-                            self.fail(msg, defn)
-                            if note:
-                                self.note(note, defn)
-                elif isinstance(arg_type, TypeVarType):
-                    # Refuse covariant parameter type variables
-                    # TODO: check recursively for inner type variables
-                    if (
-                        arg_type.variance == COVARIANT and
-                        defn.name not in ('__init__', '__new__')
-                    ):
-                        ctx: Context = arg_type
-                        if ctx.line &lt; 0:
-                            ctx = typ
-                        self.fail(message_registry.FUNCTION_PARAMETER_CANNOT_BE_COVARIANT, ctx)
-                if typ.arg_kinds[i] == nodes.ARG_STAR:
-                    if not isinstance(arg_type, ParamSpecType):
-                        # builtins.tuple[T] is typing.Tuple[T, ...]
-                        arg_type = self.named_generic_type('builtins.tuple',
-                                                           [arg_type])
-                elif typ.arg_kinds[i] == nodes.ARG_STAR2:
-                    if not isinstance(arg_type, ParamSpecType):
-                        arg_type = self.named_generic_type('builtins.dict',
-                                                           [self.str_type(),
-                                                            arg_type])
-                item.arguments[i].variable.type = arg_type
-
-            # Type check initialization expressions.
-            body_is_trivial = self.is_trivial_body(defn.body)
-            self.check_default_args(item, body_is_trivial)
-
-        # Type check body in a new scope.
-        with self.binder.top_frame_context():
-            with self.scope.push_function(defn):
-                # We suppress reachability warnings when we use TypeVars with value
-                # restrictions: we only want to report a warning if a certain statement is
-                # marked as being suppressed in *all* of the expansions, but we currently
-                # have no good way of doing this.
-                #
-                # TODO: Find a way of working around this limitation
-                if len(expanded) &gt;= 2:
-                    self.binder.suppress_unreachable_warnings()
-                self.accept(item.body)
-            unreachable = self.binder.is_unreachable()
-
-        if self.options.warn_no_return and not unreachable:
-            if (defn.is_generator or
-                    is_named_instance(self.return_types[-1], 'typing.AwaitableGenerator')):
-                return_type = self.get_generator_return_type(self.return_types[-1],
-                                                             defn.is_coroutine)
-            elif defn.is_coroutine:
-                return_type = self.get_coroutine_return_type(self.return_types[-1])
-            else:
-                return_type = self.return_types[-1]
-
-            return_type = get_proper_type(return_type)
-            if not isinstance(return_type, (NoneType, AnyType)) and not body_is_trivial:
-                # Control flow fell off the end of a function that was
-                # declared to return a non-None type and is not
-                # entirely pass/Ellipsis/raise NotImplementedError.
-                if isinstance(return_type, UninhabitedType):
-                    # This is a NoReturn function
-                    self.fail(message_registry.INVALID_IMPLICIT_RETURN, defn)
-                else:
-                    self.fail(message_registry.MISSING_RETURN_STATEMENT, defn)
-
-        self.return_types.pop()
-
-        self.binder = old_binder
-
-</t>
-<t tx="ekr.20220320082245.3877">class ProperType(Type):
-    """Not a type alias.
-
-    Every type except TypeAliasType must inherit from this type.
-    """
-
-    __slots__ = ()
-
-
-</t>
-<t tx="ekr.20220323094253.1">@language rest
-@wrap
-
-**Background**
-
-- message_registry.py defines ARGUMENT_TYPE_EXPECTED as follows:
- 
-cffs reveal:
-
-ARGUMENT_TYPE_EXPECTED: Final = ErrorMessage(
-    "Function is missing a type annotation for one or more arguments", codes.NO_UNTYPED_DEF
-)
-
-- message_registry.ARGUMENT_TYPE_EXPECTED appears in only: TypeChecker.check_for_missing_annotations.
-  Therefore, only this method needs to changed.
-  
-  *Note*: only TypeChecker.check_func_def calls check_for_missing_annotations.
-  
-- check_for_missing_annotations uses the following local helper function for all check:
-
-    def is_unannotated_any(t: Type) -&gt; bool:
-        if not isinstance(t, ProperType):
-            return False
-        return isinstance(t, AnyType) and t.type_of_any == TypeOfAny.unannotated
-        
-**The fix**
-
-The error message comes from these lines in check_for_missing_annotations.
-
-    if any(is_unannotated_any(t) for t in fdef.type.arg_types):
-        self.fail(message_registry.ARGUMENT_TYPE_EXPECTED, fdef)
-        
-I'll replace this with something like:
-
-    if any(arg_is_unannotated_and_is_not_initialized(t) for t in fdef.type.arg_types):
-        self.fail(message_registry.ARGUMENT_TYPE_EXPECTED, fdef)
-
-where arg_is_unannotated_and_is_not_initialized will be similar to is_unannotated_any
-but will allow an untyped arg provided the arg has a constant initializer of known type.
-  
-@language python</t>
 <t tx="ekr.20220525082746.1">'''Recursively import all python files in a directory and clean the result.'''
 @tabwidth -4 # For a better match.
 g.cls()
@@ -13559,11 +13298,15 @@ cmds = {
     'pytest-slow': ['pytest', '-q', '-k', ' or '.join(
         [SAMPLES,
          TYPESHED,
-         PEP561,
          DAEMON,
          MYPYC_EXTERNAL,
          MYPYC_COMMAND_LINE,
          ERROR_STREAM])],
+
+    # Test cases that might take minutes to run
+    'pytest-slower': ['pytest', '-q', '-k', ' or '.join(
+        [PEP561])],
+
     # Test cases to run in typeshed CI
     'typeshed-ci': ['pytest', '-q', '-k', ' or '.join([CMDLINE,
                                                        EVALUATION,
@@ -26548,6 +26291,8 @@ if __name__ == "__main__":
             typ = self.visit_yield_from_expr(node, allow_none_return=True)
         elif allow_none_return and isinstance(node, ConditionalExpr):
             typ = self.visit_conditional_expr(node, allow_none_return=True)
+        elif allow_none_return and isinstance(node, AwaitExpr):
+            typ = self.visit_await_expr(node, allow_none_return=True)
         else:
             typ = node.accept(self)
     except Exception as err:
@@ -26754,15 +26499,18 @@ if __name__ == "__main__":
     return self.chk.get_generator_receive_type(return_type, False)
 
 </t>
-<t tx="ekr.20220525082933.736">def visit_await_expr(self, e: AwaitExpr) -&gt; Type:
+<t tx="ekr.20220525082933.736">def visit_await_expr(self, e: AwaitExpr, allow_none_return: bool = False) -&gt; Type:
     expected_type = self.type_context[-1]
     if expected_type is not None:
         expected_type = self.chk.named_generic_type('typing.Awaitable', [expected_type])
     actual_type = get_proper_type(self.accept(e.expr, expected_type))
     if isinstance(actual_type, AnyType):
         return AnyType(TypeOfAny.from_another_any, source_any=actual_type)
-    return self.check_awaitable_expr(actual_type, e,
-                                     message_registry.INCOMPATIBLE_TYPES_IN_AWAIT)
+    ret = self.check_awaitable_expr(actual_type, e,
+                                    message_registry.INCOMPATIBLE_TYPES_IN_AWAIT)
+    if not allow_none_return and isinstance(get_proper_type(ret), NoneType):
+        self.chk.msg.does_not_return_value(None, e)
+    return ret
 
 </t>
 <t tx="ekr.20220525082933.737">def check_awaitable_expr(self, t: Type, ctx: Context, msg: Union[str, ErrorMessage]) -&gt; Type:
@@ -48183,7 +47931,7 @@ from mypy.subtypes import (
 )
 from mypy.sametypes import is_same_type
 from mypy.typeops import separate_union_literals
-from mypy.util import unmangle
+from mypy.util import unmangle, plural_s
 from mypy.errorcodes import ErrorCode
 from mypy import message_registry, errorcodes as codes
 
@@ -50783,15 +50531,7 @@ def visit_Return(self, n: ast3.Return) -&gt; ReturnStmt:
 
 
 </t>
-<t tx="ekr.20220525082934.748">def plural_s(s: Union[int, Sequence[Any]]) -&gt; str:
-    count = s if isinstance(s, int) else len(s)
-    if count &gt; 1:
-        return 's'
-    else:
-        return ''
-
-
-</t>
+<t tx="ekr.20220525082934.748"></t>
 <t tx="ekr.20220525082934.749">def format_string_list(lst: List[str]) -&gt; str:
     assert len(lst) &gt; 0
     if len(lst) == 1:
@@ -64449,7 +64189,9 @@ def file_context(self,
     """
     # TODO: Forward reference to name imported in class body is not
     #       caught.
-    assert self.statement  # we are at class scope
+    if self.statement is None:
+        # Assume it's fine -- don't have enough context to check
+        return True
     return (node is None
             or self.is_textually_before_statement(node)
             or not self.is_defined_in_current_module(node.fullname)
@@ -74525,10 +74267,14 @@ import copy
 import enum
 import importlib
 import inspect
+import os
 import re
 import sys
 import types
+import typing
+import typing_extensions
 import warnings
+from contextlib import redirect_stdout, redirect_stderr
 from functools import singledispatch
 from pathlib import Path
 from typing import Any, Dict, Generic, Iterator, List, Optional, Tuple, TypeVar, Union, cast
@@ -74543,7 +74289,7 @@ import mypy.version
 from mypy import nodes
 from mypy.config_parser import parse_config_file
 from mypy.options import Options
-from mypy.util import FancyFormatter, bytes_to_human_readable_repr, is_dunder
+from mypy.util import FancyFormatter, bytes_to_human_readable_repr, plural_s, is_dunder
 
 
 @others
@@ -74606,6 +74352,10 @@ _formatter = FancyFormatter(sys.stdout, sys.stderr, False)
     """Wrapper around mypy.util for fancy formatting."""
     kwargs.setdefault("color", "none")
     return _formatter.style(message, **kwargs)
+
+
+class StubtestFailure(Exception):
+    pass
 
 
 </t>
@@ -74726,19 +74476,20 @@ _formatter = FancyFormatter(sys.stdout, sys.stderr, False)
     """
     stub = get_stub(module_name)
     if stub is None:
-        yield Error([module_name], "failed to find stubs", MISSING, None)
+        yield Error([module_name], "failed to find stubs", MISSING, None, runtime_desc="N/A")
         return
 
     try:
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore")
-            runtime = importlib.import_module(module_name)
-            # Also run the equivalent of `from module import *`
-            # This could have the additional effect of loading not-yet-loaded submodules
-            # mentioned in __all__
-            __import__(module_name, fromlist=["*"])
+        with open(os.devnull, "w") as devnull:
+            with warnings.catch_warnings(), redirect_stdout(devnull), redirect_stderr(devnull):
+                warnings.simplefilter("ignore")
+                runtime = importlib.import_module(module_name)
+                # Also run the equivalent of `from module import *`
+                # This could have the additional effect of loading not-yet-loaded submodules
+                # mentioned in __all__
+                __import__(module_name, fromlist=["*"])
     except Exception as e:
-        yield Error([module_name], f"failed to import: {e}", stub, MISSING)
+        yield Error([module_name], f"failed to import, {type(e).__name__}: {e}", stub, MISSING)
         return
 
     with warnings.catch_warnings():
@@ -75531,8 +75282,32 @@ def verify_overloadedfuncdef(
 def verify_typevarexpr(
     stub: nodes.TypeVarExpr, runtime: MaybeMissing[Any], object_path: List[str]
 ) -&gt; Iterator[Error]:
-    if False:
-        yield None
+    if isinstance(runtime, Missing):
+        # We seem to insert these typevars into NamedTuple stubs, but they
+        # don't exist at runtime. Just ignore!
+        if stub.name == "_NT":
+            return
+        yield Error(object_path, "is not present at runtime", stub, runtime)
+        return
+    if not isinstance(runtime, TypeVar):
+        yield Error(object_path, "is not a TypeVar", stub, runtime)
+        return
+
+
+@verify.register(nodes.ParamSpecExpr)
+def verify_paramspecexpr(
+    stub: nodes.ParamSpecExpr, runtime: MaybeMissing[Any], object_path: List[str]
+) -&gt; Iterator[Error]:
+    if isinstance(runtime, Missing):
+        yield Error(object_path, "is not present at runtime", stub, runtime)
+        return
+    maybe_paramspec_types = (
+        getattr(typing, "ParamSpec", None), getattr(typing_extensions, "ParamSpec", None)
+    )
+    paramspec_types = tuple([t for t in maybe_paramspec_types if t is not None])
+    if not paramspec_types or not isinstance(runtime, paramspec_types):
+        yield Error(object_path, "is not a ParamSpec", stub, runtime)
+        return
 
 
 </t>
@@ -75595,7 +75370,11 @@ def verify_typevarexpr(
     ) or decorator.fullname in mypy.types.OVERLOAD_NAMES:
         return func
     if decorator.fullname == "builtins.classmethod":
-        assert func.arguments[0].variable.name in ("cls", "metacls")
+        if func.arguments[0].variable.name not in ("cls", "mcs", "metacls"):
+            raise StubtestFailure(
+                f"unexpected class argument name {func.arguments[0].variable.name!r} "
+                f"in {dec.fullname}"
+            )
         # FuncItem is written so that copy.copy() actually works, even when compiled
         ret = copy.copy(func)
         # Remove the cls argument, since it's not present in inspect.signature of classmethods
@@ -75971,26 +75750,16 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
             sources.extend(found_sources)
             all_modules.extend(s.module for s in found_sources if s.module not in all_modules)
 
-    try:
-        res = mypy.build.build(sources=sources, options=options)
-    except mypy.errors.CompileError as e:
-        output = [
-            _style("error: ", color="red", bold=True),
-            "not checking stubs due to failed mypy compile:\n",
-            str(e),
-        ]
-        print("".join(output))
-        raise RuntimeError from e
-    if res.errors:
-        output = [
-            _style("error: ", color="red", bold=True),
-            "not checking stubs due to mypy build errors:\n",
-        ]
-        print("".join(output) + "\n".join(res.errors))
-        raise RuntimeError
+    if sources:
+        try:
+            res = mypy.build.build(sources=sources, options=options)
+        except mypy.errors.CompileError as e:
+            raise StubtestFailure(f"failed mypy compile:\n{e}") from e
+        if res.errors:
+            raise StubtestFailure("mypy build errors:\n" + "\n".join(res.errors))
 
-    global _all_stubs
-    _all_stubs = res.files
+        global _all_stubs
+        _all_stubs = res.files
 
     return all_modules
 
@@ -76119,7 +75888,21 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
         return s.strip()
 
 </t>
-<t tx="ekr.20220525082935.804">def test_stubs(args: argparse.Namespace, use_builtins_fixtures: bool = False) -&gt; int:
+<t tx="ekr.20220525082935.804">class _Arguments:
+    modules: List[str]
+    concise: bool
+    ignore_missing_stub: bool
+    ignore_positional_only: bool
+    allowlist: List[str]
+    generate_allowlist: bool
+    ignore_unused_allowlist: bool
+    mypy_config_file: str
+    custom_typeshed_dir: str
+    check_typeshed: bool
+    version: str
+
+
+def test_stubs(args: _Arguments, use_builtins_fixtures: bool = False) -&gt; int:
     """This is stubtest! It's time to test the stubs!"""
     # Load the allowlist. This is a series of strings corresponding to Error.object_desc
     # Values in the dict will store whether we used the allowlist entry or not.
@@ -76135,13 +75918,23 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
 
     modules = args.modules
     if args.check_typeshed:
-        assert not args.modules, "Cannot pass both --check-typeshed and a list of modules"
+        if args.modules:
+            print(
+                _style("error:", color="red", bold=True),
+                "cannot pass both --check-typeshed and a list of modules",
+            )
+            return 1
         modules = get_typeshed_stdlib_modules(args.custom_typeshed_dir)
         # typeshed added a stub for __main__, but that causes stubtest to check itself
         annoying_modules = {"antigravity", "this", "__main__"}
         modules = [m for m in modules if m not in annoying_modules]
 
-    assert modules, "No modules to check"
+    if not modules:
+        print(
+            _style("error:", color="red", bold=True),
+            "no modules to check",
+        )
+        return 1
 
     options = Options()
     options.incremental = False
@@ -76156,10 +75949,15 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
 
     try:
         modules = build_stubs(modules, options, find_submodules=not args.check_typeshed)
-    except RuntimeError:
+    except StubtestFailure as stubtest_failure:
+        print(
+            _style("error:", color="red", bold=True),
+            f"not checking stubs due to {stubtest_failure}",
+        )
         return 1
 
     exit_code = 0
+    error_count = 0
     for module in modules:
         for error in test_module(module):
             # Filter errors
@@ -76185,6 +75983,7 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
                 generated_allowlist.add(error.object_desc)
                 continue
             print(error.get_description(concise=args.concise))
+            error_count += 1
 
     # Print unused allowlist entries
     if not args.ignore_unused_allowlist:
@@ -76193,6 +75992,7 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
             # This lets us allowlist errors that don't manifest at all on some systems
             if not allowlist[w] and not allowlist_regexes[w].fullmatch(""):
                 exit_code = 1
+                error_count += 1
                 print(f"note: unused allowlist entry {w}")
 
     # Print the generated allowlist
@@ -76200,12 +76000,28 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
         for e in sorted(generated_allowlist):
             print(e)
         exit_code = 0
+    elif not args.concise:
+        if error_count:
+            print(
+                _style(
+                    f"Found {error_count} error{plural_s(error_count)}"
+                    f" (checked {len(modules)} module{plural_s(modules)})",
+                    color="red", bold=True
+                )
+            )
+        else:
+            print(
+                _style(
+                    f"Success: no issues found in {len(modules)} module{plural_s(modules)}",
+                    color="green", bold=True
+                )
+            )
 
     return exit_code
 
 
 </t>
-<t tx="ekr.20220525082935.805">def parse_options(args: List[str]) -&gt; argparse.Namespace:
+<t tx="ekr.20220525082935.805">def parse_options(args: List[str]) -&gt; _Arguments:
     parser = argparse.ArgumentParser(
         description="Compares stubs to objects introspected from the runtime."
     )
@@ -76267,7 +76083,7 @@ _all_stubs: Dict[str, nodes.MypyFile] = {}
         "--version", action="version", version="%(prog)s " + mypy.version.__version__
     )
 
-    return parser.parse_args(args)
+    return parser.parse_args(args, namespace=_Arguments())
 
 
 </t>
@@ -80875,6 +80691,7 @@ INPUT_FILE_NAME = 'file'
 @language python
 @tabwidth -4
 from contextlib import contextmanager
+import filelock
 import os
 import pytest
 import re
@@ -80885,7 +80702,7 @@ import tempfile
 from typing import Tuple, List, Generator
 
 import mypy.api
-from mypy.test.config import package_path
+from mypy.test.config import package_path, pip_lock, pip_timeout
 from mypy.util import try_find_python2_interpreter
 from mypy.test.data import DataDrivenTestCase, DataSuite
 from mypy.test.config import test_temp_dir
@@ -80959,11 +80776,15 @@ def virtualenv(
         env = {'PIP_BUILD': dir}
         # Inherit environment for Windows
         env.update(os.environ)
-        proc = subprocess.run(install_cmd,
-                              cwd=working_dir,
-                              stdout=PIPE,
-                              stderr=PIPE,
-                              env=env)
+        try:
+            with filelock.FileLock(pip_lock, timeout=pip_timeout):
+                proc = subprocess.run(install_cmd,
+                                      cwd=working_dir,
+                                      stdout=PIPE,
+                                      stderr=PIPE,
+                                      env=env)
+        except filelock.Timeout as err:
+            raise Exception("Failed to acquire {}".format(pip_lock)) from err
     if proc.returncode != 0:
         raise Exception(proc.stdout.decode('utf-8') + proc.stderr.decode('utf-8'))
 
@@ -83135,6 +82956,9 @@ Protocol: _SpecialForm = ...
 class TypeVar:
     def __init__(self, name, covariant: bool = ..., contravariant: bool = ...) -&gt; None: ...
 
+class ParamSpec:
+    def __init__(self, name: str) -&gt; None: ...
+
 _T = TypeVar("_T")
 _T_co = TypeVar("_T_co", covariant=True)
 _K = TypeVar("_K")
@@ -83443,8 +83267,8 @@ def test_default_value(self) -&gt; Iterator[Case]:
     yield Case(
         stub="""
         from typing import TypeVar
-        T = TypeVar("T", bound=str)
-        def f6(text: T = ...) -&gt; None: ...
+        _T = TypeVar("_T", bound=str)
+        def f6(text: _T = ...) -&gt; None: ...
         """,
         runtime="def f6(text = None): pass",
         error="f6",
@@ -83958,7 +83782,7 @@ def test_missing_no_runtime_all(self) -&gt; Iterator[Case]:
 <t tx="ekr.20220525082936.1221">@collect_cases
 def test_non_public_1(self) -&gt; Iterator[Case]:
     yield Case(
-        stub="__all__: list[str]", runtime="", error="test_module.__all__"
+        stub="__all__: list[str]", runtime="", error=f"{TEST_MODULE_NAME}.__all__"
     )  # dummy case
     yield Case(stub="_f: int", runtime="def _f(): ...", error="_f")
 
@@ -84241,6 +84065,33 @@ def test_protocol(self) -&gt; Iterator[Case]:
         error="X.__init__"
     )
 
+@collect_cases
+def test_type_var(self) -&gt; Iterator[Case]:
+    yield Case(
+        stub="from typing import TypeVar", runtime="from typing import TypeVar", error=None
+    )
+    yield Case(
+        stub="A = TypeVar('A')",
+        runtime="A = TypeVar('A')",
+        error=None,
+    )
+    yield Case(
+        stub="B = TypeVar('B')",
+        runtime="B = 5",
+        error="B",
+    )
+    if sys.version_info &gt;= (3, 10):
+        yield Case(
+            stub="from typing import ParamSpec",
+            runtime="from typing import ParamSpec",
+            error=None
+        )
+        yield Case(
+            stub="C = ParamSpec('C')",
+            runtime="C = ParamSpec('C')",
+            error=None,
+        )
+
 
 </t>
 <t tx="ekr.20220525082936.1231">def remove_color_code(s: str) -&gt; str:
@@ -84258,9 +84109,11 @@ def test_protocol(self) -&gt; Iterator[Case]:
         options=[],
     )
     expected = (
-        'error: {0}.bad is inconsistent, stub argument "number" differs from runtime '
-        'argument "num"\nStub: at line 1\ndef (number: builtins.int, text: builtins.str)\n'
-        "Runtime: at line 1 in file {0}.py\ndef (num, text)\n\n".format(TEST_MODULE_NAME)
+        f'error: {TEST_MODULE_NAME}.bad is inconsistent, stub argument "number" differs '
+        'from runtime argument "num"\n'
+        'Stub: at line 1\ndef (number: builtins.int, text: builtins.str)\n'
+        f"Runtime: at line 1 in file {TEST_MODULE_NAME}.py\ndef (num, text)\n\n"
+        'Found 1 error (checked 1 module)\n'
     )
     assert remove_color_code(output) == expected
 
@@ -84280,17 +84133,17 @@ def test_protocol(self) -&gt; Iterator[Case]:
     output = run_stubtest(
         stub="", runtime="__all__ = ['f']\ndef f(): pass", options=["--ignore-missing-stub"]
     )
-    assert not output
+    assert output == 'Success: no issues found in 1 module\n'
 
     output = run_stubtest(
         stub="", runtime="def f(): pass", options=["--ignore-missing-stub"]
     )
-    assert not output
+    assert output == 'Success: no issues found in 1 module\n'
 
     output = run_stubtest(
         stub="def f(__a): ...", runtime="def f(a): pass", options=["--ignore-positional-only"]
     )
-    assert not output
+    assert output == 'Success: no issues found in 1 module\n'
 
 </t>
 <t tx="ekr.20220525082936.1235">def test_allowlist(self) -&gt; None:
@@ -84305,18 +84158,21 @@ def test_protocol(self) -&gt; Iterator[Case]:
             runtime="def bad(asdf, text): pass",
             options=["--allowlist", allowlist.name],
         )
-        assert not output
+        assert output == 'Success: no issues found in 1 module\n'
 
         # test unused entry detection
         output = run_stubtest(stub="", runtime="", options=["--allowlist", allowlist.name])
-        assert output == f"note: unused allowlist entry {TEST_MODULE_NAME}.bad\n"
+        assert output == (
+            f"note: unused allowlist entry {TEST_MODULE_NAME}.bad\n"
+            "Found 1 error (checked 1 module)\n"
+        )
 
         output = run_stubtest(
             stub="",
             runtime="",
             options=["--allowlist", allowlist.name, "--ignore-unused-allowlist"],
         )
-        assert not output
+        assert output == 'Success: no issues found in 1 module\n'
 
         # test regex matching
         with open(allowlist.name, mode="w+") as f:
@@ -84341,8 +84197,9 @@ def test_protocol(self) -&gt; Iterator[Case]:
             ),
             options=["--allowlist", allowlist.name, "--generate-allowlist"],
         )
-        assert output == "note: unused allowlist entry unused.*\n{}.also_bad\n".format(
-            TEST_MODULE_NAME
+        assert output == (
+            f"note: unused allowlist entry unused.*\n"
+            f"{TEST_MODULE_NAME}.also_bad\n"
         )
     finally:
         os.unlink(allowlist.name)
@@ -84366,7 +84223,23 @@ def test_protocol(self) -&gt; Iterator[Case]:
     output = io.StringIO()
     with contextlib.redirect_stdout(output):
         test_stubs(parse_options(["not_a_module"]))
-    assert "error: not_a_module failed to find stubs" in remove_color_code(output.getvalue())
+    assert remove_color_code(output.getvalue()) == (
+        "error: not_a_module failed to find stubs\n"
+        "Stub:\nMISSING\nRuntime:\nN/A\n\n"
+        "Found 1 error (checked 1 module)\n"
+    )
+
+def test_only_py(self) -&gt; None:
+    # in this case, stubtest will check the py against itself
+    # this is useful to support packages with a mix of stubs and inline types
+    with use_tmp_dir(TEST_MODULE_NAME):
+        with open(f"{TEST_MODULE_NAME}.py", "w") as f:
+            f.write("a = 1")
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            test_stubs(parse_options([TEST_MODULE_NAME]))
+        output_str = remove_color_code(output.getvalue())
+        assert output_str == 'Success: no issues found in 1 module\n'
 
 </t>
 <t tx="ekr.20220525082936.1238">def test_get_typeshed_stdlib_modules(self) -&gt; None:
@@ -84416,11 +84289,26 @@ def test_protocol(self) -&gt; Iterator[Case]:
     )
     output = run_stubtest(stub=stub, runtime=runtime, options=[])
     assert remove_color_code(output) == (
-        "error: test_module.temp variable differs from runtime type Literal[5]\n"
+        f"error: {TEST_MODULE_NAME}.temp variable differs from runtime type Literal[5]\n"
         "Stub: at line 2\n_decimal.Decimal\nRuntime:\n5\n\n"
+        "Found 1 error (checked 1 module)\n"
     )
     output = run_stubtest(stub=stub, runtime=runtime, options=[], config_file=config_file)
-    assert output == ""
+    assert output == "Success: no issues found in 1 module\n"
+
+def test_no_modules(self) -&gt; None:
+    output = io.StringIO()
+    with contextlib.redirect_stdout(output):
+        test_stubs(parse_options([]))
+    assert remove_color_code(output.getvalue()) == "error: no modules to check\n"
+
+def test_module_and_typeshed(self) -&gt; None:
+    output = io.StringIO()
+    with contextlib.redirect_stdout(output):
+        test_stubs(parse_options(["--check-typeshed", "some_module"]))
+    assert remove_color_code(output.getvalue()) == (
+        "error: cannot pass both --check-typeshed and a list of modules\n"
+    )
 </t>
 <t tx="ekr.20220525082936.1241">@path C:/Repos/mypy/mypy/test/
 @language python
@@ -85687,8 +85575,7 @@ def visit_param_spec(self, t: ParamSpecType) -&gt; T:
     n_sources is total number of files passed directly on command line,
     i.e. excluding stubs and followed imports.
     """
-    msg = 'Success: no issues found in {}' \
-          ' source file{}'.format(n_sources, 's' if n_sources != 1 else '')
+    msg = f'Success: no issues found in {n_sources} source file{plural_s(n_sources)}'
     if not use_color:
         return msg
     return self.style(msg, 'green', bold=True)
@@ -85806,15 +85693,11 @@ def visit_param_spec(self, t: ParamSpecType) -&gt; T:
     blockers: bool = False, use_color: bool = True
 ) -&gt; str:
     """Format a short summary in case of errors."""
-
-    msg = 'Found {} error{} in {} file{}'.format(
-        n_errors, 's' if n_errors != 1 else '',
-        n_files, 's' if n_files != 1 else ''
-    )
+    msg = f'Found {n_errors} error{plural_s(n_errors)} in {n_files} file{plural_s(n_files)}'
     if blockers:
         msg += ' (errors prevented further checking)'
     else:
-        msg += f" (checked {n_sources} source file{'s' if n_sources != 1 else ''})"
+        msg += f" (checked {n_sources} source file{plural_s(n_sources)})"
     if not use_color:
         return msg
     return self.style(msg, 'red', bold=True)
@@ -86315,6 +86198,14 @@ def test_meet_with_generic_interfaces(self) -&gt; None:
 </t>
 <t tx="ekr.20220525082936.141">def time_spent_us(t0: float) -&gt; int:
     return int((time.perf_counter() - t0) * 1e6)
+
+
+def plural_s(s: Union[int, Sized]) -&gt; str:
+    count = s if isinstance(s, int) else len(s)
+    if count &gt; 1:
+        return 's'
+    else:
+        return ''
 </t>
 <t tx="ekr.20220525082936.1410"># FIX generic interfaces + ranges
 
@@ -96500,6 +96391,15 @@ package_path = os.path.join(PREFIX, 'test-data', 'packages')
 # This is *within* the tempfile.TemporaryDirectory that is chroot'ed per testcase.
 # It is also hard-coded in numerous places, so don't change it.
 test_temp_dir = 'tmp'
+
+# The PEP 561 tests do a bunch of pip installs which, even though they operate
+# on distinct temporary virtual environments, run into race conditions on shared
+# file-system state. To make this work reliably in parallel mode, we'll use a
+# FileLock courtesy of the tox-dev/py-filelock package.
+# Ref. https://github.com/python/mypy/issues/12615
+# Ref. mypy/test/testpep561.py
+pip_lock = os.path.join(package_path, '.pip_lock')
+pip_timeout = 60
 </t>
 <t tx="ekr.20220525082936.804">@path C:/Repos/mypy/mypy/test/
 @language python
@@ -96517,10 +96417,16 @@ import sys
 
 import pytest
 from typing import List, Tuple, Set, Optional, Iterator, Any, Dict, NamedTuple, Union, Pattern
+from typing_extensions import Final
 
 from mypy.test.config import test_data_prefix, test_temp_dir, PREFIX
 
 root_dir = os.path.normpath(PREFIX)
+
+# Debuggers that we support for debugging mypyc run tests
+# implementation of using each of these debuggers is in test_run.py
+# TODO: support more debuggers
+SUPPORTED_DEBUGGERS: Final = ["gdb", "lldb"]
 
 
 @others
@@ -97090,6 +96996,13 @@ def pytest_addoption(parser: Any) -&gt; None:
                     help='Set the verbose flag when creating mypy Options')
     group.addoption('--mypyc-showc', action='store_true', default=False,
                     help='Display C code on mypyc test failures')
+    group.addoption(
+        "--mypyc-debug",
+        default=None,
+        dest="debugger",
+        choices=SUPPORTED_DEBUGGERS,
+        help="Run the first mypyc run test with the specified debugger",
+    )
 
 
 </t>
@@ -98107,7 +98020,7 @@ import shutil
 import time
 
 from typing import (
-    TypeVar, List, Tuple, Optional, Dict, Sequence, Iterable, Container, IO, Callable
+    TypeVar, List, Tuple, Optional, Dict, Sequence, Iterable, Container, IO, Callable, Union, Sized
 )
 from typing_extensions import Final, Type, Literal
 
@@ -100449,8 +100362,60 @@ NOT_DUMPED_MODULES = (
 
 </t>
 <t tx="ekr.20220526075331.1"></t>
-<t tx="ekr.20220526075427.1"></t>
+<t tx="ekr.20220526075427.1">@language rest
+@wrap
+
+**Background**
+
+- message_registry.py defines ARGUMENT_TYPE_EXPECTED as follows:
+ 
+cffs reveal:
+
+ARGUMENT_TYPE_EXPECTED: Final = ErrorMessage(
+    "Function is missing a type annotation for one or more arguments", codes.NO_UNTYPED_DEF
+)
+
+- message_registry.ARGUMENT_TYPE_EXPECTED appears in only: TypeChecker.check_for_missing_annotations.
+  Therefore, only this method needs to changed.
+  
+  *Note*: only TypeChecker.check_func_def calls check_for_missing_annotations.
+  
+- check_for_missing_annotations uses the following local helper function for all check:
+
+    def is_unannotated_any(t: Type) -&gt; bool:
+        if not isinstance(t, ProperType):
+            return False
+        return isinstance(t, AnyType) and t.type_of_any == TypeOfAny.unannotated
+        
+**The fix**
+
+The error message comes from these lines in check_for_missing_annotations.
+
+    if any(is_unannotated_any(t) for t in fdef.type.arg_types):
+        self.fail(message_registry.ARGUMENT_TYPE_EXPECTED, fdef)
+        
+I'll replace this with something like:
+
+    if any(arg_is_unannotated_and_is_not_initialized(t) for t in fdef.type.arg_types):
+        self.fail(message_registry.ARGUMENT_TYPE_EXPECTED, fdef)
+
+where arg_is_unannotated_and_is_not_initialized will be similar to is_unannotated_any
+but will allow an untyped arg provided the arg has a constant initializer of known type.
+
+@language python
+</t>
 <t tx="ekr.20220526075516.1"></t>
 <t tx="ekr.20220526075541.1"></t>
+<t tx="ekr.20220526080725.1">git clone https://github.com/python/mypy.git
+
+cd mypy
+python3 -m venv venv  # works.
+
+activate  # c:\scripts\activate.cmd  # works.
+
+python3 -m pip install -r test-requirements.txt  # works.
+python3 -m pip install -e .  # works.
+
+python3 -m pytest</t>
 </tnodes>
 </leo_file>
