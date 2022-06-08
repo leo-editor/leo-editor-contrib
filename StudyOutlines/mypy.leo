@@ -16,7 +16,8 @@
 </v>
 </v>
 <v t="ekr.20220526075331.1"><vh>Files</vh>
-<v t="ekr.20220224065603.3"><vh>COPY: C:\Repos/leo-editor/.mypy.ini</vh></v>
+<v t="ekr.20220224065603.3"><vh>COPY: C:/Repos/leo-editor/.mypy.ini</vh></v>
+<v t="ekr.20220608090604.1"><vh>COPY: C:/Repos/ekr-mypy/.mypy.ini</vh></v>
 <v t="ekr.20220525082932.2"><vh>@path C:/Repos/ekr-mypy</vh>
 <v t="ekr.20220525082932.3"><vh>@clean conftest.py</vh>
 <v t="ekr.20220525082933.1"><vh>pytest_configure</vh></v>
@@ -7183,7 +7184,6 @@
 <v t="ekr.20220525082934.939"></v>
 <v t="ekr.20220525082934.945"></v>
 </v>
-</v>
 <v t="ekr.20220525082935.21"></v>
 <v t="ekr.20220525082935.1202"></v>
 <v t="ekr.20220525082935.1175"></v>
@@ -7194,7 +7194,7 @@
 <v t="ekr.20220525082935.35"></v>
 <v t="ekr.20220525082935.24"></v>
 </v>
-<v t="ekr.20220608083510.1"><vh>*** put this file in leo-editor_contrib</vh></v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20220224065603.3">@language ini
@@ -56736,9 +56736,7 @@ from mypy.nodes import (
 
     @others
 </t>
-<t tx="ekr.20220525082935.1166">ekr_callers_dict = {}
-
-def __init__(self,
+<t tx="ekr.20220525082935.1166">def __init__(self,
              parent: 'Optional[TypeVarLikeScope]' = None,
              is_class_scope: bool = False,
              prohibited: 'Optional[TypeVarLikeScope]' = None,
@@ -102241,6 +102239,17 @@ Environment variables:
 # Word, Ignore Case, Body
 
 # found 4 nodes</t>
-<t tx="ekr.20220608083510.1"></t>
+<t tx="ekr.20220608090604.1">@language ini
+[mypy]
+
+python_version = 3.9
+ignore_missing_imports  = False
+incremental = False
+cache_dir = None
+show_error_codes = True
+check_untyped_defs = True
+strict_optional = True
+disallow_untyped_defs = True
+disallow_incomplete_defs = True</t>
 </tnodes>
 </leo_file>
