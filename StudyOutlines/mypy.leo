@@ -741,7 +741,7 @@
 </v>
 <v t="ekr.20220603024255.1"><vh>--- parsing</vh>
 <v t="ekr.20220525082934.34"><vh>@clean fastparse.py</vh>
-<v t="ekr.20220525082934.35"><vh>parse</vh></v>
+<v t="ekr.20220525082934.35"><vh>parse (fastparse.py) (returns tree, a MypyFile)</vh></v>
 <v t="ekr.20220525082934.36"><vh>parse_type_ignore_tag</vh></v>
 <v t="ekr.20220525082934.37"><vh>parse_type_comment</vh></v>
 <v t="ekr.20220525082934.38"><vh>parse_type_string</vh></v>
@@ -885,9 +885,9 @@
 <v t="ekr.20220525082934.174"><vh>stringify_name</vh></v>
 </v>
 <v t="ekr.20220525082934.175"><vh>@clean fastparse2.py</vh>
-<v t="ekr.20220525082934.176"><vh>parse</vh></v>
+<v t="ekr.20220525082934.176"><vh>parse (fastparse2.py) (returns tree, a MypyFile)</vh></v>
 <v t="ekr.20220525082934.177"><vh>is_no_type_check_decorator</vh></v>
-<v t="ekr.20220525082934.178"><vh>class ASTConverter</vh>
+<v t="ekr.20220525082934.178"><vh>class ASTConverter (creates AST)</vh>
 <v t="ekr.20220525082934.179"><vh>ASTConverter.__init__</vh></v>
 <v t="ekr.20220525082934.180"><vh>ASTConverter.fail</vh></v>
 <v t="ekr.20220525082934.181"><vh>ASTConverter.visit</vh></v>
@@ -896,9 +896,9 @@
 <v t="ekr.20220525082934.184"><vh>ASTConverter.get_lineno</vh></v>
 <v t="ekr.20220525082934.185"><vh>ASTConverter.translate_stmt_list</vh></v>
 <v t="ekr.20220525082934.186"><vh>ASTConverter.translate_type_comment</vh></v>
-<v t="ekr.20220525082934.187"><vh>ASTConverter.op_map: Final[Dict[typing.Type[AST], str]] = {</vh></v>
+<v t="ekr.20220525082934.187"><vh>ASTConverter.op_map</vh></v>
 <v t="ekr.20220525082934.188"><vh>ASTConverter.from_operator</vh></v>
-<v t="ekr.20220525082934.189"><vh>ASTConverter.comp_op_map: Final[Dict[typing.Type[AST], str]] = {</vh></v>
+<v t="ekr.20220525082934.189"><vh>ASTConverter.comp_op_map</vh></v>
 <v t="ekr.20220525082934.190"><vh>ASTConverter.from_comp_operator</vh></v>
 <v t="ekr.20220525082934.191"><vh>ASTConverter.as_block</vh></v>
 <v t="ekr.20220525082934.192"><vh>ASTConverter.as_required_block</vh></v>
@@ -913,6 +913,7 @@
 <v t="ekr.20220525082934.201"><vh>ASTConverter.convert_arg</vh></v>
 <v t="ekr.20220525082934.202"><vh>ASTConverter.get_type</vh></v>
 <v t="ekr.20220525082934.203"><vh>ASTConverter.stringify_name</vh></v>
+<v t="ekr.20220609063006.1"><vh>ASTConverter: Statements...</vh>
 <v t="ekr.20220525082934.204"><vh>ASTConverter.visit_ClassDef</vh></v>
 <v t="ekr.20220525082934.205"><vh>ASTConverter.visit_Return</vh></v>
 <v t="ekr.20220525082934.206"><vh>ASTConverter.visit_Delete</vh></v>
@@ -937,7 +938,8 @@
 <v t="ekr.20220525082934.225"><vh>ASTConverter.visit_Pass</vh></v>
 <v t="ekr.20220525082934.226"><vh>ASTConverter.visit_Break</vh></v>
 <v t="ekr.20220525082934.227"><vh>ASTConverter.visit_Continue</vh></v>
-<v t="ekr.20220525082934.228"><vh>ASTConverter.--- expr ---</vh></v>
+</v>
+<v t="ekr.20220525082934.228"><vh>ASTConverter: expr...</vh>
 <v t="ekr.20220525082934.229"><vh>ASTConverter.visit_BoolOp</vh></v>
 <v t="ekr.20220525082934.230"><vh>ASTConverter.group</vh></v>
 <v t="ekr.20220525082934.231"><vh>ASTConverter.visit_BinOp</vh></v>
@@ -961,14 +963,16 @@
 <v t="ekr.20220525082934.249"><vh>ASTConverter.visit_Name</vh></v>
 <v t="ekr.20220525082934.250"><vh>ASTConverter.visit_List</vh></v>
 <v t="ekr.20220525082934.251"><vh>ASTConverter.visit_Tuple</vh></v>
-<v t="ekr.20220525082934.252"><vh>ASTConverter.--- slice ---</vh></v>
+</v>
+<v t="ekr.20220525082934.252"><vh>ASTConverter: slice...</vh>
 <v t="ekr.20220525082934.253"><vh>ASTConverter.visit_Slice</vh></v>
 <v t="ekr.20220525082934.254"><vh>ASTConverter.visit_ExtSlice</vh></v>
 <v t="ekr.20220525082934.255"><vh>ASTConverter.visit_Index</vh></v>
 </v>
 </v>
+</v>
 <v t="ekr.20220525082934.1271"><vh>@clean parse.py</vh>
-<v t="ekr.20220525082934.1272"><vh>parse</vh></v>
+<v t="ekr.20220525082934.1272"><vh>parse (parse.py) (calls fastparse/2.parse)</vh></v>
 </v>
 <v t="ekr.20220525082935.424"><vh>@clean sharedparse.py</vh>
 <v t="ekr.20220525082935.425"><vh>special_function_elide_names</vh></v>
@@ -1017,12 +1021,12 @@
 <v t="ekr.20220525082935.3"><vh>SemanticAnalyzer.is_stub_file</vh></v>
 <v t="ekr.20220525082935.4"><vh>SemanticAnalyzer.is_typeshed_stub_file</vh></v>
 <v t="ekr.20220525082935.5"><vh>SemanticAnalyzer.final_iteration</vh></v>
-<v t="ekr.20220525082935.6"><vh>----- Before semantic analysis</vh>
+<v t="ekr.20220525082935.6"><vh>SA: preparation</vh>
 <v t="ekr.20220525082935.7"><vh>SemanticAnalyzer.prepare_file</vh></v>
 <v t="ekr.20220525082935.8"><vh>SemanticAnalyzer.prepare_typing_namespace</vh></v>
 <v t="ekr.20220525082935.9"><vh>SemanticAnalyzer.prepare_builtins_namespace</vh></v>
 </v>
-<v t="ekr.20220525082935.10"><vh>----- Analyze targets</vh>
+<v t="ekr.20220525082935.10"><vh>SA: analyze targets</vh>
 <v t="ekr.20220525082935.11"><vh>SemanticAnalyzer.refresh_partial</vh></v>
 <v t="ekr.20220525082935.12"><vh>SemanticAnalyzer.refresh_top_level</vh></v>
 <v t="ekr.20220525082935.13"><vh>SemanticAnalyzer.add_implicit_module_attrs</vh></v>
@@ -1032,9 +1036,11 @@
 <v t="ekr.20220525082935.17"><vh>SemanticAnalyzer.adjust_public_exports</vh></v>
 <v t="ekr.20220525082935.18"><vh>SemanticAnalyzer.file_context</vh></v>
 </v>
-<v t="ekr.20220525082935.19"><vh>----- Analyze functions</vh>
+<v t="ekr.20220525082935.19"><vh>SA: analyze functions</vh>
 <v t="ekr.20220525082935.20"><vh>SemanticAnalyzer.visit_func_def</vh></v>
-<v t="ekr.20220525082935.21"><vh>SemanticAnalyzer.analyze_func_def (semanal.py)</vh></v>
+<v t="ekr.20220525082935.21"><vh>SemanticAnalyzer.analyze_func_def (semanal.py) (*** links!)</vh>
+<v t="ekr.20220607022023.1"><vh>&lt;&lt; define callers and callerName &gt;&gt;</vh></v>
+</v>
 <v t="ekr.20220525082935.22"><vh>SemanticAnalyzer.prepare_method_signature</vh></v>
 <v t="ekr.20220525082935.23"><vh>SemanticAnalyzer.set_original_def</vh></v>
 <v t="ekr.20220525082935.24"><vh>SemanticAnalyzer.update_function_type_variables</vh></v>
@@ -1054,7 +1060,7 @@
 <v t="ekr.20220525082935.38"><vh>SemanticAnalyzer.visit_decorator</vh></v>
 <v t="ekr.20220525082935.39"><vh>SemanticAnalyzer.check_decorated_function_is_method</vh></v>
 </v>
-<v t="ekr.20220525082935.40"><vh>----- Analyze classes</vh>
+<v t="ekr.20220525082935.40"><vh>SA: analyze classes</vh>
 <v t="ekr.20220525082935.41"><vh>SemanticAnalyzer.visit_class_def</vh></v>
 <v t="ekr.20220525082935.42"><vh>SemanticAnalyzer.analyze_class</vh></v>
 <v t="ekr.20220525082935.43"><vh>SemanticAnalyzer.is_core_builtin_class</vh></v>
@@ -1083,7 +1089,7 @@
 <v t="ekr.20220525082935.66"><vh>SemanticAnalyzer.is_base_class</vh></v>
 <v t="ekr.20220525082935.67"><vh>SemanticAnalyzer.analyze_metaclass</vh></v>
 </v>
-<v t="ekr.20220525082935.68"><vh>----- Analyze imports</vh>
+<v t="ekr.20220525082935.68"><vh>SA: analyze imports</vh>
 <v t="ekr.20220525082935.69"><vh>SemanticAnalyzer.visit_import</vh></v>
 <v t="ekr.20220525082935.70"><vh>SemanticAnalyzer.visit_import_from</vh></v>
 <v t="ekr.20220525082935.71"><vh>SemanticAnalyzer.process_imported_symbol</vh></v>
@@ -1092,7 +1098,7 @@
 <v t="ekr.20220525082935.74"><vh>SemanticAnalyzer.correct_relative_import</vh></v>
 <v t="ekr.20220525082935.75"><vh>SemanticAnalyzer.visit_import_all</vh></v>
 </v>
-<v t="ekr.20220525082935.76"><vh>----- Analyze assignments</vh>
+<v t="ekr.20220525082935.76"><vh>SA: analyze assignments</vh>
 <v t="ekr.20220525082935.77"><vh>SemanticAnalyzer.visit_assignment_expr</vh></v>
 <v t="ekr.20220525082935.78"><vh>SemanticAnalyzer.visit_assignment_stmt</vh></v>
 <v t="ekr.20220525082935.79"><vh>SemanticAnalyzer.analyze_identity_global_assignment</vh></v>
@@ -1145,7 +1151,7 @@
 <v t="ekr.20220525082935.126"><vh>SemanticAnalyzer.process__deletable__</vh></v>
 <v t="ekr.20220525082935.127"><vh>SemanticAnalyzer.process__slots__</vh></v>
 </v>
-<v t="ekr.20220525082935.128"><vh>----- Analyze Misc statements</vh>
+<v t="ekr.20220525082935.128"><vh>SA: analyze Misc statements</vh>
 <v t="ekr.20220525082935.129"><vh>SemanticAnalyzer.visit_block</vh></v>
 <v t="ekr.20220525082935.130"><vh>SemanticAnalyzer.visit_block_maybe</vh></v>
 <v t="ekr.20220525082935.131"><vh>SemanticAnalyzer.visit_expression_stmt</vh></v>
@@ -1169,7 +1175,7 @@
 <v t="ekr.20220525082935.149"><vh>SemanticAnalyzer.visit_exec_stmt</vh></v>
 <v t="ekr.20220525082935.150"><vh>SemanticAnalyzer.visit_match_stmt</vh></v>
 </v>
-<v t="ekr.20220525082935.151"><vh>----- Analyze Expressions</vh>
+<v t="ekr.20220525082935.151"><vh>SA: analyze Expressions</vh>
 <v t="ekr.20220525082935.152"><vh>SemanticAnalyzer.visit_name_expr</vh></v>
 <v t="ekr.20220525082935.153"><vh>SemanticAnalyzer.bind_name_expr</vh></v>
 <v t="ekr.20220525082935.154"><vh>SemanticAnalyzer.visit_super_expr</vh></v>
@@ -1207,7 +1213,7 @@
 <v t="ekr.20220525082935.186"><vh>SemanticAnalyzer.visit_yield_expr</vh></v>
 <v t="ekr.20220525082935.187"><vh>SemanticAnalyzer.visit_await_expr</vh></v>
 </v>
-<v t="ekr.20220525082935.188"><vh>----- Analyze Patterns</vh>
+<v t="ekr.20220525082935.188"><vh>SA: analyze Patterns</vh>
 <v t="ekr.20220525082935.189"><vh>SemanticAnalyzer.visit_as_pattern</vh></v>
 <v t="ekr.20220525082935.190"><vh>SemanticAnalyzer.visit_or_pattern</vh></v>
 <v t="ekr.20220525082935.191"><vh>SemanticAnalyzer.visit_value_pattern</vh></v>
@@ -1216,7 +1222,7 @@
 <v t="ekr.20220525082935.194"><vh>SemanticAnalyzer.visit_mapping_pattern</vh></v>
 <v t="ekr.20220525082935.195"><vh>SemanticAnalyzer.visit_class_pattern</vh></v>
 </v>
-<v t="ekr.20220525082935.196"><vh>----- Lookup functions</vh>
+<v t="ekr.20220525082935.196"><vh>SA: lookup functions</vh>
 <v t="ekr.20220525082935.197"><vh>SemanticAnalyzer.lookup</vh></v>
 <v t="ekr.20220525082935.198"><vh>SemanticAnalyzer.is_active_symbol_in_class_body</vh></v>
 <v t="ekr.20220525082935.199"><vh>SemanticAnalyzer.is_textually_before_statement</vh></v>
@@ -1237,7 +1243,7 @@
 <v t="ekr.20220525082935.214"><vh>SemanticAnalyzer.builtin_type</vh></v>
 <v t="ekr.20220525082935.215"><vh>SemanticAnalyzer.lookup_current_scope</vh></v>
 </v>
-<v t="ekr.20220525082935.216"><vh>----- Adding symbols</vh>
+<v t="ekr.20220525082935.216"><vh>SA: adding symbols</vh>
 <v t="ekr.20220525082935.217"><vh>SemanticAnalyzer.add_symbol</vh></v>
 <v t="ekr.20220525082935.218"><vh>SemanticAnalyzer.add_symbol_skip_local</vh></v>
 <v t="ekr.20220525082935.219"><vh>SemanticAnalyzer.add_symbol_table_node</vh></v>
@@ -1498,7 +1504,7 @@
 <v t="ekr.20220525082935.1200"><vh>TypeAnalyser.visit_unpack_type</vh></v>
 <v t="ekr.20220525082935.1201"><vh>TypeAnalyser.visit_parameters</vh></v>
 <v t="ekr.20220525082935.1202"><vh>TypeAnalyser.visit_callable_type (typeanal.py) (*** changed)</vh>
-<v t="ekr.20220607022023.1"><vh>&lt;&lt; define callers and callerName &gt;&gt;</vh></v>
+<v t="ekr.20220607022023.1"></v>
 </v>
 <v t="ekr.20220525082935.1203"><vh>TypeAnalyser.anal_type_guard</vh></v>
 <v t="ekr.20220525082935.1204"><vh>TypeAnalyser.anal_type_guard_arg</vh></v>
@@ -1719,7 +1725,7 @@
 <v t="ekr.20220525082935.714"><vh>translate_module_name</vh></v>
 <v t="ekr.20220525082935.715"><vh>find_module_paths_using_search</vh></v>
 <v t="ekr.20220525082935.716"><vh>mypy_options</vh></v>
-<v t="ekr.20220525082935.717"><vh>parse_source_file</vh></v>
+<v t="ekr.20220525082935.717"><vh>parse_source_file (stubgen.py)</vh></v>
 <v t="ekr.20220525082935.718"><vh>generate_asts_for_modules</vh></v>
 <v t="ekr.20220525082935.719"><vh>generate_stub_from_ast</vh></v>
 <v t="ekr.20220525082935.720"><vh>collect_docs_signatures</vh></v>
@@ -1856,7 +1862,7 @@
 <v t="ekr.20220525082933.215"><vh>class BuildResult</vh>
 <v t="ekr.20220525082933.216"><vh>BuildResult.__init__</vh></v>
 </v>
-<v t="ekr.20220525082933.217"><vh>build</vh>
+<v t="ekr.20220525082933.217"><vh>build (parsing, SA and type checking)</vh>
 <v t="ekr.20220525082933.218"><vh>default_flush_errors</vh></v>
 </v>
 <v t="ekr.20220525082933.219"><vh>_build</vh></v>
@@ -1882,7 +1888,7 @@
 <v t="ekr.20220525082933.238"><vh>BuildManager.getmtime</vh></v>
 <v t="ekr.20220525082933.239"><vh>BuildManager.all_imported_modules_in_file</vh></v>
 <v t="ekr.20220525082933.240"><vh>BuildManager.is_module</vh></v>
-<v t="ekr.20220525082933.241"><vh>BuildManager.parse_file</vh></v>
+<v t="ekr.20220525082933.241"><vh>BuildManager.parse_file (calls parse, returns tree)</vh></v>
 <v t="ekr.20220525082933.242"><vh>BuildManager.load_fine_grained_deps</vh></v>
 <v t="ekr.20220525082933.243"><vh>BuildManager.report_file</vh></v>
 <v t="ekr.20220525082933.244"><vh>BuildManager.verbosity</vh></v>
@@ -1917,7 +1923,7 @@
 <v t="ekr.20220525082933.272"><vh>"""Dependency manager.</vh></v>
 <v t="ekr.20220525082933.273"><vh>class ModuleNotFound</vh></v>
 <v t="ekr.20220525082933.274"><vh>class State</vh>
-<v t="ekr.20220525082933.275"><vh>State.__init__</vh></v>
+<v t="ekr.20220525082933.275"><vh>State.__init__ (may call self.parse_file)</vh></v>
 <v t="ekr.20220525082933.276"><vh>State.xmeta</vh></v>
 <v t="ekr.20220525082933.277"><vh>State.add_ancestors</vh></v>
 <v t="ekr.20220525082933.278"><vh>State.is_fresh</vh></v>
@@ -1929,13 +1935,13 @@
 <v t="ekr.20220525082933.284"><vh>State.load_fine_grained_deps</vh></v>
 <v t="ekr.20220525082933.285"><vh>State.load_tree</vh></v>
 <v t="ekr.20220525082933.286"><vh>State.fix_cross_refs</vh></v>
-<v t="ekr.20220525082933.287"><vh>State.Methods for processing modules from source code.</vh></v>
-<v t="ekr.20220525082933.288"><vh>State.parse_file</vh></v>
+<v t="ekr.20220525082933.287"><vh>--- Methods for processing modules from source code</vh>
+<v t="ekr.20220525082933.288"><vh>State.parse_file (BuildManager.modules[self.id] = self.tree)</vh></v>
 <v t="ekr.20220525082933.289"><vh>State.parse_inline_configuration</vh></v>
 <v t="ekr.20220525082933.290"><vh>State.semantic_analysis_pass1</vh></v>
 <v t="ekr.20220525082933.291"><vh>State.add_dependency</vh></v>
 <v t="ekr.20220525082933.292"><vh>State.suppress_dependency</vh></v>
-<v t="ekr.20220525082933.293"><vh>State.compute_dependencies</vh></v>
+<v t="ekr.20220525082933.293"><vh>State.compute_dependencies (special case for 'builtins')</vh></v>
 <v t="ekr.20220525082933.294"><vh>State.type_check_first_pass</vh></v>
 <v t="ekr.20220525082933.295"><vh>State.type_checker</vh></v>
 <v t="ekr.20220525082933.296"><vh>State.type_map</vh></v>
@@ -1953,6 +1959,7 @@
 <v t="ekr.20220525082933.308"><vh>State.generate_unused_ignore_notes</vh></v>
 <v t="ekr.20220525082933.309"><vh>State.generate_ignore_without_code_notes</vh></v>
 </v>
+</v>
 <v t="ekr.20220525082933.310"><vh>Module import and diagnostic glue</vh></v>
 <v t="ekr.20220525082933.311"><vh>find_module_and_diagnose</vh></v>
 <v t="ekr.20220525082933.312"><vh>exist_added_packages</vh></v>
@@ -1964,18 +1971,18 @@
 <v t="ekr.20220525082933.318"><vh>skipping_ancestor</vh></v>
 <v t="ekr.20220525082933.319"><vh>log_configuration</vh></v>
 <v t="ekr.20220525082933.320"><vh>The driver</vh></v>
-<v t="ekr.20220525082933.321"><vh>dispatch</vh></v>
+<v t="ekr.20220525082933.321"><vh>dispatch (returns graph)</vh></v>
 <v t="ekr.20220525082933.322"><vh>class NodeInfo</vh>
 <v t="ekr.20220525082933.323"><vh>NodeInfo.__init__</vh></v>
 <v t="ekr.20220525082933.324"><vh>NodeInfo.dumps</vh></v>
 </v>
 <v t="ekr.20220525082933.325"><vh>dump_timing_stats</vh></v>
 <v t="ekr.20220525082933.326"><vh>dump_graph</vh></v>
-<v t="ekr.20220525082933.327"><vh>load_graph</vh></v>
+<v t="ekr.20220525082933.327"><vh>load_graph (build.py) (creates graph with many modules)</vh></v>
 <v t="ekr.20220525082933.328"><vh>process_graph</vh></v>
 <v t="ekr.20220525082933.329"><vh>order_ascc</vh></v>
 <v t="ekr.20220525082933.330"><vh>process_fresh_modules</vh></v>
-<v t="ekr.20220525082933.331"><vh>process_stale_scc</vh></v>
+<v t="ekr.20220525082933.331"><vh>process_stale_scc (calls graph[id].parse_file)</vh></v>
 <v t="ekr.20220525082933.332"><vh>sorted_components</vh></v>
 <v t="ekr.20220525082933.333"><vh>deps_filtered</vh></v>
 <v t="ekr.20220525082933.334"><vh>strongly_connected_components</vh>
@@ -2127,9 +2134,9 @@
 <v t="ekr.20220525082934.875"><vh>Context.get_line</vh></v>
 <v t="ekr.20220525082934.876"><vh>Context.get_column</vh></v>
 </v>
-<v t="ekr.20220525082934.877"><vh>if TYPE_CHECKING:</vh></v>
+<v t="ekr.20220525082934.877"><vh>--- constants</vh></v>
 <v t="ekr.20220525082934.878"><vh>get_nongen_builtins</vh></v>
-<v t="ekr.20220525082934.879"><vh>RUNTIME_PROTOCOL_DECOS: Final = (</vh></v>
+<v t="ekr.20220609053603.1"><vh>Base classes</vh>
 <v t="ekr.20220525082934.880"><vh>class Node (abstract, but defines __str__)</vh>
 <v t="ekr.20220525082934.881"><vh>Node.__str__</vh></v>
 <v t="ekr.20220525082934.882"><vh>Node.accept</vh></v>
@@ -2141,15 +2148,13 @@
 <v t="ekr.20220525082934.886"><vh>Expression.accept</vh></v>
 </v>
 <v t="ekr.20220525082934.887"><vh>class FakeExpression</vh></v>
-<v t="ekr.20220525082934.888"><vh>TODO:</vh></v>
 <v t="ekr.20220525082934.889"><vh>class SymbolNode (abstract)</vh>
 <v t="ekr.20220525082934.890"><vh>SymbolNode.name</vh></v>
 <v t="ekr.20220525082934.891"><vh>SymbolNode.fullname</vh></v>
 <v t="ekr.20220525082934.892"><vh>SymbolNode.serialize</vh></v>
 <v t="ekr.20220525082934.893"><vh>SymbolNode.deserialize</vh></v>
 </v>
-<v t="ekr.20220525082934.894"><vh>Items: fullname, related symbol table node, surrounding type (if any)</vh></v>
-<v t="ekr.20220525082934.895"><vh>class MypyFile</vh>
+<v t="ekr.20220525082934.895"><vh>class MypyFile(SymbolNode) (the AST of one file)</vh>
 <v t="ekr.20220525082934.896"><vh>MypyFile.__init__</vh></v>
 <v t="ekr.20220525082934.897"><vh>MypyFile.local_definitions</vh></v>
 <v t="ekr.20220525082934.898"><vh>MypyFile.name</vh></v>
@@ -2183,13 +2188,11 @@
 <v t="ekr.20220525082934.921"><vh>ImportedName.deserialize</vh></v>
 <v t="ekr.20220525082934.922"><vh>ImportedName.__str__</vh></v>
 </v>
-<v t="ekr.20220525082934.923"><vh>FUNCBASE_FLAGS: Final = ["is_property", "is_class", "is_static", "is_final"]</vh></v>
 <v t="ekr.20220525082934.924"><vh>class FuncBase</vh>
 <v t="ekr.20220525082934.925"><vh>FuncBase.__init__</vh></v>
 <v t="ekr.20220525082934.926"><vh>FuncBase.name</vh></v>
 <v t="ekr.20220525082934.927"><vh>FuncBase.fullname</vh></v>
 </v>
-<v t="ekr.20220525082934.928"><vh>OverloadPart: _TypeAlias = Union['FuncDef', 'Decorator']</vh></v>
 <v t="ekr.20220525082934.929"><vh>class OverloadedFuncDef</vh>
 <v t="ekr.20220525082934.930"><vh>OverloadedFuncDef.__init__</vh></v>
 <v t="ekr.20220525082934.931"><vh>OverloadedFuncDef.name</vh></v>
@@ -2201,14 +2204,12 @@
 <v t="ekr.20220525082934.936"><vh>Argument.__init__</vh></v>
 <v t="ekr.20220525082934.937"><vh>Argument.set_line</vh></v>
 </v>
-<v t="ekr.20220525082934.938"><vh>FUNCITEM_FLAGS: Final = FUNCBASE_FLAGS + [</vh></v>
 <v t="ekr.20220525082934.939"><vh>class FuncItem</vh>
 <v t="ekr.20220525082934.940"><vh>FuncItem.__init__</vh></v>
 <v t="ekr.20220525082934.941"><vh>FuncItem.max_fixed_argc</vh></v>
 <v t="ekr.20220525082934.942"><vh>FuncItem.set_line</vh></v>
 <v t="ekr.20220525082934.943"><vh>FuncItem.is_dynamic</vh></v>
 </v>
-<v t="ekr.20220525082934.944"><vh>FUNCDEF_FLAGS: Final = FUNCITEM_FLAGS + [</vh></v>
 <v t="ekr.20220525082934.945"><vh>class FuncDef(FuncItem, SymbolNode, Statement) (nodes.py)</vh>
 <v t="ekr.20220525082934.946"><vh>FuncDef.__init__</vh></v>
 <v t="ekr.20220525082934.947"><vh>FuncDef.name</vh></v>
@@ -2216,7 +2217,6 @@
 <v t="ekr.20220525082934.949"><vh>FuncDef.serialize</vh></v>
 <v t="ekr.20220525082934.950"><vh>FuncDef.deserialize</vh></v>
 </v>
-<v t="ekr.20220525082934.951"><vh>All types that are both SymbolNodes and FuncBases. See the FuncBase</vh></v>
 <v t="ekr.20220525082934.952"><vh>class Decorator</vh>
 <v t="ekr.20220525082934.953"><vh>Decorator.__init__</vh></v>
 <v t="ekr.20220525082934.954"><vh>Decorator.name</vh></v>
@@ -2228,7 +2228,6 @@
 <v t="ekr.20220525082934.960"><vh>Decorator.serialize</vh></v>
 <v t="ekr.20220525082934.961"><vh>Decorator.deserialize</vh></v>
 </v>
-<v t="ekr.20220525082934.962"><vh>VAR_FLAGS: Final = [</vh></v>
 <v t="ekr.20220525082934.963"><vh>class Var</vh>
 <v t="ekr.20220525082934.964"><vh>Var.__init__</vh></v>
 <v t="ekr.20220525082934.965"><vh>Var.name</vh></v>
@@ -2252,11 +2251,12 @@
 <v t="ekr.20220525082934.980"><vh>NonlocalDecl.__init__</vh></v>
 <v t="ekr.20220525082934.981"><vh>NonlocalDecl.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.982"><vh>class Block</vh>
+<v t="ekr.20220525082934.982"><vh>class Block (Statement)</vh>
 <v t="ekr.20220525082934.983"><vh>Block.__init__</vh></v>
 <v t="ekr.20220525082934.984"><vh>Block.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.985"><vh>Statements</vh></v>
+</v>
+<v t="ekr.20220525082934.985"><vh>Statements</vh>
 <v t="ekr.20220525082934.986"><vh>class ExpressionStmt</vh>
 <v t="ekr.20220525082934.987"><vh>ExpressionStmt.__init__</vh></v>
 <v t="ekr.20220525082934.988"><vh>ExpressionStmt.accept</vh></v>
@@ -2320,12 +2320,13 @@
 <v t="ekr.20220525082934.1032"><vh>ExecStmt.__init__</vh></v>
 <v t="ekr.20220525082934.1033"><vh>ExecStmt.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.1034"><vh>Expressions</vh></v>
+</v>
+<v t="ekr.20220525082934.1034"><vh>Expressions</vh>
 <v t="ekr.20220525082934.1035"><vh>class IntExpr</vh>
 <v t="ekr.20220525082934.1036"><vh>IntExpr.__init__</vh></v>
 <v t="ekr.20220525082934.1037"><vh>IntExpr.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.1038"><vh>How mypy uses StrExpr, BytesExpr, and UnicodeExpr:</vh></v>
+<v t="ekr.20220525082934.1038"><vh>How mypy uses StrExpr, BytesExpr, and UnicodeExpr</vh></v>
 <v t="ekr.20220525082934.1039"><vh>class StrExpr</vh>
 <v t="ekr.20220525082934.1040"><vh>StrExpr.__init__</vh></v>
 <v t="ekr.20220525082934.1041"><vh>StrExpr.accept</vh></v>
@@ -2370,7 +2371,6 @@
 <v t="ekr.20220525082934.1071"><vh>ArgKind.is_optional</vh></v>
 <v t="ekr.20220525082934.1072"><vh>ArgKind.is_star</vh></v>
 </v>
-<v t="ekr.20220525082934.1073"><vh>ARG_POS: Final = ArgKind.ARG_POS</vh></v>
 <v t="ekr.20220525082934.1074"><vh>class CallExpr</vh>
 <v t="ekr.20220525082934.1075"><vh>CallExpr.__init__</vh></v>
 <v t="ekr.20220525082934.1076"><vh>CallExpr.accept</vh></v>
@@ -2474,7 +2474,7 @@
 <v t="ekr.20220525082934.1150"><vh>TypeApplication.__init__</vh></v>
 <v t="ekr.20220525082934.1151"><vh>TypeApplication.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.1152"><vh>Variance of a type variable. For example, T in the definition of</vh></v>
+<v t="ekr.20220525082934.1152"><vh>Variance of a type variable</vh></v>
 <v t="ekr.20220525082934.1153"><vh>class TypeVarLikeExpr</vh>
 <v t="ekr.20220525082934.1154"><vh>TypeVarLikeExpr.__init__</vh></v>
 <v t="ekr.20220525082934.1155"><vh>TypeVarLikeExpr.name</vh></v>
@@ -2524,7 +2524,8 @@
 <v t="ekr.20220525082934.1189"><vh>AwaitExpr.__init__</vh></v>
 <v t="ekr.20220525082934.1190"><vh>AwaitExpr.accept</vh></v>
 </v>
-<v t="ekr.20220525082934.1191"><vh>Constants</vh></v>
+</v>
+<v t="ekr.20220525082934.1191"><vh>Constants</vh>
 <v t="ekr.20220525082934.1192"><vh>class TempNode</vh>
 <v t="ekr.20220525082934.1193"><vh>TempNode.__init__</vh></v>
 <v t="ekr.20220525082934.1194"><vh>TempNode.__repr__</vh></v>
@@ -2557,7 +2558,6 @@
 <v t="ekr.20220525082934.1219"><vh>FakeInfo.__init__</vh></v>
 <v t="ekr.20220525082934.1220"><vh>FakeInfo.__getattribute__</vh></v>
 </v>
-<v t="ekr.20220525082934.1221"><vh>VAR_NO_INFO: Final[TypeInfo] = FakeInfo("Var is lacking info")</vh></v>
 <v t="ekr.20220525082934.1222"><vh>class TypeAlias (has accept method)</vh>
 <v t="ekr.20220525082934.1223"><vh>TypeAlias.__init__</vh></v>
 <v t="ekr.20220525082934.1224"><vh>TypeAlias.name</vh></v>
@@ -2597,6 +2597,7 @@
 <v t="ekr.20220525082934.1254"><vh>is_class_var</vh></v>
 <v t="ekr.20220525082934.1255"><vh>is_final_node</vh></v>
 <v t="ekr.20220525082934.1256"><vh>local_definitions</vh></v>
+</v>
 </v>
 <v t="ekr.20220525082934.1273"><vh>@clean patterns.py</vh>
 <v t="ekr.20220525082934.1274"><vh>class Pattern</vh>
@@ -3062,7 +3063,7 @@
 <v t="ekr.20220525082936.229"><vh>PatternVisitor.visit_mapping_pattern</vh></v>
 <v t="ekr.20220525082936.230"><vh>PatternVisitor.visit_class_pattern</vh></v>
 </v>
-<v t="ekr.20220525082936.231"><vh>class NodeVisitor</vh>
+<v t="ekr.20220525082936.231"><vh>class NodeVisitor (empty base class)</vh>
 <v t="ekr.20220525082936.232"><vh>NodeVisitor.visit_mypy_file</vh></v>
 <v t="ekr.20220525082936.233"><vh>NodeVisitor.visit_var</vh></v>
 <v t="ekr.20220525082936.234"><vh>NodeVisitor.Module structure</vh></v>
@@ -5681,7 +5682,7 @@
 <v t="ekr.20220525082936.776"><vh>class NormalUpdate</vh></v>
 <v t="ekr.20220525082936.777"><vh>class BlockedUpdate</vh></v>
 <v t="ekr.20220525082936.778"><vh>UpdateResult = Union[NormalUpdate, BlockedUpdate]</vh></v>
-<v t="ekr.20220525082936.779"><vh>update_module_isolated</vh>
+<v t="ekr.20220525082936.779"><vh>update_module_isolated (calls State.parse_file)</vh>
 <v t="ekr.20220525082936.780"><vh>restore</vh></v>
 </v>
 <v t="ekr.20220525082936.781"><vh>find_relative_leaf_module</vh></v>
@@ -6530,26 +6531,19 @@
 <v t="ekr.20220603080610.1"><vh>@clean ekr_test.py</vh></v>
 </v>
 <v t="ekr.20220320050830.1"><vh>Recent files</vh>
-<v t="ekr.20220525082935.1316"></v>
 <v t="ekr.20220603080610.1"></v>
 <v t="ekr.20220525082934.1580"></v>
 <v t="ekr.20220525082936.4"></v>
+<v t="ekr.20220525082935.1175"></v>
+<v t="ekr.20220525082935.1316"></v>
+<v t="ekr.20220525082934.871"></v>
 </v>
+<v t="ekr.20220603080610.1"></v>
 <v t="ekr.20220320050857.1"><vh>=== #12352: auto annotations</vh>
 <v t="ekr.20220601070439.1"><vh>@button test-all</vh></v>
 <v t="ekr.20220531174305.1"><vh>@button test-one</vh></v>
 <v t="ekr.20220604084307.1"><vh>--- changed</vh>
 <v t="ekr.20220525082935.1166"></v>
-</v>
-<v t="ekr.20220603103251.1"><vh>--- main calling sequence</vh>
-<v t="ekr.20220525082934.504"></v>
-<v t="ekr.20220525082934.505"></v>
-<v t="ekr.20220525082933.217"></v>
-<v t="ekr.20220525082933.219"></v>
-<v t="ekr.20220525082933.321"></v>
-<v t="ekr.20220525082933.328"></v>
-<v t="ekr.20220525082933.331"></v>
-<v t="ekr.20220525082935.309"></v>
 </v>
 <v t="ekr.20220605050554.1"><vh>--- searches</vh>
 <v t="ekr.20220605045416.1"><vh>--- Found 125:def accept</vh>
@@ -7111,10 +7105,81 @@
 <v t="ekr.20220525082935.1251"></v>
 <v t="ekr.20220525082936.17"></v>
 </v>
+<v t="ekr.20220609055746.1"><vh>Found 24:trait</vh>
+<v t="ekr.20220525082934.871"></v>
+<v t="ekr.20220525082934.1273"></v>
+<v t="ekr.20220525082934.1300"></v>
+<v t="ekr.20220525082935.364"></v>
+<v t="ekr.20220525082936.4"></v>
+<v t="ekr.20220525082935.1670"></v>
+<v t="ekr.20220525082936.143"></v>
+<v t="ekr.20220525082934.1309"></v>
+<v t="ekr.20220525082934.885"></v>
+<v t="ekr.20220525082936.144"></v>
+<v t="ekr.20220525082934.887"></v>
+<v t="ekr.20220525082936.231"></v>
+<v t="ekr.20220525082934.1274"></v>
+<v t="ekr.20220525082936.222"></v>
+<v t="ekr.20220525082935.365"></v>
+<v t="ekr.20220525082935.377"></v>
+<v t="ekr.20220525082934.1313"></v>
+<v t="ekr.20220525082934.883"></v>
+<v t="ekr.20220525082936.191"></v>
+<v t="ekr.20220525082934.889"></v>
+<v t="ekr.20220525082936.27"></v>
+<v t="ekr.20220525082934.1301"></v>
+<v t="ekr.20220525082935.1671"></v>
+<v t="ekr.20220525082936.5"></v>
+</v>
+<v t="ekr.20220609102534.1"><vh>Found 46:_fullname\s*=</vh>
+<v t="ekr.20220525082936.391"></v>
+<v t="ekr.20220525082936.389"></v>
+<v t="ekr.20220525082936.403"></v>
+<v t="ekr.20220525082936.402"></v>
+<v t="ekr.20220525082936.435"></v>
+<v t="ekr.20220525082936.432"></v>
+<v t="ekr.20220525082936.433"></v>
+<v t="ekr.20220525082935.298"></v>
+<v t="ekr.20220525082934.950"></v>
+<v t="ekr.20220525082935.1241"></v>
+<v t="ekr.20220525082934.917"></v>
+<v t="ekr.20220525082934.904"></v>
+<v t="ekr.20220525082935.334"></v>
+<v t="ekr.20220525082935.344"></v>
+<v t="ekr.20220525082934.934"></v>
+<v t="ekr.20220525082934.1230"></v>
+<v t="ekr.20220525082935.223"></v>
+<v t="ekr.20220525082935.33"></v>
+<v t="ekr.20220525082935.13"></v>
+<v t="ekr.20220525082935.221"></v>
+<v t="ekr.20220525082935.225"></v>
+<v t="ekr.20220525082935.107"></v>
+<v t="ekr.20220525082935.26"></v>
+<v t="ekr.20220525082935.207"></v>
+<v t="ekr.20220525082935.204"></v>
+<v t="ekr.20220525082935.206"></v>
+<v t="ekr.20220525082935.104"></v>
+<v t="ekr.20220525082935.9"></v>
+<v t="ekr.20220525082935.56"></v>
+<v t="ekr.20220525082935.38"></v>
+<v t="ekr.20220525082935.20"></v>
+<v t="ekr.20220525082935.1068"></v>
+<v t="ekr.20220525082935.1063"></v>
+<v t="ekr.20220525082935.1071"></v>
+<v t="ekr.20220525082935.1077"></v>
+<v t="ekr.20220525082934.1223"></v>
+<v t="ekr.20220525082933.491"></v>
+<v t="ekr.20220525082934.1197"></v>
+<v t="ekr.20220525082934.1210"></v>
+<v t="ekr.20220525082934.1217"></v>
+<v t="ekr.20220525082934.1154"></v>
+<v t="ekr.20220525082934.964"></v>
+<v t="ekr.20220525082934.969"></v>
+</v>
+</v>
 <v t="ekr.20220606101531.1"><vh>--- Node.__str__ and Type.__repr__</vh>
 <v t="ekr.20220525082934.881"></v>
 <v t="ekr.20220525082935.1324"></v>
-</v>
 </v>
 <v t="ekr.20220603081942.1"><vh>--- ref</vh>
 <v t="ekr.20220604115701.1"><vh>--- type-related classes</vh>
@@ -7171,12 +7236,7 @@
 <v t="ekr.20220607072154.1"><vh>traces</vh></v>
 <v t="ekr.20220607125524.1"><vh>mypy command-line</vh></v>
 </v>
-</v>
-<v t="ekr.20220606072622.1"><vh>--- recent</vh>
-<v t="ekr.20220525082935.1478"></v>
-<v t="ekr.20220606095318.1"><vh>LeoGlobals.callers</vh></v>
-<v t="ekr.20220525082935.1476"></v>
-<v t="ekr.20220525082936.34"></v>
+<v t="ekr.20220606095318.1"><vh>COPY: LeoGlobals.callers</vh></v>
 <v t="ekr.20220606101206.1"><vh>--- Hierarchy for FuncDef</vh>
 <v t="ekr.20220525082934.880"></v>
 <v t="ekr.20220525082934.883"></v>
@@ -7184,17 +7244,65 @@
 <v t="ekr.20220525082934.939"></v>
 <v t="ekr.20220525082934.945"></v>
 </v>
+<v t="ekr.20220603103251.1"><vh>--- main calling sequence</vh>
+<v t="ekr.20220525082934.504"></v>
+<v t="ekr.20220525082934.505"></v>
+<v t="ekr.20220525082933.217"></v>
+<v t="ekr.20220525082933.219"></v>
+<v t="ekr.20220525082933.321"></v>
+<v t="ekr.20220525082933.327"></v>
+<v t="ekr.20220525082933.328"></v>
+<v t="ekr.20220525082933.331"></v>
+<v t="ekr.20220525082935.309"></v>
+<v t="ekr.20220525082933.321"></v>
+<v t="ekr.20220525082933.327"></v>
+<v t="ekr.20220525082933.293"></v>
+</v>
+</v>
+<v t="ekr.20220608151139.1"><vh>--- classes</vh>
+<v t="ekr.20220525082934.178"></v>
+<v t="ekr.20220525082933.232"></v>
+<v t="ekr.20220525082935.1476"></v>
+<v t="ekr.20220525082934.945"></v>
+<v t="ekr.20220525082934.895"></v>
+<v t="ekr.20220525082933.274"></v>
+<v t="ekr.20220525082936.34"></v>
+</v>
+<v t="ekr.20220609060828.1"><vh>--- transportation ***</vh>
+<v t="ekr.20220609051426.1"><vh> dir(defn)</vh></v>
+<v t="ekr.20220609074321.1"><vh>--- methods that know manager</vh>
+<v t="ekr.20220525082933.219"></v>
+<v t="ekr.20220525082933.321"></v>
+<v t="ekr.20220525082933.327"></v>
+</v>
+<v t="ekr.20220609085156.1"><vh>--- SA.cur_mod_id is the current module</vh>
+<v t="ekr.20220525082935.236"></v>
+<v t="ekr.20220525082933.241"></v>
+<v t="ekr.20220525082934.925"></v>
+<v t="ekr.20220525082935.717"></v>
+<v t="ekr.20220525082935.20"></v>
+</v>
+<v t="ekr.20220609154921.1"><vh>--- paresing</vh>
+<v t="ekr.20220525082933.241"></v>
+<v t="ekr.20220525082934.1272"></v>
+<v t="ekr.20220525082934.176"></v>
+<v t="ekr.20220525082934.35"></v>
+<v t="ekr.20220525082935.717"></v>
+<v t="ekr.20220609061259.1"><vh>Found 5:parse_file</vh>
+<v t="ekr.20220525082933.241"></v>
+<v t="ekr.20220525082933.331"></v>
+<v t="ekr.20220525082933.275"></v>
+<v t="ekr.20220525082933.288"></v>
+<v t="ekr.20220525082936.779"></v>
+</v>
+</v>
+</v>
+<v t="ekr.20220606072622.1"><vh>--- recent</vh></v>
+<v t="ekr.20220525082935.78"></v>
+<v t="ekr.20220525082935.1"></v>
+<v t="ekr.20220525082935.95"></v>
 <v t="ekr.20220525082935.21"></v>
 <v t="ekr.20220525082935.1202"></v>
-<v t="ekr.20220525082935.1175"></v>
-<v t="ekr.20220608083213.1"><vh>Found 4:.type_analyzer</vh>
-<v t="ekr.20220525082935.257"></v>
-<v t="ekr.20220525082935.259"></v>
-<v t="ekr.20220525082935.21"></v>
-<v t="ekr.20220525082935.35"></v>
-<v t="ekr.20220525082935.24"></v>
-</v>
-</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20220224065603.3">@language ini
@@ -7259,26 +7367,21 @@ ignore_missing_imports  = True</t>
 <t tx="ekr.20220320050830.1"></t>
 <t tx="ekr.20220320050857.1">@language rest
 
+commands: cd-m, m-leo, m-push, m-test
 https://github.com/python/mypy/issues/12352
 PR: https://github.com/python/mypy/pull/12918
-
-implementation overview: https://github.com/python/mypy/wiki/Implementation-Overview
 discussions: https://github.com/edreamleo/ekr-mypy/discussions/
+implementation: https://github.com/python/mypy/wiki/Implementation-Overview
 
-*** Why so many dunder methods? They probably don't come from the sources.
+- put assignment statements in ekr_test.py
 
-*** Use command-line options instead of .mypy.init
+- The PR will likely cause *many* unit tests to fail.
 
-- Comment: no real need to add class names to g.callers, except for __init__?
-  (Sherlock does do that)
+*** Move discussions to leoeditor: mypy chronicles.
+    - Now I can prove that searching, not memory, is the way to expertise.
+    - Struggle helps the memory!
 
-commands:
-- cd-mypy
-- mypy-leo
-- mypy-test
-
-@language python
-</t>
+@language python</t>
 <t tx="ekr.20220525082746.1">'''Recursively import all python files in a directory and clean the result.'''
 @tabwidth -4 # For a better match.
 g.cls()
@@ -11686,6 +11789,8 @@ class BuildResult:
         reports = Reports(data_dir, options.report_dirs)
 
     source_set = BuildSourceSet(sources)
+    ### print('_build: source_set.source_modules', source_set.source_modules)
+    ### print('_build: source_set.source_paths', source_set.source_paths)
     cached_read = fscache.read
     errors = Errors(options.show_error_context,
                     options.show_column_numbers,
@@ -14520,9 +14625,15 @@ if __name__ == '__main__':
              stdout: TextIO,
              ) -&gt; Graph:
     log_configuration(manager, sources)
+    
+    ### print('dispatch: sources', sources)  ### Only one file.
 
     t0 = time.time()
     graph = load_graph(sources, manager)
+    
+    if 0:  ###
+        import pprint
+        print('dispatch: graph', pprint.pformat(graph))  ### Many modules.
 
     # This is a kind of unfortunate hack to work around some of fine-grained's
     # fragility: if we have loaded less than 50% of the specified files from
@@ -14747,6 +14858,9 @@ if __name__ == '__main__':
         #   (since direct dependencies reflect the imports found in the source)
         #   but A's cached *indirect* dependency on C is wrong.
         dependencies = [dep for dep in st.dependencies if st.priorities.get(dep) != PRI_INDIRECT]
+        
+        ### print('load_graph: dependencies:', dependencies)
+
         if not manager.use_fine_grained_cache():
             # TODO: Ideally we could skip here modules that appeared in st.suppressed
             # because they are not in build with `follow-imports=skip`.
@@ -14803,6 +14917,8 @@ if __name__ == '__main__':
                         seen_files[newst_path] = newst
 
                     assert newst.id not in graph, newst.id
+                    ### ancestor_s = st.path.replace('c:\\repos\\ekr-mypy\\mypy\\','')
+                    ### print(f"load_graph: NEW dependency: {dep:&gt;25} from {ancestor_s}")
                     graph[newst.id] = newst
                     new.append(newst)
             if dep in graph and dep in st.suppressed_set:
@@ -15031,6 +15147,7 @@ if __name__ == '__main__':
     Exception: If quick_and_dirty is set, use the cache for fresh modules.
     """
     stale = scc
+    ### print('process_stale_scc: scc', scc)  ###
     for id in stale:
         # We may already have parsed the module, or not.
         # If the former, parse_file() is a no-op.
@@ -34029,6 +34146,14 @@ class ArgKind(Enum):
     ARG_NAMED_OPT = 5
 
     @others
+ARG_POS: Final = ArgKind.ARG_POS
+ARG_OPT: Final = ArgKind.ARG_OPT
+ARG_STAR: Final = ArgKind.ARG_STAR
+ARG_NAMED: Final = ArgKind.ARG_NAMED
+ARG_STAR2: Final = ArgKind.ARG_STAR2
+ARG_NAMED_OPT: Final = ArgKind.ARG_NAMED_OPT
+
+
 </t>
 <t tx="ekr.20220525082934.1068">def is_positional(self, star: bool = False) -&gt; bool:
     return (
@@ -34062,15 +34187,6 @@ def visit_SetComp(self, n: ast3.SetComp) -&gt; SetComprehension:
 </t>
 <t tx="ekr.20220525082934.1072">def is_star(self) -&gt; bool:
     return self == ARG_STAR or self == ARG_STAR2
-
-
-</t>
-<t tx="ekr.20220525082934.1073">ARG_POS: Final = ArgKind.ARG_POS
-ARG_OPT: Final = ArgKind.ARG_OPT
-ARG_STAR: Final = ArgKind.ARG_STAR
-ARG_NAMED: Final = ArgKind.ARG_NAMED
-ARG_STAR2: Final = ArgKind.ARG_STAR2
-ARG_NAMED_OPT: Final = ArgKind.ARG_NAMED_OPT
 
 
 </t>
@@ -35675,6 +35791,11 @@ def deserialize(cls, data: JsonDict) -&gt; 'TypeInfo':
     __slots__ = ('msg',)
 
     @others
+VAR_NO_INFO: Final[TypeInfo] = FakeInfo("Var is lacking info")
+CLASSDEF_NO_INFO: Final[TypeInfo] = FakeInfo("ClassDef is lacking info")
+FUNC_NO_INFO: Final[TypeInfo] = FakeInfo("FuncBase for non-methods lack info")
+
+
 </t>
 <t tx="ekr.20220525082934.1219"># types.py defines a single instance of this class, called types.NOT_READY.
 # This instance is used as a temporary placeholder in the process of de-serialization
@@ -35711,12 +35832,6 @@ def visit_Ellipsis(self, n: ast3_Ellipsis) -&gt; EllipsisExpr:
     if attr == '__class__':
         return object.__getattribute__(self, attr)
     raise AssertionError(object.__getattribute__(self, 'msg'))
-
-
-</t>
-<t tx="ekr.20220525082934.1221">VAR_NO_INFO: Final[TypeInfo] = FakeInfo("Var is lacking info")
-CLASSDEF_NO_INFO: Final[TypeInfo] = FakeInfo("ClassDef is lacking info")
-FUNC_NO_INFO: Final[TypeInfo] = FakeInfo("FuncBase for non-methods lack info")
 
 
 </t>
@@ -41231,6 +41346,7 @@ def visit_List(self, n: ast3.List) -&gt; Type:
 <t tx="ekr.20220525082934.175">@path C:/Repos/ekr-mypy/mypy/
 @language python
 @tabwidth -4
+@nopyflakes
 """
 This file is nearly identical to `fastparse.py`, except that it works with a Python 2
 AST instead of a Python 3 AST.
@@ -43764,6 +43880,7 @@ FileData = NamedTuple('FileData', [('st_mtime', float),
 <t tx="ekr.20220525082934.34">@path C:/Repos/ekr-mypy/mypy/
 @language python
 @tabwidth -4
+@nopyflakes
 from mypy.util import unnamed_function
 import copy
 import re
@@ -46114,6 +46231,8 @@ MEM_PROFILE: Final = False  # If True, dump memory profile
     formatter = util.FancyFormatter(stdout, stderr, options.show_error_codes)
 
     messages = []
+    
+    ### print('run_build sources:', sources) # Just one file.
 
     @others
     serious = False
@@ -53604,14 +53723,6 @@ del _nongen_builtins['builtins.str']
 
 
 </t>
-<t tx="ekr.20220525082934.879">RUNTIME_PROTOCOL_DECOS: Final = (
-    "typing.runtime_checkable",
-    "typing_extensions.runtime",
-    "typing_extensions.runtime_checkable",
-)
-
-
-</t>
 <t tx="ekr.20220525082934.88"># Import(alias* names)
 def visit_Import(self, n: ast3.Import) -&gt; Import:
     names: List[Tuple[str, Optional[str]]] = []
@@ -53629,7 +53740,14 @@ def visit_Import(self, n: ast3.Import) -&gt; Import:
     return self.set_line(i, n)
 
 </t>
-<t tx="ekr.20220525082934.880">class Node(Context):
+<t tx="ekr.20220525082934.880">RUNTIME_PROTOCOL_DECOS: Final = (
+    "typing.runtime_checkable",
+    "typing_extensions.runtime",
+    "typing_extensions.runtime_checkable",
+)
+
+
+class Node(Context):
     """Common base class for all non-type parse tree nodes."""
 
     __slots__ = ()
@@ -53684,8 +53802,7 @@ class Expression(Node):
     __slots__ = ()
 
 
-</t>
-<t tx="ekr.20220525082934.888"># TODO:
+# TODO:
 # Lvalue = Union['NameExpr', 'MemberExpr', 'IndexExpr', 'SuperExpr', 'StarExpr'
 #                'TupleExpr']; see #1783.
 Lvalue: _TypeAlias = Expression
@@ -53699,6 +53816,11 @@ class SymbolNode(Node):
     __slots__ = ()
 
     @others
+
+# Items: fullname, related symbol table node, surrounding type (if any)
+Definition: _TypeAlias = Tuple[str, 'SymbolTableNode', Optional['TypeInfo']]
+
+
 </t>
 <t tx="ekr.20220525082934.89"># ImportFrom(identifier? module, alias* names, int? level)
 def visit_ImportFrom(self, n: ast3.ImportFrom) -&gt; ImportBase:
@@ -53738,12 +53860,6 @@ def deserialize(cls, data: JsonDict) -&gt; 'SymbolNode':
     if method is not None:
         return method(data)
     raise NotImplementedError(f'unexpected .class {classname}')
-
-
-</t>
-<t tx="ekr.20220525082934.894"># Items: fullname, related symbol table node, surrounding type (if any)
-Definition: _TypeAlias = Tuple[str, 'SymbolTableNode', Optional['TypeInfo']]
-
 
 </t>
 <t tx="ekr.20220525082934.895">class MypyFile(SymbolNode):
@@ -54028,11 +54144,10 @@ def deserialize(cls, data: JsonDict) -&gt; 'ImportedName':
 
 
 </t>
-<t tx="ekr.20220525082934.923">FUNCBASE_FLAGS: Final = ["is_property", "is_class", "is_static", "is_final"]
+<t tx="ekr.20220525082934.924">FUNCBASE_FLAGS: Final = ["is_property", "is_class", "is_static", "is_final"]
 
 
-</t>
-<t tx="ekr.20220525082934.924">class FuncBase(Node):
+class FuncBase(Node):
     """Abstract base class for function-like nodes.
 
     N.B: Although this has SymbolNode subclasses (FuncDef,
@@ -54088,11 +54203,10 @@ def fullname(self) -&gt; Bogus[str]:
 
 
 </t>
-<t tx="ekr.20220525082934.928">OverloadPart: _TypeAlias = Union['FuncDef', 'Decorator']
+<t tx="ekr.20220525082934.929">OverloadPart: _TypeAlias = Union['FuncDef', 'Decorator']
 
 
-</t>
-<t tx="ekr.20220525082934.929">class OverloadedFuncDef(FuncBase, SymbolNode, Statement):
+class OverloadedFuncDef(FuncBase, SymbolNode, Statement):
     """A logical node representing all the variants of a multi-declaration function.
 
     A multi-declaration function is often an @overload, but can also be a
@@ -54206,14 +54320,13 @@ def deserialize(cls, data: JsonDict) -&gt; 'OverloadedFuncDef':
 
 
 </t>
-<t tx="ekr.20220525082934.938">FUNCITEM_FLAGS: Final = FUNCBASE_FLAGS + [
+<t tx="ekr.20220525082934.939">FUNCITEM_FLAGS: Final = FUNCBASE_FLAGS + [
     'is_overload', 'is_generator', 'is_coroutine', 'is_async_generator',
     'is_awaitable_coroutine',
 ]
 
 
-</t>
-<t tx="ekr.20220525082934.939">class FuncItem(FuncBase):
+class FuncItem(FuncBase):
     """Base class for nodes usable as overloaded function items."""
 
     __slots__ = ('arguments',  # Note that can be None if deserialized (type is a lie!)
@@ -54286,13 +54399,12 @@ def visit_Break(self, n: ast3.Break) -&gt; BreakStmt:
 
 
 </t>
-<t tx="ekr.20220525082934.944">FUNCDEF_FLAGS: Final = FUNCITEM_FLAGS + [
+<t tx="ekr.20220525082934.945">FUNCDEF_FLAGS: Final = FUNCITEM_FLAGS + [
     'is_decorated', 'is_conditional', 'is_abstract',
 ]
 
 
-</t>
-<t tx="ekr.20220525082934.945">class FuncDef(FuncItem, SymbolNode, Statement):
+class FuncDef(FuncItem, SymbolNode, Statement):
     """Function definition.
 
     This is a non-lambda function defined using 'def'.
@@ -54306,6 +54418,11 @@ def visit_Break(self, n: ast3.Break) -&gt; BreakStmt:
                  )
 
     @others
+# All types that are both SymbolNodes and FuncBases. See the FuncBase
+# docstring for the rationale.
+SYMBOL_FUNCBASE_TYPES = (OverloadedFuncDef, FuncDef)
+
+
 </t>
 <t tx="ekr.20220525082934.946"># Note that all __init__ args must have default values
 def __init__(self,
@@ -54376,12 +54493,6 @@ def deserialize(cls, data: JsonDict) -&gt; 'FuncDef':
     del ret.max_pos
     del ret.min_args
     return ret
-
-
-</t>
-<t tx="ekr.20220525082934.951"># All types that are both SymbolNodes and FuncBases. See the FuncBase
-# docstring for the rationale.
-SYMBOL_FUNCBASE_TYPES = (OverloadedFuncDef, FuncDef)
 
 
 </t>
@@ -54464,7 +54575,7 @@ def deserialize(cls, data: JsonDict) -&gt; 'Decorator':
 
 
 </t>
-<t tx="ekr.20220525082934.962">VAR_FLAGS: Final = [
+<t tx="ekr.20220525082934.963">VAR_FLAGS: Final = [
     'is_self', 'is_initialized_in_class', 'is_staticmethod',
     'is_classmethod', 'is_property', 'is_settable_property', 'is_suppressed_import',
     'is_classvar', 'is_abstract_var', 'is_final', 'final_unset_in_class', 'final_set_in_init',
@@ -54473,8 +54584,7 @@ def deserialize(cls, data: JsonDict) -&gt; 'Decorator':
 ]
 
 
-</t>
-<t tx="ekr.20220525082934.963">class Var(SymbolNode):
+class Var(SymbolNode):
     """A variable.
 
     It can refer to global/local variable or a data attribute.
@@ -57677,19 +57787,19 @@ def visit_callable_type(self, t: CallableType, nested: bool = True) -&gt; Type:
     # Every Callable can bind its own type variables, if they're not in the outer scope
     
     # Hurray! t.definition is either None or is a FuncDef!
-    trace = t.definition and t.definition._name.startswith('f1_str')
-    trace_tag, verbose = 'visit_callable_type:', False
+
+    trace = t.definition and t.definition._name.startswith(('f1_str', 'f2_str'))
+    trace_tag = 'visit_callable_type:'
+    ###
+        # if trace and verbose:
+            # key = self.callers(60)
+            # if key not in self.ekr_call_set:
+                # print(f"{trace_tag}     callers: {key}\n")
+                # self.ekr_call_set.add(key)
     if trace:
-        import pprint
-    if trace and verbose:
-        key = self.callers(60)
-        if key not in self.ekr_call_set:
-            print(f"{trace_tag}     callers: {key}\n")
-            self.ekr_call_set.add(key)
-    elif trace:
         # callers: visit_func_def, analyze_func_def, visit_callable_type
+        # print(f"{trace_tag}     callers: {self.callers(3)}")
         print(f"{trace_tag}   func name: (t.definition._name) {t.definition._name}")
-        print(f"{trace_tag}     callers: {self.callers(3)}")
         print(f"{trace_tag}           t: {t.__class__.__name__} {t}")
 
     with self.tvar_scope_frame():
@@ -57705,23 +57815,14 @@ def visit_callable_type(self, t: CallableType, nested: bool = True) -&gt; Type:
                 self.anal_star_arg_type(t.arg_types[-1], ARG_STAR2, nested=nested),
             ]
         else:
-            if trace:
-                ###    import pdb ; pdb.set_trace()  ###
-                print(f"{trace_tag} t.arg_types: {t.arg_types}")
             arg_types = self.anal_array(t.arg_types, nested=nested)
             
-        # # # if trace:  ###
-            # # # if verbose:
-                # # # import pprint
-                # # # for i, z in enumerate(arg_types):
-                    # # # print(f"{trace_tag} arg_types {i}: {z}")
-                    # # # print(f"{trace_tag} arg_types {i}: {pprint.pformat(z.serialize())}")
-            # # # else:
-                # # # for i, z in enumerate(arg_types):
-                    # # # print(f"{trace_tag} arg_types {i}: {z}")
 
         ### The task: make ekr_a have a 'builtins.str' type.
-    
+        for i, arg in enumerate(arg_types):
+            if trace:
+                print(f"{trace_tag} arg_types {i}: {arg}")
+
         ret = t.copy_modified(arg_types=arg_types,
                               ret_type=self.anal_type(t.ret_type, nested=nested),
                               # If the fallback isn't filled in yet,
@@ -57735,8 +57836,6 @@ def visit_callable_type(self, t: CallableType, nested: bool = True) -&gt; Type:
         assert isinstance(ret, CallableType), ret.__class__.__name__ ###
         if trace:  ###
             print(f"{trace_tag}         ret: {ret}")
-            if verbose:
-                pprint.pprint(ret.serialize())
             print('')
     return ret
 
@@ -65179,12 +65278,20 @@ def file_context(self,
     return result
 
 </t>
-<t tx="ekr.20220525082935.21">def analyze_func_def(self, defn: FuncDef) -&gt; None:
+<t tx="ekr.20220525082935.21">&lt;&lt; define callers and callerName &gt;&gt;
 
-    key, trace_tag = defn._name, 'analyze_func_def:'
-    trace = key.startswith(('f1_', 'f2_'))
+def analyze_func_def(self, defn: FuncDef) -&gt; None:
+
+    trace_tag = 'analyze_func_def:'
+    module_name = self.cur_mod_id
+    trace = module_name.startswith('ekr')
     if trace:
-        print(f"{trace_tag} {key}")  # defn
+        ast = self.modules.get(module_name)
+        print(
+            f"{trace_tag}  defn._fullname: {defn._fullname}\n"
+            f"{trace_tag} self.cur_mod_id: {module_name}\n"
+            f"{trace_tag}  AST (MypyFile): {ast.__class__.__name__}\n"
+        )
 
     self.function_stack.append(defn)
     
@@ -65212,8 +65319,6 @@ def file_context(self,
             # class-level imported names and type variables are in scope.
             analyzer = self.type_analyzer()
             tag = self.track_incomplete_refs()
-            if trace:
-                print(f"{trace_tag} tag: {tag}\n")
             result = analyzer.visit_callable_type(defn.type, nested=False)
             # Don't store not ready types (including placeholders).
             if self.found_incomplete_ref(tag) or has_placeholder(result):
@@ -79909,6 +80014,12 @@ def with_export_types(self) -&gt; Iterator[None]:
 </t>
 <t tx="ekr.20220525082935.95">def process_type_annotation(self, s: AssignmentStmt) -&gt; None:
     """Analyze type annotation or infer simple literal type."""
+    trace_tag = 'process_type_annotation'
+    module_name = self.cur_mod_id
+    trace = module_name.startswith('ekr')  ###
+    if trace:
+        print(f"\n{trace_tag} Entry: {s.type} {s}")
+        
     if s.type:
         lvalue = s.lvalues[-1]
         allow_tuple_literal = isinstance(lvalue, TupleExpr)
@@ -79917,6 +80028,8 @@ def with_export_types(self) -&gt; Iterator[None]:
         if analyzed is None or has_placeholder(analyzed):
             return
         s.type = analyzed
+        if trace:
+            print(f"{trace_tag} Adjust: {lvalue} =&gt; {analyzed}") ###
         if (self.type and self.type.is_protocol and isinstance(lvalue, NameExpr) and
                 isinstance(s.rvalue, TempNode) and s.rvalue.no_rhs):
             if isinstance(lvalue.node, Var):
@@ -101249,6 +101362,9 @@ test-all
 
 """Stand-alone test file for issue #12352"""
 
+ekr_a: str="abc"
+ekr_b="abc"
+
 # Passes with legacy mypy.
 def f1_str_annotated(ekr_a: str="abc") -&gt; None:
     pass
@@ -101261,8 +101377,9 @@ def f2_str_not_annotated(ekr_b="abc") -&gt; None:
 <t tx="ekr.20220603103251.1">@language python
 @nowrap
 
-
-</t>
+# 
+# State.compute_dependencies: Every module implicitly depends on 'builtins'
+# 'c:\\repos\\ekr-mypy\\mypy\\typeshed\\stdlib\\builtins.pyi'</t>
 <t tx="ekr.20220603103653.1">Options({'allow_redefinition': False,
  'allow_untyped_globals': False,
  'always_false': [],
@@ -102234,11 +102351,6 @@ Environment variables:
   Define MYPYPATH for additional module search path entries.
   Define MYPY_CACHE_DIR to override configuration cache_dir path.</t>
 <t tx="ekr.20220607155619.1"></t>
-<t tx="ekr.20220608083213.1">@nosearch
-
-# Word, Ignore Case, Body
-
-# found 4 nodes</t>
 <t tx="ekr.20220608090604.1">@language ini
 [mypy]
 
@@ -102251,5 +102363,67 @@ check_untyped_defs = True
 strict_optional = True
 disallow_untyped_defs = True
 disallow_incomplete_defs = True</t>
+<t tx="ekr.20220608151139.1"></t>
+<t tx="ekr.20220609051426.1">[
+'__class__', '__delattr__', '__deletable__', '__dir__', '__doc__', '__eq__', '__format__',
+'__ge__', '__getattribute__', '__gt__', '__hash__', '__init__',
+'__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
+'__reduce__', '__reduce_ex__', '__repr__',
+'__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__',
+
+'_fullname', '_name',
+
+'accept', 'arg_kinds', 'arg_names', 'arguments', 'body', 'column', 'deserialize', 'end_line', 'expanded',
+'fullname',
+'get_column', 'get_line',
+'info',
+'is_abstract', 'is_async_generator', 'is_awaitable_coroutine',
+'is_class', 'is_conditional', 'is_coroutine', 'is_decorated', 'is_dynamic', 'is_final', 'is_generator',
+'is_overload', 'is_property', 'is_static',
+'line', 'max_fixed_argc', 'max_pos', 'min_args', 'name', 'original_def',
+'serialize', 'set_line', 'type', 'unanalyzed_type'
+]
+</t>
+<t tx="ekr.20220609053603.1"></t>
+<t tx="ekr.20220609055746.1">@nosearch
+
+# Word, Ignore Case, Head, Body
+
+# found 24 nodes</t>
+<t tx="ekr.20220609060828.1">@language rest
+@wrap
+@nosearch
+
+In venv/.../mypy_extensions.py:
+
+def trait(cls):
+    return cls
+
+BuildManager.modules:  self.modules: Dict[str, MypyFile] = {}
+
+defn._fullname is &lt;module&gt;.&lt;function&gt;
+
+*** SemanticAnalyzer.cur_mod_id is the current module
+
+@language python
+</t>
+<t tx="ekr.20220609061259.1">@nosearch
+
+# Word, Ignore Case, Head, Body
+
+# found 5 nodes</t>
+<t tx="ekr.20220609063006.1"></t>
+<t tx="ekr.20220609074321.1">@nosearch
+
+# Word, Ignore Case, Regex, Head, Body
+
+# found 4 nodes</t>
+<t tx="ekr.20220609085156.1"></t>
+<t tx="ekr.20220609102534.1">@nosearch
+
+# Word, Ignore Case, Regex, Head, Body
+
+# found 46 nodes</t>
+<t tx="ekr.20220609154921.1"></t>
 </tnodes>
 </leo_file>
