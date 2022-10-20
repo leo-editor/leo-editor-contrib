@@ -6,8 +6,8 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20221020070914.1"><vh>Python3.10/Lib/site-packages/coverage</vh>
-<v t="ekr.20221020070914.2"><vh>@clean annotate.py</vh>
+<v t="ekr.20221020070914.1"><vh>Python3.10/Lib/site-packages/coverage</vh></v>
+<v t="ekr.20221020070914.2"><vh>@@clean annotate.py</vh>
 <v t="ekr.20221020070914.3"><vh>class AnnotateReporter</vh>
 <v t="ekr.20221020070914.4"><vh>AnnotateReporter.__init__</vh></v>
 <v t="ekr.20221020070914.5"><vh>AnnotateReporter.blank_re = re.compile(r"/s*(#|$)")</vh></v>
@@ -15,10 +15,10 @@
 <v t="ekr.20221020070914.7"><vh>AnnotateReporter.annotate_file</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.8"><vh>@clean bytecode.py</vh>
+<v t="ekr.20221020070914.8"><vh>@@clean bytecode.py</vh>
 <v t="ekr.20221020070914.9"><vh>code_objects</vh></v>
 </v>
-<v t="ekr.20221020070914.10"><vh>@clean cmdline.py</vh>
+<v t="ekr.20221020070914.10"><vh>@@clean cmdline.py</vh>
 <v t="ekr.20221020070914.11"><vh>class Opts</vh></v>
 <v t="ekr.20221020070914.12"><vh>class CoverageOptionParser</vh>
 <v t="ekr.20221020070914.13"><vh>CoverageOptionParser.__init__</vh></v>
@@ -50,7 +50,7 @@
 <v t="ekr.20221020070914.35"><vh>HELP_TOPICS = {</vh></v>
 <v t="ekr.20221020070914.36"><vh>main</vh></v>
 </v>
-<v t="ekr.20221020070914.37"><vh>@clean collector.py</vh>
+<v t="ekr.20221020070914.37"><vh>@@clean collector.py</vh>
 <v t="ekr.20221020070914.38"><vh>class Collector</vh>
 <v t="ekr.20221020070914.39"><vh>Collector.__init__</vh></v>
 <v t="ekr.20221020070914.40"><vh>Collector.__repr__</vh></v>
@@ -74,7 +74,7 @@
 <v t="ekr.20221020070914.58"><vh>Collector.flush_data</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.59"><vh>@clean config.py</vh>
+<v t="ekr.20221020070914.59"><vh>@@clean config.py</vh>
 <v t="ekr.20221020070914.60"><vh>class HandyConfigParser</vh>
 <v t="ekr.20221020070914.61"><vh>HandyConfigParser.__init__</vh></v>
 <v t="ekr.20221020070914.62"><vh>HandyConfigParser.read</vh></v>
@@ -105,14 +105,14 @@
 <v t="ekr.20221020070914.85"><vh>config_files_to_try</vh></v>
 <v t="ekr.20221020070914.86"><vh>read_coverage_config</vh></v>
 </v>
-<v t="ekr.20221020070914.87"><vh>@clean context.py</vh>
+<v t="ekr.20221020070914.87"><vh>@@clean context.py</vh>
 <v t="ekr.20221020070914.88"><vh>combine_context_switchers</vh>
 <v t="ekr.20221020070914.89"><vh>should_start_context</vh></v>
 </v>
 <v t="ekr.20221020070914.90"><vh>should_start_context_test_function</vh></v>
 <v t="ekr.20221020070914.91"><vh>qualname_from_frame</vh></v>
 </v>
-<v t="ekr.20221020070914.92"><vh>@clean control.py</vh>
+<v t="ekr.20221020070914.92"><vh>@@clean control.py</vh>
 <v t="ekr.20221020070914.93"><vh>override_config</vh></v>
 <v t="ekr.20221020070914.94"><vh>DEFAULT_DATAFILE = DefaultValue("MISSING")</vh></v>
 <v t="ekr.20221020070914.95"><vh>class Coverage</vh>
@@ -162,14 +162,14 @@
 <v t="ekr.20221020070914.138"><vh>process_startup</vh></v>
 <v t="ekr.20221020070914.139"><vh>_prevent_sub_process_measurement</vh></v>
 </v>
-<v t="ekr.20221020070914.140"><vh>@clean data.py</vh>
+<v t="ekr.20221020070914.140"><vh>@@clean data.py</vh>
 <v t="ekr.20221020070914.141"><vh>line_counts</vh></v>
 <v t="ekr.20221020070914.142"><vh>add_data_to_hash</vh></v>
 <v t="ekr.20221020070914.143"><vh>combinable_files</vh></v>
 <v t="ekr.20221020070914.144"><vh>combine_parallel_data</vh></v>
 <v t="ekr.20221020070914.145"><vh>debug_data_file</vh></v>
 </v>
-<v t="ekr.20221020070914.146"><vh>@clean debug.py</vh>
+<v t="ekr.20221020070914.146"><vh>@@clean debug.py</vh>
 <v t="ekr.20221020070914.147"><vh>class DebugControl</vh>
 <v t="ekr.20221020070914.148"><vh>DebugControl.__init__</vh></v>
 <v t="ekr.20221020070914.149"><vh>DebugControl.__repr__</vh></v>
@@ -220,18 +220,18 @@
 </v>
 <v t="ekr.20221020070914.187"><vh>_clean_stack_line</vh></v>
 </v>
-<v t="ekr.20221020070914.188"><vh>@clean disposition.py</vh>
+<v t="ekr.20221020070914.188"><vh>@@clean disposition.py</vh>
 <v t="ekr.20221020070914.189"><vh>class FileDisposition</vh></v>
 <v t="ekr.20221020070914.190"><vh>FileDisposition "methods": FileDisposition is a pure value object, so it can</vh></v>
 <v t="ekr.20221020070914.191"><vh>disposition_init</vh></v>
 <v t="ekr.20221020070914.192"><vh>disposition_debug_msg</vh></v>
 </v>
-<v t="ekr.20221020070914.193"><vh>@clean env.py</vh>
+<v t="ekr.20221020070914.193"><vh>@@clean env.py</vh>
 <v t="ekr.20221020070914.194"><vh>class PYBEHAVIOR</vh></v>
 <v t="ekr.20221020070914.195"><vh>Coverage.py specifics.</vh></v>
 <v t="ekr.20221020070914.196"><vh>debug_info</vh></v>
 </v>
-<v t="ekr.20221020070914.197"><vh>@clean exceptions.py</vh>
+<v t="ekr.20221020070914.197"><vh>@@clean exceptions.py</vh>
 <v t="ekr.20221020070914.198"><vh>class _BaseCoverageException</vh></v>
 <v t="ekr.20221020070914.199"><vh>class CoverageException</vh></v>
 <v t="ekr.20221020070914.200"><vh>class ConfigError</vh></v>
@@ -245,7 +245,7 @@
 <v t="ekr.20221020070914.208"><vh>class _StopEverything</vh></v>
 <v t="ekr.20221020070914.209"><vh>class CoverageWarning</vh></v>
 </v>
-<v t="ekr.20221020070914.210"><vh>@clean execfile.py</vh>
+<v t="ekr.20221020070914.210"><vh>@@clean execfile.py</vh>
 <v t="ekr.20221020070914.211"><vh>class DummyLoader</vh></v>
 <v t="ekr.20221020070914.212"><vh>find_module</vh></v>
 <v t="ekr.20221020070914.213"><vh>class PyRunner</vh>
@@ -259,7 +259,7 @@
 <v t="ekr.20221020070914.220"><vh>make_code_from_py</vh></v>
 <v t="ekr.20221020070914.221"><vh>make_code_from_pyc</vh></v>
 </v>
-<v t="ekr.20221020070914.222"><vh>@clean files.py</vh>
+<v t="ekr.20221020070914.222"><vh>@@clean files.py</vh>
 <v t="ekr.20221020070914.223"><vh>set_relative_directory</vh></v>
 <v t="ekr.20221020070914.224"><vh>relative_directory</vh></v>
 <v t="ekr.20221020070914.225"><vh>relative_filename</vh></v>
@@ -300,7 +300,7 @@
 </v>
 <v t="ekr.20221020070914.257"><vh>find_python_files</vh></v>
 </v>
-<v t="ekr.20221020070914.258"><vh>@clean html.py</vh>
+<v t="ekr.20221020070914.258"><vh>@@clean html.py</vh>
 <v t="ekr.20221020070914.259"><vh>data_filename</vh></v>
 <v t="ekr.20221020070914.260"><vh>read_data</vh></v>
 <v t="ekr.20221020070914.261"><vh>write_html</vh></v>
@@ -334,7 +334,7 @@
 <v t="ekr.20221020070914.286"><vh>escape</vh></v>
 <v t="ekr.20221020070914.287"><vh>pair</vh></v>
 </v>
-<v t="ekr.20221020070914.288"><vh>@clean inorout.py</vh>
+<v t="ekr.20221020070914.288"><vh>@@clean inorout.py</vh>
 <v t="ekr.20221020070914.289"><vh>canonical_path</vh></v>
 <v t="ekr.20221020070914.290"><vh>name_for_module</vh></v>
 <v t="ekr.20221020070914.291"><vh>module_is_namespace</vh></v>
@@ -358,7 +358,7 @@
 <v t="ekr.20221020070914.309"><vh>InOrOut.sys_info</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.310"><vh>@clean jsonreport.py</vh>
+<v t="ekr.20221020070914.310"><vh>@@clean jsonreport.py</vh>
 <v t="ekr.20221020070914.311"><vh>class JsonReporter</vh>
 <v t="ekr.20221020070914.312"><vh>JsonReporter.__init__</vh></v>
 <v t="ekr.20221020070914.313"><vh>JsonReporter.report</vh></v>
@@ -366,14 +366,14 @@
 </v>
 <v t="ekr.20221020071523.1"><vh>_convert_branch_arcs</vh></v>
 </v>
-<v t="ekr.20221020070914.315"><vh>@clean lcovreport.py</vh>
+<v t="ekr.20221020070914.315"><vh>@@clean lcovreport.py</vh>
 <v t="ekr.20221020070914.316"><vh>class LcovReporter</vh>
 <v t="ekr.20221020070914.317"><vh>LcovReporter.__init__</vh></v>
 <v t="ekr.20221020070914.318"><vh>LcovReporter.report</vh></v>
 <v t="ekr.20221020070914.319"><vh>LcovReporter.get_lcov</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.320"><vh>@clean misc.py</vh>
+<v t="ekr.20221020070914.320"><vh>@@clean misc.py</vh>
 <v t="ekr.20221020070914.321"><vh>isolate_module</vh></v>
 <v t="ekr.20221020070914.322"><vh>os = isolate_module(os)</vh></v>
 <v t="ekr.20221020070914.323"><vh>class SysModuleSaver</vh>
@@ -414,7 +414,7 @@
 <v t="ekr.20221020070914.353"><vh>human_sorted_items</vh></v>
 <v t="ekr.20221020070914.354"><vh>plural</vh></v>
 </v>
-<v t="ekr.20221020070914.355"><vh>@clean multiproc.py</vh>
+<v t="ekr.20221020070914.355"><vh>@@clean multiproc.py</vh>
 <v t="ekr.20221020070914.356"><vh>class ProcessWithCoverage</vh>
 <v t="ekr.20221020070914.357"><vh>ProcessWithCoverage._bootstrap</vh></v>
 </v>
@@ -425,7 +425,7 @@
 </v>
 <v t="ekr.20221020070914.362"><vh>patch_multiprocessing</vh></v>
 </v>
-<v t="ekr.20221020070914.363"><vh>@clean numbits.py</vh>
+<v t="ekr.20221020070914.363"><vh>@@clean numbits.py</vh>
 <v t="ekr.20221020070914.364"><vh>_to_blob</vh></v>
 <v t="ekr.20221020070914.365"><vh>new_contract('blob', lambda v: isinstance(v, bytes))</vh></v>
 <v t="ekr.20221020070914.366"><vh>nums_to_numbits</vh></v>
@@ -436,7 +436,7 @@
 <v t="ekr.20221020070914.371"><vh>num_in_numbits</vh></v>
 <v t="ekr.20221020070914.372"><vh>register_sqlite_functions</vh></v>
 </v>
-<v t="ekr.20221020070914.373"><vh>@clean parser.py</vh>
+<v t="ekr.20221020070914.373"><vh>@@clean parser.py</vh>
 <v t="ekr.20221020070914.374"><vh>class PythonParser</vh>
 <v t="ekr.20221020070914.375"><vh>PythonParser.__init__</vh></v>
 <v t="ekr.20221020070914.376"><vh>PythonParser.lines_matching</vh></v>
@@ -552,7 +552,7 @@
 <v t="ekr.20221020070914.476"><vh>_is_simple_value</vh></v>
 <v t="ekr.20221020070914.477"><vh>ast_dump</vh></v>
 </v>
-<v t="ekr.20221020070914.478"><vh>@clean phystokens.py</vh>
+<v t="ekr.20221020070914.478"><vh>@@clean phystokens.py</vh>
 <v t="ekr.20221020070914.479"><vh>phys_tokens</vh></v>
 <v t="ekr.20221020070914.480"><vh>class MatchCaseFinder</vh>
 <v t="ekr.20221020070914.481"><vh>MatchCaseFinder.__init__</vh></v>
@@ -568,7 +568,7 @@
 <v t="ekr.20221020070914.489"><vh>compile_unicode</vh></v>
 <v t="ekr.20221020070914.490"><vh>neuter_encoding_declaration</vh></v>
 </v>
-<v t="ekr.20221020070914.491"><vh>@clean plugin.py</vh>
+<v t="ekr.20221020070914.491"><vh>@@clean plugin.py</vh>
 <v t="ekr.20221020070914.492"><vh>class CoveragePlugin</vh>
 <v t="ekr.20221020070914.493"><vh>CoveragePlugin.file_tracer</vh></v>
 <v t="ekr.20221020070914.494"><vh>CoveragePlugin.file_reporter</vh></v>
@@ -601,7 +601,7 @@
 <v t="ekr.20221020070914.519"><vh>FileReporter.__lt__</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.520"><vh>@clean plugin_support.py</vh>
+<v t="ekr.20221020070914.520"><vh>@@clean plugin_support.py</vh>
 <v t="ekr.20221020070914.521"><vh>class Plugins</vh>
 <v t="ekr.20221020070914.522"><vh>Plugins.__init__</vh></v>
 <v t="ekr.20221020070914.523"><vh>Plugins.load_plugins</vh></v>
@@ -651,7 +651,7 @@
 <v t="ekr.20221020070914.563"><vh>DebugFileReporterWrapper.source_token_lines</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.564"><vh>@clean python.py</vh>
+<v t="ekr.20221020070914.564"><vh>@@clean python.py</vh>
 <v t="ekr.20221020070914.565"><vh>read_python_source</vh></v>
 <v t="ekr.20221020070914.566"><vh>get_python_source</vh></v>
 <v t="ekr.20221020070914.567"><vh>get_zip_bytes</vh></v>
@@ -675,7 +675,7 @@
 <v t="ekr.20221020070914.585"><vh>PythonFileReporter.source_token_lines</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.586"><vh>@clean pytracer.py</vh>
+<v t="ekr.20221020070914.586"><vh>@@clean pytracer.py</vh>
 <v t="ekr.20221020070914.587"><vh>class PyTracer</vh>
 <v t="ekr.20221020070914.588"><vh>PyTracer.__init__</vh></v>
 <v t="ekr.20221020070914.589"><vh>PyTracer.__repr__</vh></v>
@@ -688,11 +688,11 @@
 <v t="ekr.20221020070914.596"><vh>PyTracer.get_stats</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.597"><vh>@clean report.py</vh>
+<v t="ekr.20221020070914.597"><vh>@@clean report.py</vh>
 <v t="ekr.20221020070914.598"><vh>render_report</vh></v>
 <v t="ekr.20221020070914.599"><vh>get_analysis_to_report</vh></v>
 </v>
-<v t="ekr.20221020070914.600"><vh>@clean results.py</vh>
+<v t="ekr.20221020070914.600"><vh>@@clean results.py</vh>
 <v t="ekr.20221020070914.601"><vh>class Analysis</vh>
 <v t="ekr.20221020070914.602"><vh>Analysis.__init__</vh></v>
 <v t="ekr.20221020070914.603"><vh>Analysis.missing_formatted</vh></v>
@@ -724,7 +724,7 @@
 <v t="ekr.20221020070914.627"><vh>format_lines</vh></v>
 <v t="ekr.20221020070914.628"><vh>should_fail_under</vh></v>
 </v>
-<v t="ekr.20221020070914.629"><vh>@clean sqldata.py</vh>
+<v t="ekr.20221020070914.629"><vh>@@clean sqldata.py</vh>
 <v t="ekr.20221020070914.630"><vh>class CoverageData</vh>
 <v t="ekr.20221020070914.631"><vh>CoverageData.__init__</vh></v>
 <v t="ekr.20221020070914.632"><vh>CoverageData._locked</vh></v>
@@ -781,7 +781,7 @@
 </v>
 <v t="ekr.20221020070914.682"><vh>_regexp</vh></v>
 </v>
-<v t="ekr.20221020070914.683"><vh>@clean summary.py</vh>
+<v t="ekr.20221020070914.683"><vh>@@clean summary.py</vh>
 <v t="ekr.20221020070914.684"><vh>class SummaryReporter</vh>
 <v t="ekr.20221020070914.685"><vh>SummaryReporter.__init__</vh></v>
 <v t="ekr.20221020070914.686"><vh>SummaryReporter.writeout</vh></v>
@@ -789,7 +789,7 @@
 <v t="ekr.20221020070914.688"><vh>SummaryReporter.report_one_file</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.689"><vh>@clean templite.py</vh>
+<v t="ekr.20221020070914.689"><vh>@@clean templite.py</vh>
 <v t="ekr.20221020070914.690"><vh>class TempliteSyntaxError</vh></v>
 <v t="ekr.20221020070914.691"><vh>class TempliteValueError</vh></v>
 <v t="ekr.20221020070914.692"><vh>class CodeBuilder</vh>
@@ -811,7 +811,7 @@
 <v t="ekr.20221020070914.707"><vh>Templite._do_dots</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.708"><vh>@clean tomlconfig.py</vh>
+<v t="ekr.20221020070914.708"><vh>@@clean tomlconfig.py</vh>
 <v t="ekr.20221020070914.709"><vh>class TomlDecodeError</vh></v>
 <v t="ekr.20221020070914.710"><vh>class TomlConfigParser</vh>
 <v t="ekr.20221020070914.711"><vh>TomlConfigParser.__init__</vh></v>
@@ -831,11 +831,11 @@
 <v t="ekr.20221020070914.725"><vh>TomlConfigParser.getfloat</vh></v>
 </v>
 </v>
-<v t="ekr.20221020070914.726"><vh>@clean version.py</vh>
+<v t="ekr.20221020070914.726"><vh>@@clean version.py</vh>
 <v t="ekr.20221020070914.727"><vh>_make_version</vh></v>
 <v t="ekr.20221020070914.728"><vh>_make_url</vh></v>
 </v>
-<v t="ekr.20221020070914.729"><vh>@clean xmlreport.py</vh>
+<v t="ekr.20221020070914.729"><vh>@@clean xmlreport.py</vh>
 <v t="ekr.20221020070914.730"><vh>rate</vh></v>
 <v t="ekr.20221020070914.731"><vh>class XmlReporter</vh>
 <v t="ekr.20221020070914.732"><vh>XmlReporter.__init__</vh></v>
@@ -844,18 +844,16 @@
 </v>
 <v t="ekr.20221020070914.735"><vh>serialize_xml</vh></v>
 </v>
-<v t="ekr.20221020070914.736"><vh>@clean __init__.py</vh></v>
-<v t="ekr.20221020070914.737"><vh>@clean __main__.py</vh></v>
+<v t="ekr.20221020070914.736"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221020070914.737"><vh>@@clean __main__.py</vh></v>
 <v t="ekr.20221020070914.738"><vh>@path fullcoverage</vh>
-<v t="ekr.20221020070914.739"><vh>@clean encodings.py</vh>
+<v t="ekr.20221020070914.739"><vh>@@clean encodings.py</vh>
 <v t="ekr.20221020070914.740"><vh>class FullCoverageTracer</vh>
 <v t="ekr.20221020070914.741"><vh>FullCoverageTracer.__init__</vh></v>
 <v t="ekr.20221020070914.742"><vh>FullCoverageTracer.fullcoverage_trace</vh></v>
 </v>
 </v>
 </v>
-</v>
-<v t="ekr.20221020070914.310"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20221020070914.1"></t>
@@ -5846,6 +5844,8 @@ from coverage.results import Numbers
             _convert_branch_arcs(analysis.missing_branch_arcs())
         )
     return reported_file
+
+
 </t>
 <t tx="ekr.20221020070914.315">@path C:/Python/Python3.10/Lib/site-packages/coverage/
 # Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
