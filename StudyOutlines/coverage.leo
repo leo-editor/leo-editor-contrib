@@ -6,7 +6,9 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20221020070914.1"><vh>Python3.10/Lib/site-packages/coverage</vh></v>
+<v t="ekr.20221020070914.1"><vh> Python3.10/Lib/site-packages/coverage</vh></v>
+<v t="ekr.20221020070914.736"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221020070914.737"><vh>@@clean __main__.py</vh></v>
 <v t="ekr.20221020070914.2"><vh>@@clean annotate.py</vh>
 <v t="ekr.20221020070914.3"><vh>class AnnotateReporter</vh>
 <v t="ekr.20221020070914.4"><vh>AnnotateReporter.__init__</vh></v>
@@ -844,8 +846,6 @@
 </v>
 <v t="ekr.20221020070914.735"><vh>serialize_xml</vh></v>
 </v>
-<v t="ekr.20221020070914.736"><vh>@@clean __init__.py</vh></v>
-<v t="ekr.20221020070914.737"><vh>@@clean __main__.py</vh></v>
 <v t="ekr.20221020070914.738"><vh>@path fullcoverage</vh>
 <v t="ekr.20221020070914.739"><vh>@@clean encodings.py</vh>
 <v t="ekr.20221020070914.740"><vh>class FullCoverageTracer</vh>
@@ -854,9 +854,13 @@
 </v>
 </v>
 </v>
+<v t="ekr.20221020080117.1"><vh>--- Interesting docstrings</vh>
+<v t="ekr.20221020070914.739"></v>
+<v t="ekr.20221020070914.587"></v>
+</v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20221020070914.1"></t>
+<t tx="ekr.20221020070914.1"># Coverage version 6.5.0.</t>
 <t tx="ekr.20221020070914.10">@path C:/Python/Python3.10/Lib/site-packages/coverage/
 # Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
 # For details: https://github.com/nedbat/coveragepy/blob/master/NOTICE.txt
@@ -14494,5 +14498,6 @@ def current(cls):
         for target in targets:
             yield source, target
 </t>
+<t tx="ekr.20221020080117.1"></t>
 </tnodes>
 </leo_file>
