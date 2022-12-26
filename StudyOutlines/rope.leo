@@ -39,8 +39,8 @@
 <v t="ekr.20221204085742.1"><vh>@@clean cover-r.cmd</vh></v>
 <v t="ekr.20221129082257.1"><vh>@@clean flake8-r.cmd</vh></v>
 <v t="ekr.20221204075937.1"><vh>@@clean full-test-r.cmd</vh></v>
-<v t="ekr.20221209085815.1"><vh>@@clean push-r.cmd</vh></v>
 <v t="ekr.20221129082956.1"><vh>@@clean mypy-r.cmd</vh></v>
+<v t="ekr.20221209085815.1"><vh>@@clean push-r.cmd</vh></v>
 <v t="ekr.20221204090024.1"><vh>@@clean pylint-r.cmd</vh></v>
 <v t="ekr.20221214123843.1"><vh>@@clean r.cmd</vh></v>
 <v t="ekr.20221204075047.1"><vh>@@clean re-r.cmd</vh></v>
@@ -48,32 +48,32 @@
 <v t="ekr.20221129082621.1"><vh>@@clean test-r.cmd</vh></v>
 </v>
 <v t="ekr.20221118105359.1"><vh>Files</vh>
-<v t="ekr.20221201051835.1"><vh>@clean setup.cfg</vh></v>
-<v t="ekr.20221209061813.1"><vh>@clean .pylintrc</vh></v>
+<v t="ekr.20221201051835.1"><vh>@@clean setup.cfg</vh></v>
+<v t="ekr.20221209061813.1"><vh>@@clean .pylintrc</vh></v>
 <v t="ekr.20221118072830.4"><vh>bin</vh>
-<v t="ekr.20221118072830.5"><vh>@clean tag-release.py</vh>
+<v t="ekr.20221118072830.5"><vh>@@clean tag-release.py</vh>
 <v t="ekr.20221118072830.6"><vh>get_changelog</vh></v>
 <v t="ekr.20221118072830.7"><vh>remove_headings</vh></v>
 <v t="ekr.20221118072830.8"><vh>insert_date</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.9"><vh>docs</vh>
-<v t="ekr.20221118072830.10"><vh>@clean conf.py</vh></v>
-<v t="ekr.20221118072830.11"><vh>@clean default_config.py</vh>
+<v t="ekr.20221118072830.10"><vh>@@clean conf.py</vh></v>
+<v t="ekr.20221118072830.11"><vh>@@clean default_config.py</vh>
 <v t="ekr.20221118072830.12"><vh>set_prefs</vh></v>
 <v t="ekr.20221118072830.13"><vh>project_opened</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.15"><vh>rope</vh>
-<v t="ekr.20221118072830.16"><vh>@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.16"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20221118072830.17"><vh>rope/base</vh>
-<v t="ekr.20221118072830.1119"><vh>@clean __init__.py</vh></v>
-<v t="ekr.20221208160436.1"><vh>@@@clean rast.py</vh>
+<v t="ekr.20221118072830.1119"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221208160436.1"><vh>@@@@clean rast.py</vh>
 <v t="ekr.20221211012524.1"><vh>rast.parse</vh></v>
 <v t="ekr.20221208160520.2"><vh>rast.call_for_nodes</vh></v>
 </v>
-<v t="ekr.20221211142245.1"><vh>@clean rope/base/ast.py</vh></v>
-<v t="ekr.20221118072830.18"><vh>@clean arguments.py</vh>
+<v t="ekr.20221211142245.1"><vh>@@clean rope/base/ast.py</vh></v>
+<v t="ekr.20221118072830.18"><vh>@@clean arguments.py</vh>
 <v t="ekr.20221118072830.19"><vh>class Arguments</vh>
 <v t="ekr.20221118072830.20"><vh>Arguments.__init__</vh></v>
 <v t="ekr.20221118072830.21"><vh>Arguments.get_arguments</vh></v>
@@ -96,7 +96,7 @@
 </v>
 <v t="ekr.20221118072830.36"><vh>_is_method_call</vh></v>
 </v>
-<v t="ekr.20221118072830.55"><vh>@clean builtins.py</vh>
+<v t="ekr.20221118072830.55"><vh>@@clean builtins.py</vh>
 <v t="ekr.20221118072830.56"><vh>class BuiltinModule</vh>
 <v t="ekr.20221118072830.57"><vh>BuiltinModule.__init__</vh></v>
 <v t="ekr.20221118072830.58"><vh>BuiltinModule.parent = None</vh></v>
@@ -247,7 +247,7 @@
 <v t="ekr.20221118072830.184"><vh>_iter_function</vh></v>
 <v t="ekr.20221118072830.185"><vh>_input_function</vh></v>
 </v>
-<v t="ekr.20221118072830.186"><vh>@clean change.py</vh>
+<v t="ekr.20221118072830.186"><vh>@@clean change.py</vh>
 <v t="ekr.20221118072830.187"><vh>class Change</vh>
 <v t="ekr.20221118072830.188"><vh>Change.do</vh></v>
 <v t="ekr.20221118072830.189"><vh>Change.undo</vh></v>
@@ -335,7 +335,7 @@
 <v t="ekr.20221118072830.260"><vh>DataToChange.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.261"><vh>@clean codeanalyze.py</vh>
+<v t="ekr.20221118072830.261"><vh>@@clean codeanalyze.py</vh>
 <v t="ekr.20221118072830.262"><vh>class ChangeCollector</vh>
 <v t="ekr.20221118072830.263"><vh>ChangeCollector.__init__</vh></v>
 <v t="ekr.20221118072830.264"><vh>ChangeCollector.add_change</vh></v>
@@ -398,7 +398,7 @@
 <v t="ekr.20221118072830.314"><vh>get_any_string_pattern</vh></v>
 <v t="ekr.20221118072830.315"><vh>get_comment_pattern</vh></v>
 </v>
-<v t="ekr.20221118072830.316"><vh>@clean evaluate.py</vh>
+<v t="ekr.20221118072830.316"><vh>@@clean evaluate.py</vh>
 <v t="ekr.20221118072830.317"><vh>eval_location</vh></v>
 <v t="ekr.20221118072830.318"><vh>eval_location2</vh></v>
 <v t="ekr.20221118072830.319"><vh>eval_node</vh></v>
@@ -444,7 +444,7 @@
 </v>
 <v t="ekr.20221118072830.358"><vh>function: _get_evaluated_names</vh></v>
 </v>
-<v t="ekr.20221118072830.359"><vh>@clean exceptions.py</vh>
+<v t="ekr.20221118072830.359"><vh>@@clean exceptions.py</vh>
 <v t="ekr.20221118072830.360"><vh>class RopeError</vh></v>
 <v t="ekr.20221118072830.361"><vh>class ResourceNotFoundError</vh></v>
 <v t="ekr.20221118072830.362"><vh>class RefactoringError</vh></v>
@@ -459,7 +459,7 @@
 </v>
 <v t="ekr.20221118072830.371"><vh>class ModuleDecodeError</vh></v>
 </v>
-<v t="ekr.20221118072830.372"><vh>@clean fscommands.py</vh>
+<v t="ekr.20221118072830.372"><vh>@@clean fscommands.py</vh>
 <v t="ekr.20221118072830.373"><vh>create_fscommands</vh></v>
 <v t="ekr.20221118072830.374"><vh>class FileSystemCommands</vh>
 <v t="ekr.20221118072830.375"><vh>FileSystemCommands.create_file</vh></v>
@@ -516,7 +516,7 @@
 <v t="ekr.20221118072830.421"><vh>function: read_str_coding (fscommands)</vh></v>
 <v t="ekr.20221118072830.422"><vh>_find_coding</vh></v>
 </v>
-<v t="ekr.20221118072830.423"><vh>@clean history.py</vh>
+<v t="ekr.20221118072830.423"><vh>@@clean history.py</vh>
 <v t="ekr.20221118072830.424"><vh>class History</vh>
 <v t="ekr.20221118072830.425"><vh>History.__init__</vh></v>
 <v t="ekr.20221118072830.426"><vh>History._load_history</vh></v>
@@ -548,7 +548,7 @@
 <v t="ekr.20221118072830.451"><vh>_FindChangeDependencies._depends_on</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.452"><vh>@clean libutils.py</vh>
+<v t="ekr.20221118072830.452"><vh>@@clean libutils.py</vh>
 <v t="ekr.20221118072830.453"><vh>path_to_resource</vh></v>
 <v t="ekr.20221118072830.454"><vh>path_relative_to_project_root</vh></v>
 <v t="ekr.20221118072830.455"><vh>relative</vh></v>
@@ -560,7 +560,7 @@
 <v t="ekr.20221118072830.461"><vh>is_python_file</vh></v>
 <v t="ekr.20221118072830.462"><vh>modname</vh></v>
 </v>
-<v t="ekr.20221210100024.1"><vh>@clean nameanalyze.py</vh>
+<v t="ekr.20221210100024.1"><vh>@@clean nameanalyze.py</vh>
 <v t="ekr.20221210100142.1"><vh>get_name_levels</vh></v>
 <v t="ekr.20221210100142.2"><vh>class _NodeNameCollector(RopeNodeVisitor) (nameanalyze.py)</vh>
 <v t="ekr.20221210100142.3"><vh>__init__</vh></v>
@@ -574,7 +574,7 @@
 <v t="ekr.20221210100142.11"><vh>_Slice</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.463"><vh>@clean prefs.py</vh>
+<v t="ekr.20221118072830.463"><vh>@@clean prefs.py</vh>
 <v t="ekr.20221118072830.464"><vh>class Prefs</vh>
 <v t="ekr.20221118072830.465"><vh>Prefs.set</vh></v>
 <v t="ekr.20221118072830.466"><vh>Prefs.add</vh></v>
@@ -590,7 +590,7 @@
 </v>
 <v t="ekr.20221118072830.475"><vh>get_config</vh></v>
 </v>
-<v t="ekr.20221118072830.476"><vh>@clean project.py</vh>
+<v t="ekr.20221118072830.476"><vh>@@clean project.py</vh>
 <v t="ekr.20221118072830.477"><vh>class _Project</vh>
 <v t="ekr.20221118072830.479"><vh>_Project.get_resource</vh></v>
 <v t="ekr.20221118072830.480"><vh>_Project.get_module</vh></v>
@@ -661,7 +661,7 @@
 <v t="ekr.20221118072830.540"><vh>_realpath</vh></v>
 <v t="ekr.20221118072830.541"><vh>_find_module_in_folder</vh></v>
 </v>
-<v t="ekr.20221118072830.542"><vh>@clean pycore.py</vh>
+<v t="ekr.20221118072830.542"><vh>@@clean pycore.py</vh>
 <v t="ekr.20221118072830.543"><vh>class PyCore</vh>
 <v t="ekr.20221118072830.544"><vh>PyCore.__init__</vh></v>
 <v t="ekr.20221118072830.545"><vh>PyCore._init_python_files</vh></v>
@@ -712,7 +712,7 @@
 <v t="ekr.20221118072830.587"><vh>_TextChangeDetector._get_changed</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.588"><vh>@clean pynames.py</vh>
+<v t="ekr.20221118072830.588"><vh>@@clean pynames.py</vh>
 <v t="ekr.20221118072830.589"><vh>class PyName</vh>
 <v t="ekr.20221118072830.590"><vh>PyName.get_object</vh></v>
 <v t="ekr.20221118072830.591"><vh>PyName.get_definition_location</vh></v>
@@ -761,7 +761,7 @@
 <v t="ekr.20221118072830.627"><vh>_Inferred._get</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.640"><vh>@clean pyobjects.py</vh>
+<v t="ekr.20221118072830.640"><vh>@@clean pyobjects.py</vh>
 <v t="ekr.20221118072830.641"><vh>class PyObject</vh>
 <v t="ekr.20221118072830.642"><vh>PyObject.__init__</vh></v>
 <v t="ekr.20221201131119.1"><vh>PyObject.decorators</vh></v>
@@ -836,7 +836,7 @@
 <v t="ekr.20221118072830.705"><vh>class PyPackageStub ****</vh></v>
 <v t="ekr.20221118072830.706"><vh>class IsBeingInferredError</vh></v>
 </v>
-<v t="ekr.20221118072830.707"><vh>@clean pyobjectsdef.py</vh>
+<v t="ekr.20221118072830.707"><vh>@@clean pyobjectsdef.py</vh>
 <v t="ekr.20221118072830.708"><vh>class PyFunction</vh>
 <v t="ekr.20221118072830.709"><vh>PyFunction.__init__</vh></v>
 <v t="ekr.20221118072830.710"><vh>PyFunction._create_structural_attributes</vh></v>
@@ -968,7 +968,7 @@
 <v t="ekr.20221118072830.823"><vh>StarImport.get_names</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.824"><vh>@clean pyscopes.py</vh>
+<v t="ekr.20221118072830.824"><vh>@@clean pyscopes.py</vh>
 <v t="ekr.20221118072830.825"><vh>class Scope</vh>
 <v t="ekr.20221118072830.826"><vh>Scope.__init__</vh></v>
 <v t="ekr.20221118072830.827"><vh>Scope.get_names</vh></v>
@@ -1051,7 +1051,7 @@
 <v t="ekr.20221118072830.898"><vh>TemporaryScope.get_kind</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.899"><vh>@clean resourceobserver.py</vh>
+<v t="ekr.20221118072830.899"><vh>@@clean resourceobserver.py</vh>
 <v t="ekr.20221118072830.900"><vh>class ResourceObserver</vh>
 <v t="ekr.20221118072830.901"><vh>ResourceObserver.__init__</vh></v>
 <v t="ekr.20221118072830.902"><vh>ResourceObserver.resource_changed</vh></v>
@@ -1091,7 +1091,7 @@
 <v t="ekr.20221118072830.933"><vh>_Changes.add_created</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.934"><vh>@clean resources.py</vh>
+<v t="ekr.20221118072830.934"><vh>@@clean resources.py</vh>
 <v t="ekr.20221118072830.935"><vh>class Resource</vh>
 <v t="ekr.20221118072830.937"><vh>Resource.__repr__</vh></v>
 <v t="ekr.20221118072830.938"><vh>Resource.move</vh></v>
@@ -1137,18 +1137,18 @@
 <v t="ekr.20221118072830.977"><vh>_ResourceMatcher.compiled_patterns</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.978"><vh>@clean simplify.py</vh>
+<v t="ekr.20221118072830.978"><vh>@@clean simplify.py</vh>
 <v t="ekr.20221118072830.979"><vh>real_code</vh></v>
 <v t="ekr.20221118072830.980"><vh>ignored_regions</vh></v>
 </v>
-<v t="ekr.20221118072830.981"><vh>@clean stdmods.py</vh>
+<v t="ekr.20221118072830.981"><vh>@@clean stdmods.py</vh>
 <v t="ekr.20221118072830.982"><vh>_stdlib_path</vh></v>
 <v t="ekr.20221118072830.983"><vh>standard_modules</vh></v>
 <v t="ekr.20221118072830.984"><vh>python_modules</vh></v>
 <v t="ekr.20221118072830.985"><vh>normalize_so_name</vh></v>
 <v t="ekr.20221118072830.986"><vh>dynload_modules</vh></v>
 </v>
-<v t="ekr.20221118072830.987"><vh>@clean taskhandle.py</vh>
+<v t="ekr.20221118072830.987"><vh>@@clean taskhandle.py</vh>
 <v t="ekr.20221118072830.988"><vh>class BaseJobSet</vh>
 <v t="ekr.20221118072830.989"><vh>BaseJobSet.started_job</vh></v>
 <v t="ekr.20221118072830.990"><vh>BaseJobSet.finished_job</vh></v>
@@ -1207,7 +1207,7 @@
 <v t="ekr.20221118072830.1038"><vh>NullJobSet.increment</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1039"><vh>@clean worder.py</vh>
+<v t="ekr.20221118072830.1039"><vh>@@clean worder.py</vh>
 <v t="ekr.20221118072830.1040"><vh>get_name_at</vh></v>
 <v t="ekr.20221118072830.1041"><vh>class Worder</vh>
 <v t="ekr.20221118072830.1042"><vh>Worder.__init__</vh></v>
@@ -1292,7 +1292,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1120"><vh>rope/base/oi</vh>
-<v t="ekr.20221118072830.1121"><vh>@clean doa.py</vh>
+<v t="ekr.20221118072830.1121"><vh>@@clean doa.py</vh>
 <v t="ekr.20221118072830.1122"><vh>_compat_compare_digest</vh></v>
 <v t="ekr.20221118072830.1123"><vh>try:</vh></v>
 <v t="ekr.20221118072830.1124"><vh>class PythonFileRunner</vh>
@@ -1317,7 +1317,7 @@
 <v t="ekr.20221118072830.1141"><vh>_FIFOReceiver.receive_data</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1142"><vh>@clean memorydb.py</vh>
+<v t="ekr.20221118072830.1142"><vh>@@clean memorydb.py</vh>
 <v t="ekr.20221118072830.1143"><vh>class MemoryDB</vh>
 <v t="ekr.20221118072830.1144"><vh>MemoryDB.__init__</vh></v>
 <v t="ekr.20221118072830.1145"><vh>MemoryDB._load_files</vh></v>
@@ -1356,7 +1356,7 @@
 <v t="ekr.20221118072830.1176"><vh>ScopeInfo.__setstate__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1177"><vh>@clean objectdb.py</vh>
+<v t="ekr.20221118072830.1177"><vh>@@clean objectdb.py</vh>
 <v t="ekr.20221118072830.1178"><vh>class ObjectDB</vh>
 <v t="ekr.20221118072830.1179"><vh>ObjectDB.__init__</vh></v>
 <v t="ekr.20221118072830.1180"><vh>ObjectDB.validate_files</vh></v>
@@ -1399,7 +1399,7 @@
 </v>
 <v t="ekr.20221118072830.1214"><vh>class FileListObserver</vh></v>
 </v>
-<v t="ekr.20221118072830.1215"><vh>@clean objectinfo.py</vh>
+<v t="ekr.20221118072830.1215"><vh>@@clean objectinfo.py</vh>
 <v t="ekr.20221118072830.1216"><vh>class ObjectInfoManager</vh>
 <v t="ekr.20221118072830.1217"><vh>ObjectInfoManager.__init__</vh></v>
 <v t="ekr.20221118072830.1218"><vh>ObjectInfoManager._init_objectdb</vh></v>
@@ -1433,7 +1433,7 @@
 <v t="ekr.20221118072830.1244"><vh>_FileListObserver.added</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1245"><vh>@clean runmod.py</vh>
+<v t="ekr.20221118072830.1245"><vh>@@clean runmod.py</vh>
 <v t="ekr.20221118072830.1246"><vh>__rope_start_everything</vh>
 <v t="ekr.20221118072830.1247"><vh>class _MessageSender</vh></v>
 <v t="ekr.20221118072830.1248"><vh>class _SocketSender</vh></v>
@@ -1445,7 +1445,7 @@
 <v t="ekr.20221118072830.1253"><vh>_realpath</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1254"><vh>@clean soa.py</vh>
+<v t="ekr.20221118072830.1254"><vh>@@clean soa.py</vh>
 <v t="ekr.20221118072830.1255"><vh>soa.py: analyze_module &amp; helper</vh>
 <v t="ekr.20221118072830.1256"><vh>soa.py: _analyze_node</vh></v>
 </v>
@@ -1466,7 +1466,7 @@
 <v t="ekr.20221118072830.1270"><vh>_SOAAssignVisitor._added</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1271"><vh>@clean soi.py</vh>
+<v t="ekr.20221118072830.1271"><vh>@@clean soi.py</vh>
 <v t="ekr.20221118072830.1272"><vh>infer_returned_object &amp; helper</vh>
 <v t="ekr.20221118072830.1277"><vh>_infer_returned</vh></v>
 </v>
@@ -1483,7 +1483,7 @@
 <v t="ekr.20221118072830.1285"><vh>_get_attribute</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1286"><vh>@clean transform.py</vh>
+<v t="ekr.20221118072830.1286"><vh>@@clean transform.py</vh>
 <v t="ekr.20221118072830.1287"><vh>class PyObjectToTextual</vh>
 <v t="ekr.20221118072830.1288"><vh>PyObjectToTextual.__init__</vh></v>
 <v t="ekr.20221118072830.1289"><vh>PyObjectToTextual.transform</vh></v>
@@ -1537,11 +1537,11 @@
 <v t="ekr.20221118072830.1335"><vh>DOITextualToPyObject.path_to_resource</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1336"><vh>@clean __init__.py</vh>
+<v t="ekr.20221118072830.1336"><vh>@@clean __init__.py</vh>
 <v t="ekr.20221118073540.1"><vh>&lt;&lt; docstring: oi/__init__ &gt;&gt;</vh></v>
 </v>
 <v t="ekr.20221215002954.1"><vh>rope/base/oi/soi</vh>
-<v t="ekr.20221212141427.1"><vh>@clean pynamesdef.py</vh>
+<v t="ekr.20221212141427.1"><vh>@@clean pynamesdef.py</vh>
 <v t="ekr.20221220042806.1"><vh>class DefinedName(pynames.DefinedName)</vh></v>
 <v t="ekr.20221217024942.1"><vh>class AssignedName(pynames.AssignedName)</vh>
 <v t="ekr.20221217024942.2"><vh>__init__</vh></v>
@@ -1563,8 +1563,8 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1337"><vh>rope/base/oi/type_hinting</vh>
-<v t="ekr.20221118072830.1411"><vh>@@clean __init__.py</vh></v>
-<v t="ekr.20221118072830.1338"><vh>@clean oi/type_hinting/evaluate.py</vh>
+<v t="ekr.20221118072830.1411"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1338"><vh>@@clean oi/type_hinting/evaluate.py</vh>
 <v t="ekr.20221118072830.1339"><vh>class SymbolBase</vh>
 <v t="ekr.20221118072830.1340"><vh>SymbolBase.__init__</vh></v>
 <v t="ekr.20221118072830.1341"><vh>SymbolBase.nud</vh></v>
@@ -1620,7 +1620,7 @@
 <v t="ekr.20221118072830.1384"><vh>Evaluator.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1385"><vh>@clean factory.py</vh>
+<v t="ekr.20221118072830.1385"><vh>@@clean factory.py</vh>
 <v t="ekr.20221118072830.1386"><vh>class TypeHintingFactory</vh>
 <v t="ekr.20221118072830.1387"><vh>TypeHintingFactory.make_param_provider</vh></v>
 <v t="ekr.20221118072830.1388"><vh>TypeHintingFactory.make_return_provider</vh></v>
@@ -1633,7 +1633,7 @@
 <v t="ekr.20221118072830.1394"><vh>TypeHintingFactoryAccessor._get_factory</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1395"><vh>@clean interfaces.py</vh>
+<v t="ekr.20221118072830.1395"><vh>@@clean interfaces.py</vh>
 <v t="ekr.20221118072830.1396"><vh>class ITypeHintingFactory</vh>
 <v t="ekr.20221118072830.1397"><vh>ITypeHintingFactory.make_param_provider</vh></v>
 <v t="ekr.20221118072830.1398"><vh>ITypeHintingFactory.make_return_provider</vh></v>
@@ -1641,7 +1641,7 @@
 <v t="ekr.20221118072830.1400"><vh>ITypeHintingFactory.make_resolver</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1401"><vh>@clean oi/type_hinting/utils.py</vh>
+<v t="ekr.20221118072830.1401"><vh>@@clean oi/type_hinting/utils.py</vh>
 <v t="ekr.20221118072830.1402"><vh>utils.py: get_super_func</vh></v>
 <v t="ekr.20221118072830.1403"><vh>utils.py: get_super_assignment</vh></v>
 <v t="ekr.20221118072830.1404"><vh>utils.py: get_class_with_attr_name</vh></v>
@@ -1654,8 +1654,8 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1412"><vh>providers</vh>
-<v t="ekr.20221118072830.1470"><vh>@@clean __init__.py</vh></v>
-<v t="ekr.20221118072830.1413"><vh>@clean composite.py</vh>
+<v t="ekr.20221118072830.1470"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1413"><vh>@@clean composite.py</vh>
 <v t="ekr.20221118072830.1414"><vh>class ParamProvider</vh>
 <v t="ekr.20221118072830.1415"><vh>ParamProvider.__init__</vh></v>
 <v t="ekr.20221118072830.1416"><vh>ParamProvider.__call__</vh></v>
@@ -1669,7 +1669,7 @@
 <v t="ekr.20221118072830.1422"><vh>AssignmentProvider.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1423"><vh>@clean docstrings.py</vh>
+<v t="ekr.20221118072830.1423"><vh>@@clean docstrings.py</vh>
 <v t="ekr.20221118072830.1424"><vh>class ParamProvider</vh>
 <v t="ekr.20221118072830.1425"><vh>ParamProvider.__init__</vh></v>
 <v t="ekr.20221118072830.1426"><vh>ParamProvider.__call__</vh></v>
@@ -1696,7 +1696,7 @@
 <v t="ekr.20221118072830.1442"><vh>RSTRoleStrip.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1443"><vh>@clean inheritance.py</vh>
+<v t="ekr.20221118072830.1443"><vh>@@clean inheritance.py</vh>
 <v t="ekr.20221118072830.1444"><vh>class ParamProvider</vh>
 <v t="ekr.20221118072830.1445"><vh>ParamProvider.__init__</vh></v>
 <v t="ekr.20221118072830.1446"><vh>ParamProvider.__call__</vh></v>
@@ -1710,7 +1710,7 @@
 <v t="ekr.20221118072830.1452"><vh>AssignmentProvider.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1453"><vh>@clean interfaces.py</vh>
+<v t="ekr.20221118072830.1453"><vh>@@clean interfaces.py</vh>
 <v t="ekr.20221118072830.1454"><vh>class IParamProvider</vh>
 <v t="ekr.20221118072830.1455"><vh>IParamProvider.__call__</vh></v>
 </v>
@@ -1721,13 +1721,13 @@
 <v t="ekr.20221118072830.1459"><vh>IAssignmentProvider.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1460"><vh>@clean numpydocstrings.py</vh>
+<v t="ekr.20221118072830.1460"><vh>@@clean numpydocstrings.py</vh>
 <v t="ekr.20221118072830.1461"><vh>class NumPyDocstringParamParser</vh>
 <v t="ekr.20221118072830.1462"><vh>NumPyDocstringParamParser.__call__</vh></v>
 </v>
 <v t="ekr.20221118072830.1463"><vh>class _DummyParamParser</vh></v>
 </v>
-<v t="ekr.20221118072830.1464"><vh>@clean pep0484_type_comments.py</vh>
+<v t="ekr.20221118072830.1464"><vh>@@clean pep0484_type_comments.py</vh>
 <v t="ekr.20221118072830.1465"><vh>class AssignmentProvider</vh>
 <v t="ekr.20221118072830.1466"><vh>AssignmentProvider.__init__</vh></v>
 <v t="ekr.20221118072830.1467"><vh>AssignmentProvider.PEP0484_TYPE_COMMENT_PATTERNS = (re.compile(r"type:/s*([^/n]+)"),)</vh></v>
@@ -1737,15 +1737,15 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1471"><vh>resolvers</vh>
-<v t="ekr.20221118072830.1480"><vh>@@clean __init__.py</vh></v>
-<v t="ekr.20221118072830.1472"><vh>@clean composite.py</vh>
+<v t="ekr.20221118072830.1480"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1472"><vh>@@clean composite.py</vh>
 <v t="ekr.20221118072830.1473"><vh>class Resolver</vh>
 <v t="ekr.20221118072830.1474"><vh>Resolver.__init__</vh></v>
 <v t="ekr.20221118072830.1475"><vh>Resolver.__call__</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1476"><vh>@clean interfaces.py</vh></v>
-<v t="ekr.20221118072830.1477"><vh>@clean types.py</vh>
+<v t="ekr.20221118072830.1476"><vh>@@clean interfaces.py</vh></v>
+<v t="ekr.20221118072830.1477"><vh>@@clean types.py</vh>
 <v t="ekr.20221118072830.1478"><vh>class Resolver</vh>
 <v t="ekr.20221118072830.1479"><vh>Resolver.__call__</vh></v>
 </v>
@@ -1754,7 +1754,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1481"><vh>rope/base/utils</vh>
-<v t="ekr.20221118072830.1499"><vh>@clean __init__.py</vh>
+<v t="ekr.20221118072830.1499"><vh>@@clean __init__.py</vh>
 <v t="ekr.20221118072830.1500"><vh>saveit (aka cacheit)</vh>
 <v t="ekr.20221118072830.1501"><vh>_wrapper</vh></v>
 </v>
@@ -1779,7 +1779,7 @@
 <v t="ekr.20221118072830.1516"><vh>is_inline_body</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1482"><vh>@clean datastructures.py</vh>
+<v t="ekr.20221118072830.1482"><vh>@@clean datastructures.py</vh>
 <v t="ekr.20221118072830.1483"><vh>class OrderedSet</vh>
 <v t="ekr.20221118072830.1484"><vh>OrderedSet.__init__</vh></v>
 <v t="ekr.20221118072830.1485"><vh>OrderedSet.__len__</vh></v>
@@ -1796,8 +1796,8 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1517"><vh>rope/contrib</vh>
-<v t="ekr.20221118072831.70"><vh>@clean __init__.py</vh></v>
-<v t="ekr.20221118072830.1518"><vh>@clean changestack.py</vh>
+<v t="ekr.20221118072831.70"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1518"><vh>@@clean changestack.py</vh>
 <v t="ekr.20221118072830.1519"><vh>class ChangeStack</vh>
 <v t="ekr.20221118072830.1520"><vh>ChangeStack.__init__</vh></v>
 <v t="ekr.20221118072830.1521"><vh>ChangeStack.push</vh></v>
@@ -1806,7 +1806,7 @@
 <v t="ekr.20221118072830.1524"><vh>ChangeStack._basic_changes</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1525"><vh>@clean codeassist.py</vh>
+<v t="ekr.20221118072830.1525"><vh>@@clean codeassist.py</vh>
 <v t="ekr.20221118072830.1526"><vh>code_assist</vh></v>
 <v t="ekr.20221118072830.1527"><vh>starting_offset</vh></v>
 <v t="ekr.20221118072830.1528"><vh>get_doc</vh></v>
@@ -1873,7 +1873,7 @@
 <v t="ekr.20221118072830.1584"><vh>Template.get_cursor_location</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1585"><vh>@clean finderrors.py</vh>
+<v t="ekr.20221118072830.1585"><vh>@@clean finderrors.py</vh>
 <v t="ekr.20221206092918.1"><vh>&lt;&lt; docstring: rope/contrib/finderrors.py &gt;&gt;</vh></v>
 <v t="ekr.20221118072830.1586"><vh>find_errors</vh></v>
 <v t="ekr.20221118072830.1587"><vh>class _BadAccessFinder (extract.py)</vh>
@@ -1885,7 +1885,7 @@
 </v>
 <v t="ekr.20221118072830.1593"><vh>class Error</vh></v>
 </v>
-<v t="ekr.20221118072830.1594"><vh>@clean findit.py</vh>
+<v t="ekr.20221118072830.1594"><vh>@@clean findit.py</vh>
 <v t="ekr.20221118072830.1595"><vh>find_occurrences</vh>
 <v t="ekr.20221118072830.1596"><vh>is_match</vh></v>
 </v>
@@ -1897,7 +1897,7 @@
 <v t="ekr.20221118072830.1601"><vh>class Location</vh></v>
 <v t="ekr.20221118072830.1602"><vh>_find_locations</vh></v>
 </v>
-<v t="ekr.20221118072830.1603"><vh>@clean fixmodnames.py</vh>
+<v t="ekr.20221118072830.1603"><vh>@@clean fixmodnames.py</vh>
 <v t="ekr.20221118072830.1604"><vh>class FixModuleNames</vh>
 <v t="ekr.20221118072830.1605"><vh>FixModuleNames.__init__</vh></v>
 <v t="ekr.20221118072830.1606"><vh>FixModuleNames.get_changes</vh></v>
@@ -1906,7 +1906,7 @@
 <v t="ekr.20221118072830.1609"><vh>FixModuleNames._name</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1610"><vh>@clean fixsyntax.py</vh>
+<v t="ekr.20221118072830.1610"><vh>@@clean fixsyntax.py</vh>
 <v t="ekr.20221118072831.1"><vh>class FixSyntax</vh>
 <v t="ekr.20221118072831.2"><vh>FixSyntax.__init__</vh></v>
 <v t="ekr.20221118072831.3"><vh>FixSyntax.get_pymodule</vh></v>
@@ -1928,7 +1928,7 @@
 <v t="ekr.20221118072831.17"><vh>_logical_start</vh></v>
 <v t="ekr.20221118072831.18"><vh>_get_line_indents</vh></v>
 </v>
-<v t="ekr.20221118072831.19"><vh>@clean generate.py</vh>
+<v t="ekr.20221118072831.19"><vh>@@clean generate.py</vh>
 <v t="ekr.20221118072831.20"><vh>create_generate</vh></v>
 <v t="ekr.20221118072831.21"><vh>generate: create_module</vh></v>
 <v t="ekr.20221118072831.22"><vh>create_package</vh></v>
@@ -1987,8 +1987,8 @@
 </v>
 </v>
 <v t="ekr.20221118072831.71"><vh>autoimport</vh>
-<v t="ekr.20221118072831.171"><vh>@clean __init__.py</vh></v>
-<v t="ekr.20221118072831.72"><vh>@clean defs.py</vh>
+<v t="ekr.20221118072831.171"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221118072831.72"><vh>@@clean defs.py</vh>
 <v t="ekr.20221118072831.73"><vh>class Source</vh></v>
 <v t="ekr.20221118072831.74"><vh>class ModuleInfo</vh></v>
 <v t="ekr.20221118072831.75"><vh>class ModuleFile</vh></v>
@@ -2000,7 +2000,7 @@
 <v t="ekr.20221118072831.81"><vh>class PartialName</vh></v>
 <v t="ekr.20221118072831.82"><vh>class SearchResult</vh></v>
 </v>
-<v t="ekr.20221118072831.83"><vh>@clean models.py</vh>
+<v t="ekr.20221118072831.83"><vh>@@clean models.py</vh>
 <v t="ekr.20221118072831.84"><vh>class FinalQuery</vh></v>
 <v t="ekr.20221118072831.85"><vh>class Query</vh>
 <v t="ekr.20221118072831.86"><vh>Query.__init__</vh></v>
@@ -2018,7 +2018,7 @@
 <v t="ekr.20221118072831.96"><vh>Package.create_table</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.97"><vh>@clean contrib/autoimport/parse.py</vh>
+<v t="ekr.20221118072831.97"><vh>@@clean contrib/autoimport/parse.py</vh>
 <v t="ekr.20221118072831.98"><vh>get_type_ast</vh></v>
 <v t="ekr.20221118072831.99"><vh>get_names_from_file</vh></v>
 <v t="ekr.20221118072831.100"><vh>get_type_object</vh></v>
@@ -2026,7 +2026,7 @@
 <v t="ekr.20221118072831.102"><vh>get_names_from_compiled</vh></v>
 <v t="ekr.20221118072831.103"><vh>combine</vh></v>
 </v>
-<v t="ekr.20221118072831.104"><vh>@clean pickle.py</vh>
+<v t="ekr.20221118072831.104"><vh>@@clean pickle.py</vh>
 <v t="ekr.20221118072831.105"><vh>class AutoImport</vh>
 <v t="ekr.20221118072831.106"><vh>AutoImport.__init__</vh></v>
 <v t="ekr.20221118072831.107"><vh>AutoImport.import_assist</vh></v>
@@ -2048,7 +2048,7 @@
 </v>
 <v t="ekr.20221118072831.123"><vh>submodules</vh></v>
 </v>
-<v t="ekr.20221118072831.124"><vh>@clean sqlite.py</vh>
+<v t="ekr.20221118072831.124"><vh>@@clean sqlite.py</vh>
 <v t="ekr.20221118072831.125"><vh>get_future_names</vh></v>
 <v t="ekr.20221118072831.126"><vh>filter_packages</vh></v>
 <v t="ekr.20221118072831.127"><vh>class AutoImport</vh>
@@ -2089,7 +2089,7 @@
 <v t="ekr.20221118072831.162"><vh>AutoImport._executemany</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.163"><vh>@clean utils.py</vh>
+<v t="ekr.20221118072831.163"><vh>@@clean utils.py</vh>
 <v t="ekr.20221118072831.164"><vh>get_package_tuple</vh></v>
 <v t="ekr.20221118072831.165"><vh>get_package_source</vh></v>
 <v t="ekr.20221118072831.166"><vh>get_modname_from_path</vh></v>
@@ -2101,8 +2101,8 @@
 </v>
 </v>
 <v t="ekr.20221118072831.172"><vh>rope/refactor</vh>
-<v t="ekr.20221118072831.946"><vh>@clean __init__.py</vh></v>
-<v t="ekr.20221118072831.173"><vh>@clean change_signature.py</vh>
+<v t="ekr.20221118072831.946"><vh>@@clean __init__.py</vh></v>
+<v t="ekr.20221118072831.173"><vh>@@clean change_signature.py</vh>
 <v t="ekr.20221118072831.174"><vh>class ChangeSignature</vh>
 <v t="ekr.20221118072831.175"><vh>ChangeSignature.__init__</vh></v>
 <v t="ekr.20221118072831.176"><vh>ChangeSignature._set_name_and_pyname</vh></v>
@@ -2157,7 +2157,7 @@
 <v t="ekr.20221118072831.218"><vh>_MultipleFinders.find_occurrences</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.219"><vh>@clean encapsulate_field.py</vh>
+<v t="ekr.20221118072831.219"><vh>@@clean encapsulate_field.py</vh>
 <v t="ekr.20221118072831.220"><vh>class EncapsulateField</vh>
 <v t="ekr.20221118072831.221"><vh>EncapsulateField.__init__</vh></v>
 <v t="ekr.20221118072831.222"><vh>EncapsulateField.get_changes</vh></v>
@@ -2181,7 +2181,7 @@
 <v t="ekr.20221118072831.238"><vh>_FindChangesForModule.worder</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.239"><vh>@clean extract.py</vh>
+<v t="ekr.20221118072831.239"><vh>@@clean extract.py</vh>
 <v t="ekr.20221118072831.240"><vh>class _ExtractRefactoring</vh>
 <v t="ekr.20221118072831.241"><vh>_ExtractRefactoring.__init__</vh></v>
 <v t="ekr.20221118072831.242"><vh>_ExtractRefactoring._fix_start</vh></v>
@@ -2352,7 +2352,7 @@
 <v t="ekr.20221118072831.392"><vh>_join_lines</vh></v>
 <v t="ekr.20221118072831.393"><vh>_get_single_expression_body</vh></v>
 </v>
-<v t="ekr.20221118072831.394"><vh>@clean functionutils.py</vh>
+<v t="ekr.20221118072831.394"><vh>@@clean functionutils.py</vh>
 <v t="ekr.20221118072831.395"><vh>class DefinitionInfo</vh>
 <v t="ekr.20221118072831.396"><vh>DefinitionInfo.__init__</vh></v>
 <v t="ekr.20221118072831.397"><vh>DefinitionInfo.to_string</vh></v>
@@ -2381,7 +2381,7 @@
 <v t="ekr.20221118072831.417"><vh>_FunctionParser.is_called_as_a_method</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.418"><vh>@clean inline.py</vh>
+<v t="ekr.20221118072831.418"><vh>@@clean inline.py</vh>
 <v t="ekr.20221118072831.419"><vh>unique_prefix</vh></v>
 <v t="ekr.20221118072831.420"><vh>create_inline</vh></v>
 <v t="ekr.20221118072831.421"><vh>class _Inliner</vh>
@@ -2448,7 +2448,7 @@
 <v t="ekr.20221118072831.474"><vh>_get_pyname</vh></v>
 <v t="ekr.20221118072831.475"><vh>_remove_from</vh></v>
 </v>
-<v t="ekr.20221118072831.476"><vh>@clean introduce_factory.py</vh>
+<v t="ekr.20221118072831.476"><vh>@@clean introduce_factory.py</vh>
 <v t="ekr.20221118072831.477"><vh>class IntroduceFactory</vh>
 <v t="ekr.20221118072831.478"><vh>IntroduceFactory.__init__</vh></v>
 <v t="ekr.20221118072831.479"><vh>IntroduceFactory.get_changes</vh></v>
@@ -2462,7 +2462,7 @@
 <v t="ekr.20221118072831.487"><vh>IntroduceFactory._rename_occurrences</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.488"><vh>@clean introduce_parameter.py</vh>
+<v t="ekr.20221118072831.488"><vh>@@clean introduce_parameter.py</vh>
 <v t="ekr.20221118072831.489"><vh>class IntroduceParameter</vh>
 <v t="ekr.20221118072831.490"><vh>IntroduceParameter.__init__</vh></v>
 <v t="ekr.20221118072831.491"><vh>IntroduceParameter._get_primary</vh></v>
@@ -2472,7 +2472,7 @@
 <v t="ekr.20221118072831.495"><vh>IntroduceParameter._change_function_occurrences</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.496"><vh>@clean localtofield.py</vh>
+<v t="ekr.20221118072831.496"><vh>@@clean localtofield.py</vh>
 <v t="ekr.20221118072831.497"><vh>class LocalToField</vh>
 <v t="ekr.20221118072831.498"><vh>LocalToField.__init__</vh></v>
 <v t="ekr.20221118072831.499"><vh>LocalToField.get_changes</vh></v>
@@ -2481,7 +2481,7 @@
 <v t="ekr.20221118072831.502"><vh>LocalToField._is_a_method_local</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.503"><vh>@clean method_object.py</vh>
+<v t="ekr.20221118072831.503"><vh>@@clean method_object.py</vh>
 <v t="ekr.20221118072831.504"><vh>class MethodObject</vh>
 <v t="ekr.20221118072831.505"><vh>MethodObject.__init__</vh></v>
 <v t="ekr.20221118072831.506"><vh>MethodObject.get_new_class</vh></v>
@@ -2492,7 +2492,7 @@
 <v t="ekr.20221118072831.511"><vh>MethodObject._get_parameter_names</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.512"><vh>@clean move.py</vh>
+<v t="ekr.20221118072831.512"><vh>@@clean move.py</vh>
 <v t="ekr.20221118072831.513"><vh>create_move</vh></v>
 <v t="ekr.20221118072831.514"><vh>class MoveMethod</vh>
 <v t="ekr.20221118072831.515"><vh>MoveMethod.__init__</vh></v>
@@ -2564,7 +2564,7 @@
 <v t="ekr.20221118072831.575"><vh>ModuleSkipRenamer.get_changed_module</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.576"><vh>@clean multiproject.py</vh>
+<v t="ekr.20221118072831.576"><vh>@@clean multiproject.py</vh>
 <v t="ekr.20221118072831.577"><vh>class MultiProjectRefactoring</vh>
 <v t="ekr.20221118072831.578"><vh>MultiProjectRefactoring.__init__</vh></v>
 <v t="ekr.20221118072831.579"><vh>MultiProjectRefactoring.__call__</vh></v>
@@ -2580,7 +2580,7 @@
 </v>
 <v t="ekr.20221118072831.588"><vh>perform</vh></v>
 </v>
-<v t="ekr.20221118072831.589"><vh>@clean occurrences.py</vh>
+<v t="ekr.20221118072831.589"><vh>@@clean occurrences.py</vh>
 <v t="ekr.20221206092122.1"><vh>&lt;&lt; docstring: rope/refactor/occurrences.py &gt;&gt;</vh></v>
 <v t="ekr.20221118072831.590"><vh>class Finder</vh>
 <v t="ekr.20221118072831.591"><vh>Finder.__init__</vh></v>
@@ -2642,7 +2642,7 @@
 <v t="ekr.20221118072831.641"><vh>_OccurrenceToolsCreator.pymodule</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.642"><vh>@clean patchedast.py</vh>
+<v t="ekr.20221118072831.642"><vh>@@clean patchedast.py</vh>
 <v t="ekr.20221118072831.643"><vh>get_patched_ast</vh></v>
 <v t="ekr.20221118072831.644"><vh>patch_ast</vh></v>
 <v t="ekr.20221118072831.645"><vh>node_region</vh></v>
@@ -2772,7 +2772,7 @@
 <v t="ekr.20221118072831.768"><vh>_Source._get_number_pattern</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.769"><vh>@clean rename.py</vh>
+<v t="ekr.20221118072831.769"><vh>@@clean rename.py</vh>
 <v t="ekr.20221118072831.770"><vh>class Rename</vh>
 <v t="ekr.20221118072831.771"><vh>Rename.__init__</vh></v>
 <v t="ekr.20221118072831.772"><vh>Rename.get_old_name</vh></v>
@@ -2793,7 +2793,7 @@
 <v t="ekr.20221118072831.784"><vh>rename_in_module</vh></v>
 <v t="ekr.20221118072831.785"><vh>_is_local</vh></v>
 </v>
-<v t="ekr.20221118072831.786"><vh>@clean restructure.py</vh>
+<v t="ekr.20221118072831.786"><vh>@@clean restructure.py</vh>
 <v t="ekr.20221118072831.787"><vh>class Restructure</vh>
 <v t="ekr.20221118072831.788"><vh>Restructure.__init__</vh></v>
 <v t="ekr.20221118072831.789"><vh>Restructure.get_changes</vh></v>
@@ -2816,7 +2816,7 @@
 <v t="ekr.20221118072831.804"><vh>_ChangeComputer._get_nearest_roots</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.805"><vh>@clean similarfinder.py</vh>
+<v t="ekr.20221118072831.805"><vh>@@clean similarfinder.py</vh>
 <v t="ekr.20221118072831.806"><vh>class BadNameInCheckError</vh></v>
 <v t="ekr.20221118072831.807"><vh>class SimilarFinder</vh>
 <v t="ekr.20221118072831.808"><vh>SimilarFinder.__init__</vh></v>
@@ -2874,7 +2874,7 @@
 </v>
 <v t="ekr.20221118072831.854"><vh>_pydefined_to_str</vh></v>
 </v>
-<v t="ekr.20221118072831.855"><vh>@clean sourceutils.py</vh>
+<v t="ekr.20221118072831.855"><vh>@@clean sourceutils.py</vh>
 <v t="ekr.20221118072831.856"><vh>get_indents</vh></v>
 <v t="ekr.20221118072831.857"><vh>find_minimum_indents</vh></v>
 <v t="ekr.20221118072831.858"><vh>indent_lines</vh></v>
@@ -2884,7 +2884,7 @@
 <v t="ekr.20221118072831.862"><vh>get_body_region</vh></v>
 <v t="ekr.20221118072831.863"><vh>get_indent</vh></v>
 </v>
-<v t="ekr.20221118072831.864"><vh>@clean suites.py</vh>
+<v t="ekr.20221118072831.864"><vh>@@clean suites.py</vh>
 <v t="ekr.20221118072831.865"><vh>find_visible</vh></v>
 <v t="ekr.20221118072831.866"><vh>find_visible_for_suite</vh>
 <v t="ekr.20221118072831.867"><vh>valid</vh></v>
@@ -2916,14 +2916,14 @@
 <v t="ekr.20221118072831.891"><vh>_SuiteWalker.ClassDef</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.892"><vh>@clean topackage.py</vh>
+<v t="ekr.20221118072831.892"><vh>@@clean topackage.py</vh>
 <v t="ekr.20221118072831.893"><vh>class ModuleToPackage</vh>
 <v t="ekr.20221118072831.894"><vh>ModuleToPackage.__init__</vh></v>
 <v t="ekr.20221118072831.895"><vh>ModuleToPackage.get_changes</vh></v>
 <v t="ekr.20221118072831.896"><vh>ModuleToPackage._transform_relatives_to_absolute</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.897"><vh>@clean usefunction.py</vh>
+<v t="ekr.20221118072831.897"><vh>@@clean usefunction.py</vh>
 <v t="ekr.20221118072831.898"><vh>class UseFunction</vh>
 <v t="ekr.20221118072831.899"><vh>UseFunction.__init__</vh></v>
 <v t="ekr.20221118072831.900"><vh>UseFunction._check_returns</vh></v>
@@ -2954,7 +2954,7 @@
 <v t="ekr.20221118072831.924"><vh>_ReturnOrYieldFinder.start_walking</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.925"><vh>@clean wildcards.py</vh>
+<v t="ekr.20221118072831.925"><vh>@@clean wildcards.py</vh>
 <v t="ekr.20221118072831.926"><vh>class Wildcard</vh></v>
 <v t="ekr.20221118072831.927"><vh>class Suspect</vh></v>
 <v t="ekr.20221118072831.928"><vh>class DefaultWildcard</vh>
@@ -2980,7 +2980,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.947"><vh>importutils</vh>
-<v t="ekr.20221118072831.948"><vh>@clean actions.py</vh>
+<v t="ekr.20221118072831.948"><vh>@@clean actions.py</vh>
 <v t="ekr.20221118072831.949"><vh>class ImportInfoVisitor</vh>
 <v t="ekr.20221118072831.950"><vh>ImportInfoVisitor.dispatch</vh></v>
 <v t="ekr.20221118072831.951"><vh>ImportInfoVisitor.visitEmptyImport</vh></v>
@@ -3038,7 +3038,7 @@
 </v>
 <v t="ekr.20221118072831.994"><vh>_is_future</vh></v>
 </v>
-<v t="ekr.20221118072831.995"><vh>@clean importinfo.py</vh>
+<v t="ekr.20221118072831.995"><vh>@@clean importinfo.py</vh>
 <v t="ekr.20221118072831.996"><vh>class ImportStatement</vh>
 <v t="ekr.20221118072831.997"><vh>ImportStatement.__init__</vh></v>
 <v t="ekr.20221118072831.998"><vh>ImportStatement._get_import_info</vh></v>
@@ -3084,7 +3084,7 @@
 </v>
 <v t="ekr.20221118072831.1034"><vh>class ImportContext</vh></v>
 </v>
-<v t="ekr.20221118072831.1035"><vh>@clean module_imports.py</vh>
+<v t="ekr.20221118072831.1035"><vh>@@clean module_imports.py</vh>
 <v t="ekr.20221118072831.1036"><vh>class ModuleImports</vh>
 <v t="ekr.20221118072831.1037"><vh>ModuleImports.__init__</vh></v>
 <v t="ekr.20221118072831.1038"><vh>ModuleImports.imports</vh></v>
@@ -3160,7 +3160,7 @@
 <v t="ekr.20221118072831.1103"><vh>_GlobalImportFinder.find_import_statements</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1104"><vh>@clean __init__.py</vh>
+<v t="ekr.20221118072831.1104"><vh>@@clean __init__.py</vh>
 <v t="ekr.20221118072831.1105"><vh>class ImportOrganizer</vh>
 <v t="ekr.20221118072831.1106"><vh>ImportOrganizer.__init__</vh></v>
 <v t="ekr.20221118072831.1107"><vh>ImportOrganizer.organize_imports</vh></v>
@@ -3196,7 +3196,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.1133"><vh>ropetest</vh>
-<v t="ekr.20221118072831.1134"><vh>@clean advanced_oi_test.py</vh>
+<v t="ekr.20221118072831.1134"><vh>@@clean advanced_oi_test.py</vh>
 <v t="ekr.20221118072831.1135"><vh>class DynamicOITest</vh>
 <v t="ekr.20221118072831.1136"><vh>DynamicOITest.setUp</vh></v>
 <v t="ekr.20221118072831.1137"><vh>DynamicOITest.tearDown</vh></v>
@@ -3267,7 +3267,7 @@
 <v t="ekr.20221118072831.1201"><vh>NewStaticOITest.test_set_comprehension</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1202"><vh>@clean builtinstest.py</vh>
+<v t="ekr.20221118072831.1202"><vh>@@clean builtinstest.py</vh>
 <v t="ekr.20221118072831.1203"><vh>class BuiltinTypesTest</vh>
 <v t="ekr.20221118072831.1204"><vh>BuiltinTypesTest.setUp</vh></v>
 <v t="ekr.20221118072831.1205"><vh>BuiltinTypesTest.tearDown</vh></v>
@@ -3342,7 +3342,7 @@
 <v t="ekr.20221118072831.1271"><vh>BuiltinModulesTest.test_timemodule_normalizes_to_time</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1272"><vh>@clean codeanalyzetest.py</vh>
+<v t="ekr.20221118072831.1272"><vh>@@clean codeanalyzetest.py</vh>
 <v t="ekr.20221118072831.1273"><vh>class SourceLinesAdapterTest</vh>
 <v t="ekr.20221118072831.1274"><vh>SourceLinesAdapterTest.test_source_lines_simple</vh></v>
 <v t="ekr.20221118072831.1275"><vh>SourceLinesAdapterTest.test_source_lines_get_line_number</vh></v>
@@ -3470,7 +3470,7 @@
 <v t="ekr.20221118072831.1393"><vh>class TokenizerLogicalLineFinderTest</vh></v>
 <v t="ekr.20221118072831.1394"><vh>class CustomLogicalLineFinderTest</vh></v>
 </v>
-<v t="ekr.20221118072831.1395"><vh>@clean doatest.py</vh>
+<v t="ekr.20221118072831.1395"><vh>@@clean doatest.py</vh>
 <v t="ekr.20221118072831.1396"><vh>cve_2014_3539_attacker</vh></v>
 <v t="ekr.20221118072831.1397"><vh>class DOATest</vh>
 <v t="ekr.20221118072831.1398"><vh>DOATest.try_CVE_2014_3539_exploit</vh></v>
@@ -3480,7 +3480,7 @@
 <v t="ekr.20221118072831.1402"><vh>DOATest.test_compare_digest_compat</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1403"><vh>@clean historytest.py</vh>
+<v t="ekr.20221118072831.1403"><vh>@@clean historytest.py</vh>
 <v t="ekr.20221118072831.1404"><vh>class HistoryTest</vh>
 <v t="ekr.20221118072831.1405"><vh>HistoryTest.setUp</vh></v>
 <v t="ekr.20221118072831.1406"><vh>HistoryTest.tearDown</vh></v>
@@ -3537,7 +3537,7 @@
 <v t="ekr.20221118072831.1453"><vh>SavingHistoryTest.test_writing_and_reading_history2</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1454"><vh>@clean objectdbtest.py</vh>
+<v t="ekr.20221118072831.1454"><vh>@@clean objectdbtest.py</vh>
 <v t="ekr.20221118072831.1455"><vh>_do_for_all_dbs</vh></v>
 <v t="ekr.20221118072831.1456"><vh>class _MockValidation</vh>
 <v t="ekr.20221118072831.1457"><vh>_MockValidation.is_value_valid</vh></v>
@@ -3570,7 +3570,7 @@
 <v t="ekr.20221118072831.1482"><vh>ObjectDBTest.test_using_file_list_observer</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1483"><vh>@clean objectinfertest.py</vh>
+<v t="ekr.20221118072831.1483"><vh>@@clean objectinfertest.py</vh>
 <v t="ekr.20221118072831.1484"><vh>class ObjectInferTest</vh>
 <v t="ekr.20221118072831.1485"><vh>ObjectInferTest.setUp</vh></v>
 <v t="ekr.20221118072831.1486"><vh>ObjectInferTest.tearDown</vh></v>
@@ -3609,7 +3609,7 @@
 <v t="ekr.20221118072831.1519"><vh>ObjectInferTest.test_using_property_as_decorators_and_passing_parameter</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1520"><vh>@clean projecttest.py</vh>
+<v t="ekr.20221118072831.1520"><vh>@@clean projecttest.py</vh>
 <v t="ekr.20221118072831.1521"><vh>class ProjectTest</vh>
 <v t="ekr.20221118072831.1522"><vh>ProjectTest.setUp</vh></v>
 <v t="ekr.20221118072831.1523"><vh>ProjectTest._make_sample_project</vh></v>
@@ -3776,7 +3776,7 @@
 <v t="ekr.20221118072831.1677"><vh>RopeFolderTest.test_nested_dot_ropeproject_folder</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1678"><vh>@clean pycoretest.py</vh>
+<v t="ekr.20221118072831.1678"><vh>@@clean pycoretest.py</vh>
 <v t="ekr.20221118072831.1679"><vh>class PyCoreTest(unittest.TestCase)</vh>
 <v t="ekr.20221118072831.1680"><vh>PyCoreTest.setUp</vh></v>
 <v t="ekr.20221118072831.1681"><vh>PyCoreTest.tearDown</vh></v>
@@ -3924,7 +3924,7 @@
 <v t="ekr.20221118072831.1819"><vh>PyCoreProjectConfigsTest.test_reporting_syntax_errors_with_force_errors_for_packages</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1820"><vh>@clean pyscopestest.py</vh>
+<v t="ekr.20221118072831.1820"><vh>@@clean pyscopestest.py</vh>
 <v t="ekr.20221118072831.1821"><vh>class PyCoreScopesTest</vh>
 <v t="ekr.20221118072831.1822"><vh>PyCoreScopesTest.setUp</vh></v>
 <v t="ekr.20221118072831.1823"><vh>PyCoreScopesTest.tearDown</vh></v>
@@ -3976,7 +3976,7 @@
 <v t="ekr.20221118072831.1869"><vh>PyCoreScopesTest.test_only_get_inner_scope_region</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1870"><vh>@clean reprtest.py</vh>
+<v t="ekr.20221118072831.1870"><vh>@@clean reprtest.py</vh>
 <v t="ekr.20221118072831.1871"><vh>project</vh></v>
 <v t="ekr.20221118072831.1872"><vh>mod</vh></v>
 <v t="ekr.20221118072831.1873"><vh>mod1</vh></v>
@@ -3994,7 +3994,7 @@
 <v t="ekr.20221118072831.1885"><vh>test_repr_pyobjectsdef_pycomprehension</vh></v>
 <v t="ekr.20221118072831.1886"><vh>test_repr_pyobjectsdef_pycomprehension_without_associated_resource</vh></v>
 </v>
-<v t="ekr.20221118072831.1887"><vh>@clean runmodtest.py</vh>
+<v t="ekr.20221118072831.1887"><vh>@@clean runmodtest.py</vh>
 <v t="ekr.20221118072831.1888"><vh>class PythonFileRunnerTest</vh>
 <v t="ekr.20221118072831.1889"><vh>PythonFileRunnerTest.setUp</vh></v>
 <v t="ekr.20221118072831.1890"><vh>PythonFileRunnerTest.tearDown</vh></v>
@@ -4011,7 +4011,7 @@
 <v t="ekr.20221118072831.1901"><vh>PythonFileRunnerTest.test_making_runner_when_doi_is_disabled</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1902"><vh>@clean simplifytest.py</vh>
+<v t="ekr.20221118072831.1902"><vh>@@clean simplifytest.py</vh>
 <v t="ekr.20221118072831.1903"><vh>class SimplifyTest</vh>
 <v t="ekr.20221118072831.1904"><vh>SimplifyTest.test_trivial_case</vh></v>
 <v t="ekr.20221118072831.1905"><vh>SimplifyTest.test_empty_strs</vh></v>
@@ -4030,7 +4030,7 @@
 <v t="ekr.20221118072831.1918"><vh>SimplifyTest.test_simplifying_uppercase_f_string_containing_quotes</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1919"><vh>@clean testutils.py</vh>
+<v t="ekr.20221118072831.1919"><vh>@@clean testutils.py</vh>
 <v t="ekr.20221118072831.1920"><vh>sample_project (aka create_module/package)</vh></v>
 <v t="ekr.20221118072831.1922"><vh>remove_project</vh></v>
 <v t="ekr.20221118072831.1923"><vh>remove_recursively &amp; helper</vh>
@@ -4043,7 +4043,7 @@
 <v t="ekr.20221118072831.1929"><vh>skipNotPOSIX</vh></v>
 <v t="ekr.20221118072831.1930"><vh>time_limit</vh></v>
 </v>
-<v t="ekr.20221118072831.1931"><vh>@clean type_hinting_test.py</vh>
+<v t="ekr.20221118072831.1931"><vh>@@clean type_hinting_test.py</vh>
 <v t="ekr.20221118072831.1932"><vh>class AbstractHintingTest</vh>
 <v t="ekr.20221118072831.1933"><vh>AbstractHintingTest.setUp</vh></v>
 <v t="ekr.20221118072831.1934"><vh>AbstractHintingTest.tearDown</vh></v>
@@ -4100,7 +4100,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.1979"><vh>contrib</vh>
-<v t="ekr.20221118072831.1980"><vh>@clean autoimporttest.py</vh>
+<v t="ekr.20221118072831.1980"><vh>@@clean autoimporttest.py</vh>
 <v t="ekr.20221118072831.1981"><vh>class AutoImportTest</vh>
 <v t="ekr.20221118072831.1982"><vh>AutoImportTest.setUp</vh></v>
 <v t="ekr.20221118072831.1983"><vh>AutoImportTest.tearDown</vh></v>
@@ -4135,14 +4135,14 @@
 <v t="ekr.20221118072831.2011"><vh>AutoImportObservingTest.test_removing_files</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2012"><vh>@clean changestacktest.py</vh>
+<v t="ekr.20221118072831.2012"><vh>@@clean changestacktest.py</vh>
 <v t="ekr.20221118072831.2013"><vh>class ChangeStackTest</vh>
 <v t="ekr.20221118072831.2014"><vh>ChangeStackTest.setUp</vh></v>
 <v t="ekr.20221118072831.2015"><vh>ChangeStackTest.tearDown</vh></v>
 <v t="ekr.20221118072831.2016"><vh>ChangeStackTest.test_change_stack</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2017"><vh>@clean codeassisttest.py</vh>
+<v t="ekr.20221118072831.2017"><vh>@@clean codeassisttest.py</vh>
 <v t="ekr.20221118072831.2018"><vh>class CodeAssistTest</vh>
 <v t="ekr.20221118072831.2019"><vh>CodeAssistTest.setUp</vh></v>
 <v t="ekr.20221118072831.2020"><vh>CodeAssistTest.tearDown</vh></v>
@@ -4329,7 +4329,7 @@
 <v t="ekr.20221118072831.2200"><vh>CodeAssistInProjectsTest.test_starting_expression</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2201"><vh>@clean finderrorstest.py</vh>
+<v t="ekr.20221118072831.2201"><vh>@@clean finderrorstest.py</vh>
 <v t="ekr.20221118072831.2202"><vh>class FindErrorsTest</vh>
 <v t="ekr.20221118072831.2203"><vh>FindErrorsTest.setUp</vh></v>
 <v t="ekr.20221118072831.2204"><vh>FindErrorsTest.tearDown</vh></v>
@@ -4340,7 +4340,7 @@
 <v t="ekr.20221118072831.2209"><vh>FindErrorsTest.test_bad_attributes</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2210"><vh>@clean findittest.py</vh>
+<v t="ekr.20221118072831.2210"><vh>@@clean findittest.py</vh>
 <v t="ekr.20221118072831.2211"><vh>class FindItTest</vh>
 <v t="ekr.20221118072831.2212"><vh>FindItTest.setUp</vh></v>
 <v t="ekr.20221118072831.2213"><vh>FindItTest.tearDown</vh></v>
@@ -4357,7 +4357,7 @@
 <v t="ekr.20221118072831.2224"><vh>FindItTest.test_find_definition_in_other_modules</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2225"><vh>@clean fixmodnamestest.py</vh>
+<v t="ekr.20221118072831.2225"><vh>@@clean fixmodnamestest.py</vh>
 <v t="ekr.20221118072831.2226"><vh>class FixModuleNamesTest</vh>
 <v t="ekr.20221118072831.2227"><vh>FixModuleNamesTest.setUp</vh></v>
 <v t="ekr.20221118072831.2228"><vh>FixModuleNamesTest.tearDown</vh></v>
@@ -4368,7 +4368,7 @@
 </v>
 <v t="ekr.20221118072831.2233"><vh>_fixer</vh></v>
 </v>
-<v t="ekr.20221118072831.2234"><vh>@clean generatetest.py</vh>
+<v t="ekr.20221118072831.2234"><vh>@@clean generatetest.py</vh>
 <v t="ekr.20221118072831.2235"><vh>class GenerateTest</vh>
 <v t="ekr.20221118072831.2236"><vh>GenerateTest.setUp</vh></v>
 <v t="ekr.20221118072831.2237"><vh>GenerateTest.tearDown</vh></v>
@@ -4410,7 +4410,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.2275"><vh>autoimport</vh>
-<v t="ekr.20221118072831.2276"><vh>@clean conftest.py</vh>
+<v t="ekr.20221118072831.2276"><vh>@@clean conftest.py</vh>
 <v t="ekr.20221118072831.2277"><vh>project</vh></v>
 <v t="ekr.20221118072831.2278"><vh>mod1</vh></v>
 <v t="ekr.20221118072831.2279"><vh>mod1_path</vh></v>
@@ -4420,7 +4420,7 @@
 <v t="ekr.20221118072831.2283"><vh>build_path</vh></v>
 <v t="ekr.20221118072831.2284"><vh>compiled_lib</vh></v>
 </v>
-<v t="ekr.20221118072831.2285"><vh>@clean modeltest.py</vh>
+<v t="ekr.20221118072831.2285"><vh>@@clean modeltest.py</vh>
 <v t="ekr.20221118072831.2286"><vh>class QueryTest</vh></v>
 <v t="ekr.20221118072831.2287"><vh>class NameModelTest</vh>
 <v t="ekr.20221118072831.2288"><vh>NameModelTest.test_name_objects</vh></v>
@@ -4430,12 +4430,12 @@
 <v t="ekr.20221118072831.2291"><vh>PackageModelTest.test_query_strings</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2292"><vh>@clean parsetest.py</vh>
+<v t="ekr.20221118072831.2292"><vh>@@clean parsetest.py</vh>
 <v t="ekr.20221118072831.2293"><vh>test_typing_names</vh></v>
 <v t="ekr.20221118072831.2294"><vh>test_find_sys</vh></v>
 <v t="ekr.20221118072831.2295"><vh>test_find_underlined</vh></v>
 </v>
-<v t="ekr.20221118072831.2296"><vh>@clean utilstest.py</vh>
+<v t="ekr.20221118072831.2296"><vh>@@clean utilstest.py</vh>
 <v t="ekr.20221118072831.2297"><vh>test_get_package_source</vh></v>
 <v t="ekr.20221118072831.2298"><vh>test_get_package_source_not_project</vh></v>
 <v t="ekr.20221118072831.2299"><vh>test_get_package_source_pytest</vh></v>
@@ -4450,7 +4450,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.2307"><vh>refactor</vh>
-<v t="ekr.20221118072831.3232"><vh>@clean __init__.py</vh>
+<v t="ekr.20221118072831.3232"><vh>@@clean __init__.py</vh>
 <v t="ekr.20221118072831.3233"><vh>class MethodObjectTest</vh>
 <v t="ekr.20221118072831.3234"><vh>MethodObjectTest.setUp</vh></v>
 <v t="ekr.20221118072831.3235"><vh>MethodObjectTest.tearDown</vh></v>
@@ -4550,7 +4550,7 @@
 <v t="ekr.20221118072831.3324"><vh>TaskHandleTest.test_getting_job_name (changed)</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2308"><vh>@clean change_signature_test.py</vh>
+<v t="ekr.20221118072831.2308"><vh>@@clean change_signature_test.py</vh>
 <v t="ekr.20221118072831.2309"><vh>class ChangeSignatureTest</vh>
 <v t="ekr.20221118072831.2310"><vh>ChangeSignatureTest.setUp</vh></v>
 <v t="ekr.20221118072831.2311"><vh>ChangeSignatureTest.tearDown</vh></v>
@@ -4598,7 +4598,7 @@
 <v t="ekr.20221118072831.2353"><vh>ChangeSignatureTest.test_reordering_and_automatic_defaults</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2354"><vh>@clean extracttest.py</vh>
+<v t="ekr.20221118072831.2354"><vh>@@clean extracttest.py</vh>
 <v t="ekr.20221118072831.2355"><vh>class ExtractMethodTest</vh>
 <v t="ekr.20221118072831.2356"><vh>ExtractMethodTest.setUp</vh></v>
 <v t="ekr.20221118072831.2357"><vh>ExtractMethodTest.tearDown</vh></v>
@@ -4763,7 +4763,7 @@
 <v t="ekr.20221118072831.2516"><vh>ExtractMethodTest.test_extract_method_containing_structural_pattern_match_3</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2517"><vh>@clean importutilstest.py</vh>
+<v t="ekr.20221118072831.2517"><vh>@@clean importutilstest.py</vh>
 <v t="ekr.20221118072831.2518"><vh>class ImportUtilsTest</vh>
 <v t="ekr.20221118072831.2519"><vh>ImportUtilsTest.setUp</vh></v>
 <v t="ekr.20221118072831.2520"><vh>ImportUtilsTest.tearDown</vh></v>
@@ -4916,7 +4916,7 @@
 <v t="ekr.20221118072831.2666"><vh>AddImportTest.test_adding_import_for_modules_with_normal_duplicate_imports</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2667"><vh>@clean inlinetest.py</vh>
+<v t="ekr.20221118072831.2667"><vh>@@clean inlinetest.py</vh>
 <v t="ekr.20221118072831.2668"><vh>class InlineTest</vh>
 <v t="ekr.20221118072831.2669"><vh>InlineTest.setUp</vh></v>
 <v t="ekr.20221118072831.2670"><vh>InlineTest.tearDown</vh></v>
@@ -5019,7 +5019,7 @@
 <v t="ekr.20221118072831.2767"><vh>InlineTest.test_overriding_default_arguments_with_type_hints</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2768"><vh>@clean movetest.py</vh>
+<v t="ekr.20221118072831.2768"><vh>@@clean movetest.py</vh>
 <v t="ekr.20221118072831.2769"><vh>class MoveRefactoringTest</vh>
 <v t="ekr.20221118072831.2770"><vh>MoveRefactoringTest.setUp</vh></v>
 <v t="ekr.20221118072831.2771"><vh>MoveRefactoringTest.tearDown</vh></v>
@@ -5098,7 +5098,7 @@
 <v t="ekr.20221118072831.2844"><vh>MoveRefactoringTest.test_moving_decorated_class</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2845"><vh>@clean multiprojecttest.py</vh>
+<v t="ekr.20221118072831.2845"><vh>@@clean multiprojecttest.py</vh>
 <v t="ekr.20221118072831.2846"><vh>class MultiProjectRefactoringTest</vh>
 <v t="ekr.20221118072831.2847"><vh>MultiProjectRefactoringTest.setUp</vh></v>
 <v t="ekr.20221118072831.2848"><vh>MultiProjectRefactoringTest.tearDown</vh></v>
@@ -5108,7 +5108,7 @@
 <v t="ekr.20221118072831.2852"><vh>MultiProjectRefactoringTest.test_rename_from_the_project_not_containing_the_change</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.2853"><vh>@clean patchedasttest.py</vh>
+<v t="ekr.20221118072831.2853"><vh>@@clean patchedasttest.py</vh>
 <v t="ekr.20221118072831.2854"><vh>class PatchedASTTest</vh>
 <v t="ekr.20221118072831.2857"><vh>PatchedASTTest.assert_single_case_match_block</vh></v>
 <v t="ekr.20221118072831.2858"><vh>PatchedASTTest.test_bytes_string</vh></v>
@@ -5272,7 +5272,7 @@
 <v t="ekr.20221118072831.3011"><vh>_ResultChecker.check_children</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.3012"><vh>@clean renametest.py</vh>
+<v t="ekr.20221118072831.3012"><vh>@@clean renametest.py</vh>
 <v t="ekr.20221118072831.3013"><vh>class RenameRefactoringTest</vh>
 <v t="ekr.20221118072831.3014"><vh>RenameRefactoringTest.setUp</vh></v>
 <v t="ekr.20221118072831.3015"><vh>RenameRefactoringTest.tearDown</vh></v>
@@ -5380,7 +5380,7 @@
 <v t="ekr.20221118072831.3115"><vh>ImplicitInterfacesTest.test_performing_rename_on_parameters</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.3116"><vh>@clean restructuretest.py</vh>
+<v t="ekr.20221118072831.3116"><vh>@@clean restructuretest.py</vh>
 <v t="ekr.20221118072831.3117"><vh>class RestructureTest</vh>
 <v t="ekr.20221118072831.3118"><vh>RestructureTest.setUp</vh></v>
 <v t="ekr.20221118072831.3119"><vh>RestructureTest.tearDown</vh></v>
@@ -5409,7 +5409,7 @@
 <v t="ekr.20221118072831.3142"><vh>RestructureTest.test_yield_from</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.3143"><vh>@clean similarfindertest.py</vh>
+<v t="ekr.20221118072831.3143"><vh>@@clean similarfindertest.py</vh>
 <v t="ekr.20221118072831.3144"><vh>class SimilarFinderTest</vh>
 <v t="ekr.20221118072831.3145"><vh>SimilarFinderTest.setUp</vh></v>
 <v t="ekr.20221118072831.3146"><vh>SimilarFinderTest.tearDown</vh></v>
@@ -5459,7 +5459,7 @@
 <v t="ekr.20221118072831.3188"><vh>TemplateTest.test_substituting_multiple_names</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.3189"><vh>@clean suitestest.py</vh>
+<v t="ekr.20221118072831.3189"><vh>@@clean suitestest.py</vh>
 <v t="ekr.20221118072831.3190"><vh>class SuiteTest</vh>
 <v t="ekr.20221118072831.3193"><vh>SuiteTest.test_trivial_case</vh></v>
 <v t="ekr.20221118072831.3194"><vh>SuiteTest.test_simple_ifs</vh></v>
@@ -5485,7 +5485,7 @@
 </v>
 <v t="ekr.20221118072831.3214"><vh>source_suite_tree</vh></v>
 </v>
-<v t="ekr.20221118072831.3215"><vh>@clean usefunctiontest.py</vh>
+<v t="ekr.20221118072831.3215"><vh>@@clean usefunctiontest.py</vh>
 <v t="ekr.20221118072831.3216"><vh>class UseFunctionTest</vh>
 <v t="ekr.20221118072831.3217"><vh>UseFunctionTest.setUp</vh></v>
 <v t="ekr.20221118072831.3218"><vh>UseFunctionTest.tearDown</vh></v>
@@ -58430,7 +58430,7 @@ efc.GitDiffController(c).diff_two_revs(
 <t tx="ekr.20221129082257.1">@path c:\Scripts\
 @language batch
 echo off
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
 rem Rope #551: https://github.com/python-rope/rope/issues/551
 
@@ -58463,6 +58463,7 @@ rem E252: missing whitespace around parameter equals
 rem E275: missing whitespace after keyword.
 rem E302: expected 2 blank lines, found 1
 
+echo flake8 rope
 call python -m flake8 rope --extend-ignore=^
 B006,B007,B008,B011,B020,^
 E203,E252,E262,E266,E275,E302,E731,^
@@ -58472,8 +58473,7 @@ F401,F402,F403,F405,F811 %*
 <t tx="ekr.20221129082621.1">@path c:\Scripts\
 @language batch
 echo off
-cls
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
 rem unittest does not work!
 
@@ -58482,29 +58482,22 @@ rem -x: fail fast
 
 rem -s is useful for debugging, but there are messages.
 rem There are many warnings
-pytest -W ignore::Warning %*
+python -m pytest -W ignore::Warning %*
 </t>
 <t tx="ekr.20221129082906.1">@path c:\Scripts\
 @language batch
 echo off
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
-echo re
 call re-r.cmd
-
-rem echo blacken
-rem call python -m black rope
-
-echo flake8
+call blacken-r.cmd
 call flake8-r.cmd
-
-rem echo git status
-rem call git status
 </t>
 <t tx="ekr.20221129082956.1">@path c:\Scripts\
 @language batch
 echo off
-cd c:\Repos\ekr-clone-rope2
+cls
+cd c:\Repos\ekr-fork-rope2
 
 rem See .mypy.ini for exclusions!
 rem Always use the fast (official) version of mypy.
@@ -58577,21 +58570,7 @@ max-line-length = 110
 <t tx="ekr.20221201161803.1">@path c:\Scripts\
 @language batch
 echo off
-cd c:\Repos\ekr-clone-rope2
-
-python -m black rope %*
-</t>
-<t tx="ekr.20221203042424.1">Install all required packages:  (from contributing.rst)
-pip install -e .[dev]
-</t>
-<t tx="ekr.20221204075047.1">@path c:\Scripts\
-@language batch
-echo off
-cd c:\Repos\ekr-clone-rope2
-
-echo reindent
-call reindent rope\base
-call reindent rope\refactor
+cd c:\Repos\ekr-fork-rope2
 
 echo black rope.base
 call python -m black rope\base
@@ -58599,37 +58578,40 @@ call python -m black rope\base
 echo.
 echo black rope.refactor
 call python -m black rope\refactor
+</t>
+<t tx="ekr.20221203042424.1">Install all required packages:  (from contributing.rst)
+pip install -e .[dev]
+</t>
+<t tx="ekr.20221204075047.1">@path c:\Scripts\
+@language batch
+echo off
+cd c:\Repos\ekr-fork-rope2
 
-rem call python -m leo.core.leoAst --orange --recursive rope\base
-rem call python -m leo.core.leoAst --orange --recursive rope\refactor
+echo reindent rope.base
+call reindent rope\base
+
+echo reindent rope.refactor
+call reindent rope\refactor
 </t>
 <t tx="ekr.20221204075937.1">@path c:\Scripts\
 @language batch
 echo off
 cls
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
-rem echo re
 call re-r.cmd
-
-echo flake8
+call blacken-r.cmd
 call flake8-r.cmd
-
-echo pytest
-call pytest -W ignore::Warning
+call test-r
 
 echo.
-echo pylint rope
-call pylint rope
-
-echo pylint ropetest
-call pylint ropetest
+call pylint-r.cmd
 </t>
 <t tx="ekr.20221204084958.1">@path c:\Scripts\
 @language batch
 echo off
 cls
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
 rem -x: fail fast
 rem -W error::Warning
@@ -58641,8 +58623,7 @@ call pytest ropetest/builtinstest.py -k test_simple_case_1 %*
 <t tx="ekr.20221204085742.1">@path c:\Scripts\
 @language batch
 echo off
-cls
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
 rem --cache-clear -W error:DeprecationWarning
 
@@ -58651,8 +58632,7 @@ python -m pytest --cov-report html --cov-report term-missing --cov -W ignore::Wa
 <t tx="ekr.20221204090024.1">@path c:\Scripts\
 @language batch
 echo off
-cls
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 
 echo pylint rope
 call pylint rope
@@ -58963,7 +58943,7 @@ max-nested-blocks=10  # Apparently, this can't be suppressed!
 <t tx="ekr.20221209085815.1">@path c:\Scripts\
 @language batch
 echo off
-cd c:\Repos\ekr-clone-rope2
+cd c:\Repos\ekr-fork-rope2
 git push upstream %*</t>
 <t tx="ekr.20221210100024.1">@path rope/base/
 from rope.base import ast
@@ -59230,12 +59210,14 @@ _Inferred = pynames._Inferred
 @language batch
 echo off
 cls
-cd c:\Repos\ekr-clone-rope2
-leo rope.leo %*</t>
+cd c:\Repos\ekr-fork-rope2
+leo rope.leo %*
+</t>
 <t tx="ekr.20221214124101.1">@path c:\Scripts\
 @language batch
 echo off
-cd C:\Repos\ekr-clone-rope2</t>
+cd C:\Repos\ekr-fork-rope2
+</t>
 <t tx="ekr.20221215002954.1"></t>
 <t tx="ekr.20221216152134.1">class ParameterName(PyName):
     pass
