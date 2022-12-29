@@ -68,7 +68,7 @@
 <v t="ekr.20221118072830.16"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20221118072830.17"><vh>rope/base</vh>
 <v t="ekr.20221118072830.1119"><vh>@@clean __init__.py</vh></v>
-<v t="ekr.20221208160436.1"><vh>@@@@clean rast.py</vh>
+<v t="ekr.20221208160436.1"><vh>@@@clean rast.py</vh>
 <v t="ekr.20221211012524.1"><vh>rast.parse</vh></v>
 <v t="ekr.20221208160520.2"><vh>rast.call_for_nodes</vh></v>
 </v>
@@ -1563,7 +1563,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1337"><vh>rope/base/oi/type_hinting</vh>
-<v t="ekr.20221118072830.1411"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1411"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20221118072830.1338"><vh>@@clean oi/type_hinting/evaluate.py</vh>
 <v t="ekr.20221118072830.1339"><vh>class SymbolBase</vh>
 <v t="ekr.20221118072830.1340"><vh>SymbolBase.__init__</vh></v>
@@ -1654,7 +1654,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1412"><vh>providers</vh>
-<v t="ekr.20221118072830.1470"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1470"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20221118072830.1413"><vh>@@clean composite.py</vh>
 <v t="ekr.20221118072830.1414"><vh>class ParamProvider</vh>
 <v t="ekr.20221118072830.1415"><vh>ParamProvider.__init__</vh></v>
@@ -1737,7 +1737,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1471"><vh>resolvers</vh>
-<v t="ekr.20221118072830.1480"><vh>@@@clean __init__.py</vh></v>
+<v t="ekr.20221118072830.1480"><vh>@@clean __init__.py</vh></v>
 <v t="ekr.20221118072830.1472"><vh>@@clean composite.py</vh>
 <v t="ekr.20221118072830.1473"><vh>class Resolver</vh>
 <v t="ekr.20221118072830.1474"><vh>Resolver.__init__</vh></v>
@@ -2011,12 +2011,9 @@
 <v t="ekr.20221118072831.91"><vh>Query.drop_table</vh></v>
 <v t="ekr.20221118072831.92"><vh>Query.delete_from</vh></v>
 </v>
-<v t="ekr.20221118072831.93"><vh>class Name</vh>
-<v t="ekr.20221118072831.94"><vh>Name.create_table</vh></v>
-</v>
-<v t="ekr.20221118072831.95"><vh>class Package</vh>
-<v t="ekr.20221118072831.96"><vh>Package.create_table</vh></v>
-</v>
+<v t="ekr.20221118072831.93"><vh>class Model</vh></v>
+<v t="ekr.20221229121101.1"><vh>class Name</vh></v>
+<v t="ekr.20221118072831.95"><vh>class Package</vh></v>
 </v>
 <v t="ekr.20221118072831.97"><vh>@@clean contrib/autoimport/parse.py</vh>
 <v t="ekr.20221118072831.98"><vh>get_type_ast</vh></v>
@@ -5836,6 +5833,8 @@ def get_name(self):
 </t>
 <t tx="ekr.20221118072830.1038">def increment(self):
     pass
+
+
 </t>
 <t tx="ekr.20221118072830.1039">@path rope/base/
 import bisect
@@ -6602,6 +6601,7 @@ __all__ = ["project", "libutils", "exceptions"]
 <t tx="ekr.20221118072830.1120"></t>
 <t tx="ekr.20221118072830.1121">@path rope/base/oi/
 import base64
+import contextlib
 import hashlib
 import hmac
 
@@ -6743,7 +6743,7 @@ except ImportError:
     """Stop the process"""
     if self.process.poll() is not None:
         return
-    try:
+    with contextlib.suppress(OSError):
         if hasattr(self.process, "terminate"):
             self.process.terminate()
         elif os.name != "nt":
@@ -6753,8 +6753,6 @@ except ImportError:
 
             handle = int(self.process._handle)
             ctypes.windll.kernel32.TerminateProcess(handle, -1)
-    except OSError:
-        pass
 
 </t>
 <t tx="ekr.20221118072830.1131">def add_finishing_observer(self, observer):
@@ -6871,8 +6869,9 @@ except ImportError:
     os.remove(self.file_name)
 </t>
 <t tx="ekr.20221118072830.1142">@path rope/base/oi/
-from rope.base.oi import objectdb
 from rope.base import utils
+from rope.base.oi import objectdb
+from rope.base.serializer import json_to_python, python_to_json
 
 
 @others
@@ -7039,11 +7038,20 @@ def persist(self):
 
 </t>
 <t tx="ekr.20221118072830.1175">def __getstate__(self):
-    return (self.call_info, self.per_name)
+    original_data = (self.call_info, self.per_name)
+    encoded = python_to_json(original_data, version=2)
+    encoded["$"] = "ScopeInfo"
+    return encoded
 
 </t>
 <t tx="ekr.20221118072830.1176">def __setstate__(self, data):
-    self.call_info, self.per_name = data
+    if isinstance(data, tuple) and len(data) == 2:
+        # legacy pickle-based serialization
+        self.call_info, self.per_name = data
+    else:
+        # new serialization
+        assert data["$"] == "ScopeInfo"
+        self.call_info, self.per_name = json_to_python(data)
 </t>
 <t tx="ekr.20221118072830.1177">@path rope/base/oi/
 @others
@@ -7434,7 +7442,7 @@ def persist(self):
 import warnings
 
 from rope.base import exceptions, resourceobserver
-from rope.base.oi import objectdb, memorydb, transform
+from rope.base.oi import memorydb, objectdb, transform
 
 
 @others
@@ -7730,20 +7738,20 @@ if __name__ == "__main__":
 </t>
 <t tx="ekr.20221118072830.1246">def __rope_start_everything():
     import os
-    import sys
     import socket
+    import sys
 
     try:
         import cPickle as pickle
     except ImportError:
         import pickle
-    import marshal
-    import inspect
-    import types
-    import threading
     import base64
     import hashlib
     import hmac
+    import inspect
+    import marshal
+    import threading
+    import types
 
     @others
     send_info = sys.argv[1]
@@ -7985,7 +7993,7 @@ if __name__ == "__main__":
 import rope.base.ast
 import rope.base.oi.soi
 import rope.base.pynames
-from rope.base import pyobjects, evaluate, nameanalyze, arguments
+from rope.base import arguments, evaluate, nameanalyze, pyobjects
 
 
 @others
@@ -8170,15 +8178,8 @@ package.
 
 """
 import rope.base.builtins  # Use full qualification for clarity.
-from rope.base import (
-    arguments,
-    evaluate,
-    pynames,
-    pyobjects,
-    utils,
-)
+from rope.base import arguments, evaluate, pynames, pyobjects, utils
 from rope.base.oi.type_hinting.factory import get_type_hinting_factory
-
 
 _ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)
 
@@ -8830,8 +8831,9 @@ from rope.base import exceptions
 # Based on super lightweight Simple Top-Down Parser from http://effbot.org/zone/simple-top-down-parsing.htm
 # and https://bitbucket.org/emacsway/sqlbuilder/src/default/sqlbuilder/smartsql/contrib/evaluate.py
 import re
-from rope.base.oi.type_hinting import utils
+
 from rope.base import utils as base_utils
+from rope.base.oi.type_hinting import utils
 
 
 @others
@@ -9301,16 +9303,17 @@ def __call__(self, program):
 
 </t>
 <t tx="ekr.20221118072830.1385">@path rope/base/oi/type_hinting/
+from rope.base import utils
 from rope.base.oi.type_hinting import interfaces
 from rope.base.oi.type_hinting.providers import (
     composite,
-    inheritance,
     docstrings,
+    inheritance,
     numpydocstrings,
     pep0484_type_comments,
 )
-from rope.base.oi.type_hinting.resolvers import composite as composite_resolvers, types
-from rope.base import utils
+from rope.base.oi.type_hinting.resolvers import composite as composite_resolvers
+from rope.base.oi.type_hinting.resolvers import types
 
 
 @others
@@ -9446,7 +9449,7 @@ get_str_type = _create_builtin_type_getter(Str)
 </t>
 <t tx="ekr.20221118072830.1401">@path rope/base
 import logging
-from typing import Union, Optional
+from typing import Optional, Union
 
 import rope.base.utils as base_utils
 from rope.base import evaluate
@@ -10070,6 +10073,7 @@ https://github.com/davidhalter/jedi/blob/b489019f5bd5750051122b94cc767df47751ecb
 Thanks to @davidhalter for this utils under MIT License.
 """
 import re
+
 from rope.base.ast import literal_eval
 from rope.base.oi.type_hinting.providers import docstrings
 
@@ -10116,6 +10120,7 @@ if not NumpyDocString:
 </t>
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
+
 from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
@@ -11554,13 +11559,7 @@ from rope.base import ast, evaluate, pyobjects
         return f"{self.lineno}: {self.error}"
 </t>
 <t tx="ekr.20221118072830.1594">@path rope/contrib/
-from rope.base import (
-    exceptions,
-    evaluate,
-    pyobjects,
-    taskhandle,
-    worder,
-)
+from rope.base import evaluate, exceptions, pyobjects, taskhandle, worder
 from rope.contrib import fixsyntax
 from rope.refactor import occurrences
 
@@ -11576,7 +11575,7 @@ from rope.refactor import occurrences
     unsure=False,
     resources=None,
     in_hierarchy=False,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Return a list of `Location`
 
@@ -11612,7 +11611,11 @@ from rope.refactor import occurrences
 
 </t>
 <t tx="ekr.20221118072830.1597">def find_implementations(
-    project, resource, offset, resources=None, task_handle=taskhandle.NullTaskHandle()
+    project,
+    resource,
+    offset,
+    resources=None,
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Find the places a given method is overridden.
 
@@ -11655,15 +11658,15 @@ from rope.refactor import occurrences
 <t tx="ekr.20221118072830.16">@path rope/
 """rope, a python refactoring library"""
 
-from pkg_resources import get_distribution, DistributionNotFound
+from pkg_resources import DistributionNotFound, get_distribution
 
 try:
     VERSION = get_distribution("rope").version
 except DistributionNotFound:
 
     def get_fallback_version():
-        import re
         import pathlib
+        import re
 
         pyproject = (
             pathlib.Path(__file__).resolve().parent.parent / "pyproject.toml"
@@ -11755,8 +11758,7 @@ License along with this program.  If not, see
     result = []
     for resource in resources:
         job_set.started_job(resource.path)
-        for occurrence in finder.find_occurrences(resource):
-            result.append(Location(occurrence))
+        result.extend(map(Location, finder.find_occurrences(resource)))
         job_set.finished_job()
     return result
 </t>
@@ -11794,7 +11796,7 @@ from rope.refactor import rename
     self.project = project
 
 </t>
-<t tx="ekr.20221118072830.1606">def get_changes(self, fixer=str.lower, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.1606">def get_changes(self, fixer=str.lower, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Fix module names
 
     `fixer` is a function that takes and returns a `str`.  Given
@@ -11847,14 +11849,7 @@ from rope.refactor import rename
 
 </t>
 <t tx="ekr.20221118072830.1610">@path rope/contrib/
-from rope.base import (
-    codeanalyze,
-    exceptions,
-    evaluate,
-    libutils,
-    utils,
-    worder,
-)
+from rope.base import codeanalyze, evaluate, exceptions, libutils, utils, worder
 from rope.base.codeanalyze import ArrayLinesAdapter, LogicalLineFinder
 
 
@@ -12132,7 +12127,7 @@ def _operations(self):
     @others
 </t>
 <t tx="ekr.20221118072830.194"></t>
-<t tx="ekr.20221118072830.195">def do(self, job_set=taskhandle.NullJobSet()):
+<t tx="ekr.20221118072830.195">def do(self, job_set=taskhandle.DEFAULT_JOB_SET):
     try:
         done = []
         for change in self.changes:
@@ -12145,7 +12140,7 @@ def _operations(self):
         raise
 
 </t>
-<t tx="ekr.20221118072830.196">def undo(self, job_set=taskhandle.NullJobSet()):
+<t tx="ekr.20221118072830.196">def undo(self, job_set=taskhandle.DEFAULT_JOB_SET):
     try:
         done = []
         for change in reversed(self.changes):
@@ -12212,7 +12207,7 @@ def _operations(self):
 
 
 </t>
-<t tx="ekr.20221118072830.202">def call(self, job_set=taskhandle.NullJobSet()):
+<t tx="ekr.20221118072830.202">def call(self, job_set=taskhandle.DEFAULT_JOB_SET):
     job_set.started_job(str(self))
     function(self)
     job_set.finished_job()
@@ -13149,13 +13144,12 @@ import rope.base.pyobjects
 from rope.base import (
     arguments,
     ast,
-    nameanalyze,
     exceptions,
+    nameanalyze,
     pyobjects,
     pyobjectsdef,
     worder,
 )
-
 
 BadIdentifierError = exceptions.BadIdentifierError
 
@@ -13689,12 +13683,11 @@ provided by `FileSystemCommands` class.  See `SubversionCommands` and
 `MercurialCommands` for example.
 
 """
-import re
 import os
+import re
 import shutil
 import subprocess
 import typing
-
 
 FileContent = typing.NewType("FileContent", bytes)
 
@@ -14041,7 +14034,7 @@ FileContent = typing.NewType("FileContent", bytes)
 </t>
 <t tx="ekr.20221118072830.423">@path rope/base/
 @nopyflakes
-from rope.base import exceptions, change, taskhandle, utils
+from rope.base import change, exceptions, taskhandle, utils
 
 
 @others
@@ -14074,7 +14067,7 @@ from rope.base import exceptions, change, taskhandle, utils
                 self._redo_list.append(to_change(data))
 
 </t>
-<t tx="ekr.20221118072830.427">def do(self, changes, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.427">def do(self, changes, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Perform the change and add it to the `self.undo_list`
 
     Note that uninteresting changes (changes to ignored files)
@@ -14104,7 +14097,7 @@ from rope.base import exceptions, change, taskhandle, utils
     return False
 
 </t>
-<t tx="ekr.20221118072830.430">def undo(self, change=None, drop=False, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.430">def undo(self, change=None, drop=False, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Redo done changes from the history
 
     When `change` is `None`, the last done change will be undone.
@@ -14130,7 +14123,7 @@ from rope.base import exceptions, change, taskhandle, utils
     return result
 
 </t>
-<t tx="ekr.20221118072830.431">def redo(self, change=None, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.431">def redo(self, change=None, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Redo undone changes from the history
 
     When `change` is `None`, the last undone change will be
@@ -14383,7 +14376,7 @@ def relative(root, path):
 
 
 </t>
-<t tx="ekr.20221118072830.458">def analyze_modules(project, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.458">def analyze_modules(project, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Perform static object analysis on all python files in the project
 
     Note that this might be really time consuming.
@@ -14450,6 +14443,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 from packaging.requirements import Requirement
 from pytoolconfig import PyToolConfig, UniversalKey, field
 from pytoolconfig.sources import Source
+
 from rope.base.resources import Folder
 
 
@@ -14751,22 +14745,20 @@ Builtin and c-extension modules that are allowed to be imported and inspected by
     return config
 </t>
 <t tx="ekr.20221118072830.476">@path rope/base/
+import contextlib
+import json
 import os
 import sys
 import warnings
+from contextlib import ExitStack
+from typing import Optional
 
 import rope.base.fscommands  # Use full qualification for clarity.
-from rope.base import (
-    exceptions,
-    history,
-    pycore,
-    taskhandle,
-    utils,
-)
+import rope.base.resourceobserver as resourceobserver
+from rope.base import exceptions, history, pycore, taskhandle, utils
 from rope.base.exceptions import ModuleNotFoundError
 from rope.base.prefs import Prefs, get_config
 from rope.base.resources import File, Folder, _ResourceMatcher
-import rope.base.resourceobserver as resourceobserver
 
 try:
     import cPickle as pickle
@@ -14832,11 +14824,9 @@ except ImportError:
 <t tx="ekr.20221118072830.481">def get_python_path_folders(self):
     result = []
     for src in self.prefs.get("python_path", []) + sys.path:
-        try:
+        with contextlib.suppress(exceptions.ResourceNotFoundError):
             src_folder = get_no_project().get_resource(src)
             result.append(src_folder)
-        except exceptions.ResourceNotFoundError:
-            pass
     return result
 
 </t>
@@ -14879,7 +14869,7 @@ def get_source_folders(self):
         self.observers.remove(observer)
 
 </t>
-<t tx="ekr.20221118072830.486">def do(self, changes, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.486">def do(self, changes, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     """Apply the changes in a `ChangeSet`
 
     Most of the time you call this function for committing the
@@ -14917,7 +14907,7 @@ def get_source_folders(self):
     return self.pycore.resource_to_pyobject(module)
 
 </t>
-<t tx="ekr.20221118072830.493">def find_module(self, modname, folder=None):
+<t tx="ekr.20221118072830.493">def find_module(self, modname, folder=None) -&gt; Optional[File]:
     """Returns a resource corresponding to the given module
 
     returns None if it can not be found
@@ -14978,7 +14968,6 @@ import subprocess
 from datetime import datetime
 
 import toml
-
 
 pyproject = toml.load("pyproject.toml")
 version = pyproject["project"]["version"]
@@ -15075,9 +15064,8 @@ def _init_source_folders(self):
 
 </t>
 <t tx="ekr.20221118072830.507">def _init_ropefolder(self):
-    if self.ropefolder is not None:
-        if not self.ropefolder.exists():
-            self._create_recursively(self.ropefolder)
+    if self.ropefolder is not None and not self.ropefolder.exists():
+        self._create_recursively(self.ropefolder)
 
 </t>
 <t tx="ekr.20221118072830.508">def _create_recursively(self, folder):
@@ -15242,8 +15230,11 @@ def ropefolder(self):
 <t tx="ekr.20221118072830.533">def write_data(self, name, data):
     if self.project.ropefolder is not None:
         file = self._get_file(name)
-        with open(file.real_path, "wb") as output_file:
+        with ExitStack() as cm:
+            output_file = cm.enter_context(open(file.real_path, "wb"))
+            output_file2 = cm.enter_context(open(file.real_path + ".json", "w"))
             pickle.dump(data, output_file, 2)
+            json.dump(data, output_file2, default=lambda o: o.__getstate__())
 
 </t>
 <t tx="ekr.20221118072830.534">def add_write_hook(self, hook):
@@ -15308,23 +15299,17 @@ def ropefolder(self):
 </t>
 <t tx="ekr.20221118072830.542">@path rope/base/
 import bisect
+import contextlib
 import difflib
 import warnings
 
 import rope.base.libutils
-import rope.base.resourceobserver
-import rope.base.resources
 import rope.base.oi.doa
 import rope.base.oi.objectinfo
 import rope.base.oi.soa
-from rope.base import (
-    builtins,
-    exceptions,
-    pyobjectsdef,
-    stdmods,
-    taskhandle,
-    utils,
-)
+import rope.base.resourceobserver
+import rope.base.resources
+from rope.base import builtins, exceptions, pyobjectsdef, stdmods, taskhandle, utils
 
 
 @others
@@ -15390,13 +15375,7 @@ import inspect
 import io
 
 import rope.base.evaluate
-from rope.base import (
-    arguments,
-    ast,
-    pynames,
-    pyobjects,
-    utils,
-)
+from rope.base import arguments, ast, pynames, pyobjects, utils
 
 
 @others
@@ -15406,7 +15385,6 @@ _initial_builtins = {
     "tuple": BuiltinName(get_tuple_type()),
     "set": BuiltinName(get_set_type()),
     "str": BuiltinName(get_str_type()),
-    "file": BuiltinName(get_file_type()),
     "open": BuiltinName(BuiltinFunction(function=_open_function, builtin=open)),
     "range": BuiltinName(BuiltinFunction(function=_range_function, builtin=range)),
     "reversed": BuiltinName(
@@ -15603,7 +15581,8 @@ def get_python_files(self):
     )
 
 </t>
-<t tx="ekr.20221118072830.568">def get_classes(self, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072830.568">def get_classes(self, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
+
     warnings.warn(
         "`PyCore.get_classes()` is deprecated", DeprecationWarning, stacklevel=2
     )
@@ -15709,7 +15688,7 @@ def extension_modules(self):
 <t tx="ekr.20221118072830.581">def perform_soa_on_changed_scopes(project, resource, old_contents):
     pycore = project.pycore
     if resource.exists() and pycore.is_python_file(resource):
-        try:
+        with contextlib.suppress(exceptions.ModuleSyntaxError):
             new_contents = resource.read()
             # detecting changes in new_contents relative to old_contents
             detector = _TextChangeDetector(new_contents, old_contents)
@@ -15725,8 +15704,6 @@ def extension_modules(self):
                 return detector.consume_changes(start, end)
 
             pycore.analyze_module(resource, should_analyze, search_subscopes)
-        except exceptions.ModuleSyntaxError:
-            pass
 
 
 </t>
@@ -15777,14 +15754,15 @@ def extension_modules(self):
 </t>
 <t tx="ekr.20221118072830.588">@path rope/base/
 from __future__ import annotations
+
 import typing
 
 import rope.base.pyobjects
 from rope.base import exceptions, utils
 
-
 if typing.TYPE_CHECKING:
     from typing import Union
+
     from rope.base import pyobjectsdef
 
 
@@ -16554,13 +16532,13 @@ import rope.base.libutils
 import rope.base.oi.soi
 import rope.base.pyscopes
 from rope.base import (
-    pynamesdef,
-    exceptions,
-    ast,
-    nameanalyze,
-    pyobjects,
-    fscommands,
     arguments,
+    ast,
+    exceptions,
+    fscommands,
+    nameanalyze,
+    pynamesdef,
+    pyobjects,
     utils,
 )
 
@@ -17452,13 +17430,7 @@ def get_attributes(self):
 </t>
 <t tx="ekr.20221118072830.824">@path rope/base/
 import rope.base.builtins  # Use full qualification for clarity.
-from rope.base import (
-    ast,
-    codeanalyze,
-    exceptions,
-    pynames,
-    utils,
-)
+from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
 
@@ -18355,9 +18327,9 @@ from and writing to the resource, moving the resource, etc.
 import os
 import re
 import warnings
+from pathlib import Path
 
 from rope.base import change, exceptions, fscommands
-from pathlib import Path
 
 
 @others
@@ -18834,6 +18806,8 @@ from rope.base import exceptions, utils
 
 
 @others
+DEFAULT_TASK_HANDLE = NullTaskHandle()
+DEFAULT_JOB_SET = NullJobSet()
 @language python
 @tabwidth -4
 </t>
@@ -19238,15 +19212,9 @@ def get_empty_import():
         self.folder = folder
 </t>
 <t tx="ekr.20221118072831.1035">@path rope/refactor/importutils/
-from typing import Union, List
+from typing import List, Union
 
-from rope.base import (
-    ast,
-    exceptions,
-    pynames,
-    pynamesdef,
-    utils,
-)
+from rope.base import ast, exceptions, pynames, pynamesdef, utils
 from rope.refactor.importutils import actions, importinfo
 
 
@@ -19297,6 +19265,8 @@ If you are still using this module, you should migrate to the new and improved
 sqlite-based storage backend (rope.contrib.autoimport.sqlite.AutoImport).
 """
 
+
+import contextlib
 import re
 
 from rope.base import (
@@ -19755,9 +19725,12 @@ from rope.refactor import importutils
     # XXX: breaking if gave up! use generators
     result = []
     for module in self.names:
-        for global_name in self.names[module]:
-            if global_name.startswith(starting):
-                result.append((global_name, module))
+        result.extend(
+            (global_name, module)
+            for global_name in self.names[module]
+            if global_name.startswith(starting)
+        )
+
     return result
 
 </t>
@@ -19973,7 +19946,7 @@ from rope.refactor import importutils
     result = []
     for module in self.names:
         if name in self.names[module]:
-            try:
+            with contextlib.suppress(exceptions.ModuleNotFoundError):
                 pymodule = self.project.get_module(module)
                 if name in pymodule:
                     pyname = pymodule[name]
@@ -19982,8 +19955,6 @@ from rope.refactor import importutils
                         resource = module.get_module().get_resource()
                         if resource is not None and lineno is not None:
                             result.append((resource, lineno))
-            except exceptions.ModuleNotFoundError:
-                pass
     return result
 
 </t>
@@ -20037,13 +20008,13 @@ This package provides tools for modifying module imports after
 refactorings or as a separate task.
 
 """
+import rope.base.codeanalyze
 import rope.base.evaluate
 from rope.base import libutils
-from rope.base.change import ChangeSet, ChangeContents
+from rope.base.change import ChangeContents, ChangeSet
 from rope.refactor import occurrences, rename
-from rope.refactor.importutils import module_imports, actions
-from rope.refactor.importutils.importinfo import NormalImport, FromImport
-import rope.base.codeanalyze
+from rope.refactor.importutils import actions, module_imports
+from rope.refactor.importutils.importinfo import FromImport, NormalImport
 
 
 @others
@@ -20083,7 +20054,10 @@ import rope.base.codeanalyze
 
 </t>
 <t tx="ekr.20221118072831.111">def generate_cache(
-    self, resources=None, underlined=None, task_handle=taskhandle.NullTaskHandle()
+    self,
+    resources=None,
+    underlined=None,
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Generate global name cache for project files
 
@@ -20192,7 +20166,7 @@ import rope.base.codeanalyze
 
 </t>
 <t tx="ekr.20221118072831.112">def generate_modules_cache(
-    self, modules, underlined=None, task_handle=taskhandle.NullTaskHandle()
+    self, modules, underlined=None, task_handle=taskhandle.DEFAULT_TASK_HANDLE
 ):
     """Generate global name cache for modules listed in `modules`"""
     job_set = task_handle.create_jobset(
@@ -20453,14 +20427,12 @@ import rope.base.codeanalyze
 <t tx="ekr.20221118072831.1133"></t>
 <t tx="ekr.20221118072831.1134">@path ropetest/
 @nopyflakes
-from textwrap import dedent
-
-from rope.base.builtins import Str
-
 import unittest
+from textwrap import dedent
 
 import rope.base.libutils
 import rope.base.oi
+from rope.base.builtins import Str
 from ropetest import testutils
 
 
@@ -20702,12 +20674,10 @@ from ropetest import testutils
 </t>
 <t tx="ekr.20221118072831.115">def update_resource(self, resource, underlined=None):
     """Update the cache for global names in `resource`"""
-    try:
+    with contextlib.suppress(exceptions.ModuleSyntaxError):
         pymodule = self.project.get_pymodule(resource)
         modname = self._module_name(resource)
         self._add_names(pymodule, modname, underlined)
-    except exceptions.ModuleSyntaxError:
-        pass
 
 </t>
 <t tx="ekr.20221118072831.1150">def test_for_loops_and_dynamicoi(self):
@@ -20944,11 +20914,9 @@ from ropetest import testutils
 
     `modname` is the name of a module.
     """
-    try:
+    with contextlib.suppress(exceptions.ModuleNotFoundError):
         pymodule = self.project.get_module(modname)
         self._add_names(pymodule, modname, underlined)
-    except exceptions.ModuleNotFoundError:
-        pass
 
 </t>
 <t tx="ekr.20221118072831.1160">def test_ignoring_double_star_args(self):
@@ -21709,13 +21677,12 @@ def test_soi_on_typed_assignment(self):
 </t>
 <t tx="ekr.20221118072831.1202">@path ropetest/
 @nopyflakes
+import unittest
 from textwrap import dedent
 
-import unittest
-
 from rope.base import builtins, libutils, pyobjects
-from ropetest import testutils
 from rope.base.builtins import Dict
+from ropetest import testutils
 
 
 @others
@@ -21915,6 +21882,8 @@ def test_iter_builtin_function(self):
 <t tx="ekr.20221118072831.1239"></t>
 <t tx="ekr.20221118072831.124">@path rope/contrib/autoimport/
 """AutoImport module for rope."""
+
+import contextlib
 import re
 import sqlite3
 import sys
@@ -21922,16 +21891,12 @@ from collections import OrderedDict
 from concurrent.futures import Future, ProcessPoolExecutor, as_completed
 from itertools import chain
 from pathlib import Path
-from typing import Generator, Iterable, List, Optional, Set, Tuple, Iterator
+from typing import Generator, Iterable, Iterator, List, Optional, Set, Tuple
 
-from rope.base import (
-    exceptions,
-    libutils,
-    resourceobserver,
-    taskhandle,
-)
+from rope.base import exceptions, libutils, resourceobserver, taskhandle
 from rope.base.project import Project
 from rope.base.resources import Resource
+from rope.contrib.autoimport import models
 from rope.contrib.autoimport.defs import (
     ModuleFile,
     Name,
@@ -21950,7 +21915,6 @@ from rope.contrib.autoimport.utils import (
     sort_and_deduplicate_tuple,
 )
 from rope.refactor import importutils
-from rope.contrib.autoimport import models
 
 
 @others
@@ -22582,17 +22546,12 @@ def test_holding_type_information(self):
 </t>
 <t tx="ekr.20221118072831.1272">@path ropetest/
 @nopyflakes
-from textwrap import dedent
 import unittest
+from textwrap import dedent
 
 import rope.base.evaluate
-from rope.base import (
-    codeanalyze,
-    exceptions,
-    libutils,
-    worder,
-)
-from rope.base.codeanalyze import SourceLinesAdapter, LogicalLineFinder, get_block_start
+from rope.base import codeanalyze, exceptions, libutils, worder
+from rope.base.codeanalyze import LogicalLineFinder, SourceLinesAdapter, get_block_start
 from ropetest import testutils
 
 
@@ -23049,7 +23008,7 @@ from ropetest import testutils
     self,
     name: str,
     exact_match: bool = False,
-    ignored_names: Set[str] = set(),
+    ignored_names: Optional[Set[str]] = None,
 ) -&gt; Generator[SearchResult, None, None]:
     """
     Search both modules and names for an import string.
@@ -23068,6 +23027,8 @@ from ropetest import testutils
     __________
     Unsorted Generator of SearchResults. Each is guaranteed to be unique.
     """
+    if ignored_names is None:
+        ignored_names = set()
     results = set(self._search_name(name, exact_match))
     results = results.union(self._search_module(name, exact_match))
     for result in results:
@@ -23801,9 +23762,9 @@ def xxx_test_global_name_in_class_body(self):
 </t>
 <t tx="ekr.20221118072831.138">def generate_cache(
     self,
-    resources: List[Resource] = None,
+    resources: Optional[List[Resource]] = None,
     underlined: bool = False,
-    task_handle: taskhandle.BaseTaskHandle = taskhandle.NullTaskHandle(),
+    task_handle: taskhandle.BaseTaskHandle = taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Generate global name cache for project files.
 
@@ -23918,8 +23879,8 @@ def xxx_test_global_name_in_class_body(self):
 </t>
 <t tx="ekr.20221118072831.139">def generate_modules_cache(
     self,
-    modules: List[str] = None,
-    task_handle: taskhandle.BaseTaskHandle = taskhandle.NullTaskHandle(),
+    modules: Optional[List[str]] = None,
+    task_handle: taskhandle.BaseTaskHandle = taskhandle.DEFAULT_TASK_HANDLE,
     single_thread: bool = False,
     underlined: Optional[bool] = None,
 ):
@@ -23941,7 +23902,7 @@ def xxx_test_global_name_in_class_body(self):
 
     existing = self._get_packages_from_cache()
     packages = list(filter_packages(packages, underlined, existing))
-    if len(packages) == 0:
+    if not packages:
         return
     self._add_packages(packages)
     job_set = task_handle.create_jobset("Generating autoimport cache", 0)
@@ -24021,10 +23982,9 @@ try:
     import cPickle as pickle
 except ImportError:
     import pickle
+
 import socket
-
 import unittest
-
 
 from rope.base.oi import doa
 
@@ -24375,7 +24335,7 @@ from ropetest import testutils
         models.Name.search_by_name_like.select("module"), (name,)
     ).fetchall()
     for module in modules:
-        try:
+        with contextlib.suppress(exceptions.ModuleNotFoundError):
             module_name = module[0]
             if module_name.startswith(f"{self.project_package.name}."):
                 module_name = ".".join(module_name.split("."))
@@ -24387,8 +24347,6 @@ from ropetest import testutils
                     resource = module.get_module().get_resource()
                     if resource is not None and lineno is not None:
                         result.append((resource, lineno))
-        except exceptions.ModuleNotFoundError:
-            pass
     return result
 
 </t>
@@ -24657,8 +24615,7 @@ def xxx_test_get_file_undo_list_and_moving_its_containing_folder(self):
 <t tx="ekr.20221118072831.1454">@path ropetest/
 import unittest
 
-
-from rope.base.oi import objectdb, memorydb
+from rope.base.oi import memorydb, objectdb
 from ropetest import testutils
 
 
@@ -24863,11 +24820,65 @@ def test_using_file_list_observer(self, db):
     db.add_file_list_observer(observer)
     db.validate_files()
     self.assertEqual("removed invalid ", observer.log)
+
+@_do_for_all_dbs
+def test_legacy_serialization(self, db):
+    import pickle
+
+    db.add_callinfo("file", "key", (1, 2), 3)
+    db.add_pername("file", "key", "name", 1)
+    scope_info = db._get_scope_info("file", "key")
+
+    pickled_data = b'\x80\x04\x95D\x00\x00\x00\x00\x00\x00\x00\x8c\x15rope.base.oi.memorydb\x94\x8c\tScopeInfo\x94\x93\x94)\x81\x94}\x94K\x01K\x02\x86\x94K\x03s}\x94\x8c\x04name\x94K\x01s\x86\x94b.'  # noqa
+
+    assert pickle.loads(pickled_data).call_info == scope_info.call_info
+    assert pickle.loads(pickled_data).per_name == scope_info.per_name
+
+@_do_for_all_dbs
+def test_new_pickle_serialization(self, db):
+    import pickle
+
+    db.add_callinfo("file", "key", (1, 2), 3)
+    db.add_pername("file", "key", "name", 1)
+    scope_info = db._get_scope_info("file", "key")
+
+    serialized = pickle.dumps(scope_info)
+
+    rehydrated_data = pickle.loads(serialized)
+    assert rehydrated_data.call_info == scope_info.call_info
+    assert rehydrated_data.per_name == scope_info.per_name
+
+@_do_for_all_dbs
+def test_new_json_serialization(self, db):
+    import json
+
+    from rope.base.oi.memorydb import ScopeInfo
+
+    db.add_callinfo("file", "key", (1, 2), 3)
+    db.add_pername("file", "key", "name", 1)
+    scope_info = db._get_scope_info("file", "key")
+
+    data = {"inside": [scope_info], "other": scope_info, "things": [1, 2, 3]}
+
+    def object_hook(o):
+        if o.get("$") == "ScopeInfo":
+            new_o = ScopeInfo.__new__(ScopeInfo)
+            new_o.__setstate__(o)
+            return new_o
+        return o
+
+    serialized = json.dumps(data, default=lambda o: o.__getstate__())
+    rehydrated_data = json.loads(serialized, object_hook=object_hook)
+
+    rehydrated_scope_info = rehydrated_data["inside"][0]
+    assert isinstance(rehydrated_scope_info, ScopeInfo)
+    assert rehydrated_scope_info.call_info == scope_info.call_info
+    assert rehydrated_scope_info.per_name == scope_info.per_name
 </t>
 <t tx="ekr.20221118072831.1483">@path ropetest/
 @nopyflakes
-from textwrap import dedent
 import unittest
+from textwrap import dedent
 
 import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
@@ -25411,10 +25422,10 @@ import tempfile
 import unittest
 from textwrap import dedent
 
-from rope.base.exceptions import RopeError, ResourceNotFoundError
+from rope.base.exceptions import ResourceNotFoundError, RopeError
 from rope.base.fscommands import FileSystemCommands
 from rope.base.libutils import path_to_resource
-from rope.base.project import Project, NoProject, _realpath
+from rope.base.project import NoProject, Project, _realpath
 from rope.base.resourceobserver import FilteredResourceObserver
 from ropetest import testutils
 
@@ -26947,14 +26958,14 @@ from .defs import ModuleCompiled, ModuleFile, ModuleInfo, Package, PackageType, 
 <t tx="ekr.20221118072831.1678">@path ropetest/
 @nopyflakes
 import sys
-from textwrap import dedent
 import unittest
+from textwrap import dedent
 
 from rope.base import exceptions, libutils
-from rope.base.builtins import File, BuiltinClass
+from rope.base.builtins import BuiltinClass, File
 from rope.base.pycore import _TextChangeDetector
-from rope.base.pyobjects import get_base_type, AbstractFunction
 from rope.base.pynamesdef import AssignedName
+from rope.base.pyobjects import AbstractFunction, get_base_type
 from ropetest import testutils
 
 
@@ -27067,10 +27078,7 @@ def test_global_variable_with_type_annotation(self):
 <t tx="ekr.20221118072831.169">def should_parse(path: pathlib.Path, underlined: bool) -&gt; bool:
     if underlined:
         return True
-    for part in path.parts:
-        if part.startswith("_"):
-            return False
-    return True
+    return all(not part.startswith("_") for part in path.parts)
 
 
 </t>
@@ -27330,7 +27338,6 @@ def xxx_test_not_found_module_is_module(self):
 from .pickle import AutoImport as _PickleAutoImport
 from .sqlite import AutoImport as _SqliteAutoImport
 
-
 AutoImport = _PickleAutoImport
 
 __all__ = ["AutoImport"]
@@ -27535,16 +27542,9 @@ __all__ = ["AutoImport"]
 import copy
 
 import rope.base.exceptions
-from rope.base import (
-    codeanalyze,
-    evaluate,
-    pyobjects,
-    taskhandle,
-    utils,
-    worder,
-)
+from rope.base import codeanalyze, evaluate, pyobjects, taskhandle, utils, worder
 from rope.base.change import ChangeContents, ChangeSet
-from rope.refactor import occurrences, functionutils
+from rope.refactor import functionutils, occurrences
 
 
 @others
@@ -27962,7 +27962,7 @@ from rope.refactor import occurrences, functionutils
     call_changer,
     in_hierarchy=None,
     resources=None,
-    handle=taskhandle.NullTaskHandle(),
+    handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     if resources is None:
         resources = self.project.get_python_files()
@@ -28526,7 +28526,6 @@ def normalize(self):
 <t tx="ekr.20221118072831.1820">@path ropetest/
 @nopyflakes
 import unittest
-
 from textwrap import dedent
 
 from rope.base import libutils
@@ -29187,7 +29186,7 @@ def reorder(self, new_ordering):
     changers,
     in_hierarchy=False,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get changes caused by this refactoring
 
@@ -29216,9 +29215,10 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from rope.base import libutils, resources, pyobjectsdef
+from rope.base import libutils, pyobjectsdef, resources
 from rope.base.project import Project
 from rope.contrib import findit
+from rope.contrib.autoimport import models
 from rope.refactor import occurrences
 from ropetest import testutils
 
@@ -29383,13 +29383,25 @@ def test_repr_findit_location(project, mod1):
     assert repr(obj).startswith(
         '&lt;rope.contrib.findit.Location "pkg1/mod1.py:2 (11-13)" at 0x'
     )
+
+
+def test_autoimport_models_query(project, mod1):
+    expected_repr = '''Query("names WHERE module LIKE (?)", columns=['name', 'module', 'package', 'source', 'type'])'''
+    obj = models.Name.search_module_like
+    assert isinstance(obj, models.Query)
+    assert repr(obj) == expected_repr
+
+
+def test_autoimport_models_finalquery(project, mod1):
+    expected_repr = '''FinalQuery("DELETE FROM packages WHERE package = ?")'''
+    obj = models.Package.delete_by_package_name
+    assert isinstance(obj, models.FinalQuery)
+    assert repr(obj) == expected_repr
 </t>
 <t tx="ekr.20221118072831.1887">@path ropetest/
 import os
-from textwrap import dedent
-
 import unittest
-
+from textwrap import dedent
 
 from rope.base import exceptions
 from ropetest import testutils
@@ -29569,7 +29581,7 @@ from rope.base import (
     pyobjects,
     worder,
 )
-from rope.refactor import sourceutils, importutils, functionutils, suites
+from rope.refactor import functionutils, importutils, sourceutils, suites
 
 
 @others
@@ -29577,9 +29589,8 @@ from rope.refactor import sourceutils, importutils, functionutils, suites
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072831.190">def _get_changed_definition_infos(self):
-    result = []
     definition_info = self.definition_info
-    result.append(definition_info)
+    result = [definition_info]
     for changer in self.changers:
         definition_info = copy.deepcopy(definition_info)
         changer.change_definition_info(definition_info)
@@ -29716,7 +29727,6 @@ from pathlib import Path
 
 import rope.base.project
 from rope.contrib import generate
-
 
 @others
 @language python
@@ -30636,10 +30646,9 @@ from ropetest import testutils
 <t tx="ekr.20221118072831.2012">@path ropetest/contrib/
 import unittest
 
-
+import rope.base.change
 import rope.base.history
 import rope.contrib.changestack
-import rope.base.change
 from ropetest import testutils
 
 
@@ -30677,20 +30686,19 @@ from ropetest import testutils
 <t tx="ekr.20221118072831.2017">@path ropetest/contrib/
 @nopyflakes
 import os.path
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 from rope.base import exceptions
 from rope.contrib.codeassist import (
-    get_definition_location,
-    get_doc,
-    starting_expression,
     code_assist,
-    sorted_proposals,
-    starting_offset,
     get_calltip,
     get_canonical_path,
+    get_definition_location,
+    get_doc,
+    sorted_proposals,
+    starting_expression,
+    starting_offset,
 )
 from ropetest import testutils
 
@@ -32106,7 +32114,7 @@ def lines(self):
 
 </t>
 <t tx="ekr.20221118072831.2152">def test_builtin_class_completion_proposal(self):
-    for varname in ("object", "dict", "file"):
+    for varname in ("object", "dict"):
         result = self._assist(varname[0])
         self.assert_completion_in_result(varname, "builtin", result, type="class")
 
@@ -32141,6 +32149,12 @@ def lines(self):
     code = "a"
     result = self._assist(code)
     for expected in ("all", "any", "abs"):
+        self.assert_completion_in_result(
+            expected, "builtin", result, type="function"
+        )
+    code2 = "o"
+    result = self._assist(code2)
+    for expected in ("open",):
         self.assert_completion_in_result(
             expected, "builtin", result, type="function"
         )
@@ -32482,17 +32496,9 @@ def lines(self):
 
 </t>
 <t tx="ekr.20221118072831.219">@path rope/refactor/
-from rope.base import (
-    evaluate,
-    exceptions,
-    libutils,
-    pynames,
-    taskhandle,
-    utils,
-    worder,
-)
-from rope.base.change import ChangeSet, ChangeContents
-from rope.refactor import sourceutils, occurrences
+from rope.base import evaluate, exceptions, libutils, pynames, taskhandle, utils, worder
+from rope.base.change import ChangeContents, ChangeSet
+from rope.refactor import occurrences, sourceutils
 
 
 @others
@@ -32638,10 +32644,8 @@ from rope.refactor import sourceutils, occurrences
     self.assertEqual("l.app", starting_expression(code, len(code)))
 </t>
 <t tx="ekr.20221118072831.2201">@path ropetest/contrib/
-from textwrap import dedent
-
 import unittest
-
+from textwrap import dedent
 
 from rope.contrib import finderrors
 from ropetest import testutils
@@ -32719,12 +32723,11 @@ from ropetest import testutils
 
 </t>
 <t tx="ekr.20221118072831.2210">@path ropetest/contrib/
+import unittest
 from textwrap import dedent
 
-import unittest
-
 from rope.base import exceptions
-from rope.contrib.findit import find_occurrences, find_implementations, find_definition
+from rope.contrib.findit import find_definition, find_implementations, find_occurrences
 from ropetest import testutils
 
 
@@ -32828,7 +32831,7 @@ from ropetest import testutils
     getter=None,
     setter=None,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get the changes this refactoring makes
 
@@ -32933,10 +32936,9 @@ from ropetest import testutils
 @nopyflakes
 import unittest
 
-
-from ropetest import testutils
 from rope.contrib.fixmodnames import FixModuleNames
 from rope.contrib.generate import create_module, create_package
+from ropetest import testutils
 
 
 @others
@@ -33003,9 +33005,8 @@ class FixModuleNamesTest(unittest.TestCase):
     return name.replace("x", "_")
 </t>
 <t tx="ekr.20221118072831.2234">@path ropetest/contrib/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 from rope.base import exceptions
 from rope.contrib import generate
@@ -33628,18 +33629,11 @@ import pathlib
 import pytest
 
 from ropetest import testutils
-
-
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072831.2277">@pytest.fixture
-def project():
-    project = testutils.sample_project()
-    yield project
-    testutils.remove_project(project)
-
+<t tx="ekr.20221118072831.2277">
 
 </t>
 <t tx="ekr.20221118072831.2278">@pytest.fixture
@@ -33652,16 +33646,11 @@ def mod1(project):
 <t tx="ekr.20221118072831.2279">@pytest.fixture
 def mod1_path(mod1):
     yield pathlib.Path(mod1.real_path)
-
-
 </t>
 <t tx="ekr.20221118072831.228">class GetterSetterRenameInModule:
     @others
 </t>
-<t tx="ekr.20221118072831.2280">@pytest.fixture
-def project_path(project):
-    yield pathlib.Path(project.address)
-
+<t tx="ekr.20221118072831.2280">
 
 </t>
 <t tx="ekr.20221118072831.2281">@pytest.fixture
@@ -33697,7 +33686,10 @@ def compiled_lib():
     yield "_sqlite3", pathlib.Path(_sqlite3.__file__)
 </t>
 <t tx="ekr.20221118072831.2285">@path ropetest/contrib/autoimport/
-from unittest import TestCase
+import sqlite3
+from typing import Any
+
+import pytest
 
 from rope.contrib.autoimport import models
 
@@ -33706,59 +33698,64 @@ from rope.contrib.autoimport import models
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072831.2286">class QueryTest(TestCase):
-    def test_select_non_existent_column(self):
-        with self.assertRaisesRegex(ValueError, """Unknown column names passed: {['"]doesnotexist['"]}"""):
-            models.Name.objects.select('doesnotexist')._query
+<t tx="ekr.20221118072831.2286">@pytest.fixture
+def empty_db():
+    return sqlite3.connect(":memory:")
 
 
 </t>
-<t tx="ekr.20221118072831.2287">class NameModelTest(TestCase):
+<t tx="ekr.20221118072831.2287">class TestQuery:
+    def test_select_non_existent_column(self):
+        expected_msg = """Unknown column names passed: {['"]doesnotexist['"]}"""
+        with pytest.raises(ValueError, match=expected_msg):
+            models.Name.objects.select("doesnotexist")._query
+
+
+class CreateTableTestMixin:
+    model_class: Any = None
+
+    def test_create_table(self, empty_db):
+        self.model_class.create_table(empty_db)
+
+
+class TestNameModel(CreateTableTestMixin):
+    model_class = models.Name
+
     @others
 </t>
 <t tx="ekr.20221118072831.2288">def test_name_objects(self):
-    self.assertEqual(
-        models.Name.objects.select_star()._query,
-        "SELECT * FROM names",
+    assert models.Name.objects.select_star()._query == "SELECT * FROM names"
+
+def test_search_submodule_like(self):
+    assert (
+        models.Name.search_submodule_like.select_star()._query
+        == 'SELECT * FROM names WHERE module LIKE ("%." || ?)'
     )
 
 </t>
-<t tx="ekr.20221118072831.2289">def test_query_strings(self):
-    with self.subTest("objects"):
-        self.assertEqual(
-            models.Name.objects.select_star()._query,
-            'SELECT * FROM names',
-        )
+<t tx="ekr.20221118072831.2289">def test_search_module_like(self):
+    assert (
+        models.Name.search_module_like.select_star()._query
+        == "SELECT * FROM names WHERE module LIKE (?)"
+    )
 
-    with self.subTest("search_submodule_like"):
-        self.assertEqual(
-            models.Name.search_submodule_like.select_star()._query,
-            'SELECT * FROM names WHERE module LIKE ("%." || ?)',
-        )
+def test_import_assist(self):
+    assert (
+        models.Name.import_assist.select_star()._query
+        == "SELECT * FROM names WHERE name LIKE (? || '%')"
+    )
 
-    with self.subTest("search_module_like"):
-        self.assertEqual(
-            models.Name.search_module_like.select_star()._query,
-            'SELECT * FROM names WHERE module LIKE (?)',
-        )
+def test_search_by_name_like(self):
+    assert (
+        models.Name.search_by_name_like.select_star()._query
+        == "SELECT * FROM names WHERE name LIKE (?)"
+    )
 
-    with self.subTest("import_assist"):
-        self.assertEqual(
-            models.Name.import_assist.select_star()._query,
-            "SELECT * FROM names WHERE name LIKE (? || '%')",
-        )
-
-    with self.subTest("search_by_name_like"):
-        self.assertEqual(
-            models.Name.search_by_name_like.select_star()._query,
-            'SELECT * FROM names WHERE name LIKE (?)',
-        )
-
-    with self.subTest("delete_by_module_name"):
-        self.assertEqual(
-            models.Name.delete_by_module_name._query,
-            'DELETE FROM names WHERE module = ?',
-        )
+def test_delete_by_module_name(self):
+    assert (
+        models.Name.delete_by_module_name._query
+        == "DELETE FROM names WHERE module = ?"
+    )
 
 
 </t>
@@ -33770,21 +33767,21 @@ from rope.contrib.autoimport import models
     self.setter = setter
 
 </t>
-<t tx="ekr.20221118072831.2290">class PackageModelTest(TestCase):
+<t tx="ekr.20221118072831.2290">class TestPackageModel(CreateTableTestMixin):
     @others
 </t>
-<t tx="ekr.20221118072831.2291">def test_query_strings(self):
-    with self.subTest("objects"):
-        self.assertEqual(
-            models.Package.objects.select_star()._query,
-            'SELECT * FROM packages',
-        )
+<t tx="ekr.20221118072831.2291">model_class = models.Package
 
-    with self.subTest("delete_by_package_name"):
-        self.assertEqual(
-            models.Package.delete_by_package_name._query,
-            'DELETE FROM packages WHERE package = ?',
-        )
+def test_objects(self):
+    assert (
+        models.Package.objects.select_star()._query == "SELECT * FROM packages"
+    )
+
+def test_delete_by_package_name(self):
+    assert (
+        models.Package.delete_by_package_name._query
+        == "DELETE FROM packages WHERE package = ?"
+    )
 </t>
 <t tx="ekr.20221118072831.2292">@path ropetest/contrib/autoimport/
 from rope.contrib.autoimport import parse
@@ -33900,9 +33897,8 @@ from rope.contrib.autoimport.defs import Package, PackageType, Source
 </t>
 <t tx="ekr.20221118072831.2307"></t>
 <t tx="ekr.20221118072831.2308">@path ropetest/refactor/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 import rope.base.exceptions
 from rope.refactor import change_signature
@@ -34868,13 +34864,11 @@ def xxx_test_removing_arguments_star_args3(self):
     self.assertEqual(expected, self.mod.read())
 </t>
 <t tx="ekr.20221118072831.2354">@path ropetest/refactor/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 import rope.base.codeanalyze
 import rope.base.exceptions
-
 from rope.refactor import extract
 from ropetest import testutils
 
@@ -35525,10 +35519,10 @@ from contextlib import contextmanager
 from itertools import chain
 
 from rope.base import ast, codeanalyze
-from rope.base.change import ChangeSet, ChangeContents
+from rope.base.change import ChangeContents, ChangeSet
 from rope.base.exceptions import RefactoringError
 from rope.base.utils.datastructures import OrderedSet
-from rope.refactor import sourceutils, similarfinder, patchedast, suites, usefunction
+from rope.refactor import patchedast, similarfinder, sourceutils, suites, usefunction
 
 
 @others
@@ -37482,24 +37476,8 @@ def test_extract_function_expression_with_inline_assignment_in_inner_expression(
 
         def new_func():
             exec("def f(): pass", {})
-
-        new_func()
-    """)
-    self.assertEqual(expected, refactored)
-
 </t>
-<t tx="ekr.20221118072831.2478">@testutils.only_for_versions_lower("3")
-def test_extract_exec_statement(self):
-    code = dedent("""\
-        exec "def f(): pass" in {}
-    """)
-    start, end = self._convert_line_range_to_offset(code, 1, 1)
-    refactored = self.do_extract_method(code, start, end, "new_func")
-    expected = dedent("""\
-
-        def new_func():
-            exec "def f(): pass" in {}
-
+<t tx="ekr.20221118072831.2478">
         new_func()
     """)
     self.assertEqual(expected, refactored)
@@ -38495,10 +38473,9 @@ def test_extract_method_containing_structural_pattern_match_3(self):
 <t tx="ekr.20221118072831.2517">@path ropetest/refactor/
 @nopyflakes
 import unittest
-
 from textwrap import dedent
 
-from rope.refactor.importutils import ImportTools, importinfo, add_import
+from rope.refactor.importutils import ImportTools, add_import, importinfo
 from ropetest import testutils
 
 
@@ -40871,9 +40848,8 @@ def extracted(self):
     self.assertEqual("pkg.mod3", name)
 </t>
 <t tx="ekr.20221118072831.2667">@path ropetest/refactor/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 import rope.base.exceptions
 from rope.refactor import inline
@@ -42494,9 +42470,8 @@ def test_dictionary_with_inline_comment(self):
 </t>
 <t tx="ekr.20221118072831.2768">@path ropetest/refactor/
 @nopyflakes
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 from rope.base import exceptions
 from rope.refactor import move
@@ -42548,6 +42523,18 @@ from ropetest import testutils
     self._move(self.mod1, self.mod1.read().index("foo") + 1, self.mod2)
     self.assertEqual("bar = 321\n", self.mod1.read())
     self.assertEqual("foo = 123\n", self.mod2.read())
+
+def test_move_target_is_module_name(self):
+    self.mod1.write("foo = 123\n")
+    self._move(self.mod1, self.mod1.read().index("foo") + 1, "mod2")
+    self.assertEqual("", self.mod1.read())
+    self.assertEqual("foo = 123\n", self.mod2.read())
+
+def test_move_target_is_package_name(self):
+    self.mod1.write("foo = 123\n")
+    self._move(self.mod1, self.mod1.read().index("foo") + 1, "pkg.mod4")
+    self.assertEqual("", self.mod1.read())
+    self.assertEqual("foo = 123\n", self.mod4.read())
 
 </t>
 <t tx="ekr.20221118072831.2775">def test_move_constant_multiline(self):
@@ -43908,11 +43895,10 @@ def _is_assignment(region_match):
     )
 </t>
 <t tx="ekr.20221118072831.2845">@path ropetest/refactor/
+import unittest
 from textwrap import dedent
 
-import unittest
-
-from rope.refactor import multiproject, rename, move
+from rope.refactor import move, multiproject, rename
 from ropetest import testutils
 
 
@@ -44038,14 +44024,14 @@ from ropetest import testutils
     )
 </t>
 <t tx="ekr.20221118072831.2853">@path ropetest/refactor/
-import unittest
+import itertools
 import sys
+import unittest
 from textwrap import dedent
 
 from rope.base import ast
 from rope.refactor import patchedast
 from ropetest import testutils
-
 
 NameConstant = "Name" if sys.version_info &lt;= (3, 8) else "NameConstant"
 Bytes = "Bytes" if (3, 0) &lt;= sys.version_info &lt;= (3, 8) else "Str"
@@ -44083,6 +44069,19 @@ Bytes = "Bytes" if (3, 0) &lt;= sys.version_info &lt;= (3, 8) else "Str"
         "\n        ",
         "Expr",
     ])
+
+def test_operator_support_completeness(self):
+    ast_ops = {
+        n.__name__
+        for n in itertools.chain(
+            ast.boolop.__subclasses__(),
+            ast.cmpop.__subclasses__(),
+            ast.operator.__subclasses__(),
+            ast.unaryop.__subclasses__(),
+        )
+    }
+    supported_ops = set(patchedast._PatchingASTWalker._operators)
+    assert ast_ops == supported_ops
 
 </t>
 <t tx="ekr.20221118072831.2858">def test_bytes_string(self):
@@ -44143,23 +44142,16 @@ Bytes = "Bytes" if (3, 0) &lt;= sys.version_info &lt;= (3, 8) else "Str"
     checker.check_region("Num", start, start + 3)
 
 </t>
-<t tx="ekr.20221118072831.2863">@testutils.only_for_versions_lower("3")
-def test_long_literals_and_region(self):
-    source = "a = 0x1L\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    start = source.index("0x1L")
-    checker.check_region("Num", start, start + 4)
-
-</t>
+<t tx="ekr.20221118072831.2863"></t>
 <t tx="ekr.20221118072831.2864">def test_octal_integer_literals_and_region(self):
-    source = "a = -0125e1\n"
+    source = "a = -0o1251\n"
     ast_frag = patchedast.get_patched_ast(source, True)
     checker = _ResultChecker(self, ast_frag)
-    start = source.index("-0125e1") + 1
+    start = source.index("-0o1251") + 1
     end = start + 6
     # Python 3 parses as UnaryOp(op=USub(), operand=Num(n=10))
     checker.check_region("Num", start, end)
+    checker.check_children("Num", ["0o1251"])
 
 </t>
 <t tx="ekr.20221118072831.2865">def test_integer_literals_and_sorted_children(self):
@@ -44419,15 +44411,7 @@ def test_handling_format_strings_with_expression(self):
     checker.check_children("FormattedValue", ["{", "", "BinOp", "", "}"])
 
 </t>
-<t tx="ekr.20221118072831.2892">@testutils.only_for_versions_lower("3")
-def test_long_integer_literals(self):
-    source = "0x1L + a"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_children("BinOp", ["Num", " ", "+", " ", "Name"])
-    checker.check_children("Num", ["0x1L"])
-
-</t>
+<t tx="ekr.20221118072831.2892"></t>
 <t tx="ekr.20221118072831.2893">def test_complex_number_literals(self):
     source = "1.0e2j + a"
     ast_frag = patchedast.get_patched_ast(source, True)
@@ -44506,16 +44490,8 @@ def test_long_integer_literals(self):
     checker = _ResultChecker(self, ast_frag)
     checker.check_region("AugAssign", 0, len(source) - 1)
     checker.check_children("AugAssign", ["Name", " ", "+", "", "=", " ", "Num"])
-
 </t>
-<t tx="ekr.20221118072831.2901">@testutils.only_for_versions_lower("3")
-def test_back_quotenode(self):
-    source = "`1`\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Repr", 0, len(source) - 1)
-    checker.check_children("Repr", ["`", "", "Num", "", "`"])
-
+<t tx="ekr.20221118072831.2901">
 </t>
 <t tx="ekr.20221118072831.2902">def test_bitand(self):
     source = "1 &amp; 2\n"
@@ -44754,22 +44730,7 @@ def test_async_function_node(self):
     )
 
 </t>
-<t tx="ekr.20221118072831.2922">@testutils.only_for_versions_lower("3")
-def test_function_node_and_tuple_parameters(self):
-    source = dedent("""\
-        def f(a, (b, c)):
-            pass
-    """)
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Function", 0, len(source) - 1)
-    checker.check_children(
-        "Function",
-        ["def", " ", "f", "", "(", "", "arguments", "", ")", "", ":", "\n    ", "Pass"],
-    )
-    checker.check_children("arguments", ["Name", "", ",", " ", "Tuple"])
-
-</t>
+<t tx="ekr.20221118072831.2922"></t>
 <t tx="ekr.20221118072831.2923">def test_dict_node(self):
     source = "{1: 2, 3: 4}\n"
     ast_frag = patchedast.get_patched_ast(source, True)
@@ -44797,40 +44758,10 @@ def test_function_node_and_tuple_parameters(self):
     checker = _ResultChecker(self, ast_frag)
     checker.check_region("BinOp", 0, len(source) - 1)
     checker.check_children("BinOp", ["Num", " ", "/", " ", "Num"])
-
 </t>
-<t tx="ekr.20221118072831.2926">@testutils.only_for_versions_lower("3")
-def test_simple_exec_node(self):
-    source = 'exec ""\n'
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Exec", 0, len(source) - 1)
-    checker.check_children("Exec", ["exec", "", "", " ", "Str", "", ""])
-
-</t>
-<t tx="ekr.20221118072831.2927">@testutils.only_for_versions_lower("3")
-def test_exec_node(self):
-    source = 'exec "" in locals(), globals()\n'
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Exec", 0, len(source) - 1)
-    checker.check_children(
-        "Exec",
-        ["exec", "", "", " ", "Str", " ", "in", " ", "Call", "", ",", " ", "Call", "", ""],
-    )
-
-</t>
-<t tx="ekr.20221118072831.2928">@testutils.only_for_versions_lower("3")
-def test_exec_node_with_parens(self):
-    source = 'exec("", locals(), globals())\n'
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Exec", 0, len(source) - 1)
-    checker.check_children(
-        "Exec",
-        ["exec", "", "(", "", "Str", "", ",", " ", "Call", "", ",", " ", "Call", "", ")"],
-    )
-
+<t tx="ekr.20221118072831.2926"></t>
+<t tx="ekr.20221118072831.2927"></t>
+<t tx="ekr.20221118072831.2928">
 </t>
 <t tx="ekr.20221118072831.2929">def test_for_node(self):
     source = dedent("""\
@@ -45187,45 +45118,29 @@ def test_import_node_whitespace_around_dots(self):
     checker.check_children("BoolOp", ["UnaryOp", " ", "or", " ", NameConstant])
 
 </t>
-<t tx="ekr.20221118072831.2955">@testutils.only_for_versions_lower("3")
-def test_print_node(self):
-    source = "print &gt;&gt;out, 1,\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Print", 0, len(source) - 1)
-    checker.check_children(
-        "Print", ["print", " ", "&gt;&gt;", "", "Name", "", ",", " ", "Num", "", ","]
-    )
-
+<t tx="ekr.20221118072831.2955">def test_raise_node_bare(self):
+    source = "raise\n"
 </t>
-<t tx="ekr.20221118072831.2956">@testutils.only_for_versions_lower("3")
-def test_printnl_node(self):
-    source = "print 1\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_region("Print", 0, len(source) - 1)
-    checker.check_children("Print", ["print", " ", "Num"])
-
-</t>
-<t tx="ekr.20221118072831.2957">@testutils.only_for_versions_lower("3")
-def test_raise_node_for_python2(self):
-    source = "raise x, y, z\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
+<t tx="ekr.20221118072831.2956"></t>
+<t tx="ekr.20221118072831.2957">    ast_frag = patchedast.get_patched_ast(source, True)
     checker = _ResultChecker(self, ast_frag)
     checker.check_region("Raise", 0, len(source) - 1)
-    checker.check_children(
-        "Raise", ["raise", " ", "Name", "", ",", " ", "Name", "", ",", " ", "Name"]
-    )
+    checker.check_children("Raise", ["raise"])
 
 </t>
-<t tx="ekr.20221118072831.2958"># @#testutils.only_for('3')
-@unittest.skipIf(sys.version &lt; "3", "This is wrong")
-def test_raise_node_for_python3(self):
+<t tx="ekr.20221118072831.2958">def test_raise_node_for_python3(self):
     source = "raise x(y)\n"
     ast_frag = patchedast.get_patched_ast(source, True)
     checker = _ResultChecker(self, ast_frag)
     checker.check_region("Raise", 0, len(source) - 1)
     checker.check_children("Raise", ["raise", " ", "Call"])
+
+def test_raise_node_for_python3_with_cause(self):
+    source = "raise x(y) from e\n"
+    ast_frag = patchedast.get_patched_ast(source, True)
+    checker = _ResultChecker(self, ast_frag)
+    checker.check_region("Raise", 0, len(source) - 1)
+    checker.check_children("Raise", ["raise", " ", "Call", " ", "from", " ", "Name"])
 
 </t>
 <t tx="ekr.20221118072831.2959">def test_return_node(self):
@@ -45460,25 +45375,7 @@ def test_yield_from_node(self):
     checker.check_children(node_to_test, expected_children)
 
 </t>
-<t tx="ekr.20221118072831.2979">@testutils.only_for_versions_lower("3")
-def test_try_except_node(self):
-    source = dedent("""\
-        try:
-            pass
-        except Exception, e:
-            pass
-    """)
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_children(
-        "TryExcept",
-        ["try", "", ":", "\n    ", "Pass", "\n", ("excepthandler", "ExceptHandler")],
-    )
-    checker.check_children(
-        ("excepthandler", "ExceptHandler"),
-        ["except", " ", "Name", "", ",", " ", "Name", "", ":", "\n    ", "Pass"],
-    )
-
+<t tx="ekr.20221118072831.2979">def test_try_except_node(self):
 </t>
 <t tx="ekr.20221118072831.298">def multi_line_conditions(self, info):
     node = _parse_text(info.source[info.region[0] : info.region[1]])
@@ -45506,8 +45403,7 @@ def test_try_except_node(self):
         )
 
 </t>
-<t tx="ekr.20221118072831.2980">def test_try_except_node__with_as_syntax(self):
-    source = dedent("""\
+<t tx="ekr.20221118072831.2980">    source = dedent("""\
         try:
             pass
         except Exception as e:
@@ -45563,15 +45459,8 @@ def test_try_except_node(self):
     ast_frag = patchedast.get_patched_ast(source, True)
     checker = _ResultChecker(self, ast_frag)
     checker.check_children("Module", ["", "Expr", "\n", "Expr", "\n"])
-
 </t>
-<t tx="ekr.20221118072831.2985">@testutils.only_for_versions_lower("3")
-def test_how_to_handle_old_not_equals(self):
-    source = "1 &lt;&gt; 2\n"
-    ast_frag = patchedast.get_patched_ast(source, True)
-    checker = _ResultChecker(self, ast_frag)
-    checker.check_children("Compare", ["Num", " ", "&lt;&gt;", " ", "Num"])
-
+<t tx="ekr.20221118072831.2985">
 </t>
 <t tx="ekr.20221118072831.2986">def test_semicolon(self):
     source = "1;\n"
@@ -46043,9 +45932,8 @@ def test_match_node_with_match_mapping_match_as(self):
 </t>
 <t tx="ekr.20221118072831.3012">@path ropetest/refactor/
 import sys
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 import rope.base.codeanalyze
 import rope.refactor.occurrences
@@ -47820,12 +47708,11 @@ def test_renaming_in_generalized_dict_unpacking(self):
     )
 </t>
 <t tx="ekr.20221118072831.3116">@path ropetest/refactor/
+import unittest
 from textwrap import dedent
 
 from rope.refactor import restructure
 from ropetest import testutils
-
-import unittest
 
 
 @others
@@ -48171,9 +48058,8 @@ def test_yield_from(self):
     )
 </t>
 <t tx="ekr.20221118072831.3143">@path ropetest/refactor/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 from rope.refactor import similarfinder
 from ropetest import testutils
@@ -48592,9 +48478,8 @@ from ropetest import testutils
     self.assertEqual("1, 2\n", template.substitute({"a": "1", "b": "2"}))
 </t>
 <t tx="ekr.20221118072831.3189">@path ropetest/refactor/
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 from rope.base import ast
 from rope.refactor import suites
@@ -48868,13 +48753,12 @@ def test_match_case(self):
     return suites.ast_suite_tree(ast.parse(source))
 </t>
 <t tx="ekr.20221118072831.3215">@path ropetest/refactor/
+import unittest
 from textwrap import dedent
 
-import unittest
-
 from rope.base import exceptions
-from ropetest import testutils
 from rope.refactor.usefunction import UseFunction
+from ropetest import testutils
 
 
 @others
@@ -49132,9 +49016,8 @@ def xxx_test_being_a_bit_more_intelligent_when_returning_assigneds(self):
 </t>
 <t tx="ekr.20221118072831.3232">@path ropetest/refactor/
 @nopyflakes
-from textwrap import dedent
-
 import unittest
+from textwrap import dedent
 
 import rope.base.taskhandle
 import rope.refactor.introduce_parameter
@@ -49148,7 +49031,7 @@ import ropetest.refactor.renametest
 import ropetest.refactor.restructuretest
 import ropetest.refactor.suitestest
 import ropetest.refactor.usefunctiontest
-from rope.base.exceptions import RefactoringError, InterruptedTaskError
+from rope.base.exceptions import InterruptedTaskError, RefactoringError
 from rope.refactor.encapsulate_field import EncapsulateField
 from rope.refactor.introduce_factory import IntroduceFactory
 from rope.refactor.localtofield import LocalToField
@@ -50960,8 +50843,8 @@ def has_errors(cls, code):
     return extracted
 </t>
 <t tx="ekr.20221118072831.394">@path rope/refactor/
-from rope.base.builtins import Lambda
 from rope.base import pyobjects, worder
+from rope.base.builtins import Lambda
 
 
 @others
@@ -51289,7 +51172,7 @@ from rope.base import (
     utils,
     worder,
 )
-from rope.base.change import ChangeSet, ChangeContents
+from rope.base.change import ChangeContents, ChangeSet
 from rope.refactor import (
     change_signature,
     functionutils,
@@ -51413,7 +51296,7 @@ from rope.refactor import (
     remove=True,
     only_current=False,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get the changes this refactoring makes
 
@@ -51558,7 +51441,7 @@ from rope.refactor import (
     only_current=False,
     resources=None,
     docs=False,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     if resources is None:
         if rename._is_local(self.pyname):
@@ -51749,8 +51632,10 @@ class _ComplexExpressionVisitor:
     return self.pyfunction.get_name()
 
 </t>
-<t tx="ekr.20221118072831.455">def get_definition(self, primary, pyname, call, host_vars=[], returns=False):
+<t tx="ekr.20221118072831.455">def get_definition(self, primary, pyname, call, host_vars=None, returns=False):
     # caching already calculated definitions
+    if host_vars is None:
+        host_vars = []
     return self._calculate_definition(primary, pyname, call, host_vars, returns)
 
 </t>
@@ -51788,7 +51673,7 @@ class _ComplexExpressionVisitor:
 
     # If there is a name conflict, all variable names
     # inside the inlined function are renamed
-    if len(set(all_names).intersection(set(host_vars))) &gt; 0:
+    if set(all_names).intersection(set(host_vars)):
 
         prefix = next(_DefinitionGenerator.unique_prefix)
         guest = libutils.get_string_module(self.project, source, self.resource)
@@ -52068,15 +51953,9 @@ def lines(self):
     return module_import.get_changed_source()
 </t>
 <t tx="ekr.20221118072831.476">@path rope/refactor/
-from rope.base import (
-    evaluate,
-    exceptions,
-    libutils,
-    pyobjects,
-    taskhandle,
-)
-from rope.base.change import ChangeSet, ChangeContents
-from rope.refactor import rename, occurrences, sourceutils, importutils
+from rope.base import evaluate, exceptions, libutils, pyobjects, taskhandle
+from rope.base.change import ChangeContents, ChangeSet
+from rope.refactor import importutils, occurrences, rename, sourceutils
 
 
 @others
@@ -52109,7 +51988,7 @@ IntroduceFactoryRefactoring = IntroduceFactory
     factory_name,
     global_factory=False,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get the changes this refactoring makes
 
@@ -52247,13 +52126,8 @@ IntroduceFactoryRefactoring = IntroduceFactory
 </t>
 <t tx="ekr.20221118072831.488">@path rope/refactor/
 import rope.base.change  # Use fully qualified names for clarity.
-from rope.base import (
-    codeanalyze,
-    evaluate,
-    exceptions,
-    worder,
-)
-from rope.refactor import functionutils, sourceutils, occurrences
+from rope.base import codeanalyze, evaluate, exceptions, worder
+from rope.refactor import functionutils, occurrences, sourceutils
 
 
 @others
@@ -52368,12 +52242,7 @@ from rope.refactor import functionutils, sourceutils, occurrences
             collector.add_change(start, end, new_name)
 </t>
 <t tx="ekr.20221118072831.496">@path rope/refactor/
-from rope.base import (
-    evaluate,
-    exceptions,
-    pynames,
-    worder,
-)
+from rope.base import evaluate, exceptions, pynames, worder
 from rope.refactor.rename import Rename
 
 
@@ -52471,15 +52340,8 @@ from rope.refactor.rename import Rename
 <t tx="ekr.20221118072831.503">@path rope/refactor/
 import warnings
 
-from rope.base import (
-    change,
-    codeanalyze,
-    evaluate,
-    exceptions,
-    libutils,
-    pyobjects,
-)
-from rope.refactor import sourceutils, occurrences, rename
+from rope.base import change, codeanalyze, evaluate, exceptions, libutils, pyobjects
+from rope.refactor import occurrences, rename, sourceutils
 
 
 @others
@@ -52609,6 +52471,11 @@ from rope.refactor import sourceutils, occurrences, rename
 based on inputs.
 
 """
+from __future__ import annotations
+
+import typing
+from typing import Union
+
 from rope.base import (
     codeanalyze,
     evaluate,
@@ -52619,11 +52486,14 @@ from rope.base import (
     taskhandle,
     worder,
 )
-from rope.base.change import ChangeSet, ChangeContents, MoveResource
-from rope.refactor import importutils, rename, occurrences, sourceutils, functionutils
+from rope.base.change import ChangeContents, ChangeSet, MoveResource
+from rope.refactor import functionutils, importutils, occurrences, rename, sourceutils
 from rope.refactor.importutils.module_imports import (
     get_first_decorator_or_function_start_line,
 )
+
+if typing.TYPE_CHECKING:
+    from rope.base import project, resources
 
 
 @others
@@ -52689,7 +52559,7 @@ from rope.refactor.importutils.module_imports import (
     dest_attr,
     new_name=None,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,  # FIXME: this is unused
 ):
     """Return the changes needed for this refactoring
 
@@ -52861,6 +52731,8 @@ from rope.refactor.importutils.module_imports import (
 <t tx="ekr.20221118072831.529">class MoveGlobal:
     """For moving global function and classes"""
 
+    project: project.Project
+
     @others
 </t>
 <t tx="ekr.20221118072831.53">def get_insertion_offsets(self):
@@ -52947,8 +52819,23 @@ from rope.refactor.importutils.module_imports import (
 
 </t>
 <t tx="ekr.20221118072831.536">def get_changes(
-    self, dest, resources=None, task_handle=taskhandle.NullTaskHandle()
+    self,
+    dest: Union[None, str, resources.Resource],
+    resources=None,
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
+    """Return the changes needed for this refactoring
+
+    Parameters:
+
+    - `dest`: the Resource or dotted moddule name of the move destination
+    - `resources` can be a list of `rope.base.resources.File` to
+      apply this refactoring on.  If `None`, the restructuring
+      will be applied to all python files.
+
+    """
+    if isinstance(dest, str):
+        dest = self.project.find_module(dest)
     if resources is None:
         resources = self.project.get_python_files()
     if dest is None or not dest.exists():
@@ -53159,7 +53046,7 @@ from rope.refactor.importutils.module_imports import (
 
 </t>
 <t tx="ekr.20221118072831.548">def get_changes(
-    self, dest, resources=None, task_handle=taskhandle.NullTaskHandle()
+    self, dest, resources=None, task_handle=taskhandle.DEFAULT_TASK_HANDLE
 ):
     if resources is None:
         resources = self.project.get_python_files()
@@ -53680,16 +53567,20 @@ def main_refactoring(self):
 <t tx="ekr.20221118072831.589">@path rope/refactor/
 &lt;&lt; docstring: rope/refactor/occurrences.py &gt;&gt;
 
+
+import contextlib
 import re
 
-from rope.base import ast
-from rope.base import codeanalyze
-from rope.base import evaluate
-from rope.base import exceptions
-from rope.base import pynames
-from rope.base import pyobjects
-from rope.base import utils
-from rope.base import worder
+from rope.base import (
+    ast,
+    codeanalyze,
+    evaluate,
+    exceptions,
+    pynames,
+    pyobjects,
+    utils,
+    worder,
+)
 
 
 @others
@@ -53718,7 +53609,9 @@ from rope.base import worder
 
     @others
 </t>
-<t tx="ekr.20221118072831.591">def __init__(self, project, name, filters=[lambda o: True], docs=False):
+<t tx="ekr.20221118072831.591">def __init__(self, project, name, filters=None, docs=False):
+    if filters is None:
+        filters = [lambda o: True]
     self.project = project
     self.name = name
     self.docs = docs
@@ -53807,18 +53700,14 @@ def get_primary_range(self):
 </t>
 <t tx="ekr.20221118072831.598">@utils.saveit
 def get_pyname(self):
-    try:
+    with contextlib.suppress(exceptions.BadIdentifierError):
         return self.tools.name_finder.get_pyname_at(self.offset)
-    except exceptions.BadIdentifierError:
-        pass
 
 </t>
 <t tx="ekr.20221118072831.599">@utils.saveit
 def get_primary_and_pyname(self):
-    try:
+    with contextlib.suppress(exceptions.BadIdentifierError):
         return self.tools.name_finder.get_primary_and_pyname_at(self.offset)
-    except exceptions.BadIdentifierError:
-        pass
 
 </t>
 <t tx="ekr.20221118072831.6">class _Commenter:
@@ -54181,7 +54070,6 @@ from itertools import chain
 
 from rope.base import ast, codeanalyze, exceptions
 
-
 COMMA_IN_WITH_PATTERN = re.compile(r"\(.*?\)|(,)")
 
 
@@ -54265,10 +54153,6 @@ COMMA_IN_WITH_PATTERN = re.compile(r"\(.*?\)|(,)")
 </t>
 <t tx="ekr.20221118072831.650">Number = object()
 String = object()
-semicolon_or_as_in_except = object()
-exec_open_paren_or_space = object()
-exec_close_paren_or_space = object()
-exec_in_or_comma = object()
 with_or_comma_context_manager = object()
 empty_tuple = object()
 
@@ -54321,31 +54205,12 @@ empty_tuple = object()
                 region = self.source.consume_number()
             elif child == self.empty_tuple:
                 region = self.source.consume_empty_tuple()
-            elif child == "!=":
-                # INFO: This has been added to handle deprecated ``&lt;&gt;``
-                region = self.source.consume_not_equal()
-            elif child == self.semicolon_or_as_in_except:
-                # INFO: This has been added to handle deprecated
-                # semicolon in except
-                region = self.source.consume_except_as_or_semicolon()
-            elif child == self.exec_open_paren_or_space:
-                # These three cases handle the differences between
-                # the deprecated exec statement and the exec
-                # function.
-                region = self.source.consume_exec_open_paren_or_space()
-            elif child == self.exec_in_or_comma:
-                region = self.source.consume_exec_in_or_comma()
-            elif child == self.exec_close_paren_or_space:
-                region = self.source.consume_exec_close_paren_or_space()
             elif child == self.with_or_comma_context_manager:
                 region = self.source.consume_with_or_comma_context_manager()
+            elif isinstance(node, (ast.JoinedStr, ast.FormattedValue)):
+                region = self.source.consume_joined_string(child)
             else:
-                if hasattr(ast, "JoinedStr") and isinstance(
-                    node, (ast.JoinedStr, ast.FormattedValue)
-                ):
-                    region = self.source.consume_joined_string(child)
-                else:
-                    region = self.source.consume(child)
+                region = self.source.consume(child)
             child = self.source[region[0] : region[1]]
             token_start = region[0]
         if not first_token:
@@ -54381,9 +54246,8 @@ empty_tuple = object()
     new_end = None
     for i in range(closes):
         new_end = self.source.consume(")")[1]
-    if new_end is not None:
-        if self.children:
-            children.append(self.source[old_end:new_end])
+    if new_end is not None and self.children:
+        children.append(self.source[old_end:new_end])
     new_start = start
     for i in range(opens):
         new_start = self.source.rfind_token("(", 0, new_start)
@@ -54522,16 +54386,12 @@ empty_tuple = object()
 
 </t>
 <t tx="ekr.20221118072831.664">def _Assign(self, node):
-    children = self._child_nodes(node.targets, "=")
-    children.append("=")
-    children.append(node.value)
+    children = [*self._child_nodes(node.targets, "="), "=", node.value]
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.665">def _AugAssign(self, node):
-    children = [node.target]
-    children.extend(self._get_op(node.op))
-    children.extend(["=", node.value])
+    children = [node.target, *self._get_op(node.op), "=", node.value]
     self._handle(node, children)
 
 </t>
@@ -54543,10 +54403,7 @@ empty_tuple = object()
     self._handle(node, children)
 
 </t>
-<t tx="ekr.20221118072831.667">def _Repr(self, node):
-    self._handle(node, ["`", node.value, "`"])
-
-</t>
+<t tx="ekr.20221118072831.667"></t>
 <t tx="ekr.20221118072831.668">def _BinOp(self, node):
     children = [node.left] + self._get_op(node.op) + [node.right]
     self._handle(node, children)
@@ -54585,8 +54442,7 @@ empty_tuple = object()
     children = []
     if getattr(node, "decorator_list", None):
         for decorator in node.decorator_list:
-            children.append("@")
-            children.append(decorator)
+            children.extend(("@", decorator))
     children.extend(["class", node.name])
     if node.bases:
         children.append("(")
@@ -54746,16 +54602,7 @@ empty_tuple = object()
     self._handle(node, children)
 
 </t>
-<t tx="ekr.20221118072831.686">def _Exec(self, node):
-    children = ["exec", self.exec_open_paren_or_space, node.body]
-    if node.globals:
-        children.extend([self.exec_in_or_comma, node.globals])
-    if node.locals:
-        children.extend([",", node.locals])
-    children.append(self.exec_close_paren_or_space)
-    self._handle(node, children)
-
-</t>
+<t tx="ekr.20221118072831.686"></t>
 <t tx="ekr.20221118072831.687">def _ExtSlice(self, node):
     children = []
     for index, dim in enumerate(node.dims):
@@ -54766,10 +54613,7 @@ empty_tuple = object()
 
 </t>
 <t tx="ekr.20221118072831.688">def _handle_for_loop_node(self, node, is_async):
-    if is_async:
-        children = ["async", "for"]
-    else:
-        children = ["for"]
+    children = ["async", "for"] if is_async else ["for"]
     children.extend([node.target, "in", node.iter, ":"])
     children.extend(node.body)
     if node.orelse:
@@ -54815,20 +54659,12 @@ empty_tuple = object()
 </t>
 <t tx="ekr.20221118072831.693">def _handle_function_def_node(self, node, is_async):
     children = []
-    try:
-        decorators = node.decorator_list
-    except AttributeError:
-        decorators = getattr(node, "decorators", None)
-    if decorators:
-        for decorator in decorators:
-            children.append("@")
-            children.append(decorator)
-    if is_async:
-        children.extend(["async", "def"])
-    else:
-        children.extend(["def"])
-    children.extend([node.name, "(", node.args])
-    children.extend([")", ":"])
+    for decorator in node.decorator_list:
+        children.extend(("@", decorator))
+    children.extend(["async", "def"] if is_async else ["def"])
+    children.append(node.name)
+    children.extend(["(", node.args, ")"])
+    children.append(":")
     children.extend(node.body)
     self._handle(node, children)
 
@@ -54883,8 +54719,7 @@ empty_tuple = object()
 
 </t>
 <t tx="ekr.20221118072831.699">def _GeneratorExp(self, node):
-    children = [node.elt]
-    children.extend(node.generators)
+    children = [node.elt, *node.generators]
     self._handle(node, children, eat_parens=True)
 
 </t>
@@ -54909,24 +54744,18 @@ by `rope.ui` modules.
 </t>
 <t tx="ekr.20221118072831.700">def _comprehension(self, node):
     children = ["for", node.target, "in", node.iter]
-    if node.ifs:
-        for if_ in node.ifs:
-            children.append("if")
-            children.append(if_)
+    for if_ in node.ifs:
+        children.extend(["if", if_])
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.701">def _Global(self, node):
-    children = self._child_nodes(node.names, ",")
-    children.insert(0, "global")
+    children = ["global", *self._child_nodes(node.names, ",")]
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.702">def _If(self, node):
-    if self._is_elif(node):
-        children = ["elif"]
-    else:
-        children = ["if"]
+    children = ["elif"] if self._is_elif(node) else ["if"]
     children.extend([node.test, ":"])
     children.extend(node.body)
     if node.orelse:
@@ -54953,17 +54782,15 @@ by `rope.ui` modules.
 
 </t>
 <t tx="ekr.20221118072831.705">def _Import(self, node):
-    children = ["import"]
-    children.extend(self._child_nodes(node.names, ","))
+    children = ["import", *self._child_nodes(node.names, ",")]
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.706">def _keyword(self, node):
-    children = []
     if node.arg is None:
-        children.append(node.value)
+        children = [node.value]
     else:
-        children.extend([node.arg, "=", node.value])
+        children = [node.arg, "=", node.value]
     self._handle(node, children)
 
 </t>
@@ -54972,20 +54799,18 @@ by `rope.ui` modules.
 
 </t>
 <t tx="ekr.20221118072831.708">def _List(self, node):
-    self._handle(node, ["["] + self._child_nodes(node.elts, ",") + ["]"])
+    self._handle(node, ["[", *self._child_nodes(node.elts, ","), "]"])
 
 </t>
 <t tx="ekr.20221118072831.709">def _ListComp(self, node):
-    children = ["[", node.elt]
-    children.extend(node.generators)
-    children.append("]")
+    children = ["[", node.elt, *node.generators, "]"]
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.71"></t>
 <t tx="ekr.20221118072831.710">def _Set(self, node):
     if node.elts:
-        self._handle(node, ["{"] + self._child_nodes(node.elts, ",") + ["}"])
+        self._handle(node, ["{", *self._child_nodes(node.elts, ","), "}"])
         return
     # Python doesn't have empty set literals
     warnings.warn(
@@ -54995,17 +54820,12 @@ by `rope.ui` modules.
 
 </t>
 <t tx="ekr.20221118072831.711">def _SetComp(self, node):
-    children = ["{", node.elt]
-    children.extend(node.generators)
-    children.append("}")
+    children = ["{", node.elt, *node.generators, "}"]
     self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.712">def _DictComp(self, node):
-    children = ["{"]
-    children.extend([node.key, ":", node.value])
-    children.extend(node.generators)
-    children.append("}")
+    children = ["{", *[node.key, ":", node.value], *node.generators, "}"]
     self._handle(node, children)
 
 </t>
@@ -55027,25 +54847,15 @@ by `rope.ui` modules.
 </t>
 <t tx="ekr.20221118072831.717">def _Pass(self, node):
     self._handle(node, ["pass"])
-
 </t>
-<t tx="ekr.20221118072831.718">def _Print(self, node):
-    children = ["print"]
-    if node.dest:
-        children.extend(["&gt;&gt;", node.dest])
-        if node.values:
-            children.append(",")
-    children.extend(self._child_nodes(node.values, ","))
-    if not node.nl:
-        children.append(",")
-    self._handle(node, children)
-
+<t tx="ekr.20221118072831.718">
 </t>
 <t tx="ekr.20221118072831.719">def _Raise(self, node):
     children = ["raise"]
     if node.exc:
         children.append(node.exc)
     if node.cause:
+        children.append("from")
         children.append(node.cause)
     self._handle(node, children)
 
@@ -55065,17 +54875,8 @@ from typing import NamedTuple, Optional
     children = ["return"]
     if node.value:
         children.append(node.value)
-    self._handle(node, children)
-
 </t>
-<t tx="ekr.20221118072831.721">def _Sliceobj(self, node):
-    children = []
-    for index, slice in enumerate(node.nodes):
-        if index &gt; 0:
-            children.append(":")
-        if slice:
-            children.append(slice)
-    self._handle(node, children)
+<t tx="ekr.20221118072831.721">    self._handle(node, children)
 
 </t>
 <t tx="ekr.20221118072831.722">def _Index(self, node):
@@ -55143,12 +54944,11 @@ from typing import NamedTuple, Optional
 
 </t>
 <t tx="ekr.20221118072831.729">def _excepthandler(self, node):
-    # self._handle(node, [self.semicolon_or_as_in_except])
     children = ["except"]
     if node.type:
         children.append(node.type)
     if node.name:
-        children.append(self.semicolon_or_as_in_except)
+        children.append("as")
         children.append(node.name)
     children.append(":")
     children.extend(node.body)
@@ -55273,11 +55073,13 @@ from typing import NamedTuple, Optional
 
 </t>
 <t tx="ekr.20221118072831.743">def _MatchClass(self, node):
-    children = []
-    children.extend([node.cls, "("])
-    children.extend(self._child_nodes(node.patterns, ","))
-    children.extend(self._flatten_keywords(zip(node.kwd_attrs, node.kwd_patterns)))
-    children.append(")")
+    children = [
+        node.cls,
+        "(",
+        *self._child_nodes(node.patterns, ","),
+        *self._flatten_keywords(zip(node.kwd_attrs, node.kwd_patterns)),
+        ")",
+    ]
     self._handle(node, children)
 
 </t>
@@ -55300,7 +55102,6 @@ def _MatchMapping(self, node):
     @others
     _string_pattern = None
     _number_pattern = None
-    _not_equals_pattern = None
 </t>
 <t tx="ekr.20221118072831.746">def __init__(self, source):
     self.source = source
@@ -55367,33 +55168,11 @@ def _MatchMapping(self, node):
     return self._consume_pattern(re.compile(r"\(\s*\)"))
 
 </t>
-<t tx="ekr.20221118072831.752">def consume_not_equal(self):
-    if _Source._not_equals_pattern is None:
-        _Source._not_equals_pattern = re.compile(r"&lt;&gt;|!=")
-    repattern = _Source._not_equals_pattern
-    return self._consume_pattern(repattern)
-
-</t>
-<t tx="ekr.20221118072831.753">def consume_except_as_or_semicolon(self):
-    repattern = re.compile(r"as|,")
-    return self._consume_pattern(repattern)
-
-</t>
-<t tx="ekr.20221118072831.754">def consume_exec_open_paren_or_space(self):
-    repattern = re.compile(r"\(|")
-    return self._consume_pattern(repattern)
-
-</t>
-<t tx="ekr.20221118072831.755">def consume_exec_in_or_comma(self):
-    repattern = re.compile(r"in|,")
-    return self._consume_pattern(repattern)
-
-</t>
-<t tx="ekr.20221118072831.756">def consume_exec_close_paren_or_space(self):
-    repattern = re.compile(r"\)|")
-    return self._consume_pattern(repattern)
-
-</t>
+<t tx="ekr.20221118072831.752"></t>
+<t tx="ekr.20221118072831.753"></t>
+<t tx="ekr.20221118072831.754"></t>
+<t tx="ekr.20221118072831.755"></t>
+<t tx="ekr.20221118072831.756"></t>
 <t tx="ekr.20221118072831.757">def consume_with_or_comma_context_manager(self):
     repattern = re.compile(r"with|,")
     return self._consume_pattern(repattern)
@@ -55482,7 +55261,7 @@ def _MatchMapping(self, node):
 </t>
 <t tx="ekr.20221118072831.768">def _get_number_pattern(self):
     # HACK: It is merely an approaximation and does the job
-    integer = r"\-?(0x[\da-fA-F]+|\d+)[lL]?"
+    integer = r"\-?(0[xo][\da-fA-F]+|\d+)"
     return r"(%s(\.\d*)?|(\.\d+))([eE][-+]?\d+)?[jJ]?" % integer
 
 </t>
@@ -55490,16 +55269,16 @@ def _MatchMapping(self, node):
 import warnings
 
 from rope.base import (
-    exceptions,
-    pyobjects,
-    pynames,
-    taskhandle,
-    evaluate,
-    worder,
     codeanalyze,
+    evaluate,
+    exceptions,
     libutils,
+    pynames,
+    pyobjects,
+    taskhandle,
+    worder,
 )
-from rope.base.change import ChangeSet, ChangeContents, MoveResource
+from rope.base.change import ChangeContents, ChangeSet, MoveResource
 from rope.refactor import occurrences
 
 
@@ -55566,7 +55345,7 @@ from rope.refactor import occurrences
     unsure=None,
     docs=False,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get the changes needed for this refactoring
 
@@ -55815,8 +55594,7 @@ from rope.refactor import occurrences
 <t tx="ekr.20221118072831.786">@path rope/refactor/
 import warnings
 
-from rope.base import change, taskhandle, builtins, ast, codeanalyze
-from rope.base import libutils
+from rope.base import ast, builtins, change, codeanalyze, libutils, taskhandle
 from rope.refactor import patchedast, similarfinder, sourceutils
 from rope.refactor.importutils import module_imports
 
@@ -55917,7 +55695,7 @@ from rope.refactor.importutils import module_imports
     checks=None,
     imports=None,
     resources=None,
-    task_handle=taskhandle.NullTaskHandle(),
+    task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Get the changes needed by this restructuring
 
@@ -56201,12 +55979,7 @@ import re
 
 import rope.base.builtins  # Use full qualification for clarity.
 import rope.refactor.wildcards  # Use full qualification for clarity.
-from rope.base import (
-    ast,
-    codeanalyze,
-    exceptions,
-    libutils,
-)
+from rope.base import ast, codeanalyze, exceptions, libutils
 from rope.refactor import patchedast
 from rope.refactor.patchedast import MismatchedTokenError
 
@@ -56251,7 +56024,9 @@ from rope.refactor.patchedast import MismatchedTokenError
         self.wildcards = wildcards
 
 </t>
-<t tx="ekr.20221118072831.809">def get_matches(self, code, args={}, start=0, end=None):
+<t tx="ekr.20221118072831.809">def get_matches(self, code, args=None, start=0, end=None):
+    if args is None:
+        args = {}
     self.args = args
     if end is None:
         end = len(self.source)
@@ -56361,9 +56136,7 @@ from rope.refactor.patchedast import MismatchedTokenError
 <t tx="ekr.20221118072831.819">def _replace_wildcards(self, expression):
     ropevar = _RopeVariable()
     template = CodeTemplate(expression)
-    mapping = {}
-    for name in template.get_names():
-        mapping[name] = ropevar.get_var(name)
+    mapping = {name: ropevar.get_var(name) for name in template.get_names()}
     return template.substitute(mapping)
 
 
@@ -56475,7 +56248,8 @@ from rope.refactor.patchedast import MismatchedTokenError
 
 </t>
 <t tx="ekr.20221118072831.83">@path rope/contrib/autoimport/
-from typing import List
+from abc import ABC, abstractmethod
+from typing import Dict, List
 
 
 @others
@@ -56553,6 +56327,9 @@ from typing import List
 <t tx="ekr.20221118072831.84">class FinalQuery:
     def __init__(self, query):
         self._query = query
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}("{self._query}")'
 
 
 </t>
@@ -56659,12 +56436,11 @@ def _get_pattern(cls):
     if isinstance(
         pydefined, (rope.base.builtins.BuiltinClass, rope.base.builtins.BuiltinFunction)
     ):
-        return "__builtins__." + pydefined.get_name()
-    else:
-        while pydefined.parent is not None:
-            address.insert(0, pydefined.get_name())
-            pydefined = pydefined.parent
-        module_name = libutils.modname(pydefined.resource)
+        return f"__builtins__.{pydefined.get_name()}"
+    while pydefined.parent is not None:
+        address.insert(0, pydefined.get_name())
+        pydefined = pydefined.parent
+    module_name = libutils.modname(pydefined.resource)
     return ".".join(module_name.split(".") + address)
 </t>
 <t tx="ekr.20221118072831.855">@path rope/refactor/
@@ -56719,6 +56495,9 @@ from rope.base import codeanalyze
 <t tx="ekr.20221118072831.86">def __init__(self, query: str, columns: List[str]):
     self.query = query
     self.columns = columns
+
+def __repr__(self):
+    return f'{self.__class__.__name__}("{self.query}", columns={self.columns})'
 
 </t>
 <t tx="ekr.20221118072831.860">def add_methods(pymodule, class_scope, methods_sources):
@@ -57003,7 +56782,7 @@ from rope.base import ast
 </t>
 <t tx="ekr.20221118072831.892">@path rope/refactor/
 import rope.refactor.importutils
-from rope.base.change import ChangeSet, ChangeContents, MoveResource, CreateFolder
+from rope.base.change import ChangeContents, ChangeSet, CreateFolder, MoveResource
 
 
 @others
@@ -57051,7 +56830,7 @@ from rope.base import (
     pyobjects,
     taskhandle,
 )
-from rope.refactor import restructure, sourceutils, similarfinder
+from rope.refactor import restructure, similarfinder, sourceutils
 
 
 @others
@@ -57116,7 +56895,7 @@ from rope.refactor import restructure, sourceutils, similarfinder
         )
 
 </t>
-<t tx="ekr.20221118072831.901">def get_changes(self, resources=None, task_handle=taskhandle.NullTaskHandle()):
+<t tx="ekr.20221118072831.901">def get_changes(self, resources=None, task_handle=taskhandle.DEFAULT_TASK_HANDLE):
     if resources is None:
         resources = self.project.get_python_files()
     changes = change.ChangeSet("Using function &lt;%s&gt;" % self.pyfunction.get_name())
@@ -57220,12 +56999,12 @@ from rope.refactor import restructure, sourceutils, similarfinder
 <t tx="ekr.20221118072831.911">def find_temps(project, code):
     code = "def f():\n" + sourceutils.indent_lines(code, 4)
     pymodule = libutils.get_string_module(project, code)
-    result = []
     function_scope = pymodule.get_scope().get_scopes()[0]
-    for name, pyname in function_scope.get_names().items():
-        if isinstance(pyname, pynames.AssignedName):
-            result.append(name)
-    return result
+    return [
+        name
+        for name, pyname in function_scope.get_names().items()
+        if isinstance(pyname, pynames.AssignedName)
+    ]
 
 
 </t>
@@ -57308,8 +57087,8 @@ from rope.refactor import restructure, sourceutils, similarfinder
         self.visit(child)
 </t>
 <t tx="ekr.20221118072831.925">@path rope/refactor/
-from rope.base import ast, evaluate, builtins, pyobjects
-from rope.refactor import patchedast, occurrences
+from rope.base import ast, builtins, evaluate, pyobjects
+from rope.refactor import occurrences, patchedast
 
 
 @others
@@ -57354,27 +57133,27 @@ from rope.refactor import patchedast, occurrences
     self.project = project
 
 </t>
-<t tx="ekr.20221118072831.93">class Name:
-    table_name = "names"
-    columns = [
-        "name",
-        "module",
-        "package",
-        "source",
-        "type",
-    ]
+<t tx="ekr.20221118072831.93">class Model(ABC):
+    @property
+    @abstractmethod
+    def table_name(self) -&gt; str:
+        ...
 
-    @others
-    objects = Query(table_name, columns)
+    @property
+    @abstractmethod
+    def schema(self) -&gt; Dict[str, str]:
+        ...
 
-    search_submodule_like = objects.where('module LIKE ("%." || ?)')
-    search_module_like = objects.where("module LIKE (?)")
-
-    import_assist = objects.where("name LIKE (? || '%')")
-
-    search_by_name_like = objects.where("name LIKE (?)")
-
-    delete_by_module_name = objects.where("module = ?").delete_from()
+    @classmethod
+    def create_table(cls, connection):
+        metadata_table = [
+            f"{column_name} {column_type}"
+            for column_name, column_type in cls.schema.items()
+        ]
+        metadata_table_definition = ", ".join(metadata_table)
+        connection.execute(
+            f"CREATE TABLE IF NOT EXISTS {cls.table_name}({metadata_table_definition})"
+        )
 
 
 </t>
@@ -57478,17 +57257,6 @@ from rope.refactor import patchedast, occurrences
 </t>
 <t tx="ekr.20221118072831.939">def _same_pyobject(self, expected, pyobject):
     return expected == pyobject
-
-</t>
-<t tx="ekr.20221118072831.94">@classmethod
-def create_table(self, connection):
-    names_table = (
-        "(name TEXT, module TEXT, package TEXT, source INTEGER, type INTEGER)"
-    )
-    connection.execute(f"CREATE TABLE IF NOT EXISTS names{names_table}")
-    connection.execute("CREATE INDEX IF NOT EXISTS name ON names(name)")
-    connection.execute("CREATE INDEX IF NOT EXISTS module ON names(module)")
-    connection.execute("CREATE INDEX IF NOT EXISTS package ON names(package)")
 
 </t>
 <t tx="ekr.20221118072831.940">def _same_pyname(self, expected, pyname):
@@ -57597,7 +57365,6 @@ monitoring the progress of refactorings.
 from rope.refactor.importutils import ImportOrganizer  # noqa
 from rope.refactor.topackage import ModuleToPackage  # noqa
 
-
 __all__ = [
     "rename",
     "move",
@@ -57620,12 +57387,7 @@ __all__ = [
 </t>
 <t tx="ekr.20221118072831.947"></t>
 <t tx="ekr.20221118072831.948">@path rope/refactor/importutils/
-from rope.base import (
-    libutils,
-    pyobjects,
-    exceptions,
-    stdmods,
-)
+from rope.base import exceptions, libutils, pyobjects, stdmods
 from rope.refactor import occurrences
 from rope.refactor.importutils import importinfo
 
@@ -57637,14 +57399,13 @@ from rope.refactor.importutils import importinfo
 <t tx="ekr.20221118072831.949">class ImportInfoVisitor:
     @others
 </t>
-<t tx="ekr.20221118072831.95">class Package:
+<t tx="ekr.20221118072831.95">class Package(Model):
     table_name = "packages"
-    columns = [
-        "package",
-        "path",
-    ]
-
-    @others
+    schema = {
+        "package": "TEXT",
+        "path": "TEXT",
+    }
+    columns = list(schema.keys())
     objects = Query(table_name, columns)
 
     delete_by_package_name = objects.where("package = ?").delete_from()
@@ -57725,12 +57486,6 @@ from rope.refactor.importutils import importinfo
 </t>
 <t tx="ekr.20221118072831.959">class FilteringVisitor(ImportInfoVisitor):
     @others
-</t>
-<t tx="ekr.20221118072831.96">@classmethod
-def create_table(self, connection):
-    packages_table = "(package TEXT, path TEXT)"
-    connection.execute(f"CREATE TABLE IF NOT EXISTS packages{packages_table}")
-
 </t>
 <t tx="ekr.20221118072831.960">def __init__(self, project, folder, can_select):
     self.to_be_absolute = []
@@ -57830,6 +57585,8 @@ import pathlib
 from importlib import import_module
 from typing import Generator, List
 
+from rope.base import ast
+
 from .defs import (
     ModuleCompiled,
     ModuleFile,
@@ -57840,8 +57597,6 @@ from .defs import (
     PartialName,
     Source,
 )
-from rope.base import ast
-
 
 logger = logging.getLogger(__name__)
 
@@ -58550,11 +58305,11 @@ extend-ignore =
     # E203: whitespace before ':'
     # this rule contradicts black codestyle
     E203
-    
+
     # B007: Loop control variable 'keyword' not used within the loop body.
     #       If this is intended, start the name with an underscore.
     B007
-    
+
     # B011: Do not call assert False since python -O removes these calls.
     #       Instead callers should raise AssertionError().
     B011
@@ -58738,7 +58493,7 @@ from rope.base import fscommands
 # Add &lt;file or directory&gt; to the black list. A base name, not a path.
 ignore=
     .git
-    
+
 # Files or directories matching regex, in Windows or Posix format.
 ignore-paths=
 
@@ -58755,7 +58510,7 @@ disable=
 
     # Catagories to disable: expensive or make-work
     # typecheck
-    
+
         basic,  # Check on names. Unimportant.
         classes,  # Unimportant.
         design,  # Make work.
@@ -58766,24 +58521,24 @@ disable=
         variables,  # Unimportant.
 
     # Black. Suppress checks that conflict with Black's conventions.
-    
+
         line-too-long,
-        
+
     # Rope: Suppress checks that conflict with Rope's conventions.
 
         bad-classmethod-argument,
         eval-used,
         function-redefined,
-        inconsistent-return-statements, 
-        invalid-name, 
+        inconsistent-return-statements,
+        invalid-name,
         no-else-return,
         no-self-argument,
         signature-differs,  # Maybe.
         not-callable,  # Maybe.
         unexpected-special-method-signature,
-        
+
     # Rope: potentially serious warnings.
-    
+
         arguments-differ,
         dangerous-default-value,
         modified-iterating-list,
@@ -58793,7 +58548,7 @@ disable=
         unpacking-non-sequence,
 
     # Rope: to be removed.
-    
+
         duplicate-string-formatting-argument,
         no-else-raise,  # Unnecessary "else" after "raise", remove the "else" and de-indent the code inside it.
         reimported,
@@ -58801,14 +58556,14 @@ disable=
         unused-import,
         unused-wildcard-import,
         useless-super-delegation,
-        
+
         useless-else-on-loop,  #Else clause on loop without a break statement, remove the else and de-indent all the code inside it.
         unidiomatic-typecheck,
         wildcard-import,
         wrong-import-order,
-        
+
     # Rope: Additional (temporary?) suppressions.
-    
+
         abstract-method,
         arguments-differ,
         consider-merging-isinstance,
@@ -58823,9 +58578,9 @@ disable=
         super-init-not-called,
         unnecessary-lambda,
         unsupported-assignment-operation,
-    
+
     # Leo: Standard suppressions.
-        
+
         arguments-renamed, # cursesGui2.py
         assignment-from-no-return, # Causes problems when base class return None.
         assignment-from-none, # Causes problems when base class return None.
@@ -59198,6 +58953,8 @@ def xxx_test_with_statement_variables_should_not_leak(self):
 </t>
 <t tx="ekr.20221212141427.1">@path rope/base/
 @nopyflakes
+import contextlib
+
 import rope.base.oi.soi
 import rope.base.pyobjects
 from rope.base import pynames, utils
@@ -59210,13 +58967,13 @@ _Inferred = pynames._Inferred
 @language batch
 echo off
 cls
-cd c:\Repos\ekr-fork-rope2
+cd c:\Repos\ekr-clone-rope2
 leo rope.leo %*
 </t>
 <t tx="ekr.20221214124101.1">@path c:\Scripts\
 @language batch
 echo off
-cd C:\Repos\ekr-fork-rope2
+cd C:\Repos\ekr-clone-rope2
 </t>
 <t tx="ekr.20221215002954.1"></t>
 <t tx="ekr.20221216152134.1">class ParameterName(PyName):
@@ -59279,10 +59036,8 @@ def _get_inferred(self):
 <t tx="ekr.20221217024942.5">def get_definition_location(self):
     """Returns a (module, lineno) tuple"""
     if self.lineno is None and self.assignments:
-        try:
+        with contextlib.suppress(AttributeError):
             self.lineno = self.assignments[0].get_lineno()
-        except AttributeError:
-            pass
     return (self.module, self.lineno)
 
 </t>
@@ -59314,6 +59069,36 @@ def _get_inferred(self):
 </t>
 <t tx="ekr.20221220042806.1">class DefinedName(pynames.DefinedName):
     pass
+
+
+</t>
+<t tx="ekr.20221229121101.1">class Name(Model):
+    table_name = "names"
+    schema = {
+        "name": "TEXT",
+        "module": "TEXT",
+        "package": "TEXT",
+        "source": "INTEGER",
+        "type": "INTEGER",
+    }
+    columns = list(schema.keys())
+    objects = Query(table_name, columns)
+
+    @classmethod
+    def create_table(cls, connection):
+        super().create_table(connection)
+        connection.execute("CREATE INDEX IF NOT EXISTS name ON names(name)")
+        connection.execute("CREATE INDEX IF NOT EXISTS module ON names(module)")
+        connection.execute("CREATE INDEX IF NOT EXISTS package ON names(package)")
+
+    search_submodule_like = objects.where('module LIKE ("%." || ?)')
+    search_module_like = objects.where("module LIKE (?)")
+
+    import_assist = objects.where("name LIKE (? || '%')")
+
+    search_by_name_like = objects.where("name LIKE (?)")
+
+    delete_by_module_name = objects.where("module = ?").delete_from()
 
 
 </t>
