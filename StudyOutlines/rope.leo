@@ -30,7 +30,43 @@
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
 <v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
-<v t="ekr.20230108010158.1"><vh>My superpowers</vh></v>
+<v t="ekr.20230129234218.1"><vh>ENB</vh>
+<v t="ekr.20230129234357.1"><vh>EKR's ENB (Engineering Notebook)</vh></v>
+<v t="ekr.20230129234521.1"><vh>ENB 0: My goals re Rope</vh></v>
+<v t="ekr.20230129234521.2"><vh>ENB 1: The curse of knowledge and Rope</vh></v>
+<v t="ekr.20230129234714.1"><vh>ENB 2: First study steps</vh>
+<v t="ekr.20230130002051.1"><vh>First questions</vh></v>
+<v t="ekr.20230130002122.1"><vh>The "Hello World" unit test</vh></v>
+<v t="ekr.20230130002155.1"><vh>Communication</vh>
+<v t="ekr.20230129234930.1"><vh>Details</vh></v>
+</v>
+<v t="ekr.20230130002237.1"><vh>Startup and setUp</vh></v>
+<v t="ekr.20230129235204.1"><vh>Summary</vh></v>
+</v>
+<v t="ekr.20230129234715.1"><vh>ENB 3: Learning what to ignore</vh></v>
+<v t="ekr.20230129234717.1"><vh>ENB 4: The @saveit (@cacheit) decorator</vh>
+<v t="ekr.20230130001559.1"><vh>The decorator</vh></v>
+<v t="ekr.20230130001720.1"><vh>Tracing the decorator</vh>
+<v t="ekr.20230129235750.1"><vh>details 1: the instrumented decorator</vh></v>
+<v t="ekr.20230129235936.1"><vh>details 2: brief traces</vh></v>
+<v t="ekr.20230130000046.1"><vh>details 3: brief: different injecting &amp; injected classes</vh></v>
+<v t="ekr.20230129235612.1"><vh>details 4: verbose trace</vh></v>
+</v>
+<v t="ekr.20230130001835.1"><vh>What does the decorator do?</vh></v>
+<v t="ekr.20230130001910.1"><vh>Suggestions</vh></v>
+<v t="ekr.20230130001933.1"><vh>Summary</vh></v>
+</v>
+<v t="ekr.20230129234718.1"><vh>ENB 5: (private) Why I'm the one to write Rope's Theory of Operation</vh></v>
+<v t="ekr.20230129234719.1"><vh>ENB 6: (delete) Finding Rope's type inference patterns</vh></v>
+<v t="ekr.20230129234522.1"><vh>ENB 7: Studying ObjectInferTest.test_simple_type_inferencing</vh>
+<v t="ekr.20230130000739.1"><vh>Goals</vh></v>
+<v t="ekr.20230130000742.1"><vh>Write early. Write too much, not too little</vh></v>
+<v t="ekr.20230130000742.2"><vh>Tracing code</vh></v>
+<v t="ekr.20230130000742.3"><vh>First Ahas</vh></v>
+<v t="ekr.20230130001331.1"><vh>test-one-r.cmd</vh></v>
+<v t="ekr.20230130000743.1"><vh>First traces</vh></v>
+</v>
+</v>
 </v>
 <v t="ekr.20230128023730.1"><vh>*** AOI: Annotation-base Object Inference</vh></v>
 <v t="ekr.20221129082559.1"><vh>Script files</vh>
@@ -66,7 +102,7 @@
 <v t="ekr.20221211142245.1"><vh>@clean rope/base/ast.py</vh>
 <v t="ekr.20221230095613.1"><vh>ast.parse</vh></v>
 <v t="ekr.20230104023141.1"><vh>ast.call_for_nodes</vh></v>
-<v t="ekr.20230102051545.1"><vh>ast.RopeNodeVisitor</vh></v>
+<v t="ekr.20230102051545.1"><vh>class ast.RopeNodeVisitor</vh></v>
 <v t="ekr.20230104023244.1"><vh>ast.get_const_subtype_name</vh></v>
 <v t="ekr.20230104023245.1"><vh>ast.get_node_type_name</vh></v>
 </v>
@@ -550,6 +586,23 @@
 <v t="ekr.20221118072830.461"><vh>function: libutils.is_python_file</vh></v>
 <v t="ekr.20221118072830.462"><vh>function: libutils.modname</vh></v>
 </v>
+<v t="ekr.20230129010854.1"><vh>@clean leoGlobals.py</vh>
+<v t="ekr.20230129011359.4"><vh>g._callerName</vh></v>
+<v t="ekr.20230129011359.5"><vh>g.caller</vh></v>
+<v t="ekr.20230129011359.2"><vh>g.callers</vh></v>
+<v t="ekr.20230129011359.3"><vh>g.callers_list</vh></v>
+<v t="ekr.20230129011432.1"><vh>g.get_ctor_name</vh></v>
+<v t="ekr.20230129013023.1"><vh>g.plural</vh></v>
+<v t="ekr.20230129012043.1"><vh>g.printObj &amp; helpers</vh>
+<v t="ekr.20230129012142.1"><vh>g.objToString</vh></v>
+<v t="ekr.20230129012417.1"><vh>g.dictToString</vh></v>
+<v t="ekr.20230129012458.1"><vh>g.listToString</vh></v>
+<v t="ekr.20230129013224.1"><vh>g.tupleToString</vh></v>
+</v>
+<v t="ekr.20230129013254.1"><vh>g.shortFileName &amp; shortFilename</vh></v>
+<v t="ekr.20230129013049.1"><vh>g.splitLines</vh></v>
+<v t="ekr.20230129013407.1"><vh>g.trace</vh></v>
+</v>
 <v t="ekr.20221210100024.1"><vh>@clean nameanalyze.py</vh>
 <v t="ekr.20221210100142.1"><vh>get_name_levels</vh></v>
 <v t="ekr.20221210100142.2"><vh>class _NodeNameCollector(RopeNodeVisitor) (nameanalyze.py)</vh>
@@ -782,7 +835,7 @@
 <v t="ekr.20221118072830.670"><vh>AbstractModule.get_resource</vh></v>
 </v>
 <v t="ekr.20221118072830.671"><vh>class    pyobjects.PyDefinedObject  (** contains only getters!)</vh>
-<v t="ekr.20221118072830.672"><vh>PyDefinedObject.__init__ (*** trace ***)</vh></v>
+<v t="ekr.20221118072830.672"><vh>PyDefinedObject.__init__</vh></v>
 <v t="ekr.20221118072830.673"><vh>PyDefinedObject.__repr__</vh></v>
 <v t="ekr.20221118072830.674"><vh>PyDefinedObject.absolute_name</vh></v>
 <v t="ekr.20221118072830.675"><vh>PyDefinedObject.visitor_class = None</vh></v>
@@ -811,7 +864,7 @@
 <v t="ekr.20230127151929.1"><vh>pyobjects._ConcludedData._ekr_dump ***</vh></v>
 </v>
 <v t="ekr.20221118072830.698"><vh>class    pyobjects._PyModule(PyDefinedObject, AbstractModule)</vh>
-<v t="ekr.20221118072830.699"><vh>pyobjects._PyModule.__init__  (*** trace ***)</vh></v>
+<v t="ekr.20221118072830.699"><vh>pyobjects._PyModule.__init__</vh></v>
 <v t="ekr.20221118072830.700"><vh>pyobjects._PyModule.absolute_name</vh></v>
 <v t="ekr.20221118072830.701"><vh>pyobjects._PyModule._get_concluded_data</vh></v>
 <v t="ekr.20221118072830.702"><vh>pyobjects._PyModule._forget_concluded_data</vh></v>
@@ -845,16 +898,16 @@
 <v t="ekr.20221118072830.726"><vh>PyComprehension._create_scope</vh></v>
 <v t="ekr.20221118072830.727"><vh>PyComprehension.get_kind</vh></v>
 </v>
-<v t="ekr.20221118072830.728"><vh>class pyobjectsdef.PyClass (ob.PyClass)</vh>
-<v t="ekr.20221118072830.729"><vh>PyClass.__init__</vh></v>
-<v t="ekr.20221118072830.730"><vh>PyClass.get_superclasses</vh></v>
-<v t="ekr.20221118072830.731"><vh>PyClass.get_name</vh></v>
-<v t="ekr.20221118072830.732"><vh>PyClass._create_concluded_attributes</vh></v>
-<v t="ekr.20221118072830.733"><vh>PyClass._get_bases</vh></v>
-<v t="ekr.20221118072830.734"><vh>PyClass._create_scope</vh></v>
+<v t="ekr.20221118072830.728"><vh>class pyobjectsdef.PyClass (pyobjects.PyClass)</vh>
+<v t="ekr.20221118072830.729"><vh>pyobjectsdef.PyClass.__init__</vh></v>
+<v t="ekr.20221118072830.730"><vh>pyobjectsdef.PyClass.get_superclasses</vh></v>
+<v t="ekr.20221118072830.731"><vh>pyobjectsdef.PyClass.get_name</vh></v>
+<v t="ekr.20221118072830.732"><vh>pyobjectsdef.PyClass._create_concluded_attributes</vh></v>
+<v t="ekr.20221118072830.733"><vh>pyobjectsdef.PyClass._get_bases</vh></v>
+<v t="ekr.20221118072830.734"><vh>pyobjectsdef.PyClass._create_scope</vh></v>
 </v>
 <v t="ekr.20221118072830.735"><vh>class pyobjectsdef.PyModule(pyobjects.PyModule)</vh>
-<v t="ekr.20221118072830.736"><vh>pyobjectsdef.PyModule.__init__ (*** trace ***)</vh></v>
+<v t="ekr.20221118072830.736"><vh>pyobjectsdef.PyModule.__init__</vh></v>
 <v t="ekr.20221118072830.737"><vh>pyobjectsdef.PyModule._init_source</vh></v>
 <v t="ekr.20221118072830.738"><vh>pyobjectsdef.PyModule._create_concluded_attributes</vh></v>
 <v t="ekr.20221118072830.739"><vh>pyobjectsdef.PyModule._create_scope</vh></v>
@@ -956,7 +1009,6 @@
 </v>
 <v t="ekr.20221118072830.824"><vh>@clean pyscopes.py</vh>
 <v t="ekr.20221118072830.825"><vh>class Scope</vh>
-<v t="ekr.20221118072830.826"><vh>Scope.__init__</vh></v>
 <v t="ekr.20221118072830.827"><vh>Scope.get_names</vh></v>
 <v t="ekr.20221118072830.828"><vh>Scope.get_defined_names</vh></v>
 <v t="ekr.20221118072830.829"><vh>Scope.get_name (returns PyName)</vh></v>
@@ -5411,16 +5463,12 @@
 </v>
 </v>
 <v t="ekr.20221230095246.1"><vh>Recent code</vh>
-<v t="ekr.20230127045231.1"><vh>--- completed PRs</vh>
+<v t="ekr.20230127045231.1"><vh>--- completed PRs</vh></v>
 <v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
 <v t="ekr.20221118072830.1500"></v>
 </v>
 </v>
-<v t="ekr.20221118072831.20"></v>
-</v>
 <v t="ekr.20221230095543.1"><vh>Recent files</vh>
-<v t="ekr.20221204084958.1"></v>
-<v t="ekr.20221118072831.1483"></v>
 <v t="ekr.20230127101717.1"><vh>--- inference files</vh>
 <v t="ekr.20221118072830.588"></v>
 <v t="ekr.20221118072830.640"></v>
@@ -5435,8 +5483,12 @@
 <v t="ekr.20221118072830.934"></v>
 <v t="ekr.20221118072831.1919"></v>
 </v>
+<v t="ekr.20221204084958.1"></v>
+<v t="ekr.20221118072831.1483"></v>
+<v t="ekr.20230129010854.1"></v>
 </v>
-<v t="ekr.20230106094401.1"><vh>******** Study</vh>
+<v t="ekr.20230129005206.1"><vh>**** To do</vh></v>
+<v t="ekr.20230106094401.1"><vh>**** Study</vh>
 <v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
 <v t="ekr.20221118072830.458"></v>
 <v t="ekr.20221118072830.581"></v>
@@ -5455,6 +5507,22 @@
 <v t="ekr.20221118072831.822"></v>
 <v t="ekr.20221118072831.3009"></v>
 </v>
+<v t="ekr.20230127144054.1"><vh>--- classes</vh>
+<v t="ekr.20221118072830.691"></v>
+<v t="ekr.20221118072830.698"></v>
+<v t="ekr.20221118072830.690"></v>
+<v t="ekr.20221118072830.671"></v>
+<v t="ekr.20221118072830.704"></v>
+<v t="ekr.20221118072830.847"></v>
+<v t="ekr.20221118072830.728"></v>
+<v t="ekr.20221118072830.735"></v>
+<v t="ekr.20221118072830.825"></v>
+</v>
+<v t="ekr.20230128160046.1"><vh>--- ctors</vh>
+<v t="ekr.20221118072830.729"></v>
+<v t="ekr.20221118072830.672"></v>
+<v t="ekr.20221118072830.699"></v>
+<v t="ekr.20221118072830.736"></v>
 </v>
 <v t="ekr.20230104221623.1"><vh>======== Study one test</vh>
 <v t="ekr.20230106074706.1"><vh>--- what is PyObject ???</vh>
@@ -5588,13 +5656,6 @@
 <v t="ekr.20221118072830.728"></v>
 </v>
 </v>
-<v t="ekr.20230127144054.1"><vh>--- test class hierarchy</vh>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20221118072830.691"></v>
-</v>
 <v t="ekr.20230127143416.1"><vh>--- test calling sequence</vh>
 <v t="ekr.20221118072831.1487"></v>
 <v t="ekr.20221118072831.1485"></v>
@@ -5618,10 +5679,62 @@
 <v t="ekr.20230127154232.1"></v>
 </v>
 <v t="ekr.20221118072831.1487"></v>
+<v t="ekr.20230128100404.1"><vh>--- tracing: scope["Sample"].get_object()</vh>
+<v t="ekr.20221118072830.851"></v>
+<v t="ekr.20221118072830.829"></v>
+<v t="ekr.20221118072830.827"></v>
+<v t="ekr.20221118072830.644"></v>
+<v t="ekr.20221118072830.676"></v>
+<v t="ekr.20221118072830.684"></v>
+<v t="ekr.20221118072830.779"></v>
+<v t="ekr.20221118072830.804"></v>
+<v t="ekr.20221118072830.782"></v>
+<v t="ekr.20230128165420.1"><vh></vh></v>
+</v>
+</v>
+<v t="ekr.20230129064218.1"><vh>Found 37:Visitor)</vh>
+<v t="ekr.20230102051545.1"></v>
+<v t="ekr.20221118072830.1587"></v>
+<v t="ekr.20221118072831.371"></v>
+<v t="ekr.20221118072831.301"></v>
+<v t="ekr.20221118072831.339"></v>
+<v t="ekr.20221118072831.389"></v>
+<v t="ekr.20221210100142.2"></v>
+<v t="ekr.20221118072831.917"></v>
+<v t="ekr.20221118072831.877"></v>
+<v t="ekr.20221118072831.1073"></v>
+<v t="ekr.20221118072831.364"></v>
+<v t="ekr.20221118072831.967"></v>
+<v t="ekr.20221118072831.972"></v>
+<v t="ekr.20221118072831.959"></v>
+<v t="ekr.20221118072831.986"></v>
+<v t="ekr.20221118072830.752"></v>
+<v t="ekr.20221118072830.770"></v>
+<v t="ekr.20221118072830.812"></v>
+<v t="ekr.20221118072830.805"></v>
+<v t="ekr.20221118072830.800"></v>
+<v t="ekr.20221118072830.762"></v>
+<v t="ekr.20221118072830.808"></v>
+<v t="ekr.20221118072830.804"></v>
+<v t="ekr.20221118072830.779"></v>
+<v t="ekr.20221118072831.954"></v>
+<v t="ekr.20221118072831.990"></v>
+<v t="ekr.20221118072831.964"></v>
+<v t="ekr.20221118072831.976"></v>
+<v t="ekr.20221118072830.1257"></v>
+<v t="ekr.20221118072831.981"></v>
+<v t="ekr.20221118072830.331"></v>
+<v t="ekr.20221118072830.1256"></v>
+<v t="ekr.20221118072830.712"></v>
+</v>
+<v t="ekr.20230129011432.1"></v>
+<v t="ekr.20230129093100.1"><vh>Found 5:trace_ctors</vh>
+<v t="ekr.20221118072831.1487"></v>
 <v t="ekr.20221118072830.672"></v>
 <v t="ekr.20221118072830.699"></v>
+<v t="ekr.20221118072830.729"></v>
 <v t="ekr.20221118072830.736"></v>
-<v t="ekr.20230127185712.1"><vh>*** Allow slices in callers!</vh></v>
+</v>
 </v>
 </vnodes>
 <tnodes>
@@ -10450,6 +10563,10 @@ from collections.abc import MutableSet
 <t tx="ekr.20221118072830.1499">import sys
 import warnings
 
+from rope.base import leoGlobals as g
+
+assert g  ###
+
 
 @others
 @language python
@@ -10461,12 +10578,7 @@ get_generator = _create_builtin_getter(Generator)
 
 
 </t>
-<t tx="ekr.20221118072830.1500">from leo.core import leoGlobals as g
-
-assert g  ###
-
-
-def inject(func):
+<t tx="ekr.20221118072830.1500">def inject(func):
     """
     A decorator that injects a singleton ivar (in self) if the ivar does
     not already exist.
@@ -15859,7 +15971,10 @@ if typing.TYPE_CHECKING:
 
     from rope.base import pyobjectsdef
 
-from leo.core import leoGlobals as g  ###
+from rope.base import leoGlobals as g  ###
+
+assert g  ###
+
 
 @others
 @language python
@@ -16095,15 +16210,15 @@ def get_definition_location(self):
 </t>
 <t tx="ekr.20221118072830.621">def _get_concluded_data(module):
     if module is None:
-        g.trace('(*** pynames function): instantiate')  ###
+        g.trace("(*** pynames function): instantiate")  ###
         return rope.base.pyobjects._ConcludedData()
     if 0:  ###
         # Callers...
         # test_simple_type_inferencing,__getitem__,get_name,__getitem__,
         # get_attribute,newfunc,_get_structural_attributes,_create_structural_attributes,
         # visit,_Assign,visit,_Assign,visit,_Name,_assigned,_assigned,__init__
-        print('')
-        g.trace('(*** pynames function): return module._get_concluded_data')
+        print("")
+        g.trace("(*** pynames function): return module._get_concluded_data")
         g.trace(g.callers(17))
         g.trace(module._ekr_dump_concluded_data())
     return module._get_concluded_data()
@@ -16171,7 +16286,9 @@ from typing import Optional
 
 from rope.base import ast, exceptions, utils
 
-from leo.core import leoGlobals as g  ###
+from rope.base import leoGlobals as g  ###
+
+assert g  ###
 
 
 @others
@@ -16394,7 +16511,11 @@ from leo.core import leoGlobals as g  ###
     self.concluded_attributes = self.get_module()._get_concluded_data()
     self.attributes = self.get_module()._get_concluded_data()
     self.defineds = None
-    g.trace(f"{'PyDefinedObject':&gt;25} {ast_node.__class__.__name__:14}", g.callers(5))  ###
+    if getattr(g, "trace_ctors", None):  ###
+        g.trace(
+            f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}",
+            g.callers(),
+        )
 
 </t>
 <t tx="ekr.20221118072830.673">def __repr__(self):
@@ -16550,10 +16671,12 @@ data = property(get, set)
 </t>
 <t tx="ekr.20221118072830.697">def __str__(self):
     return "pyobjects._ConcludedData&lt;" + str(self.data) + "&gt;"
-    
-### 
 
+###
 
+def _ekr_dump(self):
+
+    g.printObj(self.data, tag=f"***** pyobjects._ConcludedData: {id(self)}")
 </t>
 <t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject, AbstractModule):
     @others
@@ -16563,8 +16686,13 @@ data = property(get, set)
     self.concluded_data = []
     AbstractModule.__init__(self)
     PyDefinedObject.__init__(self, pycore, ast_node, None)
+    if getattr(g, "trace_ctors", None):  ###
+        g.trace(
+            f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}",
+            g.callers(),
+        )
 
-    g.trace(f"{'pyobjects._PyModule':&gt;25} {ast_node.__class__.__name__:14}", g.callers(5))  ###</t>
+</t>
 <t tx="ekr.20221118072830.70">def __init__(self, builtin, attributes, parent=None):
     _BuiltinElement.__init__(self, builtin, parent)
     pyobjects.AbstractClass.__init__(self)
@@ -16590,6 +16718,18 @@ def absolute_name(self) -&gt; str:
 <t tx="ekr.20221118072830.703">def get_resource(self):
     return self.resource
 
+def _ekr_dump_concluded_data(self):
+
+    g.trace("(pyobjects._PyModule._ekr_dump_concluded_data)")
+    tag = self.get_name()
+    try:
+        for i, z in enumerate(self.concluded_data):
+            g.printObj(f"{i:3} {z!s}", tag=tag)
+            # z._ekr_dump()
+    except TypeError:
+        z = self.concluded_data
+        g.printObj(f"{z!s}", tag=tag)
+        # z._ekr_dump()
 
 </t>
 <t tx="ekr.20221118072830.704">class PyModule(_PyModule):
@@ -16623,7 +16763,10 @@ from rope.base import (
     utils,
 )
 
-from leo.core import leoGlobals as g  ###
+from rope.base import leoGlobals as g  ###
+
+assert g  ###
+
 
 @others
 @language python
@@ -16782,6 +16925,8 @@ def decorators(self):
     rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
     self.parent = parent
     self._superclasses = self.get_module()._get_concluded_data()
+    if getattr(g, "trace_ctors", None):  ###
+        g.trace(f"{g.get_ctor_name(self, __file__)} {' ':14}", g.callers())
 
 </t>
 <t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.AbstractFunction):
@@ -16842,7 +16987,8 @@ def decorators(self):
     self.star_imports = []
     self.visitor_class = _GlobalVisitor
     self.coding = fscommands.read_str_coding(self.source_code)
-    g.trace(f"{'pyobjectsdef.PyModule':&gt;25} {' ':14}", g.callers(5))  ###
+    if getattr(g, "trace_ctors", None):  ###
+        g.trace(f"{g.get_ctor_name(self, __file__)} {' ':14}", g.callers())
     super().__init__(pycore, node, resource)
 
 </t>
@@ -17359,8 +17505,10 @@ def get_attributes(self):
 
 </t>
 <t tx="ekr.20221118072830.804">class _GlobalVisitor(_ScopeVisitor):
-    def __init__(self, pycore, owner_object):
-        super().__init__(pycore, owner_object)
+    pass  ###
+    ###
+    # def __init__(self, pycore, owner_object):
+    # super().__init__(pycore, owner_object)
 
 
 </t>
@@ -17506,19 +17654,22 @@ import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
+from rope.base import leoGlobals as g  ###
+
+assert g  ###
+
 
 @others
 @language python
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.825">class Scope:
-    @others
-</t>
-<t tx="ekr.20221118072830.826">def __init__(self, pycore, pyobject, parent_scope):
-    self.pycore = pycore
-    self.pyobject = pyobject
-    self.parent = parent_scope
+    def __init__(self, pycore, pyobject, parent_scope):
+        self.pycore = pycore
+        self.pyobject = pyobject
+        self.parent = parent_scope
 
+    @others
 </t>
 <t tx="ekr.20221118072830.827">def get_names(self):
     """Return the names defined or imported in this scope"""
@@ -24899,8 +25050,8 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
-from leo.core import leoGlobals as g  ###
-
+from rope.base import leoGlobals as g  ###
+assert g  ###
 
 @others
 @language python
@@ -24932,8 +25083,14 @@ from leo.core import leoGlobals as g  ###
         a_var = Sample()
     """)
     
+    trace = False  # Set to False when running all tests.
+
+    if trace:
+        g.trace_ctors = True  # True: Enable tracing in ctors.
+    
     def banner(s):
-        if 1: g.trace(f"\n===== {s} =====\n")
+        if trace:
+            print(f"\n===== {s}\n")
         
     banner('after setUp')
     
@@ -24962,10 +25119,18 @@ from leo.core import leoGlobals as g  ###
     
         # scope is a GlobalScope.  It might be any subclass of Scope.
         # scope.pyobject is a pyobjectsdef.PyModule.
+        
+    if trace: g.trace('*** scope.pyobject', scope.pyobject)
 
+    # *** Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
+    #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
+    #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
+    # scope["Sample"] is a pynamesdef.DefinedName.
+    
     sample_class = scope["Sample"].get_object()
     
     banner('after sample_class = scope["Sample"].get_object()')
+    
     
         # sample_class is a pyobjectsdef.PyClass ("::Sample" at ...)
         # scope["Sample"] is a DefinedName.
@@ -24980,8 +25145,7 @@ from leo.core import leoGlobals as g  ###
         # scope["a_var"].pyobject is a pynames._Inferred.
         # scope["a_var"].get_object() is a pyobjects.PyObject.
 
-    print(f"\nsample_class: {sample_class}")
-    ### import pdb ; pdb.set_trace()  ###
+    if trace: print(f"sample_class: {sample_class}")
 
     self.assertEqual(sample_class, a_var.get_type())
 
@@ -52555,6 +52719,7 @@ from rope.refactor import occurrences, rename, sourceutils
     return self.pyfunction.get_param_names()
 </t>
 <t tx="ekr.20221118072831.512">@path rope/refactor/
+@nopyflakes
 """A module containing classes for move refactoring
 
 `create_move()` is a factory for creating move refactoring objects
@@ -59195,14 +59360,6 @@ from and writing to the resource, moving the resource, etc.
 Query.__init__ &amp; __repr__</t>
 <t tx="ekr.20230104215355.1">@language rest
 @wrap
-
-***Summary of changes from master
-
-- Add annotations.
-  - Add # type:ignore to prefs.py, numpydocstrings.py, type_hinting/evaluate.py.
-- Add traces.
-
-@language python
 </t>
 <t tx="ekr.20230104220522.1">def setUp(self):
     super().setUp()
@@ -59296,19 +59453,9 @@ PR: https://github.com/python-rope/rope/pull//652
 <t tx="ekr.20230106094401.1">@language rest
 @wrap
 
-* Master the basic classes.
-
-? Watch object creation/modification in Sherlock/tracing debugger?
-? Add dump methods?
-? Create master dump function?
-
 @language python
 </t>
 <t tx="ekr.20230107173006.1"></t>
-<t tx="ekr.20230108010158.1">@language rest
-@wrap
-
-A combination of patience(thoroughness/subbornness) and impotience(excitement).</t>
 <t tx="ekr.20230127045231.1"></t>
 <t tx="ekr.20230127094605.1"></t>
 <t tx="ekr.20230127101558.1"></t>
@@ -59318,25 +59465,12 @@ A combination of patience(thoroughness/subbornness) and impotience(excitement).<
 <t tx="ekr.20230127143416.1"></t>
 <t tx="ekr.20230127144054.1"></t>
 <t tx="ekr.20230127145046.1"></t>
-<t tx="ekr.20230127151929.1">def _ekr_dump(self):
-    
-    g.printObj(self.data, tag=f"***** pyobjects._ConcludedData: {id(self)}")</t>
-<t tx="ekr.20230127153912.1"></t>
-<t tx="ekr.20230127154232.1">def _ekr_dump_concluded_data(self):
-
-    g.trace('(pyobjects._PyModule._ekr_dump_concluded_data)')
-    tag = self.get_name()
-    try:
-        for i, z in enumerate(self.concluded_data):
-            g.printObj(f"{i:3} {z!s}", tag=tag)
-            # z._ekr_dump()
-    except TypeError:
-        z = self.concluded_data
-        g.printObj(f"{z!s}", tag=tag)
-        # z._ekr_dump()
+<t tx="ekr.20230127151929.1">
 
 </t>
-<t tx="ekr.20230127185712.1"></t>
+<t tx="ekr.20230127153912.1"></t>
+<t tx="ekr.20230127154232.1">
+</t>
 <t tx="ekr.20230128023730.1">@language rest
 @wrap
 
@@ -59344,5 +59478,1077 @@ A combination of patience(thoroughness/subbornness) and impotience(excitement).<
 
 @language python
 </t>
+<t tx="ekr.20230128100404.1"></t>
+<t tx="ekr.20230128160046.1"></t>
+<t tx="ekr.20230128165420.1"></t>
+<t tx="ekr.20230129005206.1">@language rest
+@wrap
+@tabwidth -2
+@nosearch
+
+***Find the files with all the traversers.
+- cff Visitor)
+
+- Have I talked about the wall tipping over in Rope?
+  Not in the ENB's.
+
+- ENB: The big picture: knowing what to ignore, part 2.
+  - The wall is beginning to tip over!
+  - To the first approx, only the visitors matter.
+    Infrastructure (@saveit, @prevent_recursion, lazy evaluation) doesn't matter much.
+  - There are many traverser classes, one for each "query".
+  - There are many "queries" because results are computed as needed.
+  - Some traverser classes may be artifacts of unit tests, but this is unlikely.
+  
+- The big question: what is an inference?
+  Guess: it is a PyDefinedObject.
+  
+- Two kinds of empty classes.
+  Easy-to-understand: Like _GlobalVisitor(_ScopeVisitor):
+  Hard-to-understand: Like empty 
+
+- PR for @savit docstring.
+  - I get it: It may be too detailed.
+  - Mention (in docstring or comment) that @savit is not directly involved with type inference.
+  
+- PR for _GlobalVisitor: replace do-nothing ctor with 'pass'
+</t>
+<t tx="ekr.20230129010854.1">@path rope/base/
+"""
+Tracing and debugging functions from Leo.
+
+Duplicated here so that Rope's commit checks won't fail.
+"""
+
+# from __future__ import annotations
+import os
+import sys
+from typing import Any, Dict, List
+
+
+@others
+</t>
+<t tx="ekr.20230129011359.2">def callers(n: int = 4) -&gt; str:
+    """
+    Return a string containing a comma-separated list of the calling
+    function's callers.
+    """
+    # Be careful to call _callerName with smaller values of i first:
+    # sys._getframe throws ValueError if there are less than i entries.
+    i, result = 3, []
+    while 1:
+        s = _callerName(n=i)
+        if s:
+            result.append(s)
+        if not s or len(result) &gt;= n:
+            break
+        i += 1
+    return ",".join(reversed(result))
+
+
+</t>
+<t tx="ekr.20230129011359.3">def callers_list(n: int = 4) -&gt; List[str]:
+    """
+    Return a string containing a comma-separated list of the calling
+    function's callers.
+    """
+    # Be careful to call _callerName with smaller values of i first:
+    # sys._getframe throws ValueError if there are less than i entries.
+    i, result = 3, []
+    while 1:
+        s = _callerName(n=i)
+        if s:
+            result.append(s)
+        if not s or len(result) &gt;= n:
+            break
+        i += 1
+    return list(reversed(result))
+
+
+</t>
+<t tx="ekr.20230129011359.4">def _callerName(n: int) -&gt; str:
+    try:
+        # get the function name from the call stack.
+        f1 = sys._getframe(n)  # The stack frame, n levels up.
+        code1 = f1.f_code  # The code object
+        locals_ = f1.f_locals  # The local namespace.
+        name = code1.co_name
+        # sfn = shortFilename(code1.co_filename)  # The file name.
+        # line = code1.co_firstlineno
+        obj = locals_.get("self")
+        if obj and name == "__init__":
+            return f"{obj.__class__.__name__}.{name}"
+        return name
+    except ValueError:
+        # The stack is not deep enough OR
+        # sys._getframe does not exist on this platform.
+        return ""
+    except Exception:
+        return ""  # "&lt;no caller name&gt;"
+
+
+</t>
+<t tx="ekr.20230129011359.5">def caller(i: int = 1) -&gt; str:
+    """Return the caller name i levels up the stack."""
+    return callers(i + 1).split(",")[0]
+
+
+</t>
+<t tx="ekr.20230129011432.1">def get_ctor_name(self: Any, file_name: str, width: int = 25):
+    """Return &lt;module-name&gt;.&lt;class-name&gt;:&gt;width"""
+    class_name = self.__class__.__name__
+    module_name = shortFileName(file_name).replace(".py", "")
+    combined_name = f"{module_name}.{class_name}"
+    padding = " " * max(0, 25 - len(combined_name))
+    return f"{padding}{combined_name}"
+
+
+</t>
+<t tx="ekr.20230129012043.1">
+
+def printObj(obj: Any, indent: str = "", tag: str = None) -&gt; None:
+    """Pretty print any Python object"""
+    print(objToString(obj, indent=indent, tag=tag))
+</t>
+<t tx="ekr.20230129012142.1">
+
+def objToString(
+    obj: Any, indent: str = "", tag: str = "", concise: bool = False
+) -&gt; str:
+    """
+    Pretty print any Python object to a string.
+
+    concise=False: (Legacy) return a detailed string.
+    concise=True: Return a summary string.
+    """
+    if tag:
+        print(tag.strip())
+    if concise:
+        r = repr(obj)
+        if obj is None:
+            return f"{indent}None"
+        if isinstance(obj, dict):
+            return f"{indent}dict: {len(obj.keys())} keys"
+        if isinstance(obj, list):
+            return f"{indent}list: {len(obj)} items plural(len(obj))"
+        if isinstance(obj, tuple):
+            return f"{indent}tuple: {len(obj)} item{plural(len(obj))}"
+        if "method" in r:
+            return f"{indent}method: {obj.__name__}"
+        if "class" in r:
+            return f"{indent}class"
+        if "module" in r:
+            return f"{indent}module"
+        return f"{indent}object: {obj!r}"
+
+    # concise = False
+    if isinstance(obj, dict):
+        return dictToString(obj, indent=indent)
+    if isinstance(obj, list):
+        return listToString(obj, indent=indent)
+    if isinstance(obj, tuple):
+        return tupleToString(obj, indent=indent)
+    if isinstance(obj, str):
+        # Print multi-line strings as lists.
+        lines = splitLines(obj)
+        if len(lines) &gt; 1:
+            return listToString(lines, indent=indent)
+    return f"{indent} {obj!r}"
+</t>
+<t tx="ekr.20230129012417.1">
+
+def dictToString(d: Dict[str, str], indent: str = "", tag: str = None) -&gt; str:
+    """Pretty print a Python dict to a string."""
+    # pylint: disable=unnecessary-lambda
+    if not d:
+        return "{}"
+    result = ["{\n"]
+    indent2 = indent + " " * 4
+    n = 2 + len(indent) + max([len(repr(z)) for z in d.keys()])
+    for i, key in enumerate(sorted(d, key=lambda z: repr(z))):
+        pad = " " * max(0, (n - len(repr(key))))
+        result.append(f"{pad}{key}:")
+        result.append(objToString(d.get(key), indent=indent2))
+        if i + 1 &lt; len(d.keys()):
+            result.append(",")
+        result.append("\n")
+    result.append(indent + "}")
+    s = "".join(result)
+    return f"{tag}...\n{s}\n" if tag else s
+</t>
+<t tx="ekr.20230129012458.1">
+
+def listToString(obj: Any, indent: str = "", tag: str = None) -&gt; str:
+    """Pretty print a Python list to a string."""
+    if not obj:
+        return indent + "[]"
+    result = [indent, "["]
+    indent2 = indent + " " * 4
+    # I prefer not to compress lists.
+    for i, obj2 in enumerate(obj):
+        result.append("\n" + indent2)
+        result.append(objToString(obj2, indent=indent2))
+        if i + 1 &lt; len(obj) &gt; 1:
+            result.append(",")
+        else:
+            result.append("\n" + indent)
+    result.append("]")
+    s = "".join(result)
+    return f"{tag}...\n{s}\n" if tag else s
+</t>
+<t tx="ekr.20230129013023.1">def plural(obj: Any) -&gt; str:
+    """Return "s" or "" depending on n."""
+    if isinstance(obj, (list, tuple, str)):
+        n = len(obj)
+    else:
+        n = obj
+    return "" if n == 1 else "s"
+</t>
+<t tx="ekr.20230129013049.1">def splitLines(s: str) -&gt; List[str]:
+    """
+    Split s into lines, preserving the number of lines and
+    the endings of all lines, including the last line.
+    """
+    return s.splitlines(True) if s else []  # This is a Python string function!
+
+
+splitlines = splitLines
+
+
+</t>
+<t tx="ekr.20230129013224.1">
+
+def tupleToString(obj: Any, indent: str = "", tag: str = None) -&gt; str:
+    """Pretty print a Python tuple to a string."""
+    if not obj:
+        return "(),"
+    result = ["("]
+    indent2 = indent + " " * 4
+    for i, obj2 in enumerate(obj):
+        if len(obj) &gt; 1:
+            result.append("\n" + indent2)
+        result.append(objToString(obj2, indent=indent2))
+        if len(obj) == 1 or i + 1 &lt; len(obj):
+            result.append(",")
+        elif len(obj) &gt; 1:
+            result.append("\n" + indent)
+    result.append(")")
+    s = "".join(result)
+    return f"{tag}...\n{s}\n" if tag else s
+
+
+</t>
+<t tx="ekr.20230129013254.1">def shortFileName(fileName: str, n: int = None) -&gt; str:
+    """Return the base name of a path."""
+    if n is not None:
+        trace('"n" keyword argument is no longer used')
+    return os.path.basename(fileName) if fileName else ""
+
+
+shortFilename = shortFileName
+
+
+</t>
+<t tx="ekr.20230129013407.1">def trace(*args: Any) -&gt; None:
+    """Print the name of the calling function followed by all the args."""
+    name = _callerName(2)
+    if name.endswith(".pyc"):
+        name = name[:-1]
+    args = "".join(str(z) for z in args)
+    print(f"{name} {args}")
+</t>
+<t tx="ekr.20230129064218.1">@nosearch
+
+# Head, Body
+
+# found 37 nodes</t>
+<t tx="ekr.20230129093100.1">@nosearch
+
+# Word, Head, Body
+
+# found 5 nodes</t>
+<t tx="ekr.20230129234218.1">@language rest
+@wrap
+
+I'm no longer comfortable with having my ENB entries be so public.
+
+I'll backup these entries to leo-editor-contrib</t>
+<t tx="ekr.20230129234357.1">### About this Notebook
+
+Over the years I have made dozens (hundreds?) of **ENB** (Engineering Notebook) entries in [Leo's forum](https://groups.google.com/g/leo-editor).
+
+Leo's ENBs are a permanent, public part of the Leonine world. They have recorded the evolution of many breakthroughs in Leo's design and code. ENBs have often been pre-writing for documentation.
+
+This ENB will record my explorations about what Rope does and how it does it. I am particularly interested in **soi**, Rope's static type inference.
+
+### Rope's documentation
+
+[Using Rope as a Library](https://rope.readthedocs.io/en/latest/library.html#using-rope-as-a-library) mostly discusses code that that *isn't* related to soi. This info will allow to skip more code while single-stepping (or tracing) through unit tests.
+
+### Exploration strategy.
+
+I'd like to understand essentially *everything* about how some single unit test works.</t>
+<t tx="ekr.20230129234521.1">My goals:
+
+- To understand how Rope infers the types of objects.
+- To improve Rope's documentation so that others may understand Rope's type inference more easily.
+
+Imo, these goals are worth any amount of work. I think I've already demonstrated my appetite for this project.
+
+Which reminds me of one of my favorite [Onion](https://www.theonion.com/) horoscopes:
+
+Gemini (May 21 to June 21)
+
+You've promised to go to any length to get your wife back, which is funny, as finding what remains of her will actually require you to go to any depth.
+
+Google "Best Onion Horoscopes" for more.</t>
+<t tx="ekr.20230129234521.2">The [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
+is a cognitive bias that occurs when an individual assumes that other
+individuals have the background knowledge to understand their
+communication.
+
+Rope's documentation is confusing and often missing. I lament Rope's
+non-existent (afaik) Theory of Operation.
+
+The curse of knowledge likely explains these defects. Rope's devs are
+knowledgeable and dedicated. I do not believe they intend to haze potential
+new devs, but Rope's documentation is frustrating. It's a good thing I can
+be very stubborn!
+
+I am attempting to understand (in full detail) the inner workings of Rope's
+type inference machinery. All my ENB posts are pre-writing for new
+documentation.
+
+P.S. I am an ideal position to judge the clarity of Rope's documentation:
+
+- I have decades of experience with Leo, a large open-source project.
+- I have extensive experience (see leoAst.py) with Python's ast module.
+- I am the author of Leo's docs and am well aware of the difficulties.</t>
+<t tx="ekr.20230129234522.1">@language rest
+@wrap
+
+This ENB discusses my first investigations into Rope's type inference code.
+
+
+</t>
+<t tx="ekr.20230129234714.1">Yesterday I started my active study of Rope's code.
+
+The following remarks are pre-writing for Rope's missing Theory of Operation.
+
+These first hours of study produced several Ahas.
+
+This ENB records my thoughts before the insights seem too obvious to mention!
+
+
+</t>
+<t tx="ekr.20230129234715.1">The Engineering Notebook post discusses learning what to (mostly) ignore in Rope's code, so I can focus on what *is* important.
+
+**The saveit/cacheit decorator**
+
+Previously I thought this decorator might be involved in saving/caching results of type inference. That does not appear to be the case, but I'll say more in another ENB.
+
+**Clashing class names**
+
+`pyobjects.py` and `pyobjectsdef.py` contain classes with the same names, which was confusing. I can easily live with the present naming scheme because the debugger will report both the module and class names.
+
+Still, it would be best if docstrings clearly explain the differences between classes with the same name! I'll say more about the costs of Rope's present documentation in another ENB.
+As a Leo-specific workaround, I'll disambiguate the class names in the (Leo) nodes that contain those classes.
+
+**Rope's startup code**
+
+`ObjectInferTest.setUp` is:
+
+@language python
+
+def setUp(self):
+    super().setUp()
+    self.project = testutils.sample_project()
+
+@language rest
+@wrap
+
+sample_project just creates a `Project` instance.
+
+Rope's actual startup code is more complex, but for now I think it's safe to ignore these details.</t>
+<t tx="ekr.20230129234717.1">@language rest
+@wrap
+
+This long Engineering Notebook post examines the `@saveit` (aka `@cacheit`) decorator in detail.
+
+This ENB contains traces (both succinct and verbose) obtained by instrumenting the decorator.
+
+This ENB is pre-writing for issue [#644](https://github.com/python-rope/rope/issues/644).
+
+**tl;dr:** This decorator is a clever way of lazily initializing data. The decorator likely plays a marginal role in type inference. Its docstring deserves improving, and a new name might be advisable.
+
+
+
+
+
+</t>
+<t tx="ekr.20230129234718.1">My superpowers:
+
+- I do not (yet) suffer the curse of knowledge.
+  I know (or can still remember) what it is like to be ignorant about Rope's code.
+- Understanding does not come quickly for me.
+  I am not likely to skip over explanatory steps.
+- I care about writing and documentation.
+  I want to share my knowledge with others.
+- I am patient and persistent.
+  I'll write up Ahas *immediately*, before the curse of knowledge intervenes.
+- I won't settle for hand-waving.
+  I know what good documentation is (and isn't).
+- I enjoy editing.
+  I have taken great care with these ENBs. I'll do the same with later drafts.
+- I know how to pace myself.
+  I've been happily programming for 50+ years.
+
+I use the free version of [Grammarly](https://www.grammarly.com/) to check my writing. Improving Grammarly's score is a fun game. 
+
+Grammarly is not perfect:
+- It is obsessed with commas.
+- It does not catch large-scale writing blunders.</t>
+<t tx="ekr.20230129234719.1">ENB 4 will be the template for future ENBs:
+
+- I'll study unit tests (one by one) using traces and pdb, looking for a new Rope pattern.
+- When I find a new pattern, I'll write it up immediately, before the curse of knowledge sets in.
+
+My *guess* is that Rope's type inference code uses one or two handfuls of patterns, but we shall see.
+
+Creating these ENBs constitutes the pre-writing phase. I'll then write the first draft of Rope's Theory of Operation.
+
+In short, a thorough approach will be the most effective way of writing an authoritative first draft.</t>
+<t tx="ekr.20230129234930.1">@language python
+
+# PyObject ivars:
+self.type
+
+# DefinedName ivars:
+self.pyobject
+
+# PyDefinedObject ivars:
+self.pycore = pycore
+self.ast_node
+self.scope
+self.parent
+self.structural_attributes = None
+self.concluded_attributes  # _ConcludedData
+self.attributes = self.get_module()._get_concluded_data()
+self.defineds = None
+
+# _Inferred ivars:
+self.get_inferred = get_inferred
+self.concluded # _ConcludedData
+
+# _ConcludedData
+self.data
+
+# PyCore ivars:
+self.project
+self.cache_observers
+self.module_cache
+self.extension_cache
+self.object_info # ObjectInfoManager(project)
+
+# Scope/GlobalScope ivars:
+self.pycore
+self.pyobject
+self.parent
+scope[name] # PyName
+self.names  # GlobalScope only
+
+# ObjectInfoManager ivars:
+self.project = project
+self.to_textual = transform.PyObjectToTextual(project)
+self.to_pyobject = transform.TextualToPyObject(project)
+self.doi_to_pyobject # doi only
+</t>
+<t tx="ekr.20230129235204.1">**Active study**
+
+ObjectInferTest.test_simple_type_inferencing` is my "Hello World" unit test. This test:
+    
+- makes a simple (easily understood!) inference.
+- executes much of Rope's startup and soi code.
+
+**Communication**
+
+Rope's startup logic creates Project and PyCore objects. Most classes can access these objects directly (through their ivars) or indirectly (through the ivars of other classes).
+
+**Data**
+
+Afaik, the `Scope` class contains all (most?) of the computed type inferences. If `scope` is a `Scope`, statements of the form `scope[name]`, where `name` (a string) is a member of the scope, provide access to all inferences!
+
+**Type inference**
+
+The question "How does Rope make inferences?" remains. I'll soon start single-stepping through interesting ast visitors.
+
+**New questions**
+
+- What is a `PyObject`? It clearly has a central role in soi.
+- What is `_Inferred`'s role?
+- What do all the data in `PyDefinedObject` mean?
+
+**The curse of knowledge**
+
+Experienced devs don't understand the confusion of newbies. It's imperative to document Ahas immediately, before they become "obvious". For example, in retrospect (only!), `scope[name]` is the way to access inferences about `name`. The unit tests scream this fact. But newbies are overwhelmed with the blah, blah, blah of a large code base. *Everything* must be learned and internalized.
+
+In short: My study of Rope has entered a high energy phase.</t>
+<t tx="ekr.20230129235612.1">@language plain
+
+ropetest\objectinfertest.py
+
+@inject ivar: Project._pycore = _Project.pycore                = PyCore
+ &lt;rope.base.pycore.PyCore object at 0x000002D80BCAFD00&gt;
+
+@inject ivar: Project._history = _Project.history               = History
+ &lt;rope.base.history.History object at 0x000002D80BD3CAF0&gt;
+
+@inject ivar: CreateFolder.__operations = Change._operations             = _ResourceOperations
+ &lt;rope.base.change._ResourceOperations object at 0x000002D80BD3CBB0&gt;
+
+@inject ivar: GlobalScope.__scope_finder = GlobalScope._scope_finder      = _HoldingScopeFinder
+ &lt;rope.base.pyscopes._HoldingScopeFinder object at 0x000002D80BD3CE80&gt;
+
+@inject ivar: PyModule._lines = PyModule.lines                 = SourceLinesAdapter
+ &lt;rope.base.codeanalyze.SourceLinesAdapter object at 0x000002D80BD3CB80&gt;
+
+@inject ivar: GlobalScope._get_scopes = Scope.get_scopes               = list
+[
+         &lt;rope.base.pyscopes.ClassScope object at 0x000002D80BD3D1B0&gt;
+]
+
+@inject ivar: PyModule._logical_lines = PyModule.logical_lines         = CachingLogicalLineFinder
+ &lt;rope.base.codeanalyze.CachingLogicalLineFinder object at 0x000002D80BD3D180&gt;
+
+@inject ivar: ClassScope._get_logical_end = Scope.get_logical_end          = int
+ 2
+
+@inject ivar: BuiltinModule._module = BuiltinModule.module           = module
+ &lt;module 'builtins' (built-in)&gt;
+
+@inject ivar: BuiltinModule._attributes = BuiltinModule.attributes       = dict
+{
+            ArithmeticError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D450&gt;,
+             AssertionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D510&gt;,
+             AttributeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D5D0&gt;,
+              BaseException:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D690&gt;,
+            BlockingIOError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D750&gt;,
+            BrokenPipeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D810&gt;,
+                BufferError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D8D0&gt;,
+               BytesWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D990&gt;,
+          ChildProcessError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DA50&gt;,
+     ConnectionAbortedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DB10&gt;,
+            ConnectionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DBD0&gt;,
+     ConnectionRefusedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DC90&gt;,
+       ConnectionResetError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DD50&gt;,
+         DeprecationWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DE10&gt;,
+                   EOFError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DED0&gt;,
+                   Ellipsis:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E020&gt;,
+            EncodingWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E0B0&gt;,
+           EnvironmentError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E170&gt;,
+                  Exception:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E230&gt;,
+                      False:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E320&gt;,
+            FileExistsError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E3B0&gt;,
+          FileNotFoundError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E470&gt;,
+         FloatingPointError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E530&gt;,
+              FutureWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E5F0&gt;,
+              GeneratorExit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E6B0&gt;,
+                    IOError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E770&gt;,
+                ImportError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E830&gt;,
+              ImportWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E8F0&gt;,
+           IndentationError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E9B0&gt;,
+                 IndexError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EA70&gt;,
+           InterruptedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EB30&gt;,
+          IsADirectoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EBF0&gt;,
+                   KeyError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3ECB0&gt;,
+          KeyboardInterrupt:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3ED70&gt;,
+                LookupError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EE30&gt;,
+                MemoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EEF0&gt;,
+        ModuleNotFoundError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EFB0&gt;,
+                  NameError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F070&gt;,
+         NotADirectoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F130&gt;,
+             NotImplemented:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F220&gt;,
+        NotImplementedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F2B0&gt;,
+                    OSError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F370&gt;,
+              OverflowError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F430&gt;,
+  PendingDeprecationWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F4F0&gt;,
+            PermissionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F5B0&gt;,
+         ProcessLookupError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F670&gt;,
+             RecursionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F730&gt;,
+             ReferenceError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F7F0&gt;,
+            ResourceWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F8B0&gt;,
+               RuntimeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F970&gt;,
+             RuntimeWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FA30&gt;,
+         StopAsyncIteration:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FAF0&gt;,
+              StopIteration:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FBB0&gt;,
+                SyntaxError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FC70&gt;,
+              SyntaxWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FD30&gt;,
+                SystemError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FDF0&gt;,
+                 SystemExit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FEB0&gt;,
+                   TabError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FF70&gt;,
+               TimeoutError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68070&gt;,
+                       True:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68160&gt;,
+                  TypeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD681F0&gt;,
+          UnboundLocalError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3CFA0&gt;,
+         UnicodeDecodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68310&gt;,
+         UnicodeEncodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD683D0&gt;,
+               UnicodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68490&gt;,
+      UnicodeTranslateError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68550&gt;,
+             UnicodeWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68610&gt;,
+                UserWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD686D0&gt;,
+                 ValueError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68790&gt;,
+                    Warning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68850&gt;,
+               WindowsError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68910&gt;,
+          ZeroDivisionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD689D0&gt;,
+            __build_class__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68A90&gt;,
+                  __debug__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68B50&gt;,
+                    __doc__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68C10&gt;,
+                 __import__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68CA0&gt;,
+                 __loader__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68D30&gt;,
+                   __name__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68E20&gt;,
+                __package__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68EE0&gt;,
+                   __spec__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68FA0&gt;,
+                        abs:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69030&gt;,
+                      aiter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD690C0&gt;,
+                        all:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69150&gt;,
+                      anext:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD691E0&gt;,
+                        any:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69270&gt;,
+                      ascii:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69300&gt;,
+                        bin:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69390&gt;,
+                       bool:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69420&gt;,
+                 breakpoint:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD694E0&gt;,
+                  bytearray:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69570&gt;,
+                      bytes:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69630&gt;,
+                   callable:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD696F0&gt;,
+                        chr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69780&gt;,
+                classmethod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69810&gt;,
+                    compile:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD698D0&gt;,
+                    complex:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69960&gt;,
+                  copyright:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69A50&gt;,
+                    credits:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69B10&gt;,
+                    delattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69BA0&gt;,
+                       dict:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E70D0&gt;,
+                        dir:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69CF0&gt;,
+                     divmod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69D80&gt;,
+                  enumerate:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9F90&gt;,
+                       eval:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69ED0&gt;,
+                       exec:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69F60&gt;,
+                       exit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A020&gt;,
+                     filter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A0B0&gt;,
+                      float:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A170&gt;,
+                     format:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A230&gt;,
+                  frozenset:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A2C0&gt;,
+                    getattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A380&gt;,
+                    globals:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A410&gt;,
+                    hasattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A4A0&gt;,
+                       hash:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A530&gt;,
+                       help:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A5F0&gt;,
+                        hex:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A680&gt;,
+                         id:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A710&gt;,
+                      input:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA230&gt;,
+                        int:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A830&gt;,
+                 isinstance:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A8F0&gt;,
+                 issubclass:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A980&gt;,
+                       iter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA1A0&gt;,
+                        len:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AAA0&gt;,
+                    license:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AB60&gt;,
+                       list:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E6CE0&gt;,
+                     locals:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6ACB0&gt;,
+                        map:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AD40&gt;,
+                        max:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AE00&gt;,
+                 memoryview:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AE90&gt;,
+                        min:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AF50&gt;,
+                       next:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AFE0&gt;,
+                     object:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA050&gt;,
+                        oct:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B130&gt;,
+                       open:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9BA0&gt;,
+                        ord:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B250&gt;,
+                        pow:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B2E0&gt;,
+                      print:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B370&gt;,
+                   property:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9E70&gt;,
+                       quit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B4F0&gt;,
+                      range:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9C30&gt;,
+                       repr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B640&gt;,
+                   reversed:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9CC0&gt;,
+                      round:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B790&gt;,
+                        set:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E7FA0&gt;,
+                    setattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B8E0&gt;,
+                      slice:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B970&gt;,
+                     sorted:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9D50&gt;,
+               staticmethod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BAC0&gt;,
+                        str:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D86A0&gt;,
+                        sum:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BC40&gt;,
+                      super:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9DE0&gt;,
+                      tuple:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E7DF0&gt;,
+                       type:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA110&gt;,
+                       vars:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BF10&gt;,
+                        zip:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9F00&gt;
+}
+
+@inject ivar: BuiltinObject._get_attributes = BuiltinClass.get_attributes    = dict
+{
+          __class__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AA40&gt;,
+        __delattr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BE20&gt;,
+            __dir__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B0D0&gt;,
+            __doc__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69E70&gt;,
+             __eq__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BFA0&gt;,
+         __format__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B400&gt;,
+             __ge__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B430&gt;,
+   __getattribute__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BCA0&gt;,
+             __gt__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BA60&gt;,
+           __hash__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B730&gt;,
+           __init__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B580&gt;,
+  __init_subclass__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B5B0&gt;,
+             __le__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B190&gt;,
+             __lt__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BB50&gt;,
+             __ne__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B880&gt;,
+            __new__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BD90&gt;,
+         __reduce__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BDC0&gt;,
+      __reduce_ex__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69C00&gt;,
+           __repr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AC50&gt;,
+        __setattr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D360&gt;,
+         __sizeof__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD74040&gt;,
+            __str__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD740D0&gt;,
+   __subclasshook__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD74160&gt;
+}</t>
+<t tx="ekr.20230129235750.1">@language python
+
+def inject(func):
+    """
+    A decorator that injects a singleton ivar (in self) if the ivar does
+    not already exist.
+
+    The ivar's name (ivar_name) is f"_{func.__name__}".
+
+    :param func: A function/method that instantiates an object.
+    
+    :return: getattr(self, ivar_name), the value of the ivar.
+    """
+    ivar_name = f"_{func.__name__}"
+
+    def _wrapper(self, *args, **kwargs):
+        tag = "@inject"
+        if not hasattr(self, ivar_name):
+            # Instantiate the object.
+            obj = func(self, *args, **kwargs)
+            if 1:  # Tracing version.
+                injected_name = f"{self.__class__.__name__}.{ivar_name}"
+                func_s = repr(func).replace("&lt;function ", "")
+                i = func_s.find(" at ")
+                description = f"{func_s[:i]:30} = {obj.__class__.__name__}"
+                if 1:  # Brief
+                    print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
+                else:
+                    print("")
+                    g.printObj(obj, tag=f"{tag} ivar: {injected_name} = {description}")
+            setattr(self, ivar_name, obj)
+
+        return getattr(self, ivar_name)
+
+    return _wrapper
+
+cacheit = inject
+saveit = inject
+</t>
+<t tx="ekr.20230129235936.1">@language plain
+
+ropetest\objectinfertest.py
+@inject ivar:                Project._pycore = _Project.pycore                = PyCore
+@inject ivar:               Project._history = _Project.history               = History
+@inject ivar:      CreateFolder.__operations = Change._operations             = _ResourceOperations
+@inject ivar:     GlobalScope.__scope_finder = GlobalScope._scope_finder      = _HoldingScopeFinder
+@inject ivar:                PyModule._lines = PyModule.lines                 = SourceLinesAdapter
+@inject ivar:        GlobalScope._get_scopes = Scope.get_scopes               = list
+@inject ivar:        PyModule._logical_lines = PyModule.logical_lines         = CachingLogicalLineFinder
+@inject ivar:    ClassScope._get_logical_end = Scope.get_logical_end          = int
+@inject ivar:          BuiltinModule._module = BuiltinModule.module           = module
+@inject ivar:      BuiltinModule._attributes = BuiltinModule.attributes       = dict
+@inject ivar:  BuiltinObject._get_attributes = BuiltinClass.get_attributes    = dict
+
+</t>
+<t tx="ekr.20230130000046.1">@language plain
+
+@inject ivar:                Project._pycore = _Project.pycore                = PyCore
+@inject ivar:               Project._history = _Project.history               = History
+@inject ivar:      CreateFolder.__operations = Change._operations             = _ResourceOperations
+@inject ivar:        GlobalScope._get_scopes = Scope.get_scopes               = list
+@inject ivar:    ClassScope._get_logical_end = Scope.get_logical_end          = int
+</t>
+<t tx="ekr.20230130000739.1">- Improve Rope's documentation and docstrings.
+- Prepare to write AOI (Annotation-based Object Inference) using as much of Rope's existing code as possible.</t>
+<t tx="ekr.20230130000742.1">- Write these notes *now*, (*before* Ahas) while most things are unknown or confusing.&lt;br&gt;
+  It's impossible to write documentation for newbies once most things before clear/obvious!
+- This (and all future) ENBs will be pre-writing for new Rope documentation.&lt;br&gt;
+  It's better to have too many notes here than too few.</t>
+<t tx="ekr.20230130000742.2">PR [PR #653](https://github.com/python-rope/rope/pull/653) contains all my study code. This PR will always remain a draft.
+
+I added traces (and calls to `pdb.set_trace()`) to one unit test: `ObjectInferTest.test_simple_type_inferencing`.
+
+I also added traces to various ctors. For example, here is the trace in `PyDefinedObject.__init__`:
+
+@language python
+
+if getattr(g, 'trace_ctors', None): 
+    g.trace(f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}", g.callers())
+
+@language rest
+@wrap
+
+To make this work, I added the following code to the unit test:
+
+@language python
+
+    trace = False  # Set to False when running all tests.
+
+    def get_ctor_name(self, file_name):
+        """Return &lt;module-name&gt;.&lt;class-name&gt;:&gt;20"""
+        class_name = self.__class__.__name__
+        module_name = g.shortFileName(file_name).replace('.py', '')
+        combined_name = f"{module_name}.{class_name}"
+        return f"{combined_name:&gt;25}"
+
+    if trace:
+        g.trace_ctors = True  # True: Enable tracing in ctors.
+        g.get_ctor_name = get_ctor_name  # Inject the formatting function.
+
+@language rest
+@wrap
+
+I also added `from leo.core.leoGlobals import g` as needed in the various rope files.
+
+These traces locate the code that instantiates important classes!</t>
+<t tx="ekr.20230130000742.3">I learned that some (most?) classes were instantiated only as needed.&lt;br&gt;
+I wonder whether AOI will use this strategy. I suspect not...
+
+Rope contains *many* visitor classes. I realized that I had not found *any* of them.&lt;br&gt;
+Progress: Now I know that the test case relies on _ScopeVisitor._ClassDef.
+
+Today's work added the following documentation to the test case::
+
+    # Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
+    #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
+    #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
+    # scope["Sample"] is a pynamesdef.DefinedName.
+
+*Aha!* `pdb` shows file/module names in addition to line numbers.&lt;br&gt;
+I never noticed (or needed) those names when working with Leo,&lt;br&gt;
+but in Rope many classes have the same names, so this extra info is crucial!</t>
+<t tx="ekr.20230130000743.1">Here are some recent traces:
+
+@language plain
+
+===== after setUp
+
+__init__     pyobjectsdef.PyModule                _callTestMethod,test_simple_type_inferencing,get_string_scope,get_string_module
+__init__        pyobjects.PyModule Module         get_string_scope,get_string_module,PyModule.__init__,PyModule.__init__
+__init__        pyobjects.PyModule Module         test_simple_type_inferencing,get_string_scope,get_string_module,PyModule.__init__
+
+===== after get_string_scope
+
+__init__         pyobjects.PyClass ClassDef       _create_structural_attributes,visit,_ClassDef,PyClass.__init__
+__init__      pyobjectsdef.PyClass                _get_structural_attributes,_create_structural_attributes,visit,_ClassDef
+
+===== after sample_class = scope["Sample"].get_object()
+
+sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x1cfe57cf640&gt;
+</t>
+<t tx="ekr.20230130001331.1">I run one unit tests with `test-one-r.cmd`:
+
+@language batch
+
+```console
+@path c:\Scripts\
+@language batch
+echo off
+cls
+cd c:\Repos\ekr-clone-rope2
+
+rem -k test_name
+rem -s: don't capture stderr, stdout.
+rem -x: fail fast
+rem -W error::Warning
+
+call pytest ropetest/objectinfertest.py::ObjectInferTest::test_simple_type_inferencing -s %*
+
+
+
+&lt;/details&gt;</t>
+<t tx="ekr.20230130001559.1">Here is the existing decorator:
+    
+@language python
+
+def saveit(func):
+    """A decorator that caches the return value of a function"""
+
+    name = "_" + func.__name__
+
+    def _wrapper(self, *args, **kwds):
+        if not hasattr(self, name):
+            setattr(self, name, func(self, *args, **kwds))
+        return getattr(self, name)
+
+    return _wrapper
+
+cacheit = saveit
+
+@language rest
+@wrap
+
+Those with the curse of knowledge (including me, now) might ask, "What's
+the big deal?" But I remember the day before yesterday when I thought this
+decorator might play a role in caching the results of type inference. That
+does not appear to be the case.
+
+This seemingly simple decorator has complex effects. Let's take a closer
+look.</t>
+<t tx="ekr.20230130001720.1">Here is the decorator, renamed, with a new docstring, and instrumented with tracing code:
+.. details1
+
+Here are the traces resulting from running the `test_simple_type_inferencing` test, with brief traces:
+.. details2
+
+Some of the injected values are class (instances). Other values are ints, dicts, lists, etc. The traces don't distinguish between a class *instance* and class *name* (which might be a factory). However, I *think* all the injected values are instances, not factories.
+
+**Note**: The "injected" class (LHS) not be the same as the "injecting" (RHS) class, as in these entries:
+.. details3
+
+Here is the verbose version of the traces:
+.. details 4
+</t>
+<t tx="ekr.20230130001835.1">Heh. I omitted this section in the first draft due to the curse of (newly-acquired) knowledge!
+
+This is a clever, useful decorator. Let's look again at the wrapper, including its context
+
+@language python
+
+name = "_" + func.__name__
+
+def _wrapper(self, *args, **kwds):
+    if not hasattr(self, name):
+        setattr(self, name, func(self, *args, **kwds))
+    return getattr(self, name)
+
+@language rest
+@wrap
+
+After much study it is now "clear" that this code does two things:
+
+- It implements the **lazy singleton pattern**: the line `setattr(self, name, func(self, *args, **kwds))` is executed once,
+  when the decorated function is first executed (*not* when the function's module is imported).
+- It injects a **private helper ivar** into `self`. The name of this ivar is `"_" + func.__name__`, but see below.
+  Only this decorator uses the private ivar.
+
+*Note*: `func` could return a (Callable) factory *function* (not a value).
+In that case the decorator itself creates the infrastructure for a factory, not a singleton.
+</t>
+<t tx="ekr.20230130001910.1">1. `f"_singleton_{func.__name__}.replace('__', '_')` would be a better name for the private helper ivar.
+2. `@singleton` seems like a better name than either `@saveit` or `@cacheit`.
+3. If Rope *does* use this decorator to create factories, then a *separate* `@factory` decorator would be a good idea.
+   The docstrings and annotations for the two decorators would be different.
+</t>
+<t tx="ekr.20230130001933.1">This decorator is clever:
+- It avoids having to create helper (private) ivars explicitly.
+- It creates the data structures on demand, avoiding thorny issues concerning when to create data during startup.
+- It improves upon Leo's "finish-create" startup pattern.
+
+`@singleton` seems like a better name than either `saveit` or `cacheit`.
+
+A *separate* `@factory` decorator would be appropriate if `func` returns a factory instead of an unchanging value.
+
+I can (mostly) ignore this decorator now. The decorator involves startup, not type inference.
+</t>
+<t tx="ekr.20230130002051.1">- How can I study the code *actively*?
+- How do classes communicate?
+- What data embody type inference?
+- How does Rope make type inferences?
+
+I now have the general answers to the first three questions!</t>
+<t tx="ekr.20230130002122.1">My long-standing plan was to use one or more unit tests as a test bed for study. But what test to use?
+
+The first candidate was `codeanalyzetest.py`. Aha! A brief look at that test file showed that the classes in Rope's `codeanalyze` module aren't directly involved in making inferences!
+
+The second candidate was `objectinfertest.py`. The name `test_simple_type_inferencing` looked promising:
+
+@language python
+
+def test_simple_type_inferencing(self):
+    code = dedent("""\
+        class Sample(object):
+            pass
+        a_var = Sample()
+    """)
+    scope = libutils.get_string_scope(self.project, code)
+    sample_class = scope["Sample"].get_object()
+    a_var = scope["a_var"].get_object()
+    self.assertEqual(sample_class, a_var.get_type())
+
+@language rest
+@wrap
+
+This test got me on my way. After several hours of single-stepping (and note-taking), I had accumulated the following notes directly in the unit test:
+
+@language python
+
+def test_simple_type_inferencing(self):
+    code = dedent("""\
+        class Sample(object):
+            pass
+        a_var = Sample()
+    """)
+
+    g.pdb()  # Same as import pdb; pdb.set_trace
+
+    # scope is a GlobalScope.
+    # scope.pyobject is a PyModule.
+    scope = libutils.get_string_scope(self.project, code)
+    
+    # scope["Sample"] is a DefinedName.
+    # scope["Sample"].pyobject is a PyClass.
+    sample_class = scope["Sample"].get_object()
+    
+    # scope["a_var"] is an AssignedName.
+    # scope["a_var"].pyobject is an _Inferred.
+    # scope["a_var"].get_object() is a PyObject.
+    a_var = scope["a_var"].get_object()
+
+    self.assertEqual(sample_class, a_var.get_type())
+
+@language rest
+@wrap
+
+But this summary is getting ahead of myself. It's *so* easy to succumb to the curse of knowledge! The next few sections will discuss my notes from this debugging/learning session.</t>
+<t tx="ekr.20230130002155.1">Single-stepping through this unit test allowed me to ignore many other parts of Rope.
+
+I took notes on most of the classed I encountered.
+
+Here are notes regarding how classes gain access to data in other classes.
+
+See details
+</t>
+<t tx="ekr.20230130002237.1">`ObjectInferTest.setUp` executes a simplified version of Rope's startup logic:
+
+@language python
+
+def setUp(self):
+    super().setUp()
+    self.project = testutils.sample_project()
+
+@language rest
+@wrap
+
+A call to `g.pdb()` anywhere in `setUp` falls into the debugger for *all* tests in the `ObjectInferTest` class. This code falls into `pdb` only for the hello world test:
+
+@language python
+
+def setUp(self):
+    super().setUp()
+    if self.id().endswith('test_simple_type_inferencing'):
+        g.pdb()
+    self.project = testutils.sample_project()
+
+@language rest
+@wrap
+
+Looking at the *results* of the call to `testutils.sample_project()` was good enough at first.</t>
 </tnodes>
 </leo_file>
