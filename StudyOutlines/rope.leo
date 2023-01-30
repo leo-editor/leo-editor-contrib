@@ -30,6 +30,7 @@
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
 <v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
+</v>
 <v t="ekr.20230129234218.1"><vh>ENB</vh>
 <v t="ekr.20230129234357.1"><vh>EKR's ENB (Engineering Notebook)</vh></v>
 <v t="ekr.20230129234521.1"><vh>ENB 0: My goals re Rope</vh></v>
@@ -65,7 +66,6 @@
 <v t="ekr.20230130000742.3"><vh>First Ahas</vh></v>
 <v t="ekr.20230130001331.1"><vh>test-one-r.cmd</vh></v>
 <v t="ekr.20230130000743.1"><vh>First traces</vh></v>
-</v>
 </v>
 </v>
 <v t="ekr.20230128023730.1"><vh>*** AOI: Annotation-base Object Inference</vh></v>
