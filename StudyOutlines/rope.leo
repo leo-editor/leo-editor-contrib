@@ -29,10 +29,24 @@
 </v>
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
+<v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
 <v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
 </v>
 <v t="ekr.20230129234218.1"><vh>ENB</vh>
-<v t="ekr.20230129234357.1"><vh>EKR's ENB (Engineering Notebook)</vh></v>
+<v t="ekr.20230129234357.1"><vh>EKR's Engineering Notebook</vh></v>
+<v t="ekr.20230129234717.1"><vh>ENB: The @saveit (@cacheit) decorator</vh>
+<v t="ekr.20230130001559.1"><vh>The decorator</vh></v>
+<v t="ekr.20230131082034.1"><vh>The tracing version of the decorator</vh></v>
+<v t="ekr.20230130001720.1"><vh>Tracing the decorator</vh>
+<v t="ekr.20230129235936.1"><vh>brief traces</vh></v>
+<v t="ekr.20230130000046.1"><vh>trace: different injecting &amp; injected classes</vh></v>
+<v t="ekr.20230129235612.1"><vh>verbose trace</vh></v>
+</v>
+<v t="ekr.20230130001835.1"><vh>What does the decorator do?</vh></v>
+<v t="ekr.20230130001910.1"><vh>Suggestions</vh></v>
+<v t="ekr.20230130001933.1"><vh>Summary</vh></v>
+</v>
+<v t="ekr.20230131063925.1"><vh>ENBs: attic</vh>
 <v t="ekr.20230129234521.1"><vh>ENB 0: My goals re Rope</vh></v>
 <v t="ekr.20230129234521.2"><vh>ENB 1: The curse of knowledge and Rope</vh></v>
 <v t="ekr.20230129234714.1"><vh>ENB 2: First study steps</vh>
@@ -45,20 +59,8 @@
 <v t="ekr.20230129235204.1"><vh>Summary</vh></v>
 </v>
 <v t="ekr.20230129234715.1"><vh>ENB 3: Learning what to ignore</vh></v>
-<v t="ekr.20230129234717.1"><vh>ENB 4: The @saveit (@cacheit) decorator</vh>
-<v t="ekr.20230130001559.1"><vh>The decorator</vh></v>
-<v t="ekr.20230130001720.1"><vh>Tracing the decorator</vh>
-<v t="ekr.20230129235750.1"><vh>details 1: the instrumented decorator</vh></v>
-<v t="ekr.20230129235936.1"><vh>details 2: brief traces</vh></v>
-<v t="ekr.20230130000046.1"><vh>details 3: brief: different injecting &amp; injected classes</vh></v>
-<v t="ekr.20230129235612.1"><vh>details 4: verbose trace</vh></v>
-</v>
-<v t="ekr.20230130001835.1"><vh>What does the decorator do?</vh></v>
-<v t="ekr.20230130001910.1"><vh>Suggestions</vh></v>
-<v t="ekr.20230130001933.1"><vh>Summary</vh></v>
-</v>
 <v t="ekr.20230129234718.1"><vh>ENB 5: (private) Why I'm the one to write Rope's Theory of Operation</vh></v>
-<v t="ekr.20230129234719.1"><vh>ENB 6: (delete) Finding Rope's type inference patterns</vh></v>
+<v t="ekr.20230129234719.1"><vh>ENB 6: (obsolete) Finding Rope's type inference patterns</vh></v>
 <v t="ekr.20230129234522.1"><vh>ENB 7: Studying ObjectInferTest.test_simple_type_inferencing</vh>
 <v t="ekr.20230130000739.1"><vh>Goals</vh></v>
 <v t="ekr.20230130000742.1"><vh>Write early. Write too much, not too little</vh></v>
@@ -68,14 +70,11 @@
 <v t="ekr.20230130000743.1"><vh>First traces</vh></v>
 </v>
 </v>
-<v t="ekr.20230129005206.1"><vh>*** To do</vh>
+<v t="ekr.20230131064023.1"><vh>ENBs: To do</vh>
 <v t="ekr.20230130085317.1"><vh>ENB: First principles</vh></v>
 <v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
-<v t="ekr.20230130084456.1"><vh>Design of AOI</vh></v>
-<v t="ekr.20230130084523.1"><vh>Find out how to update docs</vh></v>
-<v t="ekr.20230130085138.1"><vh>ENB?: High energy</vh></v>
-<v t="ekr.20230130085003.2"><vh>ENB: What is an inference</vh></v>
-<v t="ekr.20230130085103.1"><vh>PR for _GlobalVisitor</vh></v>
+<v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
+</v>
 </v>
 <v t="ekr.20221129082559.1"><vh>Script files</vh>
 <v t="ekr.20221201161803.1"><vh>@clean blacken-r.cmd</vh></v>
@@ -5658,8 +5657,7 @@
 <v t="ekr.20230128165420.1"><vh></vh></v>
 </v>
 </v>
-</v>
-<v t="ekr.20230106094401.1"><vh>*** Study</vh>
+<v t="ekr.20230106094401.1"><vh>=== Study (do not delete)</vh>
 <v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
 <v t="ekr.20221118072830.458"></v>
 <v t="ekr.20221118072830.581"></v>
@@ -5694,6 +5692,26 @@
 <v t="ekr.20221118072830.672"></v>
 <v t="ekr.20221118072830.699"></v>
 <v t="ekr.20221118072830.736"></v>
+</v>
+<v t="ekr.20230130094034.1"><vh>--- prevent_recursion</vh>
+<v t="ekr.20221118072830.1503"></v>
+<v t="ekr.20230130094057.1"><vh>7 calls to:prevent_recursion</vh>
+<v t="ekr.20230131064529.1"><vh>--- 3 in pynames.py</vh>
+<v t="ekr.20221118072830.625"></v>
+<v t="ekr.20221118072830.620"></v>
+<v t="ekr.20221118072830.619"></v>
+</v>
+<v t="ekr.20230131064709.1"><vh>--- 1 in pynamesdef.py</vh>
+<v t="ekr.20221217024942.3"></v>
+</v>
+<v t="ekr.20230131064552.1"><vh>--- 2 in pyobjects.py</vh>
+<v t="ekr.20221118072830.677"></v>
+<v t="ekr.20221118072830.676"></v>
+</v>
+<v t="ekr.20230131064624.1"><vh>--- 1 in pyobjectsdef.py</vh>
+<v t="ekr.20221118072830.738"></v>
+</v>
+</v>
 </v>
 <v t="ekr.20230129064218.1"><vh>Found 37:Visitor)</vh>
 <v t="ekr.20230102051545.1"></v>
@@ -5738,18 +5756,12 @@
 <v t="ekr.20221118072830.729"></v>
 <v t="ekr.20221118072830.736"></v>
 </v>
-<v t="ekr.20230130094034.1"><vh>--- study prevent_recursion</vh>
-<v t="ekr.20221118072830.1503"></v>
-<v t="ekr.20230130094057.1"><vh>7 calls to:prevent_recursion</vh>
-<v t="ekr.20221217024942.3"></v>
-<v t="ekr.20221118072830.625"></v>
-<v t="ekr.20221118072830.620"></v>
-<v t="ekr.20221118072830.619"></v>
-<v t="ekr.20221118072830.677"></v>
-<v t="ekr.20221118072830.676"></v>
-<v t="ekr.20221118072830.738"></v>
 </v>
 </v>
+<v t="ekr.20230129005206.1"><vh>*** To do</vh>
+<v t="ekr.20230131080925.1"><vh>to do: docs</vh></v>
+<v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
+<v t="ekr.20230130085103.1"><vh>PR for _GlobalVisitor?</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -59495,7 +59507,18 @@ PR: https://github.com/python-rope/rope/pull//652
 @tabwidth -2
 @nosearch
 
-- AOI: Annotation-base Object Inference: create test file.</t>
+Wiki: https://github.com/python-rope/rope/wiki
+PR: Study https://github.com/python-rope/rope/pull/653
+Issues: https://github.com/python-rope/rope/issues
+
+- Define var in debugutils.
+  Test with multiple test.
+
+??? What is an inference???
+- a PyDefinedObject??
+
+@language python
+</t>
 <t tx="ekr.20230129010854.1">"""
 Tracing and debugging functions from Leo.
 
@@ -59638,11 +59661,14 @@ shortFilename = shortFileName
 # found 5 nodes</t>
 <t tx="ekr.20230129234218.1">@language rest
 @wrap
+@nosearch
 
-I'm no longer comfortable with having my ENB entries be so public.
+These notes are semi private.
 
-I'll backup these entries to leo-editor-contrib</t>
-<t tx="ekr.20230129234357.1">### About this Notebook
+They can be found in rope.leo at leo-editor-contrib.</t>
+<t tx="ekr.20230129234357.1">@nosearch
+
+### About this Notebook
 
 Over the years I have made dozens (hundreds?) of **ENB** (Engineering Notebook) entries in [Leo's forum](https://groups.google.com/g/leo-editor).
 
@@ -59661,16 +59687,7 @@ I'd like to understand essentially *everything* about how some single unit test 
 
 - To understand how Rope infers the types of objects.
 - To improve Rope's documentation so that others may understand Rope's type inference more easily.
-
-Imo, these goals are worth any amount of work. I think I've already demonstrated my appetite for this project.
-
-Which reminds me of one of my favorite [Onion](https://www.theonion.com/) horoscopes:
-
-Gemini (May 21 to June 21)
-
-You've promised to go to any length to get your wife back, which is funny, as finding what remains of her will actually require you to go to any depth.
-
-Google "Best Onion Horoscopes" for more.</t>
+</t>
 <t tx="ekr.20230129234521.2">The [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
 is a cognitive bias that occurs when an individual assumes that other
 individuals have the background knowledge to understand their
@@ -59741,6 +59758,7 @@ sample_project just creates a `Project` instance.
 Rope's actual startup code is more complex, but for now I think it's safe to ignore these details.</t>
 <t tx="ekr.20230129234717.1">@language rest
 @wrap
+@nosearch
 
 This long Engineering Notebook post examines the `@saveit` (aka `@cacheit`) decorator in detail.
 
@@ -59863,6 +59881,8 @@ Experienced devs don't understand the confusion of newbies. It's imperative to d
 
 In short: My study of Rope has entered a high energy phase.</t>
 <t tx="ekr.20230129235612.1">@language plain
+
+Here is the verbose version of the traces:
 
 ropetest\objectinfertest.py
 
@@ -60080,46 +60100,9 @@ ropetest\objectinfertest.py
             __str__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD740D0&gt;,
    __subclasshook__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD74160&gt;
 }</t>
-<t tx="ekr.20230129235750.1">@language python
-
-def inject(func):
-    """
-    A decorator that injects a singleton ivar (in self) if the ivar does
-    not already exist.
-
-    The ivar's name (ivar_name) is f"_{func.__name__}".
-
-    :param func: A function/method that instantiates an object.
-    
-    :return: getattr(self, ivar_name), the value of the ivar.
-    """
-    ivar_name = f"_{func.__name__}"
-
-    def _wrapper(self, *args, **kwargs):
-        tag = "@inject"
-        if not hasattr(self, ivar_name):
-            # Instantiate the object.
-            obj = func(self, *args, **kwargs)
-            if 1:  # Tracing version.
-                injected_name = f"{self.__class__.__name__}.{ivar_name}"
-                func_s = repr(func).replace("&lt;function ", "")
-                i = func_s.find(" at ")
-                description = f"{func_s[:i]:30} = {obj.__class__.__name__}"
-                if 1:  # Brief
-                    print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
-                else:
-                    print("")
-                    g.printObj(obj, tag=f"{tag} ivar: {injected_name} = {description}")
-            setattr(self, ivar_name, obj)
-
-        return getattr(self, ivar_name)
-
-    return _wrapper
-
-cacheit = inject
-saveit = inject
-</t>
 <t tx="ekr.20230129235936.1">@language plain
+
+Here are the traces resulting from running the `test_simple_type_inferencing` test, with brief traces:
 
 ropetest\objectinfertest.py
 @inject ivar:                Project._pycore = _Project.pycore                = PyCore
@@ -60137,11 +60120,15 @@ ropetest\objectinfertest.py
 </t>
 <t tx="ekr.20230130000046.1">@language plain
 
-@inject ivar:                Project._pycore = _Project.pycore                = PyCore
-@inject ivar:               Project._history = _Project.history               = History
-@inject ivar:      CreateFolder.__operations = Change._operations             = _ResourceOperations
-@inject ivar:        GlobalScope._get_scopes = Scope.get_scopes               = list
-@inject ivar:    ClassScope._get_logical_end = Scope.get_logical_end          = int
+The "injected" class (LHS) not be the same as the "injecting" (RHS) class:
+
+                                  class.ivar                  object::class name
+                                  ----------                  ------------------
+@inject ivar:                Project._pycore:        _Project.pycore::PyCore
+@inject ivar:               Project._history:       _Project.history::History
+@inject ivar:      CreateFolder.__operations:     Change._operations::ResourceOperations
+@inject ivar:        GlobalScope._get_scopes:       Scope.get_scopes::list
+@inject ivar:    ClassScope._get_logical_end:  Scope.get_logical_end::int
 </t>
 <t tx="ekr.20230130000739.1">- Improve Rope's documentation and docstrings.
 - Prepare to write AOI (Annotation-based Object Inference) using as much of Rope's existing code as possible.</t>
@@ -60268,22 +60255,8 @@ the big deal?" But I remember the day before yesterday when I thought this
 decorator might play a role in caching the results of type inference. That
 does not appear to be the case.
 
-This seemingly simple decorator has complex effects. Let's take a closer
-look.</t>
-<t tx="ekr.20230130001720.1">Here is the decorator, renamed, with a new docstring, and instrumented with tracing code:
-.. details1
-
-Here are the traces resulting from running the `test_simple_type_inferencing` test, with brief traces:
-.. details2
-
-Some of the injected values are class (instances). Other values are ints, dicts, lists, etc. The traces don't distinguish between a class *instance* and class *name* (which might be a factory). However, I *think* all the injected values are instances, not factories.
-
-**Note**: The "injected" class (LHS) not be the same as the "injecting" (RHS) class, as in these entries:
-.. details3
-
-Here is the verbose version of the traces:
-.. details 4
 </t>
+<t tx="ekr.20230130001720.1"></t>
 <t tx="ekr.20230130001835.1">Heh. I omitted this section in the first draft due to the curse of (newly-acquired) knowledge!
 
 This is a clever, useful decorator. Let's look again at the wrapper, including its context
@@ -60319,8 +60292,6 @@ In that case the decorator itself creates the infrastructure for a factory, not 
 - It avoids having to create helper (private) ivars explicitly.
 - It creates the data structures on demand, avoiding thorny issues concerning when to create data during startup.
 - It improves upon Leo's "finish-create" startup pattern.
-
-`@singleton` seems like a better name than either `saveit` or `cacheit`.
 
 A *separate* `@factory` decorator would be appropriate if `func` returns a factory instead of an unchanging value.
 
@@ -60419,44 +60390,52 @@ def setUp(self):
 @wrap
 
 Looking at the *results* of the call to `testutils.sample_project()` was good enough at first.</t>
-<t tx="ekr.20230130084456.1">Pass 1
+<t tx="ekr.20230130084456.1">@language rest
+@wrap
 
-The pass 1 traverser defines methods for Module, ClassDef, FunctionDef.
+**Pass 1**
 
-Pass 2
+Pass1_Taverser: methods for Module, ClassDef, FunctionDef.
 
-The pass 2 traverser is a subclass of the main soi traverser class.
+**Pass 2**
+
+Pass2_Traverser: a subclass of the main soi traverser class.
 
 It will override the methods that infer results.
 The @prevent_recursion method is a good place to look for to-be-overridden methods.
 
 If necessary, define wrapper methods in the main soi traverser class to allow overrides in the pass 2 traverser.</t>
-<t tx="ekr.20230130084523.1"></t>
-<t tx="ekr.20230130085003.2">Guess: it is a PyDefinedObject.
-  </t>
-<t tx="ekr.20230130085103.1">Replace do-nothing ctor with 'pass'
+<t tx="ekr.20230130085103.1">@language rest
+@wrap
+
+Replace do-nothing ctor with 'pass'
 
 - Two kinds of empty classes.
   Easy-to-understand: Like _GlobalVisitor(_ScopeVisitor):
   Hard-to-understand: Like empty 
 </t>
-<t tx="ekr.20230130085138.1">The wall is about ready to tip over.
+<t tx="ekr.20230130085317.1">@language rest
+@wrap
 
-</t>
-<t tx="ekr.20230130085317.1">- To the first approx, only the visitors matter.
+- To the first approx, only the visitors matter.
   Infrastructure (@saveit, @prevent_recursion, lazy evaluation) doesn't matter much.
 - There are many traverser classes, one for each "query".
 - There are many "queries" because results are computed as needed.
 - Some traverser classes may be artifacts of unit tests, but this is unlikely.
-
 </t>
-<t tx="ekr.20230130085442.1">Infrastructure:
+<t tx="ekr.20230130085442.1">@language rest
+@wrap
+
+Infrastructure:
 - startup code
 - @saveit and @prevent_recursion decorators.
 
 Inference:
 - Traversers are where everything happens.
-- Several kinds of traversers: startup, inference, refactoring, error reporting, etc.</t>
+- Several kinds of traversers: startup, inference, refactoring, error reporting, etc.
+
+Refactoring:
+- Probably no need to change this code.</t>
 <t tx="ekr.20230130094034.1">@nosearch
 </t>
 <t tx="ekr.20230130094057.1">@nosearch
@@ -60502,5 +60481,70 @@ Inference:
 
 
 </t>
+<t tx="ekr.20230130194144.1">Rope uses Sphinx, so I just need to create Theory.rst.</t>
+<t tx="ekr.20230131063925.1">@nosearch</t>
+<t tx="ekr.20230131064023.1"></t>
+<t tx="ekr.20230131064529.1"></t>
+<t tx="ekr.20230131064552.1"></t>
+<t tx="ekr.20230131064624.1"></t>
+<t tx="ekr.20230131064709.1"></t>
+<t tx="ekr.20230131064900.1">@language rest
+@wrap
+
+- Create test file for AOI
+- What about stdlib?
+  - Use existing code?
+  - Use annotations for stlib?
+  
+@language python
+</t>
+<t tx="ekr.20230131080925.1">- Create @rst theory.html.
+- Integrate theory.html into rest of Rope docs.</t>
+<t tx="ekr.20230131082034.1">@language rest
+@wrap
+
+Some of the injected values are instances. Other values are ints, dicts, lists, etc.
+
+The traces don't distinguish between a class *instance* and class *name* (which might be a factory). However, I *think* all the injected values are instances, not factories.
+
+@language python
+
+
+def inject(func):
+    """
+    A decorator that injects a singleton ivar (in self) if the ivar does
+    not already exist.
+
+    The ivar's name (ivar_name) is f"_{func.__name__}".
+
+    :param func: A function/method that instantiates an object.
+    
+    :return: getattr(self, ivar_name), the value of the ivar.
+    """
+    ivar_name = f"_{func.__name__}"
+
+    def _wrapper(self, *args, **kwargs):
+        tag = "@inject"
+        if not hasattr(self, ivar_name):
+            # Instantiate the object.
+            obj = func(self, *args, **kwargs)
+            if 1:  # Tracing version.
+                injected_name = f"{self.__class__.__name__}.{ivar_name}"
+                func_s = repr(func).replace("&lt;function ", "")
+                i = func_s.find(" at ")
+                description = f"{func_s[:i]:30} = {obj.__class__.__name__}"
+                if 1:  # Brief
+                    print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
+                else:
+                    print("")
+                    g.printObj(obj, tag=f"{tag} ivar: {injected_name} = {description}")
+            setattr(self, ivar_name, obj)
+
+        return getattr(self, ivar_name)
+
+    return _wrapper
+
+cacheit = inject
+saveit = inject</t>
 </tnodes>
 </leo_file>
