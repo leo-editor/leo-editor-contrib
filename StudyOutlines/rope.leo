@@ -68,7 +68,15 @@
 <v t="ekr.20230130000743.1"><vh>First traces</vh></v>
 </v>
 </v>
-<v t="ekr.20230128023730.1"><vh>*** AOI: Annotation-base Object Inference</vh></v>
+<v t="ekr.20230129005206.1"><vh>*** To do</vh>
+<v t="ekr.20230130085317.1"><vh>ENB: First principles</vh></v>
+<v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
+<v t="ekr.20230130084456.1"><vh>Design of AOI</vh></v>
+<v t="ekr.20230130084523.1"><vh>Find out how to update docs</vh></v>
+<v t="ekr.20230130085138.1"><vh>ENB?: High energy</vh></v>
+<v t="ekr.20230130085003.2"><vh>ENB: What is an inference</vh></v>
+<v t="ekr.20230130085103.1"><vh>PR for _GlobalVisitor</vh></v>
+</v>
 <v t="ekr.20221129082559.1"><vh>Script files</vh>
 <v t="ekr.20221201161803.1"><vh>@clean blacken-r.cmd</vh></v>
 <v t="ekr.20221214124101.1"><vh>@clean cd-r.cmd</vh></v>
@@ -585,23 +593,6 @@
 <v t="ekr.20221118072830.460"><vh>function: libutils.get_string_scope (returns a pyobjectsdef.PyModule)</vh></v>
 <v t="ekr.20221118072830.461"><vh>function: libutils.is_python_file</vh></v>
 <v t="ekr.20221118072830.462"><vh>function: libutils.modname</vh></v>
-</v>
-<v t="ekr.20230129010854.1"><vh>@clean leoGlobals.py</vh>
-<v t="ekr.20230129011359.4"><vh>g._callerName</vh></v>
-<v t="ekr.20230129011359.5"><vh>g.caller</vh></v>
-<v t="ekr.20230129011359.2"><vh>g.callers</vh></v>
-<v t="ekr.20230129011359.3"><vh>g.callers_list</vh></v>
-<v t="ekr.20230129011432.1"><vh>g.get_ctor_name</vh></v>
-<v t="ekr.20230129013023.1"><vh>g.plural</vh></v>
-<v t="ekr.20230129012043.1"><vh>g.printObj &amp; helpers</vh>
-<v t="ekr.20230129012142.1"><vh>g.objToString</vh></v>
-<v t="ekr.20230129012417.1"><vh>g.dictToString</vh></v>
-<v t="ekr.20230129012458.1"><vh>g.listToString</vh></v>
-<v t="ekr.20230129013224.1"><vh>g.tupleToString</vh></v>
-</v>
-<v t="ekr.20230129013254.1"><vh>g.shortFileName &amp; shortFilename</vh></v>
-<v t="ekr.20230129013049.1"><vh>g.splitLines</vh></v>
-<v t="ekr.20230129013407.1"><vh>g.trace</vh></v>
 </v>
 <v t="ekr.20221210100024.1"><vh>@clean nameanalyze.py</vh>
 <v t="ekr.20221210100142.1"><vh>get_name_levels</vh></v>
@@ -1820,6 +1811,19 @@
 <v t="ekr.20221118072830.1493"><vh>OrderedSet.__repr__</vh></v>
 <v t="ekr.20221118072830.1494"><vh>OrderedSet.__eq__</vh></v>
 </v>
+</v>
+<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/debugutils.py</vh>
+<v t="ekr.20230129011359.4"><vh>g._callerName</vh></v>
+<v t="ekr.20230129011359.5"><vh>g.caller</vh></v>
+<v t="ekr.20230129011359.2"><vh>g.callers</vh></v>
+<v t="ekr.20230129011359.3"><vh>g.callers_list</vh></v>
+<v t="ekr.20230129011432.1"><vh>g.get_ctor_name</vh></v>
+<v t="ekr.20230130145330.3"><vh>g.objToString</vh></v>
+<v t="ekr.20230129013023.1"><vh>g.plural</vh></v>
+<v t="ekr.20230130145330.2"><vh>g.printObj</vh></v>
+<v t="ekr.20230129013254.1"><vh>g.shortFileName &amp; shortFilename</vh></v>
+<v t="ekr.20230129013049.1"><vh>g.splitLines</vh></v>
+<v t="ekr.20230129013407.1"><vh>g.trace</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.1517"><vh>rope/contrib</vh>
@@ -5462,12 +5466,6 @@
 </v>
 </v>
 </v>
-<v t="ekr.20221230095246.1"><vh>Recent code</vh>
-<v t="ekr.20230127045231.1"><vh>--- completed PRs</vh></v>
-<v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
-<v t="ekr.20221118072830.1500"></v>
-</v>
-</v>
 <v t="ekr.20221230095543.1"><vh>Recent files</vh>
 <v t="ekr.20230127101717.1"><vh>--- inference files</vh>
 <v t="ekr.20221118072830.588"></v>
@@ -5487,44 +5485,12 @@
 <v t="ekr.20221118072831.1483"></v>
 <v t="ekr.20230129010854.1"></v>
 </v>
-<v t="ekr.20230129005206.1"><vh>**** To do</vh></v>
-<v t="ekr.20230106094401.1"><vh>**** Study</vh>
-<v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
-<v t="ekr.20221118072830.458"></v>
-<v t="ekr.20221118072830.581"></v>
-<v t="ekr.20221118072830.567"></v>
-<v t="ekr.20221118072830.457"></v>
-<v t="ekr.20221118072830.1255"></v>
-<v t="ekr.20221118072830.1256"></v>
-<v t="ekr.20221118072830.1257"></v>
+<v t="ekr.20221230095246.1"><vh>Recent code</vh>
+<v t="ekr.20230127045231.1"><vh>--- completed PRs</vh></v>
+<v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
+<v t="ekr.20221118072830.1500"></v>
 </v>
-<v t="ekr.20230101055129.1"><vh>--- Important docstrings</vh>
-<v t="ekr.20221118073540.1"></v>
-<v t="ekr.20230101190225.1"></v>
-<v t="ekr.20230104075047.1"></v>
-<v t="ekr.20221118072831.787"></v>
-<v t="ekr.20230104023141.1"></v>
-<v t="ekr.20221118072831.822"></v>
-<v t="ekr.20221118072831.3009"></v>
-</v>
-<v t="ekr.20230127144054.1"><vh>--- classes</vh>
-<v t="ekr.20221118072830.691"></v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.847"></v>
-<v t="ekr.20221118072830.728"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20221118072830.825"></v>
-</v>
-<v t="ekr.20230128160046.1"><vh>--- ctors</vh>
-<v t="ekr.20221118072830.729"></v>
-<v t="ekr.20221118072830.672"></v>
-<v t="ekr.20221118072830.699"></v>
-<v t="ekr.20221118072830.736"></v>
-</v>
-<v t="ekr.20230104221623.1"><vh>======== Study one test</vh>
+<v t="ekr.20230104221623.1"><vh>=== Study one test</vh>
 <v t="ekr.20230106074706.1"><vh>--- what is PyObject ???</vh>
 <v t="ekr.20230104224018.1"><vh>Found 66:PyObject</vh>
 <v t="ekr.20221118072830.84"></v>
@@ -5692,6 +5658,43 @@
 <v t="ekr.20230128165420.1"><vh></vh></v>
 </v>
 </v>
+</v>
+<v t="ekr.20230106094401.1"><vh>*** Study</vh>
+<v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
+<v t="ekr.20221118072830.458"></v>
+<v t="ekr.20221118072830.581"></v>
+<v t="ekr.20221118072830.567"></v>
+<v t="ekr.20221118072830.457"></v>
+<v t="ekr.20221118072830.1255"></v>
+<v t="ekr.20221118072830.1256"></v>
+<v t="ekr.20221118072830.1257"></v>
+</v>
+<v t="ekr.20230101055129.1"><vh>--- Important docstrings</vh>
+<v t="ekr.20221118073540.1"></v>
+<v t="ekr.20230101190225.1"></v>
+<v t="ekr.20230104075047.1"></v>
+<v t="ekr.20221118072831.787"></v>
+<v t="ekr.20230104023141.1"></v>
+<v t="ekr.20221118072831.822"></v>
+<v t="ekr.20221118072831.3009"></v>
+</v>
+<v t="ekr.20230127144054.1"><vh>--- classes</vh>
+<v t="ekr.20221118072830.691"></v>
+<v t="ekr.20221118072830.698"></v>
+<v t="ekr.20221118072830.690"></v>
+<v t="ekr.20221118072830.671"></v>
+<v t="ekr.20221118072830.704"></v>
+<v t="ekr.20221118072830.847"></v>
+<v t="ekr.20221118072830.728"></v>
+<v t="ekr.20221118072830.735"></v>
+<v t="ekr.20221118072830.825"></v>
+</v>
+<v t="ekr.20230128160046.1"><vh>--- ctors</vh>
+<v t="ekr.20221118072830.729"></v>
+<v t="ekr.20221118072830.672"></v>
+<v t="ekr.20221118072830.699"></v>
+<v t="ekr.20221118072830.736"></v>
+</v>
 <v t="ekr.20230129064218.1"><vh>Found 37:Visitor)</vh>
 <v t="ekr.20230102051545.1"></v>
 <v t="ekr.20221118072830.1587"></v>
@@ -5734,6 +5737,18 @@
 <v t="ekr.20221118072830.699"></v>
 <v t="ekr.20221118072830.729"></v>
 <v t="ekr.20221118072830.736"></v>
+</v>
+<v t="ekr.20230130094034.1"><vh>--- study prevent_recursion</vh>
+<v t="ekr.20221118072830.1503"></v>
+<v t="ekr.20230130094057.1"><vh>7 calls to:prevent_recursion</vh>
+<v t="ekr.20221217024942.3"></v>
+<v t="ekr.20221118072830.625"></v>
+<v t="ekr.20221118072830.620"></v>
+<v t="ekr.20221118072830.619"></v>
+<v t="ekr.20221118072830.677"></v>
+<v t="ekr.20221118072830.676"></v>
+<v t="ekr.20221118072830.738"></v>
+</v>
 </v>
 </v>
 </vnodes>
@@ -10563,7 +10578,7 @@ from collections.abc import MutableSet
 <t tx="ekr.20221118072830.1499">import sys
 import warnings
 
-from rope.base import leoGlobals as g
+from rope.base.utils import debugutils as g
 
 assert g  ###
 
@@ -15971,7 +15986,7 @@ if typing.TYPE_CHECKING:
 
     from rope.base import pyobjectsdef
 
-from rope.base import leoGlobals as g  ###
+from rope.base.utils import debugutils as g  ###
 
 assert g  ###
 
@@ -16286,7 +16301,7 @@ from typing import Optional
 
 from rope.base import ast, exceptions, utils
 
-from rope.base import leoGlobals as g  ###
+from rope.base.utils import debugutils as g  ###
 
 assert g  ###
 
@@ -16763,7 +16778,7 @@ from rope.base import (
     utils,
 )
 
-from rope.base import leoGlobals as g  ###
+from rope.base.utils import debugutils as g  ###
 
 assert g  ###
 
@@ -17654,7 +17669,7 @@ import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
-from rope.base import leoGlobals as g  ###
+from rope.base.utils import debugutils as g  ###
 
 assert g  ###
 
@@ -25050,7 +25065,7 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
-from rope.base import leoGlobals as g  ###
+from rope.base.utils import debugutils as g  ###
 assert g  ###
 
 @others
@@ -25083,9 +25098,10 @@ assert g  ###
         a_var = Sample()
     """)
     
-    trace = False  # Set to False when running all tests.
+    trace = True  # Set to False when running all tests.
 
     if trace:
+        # Make *sure* that g.trace_ctors exists only for this test.
         g.trace_ctors = True  # True: Enable tracing in ctors.
     
     def banner(s):
@@ -25120,7 +25136,7 @@ assert g  ###
         # scope is a GlobalScope.  It might be any subclass of Scope.
         # scope.pyobject is a pyobjectsdef.PyModule.
         
-    if trace: g.trace('*** scope.pyobject', scope.pyobject)
+    ### if trace: g.trace('*** scope.pyobject', scope.pyobject)
 
     # *** Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
     #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
@@ -59033,7 +59049,7 @@ _Inferred = pynames._Inferred
 echo off
 cls
 cd c:\Repos\ekr-clone-rope2
-leo rope.leo %*
+leo --no-splash rope.leo %*
 </t>
 <t tx="ekr.20221214124101.1">@path c:\Scripts\
 @language batch
@@ -59471,13 +59487,6 @@ PR: https://github.com/python-rope/rope/pull//652
 <t tx="ekr.20230127153912.1"></t>
 <t tx="ekr.20230127154232.1">
 </t>
-<t tx="ekr.20230128023730.1">@language rest
-@wrap
-
-- Create test file.
-
-@language python
-</t>
 <t tx="ekr.20230128100404.1"></t>
 <t tx="ekr.20230128160046.1"></t>
 <t tx="ekr.20230128165420.1"></t>
@@ -59486,35 +59495,8 @@ PR: https://github.com/python-rope/rope/pull//652
 @tabwidth -2
 @nosearch
 
-***Find the files with all the traversers.
-- cff Visitor)
-
-- Have I talked about the wall tipping over in Rope?
-  Not in the ENB's.
-
-- ENB: The big picture: knowing what to ignore, part 2.
-  - The wall is beginning to tip over!
-  - To the first approx, only the visitors matter.
-    Infrastructure (@saveit, @prevent_recursion, lazy evaluation) doesn't matter much.
-  - There are many traverser classes, one for each "query".
-  - There are many "queries" because results are computed as needed.
-  - Some traverser classes may be artifacts of unit tests, but this is unlikely.
-  
-- The big question: what is an inference?
-  Guess: it is a PyDefinedObject.
-  
-- Two kinds of empty classes.
-  Easy-to-understand: Like _GlobalVisitor(_ScopeVisitor):
-  Hard-to-understand: Like empty 
-
-- PR for @savit docstring.
-  - I get it: It may be too detailed.
-  - Mention (in docstring or comment) that @savit is not directly involved with type inference.
-  
-- PR for _GlobalVisitor: replace do-nothing ctor with 'pass'
-</t>
-<t tx="ekr.20230129010854.1">@path rope/base/
-"""
+- AOI: Annotation-base Object Inference: create test file.</t>
+<t tx="ekr.20230129010854.1">"""
 Tracing and debugging functions from Leo.
 
 Duplicated here so that Rope's commit checks won't fail.
@@ -59522,8 +59504,9 @@ Duplicated here so that Rope's commit checks won't fail.
 
 # from __future__ import annotations
 import os
+import pprint
 import sys
-from typing import Any, Dict, List
+from typing import Any, List
 
 
 @others
@@ -59604,98 +59587,6 @@ from typing import Any, Dict, List
 
 
 </t>
-<t tx="ekr.20230129012043.1">
-
-def printObj(obj: Any, indent: str = "", tag: str = None) -&gt; None:
-    """Pretty print any Python object"""
-    print(objToString(obj, indent=indent, tag=tag))
-</t>
-<t tx="ekr.20230129012142.1">
-
-def objToString(
-    obj: Any, indent: str = "", tag: str = "", concise: bool = False
-) -&gt; str:
-    """
-    Pretty print any Python object to a string.
-
-    concise=False: (Legacy) return a detailed string.
-    concise=True: Return a summary string.
-    """
-    if tag:
-        print(tag.strip())
-    if concise:
-        r = repr(obj)
-        if obj is None:
-            return f"{indent}None"
-        if isinstance(obj, dict):
-            return f"{indent}dict: {len(obj.keys())} keys"
-        if isinstance(obj, list):
-            return f"{indent}list: {len(obj)} items plural(len(obj))"
-        if isinstance(obj, tuple):
-            return f"{indent}tuple: {len(obj)} item{plural(len(obj))}"
-        if "method" in r:
-            return f"{indent}method: {obj.__name__}"
-        if "class" in r:
-            return f"{indent}class"
-        if "module" in r:
-            return f"{indent}module"
-        return f"{indent}object: {obj!r}"
-
-    # concise = False
-    if isinstance(obj, dict):
-        return dictToString(obj, indent=indent)
-    if isinstance(obj, list):
-        return listToString(obj, indent=indent)
-    if isinstance(obj, tuple):
-        return tupleToString(obj, indent=indent)
-    if isinstance(obj, str):
-        # Print multi-line strings as lists.
-        lines = splitLines(obj)
-        if len(lines) &gt; 1:
-            return listToString(lines, indent=indent)
-    return f"{indent} {obj!r}"
-</t>
-<t tx="ekr.20230129012417.1">
-
-def dictToString(d: Dict[str, str], indent: str = "", tag: str = None) -&gt; str:
-    """Pretty print a Python dict to a string."""
-    # pylint: disable=unnecessary-lambda
-    if not d:
-        return "{}"
-    result = ["{\n"]
-    indent2 = indent + " " * 4
-    n = 2 + len(indent) + max([len(repr(z)) for z in d.keys()])
-    for i, key in enumerate(sorted(d, key=lambda z: repr(z))):
-        pad = " " * max(0, (n - len(repr(key))))
-        result.append(f"{pad}{key}:")
-        result.append(objToString(d.get(key), indent=indent2))
-        if i + 1 &lt; len(d.keys()):
-            result.append(",")
-        result.append("\n")
-    result.append(indent + "}")
-    s = "".join(result)
-    return f"{tag}...\n{s}\n" if tag else s
-</t>
-<t tx="ekr.20230129012458.1">
-
-def listToString(obj: Any, indent: str = "", tag: str = None) -&gt; str:
-    """Pretty print a Python list to a string."""
-    if not obj:
-        return indent + "[]"
-    result = [indent, "["]
-    indent2 = indent + " " * 4
-    # I prefer not to compress lists.
-    for i, obj2 in enumerate(obj):
-        result.append("\n" + indent2)
-        result.append(objToString(obj2, indent=indent2))
-        if i + 1 &lt; len(obj) &gt; 1:
-            result.append(",")
-        else:
-            result.append("\n" + indent)
-    result.append("]")
-    s = "".join(result)
-    return f"{tag}...\n{s}\n" if tag else s
-</t>
 <t tx="ekr.20230129013023.1">def plural(obj: Any) -&gt; str:
     """Return "s" or "" depending on n."""
     if isinstance(obj, (list, tuple, str)):
@@ -59703,6 +59594,8 @@ def listToString(obj: Any, indent: str = "", tag: str = None) -&gt; str:
     else:
         n = obj
     return "" if n == 1 else "s"
+
+
 </t>
 <t tx="ekr.20230129013049.1">def splitLines(s: str) -&gt; List[str]:
     """
@@ -59716,32 +59609,8 @@ splitlines = splitLines
 
 
 </t>
-<t tx="ekr.20230129013224.1">
-
-def tupleToString(obj: Any, indent: str = "", tag: str = None) -&gt; str:
-    """Pretty print a Python tuple to a string."""
-    if not obj:
-        return "(),"
-    result = ["("]
-    indent2 = indent + " " * 4
-    for i, obj2 in enumerate(obj):
-        if len(obj) &gt; 1:
-            result.append("\n" + indent2)
-        result.append(objToString(obj2, indent=indent2))
-        if len(obj) == 1 or i + 1 &lt; len(obj):
-            result.append(",")
-        elif len(obj) &gt; 1:
-            result.append("\n" + indent)
-    result.append(")")
-    s = "".join(result)
-    return f"{tag}...\n{s}\n" if tag else s
-
-
-</t>
-<t tx="ekr.20230129013254.1">def shortFileName(fileName: str, n: int = None) -&gt; str:
+<t tx="ekr.20230129013254.1">def shortFileName(fileName: str) -&gt; str:
     """Return the base name of a path."""
-    if n is not None:
-        trace('"n" keyword argument is no longer used')
     return os.path.basename(fileName) if fileName else ""
 
 
@@ -60550,5 +60419,88 @@ def setUp(self):
 @wrap
 
 Looking at the *results* of the call to `testutils.sample_project()` was good enough at first.</t>
+<t tx="ekr.20230130084456.1">Pass 1
+
+The pass 1 traverser defines methods for Module, ClassDef, FunctionDef.
+
+Pass 2
+
+The pass 2 traverser is a subclass of the main soi traverser class.
+
+It will override the methods that infer results.
+The @prevent_recursion method is a good place to look for to-be-overridden methods.
+
+If necessary, define wrapper methods in the main soi traverser class to allow overrides in the pass 2 traverser.</t>
+<t tx="ekr.20230130084523.1"></t>
+<t tx="ekr.20230130085003.2">Guess: it is a PyDefinedObject.
+  </t>
+<t tx="ekr.20230130085103.1">Replace do-nothing ctor with 'pass'
+
+- Two kinds of empty classes.
+  Easy-to-understand: Like _GlobalVisitor(_ScopeVisitor):
+  Hard-to-understand: Like empty 
+</t>
+<t tx="ekr.20230130085138.1">The wall is about ready to tip over.
+
+</t>
+<t tx="ekr.20230130085317.1">- To the first approx, only the visitors matter.
+  Infrastructure (@saveit, @prevent_recursion, lazy evaluation) doesn't matter much.
+- There are many traverser classes, one for each "query".
+- There are many "queries" because results are computed as needed.
+- Some traverser classes may be artifacts of unit tests, but this is unlikely.
+
+</t>
+<t tx="ekr.20230130085442.1">Infrastructure:
+- startup code
+- @saveit and @prevent_recursion decorators.
+
+Inference:
+- Traversers are where everything happens.
+- Several kinds of traversers: startup, inference, refactoring, error reporting, etc.</t>
+<t tx="ekr.20230130094034.1">@nosearch
+</t>
+<t tx="ekr.20230130094057.1">@nosearch
+
+# Word, Head, Body
+
+# found 9 nodes</t>
+<t tx="ekr.20230130145330.2">def printObj(obj: Any, tag: str = None, indent: int = 0) -&gt; None:
+    """Pretty print any Python object using g.pr."""
+    if tag:
+        print(tag.strip())
+    print(objToString(obj, indent=indent))
+
+
+</t>
+<t tx="ekr.20230130145330.3">def objToString(obj: Any, indent: int = 0, width: int = 120) -&gt; str:
+    """
+    Pretty print any Python object to a string.
+    """
+
+    s = pprint.pformat(
+        obj,
+        compact=False,
+        depth=None,
+        # indent=len(indent) if isinstance(indent, str) else indent,
+        indent=indent,
+        sort_dicts=True,
+        # underscore_numbers=False,
+        width=width,
+    )
+    if s and isinstance(obj, str) and "\n" in s:
+        # Weird: strip ()
+        if s[0] == "(":
+            s = s[1:]
+        if s and s[-1] == ")":
+            s = s[:-1]
+        results = ["[\n"]
+        for i, z in enumerate(splitLines(s)):
+            results.append(f"  {i:4}: {z!s}")
+        results.append("\n]\n")
+        return "".join(results)
+    return s
+
+
+</t>
 </tnodes>
 </leo_file>
