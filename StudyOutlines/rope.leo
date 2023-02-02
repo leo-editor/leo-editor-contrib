@@ -29,9 +29,9 @@
 </v>
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
+<v t="ekr.20230201085503.1"><vh>Status report: Feb 1, 2023</vh></v>
 <v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
 <v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
-</v>
 <v t="ekr.20230129234218.1"><vh>ENB</vh>
 <v t="ekr.20230201083654.1"><vh>EKR's ENB (short version)</vh></v>
 <v t="ekr.20230129234717.1"><vh>ENB: The @saveit (@cacheit) decorator</vh>
@@ -74,12 +74,14 @@
 <v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
 </v>
 </v>
+</v>
 <v t="ekr.20230129005206.1"><vh>*** To do</vh>
 <v t="ekr.20230131080925.1"><vh>to do: docs</vh></v>
 <v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
 <v t="ekr.20230130085103.1"><vh>PR for _GlobalVisitor?</vh></v>
 </v>
-<v t="ekr.20221129082559.1"><vh>Script files</vh>
+<v t="ekr.20221118105359.1"><vh>Files</vh>
+<v t="ekr.20221129082559.1"><vh> c:\Scripts</vh>
 <v t="ekr.20221201161803.1"><vh>@clean blacken-r.cmd</vh></v>
 <v t="ekr.20221214124101.1"><vh>@clean cd-r.cmd</vh></v>
 <v t="ekr.20221129082906.1"><vh>@clean check-r.cmd</vh></v>
@@ -94,17 +96,20 @@
 <v t="ekr.20221204084958.1"><vh>@clean test-one-r.cmd</vh></v>
 <v t="ekr.20221129082621.1"><vh>@clean test-r.cmd</vh></v>
 </v>
-<v t="ekr.20221118105359.1"><vh>Files</vh>
+<v t="ekr.20230201150627.1"><vh> top-level</vh>
 <v t="ekr.20221209061813.1"><vh>@clean .pylintrc</vh></v>
-<v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
-<v t="ekr.20230104074134.1"><vh>&lt;&lt; copyright &gt;&gt;</vh></v>
-</v>
 <v t="ekr.20221201051835.1"><vh>@clean setup.cfg</vh></v>
+</v>
 <v t="ekr.20221118072830.9"><vh>docs</vh>
 <v t="ekr.20221118072830.10"><vh>@clean conf.py</vh></v>
 <v t="ekr.20221118072830.11"><vh>@clean default_config.py</vh>
 <v t="ekr.20221118072830.12"><vh>set_prefs</vh></v>
 <v t="ekr.20221118072830.13"><vh>project_opened</vh></v>
+</v>
+</v>
+<v t="ekr.20230201150728.1"><vh>rope</vh>
+<v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
+<v t="ekr.20230104074134.1"><vh>&lt;&lt; copyright &gt;&gt;</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.17"><vh>rope/base</vh>
@@ -591,8 +596,8 @@
 <v t="ekr.20221118072830.456"><vh>function: libutils.report_change</vh></v>
 <v t="ekr.20221118072830.457"><vh>function: libutils.analyze_module (wraps PyCore.analyze_modjle))</vh></v>
 <v t="ekr.20221118072830.458"><vh>function: libutils.analyze_modules</vh></v>
-<v t="ekr.20221118072830.459"><vh>function: libutils.get_string_module (returns a pyobjectsdef.PyModule)</vh></v>
-<v t="ekr.20221118072830.460"><vh>function: libutils.get_string_scope (returns a pyobjectsdef.PyModule)</vh></v>
+<v t="ekr.20221118072830.459"><vh>function: libutils.get_string_module (instantiates pyobjectsdef.PyModule)</vh></v>
+<v t="ekr.20221118072830.460"><vh>function: libutils.get_string_scope</vh></v>
 <v t="ekr.20221118072830.461"><vh>function: libutils.is_python_file</vh></v>
 <v t="ekr.20221118072830.462"><vh>function: libutils.modname</vh></v>
 </v>
@@ -796,7 +801,7 @@
 </v>
 </v>
 <v t="ekr.20221118072830.640"><vh>@clean pyobjects.py</vh>
-<v t="ekr.20221118072830.641"><vh>class PyObject</vh>
+<v t="ekr.20221118072830.641"><vh>class    pyobjects.PyObject (**getter class**)</vh>
 <v t="ekr.20221118072830.642"><vh>PyObject.__init__</vh></v>
 <v t="ekr.20221118072830.643"><vh>PyObject.get_attributes</vh></v>
 <v t="ekr.20221118072830.644"><vh>PyObject.get_attribute</vh></v>
@@ -822,12 +827,12 @@
 <v t="ekr.20221118072830.665"><vh>AbstractFunction.get_param_names</vh></v>
 <v t="ekr.20221118072830.666"><vh>AbstractFunction.get_returned_object</vh></v>
 </v>
-<v t="ekr.20221118072830.667"><vh>class    pyobjects.AbstractModule</vh>
+<v t="ekr.20221118072830.667"><vh>class    pyobjects.AbstractModule(PyObject)</vh>
 <v t="ekr.20221118072830.668"><vh>AbstractModule.__init__</vh></v>
 <v t="ekr.20221118072830.669"><vh>AbstractModule.get_doc</vh></v>
 <v t="ekr.20221118072830.670"><vh>AbstractModule.get_resource</vh></v>
 </v>
-<v t="ekr.20221118072830.671"><vh>class    pyobjects.PyDefinedObject  (** contains only getters!)</vh>
+<v t="ekr.20221118072830.671"><vh>class    pyobjects.PyDefinedObject  (**getter class**)</vh>
 <v t="ekr.20221118072830.672"><vh>PyDefinedObject.__init__</vh></v>
 <v t="ekr.20221118072830.673"><vh>PyDefinedObject.__repr__</vh></v>
 <v t="ekr.20221118072830.674"><vh>PyDefinedObject.absolute_name</vh></v>
@@ -929,7 +934,7 @@
 <v t="ekr.20221118072830.760"><vh>_AnnAssignVisitor.Subscript</vh></v>
 <v t="ekr.20221118072830.761"><vh>_AnnAssignVisitor.Slice</vh></v>
 </v>
-<v t="ekr.20221118072830.762"><vh>class pyobjectsdef._ExpressionVisitor(RopeNodeVisitor) </vh>
+<v t="ekr.20221118072830.762"><vh>class pyobjectsdef._ExpressionVisitor(ast.RopeNodeVisitor) </vh>
 <v t="ekr.20221118072830.763"><vh>_ExpressionVisitor.__init__</vh></v>
 <v t="ekr.20221118072830.764"><vh>_ExpressionVisitor._assigned</vh></v>
 <v t="ekr.20221118072830.765"><vh>_ExpressionVisitor.GeneratorExp</vh></v>
@@ -950,7 +955,7 @@
 </v>
 <v t="ekr.20221118072830.779"><vh>class pyobjectsdef._ScopeVisitor(_ExpressionVisitor)</vh>
 <v t="ekr.20221118072830.780"><vh>_ScopeVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.781"><vh>_ScopeVisitor.get_module (trace)</vh></v>
+<v t="ekr.20221118072830.781"><vh>_ScopeVisitor.get_module</vh></v>
 <v t="ekr.20221118072830.782"><vh>_ScopeVisitor._ClassDef</vh></v>
 <v t="ekr.20221118072830.783"><vh>_ScopeVisitor._FunctionDef (pyobjectsdef.py)</vh></v>
 <v t="ekr.20221118072830.784"><vh>_ScopeVisitor._AsyncFunctionDef</vh></v>
@@ -963,8 +968,8 @@
 <v t="ekr.20221118072830.791"><vh>_ScopeVisitor._update_evaluated</vh></v>
 <v t="ekr.20221118072830.792"><vh>_ScopeVisitor._With</vh></v>
 <v t="ekr.20221118072830.793"><vh>_ScopeVisitor._AsyncWith</vh></v>
-<v t="ekr.20221118072830.794"><vh>_ScopeVisitor.excepthandler</vh></v>
-<v t="ekr.20221118072830.795"><vh>_ScopeVisitor.ExceptHandler</vh></v>
+<v t="ekr.20221118072830.794"><vh>_ScopeVisitor._excepthandler</vh></v>
+<v t="ekr.20221118072830.795"><vh>_ScopeVisitor._ExceptHandler</vh></v>
 <v t="ekr.20221118072830.796"><vh>_ScopeVisitor._Import</vh></v>
 <v t="ekr.20221118072830.797"><vh>_ScopeVisitor._ImportFrom</vh></v>
 <v t="ekr.20221118072830.798"><vh>_ScopeVisitor._is_ignored_import (unique)</vh></v>
@@ -1814,17 +1819,17 @@
 <v t="ekr.20221118072830.1494"><vh>OrderedSet.__eq__</vh></v>
 </v>
 </v>
-<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/debugutils.py</vh>
-<v t="ekr.20230129011359.4"><vh>g._callerName</vh></v>
+<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/debug_utils.py</vh>
+<v t="ekr.20230129011359.4"><vh>g._caller_name</vh></v>
 <v t="ekr.20230129011359.5"><vh>g.caller</vh></v>
 <v t="ekr.20230129011359.2"><vh>g.callers</vh></v>
 <v t="ekr.20230129011359.3"><vh>g.callers_list</vh></v>
 <v t="ekr.20230129011432.1"><vh>g.get_ctor_name</vh></v>
-<v t="ekr.20230130145330.3"><vh>g.objToString</vh></v>
 <v t="ekr.20230129013023.1"><vh>g.plural</vh></v>
-<v t="ekr.20230130145330.2"><vh>g.printObj</vh></v>
-<v t="ekr.20230129013254.1"><vh>g.shortFileName &amp; shortFilename</vh></v>
-<v t="ekr.20230129013049.1"><vh>g.splitLines</vh></v>
+<v t="ekr.20230130145330.2"><vh>g.print_obj</vh></v>
+<v t="ekr.20230129013254.1"><vh>g.short_file_name</vh></v>
+<v t="ekr.20230129013049.1"><vh>g.split_lines</vh></v>
+<v t="ekr.20230130145330.3"><vh>g.to_string</vh></v>
 <v t="ekr.20230129013407.1"><vh>g.trace</vh></v>
 </v>
 </v>
@@ -5475,28 +5480,18 @@
 <v t="ekr.20221118072830.707"></v>
 <v t="ekr.20221118072830.824"></v>
 </v>
-<v t="ekr.20230106094202.1"><vh>--- utils files</vh>
-<v t="ekr.20221118072830.1499"></v>
-<v t="ekr.20221118072830.452"></v>
-<v t="ekr.20221118072831.19"></v>
-<v t="ekr.20221118072830.542"></v>
-<v t="ekr.20221118072830.934"></v>
-<v t="ekr.20221118072831.1919"></v>
-</v>
-<v t="ekr.20221204084958.1"></v>
-<v t="ekr.20221118072831.1483"></v>
 <v t="ekr.20230129010854.1"></v>
 </v>
 <v t="ekr.20221230095246.1"><vh>Recent code</vh>
 <v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
 <v t="ekr.20221118072830.1500"></v>
 </v>
-<v t="ekr.20230131103837.1"><vh>--- Improve g.objToString</vh>
+<v t="ekr.20230131103837.1"><vh>--- Improve g.to_string</vh>
 <v t="ekr.20230130145330.2"></v>
 <v t="ekr.20230130145330.3"></v>
 </v>
 </v>
-<v t="ekr.20230106094401.1"><vh>=== Study (do not delete)</vh>
+<v t="ekr.20230201152036.1"><vh>Recent study (do not delete)</vh>
 <v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
 <v t="ekr.20221118072830.458"></v>
 <v t="ekr.20221118072830.581"></v>
@@ -5506,7 +5501,7 @@
 <v t="ekr.20221118072830.1256"></v>
 <v t="ekr.20221118072830.1257"></v>
 </v>
-<v t="ekr.20230101055129.1"><vh>--- Important docstrings</vh>
+<v t="ekr.20230101055129.1"><vh>--- important docstrings</vh>
 <v t="ekr.20221118073540.1"></v>
 <v t="ekr.20230101190225.1"></v>
 <v t="ekr.20230104075047.1"></v>
@@ -5531,6 +5526,13 @@
 <v t="ekr.20221118072830.672"></v>
 <v t="ekr.20221118072830.699"></v>
 <v t="ekr.20221118072830.736"></v>
+<v t="ekr.20230129093100.1"><vh>Found 5:trace_ctors</vh>
+<v t="ekr.20221118072831.1487"></v>
+<v t="ekr.20221118072830.672"></v>
+<v t="ekr.20221118072830.699"></v>
+<v t="ekr.20221118072830.729"></v>
+<v t="ekr.20221118072830.736"></v>
+</v>
 </v>
 <v t="ekr.20230130094034.1"><vh>--- prevent_recursion</vh>
 <v t="ekr.20221118072830.1503"></v>
@@ -5552,7 +5554,7 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230129064218.1"><vh>Found 37:Visitor)</vh>
+<v t="ekr.20230129064218.1"><vh>--- All Visitor classes</vh>
 <v t="ekr.20230102051545.1"></v>
 <v t="ekr.20221118072830.1587"></v>
 <v t="ekr.20221118072831.371"></v>
@@ -5587,16 +5589,14 @@
 <v t="ekr.20221118072830.1256"></v>
 <v t="ekr.20221118072830.712"></v>
 </v>
-<v t="ekr.20230129093100.1"><vh>Found 5:trace_ctors</vh>
-<v t="ekr.20221118072831.1487"></v>
-<v t="ekr.20221118072830.672"></v>
-<v t="ekr.20221118072830.699"></v>
-<v t="ekr.20221118072830.729"></v>
-<v t="ekr.20221118072830.736"></v>
 </v>
+<v t="ekr.20230201152149.1"><vh>Recent tests/testing</vh>
+<v t="ekr.20221204084958.1"></v>
+<v t="ekr.20221118072831.1483"></v>
+<v t="ekr.20221118072831.1487"></v>
 </v>
 <v t="ekr.20230104221623.1"><vh>=== Study one test</vh>
-<v t="ekr.20230106074706.1"><vh>--- what is PyObject ???</vh>
+<v t="ekr.20230106074706.1"><vh>--- what is PyObject?</vh>
 <v t="ekr.20230104224018.1"><vh>Found 66:PyObject</vh>
 <v t="ekr.20221118072830.84"></v>
 <v t="ekr.20221118072830.1283"></v>
@@ -5717,33 +5717,6 @@
 <v t="ekr.20221118072830.697"></v>
 <v t="ekr.20230127154232.1"></v>
 </v>
-<v t="ekr.20221118072831.1487"></v>
-<v t="ekr.20230107173006.1"><vh>--- test calling sequence</vh>
-<v t="ekr.20230201054651.1"><vh>--- setUp: calls testutils.sample_project()</vh>
-<v t="ekr.20221118072831.1485"></v>
-</v>
-<v t="ekr.20230201054723.1"><vh>--- sample_project: instantiates rope.base.project.Project</vh>
-<v t="ekr.20221118072831.1920"></v>
-<v t="ekr.20221118072830.500"></v>
-<v t="ekr.20221118072830.501"></v>
-</v>
-<v t="ekr.20221118072830.460"></v>
-<v t="ekr.20221118072830.459"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20221118072830.736"></v>
-<v t="ekr.20230127145046.1"><vh>--- calling sequence for pyobjectsdef.PyModule ctor</vh>
-<v t="ekr.20221118072830.736"></v>
-<v t="ekr.20221118072830.699"></v>
-<v t="ekr.20221118072830.672"></v>
-<v t="ekr.20221118072830.701"></v>
-<v t="ekr.20221118072830.621"></v>
-<v t="ekr.20221118072830.691"></v>
-</v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.477"></v>
-<v t="ekr.20221118072830.501"></v>
-</v>
 <v t="ekr.20230128100404.1"><vh>--- tracing: scope["Sample"].get_object()</vh>
 <v t="ekr.20221118072830.851"></v>
 <v t="ekr.20221118072830.829"></v>
@@ -5754,6 +5727,70 @@
 <v t="ekr.20221118072830.779"></v>
 <v t="ekr.20221118072830.804"></v>
 <v t="ekr.20221118072830.782"></v>
+</v>
+</v>
+<v t="ekr.20221118072831.1487"></v>
+<v t="ekr.20230202004501.1"><vh>--- test info</vh>
+<v t="ekr.20230107173006.1"><vh>--- test: calling sequence</vh>
+<v t="ekr.20230201152803.1"><vh>--- Part 1: setUp</vh>
+<v t="ekr.20230201054651.1"><vh>--- setUp: calls testutils.sample_project()</vh>
+<v t="ekr.20221118072831.1485"></v>
+</v>
+<v t="ekr.20230201054723.1"><vh>--- sample_project: instantiates rope.base.project.Project</vh>
+<v t="ekr.20221118072831.1920"></v>
+<v t="ekr.20221118072830.500"></v>
+<v t="ekr.20221118072830.501"></v>
+</v>
+</v>
+<v t="ekr.20230201152816.1"><vh>--- Part 2: the test</vh>
+<v t="ekr.20230201152705.1"><vh>--- scope = libutils.get_string_scope: instantiates pyobjectsdef.PyModule </vh>
+<v t="ekr.20221118072830.460"></v>
+<v t="ekr.20221118072830.459"></v>
+<v t="ekr.20221118072830.735"></v>
+<v t="ekr.20221118072830.704"></v>
+<v t="ekr.20221118072830.698"></v>
+<v t="ekr.20221118072830.671"></v>
+<v t="ekr.20221118072830.667"></v>
+<v t="ekr.20221118072830.641"></v>
+</v>
+<v t="ekr.20230127145046.1"><vh>--- ctor: PyModule(pyobjects.PyModule)</vh>
+<v t="ekr.20221118072830.736"></v>
+<v t="ekr.20230202002458.1"><vh>--- ctor: pyobjects.Pymodule(_PyModule)</vh>
+<v t="ekr.20230202002707.1"><vh>--- ctor: pyobjects._Pymodule(PyDefinedObject, AbstractModule)</vh>
+<v t="ekr.20221118072830.699"></v>
+<v t="ekr.20230202002826.1"><vh>--- ctor: pyobjects.PyDefinedObject</vh>
+<v t="ekr.20221118072830.672"></v>
+<v t="ekr.20221118072830.681"></v>
+<v t="ekr.20221118072830.701"></v>
+<v t="ekr.20221118072830.691"></v>
+</v>
+<v t="ekr.20230202002929.1"><vh>--- ctor: pyobjects.AbstractModule</vh>
+<v t="ekr.20221118072830.668"></v>
+<v t="ekr.20221118072830.654"></v>
+</v>
+</v>
+</v>
+</v>
+<v t="ekr.20230202004011.1"><vh>--- not called: pynames._get_concluded_data</vh>
+<v t="ekr.20221118072830.621"></v>
+</v>
+</v>
+</v>
+<v t="ekr.20230201160950.1"><vh>--- test: visitor classes</vh>
+<v t="ekr.20221118072830.736"></v>
+<v t="ekr.20221118072830.804"></v>
+<v t="ekr.20221118072830.779"></v>
+<v t="ekr.20221118072830.762"></v>
+<v t="ekr.20230102051545.1"></v>
+</v>
+<v t="ekr.20230202010532.1"><vh>--- hierarchy: class pynamesdef.AssignName(PyName)</vh>
+<v t="ekr.20221217024942.1"></v>
+<v t="ekr.20221118072830.629"></v>
+<v t="ekr.20221118072830.589"></v>
+</v>
+<v t="ekr.20230202011329.1"><vh>--- hierarchy: class pynames.AssignedName</vh>
+<v t="ekr.20221118072830.629"></v>
+<v t="ekr.20221118072830.589"></v>
 </v>
 </v>
 </vnodes>
@@ -10573,7 +10610,7 @@ from collections.abc import MutableSet
 <t tx="ekr.20221118072830.1499">import sys
 import warnings
 
-from rope.base.utils import debugutils as g
+from rope.base.utils import debug_utils as g
 
 assert g  ###
 
@@ -10629,7 +10666,7 @@ get_generator = _create_builtin_getter(Generator)
                         print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
                     else:
                         print("")
-                        g.printObj(
+                        g.print_obj(
                             obj, tag=f"{tag} ivar: {injected_name} = {description}"
                         )
                 setattr(self, ivar_name, obj)
@@ -15980,7 +16017,7 @@ if typing.TYPE_CHECKING:
 
     from rope.base import pyobjectsdef
 
-from rope.base.utils import debugutils as g  ###
+from rope.base.utils import debug_utils as g  ###
 
 assert g  ###
 
@@ -16295,7 +16332,7 @@ from typing import Optional
 
 from rope.base import ast, exceptions, utils
 
-from rope.base.utils import debugutils as g  ###
+from rope.base.utils import debug_utils as g  ###
 
 assert g  ###
 
@@ -16684,7 +16721,7 @@ data = property(get, set)
 ###
 
 def _ekr_dump(self):
-    g.printObj(self.data, tag=f"***** pyobjects._ConcludedData: {id(self)}")
+    g.print_obj(self.data, tag=f"***** pyobjects._ConcludedData: {id(self)}")
 </t>
 <t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject, AbstractModule):
     @others
@@ -16731,11 +16768,11 @@ def _ekr_dump_concluded_data(self):
     tag = self.get_name()
     try:
         for i, z in enumerate(self.concluded_data):
-            g.printObj(f"{i:3} {z!s}", tag=tag)
+            g.print_obj(f"{i:3} {z!s}", tag=tag)
             # z._ekr_dump()
     except TypeError:
         z = self.concluded_data
-        g.printObj(f"{z!s}", tag=tag)
+        g.print_obj(f"{z!s}", tag=tag)
         # z._ekr_dump()
 
 </t>
@@ -16770,7 +16807,7 @@ from rope.base import (
     utils,
 )
 
-from rope.base.utils import debugutils as g  ###
+from rope.base.utils import debug_utils as g  ###
 
 assert g  ###
 
@@ -17661,7 +17698,7 @@ import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
-from rope.base.utils import debugutils as g  ###
+from rope.base.utils import debug_utils as g  ###
 
 assert g  ###
 
@@ -25055,7 +25092,7 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
-from rope.base.utils import debugutils as g  ###
+from rope.base.utils import debug_utils as g  ###
 assert g  ###
 
 @others
@@ -25091,7 +25128,7 @@ assert g  ###
 
     def banner(s):
         if trace:
-            print(f"\n{g._callerName(2)}: ===== {s}\n")
+            print(f"\n{g._caller_name(2)}: ===== {s}\n")
 
     if trace:
         print('')
@@ -59360,6 +59397,10 @@ from and writing to the resource, moving the resource, etc.
 Query.__init__ &amp; __repr__</t>
 <t tx="ekr.20230104215355.1">@language rest
 @wrap
+
+Wiki: https://github.com/python-rope/rope/wiki
+Issues: https://github.com/python-rope/rope/issues
+PR: Study https://github.com/python-rope/rope/pull/653
 </t>
 <t tx="ekr.20230104220522.1">def setUp(self):
     super().setUp()
@@ -59449,20 +59490,17 @@ PR: https://github.com/python-rope/rope/pull//652
 @language python
 @nosearch
 </t>
-<t tx="ekr.20230106094202.1"></t>
-<t tx="ekr.20230106094401.1">@language rest
-@wrap
-
-@language python
+<t tx="ekr.20230107173006.1">@language python
 </t>
-<t tx="ekr.20230107173006.1"></t>
 <t tx="ekr.20230127094605.1"></t>
 <t tx="ekr.20230127101558.1"></t>
 <t tx="ekr.20230127101717.1"># Found 5 marked nodes</t>
 <t tx="ekr.20230127102529.1"></t>
 <t tx="ekr.20230127141811.1"></t>
 <t tx="ekr.20230127144054.1"></t>
-<t tx="ekr.20230127145046.1"></t>
+<t tx="ekr.20230127145046.1"># class pyobjectsdef.PyModule(pyobjects.PyModule):
+    
+# self.visitor_class = _GlobalVisitor</t>
 <t tx="ekr.20230127151929.1">
 
 </t>
@@ -59475,11 +59513,11 @@ PR: https://github.com/python-rope/rope/pull//652
 @wrap
 @nosearch
 
-Wiki: https://github.com/python-rope/rope/wiki
-PR: Study https://github.com/python-rope/rope/pull/653
-Issues: https://github.com/python-rope/rope/issues
+See children:
 
-
+- Create docs.
+- AOI.
+- Remove do-nothing ctor for _GlobalVisitor.
 
 @language python
 </t>
@@ -59495,6 +59533,8 @@ import sys
 from typing import Any, List
 
 trace_ctors = False  # For traces in various ctors.
+visitor_trace_list: List[str] = None  # List of visitors to trace.
+ctor_trace_list: List[str] = None  # List of ctors to trace.
 
 
 @others
@@ -59504,11 +59544,11 @@ trace_ctors = False  # For traces in various ctors.
     Return a string containing a comma-separated list of the calling
     function's callers.
     """
-    # Be careful to call _callerName with smaller values of i first:
+    # Be careful to call _caller_name with smaller values of i first:
     # sys._getframe throws ValueError if there are less than i entries.
     i, result = 3, []
     while 1:
-        s = _callerName(n=i)
+        s = _caller_name(n=i)
         if s:
             result.append(s)
         if not s or len(result) &gt;= n:
@@ -59523,11 +59563,11 @@ trace_ctors = False  # For traces in various ctors.
     Return a string containing a comma-separated list of the calling
     function's callers.
     """
-    # Be careful to call _callerName with smaller values of i first:
+    # Be careful to call _caller_name with smaller values of i first:
     # sys._getframe throws ValueError if there are less than i entries.
     i, result = 3, []
     while 1:
-        s = _callerName(n=i)
+        s = _caller_name(n=i)
         if s:
             result.append(s)
         if not s or len(result) &gt;= n:
@@ -59537,15 +59577,13 @@ trace_ctors = False  # For traces in various ctors.
 
 
 </t>
-<t tx="ekr.20230129011359.4">def _callerName(n: int) -&gt; str:
+<t tx="ekr.20230129011359.4">def _caller_name(n: int) -&gt; str:
     try:
-        # get the function name from the call stack.
+        # Get the function name from the call stack.
         f1 = sys._getframe(n)  # The stack frame, n levels up.
         code1 = f1.f_code  # The code object
         locals_ = f1.f_locals  # The local namespace.
         name = code1.co_name
-        # sfn = shortFilename(code1.co_filename)  # The file name.
-        # line = code1.co_firstlineno
         obj = locals_.get("self")
         if obj and name == "__init__":
             return f"{obj.__class__.__name__}.{name}"
@@ -59568,7 +59606,7 @@ trace_ctors = False  # For traces in various ctors.
 <t tx="ekr.20230129011432.1">def get_ctor_name(self: Any, file_name: str, width: int = 25):
     """Return &lt;module-name&gt;.&lt;class-name&gt;:&gt;width"""
     class_name = self.__class__.__name__
-    module_name = shortFileName(file_name).replace(".py", "")
+    module_name = short_file_name(file_name).replace(".py", "")
     combined_name = f"{module_name}.{class_name}"
     padding = " " * max(0, 25 - len(combined_name))
     return f"{padding}{combined_name}"
@@ -59585,7 +59623,7 @@ trace_ctors = False  # For traces in various ctors.
 
 
 </t>
-<t tx="ekr.20230129013049.1">def splitLines(s: str) -&gt; List[str]:
+<t tx="ekr.20230129013049.1">def split_lines(s: str) -&gt; List[str]:
     """
     Split s into lines, preserving the number of lines and
     the endings of all lines, including the last line.
@@ -59593,28 +59631,24 @@ trace_ctors = False  # For traces in various ctors.
     return s.splitlines(True) if s else []  # This is a Python string function!
 
 
-splitlines = splitLines
-
-
 </t>
-<t tx="ekr.20230129013254.1">def shortFileName(fileName: str) -&gt; str:
+<t tx="ekr.20230129013254.1">def short_file_name(file_name: str) -&gt; str:
     """Return the base name of a path."""
-    return os.path.basename(fileName) if fileName else ""
-
-
-shortFilename = shortFileName
+    return os.path.basename(file_name) if file_name else ""
 
 
 </t>
 <t tx="ekr.20230129013407.1">def trace(*args: Any) -&gt; None:
     """Print the name of the calling function followed by all the args."""
-    name = _callerName(2)
+    name = _caller_name(2)
     if name.endswith(".pyc"):
         name = name[:-1]
     args = "".join(str(z) for z in args)
     print(f"{name} {args}")
 </t>
 <t tx="ekr.20230129064218.1">@nosearch
+
+# Search for Visitor)
 
 # Head, Body
 
@@ -60381,13 +60415,13 @@ Refactoring:
 # Word, Head, Body
 
 # found 9 nodes</t>
-<t tx="ekr.20230130145330.2">def printObj(obj: Any, tag: str = None, indent: int = 0) -&gt; None:
+<t tx="ekr.20230130145330.2">def print_obj(obj: Any, tag: str = None, indent: int = 0) -&gt; None:
     """Pretty print any Python object."""
-    print(objToString(obj, indent=indent, tag=tag))
+    print(to_string(obj, indent=indent, tag=tag))
 
 
 </t>
-<t tx="ekr.20230130145330.3">def objToString(obj: Any, indent: int = 0, tag: str = None, width: int = 120) -&gt; str:
+<t tx="ekr.20230130145330.3">def to_string(obj: Any, indent: int = 0, tag: str = None, width: int = 120) -&gt; str:
     """
     Pretty print any Python object to a string.
     """
@@ -60397,7 +60431,7 @@ Refactoring:
         result = repr(obj)
     else:
         # Return the enumerated lines of the string.
-        lines = "".join([f"  {i:4}: {z!r}\n" for i, z in enumerate(splitLines(obj))])
+        lines = "".join([f"  {i:4}: {z!r}\n" for i, z in enumerate(split_lines(obj))])
         result = f"[\n{lines}]\n"
     return f"{tag.strip()}: {result}" if tag and tag.strip() else result
 
@@ -60470,7 +60504,7 @@ cacheit = inject
 saveit = inject</t>
 <t tx="ekr.20230131103837.1"></t>
 <t tx="ekr.20230201054651.1"></t>
-<t tx="ekr.20230201054723.1"></t>
+<t tx="ekr.20230201054723.1"># Project.__init__ does routine housekeeping.</t>
 <t tx="ekr.20230201083654.1">[Leo's forum](https://groups.google.com/g/leo-editor) contains dozens of my **ENB** (Engineering Notebook) entries. These ENBs:
 - are a permanent, public part of the Leonine world.
 - have recorded breakthroughs in Leo's design and code.
@@ -60485,5 +60519,128 @@ My ENBs for Rope will be pre-writing for Rope's missing Theory of Operation. &lt
 in the [leo-editor-contrib](https://github.com/leo-editor/leo-editor-contrib) contains my semi-private nodes.
 
 - Preliminary work has created a high-energy, low-friction, workflow.</t>
+<t tx="ekr.20230201085503.1">@language rest
+@wrap
+
+- [x] Create a high-energy, low-friction workflow.
+- [x] Create testing infrastructure.
+- [x] Retire public ENBs.
+- [x] Design my communications with LieRyan.
+      Use issues, not ENBs.
+      
+Summary:
+
+- Use issues for most conversations.
+- I'm gaining momentum and confidence.
+</t>
+<t tx="ekr.20230201150627.1"></t>
+<t tx="ekr.20230201150728.1"></t>
+<t tx="ekr.20230201152036.1"></t>
+<t tx="ekr.20230201152149.1"></t>
+<t tx="ekr.20230201152705.1">@language rest
+@wrap
+
+- libutils.get_string_scope calls libutils.get_string_module.
+
+- libutils.get_string_module instantiates and returns a pyobjectsdef.PyModule.
+
+- pyobjectsdef.PyModule is a non-trivial subclass of pyobjects.PyModule.
+
+- pyobjects.PyModule is a do-nothing subclass of pyojects._PyModule.
+
+- pyojects._PyModule is a subclass of pyobjects.PyDefinedObject *and* pyobjects.AbstractModule.
+
+- pyobjects.PyDefinedObject is a **getter class**
+    docstring: Python defined names that rope can access their sources.
+    
+- pyobjects.AbstractModule is a subclass of pyobjects.PyObject.
+
+- pyobjects.PyObject is a **getter class**:
+  It returns self.attribute, self.attributes, self.type.
+  
+**Summary**
+
+pyobjectsdef.PyModule has these non-trival base classes, both of which are **getter classes**:
+- pyobjects.PyDefinedObject
+- pyobjects.PyObject
+
+@language python
+</t>
+<t tx="ekr.20230201152803.1"># Here is ObjectInferTest.setUp
+
+def setUp(self):
+    """
+    Init self.project to a new Project instance for this test, with default prefs.
+    self.project.fscommands manages temp files in a temp directory.
+    """
+    super().setUp()
+    self.project = testutils.sample_project()
+    g.trace_ctors = False
+
+</t>
+<t tx="ekr.20230201152816.1">@language python
+
+# Here is the original test
+
+def test_simple_type_inferencing(self):
+    code = dedent("""\
+        class Sample(object):
+            pass
+        a_var = Sample()
+    """)
+
+    scope = libutils.get_string_scope(self.project, code)
+
+    sample_class = scope["Sample"].get_object()
+
+    a_var = scope["a_var"].get_object()
+
+    self.assertEqual(sample_class, a_var.get_type())
+</t>
+<t tx="ekr.20230201160950.1">@language rest
+@wrap
+
+pyobjectsdef.PyModule.__init__ contains:
+
+    PyModule.visitor_class = _GlobalVisitor
+
+_GlobalVisitor is do-nothing subclass of _ScopeVisitor.
+
+_ScopeVisitor has visitors for:
+    Import, ImportFrom
+    Global
+    ClassDef, FunctionDef
+    Assn, AnnAssign, AugAssign
+    For, AsyncFor, With, AsyncWith
+    ExceptionHandler, exceptionhandler
+    
+_ExpressionVisitor has visitors for:
+    GeneratorExp, NamedExpr
+    DictComp, ListComp, SetComp
+    
+_ExpressionVisitors._assigned instantiates pynamesdef.AssignedName:
+
+    pynamesdef.AssignedName
+
+
+    pynames.AssignedName is a do-nothing subclass of PyName.
+    PyName *only* contains *empty* get_object and get_definition_location methods.
+
+    
+    
+
+
+@language python
+</t>
+<t tx="ekr.20230202002458.1"># class pyobjects.PyModule(_PyModule):
+    # pass
+</t>
+<t tx="ekr.20230202002707.1"># class pyobjects._PyModule(PyDefinedObject, AbstractModule)</t>
+<t tx="ekr.20230202002826.1"></t>
+<t tx="ekr.20230202002929.1"></t>
+<t tx="ekr.20230202004011.1"></t>
+<t tx="ekr.20230202004501.1"></t>
+<t tx="ekr.20230202010532.1"></t>
+<t tx="ekr.20230202011329.1"></t>
 </tnodes>
 </leo_file>
