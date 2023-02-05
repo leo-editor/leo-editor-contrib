@@ -18,30 +18,12 @@
 <v t="ekr.20221122025914.20"><vh>@bool whole-word = True</vh></v>
 </v>
 <v t="ekr.20230104151430.1"><vh>@data check-nodes-suppressions</vh></v>
-<v t="ekr.20230205055521.1"><vh>rst3 command settings</vh>
-<v t="ekr.20230205055521.2"><vh>@string rst3-action=None</vh></v>
-<v t="ekr.20230205055521.3"><vh>rst3 reporting options</vh>
-<v t="ekr.20230205055521.4"><vh>@bool rst3-verbose = True</vh></v>
-</v>
-<v t="ekr.20230205055521.5"><vh>rst3 http options</vh>
-<v t="ekr.20230205055521.6"><vh>@bool rst3-http-server-support = False</vh></v>
-<v t="ekr.20230205055521.7"><vh>@string rst3-node-begin-marker = http-node-marker-</vh></v>
-</v>
-<v t="ekr.20230205055521.8"><vh>rst3 output options</vh>
-<v t="ekr.20230205055521.9"><vh>@string rst3-default-path = None</vh></v>
-<v t="ekr.20230205055521.10"><vh>@bool rst3-generate-rst-header-comment = True</vh></v>
-<v t="ekr.20230205055521.11"><vh>@string rst3-underline-characters = #=-+*^~:&gt;&lt;</vh></v>
-<v t="ekr.20230205055521.12"><vh>@bool rst3-write-intermediate-file = True</vh></v>
+<v t="ekr.20230205090204.1"><vh>Changed rst3 settings</vh>
+<v t="ekr.20230205055521.11"><vh>@string rst3-underline-characters=#=-+*^~:&gt;&lt;</vh></v>
 <v t="ekr.20230205055521.13"><vh>@string rst3-write-intermediate-extension=.rst</vh></v>
-</v>
-<v t="ekr.20230205055521.14"><vh>rst3 docutils options</vh>
 <v t="ekr.20230205055521.15"><vh>@bool rst3-call-docutils = False</vh></v>
-<v t="ekr.20230205055521.16"><vh>@bool rst3-stylesheet-embed = False</vh></v>
-<v t="ekr.20230205055521.17"><vh>@string rst3-publish-argv-for-missing-stylesheets = None</vh></v>
-<v t="ekr.20230205055521.18"><vh>@string rst3-stylesheet-name = default.css</vh></v>
-<v t="ekr.20230205055521.19"><vh>@string rst3-stylesheet-path = None</vh></v>
 </v>
-</v>
+<v t="ekr.20230205094642.1"><vh>@data history-list</vh></v>
 </v>
 <v t="ekr.20221128034447.1"><vh>scripts</vh>
 <v t="ekr.20221128034447.13"><vh>script: diff-branches/revs (all files)</vh></v>
@@ -50,11 +32,6 @@
 <v t="ekr.20221128034447.17"><vh>function: make_diff_outlines_ignoring_comments</vh></v>
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
-</v>
-<v t="ekr.20230205090204.1"><vh>Changed rst3 settings</vh>
-<v t="ekr.20230205055521.11"></v>
-<v t="ekr.20230205055521.13"></v>
-<v t="ekr.20230205055521.15"></v>
 </v>
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
@@ -102,6 +79,14 @@
 <v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
 <v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
 </v>
+</v>
+</v>
+<v t="ekr.20230129005206.1"><vh>*** To do</vh>
+<v t="ekr.20230205085817.1"><vh>PRs</vh></v>
+<v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
+<v t="ekr.20230202091932.1"><vh>New issue: valid Pylint complaint</vh>
+<v t="ekr.20221118072830.1407"><vh>utils.py: resolve_type</vh></v>
+<v t="ekr.20230202094528.1"><vh>COPY (master) utils.py: resolve_type</vh></v>
 </v>
 </v>
 <v t="ekr.20221118105359.1"><vh>Files</vh>
@@ -1704,7 +1689,7 @@
 <v t="ekr.20221118072830.1404"><vh>utils.py: get_class_with_attr_name</vh></v>
 <v t="ekr.20221118072830.1405"><vh>utils.py: get_lineno_for_node</vh></v>
 <v t="ekr.20221118072830.1406"><vh>utils.py: get_mro</vh></v>
-<v t="ekr.20221118072830.1407"><vh>utils.py: resolve_type</vh></v>
+<v t="ekr.20221118072830.1407"></v>
 <v t="ekr.20221118072830.1408"><vh>class ParametrizeType</vh>
 <v t="ekr.20221118072830.1409"><vh>ParametrizeType.__call__</vh></v>
 <v t="ekr.20221118072830.1410"><vh>ParametrizeType._get_type_factory</vh></v>
@@ -5757,22 +5742,12 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230129005206.1"><vh>*** To do</vh>
-<v t="ekr.20230205085817.1"><vh>PRs</vh></v>
-<v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
-<v t="ekr.20230202091932.1"><vh>New issue: valid Pylint complaint</vh>
-<v t="ekr.20221118072830.1407"></v>
-<v t="ekr.20230202094528.1"><vh>COPY (master) utils.py: resolve_type</vh></v>
-</v>
-</v>
-<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh>
-<v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
-<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
-</v>
+<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh></v>
 <v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
-<v t="ekr.20230205060858.1"></v>
+<v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
 <v t="ekr.20230204224411.1"><vh>What you should know</vh></v>
 <v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
+<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -58307,6 +58282,7 @@ call python -m black rope\contrib
 echo.
 echo black rope.refactor
 call python -m black rope\refactor
+
 </t>
 <t tx="ekr.20221204075047.1">@path c:\Scripts\
 @language batch
@@ -60546,12 +60522,6 @@ test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&l
 PR: https://github.com/python-rope/rope/pull/657/
 
 Write Theory of Operation *now*.
-
-- `make html` doesn't seem to work.
-
-
-- Integrate theory.html into rest of Rope docs.
-
 </t>
 <t tx="ekr.20230204222405.1">==========================
 Rope's Theory of Operation
@@ -60565,12 +60535,6 @@ This document describes how Rope does type inference.
 - Traversers.
 - What is an inference?
 </t>
-<t tx="ekr.20230205055521.1">@color</t>
-<t tx="ekr.20230205055521.10">True: write comment line of the form:
-    
-.. rst3: filename: &lt;filename&gt;
-
-at these start of the output.</t>
 <t tx="ekr.20230205055521.11">The underlining characters to be used to specify rST sections.
 
 The first character is reserved (not used) so you can specify the top-level
@@ -60580,68 +60544,12 @@ Note: Leo duplicates '-'.
 
 Leo: #=+*^~`-:&gt;&lt;-
 Rope: #=-+*^~:&gt;&lt;</t>
-<t tx="ekr.20230205055521.12">True: writes the intermediate file to the external file system.
-      Must be True when using Sphinx.
-    
-The name of the intermediate file is the name of the output file with the extension given by
-
-`@string rst3-write-intermediate-extension`.
-</t>
 <t tx="ekr.20230205055521.13">The extention appended to the names of intermediate files.
 
 See `@bool rst3-write-intermediate-file`</t>
-<t tx="ekr.20230205055521.14"></t>
 <t tx="ekr.20230205055521.15">True: Call docutils to process the intermediate file.
 
 Set this option to False when using Sphinx.</t>
-<t tx="ekr.20230205055521.16">This setting has effect only if `@bool rst3-call-docutils = True`.
-
-True: Docutils will embed a the stylesheet in the output file.
-False: Docutils will link to an external stylesheet file.</t>
-<t tx="ekr.20230205055521.17">This setting has effect only if `@bool rst3-call-docutils = True`.
-
-This setting gives arguments to be passed to ``docutils.core.Publisher().publish()``
-when no stylesheet is in effect.
-
-The setting should be comma-separated list of strings: For example, the option::
-
-    publish-argv-for-missing-stylesheets=--language=de,--documentclass=report,--use-latex-toc
-
-results in the call::
-
-    publish(['--language=de','--documentclass=report','--use-latex-toc'])</t>
-<t tx="ekr.20230205055521.18">The name of the stylesheet passed to docutils.
-
-This setting has effect only if `@bool rst3-call-docutils = True`.
-</t>
-<t tx="ekr.20230205055521.19">The directory containing the stylesheet passed to docutils.
-
-This setting has effect only if `@bool rst3-call-docutils = True`.
-</t>
-<t tx="ekr.20230205055521.2">This setting tells what the rst3 should do when writing changed files.
-The valid actions are:
-
-'none':  take no extra action.
-'clone': clone all dirty `@rst` trees.
-'mark':  mark all dirty `@rst` trees.
-</t>
-<t tx="ekr.20230205055521.3"></t>
-<t tx="ekr.20230205055521.4">**True**: write additional informational messages to the log.</t>
-<t tx="ekr.20230205055521.5"></t>
-<t tx="ekr.20230205055521.6">True: Writes **node markers** for use by the http plugin.
-
-Node markers are rst named hyperlink targets. By default they look like:
-``.. _http-node-marker-N``, where N is a unique node number.
-
-`@string rst3-node-begin-marker` specifies the format of these node markers.
-
-</t>
-<t tx="ekr.20230205055521.7">The string used for node markers.  See `@bool rst3-http-server-support`.
-</t>
-<t tx="ekr.20230205055521.8"></t>
-<t tx="ekr.20230205055521.9">The path to be prepended to *relative* filenames given in @rst nodes.
-
-This setting has no effect for *absolute* filenames.</t>
 <t tx="ekr.20230205060132.1">@language yaml
 repos:
 
@@ -60715,12 +60623,26 @@ PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
 
 PR: add tracing_utils.py.
 </t>
-<t tx="ekr.20230205085921.1">- Make sure conf.py can import rope
-  Add rope to sitecustomize.py if necessary.
+<t tx="ekr.20230205085921.1">To do: move this to a separate document.
+
+Make sure conf.py can import rope.
+- Add rope to the path (or sitecustomize.py) if necessary.
+  
+Add necessary modules:
 - pip install sphinx_autodoc_typehints
 - pip install tabulate
 - pip install sphinx_rtd_theme
+
+Run sphinx-build from the docs directory:
+    
+    docs&gt;sphinx-build -M html . _build -a
 </t>
 <t tx="ekr.20230205090204.1"># Found 3 marked nodes</t>
+<t tx="ekr.20230205094642.1"># Lines starting with '#' are comment lines.
+# A list of command names to be pre-loaded into the history list.
+rst3
+pylint
+sort-lines
+</t>
 </tnodes>
 </leo_file>
