@@ -22,6 +22,7 @@
 <v t="ekr.20230205055521.11"><vh>@string rst3-underline-characters=#=-+*^~:&gt;&lt;</vh></v>
 <v t="ekr.20230205055521.13"><vh>@string rst3-write-intermediate-extension=.rst</vh></v>
 <v t="ekr.20230205055521.15"><vh>@bool rst3-call-docutils = False</vh></v>
+<v t="ekr.20230205102620.1"><vh>@bool rst3-remove-leo-directives = True</vh></v>
 </v>
 <v t="ekr.20230205094642.1"><vh>@data history-list</vh></v>
 </v>
@@ -34,6 +35,7 @@
 </v>
 </v>
 </v>
+<v t="ekr.20230205090204.1"></v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
 <v t="ekr.20230201085503.1"><vh>Status report</vh></v>
 <v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
@@ -60523,15 +60525,19 @@ PR: https://github.com/python-rope/rope/pull/657/
 
 Write Theory of Operation *now*.
 </t>
-<t tx="ekr.20230204222405.1">==========================
+<t tx="ekr.20230204222405.1">@language rest
+==========================
 Rope's Theory of Operation
 ==========================
 
 This document describes how Rope does type inference.
 
-.. contents:: Table of Contents</t>
-<t tx="ekr.20230204224411.1">You should understand Python's ast module.</t>
-<t tx="ekr.20230204224459.1">- Startup process.
+.. contents:: Table of Contents
+</t>
+<t tx="ekr.20230204224411.1">@language rest
+You should understand Python's ast module.</t>
+<t tx="ekr.20230204224459.1">@language rest
+- Startup process.
 - Traversers.
 - What is an inference?
 </t>
@@ -60572,7 +60578,8 @@ repos:
   - id: isort
     name: Sort imports (Python)
 </t>
-<t tx="ekr.20230205060858.1">.. https://youtu.be/NvV5OrVk24c
+<t tx="ekr.20230205060858.1">@language rest
+.. https://youtu.be/NvV5OrVk24c
 
 Project: Tree of directories and files.
          Instantiate a Project with a directory.
@@ -60623,7 +60630,8 @@ PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
 
 PR: add tracing_utils.py.
 </t>
-<t tx="ekr.20230205085921.1">To do: move this to a separate document.
+<t tx="ekr.20230205085921.1">@language rest
+To do: move this to a separate document.
 
 Make sure conf.py can import rope.
 - Add rope to the path (or sitecustomize.py) if necessary.
@@ -60644,5 +60652,6 @@ rst3
 pylint
 sort-lines
 </t>
+<t tx="ekr.20230205102620.1"># True: Remove unindented @language, @others and @wrap directives.</t>
 </tnodes>
 </leo_file>
