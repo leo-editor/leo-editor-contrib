@@ -18,6 +18,30 @@
 <v t="ekr.20221122025914.20"><vh>@bool whole-word = True</vh></v>
 </v>
 <v t="ekr.20230104151430.1"><vh>@data check-nodes-suppressions</vh></v>
+<v t="ekr.20230205055521.1"><vh>rst3 command settings</vh>
+<v t="ekr.20230205055521.2"><vh>@string rst3-action=None</vh></v>
+<v t="ekr.20230205055521.3"><vh>rst3 reporting options</vh>
+<v t="ekr.20230205055521.4"><vh>@bool rst3-verbose = True</vh></v>
+</v>
+<v t="ekr.20230205055521.5"><vh>rst3 http options</vh>
+<v t="ekr.20230205055521.6"><vh>@bool rst3-http-server-support = False</vh></v>
+<v t="ekr.20230205055521.7"><vh>@string rst3-node-begin-marker = http-node-marker-</vh></v>
+</v>
+<v t="ekr.20230205055521.8"><vh>rst3 output options</vh>
+<v t="ekr.20230205055521.9"><vh>@string rst3-default-path = None</vh></v>
+<v t="ekr.20230205055521.10"><vh>@bool rst3-generate-rst-header-comment = True</vh></v>
+<v t="ekr.20230205055521.11"><vh>@string rst3-underline-characters = #=-+*^~:&gt;&lt;</vh></v>
+<v t="ekr.20230205055521.12"><vh>@bool rst3-write-intermediate-file = True</vh></v>
+<v t="ekr.20230205055521.13"><vh>@string rst3-write-intermediate-extension=.rst</vh></v>
+</v>
+<v t="ekr.20230205055521.14"><vh>rst3 docutils options</vh>
+<v t="ekr.20230205055521.15"><vh>@bool rst3-call-docutils = False</vh></v>
+<v t="ekr.20230205055521.16"><vh>@bool rst3-stylesheet-embed = False</vh></v>
+<v t="ekr.20230205055521.17"><vh>@string rst3-publish-argv-for-missing-stylesheets = None</vh></v>
+<v t="ekr.20230205055521.18"><vh>@string rst3-stylesheet-name = default.css</vh></v>
+<v t="ekr.20230205055521.19"><vh>@string rst3-stylesheet-path = None</vh></v>
+</v>
+</v>
 </v>
 <v t="ekr.20221128034447.1"><vh>scripts</vh>
 <v t="ekr.20221128034447.13"><vh>script: diff-branches/revs (all files)</vh></v>
@@ -26,6 +50,11 @@
 <v t="ekr.20221128034447.17"><vh>function: make_diff_outlines_ignoring_comments</vh></v>
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
+</v>
+<v t="ekr.20230205090204.1"><vh>Changed rst3 settings</vh>
+<v t="ekr.20230205055521.11"></v>
+<v t="ekr.20230205055521.13"></v>
+<v t="ekr.20230205055521.15"></v>
 </v>
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
@@ -83,6 +112,7 @@
 <v t="ekr.20221204085742.1"><vh>@clean cover-r.cmd</vh></v>
 <v t="ekr.20221129082257.1"><vh>@clean flake8-r.cmd</vh></v>
 <v t="ekr.20221204075937.1"><vh>@clean full-test-r.cmd</vh></v>
+<v t="ekr.20230205062902.1"><vh>@clean make-r.cmd</vh></v>
 <v t="ekr.20221129082956.1"><vh>@clean mypy-r.cmd</vh></v>
 <v t="ekr.20221209085815.1"><vh>@clean push-r.cmd</vh></v>
 <v t="ekr.20221204090024.1"><vh>@clean pylint-r.cmd</vh></v>
@@ -91,16 +121,11 @@
 <v t="ekr.20221204084958.1"><vh>@clean test-one-r.cmd</vh></v>
 <v t="ekr.20221129082621.1"><vh>@clean test-r.cmd</vh></v>
 </v>
-<v t="ekr.20230201150627.1"><vh> top-level</vh>
+<v t="ekr.20230201150627.1"><vh> config files</vh>
+<v t="ekr.20230205060132.1"><vh>@clean .pre-commit-config.yaml</vh></v>
 <v t="ekr.20221209061813.1"><vh>@clean .pylintrc</vh></v>
 <v t="ekr.20221201051835.1"><vh>@clean setup.cfg</vh></v>
-</v>
-<v t="ekr.20221118072830.9"><vh>docs</vh>
-<v t="ekr.20221118072830.10"><vh>@clean conf.py</vh></v>
-<v t="ekr.20221118072830.11"><vh>@clean default_config.py</vh>
-<v t="ekr.20221118072830.12"><vh>set_prefs</vh></v>
-<v t="ekr.20221118072830.13"><vh>project_opened</vh></v>
-</v>
+<v t="ekr.20221118072830.10"><vh>@clean docs/conf.py</vh></v>
 </v>
 <v t="ekr.20230201150728.1"><vh>rope</vh>
 <v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
@@ -5464,7 +5489,8 @@
 <v t="ekr.20221118072830.707"></v>
 <v t="ekr.20221118072830.824"></v>
 </v>
-<v t="ekr.20221211142245.1"></v>
+<v t="ekr.20221118072830.10"></v>
+<v t="ekr.20230205062902.1"></v>
 <v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/tracing_utils.py</vh>
 <v t="ekr.20230129011359.4"><vh>tracing_utils._caller_name</vh></v>
 <v t="ekr.20230129011359.5"><vh>tracing_utils.caller</vh></v>
@@ -5480,18 +5506,21 @@
 </v>
 </v>
 <v t="ekr.20221230095246.1"><vh>Recent code</vh>
+<v t="ekr.20230204071113.1"><vh>--- Open PRs</vh>
 <v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
 <v t="ekr.20221118072830.1500"></v>
 </v>
-<v t="ekr.20230131103837.1"><vh>--- Improve g.to_string</vh>
-<v t="ekr.20230130145330.2"></v>
-<v t="ekr.20230130145330.3"></v>
+<v t="ekr.20230204064538.1"><vh>=== PR #655: clean _GlobalVisitor</vh>
+<v t="ekr.20221118072830.804"></v>
+<v t="ekr.20221118072830.736"></v>
 </v>
+<v t="ekr.20230204094629.1"><vh>=== PR #656: use black 23.1.0</vh></v>
+</v>
+<v t="ekr.20230201152149.1"><vh>Recent tests/testing</vh>
 <v t="ekr.20230202163658.1"><vh>--- test g.trace</vh>
 <v t="ekr.20230129013407.1"></v>
 <v t="ekr.20230202171613.1"><vh>legacy g.trace</vh></v>
 </v>
-<v t="ekr.20230201152149.1"><vh>Recent tests/testing</vh>
 <v t="ekr.20221204084958.1"></v>
 <v t="ekr.20221118072831.1483"></v>
 <v t="ekr.20221118072831.1487"></v>
@@ -5729,14 +5758,21 @@
 </v>
 </v>
 <v t="ekr.20230129005206.1"><vh>*** To do</vh>
-<v t="ekr.20230131080925.1"><vh>to do: docs</vh></v>
+<v t="ekr.20230205085817.1"><vh>PRs</vh></v>
 <v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
-<v t="ekr.20230130085103.1"><vh>PR for _GlobalVisitor</vh></v>
 <v t="ekr.20230202091932.1"><vh>New issue: valid Pylint complaint</vh>
 <v t="ekr.20221118072830.1407"></v>
 <v t="ekr.20230202094528.1"><vh>COPY (master) utils.py: resolve_type</vh></v>
 </v>
-<v t="ekr.20230203101632.1"><vh>Won't do: add tracing_utils.py to Rope</vh></v>
+</v>
+<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh>
+<v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
+<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
+</v>
+<v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
+<v t="ekr.20230205060858.1"></v>
+<v t="ekr.20230204224411.1"><vh>What you should know</vh></v>
+<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -5763,8 +5799,7 @@ if 1:
     # c.expandAllSubheads()
     c.redraw(last)
 print('Done')</t>
-<t tx="ekr.20221118072830.10">@path docs/
-@nosearch
+<t tx="ekr.20221118072830.10">@nosearch
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -6575,15 +6610,6 @@ get_dict_type = _create_builtin_type_getter(Dict)
 <t tx="ekr.20221118072830.1099">def _has_enough_len_for_as(self, end):
     return len(self.code) &gt; end + MINIMAL_LEN_FOR_AS
 
-</t>
-<t tx="ekr.20221118072830.11">@path docs/
-# The default ``config.py``
-# flake8: noqa
-
-
-@others
-@language python
-@tabwidth -4
 </t>
 <t tx="ekr.20221118072830.110">def _dict_add(self, context):
     if self.keys is not None:
@@ -7432,147 +7458,6 @@ def persist(self):
 </t>
 <t tx="ekr.20221118072830.1199">def get_returned(self, parameters):
     pass
-
-</t>
-<t tx="ekr.20221118072830.12">def set_prefs(prefs):
-    """This function is called before opening the project"""
-
-    # Specify which files and folders to ignore in the project.
-    # Changes to ignored resources are not added to the history and
-    # VCSs.  Also they are not returned in `Project.get_files()`.
-    # Note that ``?`` and ``*`` match all characters but slashes.
-    # "*.pyc": matches "test.pyc" and "pkg/test.pyc"
-    # "mod*.pyc": matches "test/mod1.pyc" but not "mod/1.pyc"
-    # ".svn": matches "pkg/.svn" and all of its children
-    # "build/*.o": matches "build/lib.o" but not "build/sub/lib.o"
-    # "build//*.o": matches "build/lib.o" and "build/sub/lib.o"
-    #
-    #    prefs["ignored_resources"] = [
-    #        "*.pyc",
-    #        "*~",
-    #        ".ropeproject",
-    #        ".hg",
-    #        ".svn",
-    #        "_svn",
-    #        ".git",
-    #        ".tox",
-    #        ".venv",
-    #        "venv",
-    #        ".mypy_cache",
-    #        ".pytest_cache",
-    #    ]
-
-    # Specifies which files should be considered python files.  It is
-    # useful when you have scripts inside your project.  Only files
-    # ending with ``.py`` are considered to be python files by
-    # default.
-    #
-    #     prefs["python_files"] = ["*.py"]
-
-    # Custom source folders:  By default rope searches the project
-    # for finding source folders (folders that should be searched
-    # for finding modules).  You can add paths to that list.  Note
-    # that rope guesses project source folders correctly most of the
-    # time; use this if you have any problems.
-    # The folders should be relative to project root and use "/" for
-    # separating folders regardless of the platform rope is running on.
-    # "src/my_source_folder" for instance.
-    #
-    #     prefs.add("source_folders", "src")
-
-    # You can extend python path for looking up modules
-    #
-    #     prefs.add("python_path", "~/python/")
-
-    # Should rope save object information or not.
-    #
-    #     prefs["save_objectdb"] = True
-
-    # If `True`, rope analyzes each module when it is being saved.
-    #
-    #     prefs["automatic_soa"] = True
-    #
-    # The depth of calls to follow in static object analysis
-    #
-    #     prefs["soa_followed_calls"] = 0
-
-    # If `False` when running modules or unit tests "dynamic object
-    # analysis" is turned off.  This makes them much faster.
-    #
-    #     prefs["perform_doa"] = True
-
-    # Rope can check the validity of its object DB when running.
-    #
-    #    prefs["validate_objectdb"] = True
-
-    # How many undos to hold?
-    #
-    #     prefs["max_history_items"] = 32
-
-    # Shows whether to save history across sessions.
-    #
-    #     prefs["save_history"] = True
-
-    # Set the number spaces used for indenting.  According to
-    # :PEP:`8`, it is best to use 4 spaces.  Since most of rope's
-    # unit-tests use 4 spaces it is more reliable, too.
-    #
-    #     prefs["indent_size"] = 4
-
-    # Builtin and c-extension modules that are allowed to be imported
-    # and inspected by rope.
-    #
-    #     prefs["extension_modules"] = []
-
-    # Add all standard c-extensions to extension_modules list.
-    #
-    #     prefs["import_dynload_stdmods"] = True
-
-    # If `True` modules with syntax errors are considered to be empty.
-    # The default value is `False`; When `False` syntax errors raise
-    # `rope.base.exceptions.ModuleSyntaxError` exception.
-    #
-    #     prefs["ignore_syntax_errors"] = False
-
-    # If `True`, rope ignores unresolvable imports.  Otherwise, they
-    # appear in the importing namespace.
-    #
-    #     prefs["ignore_bad_imports"] = False
-
-    # If `True`, rope will insert new module imports as
-    # `from &lt;package&gt; import &lt;module&gt;` by default.
-    #
-    #     prefs["prefer_module_from_imports"] = False
-
-    # If `True`, rope will transform a comma list of imports into
-    # multiple separate import statements when organizing
-    # imports.
-    #
-    #     prefs["split_imports"] = False
-
-    # If `True`, rope will remove all top-level import statements and
-    # reinsert them at the top of the module when making changes.
-    #
-    #     prefs["pull_imports_to_top"] = True
-
-    # If `True`, rope will sort imports alphabetically by module name instead
-    # of alphabetically by import statement, with from imports after normal
-    # imports.
-    #
-    #     prefs["sort_imports_alphabetically"] = False
-
-    # Location of implementation of
-    # rope.base.oi.type_hinting.interfaces.ITypeHintingFactory In general
-    # case, you don't have to change this value, unless you're an rope expert.
-    # Change this value to inject you own implementations of interfaces
-    # listed in module rope.base.oi.type_hinting.providers.interfaces
-    # For example, you can add you own providers for Django Models, or disable
-    # the search type-hinting in a class hierarchy, etc.
-    #
-    #     prefs[
-    #         "type_hinting_factory"
-    #     ] = "rope.base.oi.type_hinting.factory.default_type_hinting_factory"
-
 
 </t>
 <t tx="ekr.20221118072830.120">def _self_get(self, context):
@@ -8772,10 +8657,6 @@ from rope.base import exceptions
     ]
     return tuple(["builtin", "tuple"] + objects)
 
-</t>
-<t tx="ekr.20221118072830.13">def project_opened(project):
-    """This function is called after opening the project"""
-    # Do whatever you like here!
 </t>
 <t tx="ekr.20221118072830.130">def _new_set(self, args):
     return _create_builtin(args, get_set)
@@ -10341,7 +10222,7 @@ if not NumpyDocString:
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
 
-from rope.base.oi.type_hinting import utils
+### from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
 
@@ -18163,7 +18044,6 @@ import os
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.9"></t>
 <t tx="ekr.20221118072830.90">def get_arguments(self, argnames):
     if self.args:
         return self.args.get_arguments(argnames)
@@ -27558,7 +27438,8 @@ def xxx_test_not_found_module_is_module(self):
 <t tx="ekr.20221118072831.171">@path rope/contrib/autoimport/
 """AutoImport module for rope."""
 from .pickle import AutoImport as _PickleAutoImport
-from .sqlite import AutoImport as _SqliteAutoImport
+
+### from .sqlite import AutoImport as _SqliteAutoImport
 
 AutoImport = _PickleAutoImport
 
@@ -59232,6 +59113,7 @@ monitoring the progress of refactorings.
 """
 </t>
 <t tx="ekr.20230102051545.1">class RopeNodeVisitor(ast.NodeVisitor):
+    # This is the only visit method in Rope.
     @others
 
 
@@ -59455,17 +59337,7 @@ PR: https://github.com/python-rope/rope/pull//652
 @nosearch
 
 ? Remove do nothing classes in complex class hierarchies?
-  - Search for references to these classes.
-  
-PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
-    Such Unions are unnecessary and mypy-unfriendly.
-    
-.. See children...
-
-- New issue: valid pylint complaint.
-- Create docs.
-- AOI.
-- PR: Remove do-nothing ctor for _GlobalVisitor.
+  Search for references to these classes.
 
 @language python
 </t>
@@ -59548,7 +59420,7 @@ from typing import Any, List
 
 
 </t>
-<t tx="ekr.20230129011432.1">def get_ctor_name(self: Any, file_name: str, width: int = 25):
+<t tx="ekr.20230129011432.1">def get_ctor_name(self: Any, file_name: str, width: int = 25) -&gt; str:
     """Return &lt;module-name&gt;.&lt;class-name&gt; padded to the given width."""
     class_name = self.__class__.__name__
     module_name = short_file_name(file_name).replace(".py", "")
@@ -59590,8 +59462,8 @@ from typing import Any, List
     name = _caller_name(2)
     if name.endswith(".pyc"):
         name = name[:-1]
-    args = " ".join(str(z) for z in args)
-    print(f"{name} {args}")
+    args_s = " ".join(str(z) for z in args)
+    print(f"{name} {args_s}")
 </t>
 <t tx="ekr.20230129064218.1">@nosearch
 
@@ -60324,14 +60196,6 @@ It will override the methods that infer results.
 The @prevent_recursion method is a good place to look for to-be-overridden methods.
 
 If necessary, define wrapper methods in the main soi traverser class to allow overrides in the pass 2 traverser.</t>
-<t tx="ekr.20230130085103.1">@language rest
-@wrap
-
-Replace do-nothing ctor with 'pass'
-
-- This empty class is an alias. It's easy to understand.
-
-</t>
 <t tx="ekr.20230130085317.1">@language rest
 @wrap
 
@@ -60400,8 +60264,6 @@ Refactoring:
   
 @language python
 </t>
-<t tx="ekr.20230131080925.1">- Create @rst theory.html.
-- Integrate theory.html into rest of Rope docs.</t>
 <t tx="ekr.20230131082034.1">@language rest
 @wrap
 
@@ -60447,7 +60309,6 @@ def saveit(func):
     return _wrapper
 
 cacheit = saveit</t>
-<t tx="ekr.20230131103837.1"></t>
 <t tx="ekr.20230201054651.1"></t>
 <t tx="ekr.20230201054723.1"># Project.__init__ does routine housekeeping.</t>
 <t tx="ekr.20230201083654.1">[Leo's forum](https://groups.google.com/g/leo-editor) contains dozens of my **ENB** (Engineering Notebook) entries. These ENBs:
@@ -60638,8 +60499,7 @@ rope\base\oi\type_hinting\utils.py:94: error: Item "PyObject" of "Union[PyDefine
 
 
 </t>
-<t tx="ekr.20230202130833.1"># This is the only visit method in Rope.
-def visit(self, node):
+<t tx="ekr.20230202130833.1">def visit(self, node):
     """Modified from ast.NodeVisitor to match rope's existing Visitor implementation"""
     method = "_" + node.__class__.__name__
     visitor = getattr(self, method, self.generic_visit)
@@ -60677,6 +60537,190 @@ test ['d', 'e', 'f'] new_cmd_wrapper,executeScript,executeScriptHelper,&lt;modul
 data: {'g': 'g1', 'h': 'h1'}
 test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&lt;module&gt;
 </t>
-<t tx="ekr.20230203101632.1"></t>
+<t tx="ekr.20230204064538.1"># https://github.com/python-rope/rope/pull/655</t>
+<t tx="ekr.20230204071113.1"></t>
+<t tx="ekr.20230204094629.1">https://github.com/python-rope/rope/pull/656</t>
+<t tx="ekr.20230204215129.1">@language rest
+@wrap
+
+PR: https://github.com/python-rope/rope/pull/657/
+
+Write Theory of Operation *now*.
+
+- `make html` doesn't seem to work.
+
+
+- Integrate theory.html into rest of Rope docs.
+
+</t>
+<t tx="ekr.20230204222405.1">==========================
+Rope's Theory of Operation
+==========================
+
+This document describes how Rope does type inference.
+
+.. contents:: Table of Contents</t>
+<t tx="ekr.20230204224411.1">You should understand Python's ast module.</t>
+<t tx="ekr.20230204224459.1">- Startup process.
+- Traversers.
+- What is an inference?
+</t>
+<t tx="ekr.20230205055521.1">@color</t>
+<t tx="ekr.20230205055521.10">True: write comment line of the form:
+    
+.. rst3: filename: &lt;filename&gt;
+
+at these start of the output.</t>
+<t tx="ekr.20230205055521.11">The underlining characters to be used to specify rST sections.
+
+The first character is reserved (not used) so you can specify the top-level
+section explicitly.
+
+Note: Leo duplicates '-'.
+
+Leo: #=+*^~`-:&gt;&lt;-
+Rope: #=-+*^~:&gt;&lt;</t>
+<t tx="ekr.20230205055521.12">True: writes the intermediate file to the external file system.
+      Must be True when using Sphinx.
+    
+The name of the intermediate file is the name of the output file with the extension given by
+
+`@string rst3-write-intermediate-extension`.
+</t>
+<t tx="ekr.20230205055521.13">The extention appended to the names of intermediate files.
+
+See `@bool rst3-write-intermediate-file`</t>
+<t tx="ekr.20230205055521.14"></t>
+<t tx="ekr.20230205055521.15">True: Call docutils to process the intermediate file.
+
+Set this option to False when using Sphinx.</t>
+<t tx="ekr.20230205055521.16">This setting has effect only if `@bool rst3-call-docutils = True`.
+
+True: Docutils will embed a the stylesheet in the output file.
+False: Docutils will link to an external stylesheet file.</t>
+<t tx="ekr.20230205055521.17">This setting has effect only if `@bool rst3-call-docutils = True`.
+
+This setting gives arguments to be passed to ``docutils.core.Publisher().publish()``
+when no stylesheet is in effect.
+
+The setting should be comma-separated list of strings: For example, the option::
+
+    publish-argv-for-missing-stylesheets=--language=de,--documentclass=report,--use-latex-toc
+
+results in the call::
+
+    publish(['--language=de','--documentclass=report','--use-latex-toc'])</t>
+<t tx="ekr.20230205055521.18">The name of the stylesheet passed to docutils.
+
+This setting has effect only if `@bool rst3-call-docutils = True`.
+</t>
+<t tx="ekr.20230205055521.19">The directory containing the stylesheet passed to docutils.
+
+This setting has effect only if `@bool rst3-call-docutils = True`.
+</t>
+<t tx="ekr.20230205055521.2">This setting tells what the rst3 should do when writing changed files.
+The valid actions are:
+
+'none':  take no extra action.
+'clone': clone all dirty `@rst` trees.
+'mark':  mark all dirty `@rst` trees.
+</t>
+<t tx="ekr.20230205055521.3"></t>
+<t tx="ekr.20230205055521.4">**True**: write additional informational messages to the log.</t>
+<t tx="ekr.20230205055521.5"></t>
+<t tx="ekr.20230205055521.6">True: Writes **node markers** for use by the http plugin.
+
+Node markers are rst named hyperlink targets. By default they look like:
+``.. _http-node-marker-N``, where N is a unique node number.
+
+`@string rst3-node-begin-marker` specifies the format of these node markers.
+
+</t>
+<t tx="ekr.20230205055521.7">The string used for node markers.  See `@bool rst3-http-server-support`.
+</t>
+<t tx="ekr.20230205055521.8"></t>
+<t tx="ekr.20230205055521.9">The path to be prepended to *relative* filenames given in @rst nodes.
+
+This setting has no effect for *absolute* filenames.</t>
+<t tx="ekr.20230205060132.1">@language yaml
+repos:
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-added-large-files
+
+- repo: https://github.com/psf/black
+  rev: 22.12.0
+  hooks:
+  - id: black
+    name: black check (Python)
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.11.3
+  hooks:
+  - id: isort
+    name: Sort imports (Python)
+</t>
+<t tx="ekr.20230205060858.1">.. https://youtu.be/NvV5OrVk24c
+
+Project: Tree of directories and files.
+         Instantiate a Project with a directory.
+         
+With a Project you can:
+- walk the resources (File or Directory).
+- get the children of a resource and continue walking.
+
+Prefs: Dictionary of keys to values (settings).
+- .ropeproject is reflected directly into the Prefs class.
+
+Resources: (File or Directory).
+Typical use:
+- Walk the resource to find specific resources you want to work with.
+- Apply refactoring to specific resources.
+
+=== How to refactor.
+
+1. Create a Rename object.
+   ren = Rename(project, resource, offset)
+   
+2. Create the changes object.
+   changes = ren.get_changes('SomeString')
+   print(changes.description)
+   print(changes.get_changed_resources()  # Files that would be changed.
+   
+3. Make the changes.
+   project.do(changes)
+   
+</t>
+<t tx="ekr.20230205062902.1">@path c:\Scripts\
+@language batch
+echo off
+cls
+rem -a: write all files  (make clean)
+cd C:\Repos\ekr-clone-rope2\docs
+echo.
+echo sphinx-build -a (make clean)
+echo.
+sphinx-build -M html . _build -a
+</t>
+<t tx="ekr.20230205085817.1">PR: Change black version to 23.1.0 in .pre-commit-config.yaml
+
+New issue/PR: valid Pylint complaint. See child.
+
+PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
+    Such Unions are unnecessary and mypy-unfriendly.
+
+PR: add tracing_utils.py.
+</t>
+<t tx="ekr.20230205085921.1">- Make sure conf.py can import rope
+  Add rope to sitecustomize.py if necessary.
+- pip install sphinx_autodoc_typehints
+- pip install tabulate
+- pip install sphinx_rtd_theme
+</t>
+<t tx="ekr.20230205090204.1"># Found 3 marked nodes</t>
 </tnodes>
 </leo_file>
