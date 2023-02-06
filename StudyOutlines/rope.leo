@@ -34,14 +34,9 @@
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
 </v>
-</v>
 <v t="ekr.20230205090204.1"></v>
+</v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
-<v t="ekr.20230201085503.1"><vh>Status report</vh></v>
-<v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
-<v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
-<v t="ekr.20230129234218.1"><vh>ENB</vh>
-<v t="ekr.20230201083654.1"><vh>EKR's ENB (short version)</vh></v>
 <v t="ekr.20230129234717.1"><vh>ENB: The @saveit (@cacheit) decorator</vh>
 <v t="ekr.20230130001559.1"><vh>The decorator</vh></v>
 <v t="ekr.20230131082034.1"><vh>The tracing version of the decorator</vh></v>
@@ -51,44 +46,30 @@
 <v t="ekr.20230129235612.1"><vh>verbose trace</vh></v>
 </v>
 </v>
-<v t="ekr.20230131063925.1"><vh>ENBs: attic</vh>
-<v t="ekr.20230129234357.1"><vh>EKR's Engineering Notebook (original version)</vh></v>
-<v t="ekr.20230129234521.1"><vh>ENB 0: My goals re Rope</vh></v>
+<v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
+<v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
+<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
+<v t="ekr.20230206072607.1"><vh>Attic</vh>
 <v t="ekr.20230129234521.2"><vh>ENB 1: The curse of knowledge and Rope</vh></v>
-<v t="ekr.20230129234714.1"><vh>ENB 2: First study steps</vh>
-<v t="ekr.20230130002051.1"><vh>First questions</vh></v>
-<v t="ekr.20230130002122.1"><vh>The "Hello World" unit test</vh></v>
-<v t="ekr.20230130002155.1"><vh>Communication</vh>
-<v t="ekr.20230129234930.1"><vh>Details</vh></v>
-</v>
-<v t="ekr.20230130002237.1"><vh>Startup and setUp</vh></v>
-<v t="ekr.20230129235204.1"><vh>Summary</vh></v>
-</v>
-<v t="ekr.20230129234715.1"><vh>ENB 3: Learning what to ignore</vh></v>
 <v t="ekr.20230129234718.1"><vh>ENB 5: (private) Why I'm the one to write Rope's Theory of Operation</vh></v>
-<v t="ekr.20230129234719.1"><vh>ENB 6: (obsolete) Finding Rope's type inference patterns</vh></v>
-<v t="ekr.20230129234522.1"><vh>ENB 7: Studying ObjectInferTest.test_simple_type_inferencing</vh>
-<v t="ekr.20230130000739.1"><vh>Goals</vh></v>
-<v t="ekr.20230130000742.1"><vh>Write early. Write too much, not too little</vh></v>
-<v t="ekr.20230130000742.2"><vh>Tracing code</vh></v>
-<v t="ekr.20230130000742.3"><vh>First Ahas</vh></v>
-<v t="ekr.20230130001331.1"><vh>test-one-r.cmd</vh></v>
-<v t="ekr.20230130000743.1"><vh>First traces</vh></v>
-</v>
-</v>
-<v t="ekr.20230131064023.1"><vh>ENBs: To do</vh>
-<v t="ekr.20230130085317.1"><vh>ENB: First principles</vh></v>
-<v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
-<v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
-</v>
 </v>
 </v>
 <v t="ekr.20230129005206.1"><vh>*** To do</vh>
-<v t="ekr.20230205085817.1"><vh>PRs</vh></v>
-<v t="ekr.20230131064900.1"><vh>to do: AOI</vh></v>
-<v t="ekr.20230202091932.1"><vh>New issue: valid Pylint complaint</vh>
-<v t="ekr.20221118072830.1407"><vh>utils.py: resolve_type</vh></v>
-<v t="ekr.20230202094528.1"><vh>COPY (master) utils.py: resolve_type</vh></v>
+<v t="ekr.20230206071511.1"><vh>ekr-mypy branch</vh></v>
+<v t="ekr.20230205085817.1"><vh>Later: PR: add tracing_utils.py</vh></v>
+<v t="ekr.20230131064900.1"><vh>to do: AOI</vh>
+<v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
+</v>
+</v>
+<v t="ekr.20230206074243.1"><vh>Documentation</vh>
+<v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
+<v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
+<v t="ekr.20230206010122.1"><vh>Why Rope must infer types</vh></v>
+<v t="ekr.20230205150939.1"><vh>Overview of Rope's code base</vh></v>
+<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh>
+<v t="ekr.20230205151244.1"><vh>What is an inference?</vh></v>
+</v>
+<v t="ekr.20230205151100.1"><vh>Further study</vh></v>
 </v>
 </v>
 <v t="ekr.20221118105359.1"><vh>Files</vh>
@@ -1691,7 +1672,7 @@
 <v t="ekr.20221118072830.1404"><vh>utils.py: get_class_with_attr_name</vh></v>
 <v t="ekr.20221118072830.1405"><vh>utils.py: get_lineno_for_node</vh></v>
 <v t="ekr.20221118072830.1406"><vh>utils.py: get_mro</vh></v>
-<v t="ekr.20221118072830.1407"></v>
+<v t="ekr.20221118072830.1407"><vh>utils.py: resolve_type</vh></v>
 <v t="ekr.20221118072830.1408"><vh>class ParametrizeType</vh>
 <v t="ekr.20221118072830.1409"><vh>ParametrizeType.__call__</vh></v>
 <v t="ekr.20221118072830.1410"><vh>ParametrizeType._get_type_factory</vh></v>
@@ -1813,7 +1794,7 @@
 <v t="ekr.20221118072830.1516"><vh>is_inline_body</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072830.1482"><vh>@clean datastructures.py</vh>
+<v t="ekr.20221118072830.1482"><vh>@clean rope/base/utils/datastructures.py</vh>
 <v t="ekr.20221118072830.1483"><vh>class OrderedSet</vh>
 <v t="ekr.20221118072830.1484"><vh>OrderedSet.__init__</vh></v>
 <v t="ekr.20221118072830.1485"><vh>OrderedSet.__len__</vh></v>
@@ -1827,6 +1808,19 @@
 <v t="ekr.20221118072830.1493"><vh>OrderedSet.__repr__</vh></v>
 <v t="ekr.20221118072830.1494"><vh>OrderedSet.__eq__</vh></v>
 </v>
+</v>
+<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/tracing_utils.py</vh>
+<v t="ekr.20230129011359.4"><vh>tracing_utils._caller_name</vh></v>
+<v t="ekr.20230129011359.5"><vh>tracing_utils.caller</vh></v>
+<v t="ekr.20230129011359.2"><vh>tracing_utils.callers</vh></v>
+<v t="ekr.20230129011359.3"><vh>tracing_utils.callers_list</vh></v>
+<v t="ekr.20230129011432.1"><vh>tracing_utils.get_ctor_name</vh></v>
+<v t="ekr.20230129013023.1"><vh>tracing_utils.plural</vh></v>
+<v t="ekr.20230130145330.2"><vh>tracing_utils.print_obj</vh></v>
+<v t="ekr.20230129013254.1"><vh>tracing_utils.short_file_name</vh></v>
+<v t="ekr.20230129013049.1"><vh>tracing_utils.split_lines</vh></v>
+<v t="ekr.20230130145330.3"><vh>tracing_utils.to_string</vh></v>
+<v t="ekr.20230129013407.1"><vh>tracing_utils.trace</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.1517"><vh>rope/contrib</vh>
@@ -5478,30 +5472,20 @@
 </v>
 <v t="ekr.20221118072830.10"></v>
 <v t="ekr.20230205062902.1"></v>
-<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/tracing_utils.py</vh>
-<v t="ekr.20230129011359.4"><vh>tracing_utils._caller_name</vh></v>
-<v t="ekr.20230129011359.5"><vh>tracing_utils.caller</vh></v>
-<v t="ekr.20230129011359.2"><vh>tracing_utils.callers</vh></v>
-<v t="ekr.20230129011359.3"><vh>tracing_utils.callers_list</vh></v>
-<v t="ekr.20230129011432.1"><vh>tracing_utils.get_ctor_name</vh></v>
-<v t="ekr.20230129013023.1"><vh>tracing_utils.plural</vh></v>
-<v t="ekr.20230130145330.2"><vh>tracing_utils.print_obj</vh></v>
-<v t="ekr.20230129013254.1"><vh>tracing_utils.short_file_name</vh></v>
-<v t="ekr.20230129013049.1"><vh>tracing_utils.split_lines</vh></v>
-<v t="ekr.20230130145330.3"><vh>tracing_utils.to_string</vh></v>
-<v t="ekr.20230129013407.1"><vh>tracing_utils.trace</vh></v>
-</v>
+<v t="ekr.20230129010854.1"></v>
 </v>
 <v t="ekr.20221230095246.1"><vh>Recent code</vh>
-<v t="ekr.20230204071113.1"><vh>--- Open PRs</vh>
-<v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
-<v t="ekr.20221118072830.1500"></v>
-</v>
+<v t="ekr.20230206074134.1"><vh>--- Accepted PRs</vh>
 <v t="ekr.20230204064538.1"><vh>=== PR #655: clean _GlobalVisitor</vh>
 <v t="ekr.20221118072830.804"></v>
 <v t="ekr.20221118072830.736"></v>
 </v>
 <v t="ekr.20230204094629.1"><vh>=== PR #656: use black 23.1.0</vh></v>
+</v>
+<v t="ekr.20230204071113.1"><vh>--- Open PRs</vh>
+<v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
+<v t="ekr.20221118072830.1500"></v>
+</v>
 </v>
 <v t="ekr.20230201152149.1"><vh>Recent tests/testing</vh>
 <v t="ekr.20230202163658.1"><vh>--- test g.trace</vh>
@@ -5744,13 +5728,31 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh></v>
-<v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
+<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh>
 <v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
-<v t="ekr.20230204224411.1"><vh>What you should know</vh></v>
-<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
-<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
 </v>
+<v t="ekr.20230206072455.1"><vh>--- to be added</vh>
+<v t="ekr.20230130085317.1"><vh>ENB: First principles</vh></v>
+<v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
+<v t="ekr.20230129234714.1"><vh>ENB 2: First study steps</vh>
+<v t="ekr.20230130002122.1"><vh>The "Hello World" unit test</vh></v>
+<v t="ekr.20230130002155.1"><vh>Communication</vh>
+<v t="ekr.20230129234930.1"><vh>Details</vh></v>
+</v>
+<v t="ekr.20230130002237.1"><vh>Startup and setUp</vh></v>
+<v t="ekr.20230129235204.1"><vh>Summary</vh></v>
+</v>
+<v t="ekr.20230129234715.1"><vh>ENB 3: Learning what to ignore</vh></v>
+<v t="ekr.20230129234522.1"><vh>ENB 7: Studying ObjectInferTest.test_simple_type_inferencing</vh>
+<v t="ekr.20230130000739.1"><vh>Goals</vh></v>
+<v t="ekr.20230130000742.1"><vh>Write early. Write too much, not too little</vh></v>
+<v t="ekr.20230130000742.2"><vh>Tracing code</vh></v>
+<v t="ekr.20230130000742.3"><vh>First Ahas</vh></v>
+<v t="ekr.20230130001331.1"><vh>test-one-r.cmd</vh></v>
+<v t="ekr.20230130000743.1"><vh>First traces</vh></v>
+</v>
+</v>
+<v t="ekr.20230204222405.1"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20221118072614.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -6002,10 +6004,7 @@ def get_name(self):
 <t tx="ekr.20221118072830.1022">class NullTaskHandle(BaseTaskHandle):
     @others
 </t>
-<t tx="ekr.20221118072830.1023">def __init__(self):
-    pass
-
-</t>
+<t tx="ekr.20221118072830.1023"></t>
 <t tx="ekr.20221118072830.1024">def is_stopped(self):
     return False
 
@@ -6048,10 +6047,7 @@ def get_name(self):
 <t tx="ekr.20221118072830.1030">class NullJobSet(BaseJobSet):
     @others
 </t>
-<t tx="ekr.20221118072830.1031">def __init__(self, *args):
-    pass
-
-</t>
+<t tx="ekr.20221118072830.1031"></t>
 <t tx="ekr.20221118072830.1032">def started_job(self, name):
     pass
 
@@ -10199,7 +10195,7 @@ if not NumpyDocString:
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
 
-### from rope.base.oi.type_hinting import utils
+# from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
 
@@ -10326,8 +10322,7 @@ from rope.base.oi.type_hinting.resolvers import interfaces
 
 </t>
 <t tx="ekr.20221118072830.1481"></t>
-<t tx="ekr.20221118072830.1482">@path rope/base/utils/
-# this snippet was taken from this link
+<t tx="ekr.20221118072830.1482"># this snippet was taken from this link
 # http://code.activestate.com/recipes/576694/
 
 from collections.abc import MutableSet
@@ -17361,10 +17356,7 @@ def get_attributes(self):
 <t tx="ekr.20221118072830.805">class _ClassVisitor(_ScopeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.806">def __init__(self, pycore, owner_object):
-    super().__init__(pycore, owner_object)
-
-</t>
+<t tx="ekr.20221118072830.806"></t>
 <t tx="ekr.20221118072830.807">def _FunctionDef(self, node):
     _ScopeVisitor._FunctionDef(self, node)
     if len(node.args.args) &gt; 0:
@@ -18535,9 +18527,6 @@ def pathlib(self):
 </t>
 <t tx="ekr.20221118072830.959">class Folder(Resource):
     """Represents a folder"""
-
-    def __init__(self, project, name):
-        super().__init__(project, name)
 
     @others
 </t>
@@ -27416,7 +27405,7 @@ def xxx_test_not_found_module_is_module(self):
 """AutoImport module for rope."""
 from .pickle import AutoImport as _PickleAutoImport
 
-### from .sqlite import AutoImport as _SqliteAutoImport
+# from .sqlite import AutoImport as _SqliteAutoImport
 
 AutoImport = _PickleAutoImport
 
@@ -59316,7 +59305,7 @@ PR: https://github.com/python-rope/rope/pull//652
 
 ? Remove do nothing classes in complex class hierarchies?
   Search for references to these classes.
-
+  
 @language python
 </t>
 <t tx="ekr.20230129010854.1">"""
@@ -59455,36 +59444,6 @@ from typing import Any, List
 # Word, Head, Body
 
 # found 5 nodes</t>
-<t tx="ekr.20230129234218.1">@language rest
-@wrap
-@tabwidth -2
-@nosearch
-
-These notes are semi private.
-
-They can be found in rope.leo at leo-editor-contrib.</t>
-<t tx="ekr.20230129234357.1">@nosearch
-
-### About this Notebook
-
-Over the years I have made dozens (hundreds?) of **ENB** (Engineering Notebook) entries in [Leo's forum](https://groups.google.com/g/leo-editor).
-
-Leo's ENBs are a permanent, public part of the Leonine world. They have recorded the evolution of many breakthroughs in Leo's design and code. ENBs have often been pre-writing for documentation.
-
-This ENB will record my explorations about what Rope does and how it does it. I am particularly interested in **soi**, Rope's static type inference.
-
-### Rope's documentation
-
-[Using Rope as a Library](https://rope.readthedocs.io/en/latest/library.html#using-rope-as-a-library) mostly discusses code that that *isn't* related to soi. This info will allow to skip more code while single-stepping (or tracing) through unit tests.
-
-### Exploration strategy.
-
-I'd like to understand essentially *everything* about how some single unit test works.</t>
-<t tx="ekr.20230129234521.1">My goals:
-
-- To understand how Rope infers the types of objects.
-- To improve Rope's documentation so that others may understand Rope's type inference more easily.
-</t>
 <t tx="ekr.20230129234521.2">The [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
 is a cognitive bias that occurs when an individual assumes that other
 individuals have the background knowledge to understand their
@@ -59604,16 +59563,6 @@ I use the free version of [Grammarly](https://www.grammarly.com/) to check my wr
 Grammarly is not perfect:
 - It is obsessed with commas.
 - It does not catch large-scale writing blunders.</t>
-<t tx="ekr.20230129234719.1">ENB 4 will be the template for future ENBs:
-
-- I'll study unit tests (one by one) using traces and pdb, looking for a new Rope pattern.
-- When I find a new pattern, I'll write it up immediately, before the curse of knowledge sets in.
-
-My *guess* is that Rope's type inference code uses one or two handfuls of patterns, but we shall see.
-
-Creating these ENBs constitutes the pre-writing phase. I'll then write the first draft of Rope's Theory of Operation.
-
-In short, a thorough approach will be the most effective way of writing an authoritative first draft.</t>
 <t tx="ekr.20230129234930.1">@language python
 
 # PyObject ivars:
@@ -60066,12 +60015,6 @@ does not appear to be the case.
 
 </t>
 <t tx="ekr.20230130001720.1"></t>
-<t tx="ekr.20230130002051.1">- How can I study the code *actively*?
-- How do classes communicate?
-- What data embody type inference?
-- How does Rope make type inferences?
-
-I now have the general answers to the first three questions!</t>
 <t tx="ekr.20230130002122.1">My long-standing plan was to use one or more unit tests as a test bed for study. But what test to use?
 
 The first candidate was `codeanalyzetest.py`. Aha! A brief look at that test file showed that the classes in Rope's `codeanalyze` module aren't directly involved in making inferences!
@@ -60226,8 +60169,6 @@ Refactoring:
 
 </t>
 <t tx="ekr.20230130194144.1">Rope uses Sphinx, so I just need to create Theory.rst.</t>
-<t tx="ekr.20230131063925.1">@nosearch</t>
-<t tx="ekr.20230131064023.1"></t>
 <t tx="ekr.20230131064529.1"></t>
 <t tx="ekr.20230131064552.1"></t>
 <t tx="ekr.20230131064624.1"></t>
@@ -60289,35 +60230,6 @@ def saveit(func):
 cacheit = saveit</t>
 <t tx="ekr.20230201054651.1"></t>
 <t tx="ekr.20230201054723.1"># Project.__init__ does routine housekeeping.</t>
-<t tx="ekr.20230201083654.1">[Leo's forum](https://groups.google.com/g/leo-editor) contains dozens of my **ENB** (Engineering Notebook) entries. These ENBs:
-- are a permanent, public part of the Leonine world.
-- have recorded breakthroughs in Leo's design and code.
-- have been pre-writing for documentation.
-
-My ENBs for Rope will be pre-writing for Rope's missing Theory of Operation. &lt;br&gt;
-[Using Rope as a Library](https://rope.readthedocs.io/en/latest/library.html#using-rope-as-a-library) documents how to use Rope, not how Rope works.
-
-**Status Report**
-
-- [rope.leo](https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo)
-in the [leo-editor-contrib](https://github.com/leo-editor/leo-editor-contrib) contains my semi-private nodes.
-
-- Preliminary work has created a high-energy, low-friction, workflow.</t>
-<t tx="ekr.20230201085503.1">@language rest
-@wrap
-
-I'm gaining momentum and confidence:
-
-- [x] Create a high-energy, low-friction workflow.
-- [x] Create testing infrastructure.
-- [x] Retire public ENBs.
-- [x] Design my communications with LieRyan.
-  - This file contains *mostly private* notes.
-  - The first comment of PR #653 contains a brief status report.
-    https://github.com/python-rope/rope/pull/653
-      
-
-</t>
 <t tx="ekr.20230201150627.1"></t>
 <t tx="ekr.20230201150728.1"></t>
 <t tx="ekr.20230201152036.1"></t>
@@ -60427,56 +60339,6 @@ _ExpressionVisitors._assigned instantiates pynamesdef.AssignedName:
 <t tx="ekr.20230202004501.1"></t>
 <t tx="ekr.20230202010532.1"></t>
 <t tx="ekr.20230202011329.1"></t>
-<t tx="ekr.20230202091932.1">In study branch:
-
-rope\base\oi\type_hinting\utils.py:87: error: "PyObject" has no attribute "get_module"
-rope\base\oi\type_hinting\utils.py:94: error: "PyObject" has no attribute "get_module"
-
-In master branch:
-    
-rope\base\oi\type_hinting\utils.py:76: error: Optional[...] must have exactly one type argument
-rope\base\oi\type_hinting\utils.py:87: error: Item "PyObject" of "Union[PyDefinedObject, PyObject]" has no attribute "get_module"
-rope\base\oi\type_hinting\utils.py:94: error: Item "PyObject" of "Union[PyDefinedObject, PyObject]" has no attribute "get_module"</t>
-<t tx="ekr.20230202094528.1">def resolve_type(type_name, pyobject):
-    # type: (str, Union[PyDefinedObject, PyObject]) -&gt; Optional[PyDefinedObject, PyObject]
-    """
-    Find proper type object from its name.
-    """
-    deprecated_aliases = {"collections": "collections.abc"}
-    ret_type = None
-    logging.debug("Looking for %s", type_name)
-    if "." not in type_name:
-        try:
-            ret_type = (
-                pyobject.get_module().get_scope().get_name(type_name).get_object()
-            )
-        except AttributeNotFoundError:
-            logging.exception("Cannot resolve type %s", type_name)
-    else:
-        mod_name, attr_name = type_name.rsplit(".", 1)
-        try:
-            mod_finder = evaluate.ScopeNameFinder(pyobject.get_module())
-            mod = mod_finder._find_module(mod_name).get_object()
-            ret_type = mod.get_attribute(attr_name).get_object()
-        except AttributeNotFoundError:
-            if mod_name in deprecated_aliases:
-                try:
-                    logging.debug(
-                        "Looking for %s in %s", attr_name, deprecated_aliases[mod_name]
-                    )
-                    mod = mod_finder._find_module(
-                        deprecated_aliases[mod_name]
-                    ).get_object()
-                    ret_type = mod.get_attribute(attr_name).get_object()
-                except AttributeNotFoundError:
-                    logging.exception(
-                        "Cannot resolve type %s in %s", attr_name, dir(mod)
-                    )
-    logging.debug("ret_type = %s", ret_type)
-    return ret_type
-
-
-</t>
 <t tx="ekr.20230202130833.1">def visit(self, node):
     """Modified from ast.NodeVisitor to match rope's existing Visitor implementation"""
     method = "_" + node.__class__.__name__
@@ -60515,32 +60377,43 @@ test ['d', 'e', 'f'] new_cmd_wrapper,executeScript,executeScriptHelper,&lt;modul
 data: {'g': 'g1', 'h': 'h1'}
 test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&lt;module&gt;
 </t>
-<t tx="ekr.20230204064538.1"># https://github.com/python-rope/rope/pull/655</t>
+<t tx="ekr.20230204064538.1">https://github.com/python-rope/rope/pull/655</t>
 <t tx="ekr.20230204071113.1"></t>
 <t tx="ekr.20230204094629.1">https://github.com/python-rope/rope/pull/656</t>
 <t tx="ekr.20230204215129.1">@language rest
 @wrap
+@tabwidth -2
 
 PR: https://github.com/python-rope/rope/pull/657/
 
-Write Theory of Operation *now*.
 </t>
 <t tx="ekr.20230204222405.1">@language rest
-==========================
-Rope's Theory of Operation
-==========================
+.. _`python's ast module`: https://docs.python.org/3/library/ast.html
 
-This document describes how Rope does type inference.
+=====================
+How Rope infers types
+=====================
+
+This is the Theory of Operation for Rope's type inference,
+the most complex part of Rope.
+
+Only Rope's core devs need to understand this material.
+
+Some familiarity with `Python's ast module`_ is recommended, but not essential.
 
 .. contents:: Table of Contents
 </t>
-<t tx="ekr.20230204224411.1">@language rest
-You should understand Python's ast module.</t>
 <t tx="ekr.20230204224459.1">@language rest
-- Startup process.
-- Traversers.
-- What is an inference?
-</t>
+
+First principles:
+- Traversers do most of the work.
+- Local inference is easy; global inference is hard.
+
+Learning what to ignore is important.
+- @saveit is part of Rope's startup code. It has no direct part in type inference.
+
+What *not* to ignore:
+- @prevent_recursion prevents endless inference loops.</t>
 <t tx="ekr.20230205055521.11">The underlining characters to be used to specify rST sections.
 
 The first character is reserved (not used) so you can specify the top-level
@@ -60621,14 +60494,12 @@ echo sphinx-build -a (make clean)
 echo.
 sphinx-build -M html . _build -a
 </t>
-<t tx="ekr.20230205085817.1">PR: Change black version to 23.1.0 in .pre-commit-config.yaml
+<t tx="ekr.20230205085817.1">@language rest
+@wrap
 
-New issue/PR: valid Pylint complaint. See child.
+Don't add to LieRyan's workload!
 
-PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
-    Such Unions are unnecessary and mypy-unfriendly.
-
-PR: add tracing_utils.py.
+.. C:\Repos\ekr-clone-rope2\.git\info excludes tracing_utils.py
 </t>
 <t tx="ekr.20230205085921.1">@language rest
 To do: move this to a separate document.
@@ -60653,5 +60524,38 @@ pylint
 sort-lines
 </t>
 <t tx="ekr.20230205102620.1"># True: Remove unindented @language, @others and @wrap directives.</t>
+<t tx="ekr.20230205150939.1">- Startup code.
+- Type inference code.
+- Utility code.
+- Refactoring code.
+- Code completion.</t>
+<t tx="ekr.20230205151100.1">Deep study of a few unit tests is recommended.
+
+`ObjectInferTest.test_simple_type_inferencing` is a good place to start.
+
+.. --- Insert traces here ---</t>
+<t tx="ekr.20230205151244.1"></t>
+<t tx="ekr.20230206010122.1">.. To do.</t>
+<t tx="ekr.20230206071511.1">PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
+    Such Unions are unnecessary and mypy-unfriendly.</t>
+<t tx="ekr.20230206072455.1">@language rest
+@wrap
+
+- Why Rope must infer types.
+- Why type inference is hard.
+  - chains of attribute.
+  - Arguments are hardest.
+  - Global vs. local inference.
+  
+- Rope inferes types only as needed.
+- Preprocessing: creates basic data for all names.
+
+- Knowing what to ignore.
+  - Most (but not all) of startup.
+  - @saveit decorator.
+</t>
+<t tx="ekr.20230206072607.1"></t>
+<t tx="ekr.20230206074134.1"></t>
+<t tx="ekr.20230206074243.1"></t>
 </tnodes>
 </leo_file>
