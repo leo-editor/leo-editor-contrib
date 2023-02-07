@@ -10,6 +10,7 @@
 <v t="ekr.20221118072614.1"><vh> Recursive import script</vh></v>
 <v t="ekr.20221118110103.1"><vh>@button backup</vh></v>
 <v t="ekr.20221128041958.1"><vh>@button diff-master..head</vh></v>
+<v t="ekr.20230207050236.1"><vh>@button make</vh></v>
 <v t="ekr.20221121061203.1"><vh>@settings</vh>
 <v t="ekr.20221121061232.1"><vh>@bool run-pyflakes-on-write = True</vh></v>
 <v t="ekr.20221201060910.1"><vh>@bool run-flake8-on-write = False</vh></v>
@@ -34,6 +35,7 @@
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
 </v>
+<v t="ekr.20230205094642.1"></v>
 <v t="ekr.20230205090204.1"></v>
 </v>
 <v t="ekr.20230104215355.1"><vh>Notes</vh>
@@ -62,14 +64,18 @@
 </v>
 </v>
 <v t="ekr.20230206074243.1"><vh>Documentation</vh>
+<v t="ekr.20230207050236.1"></v>
 <v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
 <v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
-<v t="ekr.20230206010122.1"><vh>Why Rope must infer types</vh></v>
+<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
+<v t="ekr.20230207040349.1"><vh>Questions to be answered</vh></v>
 <v t="ekr.20230205150939.1"><vh>Overview of Rope's code base</vh></v>
-<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh>
-<v t="ekr.20230205151244.1"><vh>What is an inference?</vh></v>
+<v t="ekr.20230129234714.1"><vh>In-depth study: test_simple_type_inferencing</vh>
+<v t="ekr.20230207041500.1"><vh>The original test</vh></v>
+<v t="ekr.20230207041506.1"><vh>The annotated test</vh></v>
+<v t="ekr.20230130002237.1"><vh>setUp simulates Rope's startup logic</vh></v>
+<v t="ekr.20230207042804.1"><vh>Summary of initial study</vh></v>
 </v>
-<v t="ekr.20230205151100.1"><vh>Further study</vh></v>
 </v>
 </v>
 <v t="ekr.20221118105359.1"><vh>Files</vh>
@@ -5728,29 +5734,10 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230204215129.1"><vh>=== PR 657: Theory of operation</vh>
+<v t="ekr.20230204215129.1"><vh>=== PR 660: Theory of operation</vh>
 <v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
-</v>
-<v t="ekr.20230206072455.1"><vh>--- to be added</vh>
-<v t="ekr.20230130085317.1"><vh>ENB: First principles</vh></v>
-<v t="ekr.20230130085442.1"><vh>ENB: Overview of Rope's code</vh></v>
-<v t="ekr.20230129234714.1"><vh>ENB 2: First study steps</vh>
-<v t="ekr.20230130002122.1"><vh>The "Hello World" unit test</vh></v>
-<v t="ekr.20230130002155.1"><vh>Communication</vh>
-<v t="ekr.20230129234930.1"><vh>Details</vh></v>
-</v>
-<v t="ekr.20230130002237.1"><vh>Startup and setUp</vh></v>
-<v t="ekr.20230129235204.1"><vh>Summary</vh></v>
-</v>
-<v t="ekr.20230129234715.1"><vh>ENB 3: Learning what to ignore</vh></v>
-<v t="ekr.20230129234522.1"><vh>ENB 7: Studying ObjectInferTest.test_simple_type_inferencing</vh>
-<v t="ekr.20230130000739.1"><vh>Goals</vh></v>
-<v t="ekr.20230130000742.1"><vh>Write early. Write too much, not too little</vh></v>
-<v t="ekr.20230130000742.2"><vh>Tracing code</vh></v>
-<v t="ekr.20230130000742.3"><vh>First Ahas</vh></v>
-<v t="ekr.20230130001331.1"><vh>test-one-r.cmd</vh></v>
-<v t="ekr.20230130000743.1"><vh>First traces</vh></v>
-</v>
+<v t="ekr.20230129234930.1"><vh>Ivar notes (do not delete)</vh></v>
+<v t="ekr.20230207042155.1"><vh>Recommendations</vh></v>
 </v>
 <v t="ekr.20230204222405.1"></v>
 </vnodes>
@@ -8913,7 +8900,6 @@ from rope.base import exceptions
 <t tx="ekr.20221118072830.1337"></t>
 <t tx="ekr.20221118072830.1338">@path rope/base/
 @nopyflakes
-# type:ignore
 # Based on super lightweight Simple Top-Down Parser from http://effbot.org/zone/simple-top-down-parsing.htm
 # and https://bitbucket.org/emacsway/sqlbuilder/src/default/sqlbuilder/smartsql/contrib/evaluate.py
 import re
@@ -9524,7 +9510,7 @@ def _get_factory(self, factory_location):
 </t>
 <t tx="ekr.20221118072830.1401">@path rope/base
 import logging
-from typing import Optional, Tuple
+from typing import Optional, Union
 
 import rope.base.utils as base_utils
 from rope.base import evaluate
@@ -9607,9 +9593,8 @@ parametrize_type = ParametrizeType()
 
 
 </t>
-<t tx="ekr.20221118072830.1407">def resolve_type(
-    type_name: str, pyobject: PyObject
-) -&gt; Optional[Tuple[PyDefinedObject, PyObject]]:
+<t tx="ekr.20221118072830.1407">def resolve_type(type_name, pyobject):
+    # type: (str, Union[PyDefinedObject, PyObject]) -&gt; Optional[PyDefinedObject, PyObject]
     """
     Find proper type object from its name.
     """
@@ -10140,7 +10125,6 @@ get_iterator = _create_builtin_getter(Iterator)
 </t>
 <t tx="ekr.20221118072830.1460">@path rope/base/oi/type_hinting/providers/
 @nopyflakes
-# type: ignore
 """
 Some code extracted (or based on code) from:
 https://github.com/davidhalter/jedi/blob/b489019f5bd5750051122b94cc767df47751ecb7/jedi/evaluate/docstrings.py
@@ -10195,7 +10179,7 @@ if not NumpyDocString:
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
 
-# from rope.base.oi.type_hinting import utils
+from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
 
@@ -10408,10 +10392,6 @@ from collections.abc import MutableSet
 <t tx="ekr.20221118072830.1499">import sys
 import warnings
 
-from rope.base.utils import tracing_utils as g
-
-assert g
-
 
 @others
 @language python
@@ -10424,53 +10404,14 @@ get_generator = _create_builtin_getter(Generator)
 
 </t>
 <t tx="ekr.20221118072830.1500">def saveit(func):
-    """
-    A decorator that injects a singleton ivar (in self) if the ivar does
-    not already exist.
+    """A decorator that caches the return value of a function"""
 
-    The ivar's name (ivar_name) is f"_{func.__name__}".
+    name = "_" + func.__name__
 
-    :param func: A function/method that instantiates an object.
-
-    :return: getattr(self, ivar_name), the value of the ivar.
-
-    """
-    # """A decorator that caches the return value of a function"""
-    ivar_name = f"_{func.__name__}"
-
-    if 1:  # Original version:
-
-        def _wrapper(self, *args, **kwargs):
-            if not hasattr(self, ivar_name):
-                # Instantiate the singleton object.
-                obj = func(self, *args, **kwargs)
-                setattr(self, ivar_name, obj)
-            # Return the value of the ivar.
-            return getattr(self, ivar_name)
-
-    else:
-
-        def _wrapper(self, *args, **kwargs):
-            tag = "@saveit"
-            if not hasattr(self, ivar_name):
-                # Instantiate the object.
-                obj = func(self, *args, **kwargs)
-                if 1:  # Tracing version.
-                    injected_name = f"{self.__class__.__name__}.{ivar_name}"
-                    func_s = repr(func).replace("&lt;function ", "")
-                    i = func_s.find(" at ")
-                    description = f"{func_s[:i]:30} = {obj.__class__.__name__}"
-                    if 0:  # Brief
-                        print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
-                    else:
-                        print("")
-                        g.print_obj(
-                            obj, tag=f"{tag} ivar: {injected_name} = {description}"
-                        )
-                setattr(self, ivar_name, obj)
-                # Original.
-                # setattr(self, ivar_name, func(self, *args, **kwds))
-            return getattr(self, ivar_name)
+    def _wrapper(self, *args, **kwds):
+        if not hasattr(self, name):
+            setattr(self, name, func(self, *args, **kwds))
+        return getattr(self, name)
 
     return _wrapper
 
@@ -10524,8 +10465,7 @@ cacheit = saveit
             message = "%s is deprecated" % func.__name__
 
         def newfunc(*args, **kwds):
-            if 0:  ###
-                warnings.warn(message, DeprecationWarning, stacklevel=2)
+            warnings.warn(message, DeprecationWarning, stacklevel=2)
             return func(*args, **kwds)
 
         return newfunc
@@ -11566,8 +11506,6 @@ get_file_type = _create_builtin_type_getter(File)
 <t tx="ekr.20221118072830.1585">@path rope/contrib/
 &lt;&lt; docstring: rope/contrib/finderrors.py &gt;&gt;
 from rope.base import ast, evaluate, pyobjects
-from rope.base.pyobjects import PyModule
-from rope.base.pyscopes import Scope
 
 
 @others
@@ -11589,10 +11527,10 @@ from rope.base.pyscopes import Scope
 <t tx="ekr.20221118072830.1587">class _BadAccessFinder(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.1588">def __init__(self, pymodule: PyModule):
+<t tx="ekr.20221118072830.1588">def __init__(self, pymodule):
     self.pymodule = pymodule
-    self.scope: Scope = pymodule.get_scope()
-    self.errors: List[Error] = []
+    self.scope = pymodule.get_scope()
+    self.errors = []
 
 </t>
 <t tx="ekr.20221118072830.1589">def _Name(self, node):
@@ -13212,9 +13150,8 @@ def ends(self):
     return r"#[^\n]*"
 </t>
 <t tx="ekr.20221118072830.316">@path rope/base/
-from __future__ import annotations
 from operator import itemgetter
-from typing import Optional, Tuple, TYPE_CHECKING
+from typing import Optional, Tuple
 
 import rope.base.builtins
 import rope.base.pynames
@@ -13228,9 +13165,6 @@ from rope.base import (
     pyobjectsdef,
     worder,
 )
-
-if TYPE_CHECKING:
-    from rope.base.pyscopes import Scope
 
 BadIdentifierError = exceptions.BadIdentifierError
 
@@ -13407,7 +13341,7 @@ BadIdentifierError = exceptions.BadIdentifierError
 <t tx="ekr.20221118072830.331">class StatementEvaluator(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.332">def __init__(self, scope: Scope):
+<t tx="ekr.20221118072830.332">def __init__(self, scope):
     self.scope = scope
     self.result = None
     self.old_result = None
@@ -14471,7 +14405,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.459">def get_string_module(project, code, resource=None, force_errors=False):
-    """Instantiates a `PyModule` object for the given code.
+    """Returns a `PyObject` object for the given code
 
     If `force_errors` is `True`, `exceptions.ModuleSyntaxError` is
     raised if module has syntax errors.  This overrides
@@ -14485,7 +14419,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.460">def get_string_scope(project, code, resource=None):
-    """Instantiates a `Scope` object for the given code"""
+    """Returns a `Scope` object for the given code"""
     return get_string_module(project, code, resource).get_scope()
 
 
@@ -14515,7 +14449,6 @@ def relative(root, path):
     return module_name
 </t>
 <t tx="ekr.20221118072830.463">@path rope/base/
-# type: ignore
 """Rope preferences."""
 from dataclasses import asdict, dataclass
 from textwrap import dedent
@@ -15343,11 +15276,9 @@ def ropefolder(self):
             return module.get_child(packages[-1] + ".py")
 </t>
 <t tx="ekr.20221118072830.542">@path rope/base/
-from __future__ import annotations
 import bisect
 import contextlib
 import difflib
-from typing import TYPE_CHECKING
 import warnings
 
 import rope.base.libutils
@@ -15357,10 +15288,6 @@ import rope.base.oi.soa
 import rope.base.resourceobserver
 import rope.base.resources
 from rope.base import builtins, exceptions, pyobjectsdef, stdmods, taskhandle, utils
-
-if TYPE_CHECKING:
-    from rope.base.pyscopes import Scope
-    from rope.base.resources import Resource
 
 
 @others
@@ -15505,7 +15432,7 @@ def get_string_module(self, code, resource=None, force_errors=False):
 
 </t>
 <t tx="ekr.20221118072830.556">@utils.deprecated("Use `libutils.get_string_scope` instead")
-def get_string_scope(self, code: str, resource: Resource = None) -&gt; Scope:
+def get_string_scope(self, code, resource=None):
     """Returns a `Scope` object for the given code"""
     return rope.base.libutils.get_string_scope(code, resource)
 
@@ -15810,14 +15737,9 @@ import rope.base.pyobjects
 from rope.base import exceptions, utils
 
 if typing.TYPE_CHECKING:
-    from typing import Any, Optional, Tuple, Union
+    from typing import Union
 
     from rope.base import pyobjectsdef
-    from rope.base.pyobjects import PyObject
-
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 
 @others
@@ -15833,14 +15755,12 @@ assert g
     return self.attributes
 
 </t>
-<t tx="ekr.20221118072830.590">def get_object(self) -&gt; Optional[PyObject]:
+<t tx="ekr.20221118072830.590">def get_object(self):
     """Return the `PyObject` object referenced by this `PyName`"""
-    return None
 
-def get_definition_location(self) -&gt; Optional[Tuple[Any, int]]:
+def get_definition_location(self):
 </t>
 <t tx="ekr.20221118072830.591">    """Return a (module, lineno) tuple"""
-    return None
 
 
 </t>
@@ -16056,17 +15976,7 @@ def get_definition_location(self):
 </t>
 <t tx="ekr.20221118072830.621">def _get_concluded_data(module):
     if module is None:
-        g.trace("(*** pynames function): instantiate")
         return rope.base.pyobjects._ConcludedData()
-    if 0:
-        # Callers...
-        # test_simple_type_inferencing,__getitem__,get_name,__getitem__,
-        # get_attribute,newfunc,_get_structural_attributes,_create_structural_attributes,
-        # visit,_Assign,visit,_Assign,visit,_Name,_assigned,_assigned,__init__
-        print("")
-        g.trace("(*** pynames function): return module._get_concluded_data")
-        g.trace(g.callers(17))
-        g.trace(module._ekr_dump_concluded_data())
     return module._get_concluded_data()
 
 
@@ -16131,10 +16041,6 @@ def module(self):
 from typing import Optional
 
 from rope.base import ast, exceptions, utils
-
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 
 @others
@@ -16357,11 +16263,6 @@ assert g
     self.concluded_attributes = self.get_module()._get_concluded_data()
     self.attributes = self.get_module()._get_concluded_data()
     self.defineds = None
-    if 0:
-        g.trace(
-            f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}",
-            g.callers(),
-        )
 
 </t>
 <t tx="ekr.20221118072830.673">def __repr__(self):
@@ -16516,12 +16417,7 @@ data = property(get, set)
 
 </t>
 <t tx="ekr.20221118072830.697">def __str__(self):
-    return "pyobjects._ConcludedData&lt;" + str(self.data) + "&gt;"
-
-###
-
-def _ekr_dump(self):
-    g.print_obj(self.data, tag=f"***** pyobjects._ConcludedData: {id(self)}")
+    return "&lt;" + str(self.data) + "&gt;"
 </t>
 <t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject, AbstractModule):
     @others
@@ -16531,11 +16427,6 @@ def _ekr_dump(self):
     self.concluded_data = []
     AbstractModule.__init__(self)
     PyDefinedObject.__init__(self, pycore, ast_node, None)
-    if 0:
-        g.trace(
-            f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}",
-            g.callers(),
-        )
 
 </t>
 <t tx="ekr.20221118072830.70">def __init__(self, builtin, attributes, parent=None):
@@ -16562,18 +16453,6 @@ def absolute_name(self) -&gt; str:
 </t>
 <t tx="ekr.20221118072830.703">def get_resource(self):
     return self.resource
-
-def _ekr_dump_concluded_data(self):
-    g.trace("(pyobjects._PyModule._ekr_dump_concluded_data)")
-    tag = self.get_name()
-    try:
-        for i, z in enumerate(self.concluded_data):
-            g.print_obj(f"{i:3} {z!s}", tag=tag)
-            # z._ekr_dump()
-    except TypeError:
-        z = self.concluded_data
-        g.print_obj(f"{z!s}", tag=tag)
-        # z._ekr_dump()
 
 </t>
 <t tx="ekr.20221118072830.704">class PyModule(_PyModule):
@@ -16606,10 +16485,6 @@ from rope.base import (
     pyobjects,
     utils,
 )
-
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 
 @others
@@ -16769,8 +16644,6 @@ def decorators(self):
     rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
     self.parent = parent
     self._superclasses = self.get_module()._get_concluded_data()
-    if 0:
-        g.trace(f"{g.get_ctor_name(self, __file__)} {' ':14}", g.callers())
 
 </t>
 <t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.AbstractFunction):
@@ -16831,8 +16704,6 @@ def decorators(self):
     self.star_imports = []
     self.visitor_class = _GlobalVisitor
     self.coding = fscommands.read_str_coding(self.source_code)
-    if 0:
-        g.trace(f"{g.get_ctor_name(self, __file__)} {' ':14}", g.callers())
     super().__init__(pycore, node, resource)
 
 </t>
@@ -16979,7 +16850,7 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.752">class _AnnAssignVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor: ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
     self.type_hint = None
@@ -17037,7 +16908,7 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.762">class _ExpressionVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor: ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
 
 </t>
@@ -17076,7 +16947,7 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.770">class _AssignVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor: ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
 
@@ -17491,10 +17362,6 @@ def get_attributes(self):
 import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
-
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 
 @others
@@ -19227,7 +19094,7 @@ def get_empty_import():
 
 </t>
 <t tx="ekr.20221118072831.1031">class EmptyImport(ImportInfo):
-    names_and_aliases: List[str] = []
+    names_and_aliases = []
 
     @others
 </t>
@@ -19246,14 +19113,10 @@ def get_empty_import():
         self.folder = folder
 </t>
 <t tx="ekr.20221118072831.1035">@path rope/refactor/importutils/
-from __future__ import annotations
-from typing import Callable, List, Set, Union, TYPE_CHECKING
+from typing import List, Union
 
 from rope.base import ast, exceptions, pynames, pynamesdef, utils
 from rope.refactor.importutils import actions, importinfo
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyModule, PyObject
 
 
 @others
@@ -19263,9 +19126,7 @@ if TYPE_CHECKING:
 <t tx="ekr.20221118072831.1036">class ModuleImports:
     @others
 </t>
-<t tx="ekr.20221118072831.1037">def __init__(
-    self, project: PyObject, pymodule: PyModule, import_filter: Callable = None
-):
+<t tx="ekr.20221118072831.1037">def __init__(self, project, pymodule, import_filter=None):
     self.project = project
     self.pymodule = pymodule
     self.separating_lines = 0
@@ -19751,9 +19612,9 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1068">class _OneTimeSelector:
     @others
 </t>
-<t tx="ekr.20221118072831.1069">def __init__(self, names: List[str]):
+<t tx="ekr.20221118072831.1069">def __init__(self, names):
     self.names = names
-    self.selected_names: Set = set()
+    self.selected_names = set()
 
 </t>
 <t tx="ekr.20221118072831.107">def import_assist(self, starting):
@@ -19799,7 +19660,7 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1073">class _UnboundNameFinder(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072831.1074">def __init__(self, pyobject: PyObject):
+<t tx="ekr.20221118072831.1074">def __init__(self, pyobject):
     self.pyobject = pyobject
 
 </t>
@@ -19865,10 +19726,10 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1083">class _GlobalUnboundNameFinder(_UnboundNameFinder):
     @others
 </t>
-<t tx="ekr.20221118072831.1084">def __init__(self, pymodule: PyModule, wanted_pyobject: PyObject):
+<t tx="ekr.20221118072831.1084">def __init__(self, pymodule, wanted_pyobject):
     super().__init__(pymodule)
-    self.unbound: Set = set()
-    self.names: Set = set()
+    self.unbound = set()
+    self.names = set()
     for name, pyname in pymodule._get_structural_attributes().items():
         if not isinstance(pyname, (pynames.ImportedName, pynames.ImportedModule)):
             self.names.add(name)
@@ -24882,9 +24743,6 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 @others
 @language python
@@ -24894,10 +24752,6 @@ assert g
     @others
 </t>
 <t tx="ekr.20221118072831.1485">def setUp(self):
-    """
-    Init self.project to a new Project instance for this test, with default prefs.
-    self.project.fscommands manages temp files in a temp directory.
-    """
     super().setUp()
     self.project = testutils.sample_project()
 
@@ -24913,74 +24767,11 @@ assert g
             pass
         a_var = Sample()
     """)
-
-    trace = True  # Set to False when running all tests.
-    
-    if trace:
-        print('')
-
-    def banner(s):
-        if trace:
-            print(f"\n{g._caller_name(2)}: ===== {s}")
-
-
-    banner('after setUp')
-
-    # 1. setUp creates self.project.
-
-        # setUp instantiates self.project to a Project instance.
-        # self.project = testutils.sample_project()
-
-    # 2. get_string_scope sets self.scope to the scope of the test string.
-
-        # Sets self.scope to pyobjectsdef.PyModule(project.pycore, code, ...)
-        # (code is the test string, defined above.)
-
-    # ??? Instantiating the pyobjectsdef.PyModule does all the work ???
-
-        # PyDefinedObject.__init__ calls:
-
-            # self.concluded_attributes = self.get_module()._get_concluded_data()
-            # self.attributes = self.get_module()._get_concluded_data()
-
-        # But all attributes are empty for this test.
-
     scope = libutils.get_string_scope(self.project, code)
-
-    banner('after get_string_scope\n')
-
-        # scope is a GlobalScope.  It might be any subclass of Scope.
-        # scope.pyobject is a pyobjectsdef.PyModule.
-
-    # if trace: g.trace('*** scope.pyobject', scope.pyobject)
-
-    # *** Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
-    #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
-    #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
-    # scope["Sample"] is a pynamesdef.DefinedName.
-
     sample_class = scope["Sample"].get_object()
-
-    banner('after sample_class = scope["Sample"].get_object()\n')
-
-
-        # sample_class is a pyobjectsdef.PyClass ("::Sample" at ...)
-        # scope["Sample"] is a DefinedName.
-        # scope["Sample"].pyobject is a pyobjectsdef.PyClass.
-
     a_var = scope["a_var"].get_object()
-
-        # a_var is a pyobjects.PyObject
-        # a_var.get_type() is a pyobjectsdef.PyClass ("::Sample" at ...)
-
-        # scope["a_var"] is an pynamesdef.AssignedName.
-        # scope["a_var"].pyobject is a pynames._Inferred.
-        # scope["a_var"].get_object() is a pyobjects.PyObject.
-
-    if trace:
-        print(f"\nsample_class: {sample_class}")
-
     self.assertEqual(sample_class, a_var.get_type())
+
 </t>
 <t tx="ekr.20221118072831.1488">def test_simple_type_inferencing_classes_defined_in_holding_scope(self):
     code = dedent("""\
@@ -27404,8 +27195,7 @@ def xxx_test_not_found_module_is_module(self):
 <t tx="ekr.20221118072831.171">@path rope/contrib/autoimport/
 """AutoImport module for rope."""
 from .pickle import AutoImport as _PickleAutoImport
-
-# from .sqlite import AutoImport as _SqliteAutoImport
+from .sqlite import AutoImport as _SqliteAutoImport
 
 AutoImport = _PickleAutoImport
 
@@ -35610,7 +35400,6 @@ def worder(self):
 </t>
 <t tx="ekr.20221118072831.239">@path rope/refactor/
 import re
-from typing import Dict
 from contextlib import contextmanager
 from itertools import chain
 
@@ -35859,7 +35648,7 @@ from rope.refactor import patchedast, similarfinder, sourceutils, suites, usefun
 # There are a few more helper functions and classes used by above
 # classes.
 class _ExtractRefactoring:
-    kind_prefixes: Dict[str, str] = {}
+    kind_prefixes = {}
 
     @others
 </t>
@@ -46081,7 +45870,7 @@ from ropetest import testutils
 
 </t>
 <t tx="ekr.20221118072831.302">def __init__(self, info):
-    self.info: str = info
+    self.info = info
     self.info_collector = self._create_info_collector()
     self.info.kind = self._get_kind_by_scope()
     self._check_constraints()
@@ -50484,7 +50273,7 @@ def _get_globals_in_body(unindented_body):
 
 
 </t>
-<t tx="ekr.20221118072831.340">def __init__(self, start: int, end: int, is_global: bool):
+<t tx="ekr.20221118072831.340">def __init__(self, start, end, is_global):
     self.start = start
     self.end = end
     self.is_global = is_global
@@ -57946,10 +57735,7 @@ def visitNormalImport(self, import_stmt, import_info):
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072831.996">from typing import List
-
-
-class ImportStatement:
+<t tx="ekr.20221118072831.996">class ImportStatement:
     """Represent an import in a module
 
     `readonly` attribute controls whether this import can be changed
@@ -58401,7 +58187,6 @@ TODO:
 * ... ;-)
 
 """
-from typing import List
 </t>
 <t tx="ekr.20221209061813.1">@language ini
 @nosearch
@@ -58624,7 +58409,6 @@ echo off
 cd c:\Repos\ekr-clone-rope2
 git push upstream %*</t>
 <t tx="ekr.20221210100024.1">@path rope/base/
-from typing import List
 from rope.base import ast
 
 
@@ -58660,8 +58444,8 @@ from rope.base import ast
 <t tx="ekr.20221210100142.2">class _NodeNameCollector(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221210100142.3">def __init__(self, levels: List[int] = None):
-    self.names: List[str] = []
+<t tx="ekr.20221210100142.3">def __init__(self, levels=None):
+    self.names = []
     self.levels = levels
     self.index = 0
 
@@ -58710,10 +58494,6 @@ import sys
 from ast import *  # noqa: F401,F403
 
 from rope.base import fscommands
-
-from rope.base.utils import tracing_utils as g
-
-assert g
 
 try:
     from ast import _const_node_type_names
@@ -59080,7 +58860,6 @@ monitoring the progress of refactorings.
 """
 </t>
 <t tx="ekr.20230102051545.1">class RopeNodeVisitor(ast.NodeVisitor):
-    # This is the only visit method in Rope.
     @others
 
 
@@ -59466,52 +59245,14 @@ P.S. I am an ideal position to judge the clarity of Rope's documentation:
 - I have decades of experience with Leo, a large open-source project.
 - I have extensive experience (see leoAst.py) with Python's ast module.
 - I am the author of Leo's docs and am well aware of the difficulties.</t>
-<t tx="ekr.20230129234522.1">@language rest
-@wrap
+<t tx="ekr.20230129234714.1">`ObjectInferTest.test_simple_type_inferencing` is one of Rope's simplest
+unit test. Studying this test deeply is a good way of learning how Rope
+works.
 
-This ENB discusses my first investigations into Rope's type inference code.
-
-
+**Note**: `pdb` shows file/module names in addition to line numbers.
+Several of Rope's classes have the same names, so this extra info is
+crucial!
 </t>
-<t tx="ekr.20230129234714.1">Yesterday I started my active study of Rope's code.
-
-The following remarks are pre-writing for Rope's missing Theory of Operation.
-
-These first hours of study produced several Ahas.
-
-This ENB records my thoughts before the insights seem too obvious to mention!
-
-
-</t>
-<t tx="ekr.20230129234715.1">The Engineering Notebook post discusses learning what to (mostly) ignore in Rope's code, so I can focus on what *is* important.
-
-**The saveit/cacheit decorator**
-
-Previously I thought this decorator might be involved in saving/caching results of type inference. That does not appear to be the case, but I'll say more in another ENB.
-
-**Clashing class names**
-
-`pyobjects.py` and `pyobjectsdef.py` contain classes with the same names, which was confusing. I can easily live with the present naming scheme because the debugger will report both the module and class names.
-
-Still, it would be best if docstrings clearly explain the differences between classes with the same name! I'll say more about the costs of Rope's present documentation in another ENB.
-As a Leo-specific workaround, I'll disambiguate the class names in the (Leo) nodes that contain those classes.
-
-**Rope's startup code**
-
-`ObjectInferTest.setUp` is:
-
-@language python
-
-def setUp(self):
-    super().setUp()
-    self.project = testutils.sample_project()
-
-@language rest
-@wrap
-
-sample_project just creates a `Project` instance.
-
-Rope's actual startup code is more complex, but for now I think it's safe to ignore these details.</t>
 <t tx="ekr.20230129234717.1">@language rest
 @wrap
 @nosearch
@@ -59608,36 +59349,6 @@ self.to_textual = transform.PyObjectToTextual(project)
 self.to_pyobject = transform.TextualToPyObject(project)
 self.doi_to_pyobject # doi only
 </t>
-<t tx="ekr.20230129235204.1">**Active study**
-
-ObjectInferTest.test_simple_type_inferencing` is my "Hello World" unit test. This test:
-    
-- makes a simple (easily understood!) inference.
-- executes much of Rope's startup and soi code.
-
-**Communication**
-
-Rope's startup logic creates Project and PyCore objects. Most classes can access these objects directly (through their ivars) or indirectly (through the ivars of other classes).
-
-**Data**
-
-Afaik, the `Scope` class contains all (most?) of the computed type inferences. If `scope` is a `Scope`, statements of the form `scope[name]`, where `name` (a string) is a member of the scope, provide access to all inferences!
-
-**Type inference**
-
-The question "How does Rope make inferences?" remains. I'll soon start single-stepping through interesting ast visitors.
-
-**New questions**
-
-- What is a `PyObject`? It clearly has a central role in soi.
-- What is `_Inferred`'s role?
-- What do all the data in `PyDefinedObject` mean?
-
-**The curse of knowledge**
-
-Experienced devs don't understand the confusion of newbies. It's imperative to document Ahas immediately, before they become "obvious". For example, in retrospect (only!), `scope[name]` is the way to access inferences about `name`. The unit tests scream this fact. But newbies are overwhelmed with the blah, blah, blah of a large code base. *Everything* must be learned and internalized.
-
-In short: My study of Rope has entered a high energy phase.</t>
 <t tx="ekr.20230129235612.1">@language plain
 
 Here is the verbose version of the traces:
@@ -59888,105 +59599,6 @@ The "injected" class (LHS) not be the same as the "injecting" (RHS) class:
 @saveit ivar:        GlobalScope._get_scopes:       Scope.get_scopes::list
 @saveit ivar:    ClassScope._get_logical_end:  Scope.get_logical_end::int
 </t>
-<t tx="ekr.20230130000739.1">- Improve Rope's documentation and docstrings.
-- Prepare to write AOI (Annotation-based Object Inference) using as much of Rope's existing code as possible.</t>
-<t tx="ekr.20230130000742.1">- Write these notes *now*, (*before* Ahas) while most things are unknown or confusing.&lt;br&gt;
-  It's impossible to write documentation for newbies once most things before clear/obvious!
-- This (and all future) ENBs will be pre-writing for new Rope documentation.&lt;br&gt;
-  It's better to have too many notes here than too few.</t>
-<t tx="ekr.20230130000742.2">PR [PR #653](https://github.com/python-rope/rope/pull/653) contains all my study code. This PR will always remain a draft.
-
-I added traces (and calls to `pdb.set_trace()`) to one unit test: `ObjectInferTest.test_simple_type_inferencing`.
-
-I also added traces to various ctors. For example, here is the trace in `PyDefinedObject.__init__`:
-
-@language python
-
-if getattr(g, 'trace_ctors', None): 
-    g.trace(f"{g.get_ctor_name(self, __file__)} {ast_node.__class__.__name__:14}", g.callers())
-
-@language rest
-@wrap
-
-To make this work, I added the following code to the unit test:
-
-@language python
-
-    trace = False  # Set to False when running all tests.
-
-    def get_ctor_name(self, file_name):
-        """Return &lt;module-name&gt;.&lt;class-name&gt;:&gt;20"""
-        class_name = self.__class__.__name__
-        module_name = g.shortFileName(file_name).replace('.py', '')
-        combined_name = f"{module_name}.{class_name}"
-        return f"{combined_name:&gt;25}"
-
-    if trace:
-        g.trace_ctors = True  # True: Enable tracing in ctors.
-        g.get_ctor_name = get_ctor_name  # Inject the formatting function.
-
-@language rest
-@wrap
-
-I also added `from leo.core.leoGlobals import g` as needed in the various rope files.
-
-These traces locate the code that instantiates important classes!</t>
-<t tx="ekr.20230130000742.3">I learned that some (most?) classes were instantiated only as needed.&lt;br&gt;
-I wonder whether AOI will use this strategy. I suspect not...
-
-Rope contains *many* visitor classes. I realized that I had not found *any* of them.&lt;br&gt;
-Progress: Now I know that the test case relies on _ScopeVisitor._ClassDef.
-
-Today's work added the following documentation to the test case::
-
-    # Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
-    #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
-    #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
-    # scope["Sample"] is a pynamesdef.DefinedName.
-
-*Aha!* `pdb` shows file/module names in addition to line numbers.&lt;br&gt;
-I never noticed (or needed) those names when working with Leo,&lt;br&gt;
-but in Rope many classes have the same names, so this extra info is crucial!</t>
-<t tx="ekr.20230130000743.1">Here are some recent traces:
-
-@language plain
-
-===== after setUp
-
-__init__     pyobjectsdef.PyModule                _callTestMethod,test_simple_type_inferencing,get_string_scope,get_string_module
-__init__        pyobjects.PyModule Module         get_string_scope,get_string_module,PyModule.__init__,PyModule.__init__
-__init__        pyobjects.PyModule Module         test_simple_type_inferencing,get_string_scope,get_string_module,PyModule.__init__
-
-===== after get_string_scope
-
-__init__         pyobjects.PyClass ClassDef       _create_structural_attributes,visit,_ClassDef,PyClass.__init__
-__init__      pyobjectsdef.PyClass                _get_structural_attributes,_create_structural_attributes,visit,_ClassDef
-
-===== after sample_class = scope["Sample"].get_object()
-
-sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x1cfe57cf640&gt;
-</t>
-<t tx="ekr.20230130001331.1">I run one unit tests with `test-one-r.cmd`:
-
-@language batch
-
-```console
-@path c:\Scripts\
-@language batch
-echo off
-cls
-cd c:\Repos\ekr-clone-rope2
-
-rem -k test_name
-rem -s: don't capture stderr, stdout.
-rem -x: fail fast
-rem -W error::Warning
-
-call pytest ropetest/objectinfertest.py::ObjectInferTest::test_simple_type_inferencing -s %*
-
-
-
-&lt;/details&gt;</t>
 <t tx="ekr.20230130001559.1">Here is the existing decorator:
     
 @language python
@@ -60015,91 +59627,29 @@ does not appear to be the case.
 
 </t>
 <t tx="ekr.20230130001720.1"></t>
-<t tx="ekr.20230130002122.1">My long-standing plan was to use one or more unit tests as a test bed for study. But what test to use?
+<t tx="ekr.20230130002237.1">@language rest
 
-The first candidate was `codeanalyzetest.py`. Aha! A brief look at that test file showed that the classes in Rope's `codeanalyze` module aren't directly involved in making inferences!
+`ObjectInferTest.setUp` executes a simplified version of Rope's startup logic:
 
-The second candidate was `objectinfertest.py`. The name `test_simple_type_inferencing` looked promising:
+.. code-block:: python
 
-@language python
+    def setUp(self):
+        super().setUp()
+        self.project = testutils.sample_project()
 
-def test_simple_type_inferencing(self):
-    code = dedent("""\
-        class Sample(object):
-            pass
-        a_var = Sample()
-    """)
-    scope = libutils.get_string_scope(self.project, code)
-    sample_class = scope["Sample"].get_object()
-    a_var = scope["a_var"].get_object()
-    self.assertEqual(sample_class, a_var.get_type())
+sample_project() just creates a `Project` instance.
 
-@language rest
-@wrap
+Rope's actual startup code is more complex, but for now I think it's safe to ignore these details.
 
-This test got me on my way. After several hours of single-stepping (and note-taking), I had accumulated the following notes directly in the unit test:
+This code falls into `pdb` only for our test:
 
-@language python
+.. code-block:: python
 
-def test_simple_type_inferencing(self):
-    code = dedent("""\
-        class Sample(object):
-            pass
-        a_var = Sample()
-    """)
-
-    g.pdb()  # Same as import pdb; pdb.set_trace
-
-    # scope is a GlobalScope.
-    # scope.pyobject is a PyModule.
-    scope = libutils.get_string_scope(self.project, code)
-    
-    # scope["Sample"] is a DefinedName.
-    # scope["Sample"].pyobject is a PyClass.
-    sample_class = scope["Sample"].get_object()
-    
-    # scope["a_var"] is an AssignedName.
-    # scope["a_var"].pyobject is an _Inferred.
-    # scope["a_var"].get_object() is a PyObject.
-    a_var = scope["a_var"].get_object()
-
-    self.assertEqual(sample_class, a_var.get_type())
-
-@language rest
-@wrap
-
-But this summary is getting ahead of myself. It's *so* easy to succumb to the curse of knowledge! The next few sections will discuss my notes from this debugging/learning session.</t>
-<t tx="ekr.20230130002155.1">Single-stepping through this unit test allowed me to ignore many other parts of Rope.
-
-I took notes on most of the classed I encountered.
-
-Here are notes regarding how classes gain access to data in other classes.
-
-See details
-</t>
-<t tx="ekr.20230130002237.1">`ObjectInferTest.setUp` executes a simplified version of Rope's startup logic:
-
-@language python
-
-def setUp(self):
-    super().setUp()
-    self.project = testutils.sample_project()
-
-@language rest
-@wrap
-
-A call to `g.pdb()` anywhere in `setUp` falls into the debugger for *all* tests in the `ObjectInferTest` class. This code falls into `pdb` only for the hello world test:
-
-@language python
-
-def setUp(self):
-    super().setUp()
-    if self.id().endswith('test_simple_type_inferencing'):
-        g.pdb()
-    self.project = testutils.sample_project()
-
-@language rest
-@wrap
+    def setUp(self):
+        super().setUp()
+        if self.id().endswith('test_simple_type_inferencing'):
+            g.pdb()
+        self.project = testutils.sample_project()
 
 Looking at the *results* of the call to `testutils.sample_project()` was good enough at first.</t>
 <t tx="ekr.20230130084456.1">@language rest
@@ -60117,28 +59667,6 @@ It will override the methods that infer results.
 The @prevent_recursion method is a good place to look for to-be-overridden methods.
 
 If necessary, define wrapper methods in the main soi traverser class to allow overrides in the pass 2 traverser.</t>
-<t tx="ekr.20230130085317.1">@language rest
-@wrap
-
-- To the first approx, only the visitors matter.
-  Infrastructure (@saveit, @prevent_recursion, lazy evaluation) doesn't matter much.
-- There are many traverser classes, one for each "query".
-- There are many "queries" because results are computed as needed.
-- Some traverser classes may be artifacts of unit tests, but this is unlikely.
-</t>
-<t tx="ekr.20230130085442.1">@language rest
-@wrap
-
-Infrastructure:
-- startup code
-- @saveit and @prevent_recursion decorators.
-
-Inference:
-- Traversers are where everything happens.
-- Several kinds of traversers: startup, inference, refactoring, error reporting, etc.
-
-Refactoring:
-- Probably no need to change this code.</t>
 <t tx="ekr.20230130094034.1">@nosearch
 </t>
 <t tx="ekr.20230130094057.1">@nosearch
@@ -60343,10 +59871,6 @@ _ExpressionVisitors._assigned instantiates pynamesdef.AssignedName:
     """Modified from ast.NodeVisitor to match rope's existing Visitor implementation"""
     method = "_" + node.__class__.__name__
     visitor = getattr(self, method, self.generic_visit)
-    if 1:
-        module, name = visitor.__module__, visitor.__name__
-        if name != "generic_visit":
-            g.trace(f"{module:&gt;25}.{name:&lt;10}", g.callers())
     return visitor(node)
 </t>
 <t tx="ekr.20230202163658.1">g.cls()
@@ -60384,11 +59908,18 @@ test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&l
 @wrap
 @tabwidth -2
 
-PR: https://github.com/python-rope/rope/pull/657/
+PR: https://github.com/python-rope/rope/pull/660
 
-</t>
+Rope Docs: https://rope.readthedocs.io/en/latest/index.html
+Rope overview: https://rope.readthedocs.io/en/latest/overview.html#
+Object inferences: https://rope.readthedocs.io/en/latest/overview.html#object-inference
+
+Use .. code-block:: python</t>
 <t tx="ekr.20230204222405.1">@language rest
 .. _`python's ast module`: https://docs.python.org/3/library/ast.html
+.. |br| raw:: html
+
+   &lt;br /&gt;
 
 =====================
 How Rope infers types
@@ -60397,7 +59928,13 @@ How Rope infers types
 This is the Theory of Operation for Rope's type inference,
 the most complex part of Rope.
 
+Are you sure you should be reading this chapter?
 Only Rope's core devs need to understand this material.
+
+Rope infers the types of objects to:
+
+- suggest appropriate code completions.
+- limit refactorings to the appropriate class.
 
 Some familiarity with `Python's ast module`_ is recommended, but not essential.
 
@@ -60405,15 +59942,17 @@ Some familiarity with `Python's ast module`_ is recommended, but not essential.
 </t>
 <t tx="ekr.20230204224459.1">@language rest
 
-First principles:
-- Traversers do most of the work.
-- Local inference is easy; global inference is hard.
+Type inference is hard.
 
-Learning what to ignore is important.
-- @saveit is part of Rope's startup code. It has no direct part in type inference.
+- chains of attribute.
+- Arguments are hardest.
+- Global inference is harder than local inference.
+  
+Rope infers types only as needed.
 
-What *not* to ignore:
-- @prevent_recursion prevents endless inference loops.</t>
+`@prevent_recursion` prevents endless inference loops.
+Searching for this decorator highlights type inference code.
+</t>
 <t tx="ekr.20230205055521.11">The underlining characters to be used to specify rST sections.
 
 The first character is reserved (not used) so you can specify the top-level
@@ -60519,43 +60058,194 @@ Run sphinx-build from the docs directory:
 <t tx="ekr.20230205090204.1"># Found 3 marked nodes</t>
 <t tx="ekr.20230205094642.1"># Lines starting with '#' are comment lines.
 # A list of command names to be pre-loaded into the history list.
+make
 rst3
+spell-find
 pylint
 sort-lines
 </t>
 <t tx="ekr.20230205102620.1"># True: Remove unindented @language, @others and @wrap directives.</t>
-<t tx="ekr.20230205150939.1">- Startup code.
-- Type inference code.
-- Utility code.
+<t tx="ekr.20230205150939.1">Inference code:
+
+- Traversers are where everything happens.
+  To the first approximation, *only the visitors matter*.
+- Several kinds of traversers, one for each "query": |br|
+  startup, inference, refactoring, error reporting, etc.
+- There are many "queries" because results are computed as needed.
+- Some traverser classes may be artifacts of unit tests, but this is unlikely.
+
+As far as type inference goes, we can mostly ignore everything else:
+
+- Startup code
+- @saveit and @prevent_recursion decorators.
 - Refactoring code.
-- Code completion.</t>
-<t tx="ekr.20230205151100.1">Deep study of a few unit tests is recommended.
+- Code completion code.
+- Utility code.
 
-`ObjectInferTest.test_simple_type_inferencing` is a good place to start.
+**Important**: as far as type inference is concerned, devs can most ignore the following:
 
-.. --- Insert traces here ---</t>
-<t tx="ekr.20230205151244.1"></t>
-<t tx="ekr.20230206010122.1">.. To do.</t>
+- The `saveit/cacheit decorator` is part of startup. |br|
+  It has no direct effect on type inference.
+- Despite its name, the `codeanalyze module` is not directly involved in making inferences.
+</t>
 <t tx="ekr.20230206071511.1">PR: Simplify mypy annotations like Union[base_class, sub_class] to base_class.
     Such Unions are unnecessary and mypy-unfriendly.</t>
-<t tx="ekr.20230206072455.1">@language rest
-@wrap
-
-- Why Rope must infer types.
-- Why type inference is hard.
-  - chains of attribute.
-  - Arguments are hardest.
-  - Global vs. local inference.
-  
-- Rope inferes types only as needed.
-- Preprocessing: creates basic data for all names.
-
-- Knowing what to ignore.
-  - Most (but not all) of startup.
-  - @saveit decorator.
-</t>
 <t tx="ekr.20230206072607.1"></t>
 <t tx="ekr.20230206074134.1"></t>
 <t tx="ekr.20230206074243.1"></t>
+<t tx="ekr.20230207040349.1">@language rest
+@wrap
+
+.. Answer these questions in the study branch!
+
+- Startup: What inference data (if any) does it create?
+- Preprocessing: does it exist? What does it do?
+- What is a `PyObject`? It clearly has a central role in soi.
+- What is `_Inferred`'s role?
+- What do all the data in `PyDefinedObject` mean?
+</t>
+<t tx="ekr.20230207041500.1">@language rest
+
+Here is the original unit test:
+
+.. code-block:: python
+
+    def test_simple_type_inferencing(self):
+        code = dedent("""\
+            class Sample(object):
+                pass
+            a_var = Sample()
+        """)
+        scope = libutils.get_string_scope(self.project, code)
+        sample_class = scope["Sample"].get_object()
+        a_var = scope["a_var"].get_object()
+        self.assertEqual(sample_class, a_var.get_type())
+</t>
+<t tx="ekr.20230207041506.1">@language rest
+
+And here is the same test, with added trace statements and comments:
+
+.. code-block:: python
+
+    def test_simple_type_inferencing(self):
+        code = dedent("""\
+            class Sample(object):
+                pass
+            a_var = Sample()
+        """)
+
+        trace = True
+
+        def banner(s):
+            if trace:
+                print(f"\n{g._caller_name(2)}: ===== {s}")
+
+
+        banner('after setUp')
+
+        # 1. setUp creates self.project.
+
+            # setUp instantiates self.project to a Project instance.
+            # self.project = testutils.sample_project()
+
+        # 2. get_string_scope sets self.scope to the scope of the test string.
+
+            # Sets self.scope to pyobjectsdef.PyModule(project.pycore, code, ...)
+            # (code is the test string, defined above.)
+
+        # ??? Instantiating the pyobjectsdef.PyModule does all the work ???
+
+            # PyDefinedObject.__init__ calls:
+
+                # self.concluded_attributes = self.get_module()._get_concluded_data()
+                # self.attributes = self.get_module()._get_concluded_data()
+
+            # But all attributes are empty for this test.
+
+        scope = libutils.get_string_scope(self.project, code)
+
+        banner('after get_string_scope\n')
+
+            # scope is a GlobalScope.  It might be any subclass of Scope.
+            # scope.pyobject is a pyobjectsdef.PyModule.
+
+        # if trace: g.trace('*** scope.pyobject', scope.pyobject)
+
+        # *** Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
+        #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
+        #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
+        # scope["Sample"] is a pynamesdef.DefinedName.
+
+        sample_class = scope["Sample"].get_object()
+
+        banner('after sample_class = scope["Sample"].get_object()\n')
+
+
+            # sample_class is a pyobjectsdef.PyClass ("::Sample" at ...)
+            # scope["Sample"] is a DefinedName.
+            # scope["Sample"].pyobject is a pyobjectsdef.PyClass.
+
+        a_var = scope["a_var"].get_object()
+
+            # a_var is a pyobjects.PyObject
+            # a_var.get_type() is a pyobjectsdef.PyClass ("::Sample" at ...)
+
+            # scope["a_var"] is an pynamesdef.AssignedName.
+            # scope["a_var"].pyobject is a pynames._Inferred.
+            # scope["a_var"].get_object() is a pyobjects.PyObject.
+
+        if trace:
+            print('')
+            print(f"sample_class: {sample_class}")
+
+        self.assertEqual(sample_class, a_var.get_type())
+</t>
+<t tx="ekr.20230207042155.1">@language rest
+@wrap
+
+**Clashing class names**
+
+`pyobjects.py` and `pyobjectsdef.py` contain classes with the same names,
+which was confusing. I can easily live with the present naming scheme
+because the debugger will report both the module and class names.
+
+It would be best if docstrings clearly explain the differences between
+classes with the same name! I'll say more about the costs of Rope's present
+documentation in another ENB. As a Leo-specific workaround, I'll
+disambiguate the class names in the (Leo) nodes that contain those classes.
+</t>
+<t tx="ekr.20230207042804.1">**Hello-world unit test**
+
+ObjectInferTest.test_simple_type_inferencing` is my "Hello World" unit test. This test:
+
+- makes a simple (easily understood!) inference.
+- executes much of Rope's startup and soi code.
+
+**Startup**
+
+Rope's startup logic creates Project and PyCore objects. Most classes can
+access these objects directly (through their ivars) or indirectly (through
+the ivars of other classes).
+
+**Data**
+
+Afaik, the `Scope` class contains all (most?) of the computed type inferences.
+
+If `scope` is a `Scope`, statements of the form `scope[name]`, where `name`
+(a string) is a member of the scope, provide access to all inferences!
+</t>
+<t tx="ekr.20230207050236.1">g.cls()
+if c.isChanged():
+    c.save()
+h = '@rst docs/theory'
+p = g.findNodeAnywhere(c, h)
+assert p, h
+c.selectPosition(p)
+c.k.simulateCommand('rst3')
+g.execute_shell_commands([
+    'make-r',
+    'moz file:///C:/Repos/ekr-clone-rope2/docs/_build/html/theory.html',
+])
+</t>
 </tnodes>
 </leo_file>
