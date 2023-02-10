@@ -108,36 +108,36 @@
 <v t="ekr.20221118072830.17"><vh>rope/base</vh>
 <v t="ekr.20221118072830.1119"><vh>@clean rope/base/__init__.py</vh></v>
 <v t="ekr.20221211142245.1"><vh>@clean rope/base/ast.py</vh>
-<v t="ekr.20221230095613.1"><vh>ast.parse</vh></v>
-<v t="ekr.20230104023141.1"><vh>ast.call_for_nodes</vh></v>
+<v t="ekr.20221230095613.1"><vh>rope.base.ast.parse</vh></v>
+<v t="ekr.20230104023141.1"><vh>rope.base.ast.call_for_nodes</vh></v>
 <v t="ekr.20230102051545.1"><vh>class rope.base.ast.RopeNodeVisitor</vh>
 <v t="ekr.20230202130833.1"><vh>RopeNodeVisitor.visit</vh></v>
 </v>
-<v t="ekr.20230104023244.1"><vh>ast.get_const_subtype_name</vh></v>
-<v t="ekr.20230104023245.1"><vh>ast.get_node_type_name</vh></v>
+<v t="ekr.20230104023244.1"><vh>rope.base.ast.get_const_subtype_name</vh></v>
+<v t="ekr.20230104023245.1"><vh>rope.base.ast.get_node_type_name</vh></v>
 </v>
 <v t="ekr.20221118072830.18"><vh>@clean arguments.py</vh>
-<v t="ekr.20221118072830.19"><vh>class Arguments</vh>
+<v t="ekr.20221118072830.19"><vh>class arguments.Arguments</vh>
 <v t="ekr.20221118072830.20"><vh>Arguments.__init__</vh></v>
 <v t="ekr.20221118072830.21"><vh>Arguments.get_arguments</vh></v>
 <v t="ekr.20221118072830.22"><vh>Arguments.get_pynames</vh></v>
 <v t="ekr.20221118072830.23"><vh>Arguments.get_instance_pyname</vh></v>
 <v t="ekr.20221118072830.24"><vh>Arguments._evaluate</vh></v>
 </v>
-<v t="ekr.20221118072830.25"><vh>create_arguments</vh></v>
-<v t="ekr.20221118072830.26"><vh>class ObjectArguments</vh>
+<v t="ekr.20221118072830.25"><vh>function: arguments.create_arguments</vh></v>
+<v t="ekr.20221118072830.26"><vh>class arguments.ObjectArguments</vh>
 <v t="ekr.20221118072830.27"><vh>ObjectArguments.__init__</vh></v>
 <v t="ekr.20221118072830.28"><vh>ObjectArguments.get_arguments</vh></v>
 <v t="ekr.20221118072830.29"><vh>ObjectArguments.get_pynames</vh></v>
 <v t="ekr.20221118072830.30"><vh>ObjectArguments.get_instance_pyname</vh></v>
 </v>
-<v t="ekr.20221118072830.31"><vh>class MixedArguments</vh>
+<v t="ekr.20221118072830.31"><vh>class arguments.MixedArguments</vh>
 <v t="ekr.20221118072830.32"><vh>MixedArguments.__init__</vh></v>
 <v t="ekr.20221118072830.33"><vh>MixedArguments.get_pynames</vh></v>
 <v t="ekr.20221118072830.34"><vh>MixedArguments.get_arguments</vh></v>
 <v t="ekr.20221118072830.35"><vh>MixedArguments.get_instance_pyname</vh></v>
 </v>
-<v t="ekr.20221118072830.36"><vh>_is_method_call</vh></v>
+<v t="ekr.20221118072830.36"><vh>function: arguments._is_method_call</vh></v>
 </v>
 <v t="ekr.20221118072830.55"><vh>@clean builtins.py</vh>
 <v t="ekr.20221118072830.56"><vh>class builtins.BuiltinModule(po.AbstractModule)</vh>
@@ -271,17 +271,17 @@
 <v t="ekr.20221118072830.173"><vh>class builtins.BuiltinObject(BuildinClass)</vh></v>
 <v t="ekr.20221118072830.174"><vh>class builtins.BuiltinType(BuiltinClass)</vh></v>
 <v t="ekr.20230127102529.1"><vh>functions: builtins...</vh>
-<v t="ekr.20221118072830.175"><vh>_infer_sequence_for_pyname</vh></v>
-<v t="ekr.20221118072830.176"><vh>_create_builtin</vh></v>
-<v t="ekr.20221118072830.177"><vh>_open_function</vh></v>
-<v t="ekr.20221118072830.178"><vh>_range_function</vh></v>
-<v t="ekr.20221118072830.179"><vh>_reversed_function</vh></v>
-<v t="ekr.20221118072830.180"><vh>_sorted_function</vh></v>
-<v t="ekr.20221118072830.181"><vh>_super_function</vh></v>
-<v t="ekr.20221118072830.182"><vh>_zip_function</vh></v>
-<v t="ekr.20221118072830.183"><vh>_enumerate_function</vh></v>
-<v t="ekr.20221118072830.184"><vh>_iter_function</vh></v>
-<v t="ekr.20221118072830.185"><vh>_input_function</vh></v>
+<v t="ekr.20221118072830.175"><vh>function: builtins._infer_sequence_for_pyname</vh></v>
+<v t="ekr.20221118072830.176"><vh>function: builtins._create_builtin</vh></v>
+<v t="ekr.20221118072830.177"><vh>function: builtins._open_function</vh></v>
+<v t="ekr.20221118072830.178"><vh>function: builtins._range_function</vh></v>
+<v t="ekr.20221118072830.179"><vh>function: builtins._reversed_function</vh></v>
+<v t="ekr.20221118072830.180"><vh>function: builtins._sorted_function</vh></v>
+<v t="ekr.20221118072830.181"><vh>function: builtins._super_function</vh></v>
+<v t="ekr.20221118072830.182"><vh>function: builtins._zip_function</vh></v>
+<v t="ekr.20221118072830.183"><vh>function: builtins._enumerate_function</vh></v>
+<v t="ekr.20221118072830.184"><vh>function: builtins._iter_function</vh></v>
+<v t="ekr.20221118072830.185"><vh>function: builtins._input_function</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.186"><vh>@clean change.py</vh>
@@ -435,13 +435,13 @@
 <v t="ekr.20221118072830.315"><vh>get_comment_pattern</vh></v>
 </v>
 <v t="ekr.20221118072830.316"><vh>@clean evaluate.py</vh>
-<v t="ekr.20221118072830.317"><vh>eval_location</vh></v>
-<v t="ekr.20221118072830.318"><vh>eval_location2</vh></v>
-<v t="ekr.20221118072830.319"><vh>eval_node</vh></v>
-<v t="ekr.20221118072830.320"><vh>eval_node2</vh></v>
-<v t="ekr.20221118072830.321"><vh>eval_str</vh></v>
-<v t="ekr.20221118072830.322"><vh>eval_str2</vh></v>
-<v t="ekr.20221118072830.323"><vh>class ScopeNameFinder</vh>
+<v t="ekr.20221118072830.317"><vh>function: evaluate.eval_location</vh></v>
+<v t="ekr.20221118072830.318"><vh>function: evaluate.eval_location2</vh></v>
+<v t="ekr.20221118072830.319"><vh>function: evaluate.eval_node</vh></v>
+<v t="ekr.20221118072830.320"><vh>function: evaluate.eval_node2</vh></v>
+<v t="ekr.20221118072830.321"><vh>function: evaluate.eval_str</vh></v>
+<v t="ekr.20221118072830.322"><vh>function: evaluate.eval_str2</vh></v>
+<v t="ekr.20221118072830.323"><vh>class evaluate.ScopeNameFinder</vh>
 <v t="ekr.20221118072830.324"><vh>ScopeNameFinder.__init__</vh></v>
 <v t="ekr.20221118072830.325"><vh>ScopeNameFinder._is_defined_in_class_body</vh></v>
 <v t="ekr.20221118072830.326"><vh>ScopeNameFinder._is_function_name_in_function_header</vh></v>
@@ -454,7 +454,7 @@
 <v t="ekr.20221118072830.332"><vh>StatementEvaluator.__init__</vh></v>
 <v t="ekr.20221118072830.333"><vh>StatementEvaluator.Name</vh></v>
 <v t="ekr.20221118072830.334"><vh>StatementEvaluator.Attribute</vh></v>
-<v t="ekr.20221118072830.335"><vh>StatementEvaluator.Call</vh></v>
+<v t="ekr.20221118072830.335"><vh>StatementEvaluator._Call</vh></v>
 <v t="ekr.20221118072830.336"><vh>StatementEvaluator.Str</vh></v>
 <v t="ekr.20221118072830.337"><vh>StatementEvaluator.Num</vh></v>
 <v t="ekr.20221118072830.338"><vh>StatementEvaluator.Constant</vh></v>
@@ -715,7 +715,7 @@
 <v t="ekr.20221118072830.560"><vh>PyCore.find_relative_module</vh></v>
 <v t="ekr.20221118072830.561"><vh>PyCore.get_source_folders</vh></v>
 </v>
-<v t="ekr.20221118072830.562"><vh>PyCore.resource_to_pyobject (unique)</vh></v>
+<v t="ekr.20221118072830.562"><vh>PyCore.resource_to_pyobject</vh></v>
 <v t="ekr.20221118072830.563"><vh>PyCore.get_python_files (deprecated)</vh></v>
 <v t="ekr.20221118072830.564"><vh>PyCore._is_package</vh></v>
 <v t="ekr.20221118072830.565"><vh>PyCore._find_source_folders</vh></v>
@@ -748,7 +748,7 @@
 </v>
 <v t="ekr.20221118072830.588"><vh>@clean pynames.py</vh>
 <v t="ekr.20221118072830.589"><vh>class pynames.PyName</vh>
-<v t="ekr.20221118072830.590"><vh>pynames.PyName.get_object</vh></v>
+<v t="ekr.20221118072830.590"><vh>pynames.PyName.get_object (returns None)</vh></v>
 <v t="ekr.20221118072830.591"><vh>pynames.PyName.get_definition_location</vh></v>
 </v>
 <v t="ekr.20221118072830.592"><vh>class pynames.DefinedName(PyName)</vh>
@@ -808,7 +808,7 @@
 <v t="ekr.20221118072830.650"><vh>PyObject.__hash__</vh></v>
 <v t="ekr.20221118072830.651"><vh>PyObject.__iter__</vh></v>
 </v>
-<v t="ekr.20221118072830.654"><vh>function: po.get_base_type</vh></v>
+<v t="ekr.20221118072830.654"><vh>function: po.get_base_type (deprecated)</vh></v>
 <v t="ekr.20221118072830.655"><vh>function: po.get_unknown</vh></v>
 <v t="ekr.20221118072830.656"><vh>class  po.AbstractClass(PyObject) (***do NOT trace ***)</vh>
 <v t="ekr.20221118072830.658"><vh>AbstractClass.get_name</vh></v>
@@ -845,7 +845,7 @@
 <v t="ekr.20221118072830.686"><vh>po.PyDefinedObject.get_ast</vh></v>
 <v t="ekr.20221118072830.687"><vh>po.PyDefinedObject._create_scope (do-nothing)</vh></v>
 </v>
-<v t="ekr.20221118072830.688"><vh>class  po.PyFunctionStub(PyObject, AbstractFunction)</vh></v>
+<v t="ekr.20221118072830.688"><vh>class  po.PyFunction(PyObject, AbstractFunction)</vh></v>
 <v t="ekr.20221118072830.689"><vh>class  po.PyComprehensionBase(PyDefinedObject, PyObject)</vh></v>
 <v t="ekr.20221118072830.690"><vh>class  po.PyClass(PyDefinedObject, AbstractClass)</vh></v>
 <v t="ekr.20221118072830.691"><vh>class  po._ConcludedData</vh>
@@ -871,7 +871,7 @@
 <v t="ekr.20221118072830.709"><vh>PyFunction.__init__</vh></v>
 <v t="ekr.20221118072830.710"><vh>PyFunction._create_structural_attributes</vh></v>
 <v t="ekr.20221118072830.711"><vh>PyFunction._create_concluded_attributes</vh></v>
-<v t="ekr.20221118072830.712"><vh>function: PyFunction._create_scope</vh></v>
+<v t="ekr.20221118072830.712"><vh>PyFunction._create_scope</vh></v>
 <v t="ekr.20221118072830.713"><vh>PyFunction._infer_parameters</vh></v>
 <v t="ekr.20221118072830.714"><vh>PyFunction._infer_returned</vh></v>
 <v t="ekr.20221118072830.715"><vh>PyFunction._handle_special_args</vh></v>
@@ -885,12 +885,13 @@
 <v t="ekr.20221118072830.723"><vh>PyFunction.decorators</vh></v>
 </v>
 <v t="ekr.20221118072830.724"><vh>class dpo.PyComprehension(po.PyComprehension)</vh>
-<v t="ekr.20221118072830.725"><vh>PyComprehension.__init__</vh></v>
-<v t="ekr.20221118072830.726"><vh>PyComprehension._create_scope</vh></v>
-<v t="ekr.20221118072830.727"><vh>PyComprehension.get_kind</vh></v>
+<v t="ekr.20221118072830.725"><vh>dpo.PyComprehension.__init__ PyObject/PyDefinedObject</vh></v>
+<v t="ekr.20221118072830.726"><vh>dpo.PyComprehension._create_scope</vh></v>
+<v t="ekr.20221118072830.727"><vh>dpo.PyComprehension.get_kind</vh></v>
 </v>
 <v t="ekr.20221118072830.728"><vh>class dpo.PyClass (po.PyClass)</vh>
 <v t="ekr.20221118072830.729"><vh>dpo.PyClass.__init__</vh></v>
+<v t="ekr.20230209143240.1"><vh>dpo.PyClass.__repr__  (overrides po.PyDefinedObject)</vh></v>
 <v t="ekr.20221118072830.730"><vh>dpo.PyClass.get_superclasses</vh></v>
 <v t="ekr.20221118072830.731"><vh>dpo.PyClass.get_name</vh></v>
 <v t="ekr.20221118072830.732"><vh>dpo.PyClass._create_concluded_attributes</vh></v>
@@ -999,7 +1000,7 @@
 </v>
 <v t="ekr.20221118072830.824"><vh>@clean pyscopes.py</vh>
 <v t="ekr.20221118072830.825"><vh>class Scope</vh>
-<v t="ekr.20221118072830.827"><vh>Scope.get_names</vh></v>
+<v t="ekr.20221118072830.827"><vh>Scope.get_names ***</vh></v>
 <v t="ekr.20221118072830.828"><vh>Scope.get_defined_names</vh></v>
 <v t="ekr.20221118072830.829"><vh>Scope.get_name (returns PyName)</vh></v>
 <v t="ekr.20221118072830.830"><vh>Scope.__getitem__</vh></v>
@@ -1484,7 +1485,7 @@
 <v t="ekr.20221118072830.1257"><vh>class soa.SOAVisitor(RopeNodeVistor)</vh>
 <v t="ekr.20221118072830.1259"><vh>SOAVisitor.FunctionDef (do nothing)</vh></v>
 <v t="ekr.20221118072830.1260"><vh>SOAVisitor.ClassDef (do nothing)</vh></v>
-<v t="ekr.20221118072830.1261"><vh>SOAVisitor.Call &amp; helpers</vh>
+<v t="ekr.20221118072830.1261"><vh>SOAVisitor._Call &amp; helpers</vh>
 <v t="ekr.20221118072830.1262"><vh>SOAVisitor._args_with_self</vh></v>
 <v t="ekr.20221118072830.1263"><vh>SOAVisitor._call</vh></v>
 <v t="ekr.20221118072830.1264"><vh>SOAVisitor._parameter_objects</vh></v>
@@ -1499,19 +1500,19 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1271"><vh>@clean soi.py</vh>
-<v t="ekr.20221118072830.1272"><vh>infer_returned_object &amp; helper</vh></v>
-<v t="ekr.20221118072830.1273"><vh>infer_parameter_objects</vh></v>
-<v t="ekr.20221118072830.1274"><vh>_handle_first_parameter</vh></v>
-<v t="ekr.20221118072830.1275"><vh>infer_assigned_object</vh></v>
-<v t="ekr.20221118072830.1276"><vh>get_passed_objects</vh></v>
-<v t="ekr.20221118072830.1277"><vh>_infer_returned</vh></v>
-<v t="ekr.20221118072830.1278"><vh>_parameter_objects</vh></v>
-<v t="ekr.20221118072830.1280"><vh>_infer_assignment &amp; helpers</vh>
-<v t="ekr.20221118072830.1281"><vh>_follow_levels</vh></v>
-<v t="ekr.20221118072830.1282"><vh>_follow_pyname</vh></v>
-<v t="ekr.20221118072830.1283"><vh>_follow_evaluations</vh></v>
-<v t="ekr.20221118072830.1284"><vh>_get_lineno_for_node</vh></v>
-<v t="ekr.20221118072830.1285"><vh>_get_attribute</vh></v>
+<v t="ekr.20221118072830.1272"><vh>function: soi.infer_returned_object &amp; helper</vh></v>
+<v t="ekr.20221118072830.1273"><vh>function: soi.infer_parameter_objects</vh></v>
+<v t="ekr.20221118072830.1274"><vh>function: soi._handle_first_parameter</vh></v>
+<v t="ekr.20221118072830.1275"><vh>function: soi.infer_assigned_object</vh></v>
+<v t="ekr.20221118072830.1276"><vh>function: soi.get_passed_objects</vh></v>
+<v t="ekr.20221118072830.1277"><vh>function: soi._infer_returned</vh></v>
+<v t="ekr.20221118072830.1278"><vh>function: soi._parameter_objects</vh></v>
+<v t="ekr.20221118072830.1280"><vh>function: soi._infer_assignment &amp; helpers</vh>
+<v t="ekr.20221118072830.1281"><vh>function: soi._follow_levels</vh></v>
+<v t="ekr.20221118072830.1282"><vh>function: soi._follow_pyname</vh></v>
+<v t="ekr.20221118072830.1283"><vh>function: soi._follow_evaluations</vh></v>
+<v t="ekr.20221118072830.1284"><vh>function: soi._get_lineno_for_node</vh></v>
+<v t="ekr.20221118072830.1285"><vh>function: soi._get_attribute</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.1286"><vh>@clean transform.py</vh>
@@ -1670,13 +1671,13 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1401"><vh>@clean oi/type_hinting/utils.py</vh>
-<v t="ekr.20221118072830.1402"><vh>utils.py: get_super_func</vh></v>
-<v t="ekr.20221118072830.1403"><vh>utils.py: get_super_assignment</vh></v>
-<v t="ekr.20221118072830.1404"><vh>utils.py: get_class_with_attr_name</vh></v>
-<v t="ekr.20221118072830.1405"><vh>utils.py: get_lineno_for_node</vh></v>
-<v t="ekr.20221118072830.1406"><vh>utils.py: get_mro</vh></v>
-<v t="ekr.20221118072830.1407"><vh>utils.py: resolve_type</vh></v>
-<v t="ekr.20221118072830.1408"><vh>class ParametrizeType</vh>
+<v t="ekr.20221118072830.1402"><vh>function: utils.get_super_func</vh></v>
+<v t="ekr.20221118072830.1403"><vh>function: utils.get_super_assignment</vh></v>
+<v t="ekr.20221118072830.1404"><vh>function: utils.get_class_with_attr_name</vh></v>
+<v t="ekr.20221118072830.1405"><vh>function: utils.get_lineno_for_node</vh></v>
+<v t="ekr.20221118072830.1406"><vh>function: utils.get_mro</vh></v>
+<v t="ekr.20221118072830.1407"><vh>function: utils.resolve_type</vh></v>
+<v t="ekr.20221118072830.1408"><vh>class utils.ParametrizeType</vh>
 <v t="ekr.20221118072830.1409"><vh>ParametrizeType.__call__</vh></v>
 <v t="ekr.20221118072830.1410"><vh>ParametrizeType._get_type_factory</vh></v>
 </v>
@@ -1917,16 +1918,16 @@
 <v t="ekr.20221118072830.1593"><vh>class Error</vh></v>
 </v>
 <v t="ekr.20221118072830.1594"><vh>@clean findit.py</vh>
-<v t="ekr.20221118072830.1595"><vh>find_occurrences</vh>
+<v t="ekr.20221118072830.1595"><vh>function: findit.find_occurrences</vh>
 <v t="ekr.20221118072830.1596"><vh>is_match</vh></v>
 </v>
-<v t="ekr.20221118072830.1597"><vh>find_implementations</vh>
-<v t="ekr.20221118072830.1598"><vh>is_defined</vh></v>
-<v t="ekr.20221118072830.1599"><vh>not_self</vh></v>
+<v t="ekr.20221118072830.1597"><vh>function: findit.find_implementations &amp; helpers</vh>
+<v t="ekr.20221118072830.1598"><vh>function: findit.is_defined</vh></v>
+<v t="ekr.20221118072830.1599"><vh>function: findit.not_self</vh></v>
 </v>
-<v t="ekr.20221118072830.1600"><vh>find_definition</vh></v>
-<v t="ekr.20221118072830.1601"><vh>class Location</vh></v>
-<v t="ekr.20221118072830.1602"><vh>_find_locations</vh></v>
+<v t="ekr.20221118072830.1600"><vh>function: findit.find_definition</vh></v>
+<v t="ekr.20221118072830.1601"><vh>class findit.Location</vh></v>
+<v t="ekr.20221118072830.1602"><vh>function: findit._find_locations</vh></v>
 </v>
 <v t="ekr.20221118072830.1603"><vh>@clean fixmodnames.py</vh>
 <v t="ekr.20221118072830.1604"><vh>class FixModuleNames</vh>
@@ -2047,12 +2048,12 @@
 <v t="ekr.20221118072831.95"><vh>class Package</vh></v>
 </v>
 <v t="ekr.20221118072831.97"><vh>@clean contrib/autoimport/parse.py</vh>
-<v t="ekr.20221118072831.98"><vh>get_type_ast</vh></v>
-<v t="ekr.20221118072831.99"><vh>get_names_from_file</vh></v>
-<v t="ekr.20221118072831.100"><vh>get_type_object</vh></v>
-<v t="ekr.20221118072831.101"><vh>get_names</vh></v>
-<v t="ekr.20221118072831.102"><vh>get_names_from_compiled</vh></v>
-<v t="ekr.20221118072831.103"><vh>combine</vh></v>
+<v t="ekr.20221118072831.98"><vh>parse.get_type_ast</vh></v>
+<v t="ekr.20221118072831.99"><vh>parse.get_names_from_file</vh></v>
+<v t="ekr.20221118072831.100"><vh>parse.get_type_object</vh></v>
+<v t="ekr.20221118072831.101"><vh>parse.get_names</vh></v>
+<v t="ekr.20221118072831.102"><vh>parse.get_names_from_compiled</vh></v>
+<v t="ekr.20221118072831.103"><vh>parse.combine</vh></v>
 </v>
 <v t="ekr.20221118072831.104"><vh>@clean pickle.py</vh>
 <v t="ekr.20221118072831.105"><vh>class AutoImport</vh>
@@ -2396,8 +2397,8 @@
 <v t="ekr.20221118072831.404"><vh>CallInfo.read</vh></v>
 <v t="ekr.20221118072831.405"><vh>CallInfo._is_method_call</vh></v>
 <v t="ekr.20221118072831.406"><vh>CallInfo._is_class</vh></v>
-<v t="ekr.20221118072831.407"><vh>CallInfo._is_method</vh></v>
-<v t="ekr.20221118072831.408"><vh>CallInfo._is_classmethod</vh></v>
+<v t="ekr.20221118072831.407"><vh>CallInfo._is_method (staticmethod)</vh></v>
+<v t="ekr.20221118072831.408"><vh>CallInfo._is_classmethod (staticmethod)</vh></v>
 </v>
 <v t="ekr.20221118072831.409"><vh>class ArgumentMapping</vh>
 <v t="ekr.20221118072831.410"><vh>ArgumentMapping.__init__</vh></v>
@@ -2412,14 +2413,14 @@
 </v>
 </v>
 <v t="ekr.20221118072831.418"><vh>@clean inline.py</vh>
-<v t="ekr.20221118072831.419"><vh>unique_prefix</vh></v>
-<v t="ekr.20221118072831.420"><vh>create_inline</vh></v>
-<v t="ekr.20221118072831.421"><vh>class _Inliner</vh>
+<v t="ekr.20221118072831.419"><vh>function: inline.unique_prefix</vh></v>
+<v t="ekr.20221118072831.420"><vh>function: inline.create_inline</vh></v>
+<v t="ekr.20221118072831.421"><vh>class inline._Inliner</vh>
 <v t="ekr.20221118072831.422"><vh>_Inliner.__init__</vh></v>
 <v t="ekr.20221118072831.423"><vh>_Inliner.get_changes</vh></v>
 <v t="ekr.20221118072831.424"><vh>_Inliner.get_kind</vh></v>
 </v>
-<v t="ekr.20221118072831.425"><vh>class InlineMethod</vh>
+<v t="ekr.20221118072831.425"><vh>class inline.InlineMethod</vh>
 <v t="ekr.20221118072831.426"><vh>InlineMethod.__init__</vh></v>
 <v t="ekr.20221118072831.427"><vh>InlineMethod._init_imports</vh></v>
 <v t="ekr.20221118072831.428"><vh>InlineMethod._get_scope_range</vh></v>
@@ -2430,7 +2431,7 @@
 <v t="ekr.20221118072831.433"><vh>InlineMethod._is_the_last_method_of_a_class</vh></v>
 <v t="ekr.20221118072831.434"><vh>InlineMethod.get_kind</vh></v>
 </v>
-<v t="ekr.20221118072831.435"><vh>class InlineVariable</vh>
+<v t="ekr.20221118072831.435"><vh>class inline.InlineVariable</vh>
 <v t="ekr.20221118072831.436"><vh>InlineVariable.__init__</vh></v>
 <v t="ekr.20221118072831.437"><vh>InlineVariable._check_exceptional_conditions</vh></v>
 <v t="ekr.20221118072831.438"><vh>InlineVariable.get_changes</vh></v>
@@ -2441,14 +2442,14 @@
 </v>
 <v t="ekr.20221118072831.443"><vh>InlineVariable.get_kind</vh></v>
 </v>
-<v t="ekr.20221118072831.444"><vh>class InlineParameter</vh>
+<v t="ekr.20221118072831.444"><vh>class inline.InlineParameter</vh>
 <v t="ekr.20221118072831.445"><vh>InlineParameter.__init__</vh></v>
 <v t="ekr.20221118072831.446"><vh>InlineParameter._function_location</vh></v>
 <v t="ekr.20221118072831.447"><vh>InlineParameter.get_changes</vh></v>
 <v t="ekr.20221118072831.448"><vh>InlineParameter.get_kind</vh></v>
 </v>
-<v t="ekr.20221118072831.449"><vh>_join_lines</vh></v>
-<v t="ekr.20221118072831.450"><vh>class _DefinitionGenerator</vh>
+<v t="ekr.20221118072831.449"><vh>function: inline._join_lines</vh></v>
+<v t="ekr.20221118072831.450"><vh>class inline._DefinitionGenerator</vh>
 <v t="ekr.20221118072831.451"><vh>_DefinitionGenerator.__init__</vh></v>
 <v t="ekr.20221118072831.452"><vh>_DefinitionGenerator._get_definition_info</vh></v>
 <v t="ekr.20221118072831.453"><vh>_DefinitionGenerator._get_definition_params</vh></v>
@@ -2462,7 +2463,7 @@
 <v t="ekr.20221118072831.461"><vh>_DefinitionGenerator.named_pattern</vh></v>
 </v>
 </v>
-<v t="ekr.20221118072831.462"><vh>class _InlineFunctionCallsForModuleHandle</vh>
+<v t="ekr.20221118072831.462"><vh>class inline._InlineFunctionCallsForModuleHandle</vh>
 <v t="ekr.20221118072831.463"><vh>_InlineFunctionCallsForModuleHandle.__init__</vh></v>
 <v t="ekr.20221118072831.464"><vh>_InlineFunctionCallsForModuleHandle.occurred_inside_skip</vh></v>
 <v t="ekr.20221118072831.465"><vh>_InlineFunctionCallsForModuleHandle.occurred_outside_skip</vh></v>
@@ -2471,12 +2472,12 @@
 <v t="ekr.20221118072831.468"><vh>_InlineFunctionCallsForModuleHandle.source</vh></v>
 <v t="ekr.20221118072831.469"><vh>_InlineFunctionCallsForModuleHandle.lines</vh></v>
 </v>
-<v t="ekr.20221118072831.470"><vh>_inline_variable</vh></v>
-<v t="ekr.20221118072831.471"><vh>_getvardef</vh></v>
-<v t="ekr.20221118072831.472"><vh>_assigned_lineno</vh></v>
-<v t="ekr.20221118072831.473"><vh>_add_imports</vh></v>
-<v t="ekr.20221118072831.474"><vh>_get_pyname</vh></v>
-<v t="ekr.20221118072831.475"><vh>_remove_from</vh></v>
+<v t="ekr.20221118072831.470"><vh>function: inline._inline_variable</vh></v>
+<v t="ekr.20221118072831.471"><vh>function: inline._getvardef</vh></v>
+<v t="ekr.20221118072831.472"><vh>function: inline._assigned_lineno</vh></v>
+<v t="ekr.20221118072831.473"><vh>function: inline._add_imports</vh></v>
+<v t="ekr.20221118072831.474"><vh>function: inline._get_pyname</vh></v>
+<v t="ekr.20221118072831.475"><vh>function: inline._remove_from</vh></v>
 </v>
 <v t="ekr.20221118072831.476"><vh>@clean introduce_factory.py</vh>
 <v t="ekr.20221118072831.477"><vh>class IntroduceFactory</vh>
@@ -2523,8 +2524,8 @@
 </v>
 </v>
 <v t="ekr.20221118072831.512"><vh>@clean move.py</vh>
-<v t="ekr.20221118072831.513"><vh>create_move</vh></v>
-<v t="ekr.20221118072831.514"><vh>class MoveMethod</vh>
+<v t="ekr.20221118072831.513"><vh>function: move.create_move</vh></v>
+<v t="ekr.20221118072831.514"><vh>class move.MoveMethod</vh>
 <v t="ekr.20221118072831.515"><vh>MoveMethod.__init__</vh></v>
 <v t="ekr.20221118072831.516"><vh>MoveMethod.get_changes</vh></v>
 <v t="ekr.20221118072831.517"><vh>MoveMethod.get_method_name</vh></v>
@@ -2540,7 +2541,7 @@
 <v t="ekr.20221118072831.527"><vh>MoveMethod._get_passed_arguments_string</vh></v>
 <v t="ekr.20221118072831.528"><vh>MoveMethod._is_host_used</vh></v>
 </v>
-<v t="ekr.20221118072831.529"><vh>class MoveGlobal</vh>
+<v t="ekr.20221118072831.529"><vh>class move.MoveGlobal</vh>
 <v t="ekr.20221118072831.530"><vh>MoveGlobal.__init__</vh></v>
 <v t="ekr.20221118072831.531"><vh>MoveGlobal._import_filter</vh></v>
 <v t="ekr.20221118072831.532"><vh>MoveGlobal._check_exceptional_conditions</vh></v>
@@ -2558,7 +2559,7 @@
 <v t="ekr.20221118072831.544"><vh>MoveGlobal._get_moving_region</vh></v>
 <v t="ekr.20221118072831.545"><vh>MoveGlobal._add_imports2</vh></v>
 </v>
-<v t="ekr.20221118072831.546"><vh>class MoveModule</vh>
+<v t="ekr.20221118072831.546"><vh>class move.MoveModule</vh>
 <v t="ekr.20221118072831.547"><vh>MoveModule.__init__</vh></v>
 <v t="ekr.20221118072831.548"><vh>MoveModule.get_changes</vh></v>
 <v t="ekr.20221118072831.549"><vh>MoveModule._calculate_changes</vh></v>
@@ -2569,12 +2570,12 @@
 <v t="ekr.20221118072831.554"><vh>MoveModule._change_import_statements</vh></v>
 <v t="ekr.20221118072831.555"><vh>MoveModule._handle_moving_in_from_import_stmt</vh></v>
 </v>
-<v t="ekr.20221118072831.556"><vh>class _ChangeMoveOccurrencesHandle</vh>
+<v t="ekr.20221118072831.556"><vh>class move._ChangeMoveOccurrencesHandle</vh>
 <v t="ekr.20221118072831.557"><vh>_ChangeMoveOccurrencesHandle.__init__</vh></v>
 <v t="ekr.20221118072831.558"><vh>_ChangeMoveOccurrencesHandle.occurred_inside_skip</vh></v>
 <v t="ekr.20221118072831.559"><vh>_ChangeMoveOccurrencesHandle.occurred_outside_skip</vh></v>
 </v>
-<v t="ekr.20221118072831.560"><vh>class _MoveTools</vh>
+<v t="ekr.20221118072831.560"><vh>class move._MoveTools</vh>
 <v t="ekr.20221118072831.561"><vh>_MoveTools.__init__</vh></v>
 <v t="ekr.20221118072831.562"><vh>_MoveTools.remove_old_imports</vh>
 <v t="ekr.20221118072831.563"><vh>_MoveTools.__call__</vh></v>
@@ -2586,10 +2587,10 @@
 <v t="ekr.20221118072831.568"><vh>_MoveTools.new_source</vh></v>
 <v t="ekr.20221118072831.569"><vh>_MoveTools.add_imports</vh></v>
 </v>
-<v t="ekr.20221118072831.570"><vh>_add_imports_to_module</vh></v>
-<v t="ekr.20221118072831.571"><vh>moving_code_with_imports</vh></v>
-<v t="ekr.20221118072831.572"><vh>class ModuleSkipRenamerHandle</vh></v>
-<v t="ekr.20221118072831.573"><vh>class ModuleSkipRenamer</vh>
+<v t="ekr.20221118072831.570"><vh>function: move._add_imports_to_module</vh></v>
+<v t="ekr.20221118072831.571"><vh>function: move.moving_code_with_imports</vh></v>
+<v t="ekr.20221118072831.572"><vh>class move.ModuleSkipRenamerHandle</vh></v>
+<v t="ekr.20221118072831.573"><vh>class move.ModuleSkipRenamer</vh>
 <v t="ekr.20221118072831.574"><vh>ModuleSkipRenamer.__init__</vh></v>
 <v t="ekr.20221118072831.575"><vh>ModuleSkipRenamer.get_changed_module</vh></v>
 </v>
@@ -2818,6 +2819,7 @@
 </v>
 <v t="ekr.20221118072831.786"><vh>@clean restructure.py</vh>
 <v t="ekr.20221118072831.787"><vh>class Restructure</vh>
+<v t="ekr.20230209133950.1"><vh>&lt;&lt; docstring: class restructure.Restructure &gt;&gt;</vh></v>
 <v t="ekr.20221118072831.788"><vh>Restructure.__init__</vh></v>
 <v t="ekr.20221118072831.789"><vh>Restructure.get_changes</vh></v>
 <v t="ekr.20221118072831.790"><vh>Restructure._compute_changes</vh></v>
@@ -2840,14 +2842,14 @@
 </v>
 </v>
 <v t="ekr.20221118072831.805"><vh>@clean similarfinder.py</vh>
-<v t="ekr.20221118072831.806"><vh>class BadNameInCheckError</vh></v>
-<v t="ekr.20221118072831.807"><vh>class SimilarFinder</vh>
+<v t="ekr.20221118072831.806"><vh>class similarfinder.BadNameInCheckError</vh></v>
+<v t="ekr.20221118072831.807"><vh>class similarfinder.SimilarFinder</vh>
 <v t="ekr.20221118072831.808"><vh>SimilarFinder.__init__</vh></v>
 <v t="ekr.20221118072831.809"><vh>SimilarFinder.get_matches</vh></v>
 <v t="ekr.20221118072831.810"><vh>SimilarFinder.get_match_regions</vh></v>
 <v t="ekr.20221118072831.811"><vh>SimilarFinder._does_match</vh></v>
 </v>
-<v t="ekr.20221118072831.812"><vh>class RawSimilarFinder</vh>
+<v t="ekr.20221118072831.812"><vh>class similarfinder.RawSimilarFinder</vh>
 <v t="ekr.20221118072831.813"><vh>RawSimilarFinder.__init__</vh></v>
 <v t="ekr.20221118072831.814"><vh>RawSimilarFinder._simple_does_match</vh></v>
 <v t="ekr.20221118072831.815"><vh>RawSimilarFinder._init_using_ast</vh></v>
@@ -2856,7 +2858,7 @@
 <v t="ekr.20221118072831.818"><vh>RawSimilarFinder._create_pattern</vh></v>
 <v t="ekr.20221118072831.819"><vh>RawSimilarFinder._replace_wildcards</vh></v>
 </v>
-<v t="ekr.20221118072831.820"><vh>class _ASTMatcher</vh>
+<v t="ekr.20221118072831.820"><vh>class similarfinder._ASTMatcher</vh>
 <v t="ekr.20221118072831.821"><vh>_ASTMatcher.__init__</vh></v>
 <v t="ekr.20221118072831.822"><vh>_ASTMatcher.find_matches</vh></v>
 <v t="ekr.20221118072831.823"><vh>_ASTMatcher._check_node</vh></v>
@@ -2868,14 +2870,14 @@
 <v t="ekr.20221118072831.829"><vh>_ASTMatcher._match_stmts</vh></v>
 <v t="ekr.20221118072831.830"><vh>_ASTMatcher._match_wildcard</vh></v>
 </v>
-<v t="ekr.20221118072831.831"><vh>class Match</vh>
+<v t="ekr.20221118072831.831"><vh>class similarfinder.Match</vh>
 <v t="ekr.20221118072831.832"><vh>Match.__init__</vh></v>
 <v t="ekr.20221118072831.833"><vh>Match.get_region</vh></v>
 <v t="ekr.20221118072831.834"><vh>Match.get_ast</vh></v>
 </v>
-<v t="ekr.20221118072831.835"><vh>class ExpressionMatch</vh></v>
-<v t="ekr.20221118072831.836"><vh>class StatementMatch</vh></v>
-<v t="ekr.20221118072831.837"><vh>class CodeTemplate</vh>
+<v t="ekr.20221118072831.835"><vh>class similarfinder.ExpressionMatch</vh></v>
+<v t="ekr.20221118072831.836"><vh>class similarfinder.StatementMatch</vh></v>
+<v t="ekr.20221118072831.837"><vh>class similarfinder.CodeTemplate</vh>
 <v t="ekr.20221118072831.838"><vh>CodeTemplate.__init__</vh></v>
 <v t="ekr.20221118072831.839"><vh>CodeTemplate._find_names</vh></v>
 <v t="ekr.20221118072831.840"><vh>CodeTemplate.get_names</vh></v>
@@ -2883,7 +2885,7 @@
 <v t="ekr.20221118072831.842"><vh>CodeTemplate._match_pattern = None</vh></v>
 <v t="ekr.20221118072831.843"><vh>CodeTemplate._get_pattern</vh></v>
 </v>
-<v t="ekr.20221118072831.844"><vh>class _RopeVariable</vh>
+<v t="ekr.20221118072831.844"><vh>class similarfinder._RopeVariable</vh>
 <v t="ekr.20221118072831.845"><vh>_RopeVariable.get_var</vh></v>
 <v t="ekr.20221118072831.846"><vh>_RopeVariable.is_var</vh></v>
 <v t="ekr.20221118072831.847"><vh>_RopeVariable.get_base</vh></v>
@@ -2892,10 +2894,10 @@
 <v t="ekr.20221118072831.850"><vh>_RopeVariable._is_normal</vh></v>
 <v t="ekr.20221118072831.851"><vh>_RopeVariable._is_var</vh></v>
 </v>
-<v t="ekr.20221118072831.852"><vh>make_pattern</vh>
+<v t="ekr.20221118072831.852"><vh>function: similarfinder.make_pattern</vh>
 <v t="ekr.20221118072831.853"><vh>does_match</vh></v>
 </v>
-<v t="ekr.20221118072831.854"><vh>_pydefined_to_str</vh></v>
+<v t="ekr.20221118072831.854"><vh>function: similarfinder._pydefined_to_str</vh></v>
 </v>
 <v t="ekr.20221118072831.855"><vh>@clean sourceutils.py</vh>
 <v t="ekr.20221118072831.856"><vh>get_indents</vh></v>
@@ -2947,7 +2949,7 @@
 </v>
 </v>
 <v t="ekr.20221118072831.897"><vh>@clean usefunction.py</vh>
-<v t="ekr.20221118072831.898"><vh>class UseFunction</vh>
+<v t="ekr.20221118072831.898"><vh>class usefunction.UseFunction</vh>
 <v t="ekr.20221118072831.899"><vh>UseFunction.__init__</vh></v>
 <v t="ekr.20221118072831.900"><vh>UseFunction._check_returns</vh></v>
 <v t="ekr.20221118072831.901"><vh>UseFunction.get_changes</vh></v>
@@ -5227,7 +5229,9 @@
 <v t="ekr.20221118072831.3006"><vh>class _ResultChecker</vh>
 <v t="ekr.20221118072831.3007"><vh>_ResultChecker.__init__</vh></v>
 <v t="ekr.20221118072831.3008"><vh>_ResultChecker.check_region</vh></v>
-<v t="ekr.20221118072831.3009"><vh>_ResultChecker._find_node</vh></v>
+<v t="ekr.20221118072831.3009"><vh>_ResultChecker._find_node</vh>
+<v t="ekr.20230209134210.1"><vh>&lt;&lt; docstring: patchedasttest._ResultChecker._find_node &gt;&gt;</vh></v>
+</v>
 <v t="ekr.20221118072831.3011"><vh>_ResultChecker.check_children</vh></v>
 </v>
 </v>
@@ -5468,11 +5472,13 @@
 </v>
 <v t="ekr.20221230095543.1"><vh>Recent files</vh>
 <v t="ekr.20230127101717.1"><vh>--- inference files</vh>
+<v t="ekr.20221118072830.316"></v>
 <v t="ekr.20221118072830.588"></v>
+<v t="ekr.20221212141427.1"></v>
 <v t="ekr.20221118072830.640"></v>
 <v t="ekr.20221118072830.707"></v>
 <v t="ekr.20221118072830.824"></v>
-<v t="ekr.20221212141427.1"></v>
+<v t="ekr.20221118072830.1271"></v>
 </v>
 <v t="ekr.20221118072830.10"></v>
 <v t="ekr.20230205062902.1"></v>
@@ -5498,25 +5504,18 @@
 <v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
 <v t="ekr.20221118072830.1500"></v>
 </v>
-<v t="ekr.20230208140908.1"><vh>=== PR 661: tracing_utils</vh>
+<v t="ekr.20230208140908.1"><vh>=== PR #661: tracing_utils</vh>
 <v t="ekr.20230208141410.1"><vh>tracing_utils.get_ctor_name (no longer used)</vh></v>
 </v>
 </v>
 </v>
 <v t="ekr.20230204215129.1"><vh>=== PR 660: Theory of operation</vh>
-<v t="ekr.20230209030735.1"><vh>Questions</vh></v>
+<v t="ekr.20230210054447.1"><vh>To do: more</vh></v>
+<v t="ekr.20230210054631.1"><vh>What is the unit test trying to tell me?</vh></v>
+<v t="ekr.20230209030735.1"><vh>To do: Answer these questions</vh></v>
 <v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
 <v t="ekr.20230207042155.1"><vh>Recommendations</vh></v>
 <v t="ekr.20230204222405.1"></v>
-<v t="ekr.20230101055129.1"><vh>--- docstrings</vh>
-<v t="ekr.20221118073540.1"></v>
-<v t="ekr.20230101190225.1"></v>
-<v t="ekr.20230104075047.1"></v>
-<v t="ekr.20221118072831.787"></v>
-<v t="ekr.20230104023141.1"></v>
-<v t="ekr.20221118072831.822"></v>
-<v t="ekr.20221118072831.3009"></v>
-</v>
 <v t="ekr.20230129234930.1"><vh>--- ivars (do not delete)</vh></v>
 <v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
 <v t="ekr.20221118072830.458"></v>
@@ -5526,6 +5525,14 @@
 <v t="ekr.20221118072830.1255"></v>
 <v t="ekr.20221118072830.1256"></v>
 <v t="ekr.20221118072830.1257"></v>
+</v>
+<v t="ekr.20230101055129.1"><vh>--- docstrings</vh>
+<v t="ekr.20221118073540.1"></v>
+<v t="ekr.20230101190225.1"></v>
+<v t="ekr.20230104075047.1"></v>
+<v t="ekr.20230209133950.1"></v>
+<v t="ekr.20230209134210.1"></v>
+<v t="ekr.20230104023141.1"></v>
 </v>
 <v t="ekr.20230130094034.1"><vh>--- prevent_recursion</vh>
 <v t="ekr.20221118072830.1503"></v>
@@ -5547,14 +5554,29 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230209073605.1"><vh>--- disambiguate g.trace</vh>
-<v t="ekr.20230129011359.2"></v>
-<v t="ekr.20230129011359.3"></v>
-<v t="ekr.20230129011359.4"></v>
-<v t="ekr.20230129013407.1"></v>
-<v t="ekr.20230129011432.1"></v>
-<v t="ekr.20221118072830.693"></v>
-<v t="ekr.20221118072830.692"></v>
+<v t="ekr.20230107173006.1"><vh>--- test study (do not delete)</vh>
+<v t="ekr.20230201152803.1"><vh>--- Part 1: setUp</vh>
+<v t="ekr.20230201054651.1"><vh>--- setUp: calls testutils.sample_project()</vh>
+<v t="ekr.20221118072831.1485"></v>
+</v>
+<v t="ekr.20230201054723.1"><vh>--- sample_project: instantiates rope.base.project.Project</vh>
+<v t="ekr.20221118072831.1920"></v>
+<v t="ekr.20221118072830.500"></v>
+<v t="ekr.20221118072830.501"></v>
+</v>
+</v>
+<v t="ekr.20230201152816.1"><vh>--- Part 2: the test</vh>
+<v t="ekr.20230201152705.1"><vh>--- scope = libutils.get_string_scope(...)</vh>
+<v t="ekr.20221118072830.460"></v>
+<v t="ekr.20221118072830.459"></v>
+</v>
+<v t="ekr.20230209090424.1"><vh>--- sample_scope = scope["Sample"]</vh></v>
+<v t="ekr.20230209091851.1"><vh>--- sample_scope.get_object()</vh></v>
+<v t="ekr.20230209091947.1"><vh>--- na_var_scope = scope["a_var"]</vh></v>
+<v t="ekr.20230209091852.1"><vh>--- a_var = a_var_scope.get_object()</vh></v>
+<v t="ekr.20230209092007.1"><vh>--- self.assertEqual(sample_class, a_var.get_type())</vh></v>
+</v>
+<v t="ekr.20221118072831.1487"></v>
 </v>
 <v t="ekr.20230104221451.1"><vh>--- classes (do not delete)</vh>
 <v t="ekr.20221118072830.56"></v>
@@ -5641,22 +5663,23 @@
 <v t="ekr.20230209071315.1"><vh>--- first traces</vh>
 <v t="ekr.20221118072831.1485"></v>
 <v t="ekr.20221118072830.543"></v>
+<v t="ekr.20221118072830.57"></v>
 </v>
+<v t="ekr.20230209140339.1"><vh>--- visitor traces</vh>
 <v t="ekr.20221118072830.753"></v>
 <v t="ekr.20221118072830.771"></v>
 <v t="ekr.20221118072830.813"></v>
 <v t="ekr.20221118072830.763"></v>
 <v t="ekr.20221118072830.809"></v>
 <v t="ekr.20221118072830.780"></v>
-<v t="ekr.20221118072830.57"></v>
+<v t="ekr.20230202130833.1"></v>
+</v>
+<v t="ekr.20230209140400.1"><vh>--- inferences traces</vh>
 <v t="ekr.20221118072830.656"></v>
-<v t="ekr.20221118072830.543"></v>
 <v t="ekr.20221118072830.589"></v>
+<v t="ekr.20230209140525.1"><vh>--- ctor traces</vh>
 <v t="ekr.20221118072830.729"></v>
 <v t="ekr.20221118072830.736"></v>
-<v t="ekr.20221118072830.692"></v>
-<v t="ekr.20221118072830.693"></v>
-<v t="ekr.20221118072830.699"></v>
 <v t="ekr.20221118072830.699"></v>
 <v t="ekr.20221118072830.672"></v>
 <v t="ekr.20221118072830.502"></v>
@@ -5664,33 +5687,167 @@
 <v t="ekr.20221217024942.2"></v>
 <v t="ekr.20221216152411.2"></v>
 <v t="ekr.20221118072830.642"></v>
-<v t="ekr.20230202130833.1"></v>
 </v>
 </v>
-<v t="ekr.20230107173006.1"><vh>--- test study (do not delete)</vh>
-<v t="ekr.20230201152803.1"><vh>--- Part 1: setUp</vh>
-<v t="ekr.20230201054651.1"><vh>--- setUp: calls testutils.sample_project()</vh>
-<v t="ekr.20221118072831.1485"></v>
+<v t="ekr.20230209140632.1"><vh>--- _ConcludedData traces</vh>
+<v t="ekr.20221118072830.693"></v>
+<v t="ekr.20221118072830.692"></v>
 </v>
-<v t="ekr.20230201054723.1"><vh>--- sample_project: instantiates rope.base.project.Project</vh>
-<v t="ekr.20221118072831.1920"></v>
-<v t="ekr.20221118072830.500"></v>
-<v t="ekr.20221118072830.501"></v>
-</v>
-</v>
-<v t="ekr.20230201152816.1"><vh>--- Part 2: the test</vh>
-<v t="ekr.20230201152705.1"><vh>--- scope = libutils.get_string_scope(...)</vh>
-<v t="ekr.20221118072830.460"></v>
-<v t="ekr.20221118072830.459"></v>
-</v>
-<v t="ekr.20230209090424.1"><vh>--- sample_scope = scope["Sample"]</vh></v>
-<v t="ekr.20230209091851.1"><vh>--- sample_scope.get_object()</vh></v>
-<v t="ekr.20230209091947.1"><vh>--- na_var_scope = scope["a_var"]</vh></v>
-<v t="ekr.20230209091852.1"><vh>--- a_var = a_var_scope.get_object()</vh></v>
-<v t="ekr.20230209092007.1"><vh>--- self.assertEqual(sample_class, a_var.get_type())</vh></v>
+<v t="ekr.20230209135315.1"><vh>--- get_names traces</vh>
+<v t="ekr.20221118072830.862"></v>
+<v t="ekr.20221118072830.873"></v>
+<v t="ekr.20221118072830.854"></v>
+<v t="ekr.20221118072830.827"></v>
+<v t="ekr.20221118072830.823"></v>
+<v t="ekr.20221118072830.895"></v>
 </v>
 </v>
-<v t="ekr.20221118072831.1487"></v>
+<v t="ekr.20230209165650.1"><vh>--- names: PyName, AssignedName</vh>
+<v t="ekr.20221118072830.592"></v>
+<v t="ekr.20221217024942.1"></v>
+<v t="ekr.20221118072830.833"></v>
+<v t="ekr.20221118072830.827"></v>
+<v t="ekr.20221118072830.728"></v>
+<v t="ekr.20221118072830.673"></v>
+<v t="ekr.20230209143240.1"></v>
+</v>
+<v t="ekr.20230209165736.1"><vh>------ test visitors</vh>
+<v t="ekr.20221118072830.770"></v>
+<v t="ekr.20221118072830.790"></v>
+<v t="ekr.20221118072830.671"></v>
+<v t="ekr.20221118072830.592"></v>
+<v t="ekr.20221118072830.782"></v>
+<v t="ekr.20221118072830.783"></v>
+</v>
+</v>
+<v t="ekr.20230209173843.1"><vh>--- Found 78: PyObject</vh>
+<v t="ekr.20230210043243.1"><vh>--- super.__init__</vh>
+<v t="ekr.20221118072830.725"></v>
+</v>
+<v t="ekr.20230210042639.1"><vh>--- wrapped calls to PyObject methods</vh>
+<v t="ekr.20221118072830.654"></v>
+<v t="ekr.20221118072830.608"></v>
+<v t="ekr.20221217024942.6"></v>
+</v>
+<v t="ekr.20230210041939.1"><vh>--- PyObject args</vh>
+<v t="ekr.20221118072831.1084"></v>
+<v t="ekr.20221118072831.1074"></v>
+<v t="ekr.20221118072830.1432"></v>
+<v t="ekr.20221118072831.1037"></v>
+<v t="ekr.20221118072830.1289"></v>
+</v>
+<v t="ekr.20230210043703.1"><vh>--- Return PyObject dict</vh>
+<v t="ekr.20221118072831.793"></v>
+</v>
+<v t="ekr.20230210042249.1"><vh>--- Returns PyObject or PyDefinedObject</vh>
+<v t="ekr.20230210044721.1"><vh>13 __call__ methods</vh>
+<v t="ekr.20221118072830.1422"></v>
+<v t="ekr.20221118072830.1452"></v>
+<v t="ekr.20221118072830.1468"></v>
+<v t="ekr.20221118072830.1384"></v>
+<v t="ekr.20221118072830.1409"></v>
+<v t="ekr.20221118072830.1416"></v>
+<v t="ekr.20221118072830.1426"></v>
+<v t="ekr.20221118072830.1446"></v>
+<v t="ekr.20221118072830.1475"></v>
+<v t="ekr.20221118072830.1479"></v>
+<v t="ekr.20221118072830.1419"></v>
+<v t="ekr.20221118072830.1429"></v>
+<v t="ekr.20221118072830.1449"></v>
+</v>
+<v t="ekr.20230210042750.1"><vh> 3 __call__ methods raise NotImplemented</vh>
+<v t="ekr.20221118072830.1459"></v>
+<v t="ekr.20221118072830.1455"></v>
+<v t="ekr.20221118072830.1457"></v>
+</v>
+<v t="ekr.20221118072830.1407"></v>
+</v>
+<v t="ekr.20230210042043.1"><vh>--- Returns PyObject</vh>
+<v t="ekr.20221118072830.480"></v>
+<v t="ekr.20221118072830.1273"></v>
+<v t="ekr.20221118072830.1272"></v>
+<v t="ekr.20221118072830.551"></v>
+<v t="ekr.20221118072830.555"></v>
+<v t="ekr.20221118072830.590"></v>
+<v t="ekr.20221118072830.1311"></v>
+<v t="ekr.20221118072830.1327"></v>
+</v>
+<v t="ekr.20230210041856.1"><vh>--- 16 instantiates PyObject</vh>
+<v t="ekr.20230210045320.1"><vh>--- 3 ctors</vh>
+<v t="ekr.20221118072830.156"></v>
+<v t="ekr.20221118072830.138"></v>
+<v t="ekr.20221118072830.124"></v>
+</v>
+<v t="ekr.20230210045347.1"><vh>--- 3 visitors</vh>
+<v t="ekr.20221118072830.783"></v>
+<v t="ekr.20221118072830.1261"></v>
+<v t="ekr.20221118072830.335"></v>
+</v>
+<v t="ekr.20230210045623.1"><vh>--- 9 functions</vh>
+<v t="ekr.20221118072830.84"></v>
+<v t="ekr.20221118072830.161"></v>
+<v t="ekr.20221118072830.181"></v>
+<v t="ekr.20221118072830.655"></v>
+<v t="ekr.20221118072830.1283"></v>
+<v t="ekr.20221118072830.1282"></v>
+<v t="ekr.20221118072830.1274"></v>
+<v t="ekr.20221118072830.1278"></v>
+<v t="ekr.20221118072830.1275"></v>
+</v>
+<v t="ekr.20221118072830.339"></v>
+</v>
+</v>
+<v t="ekr.20230210050228.1"><vh>--- Found 49:PyFunction</vh>
+<v t="ekr.20230210050827.1"><vh>--- 2 classes (Confusion!)</vh>
+<v t="ekr.20221118072830.688"></v>
+<v t="ekr.20221118072830.708"></v>
+</v>
+<v t="ekr.20230210051703.1"><vh>--- instantiate PyFunction</vh>
+<v t="ekr.20221118072830.712"></v>
+<v t="ekr.20221118072830.783"></v>
+</v>
+<v t="ekr.20230210052916.1"><vh>--- tests isinstance</vh>
+<v t="ekr.20221118072831.513"></v>
+<v t="ekr.20221118072830.1597"></v>
+<v t="ekr.20221118072830.36"></v>
+<v t="ekr.20221118072831.420"></v>
+<v t="ekr.20221118072830.1404"></v>
+<v t="ekr.20221118072830.1402"></v>
+<v t="ekr.20221118072831.505"></v>
+</v>
+<v t="ekr.20230210052015.1"><vh>--- uses isinstance(PyFunction)</vh>
+<v t="ekr.20230210052439.1"><vh>--- 8 refactoring</vh>
+<v t="ekr.20221118072831.175"></v>
+<v t="ekr.20221118072831.176"></v>
+<v t="ekr.20221118072830.1574"></v>
+<v t="ekr.20221118072830.1571"></v>
+<v t="ekr.20221118072830.1575"></v>
+<v t="ekr.20221118072830.1568"></v>
+<v t="ekr.20221118072831.777"></v>
+<v t="ekr.20221118072831.899"></v>
+</v>
+<v t="ekr.20221118072831.408"></v>
+<v t="ekr.20221118072831.407"></v>
+<v t="ekr.20221118072830.328"></v>
+<v t="ekr.20221118072830.1263"></v>
+</v>
+<v t="ekr.20230210050856.1"><vh>--- visitors: raise NotImplemented</vh>
+<v t="ekr.20221118072830.1455"></v>
+<v t="ekr.20221118072830.1457"></v>
+</v>
+<v t="ekr.20230210051923.1"><vh>--- PyFunction arg</vh>
+<v t="ekr.20230210053353.1"><vh>--- __call__ methods...</vh>
+<v t="ekr.20221118072830.1416"></v>
+<v t="ekr.20221118072830.1426"></v>
+<v t="ekr.20221118072830.1446"></v>
+<v t="ekr.20221118072830.1419"></v>
+<v t="ekr.20221118072830.1429"></v>
+<v t="ekr.20221118072830.1449"></v>
+</v>
+<v t="ekr.20221118072830.1272"></v>
+<v t="ekr.20221118072830.1273"></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20221118072614.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -15327,11 +15484,11 @@ if TYPE_CHECKING:
         self.object_info = rope.base.oi.objectinfo.ObjectInfoManager(project)
         self._init_python_files()
         self._init_automatic_soa()
-        if 1:  # trace
+        if 0:  # trace
             # This will be the first enabled print statement,
             # if there is no trace in any setUp method.
             print("\n")
-        if 1:  # trace
+        if 0:  # trace
             print(g.format_ctor("PyCore", __file__))
 
     @others
@@ -15607,8 +15764,8 @@ def get_python_files(self):
     self.name = name
     self.pycore = pycore
     self.initial = initial
-    if 1:  # trace
-        print(g.format_ctor("pyobjects.PyObject", __file__), name)
+    if 0:  # trace
+        print(g.format_ctor("builtins.BuiltinModule", __file__), name)
 
 </t>
 <t tx="ekr.20221118072830.570">@utils.deprecated("Use `libutils.modname` instead")
@@ -15788,6 +15945,8 @@ assert g
 </t>
 <t tx="ekr.20221118072830.589">class PyName:
     """References to `PyObject` inside python programs"""
+
+    ### Holds analysis of assignments statements.
 
     if 1:  # trace (temp ctor)
 
@@ -16126,7 +16285,7 @@ assert g
     if type_ is None:
         type_ = self
 
-    if 1:  # trace
+    if 0:  # trace
         if not hasattr(self, "type") or type_ != self.type:
             if "builtins" not in g.callers():
                 print(
@@ -16332,7 +16491,11 @@ assert g
     self.attributes = self.get_module()._get_concluded_data()
     self.defineds = None
     if 1:  # trace  # trace
-        print(g.format_ctor("DefinedObject", __file__), ast_node)
+        # print('')
+        print(
+            g.format_ctor("PyDefinedObject", __file__),
+            f"ast_node: {ast_node.__class__.__name__}",
+        )
 
 </t>
 <t tx="ekr.20221118072830.673">def __repr__(self):
@@ -16470,7 +16633,7 @@ def parent(self):
 </t>
 <t tx="ekr.20221118072830.692">def __init__(self):
     self.data_ = None
-    if 1:  # trace
+    if 0:  # trace
         ###
         # import re
         # pat = re.compile(r"_?[A-Z]")
@@ -16486,10 +16649,11 @@ def parent(self):
 </t>
 <t tx="ekr.20221118072830.693">def set(self, data):
     self.data_ = data
-    if 1:  # trace
+    if 0:  # trace:  now done in the get_names methods of Scopes.
         tag = f"_ConcludedData.set: {id(self)}"
         n = 2 if isinstance(data, (dict, list, set)) else 4
         print(f"{tag} {data.__class__.__name__:&lt;14}", g.callers(n))
+        print(g.to_string(data))
 
 </t>
 <t tx="ekr.20221118072830.694">def get(self):
@@ -16515,7 +16679,7 @@ data = property(get, set)
     self.concluded_data = []
     AbstractModule.__init__(self)
     PyDefinedObject.__init__(self, pycore, ast_node, None)
-    if 1:  # trace  # trace
+    if 0:  # trace  # trace
         print(g.format_ctor("PyModule", __file__))
 
 </t>
@@ -16752,7 +16916,7 @@ def decorators(self):
     self.parent = parent
     self._superclasses = self.get_module()._get_concluded_data()
     if 1:  # trace
-        print(g.format_ctor("PyClass", __file__), ast_node.name)
+        print(g.format_ctor("PyClass", __file__), "node.name:", ast_node.name)
 
 </t>
 <t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.AbstractFunction):
@@ -16813,7 +16977,7 @@ def decorators(self):
     self.star_imports = []
     self.visitor_class = _GlobalVisitor
     self.coding = fscommands.read_str_coding(self.source_code)
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("PyModule", __file__))
     super().__init__(pycore, node, resource)
 
@@ -16965,7 +17129,7 @@ def logical_lines(self):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
     self.type_hint = None
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_AnnAssignVisitor", __file__))
 
 </t>
@@ -17023,7 +17187,7 @@ def logical_lines(self):
 </t>
 <t tx="ekr.20221118072830.763">def __init__(self, scope_visitor: ast.RopeNodeVisitor):
     self.scope_visitor = scope_visitor
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_ExpressionVisitor", __file__))
 
 </t>
@@ -17065,11 +17229,13 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.771">def __init__(self, scope_visitor: ast.RopeNodeVisitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_AssignVisitor", __file__))
 
 </t>
-<t tx="ekr.20221118072830.772">def _Assign(self, node):
+<t tx="ekr.20221118072830.772"># Assign(expr* targets, expr value, string? type_comment)
+
+def _Assign(self, node):
     self.assigned_ast = node.value
     for child_node in node.targets:
         self.visit(child_node)
@@ -17080,14 +17246,18 @@ def logical_lines(self):
     self.scope_visitor._assigned(name, assignment)
 
 </t>
-<t tx="ekr.20221118072830.774">def _Name(self, node):
+<t tx="ekr.20221118072830.774"># Name(identifier id, expr_context ctx)
+
+def _Name(self, node):
     assignment = None
     if self.assigned_ast is not None:
         assignment = pynamesdef.AssignmentValue(self.assigned_ast)
     self._assigned(node.id, assignment)
 
 </t>
-<t tx="ekr.20221118072830.775">def _Tuple(self, node):
+<t tx="ekr.20221118072830.775"># Tuple(expr* elts, expr_context ctx)
+
+def _Tuple(self, node):
     names = nameanalyze.get_name_levels(node)
     for name, levels in names:
         assignment = None
@@ -17124,7 +17294,7 @@ def logical_lines(self):
     self.owner_object = owner_object
     self.names = {}
     self.defineds = []
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_ScopeVisitor", __file__))
 
 </t>
@@ -17138,18 +17308,17 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.782">def _ClassDef(self, node):
     pyclass = PyClass(self.pycore, node, self.owner_object)
     self.names[node.name] = pynamesdef.DefinedName(pyclass)
-    if 0:
-        print(g.format("def _ClassDef", "_ScopeVisitor", "_ClassDef"), node.name)
+    if 1:
+        print("")
+        g.trace(
+            f"ScopeVisitor._ClassDef: NEW DefinedName: {node.name}: "
+            f"{self.names[node.name]}\n"
+        )
     self.defineds.append(pyclass)
 
 </t>
 <t tx="ekr.20221118072830.783">def _FunctionDef(self, node):
     pyfunction = PyFunction(self.pycore, node, self.owner_object)
-
-    if 0:
-        print(
-            g.format("def _FunctionDef", "_ScopeVisitor", "_FunctionDef"), node.name
-        )
 
     for decorator in pyfunction.decorators:
         if isinstance(decorator, ast.Name) and decorator.id == "property":
@@ -17172,6 +17341,13 @@ def logical_lines(self):
                 break
     else:
         self.names[node.name] = pynamesdef.DefinedName(pyfunction)
+
+        if 1:
+            print("")
+            g.trace(
+                f"ScopeVisitor._FunctionDef: NEW DefinedName: {node.name}: "
+                f"{self.names[node.name]}\n"
+            )
     self.defineds.append(pyfunction)
 
 </t>
@@ -17209,9 +17385,17 @@ def logical_lines(self):
     pyname = self.names.get(name, None)
     if pyname is None:
         pyname = pynamesdef.AssignedName(module=self.get_module())
+        if 1:  # trace
+            print("")
+            g.trace(f"ScopeVisitor._assigned: NEW pyname: {pyname}")
     if isinstance(pyname, pynamesdef.AssignedName):
         if assignment is not None:
             pyname.assignments.append(assignment)
+            if 1:  # trace
+                g.trace(
+                    f"ScopeVisitor._assigned: NEW append to assignments: {assignment}"
+                )
+                # print("")
         self.names[name] = pyname
 
 </t>
@@ -17374,7 +17558,7 @@ def get_attributes(self):
     super().__init__(pycore, owner_object)
     self.returned_asts = []
     self.generator = False
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_FunctionVisitor", __file__))
 
 </t>
@@ -17419,7 +17603,7 @@ def get_attributes(self):
 <t tx="ekr.20221118072830.813">def __init__(self, scope_visitor, self_name):
     super().__init__(scope_visitor)
     self.self_name = self_name
-    if 1:  # trace
+    if 0:  # trace
         print(g.format_ctor("_ClassInitVisitor", __file__))
 
 </t>
@@ -17486,6 +17670,12 @@ def get_attributes(self):
     for name in imported:
         if not name.startswith("_"):
             result[name] = pynamesdef.ImportedName(self.imported_module, name)
+    if 1:  # trace
+        data = result
+        tag = "StarImport.get_names"
+        # n = 2 if isinstance(data, (dict, list, set)) else 4
+        print(f"{tag:&gt;20} {data.__class__.__name__:&lt;14}", g.callers(4))
+        print(g.to_string(data))
     return result
 </t>
 <t tx="ekr.20221118072830.824">@path rope/base/
@@ -17512,6 +17702,18 @@ assert g
 </t>
 <t tx="ekr.20221118072830.827">def get_names(self):
     """Return the names defined or imported in this scope"""
+    if 1:  # trace
+        data = self.pyobject.get_attributes()
+        # print("Scope.get_names", g.callers(6))
+        try:
+            # Fails in general...
+            for z in data:
+                print(
+                    f"{z:&gt;10} {data[z].__class__.__name__:&lt;12} pyobject: {data[z].pyobject}"
+                )
+            print("")
+        except Exception:
+            print(f"\n{g.to_string(data)}\n")
     return self.pyobject.get_attributes()
 
 </t>
@@ -17697,6 +17899,12 @@ def _calculate_scope_regions(self):
         result = dict(self.builtin_names)
         result.update(super().get_names())
         self.names.set(result)
+    if 0:  # trace
+        data = self.names.get()
+        tag = "GlobalScope.get_names"
+        # n = 2 if isinstance(data, (dict, list, set)) else 4
+        print(f"{tag:&gt;20} {data.__class__.__name__:&lt;14}", g.callers(4))
+        print(g.to_string(data))
     return self.names.get()
 
 </t>
@@ -17743,6 +17951,13 @@ def builtin_names(self):
 
 </t>
 <t tx="ekr.20221118072830.862">def get_names(self):
+    if 1:  # trace
+        data = self._get_names()
+        tag = "ComprehensionScope.get_names"
+        # n = 2 if isinstance(data, (dict, list, set)) else 4
+        print(f"{tag:&gt;20} {data.__class__.__name__:&lt;14}", g.callers(4))
+        print(g.to_string(data, indent=4))
+
     return self._get_names()
 
 </t>
@@ -17831,6 +18046,12 @@ def builtin_names(self):
 
 </t>
 <t tx="ekr.20221118072830.873">def get_names(self):
+    if 1:  # trace
+        data = self._get_names()
+        tag = "FunctionScope.get_names"
+        # n = 2 if isinstance(data, (dict, list, set)) else 4
+        print(f"{tag:&gt;20} {data.__class__.__name__:&lt;14}", g.callers(4))
+        print(g.to_string(data))
     return self._get_names()
 
 </t>
@@ -17992,6 +18213,12 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.895">def get_names(self):
+    if 1:  # trace
+        data = self.names
+        tag = "TemporaryScope.get_names"
+        # n = 2 if isinstance(data, (dict, list, set)) else 4
+        print(f"{tag:&gt;20} {data.__class__.__name__:&lt;14}", g.callers(4))
+        print(g.to_string(data))
     return self.names
 
 </t>
@@ -45925,32 +46152,7 @@ def test_match_node_with_match_mapping_match_as(self):
 
 </t>
 <t tx="ekr.20221118072831.3009">def _find_node(self, text):
-    """
-    Find the node in `self.ast` whose type is named in `text`.
-
-    :param text: ast node name
-
-    Generally, the test should only have a single matching node, as it make
-    the test much harder to understand when there may be multiple matches.
-
-    If `self.ast` contains more than one nodes that matches `text`, then
-    the **outer-most last match** takes precedence.
-
-    For example, given that we are looking for `ast.Call` node:
-
-        checker._find_node("Call")
-
-    and given that `self.ast` is the AST for this code:
-
-        func_a(1, func_b(2, 3)) + func_c(4, func_d(5, 6))
-
-    the outer-most last match would be the ast node representing this bit:
-
-        func_c(4, func_d(5, 6))
-
-    Note that the order of traversal is based on the order of ast nodes,
-    which usually, but not always, match textual order.
-    """
+    &lt;&lt; docstring: patchedasttest._ResultChecker._find_node &gt;&gt;
     goal = text
     if not isinstance(text, (tuple, list)):
         goal = [text]
@@ -55652,70 +55854,7 @@ from rope.refactor.importutils import module_imports
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072831.787">class Restructure:
-    """A class to perform python restructurings
-
-    A restructuring transforms pieces of code matching `pattern` to
-    `goal`.  In the `pattern` wildcards can appear.  Wildcards match
-    some piece of code based on their kind and arguments that are
-    passed to them through `args`.
-
-    `args` is a dictionary of wildcard names to wildcard arguments.
-    If the argument is a tuple, the first item of the tuple is
-    considered to be the name of the wildcard to use; otherwise the
-    "default" wildcard is used.  For getting the list arguments a
-    wildcard supports, see the pydoc of the wildcard.  (see
-    `rope.refactor.wildcard.DefaultWildcard` for the default
-    wildcard.)
-
-    `wildcards` is the list of wildcard types that can appear in
-    `pattern`.  See `rope.refactor.wildcards`.  If a wildcard does not
-    specify its kind (by using a tuple in args), the wildcard named
-    "default" is used.  So there should be a wildcard with "default"
-    name in `wildcards`.
-
-    `imports` is the list of imports that changed modules should
-    import.  Note that rope handles duplicate imports and does not add
-    the import if it already appears.
-
-    Example #1::
-
-      pattern ${pyobject}.get_attribute(${name})
-      goal ${pyobject}[${name}]
-      args pyobject: instance=rope.base.pyobjects.PyObject
-
-    Example #2::
-
-      pattern ${name} in ${pyobject}.get_attributes()
-      goal ${name} in {pyobject}
-      args pyobject: instance=rope.base.pyobjects.PyObject
-
-    Example #3::
-
-      pattern ${pycore}.create_module(${project}.root, ${name})
-      goal generate.create_module(${project}, ${name})
-
-      imports
-       from rope.contrib import generate
-
-      args
-       project: type=rope.base.project.Project
-
-    Example #4::
-
-      pattern ${pow}(${param1}, ${param2})
-      goal ${param1} ** ${param2}
-      args pow: name=mod.pow, exact
-
-    Example #5::
-
-      pattern ${inst}.longtask(${p1}, ${p2})
-      goal
-       ${inst}.subtask1(${p1})
-       ${inst}.subtask2(${p2})
-      args
-       inst: type=mod.A,unsure
-
-    """
+    &lt;&lt; docstring: class restructure.Restructure &gt;&gt;
 
     @others
 </t>
@@ -58905,7 +59044,10 @@ cd C:\Repos\ekr-clone-rope2
     )
     self.pyobject.set(pyobject)
     if 1:  # trace
-        print(g.format_ctor("pynamesdef.AssignedName", __file__), repr(pyobject))
+        print(
+            g.format_ctor("pynamesdef.AssignedName", __file__),
+            f"pyobject: {pyobject!r}",
+        )
 
 </t>
 <t tx="ekr.20221217024942.3">@utils.prevent_recursion(lambda: None)
@@ -59007,7 +59149,20 @@ def _get_inferred(self):
 
 
 </t>
-<t tx="ekr.20230101055129.1">@nosearch</t>
+<t tx="ekr.20230101055129.1">@nosearch
+@language rest
+@wrap
+
+oi/__init__.py
+
+`PyName` statements handle assignments.
+
+soi analyzes function calls in a scope when:
+- Saving [the ide's?] files
+- When the user asks to analyze a module.
+
+@language python
+</t>
 <t tx="ekr.20230101103406.1">@nosearch
 @language rest
 @wrap
@@ -59143,7 +59298,9 @@ You should have received a copy of the GNU Lesser General Public
 License along with this program.  If not, see
 &lt;https://www.gnu.org/licenses/&gt;."""
 </t>
-<t tx="ekr.20230104075047.1">"""Files and folders in a project are represented as resource objects.
+<t tx="ekr.20230104075047.1">@nosearch
+@language rest
+"""Files and folders in a project are represented as resource objects.
 
 Files and folders are access through `Resource` objects. `Resource` has
 two subclasses: `File` and `Folder`. What we care about is that
@@ -59213,7 +59370,7 @@ PR: https://github.com/python-rope/rope/pull//652
 <t tx="ekr.20230107173006.1">@language python
 </t>
 <t tx="ekr.20230127094605.1"></t>
-<t tx="ekr.20230127101717.1"># Found 5 marked nodes</t>
+<t tx="ekr.20230127101717.1"></t>
 <t tx="ekr.20230127102529.1"></t>
 <t tx="ekr.20230129005206.1">@language rest
 @wrap
@@ -59444,6 +59601,7 @@ Grammarly is not perfect:
 - It is obsessed with commas.
 - It does not catch large-scale writing blunders.</t>
 <t tx="ekr.20230129234930.1">@language python
+@nosearch
 
 # PyObject ivars:
 self.type
@@ -59826,7 +59984,8 @@ If necessary, define wrapper methods in the main soi traverser class to allow ov
     if not isinstance(obj, str):
         result = pprint.pformat(obj, indent=indent, width=width)
     elif "\n" not in obj:
-        result = repr(obj)
+        # result = repr(obj)
+        result = f"{' '*indent} {obj!r}"
     else:
         # Return the enumerated lines of the string.
         lines = "".join([f"  {i:4}: {z!r}\n" for i, z in enumerate(split_lines(obj))])
@@ -59896,7 +60055,9 @@ def saveit(func):
     return _wrapper
 
 cacheit = saveit</t>
-<t tx="ekr.20230201054651.1">       __init__      builtins.py:pyobjects.PyObject builtins
+<t tx="ekr.20230201054651.1">@nosearch
+
+       __init__      builtins.py:pyobjects.PyObject builtins
 ======================================================================== test session starts ========================================================================
 # [Snip]
 
@@ -59909,7 +60070,7 @@ after:  setUp</t>
 <t tx="ekr.20230201150627.1"></t>
 <t tx="ekr.20230201150728.1"></t>
 <t tx="ekr.20230201152705.1">@language rest
-@wrap
+@nosearch
 
 .. libutils.get_string_scope instantiates pyobjectsdef.PyModule.
 
@@ -59976,28 +60137,19 @@ test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&l
 @tabwidth -2
 
 PR: https://github.com/python-rope/rope/pull/660
-
 Doc branch:   ekr-theory-and-study
 Study branch: study
 
-*** What is the unit test trying to tell me???
-    self.assertEqual(sample_class, a_var.get_type())
-    1. a_var.get_type() *is the same as* sample_class.
-    2. sample_class is a pyobjectsdef.PyClass.
-       sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;
-  
-*** Answer the questions!!!
+To do:
 
-.. To do:
-- Read inference files like a book.
-- Make inheretance diagram for all inference objects.
-? Create global list for tracing?
-  Global function to dump this list.
-? Remove do nothing classes in complex class hierarchies?
-  Search for references to these classes.
+- Study soi.py and evaluate.py!
+- Study @_ignore_inferred.
+- Add annotations!
+
 
 @language python</t>
 <t tx="ekr.20230204222405.1">@language rest
+@nosearch
 .. _`python's ast module`: https://docs.python.org/3/library/ast.html
 .. |br| raw:: html
 
@@ -60080,6 +60232,8 @@ repos:
     name: Sort imports (Python)
 </t>
 <t tx="ekr.20230205060858.1">@language rest
+@nosearch
+
 .. https://youtu.be/NvV5OrVk24c
 
 Project: Tree of directories and files.
@@ -60175,7 +60329,7 @@ As far as type inference goes, we can mostly ignore everything else:
 <t tx="ekr.20230206074134.1"></t>
 <t tx="ekr.20230206074243.1"></t>
 <t tx="ekr.20230207040349.1">@language rest
-@wrap
+@nosearch
 
 .. Answer these questions in the study branch!
 
@@ -60203,6 +60357,7 @@ Here is the original unit test:
         self.assertEqual(sample_class, a_var.get_type())
 </t>
 <t tx="ekr.20230207041506.1">@language rest
+@nosearch
 
 And here is the same test, with added trace statements and comments:
 
@@ -60282,7 +60437,7 @@ And here is the same test, with added trace statements and comments:
         self.assertEqual(sample_class, a_var.get_type())
 </t>
 <t tx="ekr.20230207042155.1">@language rest
-@wrap
+@nosearch
 
 **Clashing class names**
 
@@ -60337,7 +60492,7 @@ g.execute_shell_commands('test-one-r')
 <t tx="ekr.20230208123900.1">def __init__(self, pyobject):
     self.pyobject = pyobject
     if 1:  # trace
-        print(g.format_ctor("DefinedName", __file__), repr(pyobject))
+        print(g.format_ctor("DefinedName", __file__), f"pyobject: {pyobject!r}")
 
 </t>
 <t tx="ekr.20230208140908.1">https://github.com/python-rope/rope/pull/661</t>
@@ -60358,9 +60513,10 @@ g.execute_shell_commands('test-one-r')
 <t tx="ekr.20230209022051.1"></t>
 <t tx="ekr.20230209022510.1"></t>
 <t tx="ekr.20230209025936.1">@language python
-</t>
+
+# cff # trace will work.</t>
 <t tx="ekr.20230209030735.1">@language rest
-@wrap
+@nosearch
 
 - Startup: What inference data (if any) does it create?
 - Preprocessing: does it exist? What does it do?
@@ -60368,6 +60524,7 @@ g.execute_shell_commands('test-one-r')
 - What is `_Inferred`'s role?
 - What do all the data in `PyDefinedObject` mean?
 * What is an inference? a `PyDefinedObject`?
+
 </t>
 <t tx="ekr.20230209060030.1"></t>
 <t tx="ekr.20230209060055.1"></t>
@@ -60377,8 +60534,9 @@ g.execute_shell_commands('test-one-r')
 
 </t>
 <t tx="ekr.20230209071315.1"></t>
-<t tx="ekr.20230209073605.1"></t>
-<t tx="ekr.20230209090424.1">do: sample_scope = scope["Sample"]
+<t tx="ekr.20230209090424.1">@nosearch
+
+do: sample_scope = scope["Sample"]
 
        __init__  pyobjectsdef.py:_ExpressionVisitor
        __init__  pyobjectsdef.py:_ScopeVisitor
@@ -60400,7 +60558,9 @@ sample_scope: &lt;rope.base.pynamesdef.DefinedName object at 0x000001E05C856020&
 
 sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;
 </t>
-<t tx="ekr.20230209091852.1">do: a_var = a_var_scope.get_object()
+<t tx="ekr.20230209091852.1">@nosearch
+
+do: a_var = a_var_scope.get_object()
 
 _ConcludedData.set: 2539546288880 dict           pyobjects:get_attributes, __init__:newfunc
 _ConcludedData.set: 2539546287968 dict           pyscopes:get_names, pyscopes:get_names
@@ -60423,5 +60583,181 @@ a_var_scope: &lt;rope.base.pynamesdef.AssignedName object at 0x0000024F48C12710&
 <t tx="ekr.20230209092007.1">do: self.assertEqual(sample_class, a_var.get_type())
 
 sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;</t>
+<t tx="ekr.20230209133950.1">"""A class to perform python restructurings
+
+A restructuring transforms pieces of code matching `pattern` to
+`goal`.  In the `pattern` wildcards can appear.  Wildcards match
+some piece of code based on their kind and arguments that are
+passed to them through `args`.
+
+`args` is a dictionary of wildcard names to wildcard arguments.
+If the argument is a tuple, the first item of the tuple is
+considered to be the name of the wildcard to use; otherwise the
+"default" wildcard is used.  For getting the list arguments a
+wildcard supports, see the pydoc of the wildcard.  (see
+`rope.refactor.wildcard.DefaultWildcard` for the default
+wildcard.)
+
+`wildcards` is the list of wildcard types that can appear in
+`pattern`.  See `rope.refactor.wildcards`.  If a wildcard does not
+specify its kind (by using a tuple in args), the wildcard named
+"default" is used.  So there should be a wildcard with "default"
+name in `wildcards`.
+
+`imports` is the list of imports that changed modules should
+import.  Note that rope handles duplicate imports and does not add
+the import if it already appears.
+
+Example #1::
+
+  pattern ${pyobject}.get_attribute(${name})
+  goal ${pyobject}[${name}]
+  args pyobject: instance=rope.base.pyobjects.PyObject
+
+Example #2::
+
+  pattern ${name} in ${pyobject}.get_attributes()
+  goal ${name} in {pyobject}
+  args pyobject: instance=rope.base.pyobjects.PyObject
+
+Example #3::
+
+  pattern ${pycore}.create_module(${project}.root, ${name})
+  goal generate.create_module(${project}, ${name})
+
+  imports
+   from rope.contrib import generate
+
+  args
+   project: type=rope.base.project.Project
+
+Example #4::
+
+  pattern ${pow}(${param1}, ${param2})
+  goal ${param1} ** ${param2}
+  args pow: name=mod.pow, exact
+
+Example #5::
+
+  pattern ${inst}.longtask(${p1}, ${p2})
+  goal
+   ${inst}.subtask1(${p1})
+   ${inst}.subtask2(${p2})
+  args
+   inst: type=mod.A,unsure
+
+"""
+</t>
+<t tx="ekr.20230209134210.1">"""
+Find the node in `self.ast` whose type is named in `text`.
+
+:param text: ast node name
+
+Generally, the test should only have a single matching node, as it make
+the test much harder to understand when there may be multiple matches.
+
+If `self.ast` contains more than one nodes that matches `text`, then
+the **outer-most last match** takes precedence.
+
+For example, given that we are looking for `ast.Call` node:
+
+    checker._find_node("Call")
+
+and given that `self.ast` is the AST for this code:
+
+    func_a(1, func_b(2, 3)) + func_c(4, func_d(5, 6))
+
+the outer-most last match would be the ast node representing this bit:
+
+    func_c(4, func_d(5, 6))
+
+Note that the order of traversal is based on the order of ast nodes,
+which usually, but not always, match textual order.
+"""
+</t>
+<t tx="ekr.20230209135315.1">@nosearch
+
+</t>
+<t tx="ekr.20230209140339.1"></t>
+<t tx="ekr.20230209140400.1"></t>
+<t tx="ekr.20230209140525.1"></t>
+<t tx="ekr.20230209140632.1"></t>
+<t tx="ekr.20230209143240.1">if 0:  # trace
+    # Overried po.PyDefinedObject.__repr__
+
+    # return '&lt;{}.{} "{}" at {}&gt;'.format(
+    # self.__class__.__module__,
+    # self.__class__.__name__,
+    # self.absolute_name,
+    # hex(id(self)),
+    # )
+
+    def __repr__(self) -&gt; str:
+        return f"pyobjectsdef.PyClass: {self.absolute_name}"
+
+</t>
+<t tx="ekr.20230209165650.1"></t>
+<t tx="ekr.20230209165736.1">code = dedent("""\
+    class Sample(object):
+        pass
+    a_var = Sample()
+""")
+
+docstring: `PyName` (DefinedName??) statements handle assignments.
+
+_ScopeVisitor._assigned creates an AssignedName.
+
+Scope.get_names:
+{
+    'Sample': &lt;rope.base.pynamesdef.DefinedName object at 0x0000018E05192140&gt;,
+    'a_var': &lt;rope.base.pynamesdef.AssignedName object at 0x0000018E05192290&gt;,
+}</t>
+<t tx="ekr.20230209173843.1">@nosearch
+
+# Word, Body
+
+# found 78 nodes</t>
+<t tx="ekr.20230210041856.1"></t>
+<t tx="ekr.20230210041939.1"></t>
+<t tx="ekr.20230210042043.1"></t>
+<t tx="ekr.20230210042249.1"></t>
+<t tx="ekr.20230210042639.1"></t>
+<t tx="ekr.20230210042750.1"></t>
+<t tx="ekr.20230210043243.1"></t>
+<t tx="ekr.20230210043703.1"></t>
+<t tx="ekr.20230210044721.1"></t>
+<t tx="ekr.20230210045320.1"></t>
+<t tx="ekr.20230210045347.1"></t>
+<t tx="ekr.20230210045623.1"></t>
+<t tx="ekr.20230210050228.1">@nosearch
+
+# Word, Head, Body
+
+# found 49 nodes</t>
+<t tx="ekr.20230210050827.1"></t>
+<t tx="ekr.20230210050856.1"></t>
+<t tx="ekr.20230210051703.1"></t>
+<t tx="ekr.20230210051923.1"></t>
+<t tx="ekr.20230210052015.1"></t>
+<t tx="ekr.20230210052439.1"></t>
+<t tx="ekr.20230210052916.1"></t>
+<t tx="ekr.20230210053353.1"></t>
+<t tx="ekr.20230210054447.1">@language rest
+@nosearch
+  
+.. To do:
+- Read inference files like a book.
+- Make inheretance diagram for all inference objects.
+? Create global list for tracing?
+  Global function to dump this list.
+? Remove do nothing classes in complex class hierarchies?
+  Search for references to these classes.</t>
+<t tx="ekr.20230210054631.1">@language rest
+@nosearch
+
+self.assertEqual(sample_class, a_var.get_type())
+1. a_var.get_type() *is the same as* sample_class.
+2. sample_class is a pyobjectsdef.PyClass.
+   sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;</t>
 </tnodes>
 </leo_file>
