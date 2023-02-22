@@ -9,6 +9,7 @@
 <v t="ekr.20221118105413.1"><vh>Startup</vh>
 <v t="ekr.20221118072614.1"><vh> Recursive import script</vh></v>
 <v t="ekr.20221118110103.1"><vh>@button backup</vh></v>
+<v t="ekr.20230222081013.1"><vh>@button contrib</vh></v>
 <v t="ekr.20221128041958.1"><vh>@button diff-master..head</vh></v>
 <v t="ekr.20230221061621.1"><vh>@button check-nodes</vh></v>
 <v t="ekr.20230207050236.1"><vh>@button make</vh></v>
@@ -6193,6 +6194,8 @@
 </v>
 <v t="ekr.20230222080331.1"><vh>=== PR #2: Restore do-nothing Abstract classes</vh></v>
 <v t="ekr.20230220105715.1"></v>
+<v t="ekr.20230207050236.1"></v>
+<v t="ekr.20230222081013.1"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20221118072614.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -60698,6 +60701,7 @@ If `scope` is a `Scope`, statements of the form `scope[name]`, where `name`
 (a string) is a member of the scope, provide access to all inferences!
 </t>
 <t tx="ekr.20230207050236.1">g.cls()
+"""Push docs/theory.rst to devel and open it in mozilla."""
 import time
 # There is no need to save rope.leo.
 h = '@rst docs/theory'
@@ -61303,8 +61307,6 @@ See `Rope's readme file`_ for details about Rope itself.
 - The "Py" prefix distinguishes classes from python's 
 </t>
 <t tx="ekr.20230221061621.1"># Checks for empty nodes using Leo's check-nodes command.
-
-
 c.k.simulateCommand('check-nodes')</t>
 <t tx="ekr.20230221062432.1">def get_doc(self) -&gt; Optional[str]:
     return None
@@ -61389,5 +61391,33 @@ c.k.simulateCommand('check-nodes')</t>
 <t tx="ekr.20230222034813.1"># ? Revert to Empty Abstract files?</t>
 <t tx="ekr.20230222080311.1"></t>
 <t tx="ekr.20230222080331.1"></t>
+<t tx="ekr.20230222081013.1">g.cls()
+"""Push rope.leo to leo-editor-contrib/StudyOutlines/rope.leo."""
+import os
+import time
+# Save rope.leo.
+if c.isChanged():
+    c.save()
+stamp = time.strftime("%Y/%m/%d at %H:%M:%S")
+rope_dir = r'C:\Repos\leo-editor-contrib\StudyOutlines'
+assert g.os_path_exists(rope_dir), repr(rope_dir)
+
+# Save rope.leo in the new directory.
+c.fileCommands.saveTo(fr"{rope_dir}{os.sep}rope.leo", silent=False)
+
+# Change directory by hand. Doing so below does not work.
+os.chdir(rope_dir)
+if 1:
+    # Wait for each command to complete, except those starting with '&amp;'
+    g.execute_shell_commands([
+        'echo %cd%',  # Echo the cwd.
+        f"echo {stamp}",
+        'git add rope.leo',
+        f'git commit -m "Update rope.leo: {stamp}"',
+        'git push',
+        'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
+        'echo done',
+    ])
+</t>
 </tnodes>
 </leo_file>
