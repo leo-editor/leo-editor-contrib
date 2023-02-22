@@ -60527,6 +60527,7 @@ Run sphinx-build from the docs directory:
 <t tx="ekr.20230205094642.1"># Lines starting with '#' are comment lines.
 # A list of command names to be pre-loaded into the history list.
 make
+contrib
 mypy-r
 test-one
 rst3
@@ -61411,13 +61412,14 @@ os.chdir(rope_dir)
 
 # Wait for each command to complete, except those starting with '&amp;'
 g.execute_shell_commands([
+    # `echo` and `explorer` are Windows shell commands.
     'echo %cd%',  # Echo the cwd.
     'git add rope.leo',
     f'echo git commit -m "Update rope.leo: {stamp}"',
     f'git commit -m "Update rope.leo: {stamp}"',
     'git push',
     'git status',
-    # 'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
+    'explorer https://github.com/leo-editor/leo-editor-contrib/commits/master',
     'echo done',
 ])
 </t>
