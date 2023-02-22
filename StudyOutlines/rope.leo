@@ -61406,6 +61406,7 @@ assert g.os_path_exists(rope_dir), repr(rope_dir)
 c.fileCommands.saveTo(fr"{rope_dir}{os.sep}rope.leo", silent=False)
 
 # Change directory by hand. Doing so below does not work.
+# Happily, this change does change the actual working directory!
 os.chdir(rope_dir)
 
 # Wait for each command to complete, except those starting with '&amp;'
