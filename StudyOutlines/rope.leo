@@ -61280,10 +61280,13 @@ P.S. My PRs propose the following:
 *** Look at .leojs.
 </t>
 <t tx="ekr.20230219184800.1">@language rest
-.. _Rope: https://github.com/python-rope/rope
-.. _`Rope's readme file`: https://github.com/python-rope/rope/blob/master/README.rst
+.. _`Leo`: https://leo-editor.github.io/leo-editor/
 .. _`PR #1`: https://github.com/edreamleo/ekr-fork-rope2/pull/1
+.. _`Rope`: https://github.com/python-rope/rope
+.. _`Rope's readme file`: https://github.com/python-rope/rope/blob/master/README.rst
 .. _`theory.rst`: https://github.com/edreamleo/ekr-fork-rope2/blob/devel/docs/theory.rst
+.. _`rope.leo`: https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo
+.. _`this page`: https://github.com/leo-editor/leo-editor-contrib/commits/master
 
 This is the `devel` branch of the `ekr-fork-rope2` fork of `Rope`_
 
@@ -61296,9 +61299,13 @@ The `devel` branch contains study code. No PR (for Rope itself) will ever be bas
 See `Rope's readme file`_ for details about Rope itself.
 
 `theory.rst`_ contains:
+
 - The draft version of the Theory of Operation.
 - My study notes.
 
+`rope.leo`_ contains my `Leo`_ study outline.
+
+`This page`_ lists shows all commits to rope.leo.
 </t>
 <t tx="ekr.20230220105715.1"></t>
 <t tx="ekr.20230221044629.1">@language rest
