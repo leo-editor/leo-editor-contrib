@@ -61411,11 +61411,13 @@ if 1:
     # Wait for each command to complete, except those starting with '&amp;'
     g.execute_shell_commands([
         'echo %cd%',  # Echo the cwd.
-        f"echo {stamp}",
         'git add rope.leo',
+        # f"echo {stamp}",
+        f'echo git commit -m "Update rope.leo: {stamp}"',
         f'git commit -m "Update rope.leo: {stamp}"',
         'git push',
-        'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
+        'git status',
+        # 'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
         'echo done',
     ])
 </t>
