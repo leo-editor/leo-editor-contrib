@@ -61407,19 +61407,18 @@ c.fileCommands.saveTo(fr"{rope_dir}{os.sep}rope.leo", silent=False)
 
 # Change directory by hand. Doing so below does not work.
 os.chdir(rope_dir)
-if 1:
-    # Wait for each command to complete, except those starting with '&amp;'
-    g.execute_shell_commands([
-        'echo %cd%',  # Echo the cwd.
-        'git add rope.leo',
-        # f"echo {stamp}",
-        f'echo git commit -m "Update rope.leo: {stamp}"',
-        f'git commit -m "Update rope.leo: {stamp}"',
-        'git push',
-        'git status',
-        # 'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
-        'echo done',
-    ])
+
+# Wait for each command to complete, except those starting with '&amp;'
+g.execute_shell_commands([
+    'echo %cd%',  # Echo the cwd.
+    'git add rope.leo',
+    f'echo git commit -m "Update rope.leo: {stamp}"',
+    f'git commit -m "Update rope.leo: {stamp}"',
+    'git push',
+    'git status',
+    # 'moz https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo',
+    'echo done',
+])
 </t>
 </tnodes>
 </leo_file>
