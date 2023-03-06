@@ -68,12 +68,12 @@
 <v t="ekr.20221118072830.10"><vh>@clean docs/conf.py</vh></v>
 </v>
 <v t="ekr.20230206074243.1"><vh> documentation files</vh>
-<v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
+<v t="ekr.20230206074301.1"><vh>@@edit docs/index.rst</vh></v>
 <v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
 <v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
 <v t="ekr.20230205150939.1"><vh>Overview of the code</vh></v>
 </v>
-<v t="ekr.20230219184800.1"><vh>@clean README.rst</vh></v>
+<v t="ekr.20230219184800.1"><vh>@@clean README.rst (devel)</vh></v>
 </v>
 <v t="ekr.20230201150728.1"><vh>rope</vh>
 <v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
@@ -7495,7 +7495,7 @@ if __name__ == "__main__":
     try:
         import cPickle as pickle  # type:ignore
     except ImportError:
-        import pickle
+        import pickle  # type:ignore
     import base64
     import hashlib
     import hmac
@@ -7741,17 +7741,33 @@ if __name__ == "__main__":
 
 </t>
 <t tx="ekr.20221118072830.1254">@path rope/base/oi/
-import rope.base.ast
+from __future__ import annotations
+import ast
+from typing import Callable, List, Tuple, Union, TYPE_CHECKING
+
+from rope.base import arguments, evaluate, nameanalyze, pyobjects
+from rope.base.ast import RopeNodeVisitor
 import rope.base.oi.soi
 import rope.base.pynames
-from rope.base import arguments, evaluate, nameanalyze, pyobjects
+from rope.base.pyobjects import is_abstract_class, is_abstract_function
+
+if TYPE_CHECKING:
+    from rope.base.pycore import PyCore
+    from rope.base.pyobjects import PyFunction
+    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
+    from rope.base.pynames import PyName
+
+    Node = ast.AST
+    PyFunc = PyFunction
 
 
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.1255">def analyze_module(pycore, pymodule, should_analyze, search_subscopes, followed_calls):
+<t tx="ekr.20221118072830.1255">def analyze_module(
+    pycore, pymodule, should_analyze, search_subscopes, followed_calls: bool
+) -&gt; None:
     """Analyze `pymodule` for static object inference
 
     Analyzes scopes for collecting object information.  The analysis
@@ -7762,7 +7778,13 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
 
 
 </t>
-<t tx="ekr.20221118072830.1256">def _analyze_node(pycore, pydefined, should_analyze, search_subscopes, followed_calls):
+<t tx="ekr.20221118072830.1256">def _analyze_node(
+    pycore: PyCore,
+    pydefined: DefinedPyFunction,
+    should_analyze: Callable,
+    search_subscopes: Callable,
+    followed_calls: int,
+) -&gt; None:
     if search_subscopes(pydefined):
         for scope in pydefined.get_scope().get_scopes():
             _analyze_node(
@@ -7773,19 +7795,19 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
         return_true = lambda pydefined: True
         return_false = lambda pydefined: False
 
-        def _follow(pyfunction):
+        def _follow(pyfunction: DefinedPyFunction) -&gt; None:
             _analyze_node(
                 pycore, pyfunction, return_true, return_false, new_followed_calls
             )
 
         visitor = SOAVisitor(pycore, pydefined, _follow if followed_calls else None)
-        for child in rope.base.ast.iter_child_nodes(pydefined.get_ast()):
+        for child in ast.iter_child_nodes(pydefined.get_ast()):
             visitor.visit(child)
 
 
 </t>
-<t tx="ekr.20221118072830.1257">class SOAVisitor(rope.base.ast.RopeNodeVisitor):
-    def __init__(self, pycore, pydefined, follow_callback=None):
+<t tx="ekr.20221118072830.1257">class SOAVisitor(RopeNodeVisitor):
+    def __init__(self, pycore, pydefined, follow_callback=None) -&gt; None:
         self.pycore = pycore
         self.pymodule = pydefined.get_module()
         self.scope = pydefined.get_scope()
@@ -7793,7 +7815,7 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
 
     @others
 </t>
-<t tx="ekr.20221118072830.1259">def _FunctionDef(self, node):
+<t tx="ekr.20221118072830.1259">def _FunctionDef(self, node) -&gt; None:
     pass
 
 </t>
@@ -7802,20 +7824,21 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
 
 
 </t>
-<t tx="ekr.20221118072830.1260">def _ClassDef(self, node):
+<t tx="ekr.20221118072830.1260">def _ClassDef(self, node) -&gt; None:
     pass
 
 </t>
-<t tx="ekr.20221118072830.1261">def _Call(self, node):
-    for child in rope.base.ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1261">def _Call(self, node: ast.Call) -&gt; None:
+    for child in ast.iter_child_nodes(node):
         self.visit(child)
     primary, pyname = evaluate.eval_node2(self.scope, node.func)
     if pyname is None:
         return
     pyfunction = pyname.get_object()
-    if isinstance(pyfunction, pyobjects.AbstractFunction):
+    if is_abstract_function(pyfunction):
         args = arguments.create_arguments(primary, pyfunction, node, self.scope)
-    elif isinstance(pyfunction, pyobjects.PyClass):
+    # elif isinstance(pyfunction, pyobjects.PyClass):
+    elif is_abstract_class(pyfunction):
         pyclass = pyfunction
         if "__init__" in pyfunction:
             pyfunction = pyfunction["__init__"].get_object()
@@ -7829,12 +7852,18 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
     self._call(pyfunction, args)
 
 </t>
-<t tx="ekr.20221118072830.1262">def _args_with_self(self, primary, self_pyname, pyfunction, node):
+<t tx="ekr.20221118072830.1262">def _args_with_self(
+    self,
+    primary,
+    self_pyname: PyName,
+    pyfunction: PyFunc,
+    node: ast.Call,
+):
     base_args = arguments.create_arguments(primary, pyfunction, node, self.scope)
     return arguments.MixedArguments(self_pyname, base_args, self.scope)
 
 </t>
-<t tx="ekr.20221118072830.1263">def _call(self, pyfunction, args):
+<t tx="ekr.20221118072830.1263">def _call(self, pyfunction: DefinedPyFunction, args):
     if isinstance(pyfunction, pyobjects.PyFunction):
         if self.follow is not None:
             before = self._parameter_objects(pyfunction)
@@ -7851,15 +7880,15 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
         pyfunction.get_returned_object(args)
 
 </t>
-<t tx="ekr.20221118072830.1264">def _parameter_objects(self, pyfunction):
+<t tx="ekr.20221118072830.1264">def _parameter_objects(self, pyfunction: DefinedPyFunction):
     return [
         pyfunction.get_parameter(i)
         for i in range(len(pyfunction.get_param_names(False)))
     ]
 
 </t>
-<t tx="ekr.20221118072830.1265">def _AnnAssign(self, node):
-    for child in rope.base.ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1265">def _AnnAssign(self, node) -&gt; None:
+    for child in ast.iter_child_nodes(node):
         self.visit(child)
     visitor = _SOAAssignVisitor()
     nodes = []
@@ -7870,8 +7899,8 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
     self._evaluate_assign_value(node, nodes, type_hint=node.annotation)
 
 </t>
-<t tx="ekr.20221118072830.1266">def _Assign(self, node):
-    for child in rope.base.ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1266">def _Assign(self, node) -&gt; None:
+    for child in ast.iter_child_nodes(node):
         self.visit(child)
     visitor = _SOAAssignVisitor()
     nodes = []
@@ -7881,7 +7910,12 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
     self._evaluate_assign_value(node, nodes)
 
 </t>
-<t tx="ekr.20221118072830.1267">def _evaluate_assign_value(self, node, nodes, type_hint=False):
+<t tx="ekr.20221118072830.1267">def _evaluate_assign_value(
+    self,
+    node: Union[ast.Assign, ast.AnnAssign],
+    nodes: List,
+    type_hint: bool = False,
+) -&gt; None:
     for subscript, levels in nodes:
         instance = evaluate.eval_node(self.scope, subscript.value)
         args_pynames = [evaluate.eval_node(self.scope, subscript.slice)]
@@ -7905,14 +7939,14 @@ from rope.base import arguments, evaluate, nameanalyze, pyobjects
 <t tx="ekr.20221118072830.1268">class _SOAAssignVisitor(nameanalyze._NodeNameCollector):
     @others
 </t>
-<t tx="ekr.20221118072830.1269">def __init__(self):
+<t tx="ekr.20221118072830.1269">def __init__(self) -&gt; None:
     super().__init__()
-    self.nodes = []
+    self.nodes: List[Tuple] = []
 
 </t>
-<t tx="ekr.20221118072830.1270">def _added(self, node, levels):
-    if isinstance(node, rope.base.ast.Subscript) and isinstance(
-        node.slice, (rope.base.ast.Index, rope.base.ast.expr)
+<t tx="ekr.20221118072830.1270">def _added(self, node, levels) -&gt; None:
+    if isinstance(node, ast.Subscript) and isinstance(
+        node.slice, (ast.Index, ast.expr)
     ):
         self.nodes.append((node, levels))
 </t>
@@ -7923,9 +7957,20 @@ For more information see the documentation in `rope.base.oi`
 package.
 
 """
+from __future__ import annotations
+import ast
+from typing import Any, Optional, Union, TYPE_CHECKING
 import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import arguments, evaluate, pynames, pyobjects, utils
 from rope.base.oi.type_hinting.factory import get_type_hinting_factory
+from rope.base.pyobjects import is_abstract_function
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyFunction, PyObject
+    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
+
+    Node = ast.AST
+    PyFunc = Union[PyFunction, DefinedPyFunction]
 
 _ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)
 
@@ -7935,32 +7980,66 @@ _ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.1272">@_ignore_inferred
-def infer_returned_object(pyfunction, args):
-    """Infer the `PyObject` this `PyFunction` returns after calling"""
+def infer_returned_object(pyfunction: PyFunc, args) -&gt; Optional[PyObject]:
+    """Infer the return type of a function."""
+    trace = False
+
+    def arg_to_string(arg):
+        if isinstance(arg, ast.Call):
+            return f"Call:{arg.func.id}"  # Name.id.
+        if isinstance(arg, ast.Constant):
+            return f"Constant:{arg.value}"
+        if isinstance(arg, ast.Name):
+            return f"Name:{arg.id}"
+        if isinstance(arg, ast.keyword):
+            arg2 = getattr(arg, "arg", None)
+            return f"keyword:{arg2}" if arg2 else "keyword"
+        return arg.__class__.__name__
+
+    def report(kind, result):
+        if not trace:
+            return
+        try:
+            args_s = ",".join([arg_to_string(arg) for arg in args.args])
+        except AttributeError:
+            args_s = args.__class__.__name__  # ObjectArguments have no args member.
+        print("")
+        print(
+            "soi.infer_returned_object...\n"
+            f"{pyfunction.absolute_name:&gt;15} args: {args_s:&lt;20} "
+            f"==&gt; {kind} {result.__class__.__name__}"
+        )
+
     object_info = pyfunction.pycore.object_info
     result = object_info.get_exact_returned(pyfunction, args)
     if result is not None:
+        report("Cached", result)
         return result
     result = _infer_returned(pyfunction, args)
     if result is not None:
         if args and pyfunction.get_module().get_resource() is not None:
             params = args.get_arguments(pyfunction.get_param_names(special_args=False))
             object_info.function_called(pyfunction, params, result)
+        report("_infer_returned", result)
         return result
     result = object_info.get_returned(pyfunction, args)
     if result is not None:
+        report("get_returned", result)
         return result
     hint_return = get_type_hinting_factory(
         pyfunction.pycore.project
     ).make_return_provider()
     type_ = hint_return(pyfunction)
     if type_ is not None:
+        report("hint_returned", result)
         return pyobjects.PyObject(type_)
-
-
+    report("Fail", None)
+    return None
 </t>
-<t tx="ekr.20221118072830.1273">@_ignore_inferred
-def infer_parameter_objects(pyfunction):
+<t tx="ekr.20221118072830.1273">
+
+@_ignore_inferred
+def infer_parameter_objects(pyfunction: PyFunc):
     """Infer the `PyObject` of parameters of this `PyFunction`"""
     object_info = pyfunction.pycore.object_info
     result = object_info.get_parameter_objects(pyfunction)
@@ -8012,7 +8091,7 @@ def infer_assigned_object(pyname):
 
 
 </t>
-<t tx="ekr.20221118072830.1276">def get_passed_objects(pyfunction, parameter_index):
+<t tx="ekr.20221118072830.1276">def get_passed_objects(pyfunction: PyFunc, parameter_index: int) -&gt; Any:
     object_info = pyfunction.pycore.object_info
     result = object_info.get_passed_objects(pyfunction, parameter_index)
     if not result:
@@ -8143,7 +8222,7 @@ def _follow_evaluations(assignment, pyname, pyobject):
             if new_pyname is not None:
                 pyobject = new_pyname.get_object()
         if pyobject is not None and call:
-            if isinstance(pyobject, pyobjects.AbstractFunction):
+            if is_abstract_function(pyobject):
                 args = arguments.ObjectArguments([pyname])
                 pyobject = pyobject.get_returned_object(args)
             else:
@@ -8174,6 +8253,7 @@ import re
 
 import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import exceptions
+from rope.base.pyobjects import is_abstract_class
 
 
 @others
@@ -8236,7 +8316,7 @@ from rope.base import exceptions
 
 </t>
 <t tx="ekr.20221118072830.1291">def PyObject_to_textual(self, pyobject):
-    if isinstance(pyobject.get_type(), rope.base.pyobjects.AbstractClass):
+    if is_abstract_class(pyobject.get_type()):
         result = self.transform(pyobject.get_type())
         if result[0] == "defined":
             return ("instance", result)
@@ -8574,6 +8654,9 @@ from rope.base import exceptions
 <t tx="ekr.20221118072830.1337"></t>
 <t tx="ekr.20221118072830.1338">@path rope/base/
 @nopyflakes
+# mypy reports various problems.
+# type:ignore
+
 # Based on super lightweight Simple Top-Down Parser from http://effbot.org/zone/simple-top-down-parsing.htm
 # and https://bitbucket.org/emacsway/sqlbuilder/src/default/sqlbuilder/smartsql/contrib/evaluate.py
 import re
@@ -8679,7 +8762,7 @@ evaluate = Evaluator()
     pass
 
 </t>
-<t tx="ekr.20221118072830.1353">@multi  # type:ignore
+<t tx="ekr.20221118072830.1353">@multi
 def infix(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -8690,7 +8773,7 @@ def infix(self, name, bp):
         return self
 
 </t>
-<t tx="ekr.20221118072830.1354">@multi  # type:ignore
+<t tx="ekr.20221118072830.1354">@multi
 def infix_r(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -8714,8 +8797,8 @@ def infix_r(self, name, bp):
         return self
 
 </t>
-<t tx="ekr.20221118072830.1356">@multi  # type:ignore
-def prefix(self, name, bp):  # type:ignore
+<t tx="ekr.20221118072830.1356">@multi
+def prefix(self, name, bp):
     symbol = self.symbol(name, bp)
 
     @method(symbol)
@@ -8724,7 +8807,7 @@ def prefix(self, name, bp):  # type:ignore
         return self
 
 </t>
-<t tx="ekr.20221118072830.1357">@multi  # type:ignore
+<t tx="ekr.20221118072830.1357">@multi
 def postfix(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -8872,20 +8955,20 @@ symbol("(end)")
 
 
 </t>
-<t tx="ekr.20221118072830.1371">@method(symbol("(name)"))  # type:ignore
+<t tx="ekr.20221118072830.1371">@method(symbol("(name)"))
 def nud(self, parser):
     return self
 
 
 </t>
-<t tx="ekr.20221118072830.1372">@method(symbol("(name)"))  # type:ignore
+<t tx="ekr.20221118072830.1372">@method(symbol("(name)"))
 def evaluate(self, pyobject):
     return utils.resolve_type(self.value, pyobject)
 
 
 </t>
 <t tx="ekr.20221118072830.1373"># Parametrized objects
-@method(symbol("["))  # type:ignore
+@method(symbol("["))
 def led(self, left, parser):
     self.first = left
     self.second = []
@@ -8902,7 +8985,7 @@ def led(self, left, parser):
 
 
 </t>
-<t tx="ekr.20221118072830.1374">@method(symbol("["))  # type:ignore
+<t tx="ekr.20221118072830.1374">@method(symbol("["))
 def evaluate(self, pyobject):
     return utils.parametrize_type(
         self.first.evaluate(pyobject), *[i.evaluate(pyobject) for i in self.second]
@@ -8911,7 +8994,7 @@ def evaluate(self, pyobject):
 
 </t>
 <t tx="ekr.20221118072830.1375"># Anonymous Function Calls
-@method(symbol("("))  # type:ignore
+@method(symbol("("))
 def nud(self, parser):
     self.second = []
     if parser.token.name != ")":
@@ -8928,7 +9011,7 @@ def nud(self, parser):
 
 </t>
 <t tx="ekr.20221118072830.1376"># Function Calls
-@method(symbol("("))  # type:ignore
+@method(symbol("("))
 def led(self, left, parser):
     self.first = left
     self.second = []
@@ -8945,14 +9028,14 @@ def led(self, left, parser):
 
 
 </t>
-<t tx="ekr.20221118072830.1377">@method(symbol("("))  # type:ignore
+<t tx="ekr.20221118072830.1377">@method(symbol("("))
 def evaluate(self, pyobject):
     # TODO: Implement me
     raise NotImplementedError
 
 
 </t>
-<t tx="ekr.20221118072830.1378">@method(symbol("or"))  # type:ignore
+<t tx="ekr.20221118072830.1378">@method(symbol("or"))
 @method(symbol("|"))
 def evaluate(self, pyobject):
     # TODO: Implement me
@@ -9184,14 +9267,13 @@ def _get_factory(self, factory_location):
 </t>
 <t tx="ekr.20221118072830.1401">@path rope/base
 from __future__ import annotations
-
 import logging
-from typing import TYPE_CHECKING, Optional, Union
+from typing import Optional
 
 import rope.base.utils as base_utils
 from rope.base import evaluate
 from rope.base.exceptions import AttributeNotFoundError
-from rope.base.pyobjects import PyClass, PyDefinedObject, PyFunction, PyObject
+from rope.base.pyobjects import PyClass, PyFunction, PyObject
 
 
 @others
@@ -9269,10 +9351,7 @@ parametrize_type = ParametrizeType()
 
 
 </t>
-<t tx="ekr.20221118072830.1407">def resolve_type(
-    type_name: str,
-    pyobject: Union[PyDefinedObject, PyObject],
-) -&gt; Optional[Union[PyDefinedObject, PyObject]]:
+<t tx="ekr.20221118072830.1407">def resolve_type(type_name: str, pyobject: PyObject) -&gt; Optional[PyObject]:
     """
     Find proper type object from its name.
     """
@@ -9281,9 +9360,6 @@ parametrize_type = ParametrizeType()
     logging.debug("Looking for %s", type_name)
     if "." not in type_name:
         try:
-            # XXX: this looks incorrect? It doesn't seem like it would work
-            # correctly if you have a type/class not defined in the
-            # module/global scope
             ret_type = (
                 pyobject.get_module().get_scope().get_name(type_name).get_object()
             )
@@ -9715,10 +9791,10 @@ from rope.base.oi.type_hinting.providers import interfaces
 
 
 </t>
-<t tx="ekr.20221118072830.145">class Iterator(pyobjects.AbstractClass):
+<t tx="ekr.20221118072830.145">class Iterator(pyobjects.PyObject):  # was pyobjects.AbstractClass
     def __init__(self, holding=None):
-        super().__init__()
-        self.holding = holding
+        super().__init__(get_base_type("Type"))
+        self.holding: Optional[PyObject] = holding
         self.attributes = {
             "next": BuiltinName(BuiltinFunction(self.holding)),
             "__iter__": BuiltinName(BuiltinFunction(self)),
@@ -9810,12 +9886,13 @@ Some code extracted (or based on code) from:
 https://github.com/davidhalter/jedi/blob/b489019f5bd5750051122b94cc767df47751ecb7/jedi/evaluate/docstrings.py
 Thanks to @davidhalter for this utils under MIT License.
 """
+import ast
 import re
 
-from rope.base.ast import literal_eval
 from rope.base.oi.type_hinting.providers import docstrings
 
 try:
+    # mypy: Cannot find implementation or library stub for module named "numpydoc.docscrape"
     from numpydoc.docscrape import NumpyDocString  # type:ignore
 except ImportError:
     NumpyDocString = None
@@ -9823,6 +9900,9 @@ except ImportError:
 
 @others
 if not NumpyDocString:
+    # mypy: Cannot assign to a type
+    # mypy: Incompatible types in assignment (expression has type "Type[_DummyParamParser]",
+    #       variable has type "Type[NumPyDocstringParamParser]")
     NumPyDocstringParamParser = _DummyParamParser  # type:ignore
 @language python
 @tabwidth -4
@@ -9842,7 +9922,7 @@ if not NumpyDocString:
                 p_type = m.group(1)
 
             if p_type.startswith("{"):
-                types = {type(x).__name__ for x in literal_eval(p_type)}
+                types = {type(x).__name__ for x in ast.literal_eval(p_type)}
                 return list(types)
             else:
                 return [p_type]
@@ -9859,7 +9939,6 @@ if not NumpyDocString:
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
 
-from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
 
@@ -9980,7 +10059,9 @@ from rope.base.oi.type_hinting.resolvers import interfaces
     except Exception:
         pass
 </t>
-<t tx="ekr.20221118072830.148">def get_returned_object(self, args):
+<t tx="ekr.20221118072830.148">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+    # from rope.base.pyobjects import PyObject  # verify annotation
+    # assert isinstance(self.holding, (None.__class__, PyObject))  # verify annotation
     return self.holding
 
 
@@ -10070,17 +10151,16 @@ from collections.abc import MutableSet
     return set(self) == set(other)
 </t>
 <t tx="ekr.20221118072830.1499">import sys
-import warnings
 
 
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.150">class Generator(pyobjects.AbstractClass):
+<t tx="ekr.20221118072830.150">class Generator(pyobjects.PyObject):  # was pyobjects.AbstractClass.
     def __init__(self, holding=None):
-        super().__init__()
-        self.holding = holding
+        super().__init__(get_base_type("Type"))
+        self.holding: Optional[PyObject] = holding
         self.attributes = {
             "next": BuiltinName(BuiltinFunction(self.holding)),
             "__iter__": BuiltinName(BuiltinFunction(get_iterator(self.holding))),
@@ -10095,14 +10175,27 @@ get_generator = _create_builtin_getter(Generator)
 
 </t>
 <t tx="ekr.20221118072830.1500">def saveit(func):
-    """A decorator that caches the return value of a function"""
+    """
+    A decorator that injects a singleton ivar (in self) if the ivar does
+    not already exist.
 
-    name = "_" + func.__name__
+    The ivar's name (ivar_name) is f"_{func.__name__}".
 
-    def _wrapper(self, *args, **kwds):
-        if not hasattr(self, name):
-            setattr(self, name, func(self, *args, **kwds))
-        return getattr(self, name)
+    :param func: A function/method that instantiates an object.
+
+    :return: getattr(self, ivar_name), the value of the ivar.
+
+    """
+    # """A decorator that caches the return value of a function"""
+    ivar_name = f"_{func.__name__}"
+
+    def _wrapper(self, *args, **kwargs):
+        if not hasattr(self, ivar_name):
+            # Instantiate the singleton object.
+            obj = func(self, *args, **kwargs)
+            setattr(self, ivar_name, obj)
+        # Return the value of the ivar.
+        return getattr(self, ivar_name)
 
     return _wrapper
 
@@ -10156,7 +10249,6 @@ cacheit = saveit
             message = "%s is deprecated" % func.__name__
 
         def newfunc(*args, **kwds):
-            warnings.warn(message, DeprecationWarning, stacklevel=2)
             return func(*args, **kwds)
 
         return newfunc
@@ -10332,6 +10424,11 @@ from rope.base import (
 )
 from rope.contrib import fixsyntax
 from rope.refactor import functionutils
+from rope.base.pyobjects import (
+    is_abstract_class,
+    is_abstract_function,
+    is_abstract_module,
+)
 
 
 @others
@@ -10447,7 +10544,9 @@ from rope.refactor import functionutils
 
 
 </t>
-<t tx="ekr.20221118072830.153">def get_returned_object(self, args):
+<t tx="ekr.20221118072830.153">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+    # from rope.base.pyobjects import PyObject  # verify annotation
+    # assert isinstance(self.holding, (None.__class__, PyObject))  # verify annotation
     return self.holding
 
 
@@ -10592,7 +10691,7 @@ def parameters(self):
         pyname = pyname._get_imported_pyname()
     if isinstance(pyname, pynames.DefinedName):
         pyobject = pyname.get_object()
-        if isinstance(pyobject, pyobjects.AbstractFunction):
+        if is_abstract_function(pyobject):
             return pyobject.get_param_names()
 
 </t>
@@ -10615,9 +10714,9 @@ def type(self):
         pyname, pynames.DefinedName
     ):
         pyobject = pyname.get_object()
-        if isinstance(pyobject, pyobjects.AbstractFunction):
+        if is_abstract_function(pyobject):
             return "function"
-        if isinstance(pyobject, pyobjects.AbstractClass):
+        if is_abstract_class(pyobject):
             return "class"
     return "instance"
 
@@ -10919,16 +11018,13 @@ get_file_type = _create_builtin_type_getter(File)
             return {}
         if function_pyname is not None:
             pyobject = function_pyname.get_object()
-            if isinstance(pyobject, pyobjects.AbstractFunction):
+            if is_abstract_function(pyobject):
                 pass
-            elif (
-                isinstance(pyobject, pyobjects.AbstractClass)
-                and "__init__" in pyobject
-            ):
+            elif is_abstract_class(pyobject) and "__init__" in pyobject:
                 pyobject = pyobject["__init__"].get_object()
             elif "__call__" in pyobject:
                 pyobject = pyobject["__call__"].get_object()
-            if isinstance(pyobject, pyobjects.AbstractFunction):
+            if is_abstract_function(pyobject):
                 param_names = []
                 param_names.extend(pyobject.get_param_names(special_args=False))
                 result = {}
@@ -11002,26 +11098,26 @@ get_file_type = _create_builtin_type_getter(File)
     @others
 </t>
 <t tx="ekr.20221118072830.1567">def get_doc(self, pyobject):
-    if isinstance(pyobject, pyobjects.AbstractFunction):
+    if is_abstract_function(pyobject):
         return self._get_function_docstring(pyobject)
-    elif isinstance(pyobject, pyobjects.AbstractClass):
+    if is_abstract_class(pyobject):
         return self._get_class_docstring(pyobject)
-    elif isinstance(pyobject, pyobjects.AbstractModule):
+    if is_abstract_module(pyobject):
         return self._trim_docstring(pyobject.get_doc())
     return None
 
 </t>
 <t tx="ekr.20221118072830.1568">def get_calltip(self, pyobject, ignore_unknown=False, remove_self=False):
     try:
-        if isinstance(pyobject, pyobjects.AbstractClass):
+        if is_abstract_class(pyobject):
             pyobject = pyobject["__init__"].get_object()
-        if not isinstance(pyobject, pyobjects.AbstractFunction):
+        if not is_abstract_function(pyobject):
             pyobject = pyobject["__call__"].get_object()
     except exceptions.AttributeNotFoundError:
         return None
     if ignore_unknown and not isinstance(pyobject, pyobjects.PyFunction):
         return
-    if isinstance(pyobject, pyobjects.AbstractFunction):
+    if is_abstract_function(pyobject):
         result = self._get_function_signature(pyobject, add_module=True)
         if remove_self and self._is_method(pyobject):
             return result.replace("(self)", "()").replace("(self, ", "(")
@@ -11043,7 +11139,7 @@ get_file_type = _create_builtin_type_getter(File)
 
     if "__init__" in pyclass:
         init = pyclass["__init__"].get_object()
-        if isinstance(init, pyobjects.AbstractFunction):
+        if is_abstract_function(init):
             doc += "\n\n" + self._get_single_function_docstring(init)
     return doc
 
@@ -11076,7 +11172,7 @@ get_file_type = _create_builtin_type_getter(File)
     for super_class in pyclass.get_superclasses():
         if name in super_class:
             function = super_class[name].get_object()
-            if isinstance(function, pyobjects.AbstractFunction):
+            if is_abstract_function(function):
                 result.append(function)
         result.extend(self._get_super_methods(super_class, name))
     return result
@@ -11097,7 +11193,7 @@ get_file_type = _create_builtin_type_getter(File)
 <t tx="ekr.20221118072830.1575">def _location(self, pyobject, add_module=False):
     location = []
     parent = pyobject.parent
-    while parent and not isinstance(parent, pyobjects.AbstractModule):
+    while parent and not is_abstract_module(parent):
         location.append(parent.get_name())
         location.append(".")
         parent = parent.parent
@@ -11184,7 +11280,12 @@ get_file_type = _create_builtin_type_getter(File)
 </t>
 <t tx="ekr.20221118072830.1585">@path rope/contrib/
 &lt;&lt; docstring: rope/contrib/finderrors.py &gt;&gt;
-from rope.base import ast, evaluate, pyobjects
+import ast
+from typing import List
+from rope.base import evaluate, pyobjects
+from rope.base.ast import RopeNodeVisitor
+from rope.base.pyobjects import PyModule
+from rope.base.pyscopes import Scope
 
 
 @others
@@ -11203,13 +11304,13 @@ from rope.base import ast, evaluate, pyobjects
 
 
 </t>
-<t tx="ekr.20221118072830.1587">class _BadAccessFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.1587">class _BadAccessFinder(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.1588">def __init__(self, pymodule):
+<t tx="ekr.20221118072830.1588">def __init__(self, pymodule: PyModule):
     self.pymodule = pymodule
-    self.scope = pymodule.get_scope()
-    self.errors = []
+    self.scope: Scope = pymodule.get_scope()
+    self.errors: List[Error] = []
 
 </t>
 <t tx="ekr.20221118072830.1589">def _Name(self, node):
@@ -11398,7 +11499,7 @@ INFO = __doc__
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.160">def get_property_object(self, args):
-    if isinstance(self._fget, pyobjects.AbstractFunction):
+    if is_abstract_function(self._fget):
         return self._fget.get_returned_object(args)
 
 
@@ -11552,28 +11653,31 @@ from rope.base.codeanalyze import ArrayLinesAdapter, LogicalLineFinder
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.162">class Lambda(pyobjects.AbstractFunction):
+<t tx="ekr.20221118072830.162">class Lambda(pyobjects.PyObject):  # was pyobjects.AbstractFunction.
     def __init__(self, node, scope):
-        super().__init__()
+        super().__init__(get_base_type("Function"))
         self.node = node
         self.arguments = node.args
         self.scope = scope
 
     @others
 </t>
-<t tx="ekr.20221118072830.164">def get_returned_object(self, args):
+<t tx="ekr.20221118072830.164">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+    # from rope.base.pyobjects import PyObject  # verify annotation
     result = rope.base.evaluate.eval_node(self.scope, self.node.body)
     if result is not None:
+        # assert isinstance(result.get_object(), (None.__class__, PyObject))  # verify annotation
         return result.get_object()
     else:
+        # assert isinstance(pyobjects.get_unknown(), (None.__class__, PyObject))  # verify annotation
         return pyobjects.get_unknown()
 
 </t>
-<t tx="ekr.20221118072830.165">def get_module(self):
+<t tx="ekr.20221118072830.165">def get_module(self) -&gt; Any:
     return self.parent.get_module()
 
 </t>
-<t tx="ekr.20221118072830.166">def get_scope(self):
+<t tx="ekr.20221118072830.166">def get_scope(self) -&gt; Scope:
     return self.scope
 
 </t>
@@ -11594,12 +11698,17 @@ from rope.base.codeanalyze import ArrayLinesAdapter, LogicalLineFinder
     return "lambda"
 
 </t>
-<t tx="ekr.20221118072830.171">def get_param_names(self, special_args=True):
-    result = [node.arg for node in self.arguments.args if isinstance(node, ast.arg)]
+<t tx="ekr.20221118072830.171">def get_param_names(self, special_args=True) -&gt; typing_List[str]:
+    result: typing_List[str] = [
+        node.arg  # ast.arg.arg is a str.
+        for node in self.arguments.args
+        if isinstance(node, ast.arg)
+    ]
     if self.arguments.vararg:
         result.append("*" + self.arguments.vararg.arg)
     if self.arguments.kwarg:
         result.append("**" + self.arguments.kwarg.arg)
+    # assert all(isinstance(z, str) for z in result), repr(result)  # verify annotation
     return result
 
 </t>
@@ -11628,7 +11737,7 @@ def parent(self):
     args = arguments.ObjectArguments([pyname])
     if "__iter__" in seq:
         obj = seq["__iter__"].get_object()
-        if not isinstance(obj, pyobjects.AbstractFunction):
+        if not is_abstract_function(obj):
             return None
         iter = obj.get_returned_object(args)
         if iter is not None and "next" in iter:
@@ -11666,8 +11775,16 @@ def parent(self):
 
 </t>
 <t tx="ekr.20221118072830.18">@path rope/base/
+from __future__ import annotations
+import ast
+from typing import Any, List, TYPE_CHECKING
 import rope.base.evaluate
-from rope.base import ast
+from rope.base.pyobjects import is_abstract_class
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyFunction
+    from rope.base.pyscopes import Scope
+Node = ast.AST
 
 
 @others
@@ -11683,14 +11800,12 @@ from rope.base import ast
     passed_class, passed_self = args.get_arguments(["type", "self"])
     if passed_self is None:
         return passed_class
-    else:
-        # pyclass = passed_self.get_type()
-        pyclass = passed_class
-        if isinstance(pyclass, pyobjects.AbstractClass):
-            supers = pyclass.get_superclasses()
-            if supers:
-                return pyobjects.PyObject(supers[0])
-        return passed_self
+    pyclass = passed_class
+    if is_abstract_class(pyclass):
+        supers = pyclass.get_superclasses()
+        if supers:
+            return pyobjects.PyObject(supers[0])
+    return passed_self
 
 
 </t>
@@ -12264,9 +12379,13 @@ def undo(self):
     return (change.resource.path, change.new_resource.path)
 
 </t>
-<t tx="ekr.20221118072830.25">def create_arguments(primary, pyfunction, call_node, scope):
+<t tx="ekr.20221118072830.25">def create_arguments(
+    primary, pyfunction: PyFunction, call_node: ast.Call, scope: Scope
+) -&gt; Arguments:
     """A factory for creating `Arguments`"""
-    args = list(call_node.args)
+    # Call(expr func, expr* args, keyword* keywords)
+
+    args: List = list(call_node.args)
     args.extend(call_node.keywords)
     called = call_node.func
     # XXX: Handle constructors
@@ -12826,21 +12945,27 @@ def ends(self):
     return r"#[^\n]*"
 </t>
 <t tx="ekr.20221118072830.316">@path rope/base/
+from __future__ import annotations
+import ast
 from operator import itemgetter
-from typing import Optional, Tuple
+from typing import Optional, Tuple, TYPE_CHECKING
 
 import rope.base.builtins
 import rope.base.pynames
 import rope.base.pyobjects
 from rope.base import (
     arguments,
-    ast,
     exceptions,
     nameanalyze,
-    pyobjects,
     pyobjectsdef,
     worder,
 )
+from rope.base.ast import RopeNodeVisitor
+from rope.base.pyobjects import is_abstract_class, is_abstract_function
+
+if TYPE_CHECKING:
+    from rope.base.pyscopes import Scope
+    from rope.base.pyobjects import PyObject
 
 BadIdentifierError = exceptions.BadIdentifierError
 
@@ -12871,7 +12996,7 @@ BadIdentifierError = exceptions.BadIdentifierError
 
 
 </t>
-<t tx="ekr.20221118072830.32">def __init__(self, pyname, arguments, scope):
+<t tx="ekr.20221118072830.32">def __init__(self, pyname, arguments: Arguments, scope: Scope) -&gt; None:
     """`arguments` is an instance of `Arguments`"""
     self.pyname = pyname
     self.args = arguments
@@ -12950,7 +13075,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         if isinstance(pyobject, pyobjectsdef.PyFunction):
             parameter_name = pyobject.get_parameters().get(keyword_name, None)
             return (None, parameter_name)
-        elif isinstance(pyobject, pyobjects.AbstractFunction):
+        if is_abstract_function(pyobject):
             parameter_name = rope.base.pynames.ParameterName()
             return (None, parameter_name)
     # class body
@@ -12989,11 +13114,9 @@ BadIdentifierError = exceptions.BadIdentifierError
         function_pyname = None
     if function_pyname is not None:
         pyobject = function_pyname.get_object()
-        if isinstance(pyobject, pyobjects.AbstractFunction):
+        if is_abstract_function(pyobject):
             return pyobject
-        elif (
-            isinstance(pyobject, pyobjects.AbstractClass) and "__init__" in pyobject
-        ):
+        elif is_abstract_class(pyobject) and "__init__" in pyobject:
             return pyobject["__init__"].get_object()
         elif "__call__" in pyobject:
             return pyobject["__call__"].get_object()
@@ -13014,10 +13137,10 @@ BadIdentifierError = exceptions.BadIdentifierError
 
 
 </t>
-<t tx="ekr.20221118072830.331">class StatementEvaluator(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.331">class StatementEvaluator(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.332">def __init__(self, scope):
+<t tx="ekr.20221118072830.332">def __init__(self, scope: Scope):
     self.scope = scope
     self.result = None
     self.old_result = None
@@ -13048,7 +13171,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         args = arguments.create_arguments(primary, pyobject, node, self.scope)
         return pyobject.get_returned_object(args)
 
-    if isinstance(pyobject, rope.base.pyobjects.AbstractClass):
+    if is_abstract_class(pyobject):
         result = None
         if "__new__" in pyobject:
             new_function = pyobject["__new__"].get_object()
@@ -13059,7 +13182,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         return
 
     pyfunction = None
-    if isinstance(pyobject, rope.base.pyobjects.AbstractFunction):
+    if is_abstract_function(pyobject):
         pyfunction = pyobject
     elif "__call__" in pyobject:
         pyfunction = pyobject["__call__"].get_object()
@@ -13067,6 +13190,13 @@ BadIdentifierError = exceptions.BadIdentifierError
         self.result = rope.base.pynames.UnboundName(
             pyobject=_get_returned(pyfunction)
         )
+
+def _get_primary_and_object_for_node(self, stmt):
+    primary, pyname = eval_node2(self.scope, stmt)
+    pyobject = None
+    if pyname is not None:
+        pyobject = pyname.get_object()
+    return primary, pyobject
 
 </t>
 <t tx="ekr.20221118072830.336">def _Str(self, node):
@@ -13206,13 +13336,9 @@ BadIdentifierError = exceptions.BadIdentifierError
     )
 
 </t>
-<t tx="ekr.20221118072830.352">def _get_object_for_node(self, stmt):
+<t tx="ekr.20221118072830.352">def _get_object_for_node(self, stmt) -&gt; Optional[PyObject]:
     pyname = eval_node(self.scope, stmt)
-    pyobject = None
-    if pyname is not None:
-        pyobject = pyname.get_object()
-    return pyobject
-
+    return pyname and pyname.get_object()
 </t>
 <t tx="ekr.20221118072830.354">def _Subscript(self, node):
     if isinstance(node.slice, ast.Index):
@@ -13229,13 +13355,12 @@ BadIdentifierError = exceptions.BadIdentifierError
 </t>
 <t tx="ekr.20221118072830.356">def _call_function(self, node, function_name, other_args=None):
     pyname = eval_node(self.scope, node)
-    if pyname is not None:
-        pyobject = pyname.get_object()
-    else:
+    if pyname is None:
         return
+    pyobject = pyname.get_object()
     if function_name in pyobject:
         called = pyobject[function_name].get_object()
-        if not called or not isinstance(called, pyobjects.AbstractFunction):
+        if not called or not is_abstract_function(called):
             return
         args = [node]
         if other_args:
@@ -13268,7 +13393,7 @@ BadIdentifierError = exceptions.BadIdentifierError
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.36">def _is_method_call(primary, pyfunction):
+<t tx="ekr.20221118072830.36">def _is_method_call(primary: Any, pyfunction: PyFunction) -&gt; bool:
     if primary is None:
         return False
     pyobject = primary.get_object()
@@ -13278,9 +13403,9 @@ BadIdentifierError = exceptions.BadIdentifierError
         and isinstance(pyfunction.parent, rope.base.pyobjects.PyClass)
     ):
         return True
-    if isinstance(
-        pyobject.get_type(), rope.base.pyobjects.AbstractClass
-    ) and isinstance(pyfunction, rope.base.builtins.BuiltinFunction):
+    if is_abstract_class(pyobject.get_type()) and isinstance(
+        pyfunction, rope.base.builtins.BuiltinFunction
+    ):
         return True
     return False
 </t>
@@ -14073,7 +14198,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.459">def get_string_module(project, code, resource=None, force_errors=False):
-    """Returns a `PyObject` object for the given code
+    """Instantiates a `PyModule` object for the given code.
 
     If `force_errors` is `True`, `exceptions.ModuleSyntaxError` is
     raised if module has syntax errors.  This overrides
@@ -14087,7 +14212,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.460">def get_string_scope(project, code, resource=None):
-    """Returns a `Scope` object for the given code"""
+    """Instantiates a `Scope` object for the given code"""
     return get_string_module(project, code, resource).get_scope()
 
 
@@ -14431,11 +14556,11 @@ Builtin and c-extension modules that are allowed to be imported and inspected by
     return config
 </t>
 <t tx="ekr.20221118072830.476">@path rope/base/
-from __future__ import annotations
 import contextlib
 import json
 import os
 import sys
+from typing import Any
 import warnings
 from contextlib import ExitStack
 from typing import Optional
@@ -14444,11 +14569,9 @@ import rope.base.fscommands  # Use full qualification for clarity.
 import rope.base.resourceobserver as resourceobserver
 from rope.base import exceptions, history, pycore, taskhandle, utils
 from rope.base.exceptions import ModuleNotFoundError
-
-# At present rope.base.prefs starts with `# type:ignore`.
-# As a result, mypy knows nothing about Prefs and get_config.
 from rope.base.prefs import Prefs, get_config  # type:ignore
 from rope.base.resources import File, Folder, _ResourceMatcher
+
 
 try:
     import cPickle as pickle  # type:ignore
@@ -14499,7 +14622,7 @@ except ImportError:
         raise exceptions.ResourceNotFoundError("Unknown resource " + resource_name)
 
 </t>
-<t tx="ekr.20221118072830.480">def get_module(self, name, folder=None):
+<t tx="ekr.20221118072830.480">def get_module(self, name, folder=None) -&gt; Any:
     """Returns a `PyObject` if the module was found."""
     # check if this is a builtin module
     pymod = self.pycore.builtin_module(name)
@@ -14695,7 +14818,8 @@ def pycore(self):
     self._init_source_folders()
 
 </t>
-<t tx="ekr.20221118072830.502">def __repr__(self):
+<t tx="ekr.20221118072830.502">def __repr__(self) -&gt; str:
+    # Changing this will cause a unit test to fail.
     return '&lt;{}.{} "{}"&gt;'.format(
         self.__class__.__module__,
         self.__class__.__name__,
@@ -14950,9 +15074,11 @@ def ropefolder(self):
             return module.get_child(packages[-1] + ".py")
 </t>
 <t tx="ekr.20221118072830.542">@path rope/base/
+from __future__ import annotations
 import bisect
 import contextlib
 import difflib
+from typing import Any, Callable, TYPE_CHECKING
 import warnings
 
 import rope.base.libutils
@@ -14962,6 +15088,10 @@ import rope.base.oi.soa
 import rope.base.resourceobserver
 import rope.base.resources
 from rope.base import builtins, exceptions, pyobjectsdef, stdmods, taskhandle, utils
+
+if TYPE_CHECKING:
+    from rope.base.pyscopes import Scope
+    from rope.base.resources import Resource
 
 
 @others
@@ -15022,14 +15152,24 @@ def automatic_soa(self):
 </t>
 <t tx="ekr.20221118072830.55">@path rope/base/
 """This module tries to support builtin types and functions."""
+from __future__ import annotations
+import ast
 import inspect
 import io
+from typing import Any, Optional, TYPE_CHECKING
+from typing import List as typing_List
 
 import rope.base.evaluate
-from rope.base import arguments, ast, pynames, pyobjects, utils
+from rope.base import arguments, pynames, pyobjects, utils
+from rope.base.pyobjects import get_base_type
+from rope.base.pyobjects import is_abstract_class, is_abstract_function
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyObject
+    from rope.base.pyscopes import Scope
 
 
-class BuiltinModule(pyobjects.AbstractModule):
+class BuiltinModule(pyobjects.PyObject):  # was pyobjects.AbstractModule.
 @others
 
 
@@ -15072,7 +15212,7 @@ builtins = BuiltinModule("builtins", initial=_initial_builtins)
 
 </t>
 <t tx="ekr.20221118072830.551">@utils.deprecated("Use `project.get_module` instead")
-def get_module(self, name, folder=None):
+def get_module(self, name, folder=None) -&gt; Any:
     """Returns a `PyObject` if the module was found."""
     return self.project.get_module(name, folder)
 
@@ -15109,7 +15249,7 @@ def get_string_module(self, code, resource=None, force_errors=False):
 
 </t>
 <t tx="ekr.20221118072830.556">@utils.deprecated("Use `libutils.get_string_scope` instead")
-def get_string_scope(self, code, resource=None):
+def get_string_scope(self, code: str, resource: Resource = None) -&gt; Scope:
     """Returns a `Scope` object for the given code"""
     return rope.base.libutils.get_string_scope(code, resource)
 
@@ -15134,7 +15274,7 @@ def find_module(self, modname, folder=None):
 
 </t>
 <t tx="ekr.20221118072830.56">    def __init__(self, name, pycore=None, initial={}):
-        super().__init__()
+        super().__init__(get_base_type("Module"))
         self.name = name
         self.pycore = pycore
         self.initial = initial
@@ -15211,17 +15351,18 @@ def get_python_files(self):
 <t tx="ekr.20221118072830.567">def analyze_module(
     self,
     resource,
-    should_analyze=lambda py: True,
-    search_subscopes=lambda py: True,
+    should_analyze: Callable = lambda py: True,
+    search_subscopes: Callable = lambda py: True,
     followed_calls=None,
 ):
     """Analyze `resource` module for static object inference
 
     This function forces rope to analyze this module to collect
-    information about function calls.  `should_analyze` is a
-    function that is called with a `PyDefinedObject` argument.  If
-    it returns `True` the element is analyzed.  If it is `None` or
-    returns `False` the element is not analyzed.
+    information about function calls.
+
+    `should_analyze` is a function that is called with a `PyDefinedObject`
+    argument. If it returns `True` the element is analyzed. If it is `None`
+    or returns `False` the element is not analyzed.
 
     `search_subscopes` is like `should_analyze`; The difference is
     that if it returns `False` the sub-scopes are all ignored.
@@ -15412,9 +15553,10 @@ import rope.base.pyobjects
 from rope.base import exceptions, utils
 
 if typing.TYPE_CHECKING:
-    from typing import Union
+    from typing import Any, Optional, Tuple, Union
 
     from rope.base import pyobjectsdef
+    from rope.base.pyobjects import PyObject
 
 
 @others
@@ -15430,12 +15572,17 @@ if typing.TYPE_CHECKING:
     return self.attributes
 
 </t>
-<t tx="ekr.20221118072830.590">def get_object(self):
-    """Return the `PyObject` object referenced by this `PyName`"""
+<t tx="ekr.20221118072830.590"># Holds analysis of assignments statements.
+pass
 
+def get_object(self) -&gt; Optional[PyObject]:
+    """Return the `PyObject` object referenced by this `PyName`"""
+    return None
 </t>
-<t tx="ekr.20221118072830.591">def get_definition_location(self):
+<t tx="ekr.20221118072830.591">
+def get_definition_location(self) -&gt; Optional[Tuple[Any, int]]:
     """Return a (module, lineno) tuple"""
+    return None
 
 
 </t>
@@ -15713,9 +15860,17 @@ def module(self):
     @others
 </t>
 <t tx="ekr.20221118072830.640">@path rope/base/
-from typing import Optional
+from __future__ import annotations
+import ast
+from typing import Any, List, Optional, TYPE_CHECKING
 
-from rope.base import ast, exceptions, utils
+from rope.base import exceptions, utils
+import rope.base.builtins
+
+if TYPE_CHECKING:
+    from rope.base.pycore import PyCore
+    from rope.base.resources import Resource
+    from rope.base.pyscopes import Scope
 
 
 @others
@@ -15724,9 +15879,7 @@ from rope.base import ast, exceptions, utils
 </t>
 <t tx="ekr.20221118072830.641">class PyObject:
     def __init__(self, type_):
-        if type_ is None:
-            type_ = self
-        self.type = type_
+        self.type = self if type_ is None else type_
 
     @others
 </t>
@@ -15793,46 +15946,50 @@ from rope.base import ast, exceptions, utils
     return iter(self.get_attributes())
 
 </t>
-<t tx="ekr.20221118072830.654">def get_base_type(name):
-    """Return the base type with name `name`.
+<t tx="ekr.20221118072830.654">    """Return the base type with name `name`.
 
     The base types are 'Type', 'Function', 'Module' and 'Unknown'.  It
     was used to check the type of a `PyObject` but currently its use
     is discouraged.  Use classes defined in this module instead.
     For example instead of
     ``pyobject.get_type() == get_base_type('Function')`` use
-    ``isinstance(pyobject, AbstractFunction)``.
+    ``is_abstract_function(pyobject)``.
 
-    You can use `AbstractClass` for classes, `AbstractFunction` for
-    functions, and `AbstractModule` for modules.  You can also use
-    `PyFunction` and `PyClass` for testing if an object is
-    defined somewhere and rope can access its source.  These classes
-    provide more methods.
+    You can use `is_abstract_class` for classes, `is_abstract_functions` for
+    functions, and `is_abstract_module` for modules.
 
     """
-    return PyObject._get_base_type(name)
-
-
+    global _anchor_types
+    if _anchor_types is None:
+        base_type = PyObject(None)
 </t>
-<t tx="ekr.20221118072830.655">def get_unknown():
-    """Return a pyobject whose type is unknown
+<t tx="ekr.20221118072830.655">        _anchor_types = {
+            "Function": PyObject(base_type),
+            "Module": PyObject(base_type),
+            "Type": base_type,  # a Class.
+            "Unknown": PyObject(base_type),
+        }
+    return _anchor_types[name]
 
-    Note that two unknown objects are equal.  So for example you can
-    write::
+
+def get_unknown() -&gt; PyObject:
+    """Return a pyobject whose type is unknown.
+
+    Note that two unknown objects are equal.
+
+    For example you can write::
 
       if pyname.get_object() == get_unknown():
           print('cannot determine what this pyname holds')
 
     Rope could have used `None` for indicating unknown objects but
-    we had to check that in many places.  So actually this method
-    returns a null object.
-
+    we had to check that in many places.
     """
-    if PyObject._unknown is None:
-        PyObject._unknown = PyObject(get_base_type("Unknown"))
-    return PyObject._unknown
+    return get_base_type("Unknown")
 
 
+def is_abstract_class(obj):
+    return isinstance(
 </t>
 <t tx="ekr.20221118072830.66">def get_doc(self):
     if self.builtin:
@@ -15844,10 +16001,10 @@ from rope.base import ast, exceptions, utils
         return getattr(self.builtin, "__name__", None)
 
 </t>
-<t tx="ekr.20221118072830.671">class PyDefinedObject:
-    """Python defined names that rope can access their sources"""
+<t tx="ekr.20221118072830.671">    """Python defined names that rope can access their sources"""
 
-    def __init__(self, pycore, ast_node, parent):
+    def __init__(self, pycore, ast_node, parent, type_):
+        super().__init__(type_)
         self.pycore = pycore
         self.ast_node = ast_node
         self.scope = None
@@ -15872,8 +16029,6 @@ from rope.base import ast, exceptions, utils
 def absolute_name(self):
     obj_name = self.get_name()
     return self.get_module().get_name() + ("::" + obj_name if obj_name else "")
-
-visitor_class = None
 
 </t>
 <t tx="ekr.20221118072830.676">@utils.prevent_recursion(lambda: {})
@@ -15915,18 +16070,17 @@ def parent(self):
 
 
 </t>
-<t tx="ekr.20221118072830.680">def get_scope(self):
+<t tx="ekr.20221118072830.680">def get_scope(self) -&gt; Scope:
     if self.scope is None:
         self.scope = self._create_scope()
     return self.scope
 
 </t>
-<t tx="ekr.20221118072830.681">def get_module(self):
+<t tx="ekr.20221118072830.681">def get_module(self) -&gt; Any:
     current_object = self
     while current_object.parent is not None:
         current_object = current_object.parent
     return current_object
-
 </t>
 <t tx="ekr.20221118072830.682">def get_doc(self) -&gt; Optional[str]:
     if len(self.get_ast().body) &gt; 0:
@@ -15942,6 +16096,8 @@ def parent(self):
     if self.defineds is None:
         self._get_structural_attributes()
     return self.defineds
+
+visitor_class = None
 
 </t>
 <t tx="ekr.20221118072830.684">def _create_structural_attributes(self):
@@ -15967,21 +16123,31 @@ def parent(self):
 
 
 </t>
-<t tx="ekr.20221118072830.688">class PyFunction(PyDefinedObject, AbstractFunction):
-    pass
-
+<t tx="ekr.20221118072830.688">class PyFunction(PyDefinedObject):
+    # 1. was (PyDefinedObject, AbstractFunction).
+    # 2. was (PyDefinedObject, PyObject)
 
 </t>
-<t tx="ekr.20221118072830.69">class BuiltinClass(_BuiltinElement, pyobjects.AbstractClass):
+<t tx="ekr.20221118072830.69">class BuiltinClass(_BuiltinElement, pyobjects.PyObject):
+    # was (_BuiltinElement, pyobjects.AbstractClass).
     def __init__(self, builtin, attributes, parent=None):
+        pyobjects.PyObject.__init__(self, get_base_type("Type"))
         _BuiltinElement.__init__(self, builtin, parent)
-        pyobjects.AbstractClass.__init__(self)
         self.initial = attributes
 
     @others
 </t>
-<t tx="ekr.20221118072830.690">class PyClass(PyDefinedObject, AbstractClass):
-    pass
+<t tx="ekr.20221118072830.690">class PyClass(PyDefinedObject):
+    # 1. Was (PyDefinedObject, AbstractClass).
+    # 2. Was (PyDefinedObject, PyObject).
+
+    def __init__(self, pycore, ast_node, parent):
+        super().__init__(pycore, ast_node, parent, get_base_type("Type"))
+
+    # From AbstractClass.
+
+    def get_superclasses(self):
+        return []
 
 
 </t>
@@ -16007,15 +16173,19 @@ data = property(get, set)
 
 </t>
 <t tx="ekr.20221118072830.697">def __str__(self):
-    return "&lt;" + str(self.data) + "&gt;"
+    return "pyobjects._ConcludedData&lt;" + str(self.data) + "&gt;"
 
 </t>
-<t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject, AbstractModule):
-    def __init__(self, pycore, ast_node, resource):
+<t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject):
+    """The base class for PyModule and PyPackage."""
+
+    # 1. was (PyDefinedObject, AbstractModule).
+    # 2. Was (PyDefinedObject, PyObject).
+
+    def __init__(self, pycore: PyCore, ast_node: ast.AST, resource: Resource) -&gt; None:
         self.resource = resource
-        self.concluded_data = []
-        AbstractModule.__init__(self)
-        PyDefinedObject.__init__(self, pycore, ast_node, None)
+        self.concluded_data: List[PyObject] = []
+        super().__init__(pycore, ast_node, None, get_base_type("Module"))
 
     @others
 </t>
@@ -16049,6 +16219,10 @@ data = property(get, set)
     pass
 </t>
 <t tx="ekr.20221118072830.707">@path rope/base/
+from __future__ import annotations
+import ast
+from typing import Any, List, Optional, TYPE_CHECKING
+
 import rope.base.builtins
 import rope.base.codeanalyze
 import rope.base.evaluate
@@ -16057,7 +16231,6 @@ import rope.base.oi.soi
 import rope.base.pyscopes
 from rope.base import (
     arguments,
-    ast,
     exceptions,
     fscommands,
     nameanalyze,
@@ -16065,6 +16238,11 @@ from rope.base import (
     pyobjects,
     utils,
 )
+from rope.base.ast import RopeNodeVisitor
+from rope.base.pyobjects import is_abstract_module
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyObject
 
 
 @others
@@ -16075,9 +16253,8 @@ from rope.base import (
     @others
 </t>
 <t tx="ekr.20221118072830.709">def __init__(self, pycore, ast_node, parent):
-    rope.base.pyobjects.AbstractFunction.__init__(self)
-    rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
-    self.arguments = self.ast_node.args
+    super().__init__(pycore, ast_node, parent)
+    self.arguments: ast.arguments = self.ast_node.args
     self.parameter_pyobjects = pynamesdef._Inferred(
         self._infer_parameters, self.get_module()._get_concluded_data()
     )
@@ -16143,27 +16320,33 @@ def get_attributes(self):
         return self.parameter_pyobjects.get()[index]
 
 </t>
-<t tx="ekr.20221118072830.719">def get_returned_object(self, args):
+<t tx="ekr.20221118072830.719">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+    # from rope.base.pyobjects import PyObject  # verify annotation
+    # assert isinstance(self.returned.get(args), (None.__class__, PyObject))  # verify annotation
     return self.returned.get(args)
 
 </t>
-<t tx="ekr.20221118072830.72">def get_module(self):
+<t tx="ekr.20221118072830.72">def get_module(self) -&gt; BuiltinModule:
     return builtins
-
 
 </t>
 <t tx="ekr.20221118072830.720">def get_name(self):
     return self.get_ast().name
 
 </t>
-<t tx="ekr.20221118072830.721">def get_param_names(self, special_args=True):
+<t tx="ekr.20221118072830.721">def get_param_names(self, special_args=True) -&gt; List[str]:
     # TODO: handle tuple parameters
-    result = [node.arg for node in self.arguments.args if isinstance(node, ast.arg)]
+    result: List[str] = [
+        node.arg  # ast.arg.arg is a str.
+        for node in self.arguments.args
+        if isinstance(node, ast.arg)
+    ]
     if special_args:
         if self.arguments.vararg:
             result.append(self.arguments.vararg.arg)
         if self.arguments.kwarg:
             result.append(self.arguments.kwarg.arg)
+    # assert all(isinstance(z, str) for z in result), repr(result)  # verify annotation
     return result
 
 </t>
@@ -16198,8 +16381,7 @@ def decorators(self):
 <t tx="ekr.20221118072830.724">class PyComprehension(pyobjects.PyComprehension):
     def __init__(self, pycore, ast_node, parent):
         self.visitor_class = _ComprehensionVisitor
-        rope.base.pyobjects.PyObject.__init__(self, type_="Comp")
-        rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
+        super().__init__(pycore, ast_node, parent, type_="Comp")
 
     @others
 </t>
@@ -16217,20 +16399,52 @@ def decorators(self):
 <t tx="ekr.20221118072830.728">class PyClass(pyobjects.PyClass):
     def __init__(self, pycore, ast_node, parent):
         self.visitor_class = _ClassVisitor
-        rope.base.pyobjects.AbstractClass.__init__(self)
-        rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
+        super().__init__(pycore, ast_node, parent)
         self.parent = parent
         self._superclasses = self.get_module()._get_concluded_data()
 
+    # Override po.PyDefinedObject.__repr__
+
+    if 1:
+        # Several unit tests assume this format:
+
+        # test_repr_pyobjectsdef_pyclass:
+        #   assert repr(obj).startswith(
+        #           '&lt;rope.base.pyobjectsdef.PyClass "pkg1.mod1::MyClass" at 0x')
+
+        # test_repr_pyobjectsdef_pyclass_without_associated_resource:
+
+        #   assert repr(obj).startswith(
+        #       '&lt;rope.base.pyobjectsdef.PyClass "::MyClass" at 0x')
+
+        def __repr__(self) -&gt; str:
+            return '&lt;{}.{} "{}" at {}&gt;'.format(
+                self.__class__.__module__,
+                self.__class__.__name__,
+                self.absolute_name,
+                hex(id(self)),
+            )
+
+    else:
+
+        def __repr__(self) -&gt; str:
+            return f"pyobjectsdef.PyClass: {self.absolute_name}"
+
     @others
 </t>
-<t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.AbstractFunction):
+<t tx="ekr.20221118072830.73">    def get_superclasses(self):
+        return []
+
+
+class BuiltinFunction(_BuiltinElement, pyobjects.PyObject):
+    # was (_BuiltinElement, pyobjects.AbstractFunction).
+
     def __init__(
-        self, returned=None, function=None, builtin=None, argnames=[], parent=None
+        self, returned=None, function=None, builtin=None, argnames: typing_List[str] = [], parent=None
     ):
+        pyobjects.PyObject.__init__(self, get_base_type("Function"))
         _BuiltinElement.__init__(self, builtin, parent)
-        pyobjects.AbstractFunction.__init__(self)
-        self.argnames = argnames
+        self.argnames: typing_List[str] = argnames
         self.returned = returned
         self.function = function
 
@@ -16286,7 +16500,7 @@ def decorators(self):
             raise
         else:
             source = "\n"
-            node = ast.parse("\n")
+            node = rope.base.ast.parse("\n")
     self.source_code = source
     self.star_imports = []
     self.visitor_class = _GlobalVisitor
@@ -16307,7 +16521,7 @@ def decorators(self):
                 source_bytes = fscommands.unicode_to_file_data(source_code)
             else:
                 source_bytes = source_code
-        ast_node = ast.parse(source_bytes, filename=filename)
+        ast_node = rope.base.ast.parse(source_bytes, filename=filename)
     except SyntaxError as e:
         raise exceptions.ModuleSyntaxError(filename, e.lineno, e.msg)
     except UnicodeDecodeError as e:
@@ -16344,6 +16558,9 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.742">def get_name(self):
     return rope.base.libutils.modname(self.resource) if self.resource else ""
 
+# PyModule = PyDefinedModule  # Fails
+# PyDefinedModule = PyModule  # Passes.
+
 
 </t>
 <t tx="ekr.20221118072830.743">class PyPackage(pyobjects.PyPackage):
@@ -16357,7 +16574,7 @@ def logical_lines(self):
             init_dot_py, force_errors=force_errors
         ).get_ast()
     else:
-        ast_node = ast.parse("\n")
+        ast_node = rope.base.ast.parse("\n")
     super().__init__(pycore, ast_node, resource)
 
 </t>
@@ -16405,14 +16622,16 @@ def logical_lines(self):
     return self.get_module().get_scope()
 
 </t>
-<t tx="ekr.20221118072830.75">def get_returned_object(self, args):
+<t tx="ekr.20221118072830.75">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+    # from rope.base.pyobjects import PyObject  # verify annotation
     if self.function is not None:
         return self.function(_CallContext(self.argnames, args))
     else:
+        # assert isinstance(self.returned, (None.__class__, PyObject))  # verify annotation
         return self.returned
 
 </t>
-<t tx="ekr.20221118072830.750">def get_module(self):
+<t tx="ekr.20221118072830.750">def get_module(self) -&gt; Any:
     init_dot_py = self._get_init_dot_py()
     if init_dot_py:
         return self.pycore.project.get_pymodule(init_dot_py)
@@ -16424,10 +16643,10 @@ def logical_lines(self):
 
 
 </t>
-<t tx="ekr.20221118072830.752">class _AnnAssignVisitor(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.752">class _AnnAssignVisitor(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor):
+<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor: RopeNodeVisitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
     self.type_hint = None
@@ -16468,9 +16687,9 @@ def logical_lines(self):
     pass
 
 </t>
-<t tx="ekr.20221118072830.76">def get_param_names(self, special_args=True):
+<t tx="ekr.20221118072830.76">def get_param_names(self, special_args=True) -&gt; typing_List[str]:
+    # assert all(isinstance(z, str) for z in self.argnames), repr(self.argnames)  # verify annotation
     return self.argnames
-
 
 </t>
 <t tx="ekr.20221118072830.760">def _Subscript(self, node):
@@ -16482,10 +16701,10 @@ def logical_lines(self):
 
 
 </t>
-<t tx="ekr.20221118072830.762">class _ExpressionVisitor(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.762">class _ExpressionVisitor(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor):
+<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor: RopeNodeVisitor):
     self.scope_visitor = scope_visitor
 
 </t>
@@ -16526,15 +16745,17 @@ def logical_lines(self):
 
     @others
 </t>
-<t tx="ekr.20221118072830.770">class _AssignVisitor(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072830.770">class _AssignVisitor(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor):
+<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor: RopeNodeVisitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
 
 </t>
 <t tx="ekr.20221118072830.772">def _Assign(self, node):
+    # Assign(expr* targets, expr value, string? type_comment)
+
     self.assigned_ast = node.value
     for child_node in node.targets:
         self.visit(child_node)
@@ -16546,6 +16767,8 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.774">def _Name(self, node):
+    # Name(identifier id, expr_context ctx)
+
     assignment = None
     if self.assigned_ast is not None:
         assignment = pynamesdef.AssignmentValue(self.assigned_ast)
@@ -16553,6 +16776,8 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.775">def _Tuple(self, node):
+    # Tuple(expr* elts, expr_context ctx)
+
     names = nameanalyze.get_name_levels(node)
     for name, levels in names:
         assignment = None
@@ -16578,14 +16803,14 @@ def logical_lines(self):
     @others
 </t>
 <t tx="ekr.20221118072830.780">def __init__(self, pycore, owner_object):
-    _ExpressionVisitor.__init__(self, scope_visitor=self)
+    super().__init__(scope_visitor=self)
     self.pycore = pycore
     self.owner_object = owner_object
     self.names = {}
     self.defineds = []
 
 </t>
-<t tx="ekr.20221118072830.781">def get_module(self):
+<t tx="ekr.20221118072830.781">def get_module(self) -&gt; Any:
     if self.owner_object is not None:
         return self.owner_object.get_module()
     else:
@@ -16598,8 +16823,9 @@ def logical_lines(self):
     self.defineds.append(pyclass)
 
 </t>
-<t tx="ekr.20221118072830.783">def _FunctionDef(self, node):
+<t tx="ekr.20221118072830.783">def _FunctionDef(self, node: ast.FunctionDef):
     pyfunction = PyFunction(self.pycore, node, self.owner_object)
+
     for decorator in pyfunction.decorators:
         if isinstance(decorator, ast.Name) and decorator.id == "property":
             if isinstance(self, _ClassVisitor):
@@ -16621,6 +16847,7 @@ def logical_lines(self):
                 break
     else:
         self.names[node.name] = pynamesdef.DefinedName(pyfunction)
+
     self.defineds.append(pyfunction)
 
 </t>
@@ -16754,9 +16981,7 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.798">def _is_ignored_import(self, imported_module):
     if not self.pycore.project.prefs.get("ignore_bad_imports", False):
         return False
-    return not isinstance(
-        imported_module.get_object(), rope.base.pyobjects.AbstractModule
-    )
+    return not is_abstract_module(imported_module.get_object())
 
 </t>
 <t tx="ekr.20221118072830.799">def _Global(self, node):
@@ -16940,8 +17165,9 @@ def get_attributes(self):
     return result
 </t>
 <t tx="ekr.20221118072830.824">@path rope/base/
+import ast
 import rope.base.builtins  # Use full qualification for clarity.
-from rope.base import ast, codeanalyze, exceptions, pynames, utils
+from rope.base import codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
 
@@ -18667,7 +18893,7 @@ def get_empty_import():
 
 </t>
 <t tx="ekr.20221118072831.1031">class EmptyImport(ImportInfo):
-    names_and_aliases: List[Tuple[str, str]] = []
+    names_and_aliases: List[str] = []
 
     @others
 </t>
@@ -18686,10 +18912,16 @@ def get_empty_import():
         self.folder = folder
 </t>
 <t tx="ekr.20221118072831.1035">@path rope/refactor/importutils/
-from typing import List, Union
+from __future__ import annotations
+import ast
+from typing import Callable, List, Set, Union, TYPE_CHECKING
 
-from rope.base import ast, exceptions, pynames, pynamesdef, utils
+from rope.base import exceptions, pynames, pynamesdef, utils
+from rope.base.ast import RopeNodeVisitor
 from rope.refactor.importutils import actions, importinfo
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyModule, PyObject
 
 
 @others
@@ -18699,7 +18931,9 @@ from rope.refactor.importutils import actions, importinfo
 <t tx="ekr.20221118072831.1036">class ModuleImports:
     @others
 </t>
-<t tx="ekr.20221118072831.1037">def __init__(self, project, pymodule, import_filter=None):
+<t tx="ekr.20221118072831.1037">def __init__(
+    self, project: PyObject, pymodule: PyModule, import_filter: Callable = None
+):
     self.project = project
     self.pymodule = pymodule
     self.separating_lines = 0
@@ -19186,9 +19420,9 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1068">class _OneTimeSelector:
     @others
 </t>
-<t tx="ekr.20221118072831.1069">def __init__(self, names):
+<t tx="ekr.20221118072831.1069">def __init__(self, names: List[str]):
     self.names = names
-    self.selected_names = set()
+    self.selected_names: Set = set()
 
 </t>
 <t tx="ekr.20221118072831.107">def import_assist(self, starting):
@@ -19231,10 +19465,10 @@ from rope.refactor import importutils
 
 
 </t>
-<t tx="ekr.20221118072831.1073">class _UnboundNameFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.1073">class _UnboundNameFinder(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072831.1074">def __init__(self, pyobject):
+<t tx="ekr.20221118072831.1074">def __init__(self, pyobject: PyObject):
     self.pyobject = pyobject
 
 </t>
@@ -19300,14 +19534,17 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1083">class _GlobalUnboundNameFinder(_UnboundNameFinder):
     @others
 </t>
-<t tx="ekr.20221118072831.1084">def __init__(self, pymodule, wanted_pyobject):
+<t tx="ekr.20221118072831.1084">def __init__(self, pymodule: PyModule, wanted_pyobject: PyObject):
     super().__init__(pymodule)
-    self.unbound = set()
-    self.names = set()
+    self.unbound: Set = set()
+    self.names: Set = set()
     for name, pyname in pymodule._get_structural_attributes().items():
         if not isinstance(pyname, (pynames.ImportedName, pynames.ImportedModule)):
             self.names.add(name)
-    wanted_scope = wanted_pyobject.get_scope()
+
+    # Valid mypy complaint: "PyObject" has no attribute "get_scope"
+
+    wanted_scope = wanted_pyobject.get_scope()  # type:ignore
     self.start = wanted_scope.get_start()
     self.end = wanted_scope.get_end() + 1
 
@@ -19955,9 +20192,14 @@ from ropetest import testutils
             return eval("arg")
         a_var = a_func(mod1)
     """)
+    # breakpoint()
     mod2.write(code)
     self.pycore.run_module(mod2).wait_process()
     pymod2 = self.project.get_pymodule(mod2)
+    if 0:  # trace
+        print('')
+        print('test_module_dti:', self.project.get_pymodule(mod1).__class__.__name__)
+        print('test_module_dti:', pymod2["a_var"].get_object().__class__.__name__)
     self.assertEqual(self.project.get_pymodule(mod1), pymod2["a_var"].get_object())
 
 </t>
@@ -24318,7 +24560,6 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
-
 @others
 @language python
 @tabwidth -4
@@ -24327,8 +24568,13 @@ from ropetest import testutils
     @others
 </t>
 <t tx="ekr.20221118072831.1485">def setUp(self):
+    """
+    Init self.project to a new Project instance for this test, with default prefs.
+    self.project.fscommands manages temp files in a temp directory.
+    """
     super().setUp()
     self.project = testutils.sample_project()
+    
 
 </t>
 <t tx="ekr.20221118072831.1486">def tearDown(self):
@@ -24345,6 +24591,11 @@ from ropetest import testutils
     scope = libutils.get_string_scope(self.project, code)
     sample_class = scope["Sample"].get_object()
     a_var = scope["a_var"].get_object()
+    if 0:  # trace:
+        print('')
+        print(scope)
+        print(sample_class)
+        print(a_var)
     self.assertEqual(sample_class, a_var.get_type())
 
 </t>
@@ -24530,6 +24781,11 @@ from ropetest import testutils
 
     folders = self.project.get_python_path_folders()
     folder_paths = map(lambda folder: Path(folder.real_path), folders)
+
+    # Valid mypy complaint:
+    # error: Incompatible types in assignment
+    # (expression has type "filter[Path]", variable has type "map[Path]")
+
     folder_paths = filter(filter_folders, folder_paths)  # type:ignore
     return list(OrderedDict.fromkeys(folder_paths))
 
@@ -25932,7 +26188,7 @@ import sys
 from collections import OrderedDict
 from typing import Generator, List, Optional, Tuple
 
-from rope.base.project import Project
+from rope.base.project import Project  # type:ignore
 
 from .defs import ModuleCompiled, ModuleFile, ModuleInfo, Package, PackageType, Source
 
@@ -26400,7 +26656,7 @@ from rope.base import exceptions, libutils
 from rope.base.builtins import BuiltinClass, File
 from rope.base.pycore import _TextChangeDetector
 from rope.base.pynamesdef import AssignedName
-from rope.base.pyobjects import AbstractFunction, get_base_type
+from rope.base.pyobjects import get_base_type
 from ropetest import testutils
 
 
@@ -26549,11 +26805,12 @@ def test_global_variable_with_type_annotation(self):
             def f():
                 pass
     """)
+    from rope.base.pyobjects import is_abstract_function
     mod.write(code)
     mod_element = self.project.get_module("mod")
     sample_class = mod_element["C"].get_object()
     f = sample_class["f"].get_object()
-    self.assertTrue(isinstance(f, AbstractFunction))
+    self.assertTrue(is_abstract_function(f))
 
 </t>
 <t tx="ekr.20221118072831.1693">def test_classes_inside_other_classes(self):
@@ -26771,7 +27028,6 @@ def xxx_test_not_found_module_is_module(self):
 <t tx="ekr.20221118072831.171">@path rope/contrib/autoimport/
 """AutoImport module for rope."""
 from .pickle import AutoImport as _PickleAutoImport
-from .sqlite import AutoImport as _SqliteAutoImport
 
 AutoImport = _PickleAutoImport
 
@@ -34976,11 +35232,13 @@ def worder(self):
 </t>
 <t tx="ekr.20221118072831.239">@path rope/refactor/
 import re
-from typing import Dict
+import ast
 from contextlib import contextmanager
 from itertools import chain
+from typing import Dict
 
-from rope.base import ast, codeanalyze
+from rope.base import codeanalyze
+from rope.base.ast import RopeNodeVisitor
 from rope.base.change import ChangeContents, ChangeSet
 from rope.base.exceptions import RefactoringError
 from rope.base.utils.datastructures import OrderedSet
@@ -43491,12 +43749,13 @@ from ropetest import testutils
     )
 </t>
 <t tx="ekr.20221118072831.2853">@path ropetest/refactor/
+import ast
 import itertools
 import sys
 import unittest
 from textwrap import dedent
 
-from rope.base import ast
+import rope.base.ast as rast
 from rope.refactor import patchedast
 from ropetest import testutils
 
@@ -45321,17 +45580,17 @@ def test_match_node_with_match_mapping_match_as(self):
                 if str(node).startswith(text):
                     self.result = node
                     break
-                if ast.get_node_type_name(node).startswith(text):
+                if rast.get_node_type_name(node).startswith(text):
                     self.result = node
                     break
             return self.result is not None
 
     search = Search()
-    ast.call_for_nodes(self.ast, search)
+    rast.call_for_nodes(self.ast, search)
     return search.result
 
 </t>
-<t tx="ekr.20221118072831.301">class _ExtractMethodParts(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.301">class _ExtractMethodParts(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.3011">def check_children(self, text, children):
@@ -45351,9 +45610,9 @@ def test_match_node_with_match_mapping_match_as(self):
         else:
             self.test_case.assertNotEqual("", text, "probably ignoring some node")
             self.test_case.assertTrue(
-                ast.get_node_type_name(child).startswith(expected),
+                rast.get_node_type_name(child).startswith(expected),
                 msg="Expected &lt;%s&gt; but was &lt;%s&gt;"
-                % (expected, ast.get_node_type_name(child)),
+                % (expected, rast.get_node_type_name(child)),
             )
 </t>
 <t tx="ekr.20221118072831.3012">@path ropetest/refactor/
@@ -45422,7 +45681,7 @@ from ropetest import testutils
 
 </t>
 <t tx="ekr.20221118072831.302">def __init__(self, info):
-    self.info = info
+    self.info: str = info
     self.info_collector = self._create_info_collector()
     self.info.kind = self._get_kind_by_scope()
     self._check_constraints()
@@ -49817,7 +50076,7 @@ def _get_globals_in_body(unindented_body):
 
 
 </t>
-<t tx="ekr.20221118072831.339">class _FunctionInformationCollector(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.339">class _FunctionInformationCollector(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.34">def _get_element_kind(self):
@@ -49825,7 +50084,7 @@ def _get_globals_in_body(unindented_body):
 
 
 </t>
-<t tx="ekr.20221118072831.340">def __init__(self, start, end, is_global):
+<t tx="ekr.20221118072831.340">def __init__(self, start: int, end: int, is_global: bool):
     self.start = start
     self.end = end
     self.is_global = is_global
@@ -50047,7 +50306,7 @@ def _handle_loop_context(self, node):
 
 
 </t>
-<t tx="ekr.20221118072831.364">class _VariableReadsAndWritesFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.364">class _VariableReadsAndWritesFinder(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.365">def __init__(self):
@@ -50098,7 +50357,7 @@ def find_reads_for_one_liners(code):
 
 
 </t>
-<t tx="ekr.20221118072831.371">class _BaseErrorFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.371">class _BaseErrorFinder(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.372">@classmethod
@@ -50202,7 +50461,7 @@ def has_errors(cls, code):
 
 
 </t>
-<t tx="ekr.20221118072831.389">class _GlobalFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.389">class _GlobalFinder(RopeNodeVisitor):
     def __init__(self):
         self.globals_ = OrderedSet()
 
@@ -51899,7 +52158,7 @@ based on inputs.
 from __future__ import annotations
 
 import typing
-from typing import Optional, List, Union
+from typing import Union
 
 from rope.base import (
     codeanalyze,
@@ -52245,8 +52504,8 @@ if typing.TYPE_CHECKING:
 </t>
 <t tx="ekr.20221118072831.536">def get_changes(
     self,
-    dest: Optional[Union[str, resources.Resource]],
-    resources: Optional[List[resources.File]] = None,
+    dest: Union[None, str, resources.Resource],
+    resources=None,
     task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Return the changes needed for this refactoring
@@ -52259,20 +52518,19 @@ if typing.TYPE_CHECKING:
       will be applied to all python files.
 
     """
-    # To do (in another PR): Create a new var: dest_resource: resource.Reource
-    # Doing so should remove the type:ignore below.
     if isinstance(dest, str):
         dest = self.project.find_module(dest)
     if resources is None:
         resources = self.project.get_python_files()
-    # The previous guards protect against this mypy complaint:
-    # "Resource" has no attribute "has_child"
     if dest is None or not dest.exists():
         raise exceptions.RefactoringError("Move destination does not exist.")
+
+    # Valid pylint complaints:
+    #  "Resource" has no attribute "has_child"
+    # "Resource" has no attribute "get_child"
+
     if dest.is_folder() and dest.has_child("__init__.py"):  # type:ignore
         dest = dest.get_child("__init__.py")  # type:ignore
-    # The previous guards protect against this mypy complaint:
-    # Item "None" of "Union[str, Resource, None]" has no attribute "is_folder"
     if dest.is_folder():  # type:ignore
         raise exceptions.RefactoringError(
             "Move destination for non-modules should not be folders."
@@ -52997,13 +53255,12 @@ def main_refactoring(self):
 </t>
 <t tx="ekr.20221118072831.589">@path rope/refactor/
 &lt;&lt; docstring: rope/refactor/occurrences.py &gt;&gt;
-
+import ast
 
 import contextlib
 import re
 
 from rope.base import (
-    ast,
     codeanalyze,
     evaluate,
     exceptions,
@@ -53012,6 +53269,7 @@ from rope.base import (
     utils,
     worder,
 )
+import rope.base.ast as rast
 
 
 @others
@@ -53381,8 +53639,8 @@ def lineno(self):
 
 </t>
 <t tx="ekr.20221118072831.628">def _search_in_f_string(self, f_string):
-    tree = ast.parse(f_string)
-    for node in ast.walk(tree):
+    tree = rast.parse(f_string)
+    for node in rast.ast.walk(tree):
         if isinstance(node, ast.Name) and node.id == self.name:
             yield node
 
@@ -53493,13 +53751,14 @@ def pymodule(self):
     return self.project.get_pymodule(self.resource)
 </t>
 <t tx="ekr.20221118072831.642">@path rope/refactor/
+import ast
 import collections
 import numbers
 import re
 import warnings
 from itertools import chain
 
-from rope.base import ast, codeanalyze, exceptions
+from rope.base import codeanalyze, exceptions
 
 COMMA_IN_WITH_PATTERN = re.compile(r"\(.*?\)|(,)")
 
@@ -54693,6 +54952,7 @@ from rope.base import (
 )
 from rope.base.change import ChangeContents, ChangeSet, MoveResource
 from rope.refactor import occurrences
+from rope.base.pyobjects import is_abstract_module
 
 
 @others
@@ -54841,7 +55101,7 @@ from rope.refactor import occurrences
 
 </t>
 <t tx="ekr.20221118072831.776">def _is_renaming_a_module(self):
-    return isinstance(self.old_pyname.get_object(), pyobjects.AbstractModule)
+    return is_abstract_module(self.old_pyname.get_object())
 
 </t>
 <t tx="ekr.20221118072831.777">def is_method(self):
@@ -55005,9 +55265,10 @@ from rope.refactor import occurrences
     )
 </t>
 <t tx="ekr.20221118072831.786">@path rope/refactor/
+import ast
 import warnings
 
-from rope.base import ast, builtins, change, codeanalyze, libutils, taskhandle
+from rope.base import builtins, change, codeanalyze, libutils, taskhandle
 from rope.refactor import patchedast, similarfinder, sourceutils
 from rope.refactor.importutils import module_imports
 
@@ -55325,11 +55586,12 @@ from rope.refactor.importutils import module_imports
 </t>
 <t tx="ekr.20221118072831.805">@path rope/refactor/
 """This module can be used for finding similar code"""
+import ast
 import re
 
 import rope.base.builtins  # Use full qualification for clarity.
 import rope.refactor.wildcards  # Use full qualification for clarity.
-from rope.base import ast, codeanalyze, exceptions, libutils
+from rope.base import codeanalyze, exceptions, libutils
 from rope.refactor import patchedast
 from rope.refactor.patchedast import MismatchedTokenError
 
@@ -55520,7 +55782,7 @@ from rope.refactor.patchedast import MismatchedTokenError
         self.matches = []
         # _check_nodes always returns None, so
         # call_for_nodes traverses self.body's entire tree.
-        ast.call_for_nodes(self.body, self._check_node)
+        rope.base.ast.call_for_nodes(self.body, self._check_node)
     return self.matches
 
 </t>
@@ -55911,9 +56173,10 @@ def __repr__(self):
     return project.prefs.get("indent_size", 4)
 </t>
 <t tx="ekr.20221118072831.864">@path rope/refactor/
+import ast
 from itertools import chain
 
-from rope.base import ast
+from rope.base.ast import RopeNodeVisitor
 
 
 @others
@@ -56039,7 +56302,7 @@ from rope.base import ast
 
 
 </t>
-<t tx="ekr.20221118072831.877">class _SuiteWalker(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.877">class _SuiteWalker(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.878">def __init__(self, suite):
@@ -56173,8 +56436,8 @@ from rope.base.change import ChangeContents, ChangeSet, CreateFolder, MoveResour
     return import_tools.relatives_to_absolutes(pymodule)
 </t>
 <t tx="ekr.20221118072831.897">@path rope/refactor/
+import ast
 from rope.base import (
-    ast,
     change,
     evaluate,
     exceptions,
@@ -56183,6 +56446,7 @@ from rope.base import (
     pyobjects,
     taskhandle,
 )
+from rope.base.ast import RopeNodeVisitor
 from rope.refactor import restructure, similarfinder, sourceutils
 
 
@@ -56398,7 +56662,7 @@ from rope.refactor import restructure, similarfinder, sourceutils
 
 
 </t>
-<t tx="ekr.20221118072831.917">class _ReturnOrYieldFinder(ast.RopeNodeVisitor):
+<t tx="ekr.20221118072831.917">class _ReturnOrYieldFinder(RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.918">def __init__(self):
@@ -56440,8 +56704,11 @@ from rope.refactor import restructure, similarfinder, sourceutils
         self.visit(child)
 </t>
 <t tx="ekr.20221118072831.925">@path rope/refactor/
-from rope.base import ast, builtins, evaluate, pyobjects
+import ast
+
+from rope.base import builtins, evaluate, pyobjects
 from rope.refactor import occurrences, patchedast
+from rope.base.pyobjects import is_abstract_class
 
 
 @others
@@ -56601,7 +56868,7 @@ from rope.refactor import occurrences, patchedast
 </t>
 <t tx="ekr.20221118072831.938">def _get_super_classes(self, pyobject):
     result = []
-    if isinstance(pyobject, pyobjects.AbstractClass):
+    if is_abstract_class(pyobject):
         for superclass in pyobject.get_superclasses():
             result.append(superclass)
             result.extend(self._get_super_classes(superclass))
@@ -56887,13 +57154,12 @@ Functions to find importable names.
 Can extract names from source code of a python file, .so object, or builtin module.
 """
 
+import ast
 import inspect
 import logging
 import pathlib
 from importlib import import_module
 from typing import Generator, List
-
-from rope.base import ast
 
 from .defs import (
     ModuleCompiled,
@@ -57233,7 +57499,7 @@ def visitNormalImport(self, import_stmt, import_info):
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072831.996">from typing import List, Tuple
+<t tx="ekr.20221118072831.996">from typing import List
 
 
 class ImportStatement:
@@ -57504,15 +57770,15 @@ extend-ignore =
     # F841: local variable `name` is assigned to but never used
     # while useful as a warning while writing code, the workarounds to avoid
     # getting this error is often worst than the original problem
-    F841
+    # F841
 
     # E203: whitespace before ':'
     # this rule contradicts black codestyle
-    E203
+    # E203
 
     # B007: Loop control variable 'keyword' not used within the loop body.
     #       If this is intended, start the name with an underscore.
-    B007
+    # B007
 
     # B011: Do not call assert False since python -O removes these calls.
     #       Instead callers should raise AssertionError().
@@ -57890,7 +58156,10 @@ echo off
 cd c:\Repos\ekr-fork-rope2
 git push upstream %*</t>
 <t tx="ekr.20221210100024.1">@path rope/base/
-from rope.base import ast
+import ast
+from typing import List
+
+from rope.base.ast import RopeNodeVisitor
 
 
 @others
@@ -57922,11 +58191,11 @@ from rope.base import ast
 <t tx="ekr.20221210100142.11">def _Slice(self, node):
     self._add_node(node)
 </t>
-<t tx="ekr.20221210100142.2">class _NodeNameCollector(ast.RopeNodeVisitor):
+<t tx="ekr.20221210100142.2">class _NodeNameCollector(RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221210100142.3">def __init__(self, levels=None):
-    self.names = []
+<t tx="ekr.20221210100142.3">def __init__(self, levels: List[int] = None):
+    self.names: List[str] = []
     self.levels = levels
     self.index = 0
 
@@ -57972,12 +58241,11 @@ from rope.base import ast
 <t tx="ekr.20221211142245.1">@nopyflakes
 import ast
 import sys
-from ast import *  # noqa: F401,F403
 
 from rope.base import fscommands
 
+# Handle Python 3.7 and before.
 try:
-    # Suppress the mypy complaint: Module "ast" has no attribute "_const_node_type_names"
     from ast import _const_node_type_names  # type:ignore
 except ImportError:
     # backported from stdlib `ast`
@@ -58113,11 +58381,19 @@ def xxx_test_with_statement_variables_should_not_leak(self):
 </t>
 <t tx="ekr.20221212141427.1">@path rope/base/
 @nopyflakes
+from __future__ import annotations
 import contextlib
+from typing import Any, Union, TYPE_CHECKING
 
 import rope.base.oi.soi
 import rope.base.pyobjects
 from rope.base import pynames, utils
+
+if TYPE_CHECKING:
+    from rope.base.pyobjects import PyFunction
+    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
+
+    PyFunc = Union[PyFunction, DefinedPyFunction]
 
 
 @others
@@ -58144,7 +58420,7 @@ cd C:\Repos\ekr-fork-rope2
 <t tx="ekr.20221216152411.1">class ParameterName(pynames.ParameterName):
     @others
 </t>
-<t tx="ekr.20221216152411.2">def __init__(self, pyfunction, index):
+<t tx="ekr.20221216152411.2">def __init__(self, pyfunction: PyFunc, index: int) -&gt; None:
     self.pyfunction = pyfunction
     self.index = index
 
@@ -58258,7 +58534,7 @@ def _get_inferred(self):
 
 
 </t>
-<t tx="ekr.20221230095613.1">def parse(source, filename="&lt;string&gt;", *args, **kwargs):  # type: ignore
+<t tx="ekr.20221230095613.1">def parse(source, filename="&lt;string&gt;", *args, **kwargs):
     if isinstance(source, str):
         source = fscommands.unicode_to_file_data(source)
     if b"\r" in source:
@@ -58327,6 +58603,7 @@ monitoring the progress of refactorings.
 """
 </t>
 <t tx="ekr.20230102051545.1">class RopeNodeVisitor(ast.NodeVisitor):
+    # This is the only visit method in Rope.
     @others
 
 
@@ -58731,6 +59008,37 @@ As far as type inference goes, we can (mostly) ignore:
 
 @language python
 </t>
+<t tx="ekr.20230206074301.1">@nocolor
+.. rope documentation master file, created by
+   sphinx-quickstart on Sat May 21 18:16:44 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to rope's documentation!
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   overview
+   rope
+   library
+   configuration
+   contributing
+   theory
+   release-process
+   dev/issues
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+</t>
 <t tx="ekr.20230207050236.1">g.cls()
 """Push docs/theory.rst to devel and open it in mozilla."""
 import time
@@ -58873,7 +59181,7 @@ if c.isChanged():
 g.execute_shell_commands('mypy-r')
 </t>
 <t tx="ekr.20230210213726.1">@property
-def absolute_name(self) -&gt; str:
+def absolute_name(self) -&gt; Optional[str]:
     return self.get_name()
 
 </t>
@@ -58884,119 +59192,33 @@ if c.isChanged():
 g.execute_shell_commands('test-one-r')
 </t>
 <t tx="ekr.20230219184800.1">@language rest
+.. _`Leo`: https://leo-editor.github.io/leo-editor/
+.. _`PR #1`: https://github.com/edreamleo/ekr-fork-rope2/pull/1
+.. _`Rope`: https://github.com/python-rope/rope
+.. _`Rope's readme file`: https://github.com/python-rope/rope/blob/master/README.rst
+.. _`theory.rst`: https://github.com/edreamleo/ekr-fork-rope2/blob/devel/docs/theory.rst
+.. _`rope.leo`: https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo
+.. _`Rope commits`: https://github.com/leo-editor/leo-editor-contrib/commits/master
+.. _`Forked commits`: https://github.com/edreamleo/ekr-fork-rope2/commits/devel
+.. _`Forked issues`: https://github.com/edreamleo/ekr-fork-rope2/issues
+.. _`Forked PRs`: https://github.com/edreamleo/ekr-fork-rope2/pulls
 
-.. _GitHub python-rope / rope: https://github.com/python-rope/rope
+This is the `devel` branch of the `ekr-fork-rope2` fork of `Rope`_
 
+`ekr-fork-rope2` exists solely to develop a Theory of Operation for Rope.
 
-=========================================================================
- rope -- the world's most advanced open source Python refactoring library
-=========================================================================
+The `devel` branch contains study code. No PR (for Rope itself) will ever be based on `devel`.
 
-|Build status badge| |Latest version badge| |Download count badge| |ReadTheDocs status badge|
+Links:
 
-.. |Build status badge| image:: https://github.com/python-rope/rope/actions/workflows/main.yml/badge.svg
-   :target: https://github.com/python-rope/rope/actions/workflows/main.yml
-   :alt: Build Status
-
-.. |Latest version badge| image:: https://badge.fury.io/py/rope.svg
-   :target: https://badge.fury.io/py/rope
-   :alt: Latest version
-
-.. |Download count badge| image:: https://img.shields.io/pypi/dm/rope.svg
-   :alt: Download count
-
-.. |ReadTheDocs status badge| image:: https://readthedocs.org/projects/rope/badge/?version=latest
-   :target: https://rope.readthedocs.io/en/latest/?badge=latest
-   :alt: Documentation Status
-
-Overview
-========
-
-`Rope`_ is the world's most advanced open source Python refactoring library
-(yes, I totally stole that tagline from Postgres).
-
-.. _`rope`: https://github.com/python-rope/rope
-
-
-Most Python syntax up to Python 3.10 is supported. Please file bugs and contribute
-patches if you encounter gaps.
-
-Since version 1.0.0, rope no longer support running on Python 2.
-If you need Python 2 support, then check out the `python2` branch or the 0.x.x
-releases.
-
-Getting Started
-===============
-
-* `Documentation &lt;https://rope.readthedocs.io/en/latest/overview.html&gt;`_
-* `How to use Rope in my IDE or Text editor? &lt;https://github.com/python-rope/rope/wiki/How-to-use-Rope-in-my-IDE-or-Text-editor%3F&gt;`_
-* `Configuration &lt;https://rope.readthedocs.io/en/latest/configuration.html&gt;`_
-* `List of features &lt;https://rope.readthedocs.io/en/latest/rope.html&gt;`_
-* `Overview of some of rope's features &lt;https://rope.readthedocs.io/en/latest/overview.html&gt;`_
-* `Using as a library &lt;https://rope.readthedocs.io/en/latest/library.html&gt;`_
-* `Contributing &lt;https://rope.readthedocs.io/en/latest/contributing.html&gt;`_
-
-Why use Rope?
-=============
-
-- Rope aims to provide powerful and safe refactoring
-- Rope is light on dependency, Rope only depends on Python itself
-- Unlike PyRight or PyLance, Rope does not depend on Node.js
-- Unlike PyLance or PyCharm, Rope is open source.
-- Unlike PyRight and PyLance, Rope is written in Python itself, so if you experience problems, you would be able to debug and hack it yourself in a language that you are already familiar with
-- In comparison to Jedi, Rope is focused on refactoring. While Jedi provides some basic refactoring capabilities, Rope supports many more advanced refactoring operations and options that Jedi does not.
-
-
-Bug Reports
-===========
-
-Send your bug reports and feature requests at `python-rope's issue tracker`_ in GitHub.
-
-.. _`python-rope's issue tracker`: https://github.com/python-rope/rope/issues
-
-
-Maintainers
-===========
-
-Current active maintainer of Rope is Lie Ryan (`@lieryan`_).
-
-Special Thanks
-==============
-
-Many thanks the following people:
-
-- Ali Gholami Rudi (`@aligrudi`_) for initially creating the initial Rope project and most of Rope's code
-- Matej Cepl (`@mcepl`_) as former long-time Rope maintainer
-- Nick Smith &lt;nicks@fastmail.fm&gt; (`@soupytwist`_) as former Rope maintainer
-- `all of our current and former contributors`_
-- `all authors of editor integrations`_
-- all maintainers of distro/package managers
-
-.. _`@aligrudi`: https://github.com/aligrudi
-.. _`@soupytwist`: https://github.com/soupytwist
-.. _`@lieryan`: https://github.com/lieryan
-.. _`@mcepl`: https://github.com/mcepl
-.. _`all of our current and former contributors`: https://github.com/python-rope/rope/blob/master/CONTRIBUTORS.md
-.. _`all authors of editor integrations`: https://github.com/python-rope/rope/wiki/How-to-use-Rope-in-my-IDE-or-Text-editor%3F
-
-Packaging Status
-================
-
-.. image:: https://repology.org/badge/vertical-allrepos/python:rope.svg?exclude_unsupported=1
-   :target: https://repology.org/project/python:rope/versions
-   :alt: Packaging status
-
-.. image:: https://repology.org/badge/vertical-allrepos/rope.svg?exclude_unsupported=1
-   :target: https://repology.org/project/rope/versions
-   :alt: Packaging status
-
-License
-=======
-
-This program is under the terms of LGPL v3+ (GNU Lesser General Public License).
-Have a look at `COPYING`_ for more information.
-
-.. _`COPYING`: COPYING
+- `Rope's readme file`_: The official Rope README.rst file.
+- `rope.leo`_: my `Leo`_ study outline. I do all my work from this outline!
+- `Forked issues`_: Issues in `leo-fork-rope2`.
+- `Forked commits`_: Commits in `leo-fork-rope2`.
+- `Forked PRs`_: Pull requests in `leo-fork-rope2`.
+- `Rope commits`_: Commits to `python-rope`'s master branch.
+- `PR #1`_ shows shows the diffs between the `master` and `devel` branches.
+- `theory.rst`_: The draft version of the Theory of Operation.
 </t>
 <t tx="ekr.20230221061621.1"># Checks for empty nodes using Leo's check-nodes command.
 c.k.simulateCommand('check-nodes')</t>
@@ -59047,85 +59269,71 @@ g.execute_shell_commands([
     'echo done',
 ])
 </t>
-<t tx="ekr.20230225113443.1">def _get_primary_and_object_for_node(self, stmt):
-    primary, pyname = eval_node2(self.scope, stmt)
-    pyobject = None
-    if pyname is not None:
-        pyobject = pyname.get_object()
-    return primary, pyobject
-
+<t tx="ekr.20230225113443.1">
 </t>
-<t tx="ekr.20230306034457.1">def get_name(self):
+<t tx="ekr.20230306034457.1">
+</t>
+<t tx="ekr.20230306034534.1">def get_doc(self) -&gt; Optional[str]:
     return None
 
-</t>
-<t tx="ekr.20230306034534.1">def get_module(self):
+def get_module(self) -&gt; Any:
+    return None
+
+def get_name(self) -&gt; Optional[str]:
+    return None
+
+def get_resource(self) -&gt; Optional[Resource]:
     return None
 
 </t>
 <t tx="ekr.20230306084839.1"></t>
-<t tx="ekr.20230306085211.1">_types = None
-_unknown = None
+<t tx="ekr.20230306085211.1">
+_anchor_types = None
 
-@staticmethod
-def _get_base_type(name):
-    if PyObject._types is None:
-        PyObject._types = {}
-        base_type = PyObject(None)
-        PyObject._types["Type"] = base_type
-        PyObject._types["Module"] = PyObject(base_type)
-        PyObject._types["Function"] = PyObject(base_type)
-        PyObject._types["Unknown"] = PyObject(base_type)
-    return PyObject._types[name]
 
+def get_base_type(name: str) -&gt; PyObject:
+</t>
+<t tx="ekr.20230306085507.1">        obj,
+        (
+            rope.base.builtins.BuiltinClass,
+            rope.base.builtins.Generator,
+            rope.base.builtins.Iterator,
+            PyClass,
+        ),
+    )
+
+
+def is_abstract_function(obj):
+    return isinstance(
+        obj, (rope.base.builtins.BuiltinFunction, rope.base.builtins.Lambda, PyFunction)
+    )
+</t>
+<t tx="ekr.20230306085552.1">
+
+def is_abstract_module(obj):
+    return isinstance(
+        obj,
+        (rope.base.builtins.BuiltinModule, _PyModule),
+    )
+
+
+class PyDefinedObject(PyObject):  # was: had no base class.
 
 </t>
-<t tx="ekr.20230306085507.1">class AbstractClass(PyObject):
-    def __init__(self):
-        super().__init__(get_base_type("Type"))
+<t tx="ekr.20230306085552.2"></t>
+<t tx="ekr.20230306085706.1">    def __init__(self, pycore, ast_node, parent):
+        super().__init__(pycore, ast_node, parent, get_base_type("Function"))
 
-    def get_name(self):
-        pass
+    # From AbstractFunction.
 
-    def get_doc(self):
-        pass
-
-    def get_superclasses(self):
+    def get_param_names(self, special_args: bool = True) -&gt; List[str]:
         return []
 
-
-</t>
-<t tx="ekr.20230306085552.1">class AbstractFunction(PyObject):
-    def __init__(self):
-        super().__init__(get_base_type("Function"))
-
-    def get_name(self):
-        pass
-
-    def get_doc(self):
-        pass
-
-    def get_param_names(self, special_args=True):
-        return []
-
-    def get_returned_object(self, args):
+    def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
         return get_unknown()
 
 
-</t>
-<t tx="ekr.20230306085552.2">class AbstractModule(PyObject):
-    def __init__(self, doc=None):
-        super().__init__(get_base_type("Module"))
-
-    def get_doc(self):
-        pass
-
-    def get_resource(self):
-        pass
-
-
-</t>
-<t tx="ekr.20230306085706.1">class PyComprehension(PyDefinedObject, PyObject):
+class PyComprehension(PyDefinedObject):
     pass
 
     def get_name(self):
