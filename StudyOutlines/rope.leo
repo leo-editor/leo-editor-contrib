@@ -12,10 +12,12 @@
 <v t="ekr.20230222081013.1"><vh>@button contrib</vh></v>
 <v t="ekr.20221128041958.1"><vh>@button diff-master..head</vh></v>
 <v t="ekr.20230221061621.1"><vh>@button check-nodes</vh></v>
-<v t="ekr.20230207050236.1"><vh>@button make</vh></v>
-<v t="ekr.20230208122833.1"><vh>@button test-all</vh></v>
-<v t="ekr.20230212043819.1"><vh>@button test-one</vh></v>
-<v t="ekr.20230210082003.1"><vh>@button mypy-r</vh></v>
+<v t="ekr.20230306084839.1"><vh>@ignore unused buttons</vh>
+<v t="ekr.20230207050236.1"><vh>@@button make</vh></v>
+<v t="ekr.20230208122833.1"><vh>@@button test-all</vh></v>
+<v t="ekr.20230212043819.1"><vh>@@button test-one</vh></v>
+<v t="ekr.20230210082003.1"><vh>@@button mypy-r</vh></v>
+</v>
 <v t="ekr.20221121061203.1"><vh>@settings</vh>
 <v t="ekr.20221121061232.1"><vh>@bool run-pyflakes-on-write = True</vh></v>
 <v t="ekr.20221201060910.1"><vh>@bool run-flake8-on-write = False</vh></v>
@@ -40,57 +42,7 @@
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
 </v>
-<v t="ekr.20230205094642.1"></v>
 <v t="ekr.20230205090204.1"></v>
-</v>
-<v t="ekr.20230104215355.1"><vh>Notes</vh>
-<v t="ekr.20230129234717.1"><vh>ENB: The @saveit (@cacheit) decorator</vh>
-<v t="ekr.20230130001559.1"><vh>The decorator</vh></v>
-<v t="ekr.20230131082034.1"><vh>The tracing version of the decorator</vh></v>
-<v t="ekr.20230130001720.1"><vh>Traces</vh>
-<v t="ekr.20230129235936.1"><vh>brief traces</vh></v>
-<v t="ekr.20230130000046.1"><vh>trace: different injecting &amp; injected classes</vh></v>
-<v t="ekr.20230129235612.1"><vh>verbose trace</vh></v>
-</v>
-</v>
-<v t="ekr.20221118105418.1"><vh>Git notes</vh></v>
-<v t="ekr.20230130194144.1"><vh>How to create Rope docs</vh></v>
-<v t="ekr.20230205085921.1"><vh>How to run sphinx</vh></v>
-<v t="ekr.20230206072607.1"><vh>Attic</vh>
-<v t="ekr.20230129234521.2"><vh>ENB 1: The curse of knowledge and Rope</vh></v>
-<v t="ekr.20230129234718.1"><vh>ENB 5: (private) Why I'm the one to write Rope's Theory of Operation</vh></v>
-</v>
-</v>
-<v t="ekr.20230129005206.1"><vh>*** To do</vh>
-<v t="ekr.20230219124550.1"><vh>Félix</vh></v>
-<v t="ekr.20230131064900.1"><vh>to do: AOI</vh>
-<v t="ekr.20230130084456.1"><vh>ENB: Design of AOI</vh></v>
-</v>
-<v t="ekr.20230217020200.1"><vh>Discussions</vh>
-<v t="ekr.20230215071442.1"><vh>--- Discussion: How to collapse code complexity</vh></v>
-<v t="ekr.20230215104857.1"><vh>--- Discussion: Make the Abstract classes empty?</vh></v>
-<v t="ekr.20230216085606.1"><vh>--- Discussion: Use single inheritance?</vh></v>
-<v t="ekr.20230215105110.1"><vh>--- Discussion: What is an inference?</vh></v>
-<v t="ekr.20230216090152.1"><vh>--- Discussion: realistic performance tests</vh></v>
-<v t="ekr.20230215073300.1"><vh>--- Discussion: eliminate `from ast import *`</vh></v>
-</v>
-</v>
-<v t="ekr.20230206074243.1"><vh>Documentation</vh>
-<v t="ekr.20230207050236.1"></v>
-<v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
-<v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
-<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
-<v t="ekr.20230205150939.1"><vh>Overview of the code</vh></v>
-</v>
-<v t="ekr.20230129234714.1"><vh>In-depth study: test_simple_type_inferencing</vh>
-<v t="ekr.20230207041500.1"><vh>The original test</vh></v>
-<v t="ekr.20230207041506.1"><vh>The annotated test</vh></v>
-<v t="ekr.20230130002237.1"><vh>setUp simulates Rope's startup logic</vh></v>
-<v t="ekr.20230207042804.1"><vh>Summary of initial study</vh></v>
-</v>
-<v t="ekr.20230207040349.1"><vh>Questions to be answered</vh></v>
-<v t="ekr.20230221044629.1"><vh>Ahas</vh></v>
-<v t="ekr.20230219184800.1"><vh>@clean README.rst</vh></v>
 </v>
 <v t="ekr.20221129082559.1"><vh> c:\Scripts</vh>
 <v t="ekr.20221201161803.1"><vh>@clean blacken-r.cmd</vh></v>
@@ -114,6 +66,14 @@
 <v t="ekr.20221209061813.1"><vh>@clean .pylintrc</vh></v>
 <v t="ekr.20221201051835.1"><vh>@clean setup.cfg</vh></v>
 <v t="ekr.20221118072830.10"><vh>@clean docs/conf.py</vh></v>
+</v>
+<v t="ekr.20230206074243.1"><vh> documentation files</vh>
+<v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
+<v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
+<v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
+<v t="ekr.20230205150939.1"><vh>Overview of the code</vh></v>
+</v>
+<v t="ekr.20230219184800.1"><vh>@clean README.rst</vh></v>
 </v>
 <v t="ekr.20230201150728.1"><vh>rope</vh>
 <v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
@@ -155,8 +115,7 @@
 <v t="ekr.20221118072830.36"><vh>function: arguments._is_method_call</vh></v>
 </v>
 <v t="ekr.20221118072830.55"><vh>@clean builtins.py</vh>
-<v t="ekr.20221118072830.56"><vh>class builtins.BuiltinModule(po.PyObject)</vh>
-<v t="ekr.20221118072830.57"><vh>BuiltinModule.__init__</vh></v>
+<v t="ekr.20221118072830.56"><vh>class builtins.BuiltinModule(po.PyObject) # AbstractModule</vh>
 <v t="ekr.20221118072830.58"><vh>BuiltinModule.parent = None</vh></v>
 <v t="ekr.20221118072830.59"><vh>BuiltinModule.get_attributes</vh></v>
 <v t="ekr.20221118072830.60"><vh>BuiltinModule.get_doc</vh></v>
@@ -165,30 +124,24 @@
 <v t="ekr.20221118072830.63"><vh>BuiltinModule.module</vh></v>
 </v>
 <v t="ekr.20221118072830.64"><vh>class builtins._BuiltinElement</vh>
-<v t="ekr.20221118072830.65"><vh>_BuiltinElement.__init__</vh></v>
 <v t="ekr.20221118072830.66"><vh>_BuiltinElement.get_doc</vh></v>
 <v t="ekr.20221118072830.67"><vh>_BuiltinElement.get_name</vh></v>
 <v t="ekr.20221118072830.68"><vh>_BuiltinElement.parent</vh></v>
 </v>
-<v t="ekr.20221118072830.69"><vh>class builtins.BuiltinClass(_BuiltinElement, PyObject)</vh>
+<v t="ekr.20221118072830.69"><vh>class builtins.BuiltinClass(_BuiltinElement, PyObject) # AbstractClass</vh>
 <v t="ekr.20221118072830.71"><vh>BuiltinClass.get_attributes</vh></v>
 <v t="ekr.20221118072830.72"><vh>BuiltinClass.get_module</vh></v>
-<v t="ekr.20230212110559.1"><vh>BuiltinClass.get_superclasses (moved)</vh></v>
 </v>
-<v t="ekr.20221118072830.73"><vh>class builtins.BuiltinFunction(_BuiltinElement, PyObject)</vh>
-<v t="ekr.20221118072830.74"><vh>BuiltinFunction.__init__</vh></v>
+<v t="ekr.20221118072830.73"><vh>class builtins.BuiltinFunction(_BuiltinElement, PyObject) # AbstractFunction</vh>
 <v t="ekr.20221118072830.75"><vh>BuiltinFunction.get_returned_object</vh></v>
 <v t="ekr.20221118072830.76"><vh>BuiltinFunction.get_param_names</vh></v>
 </v>
 <v t="ekr.20221118072830.77"><vh>class builtins.BuiltinUnknown(_BuiltinElement, po.PyObject)</vh>
-<v t="ekr.20221118072830.78"><vh>BuiltinUnknown.__init__</vh></v>
 <v t="ekr.20221118072830.79"><vh>BuiltinUnknown.get_name</vh></v>
 <v t="ekr.20221118072830.80"><vh>BuiltinUnknown.get_attributes</vh></v>
 </v>
 <v t="ekr.20221118072830.81"><vh>function: builtins._object_attributes</vh></v>
-<v t="ekr.20221118072830.82"><vh>function: builtins._create_builtin_type_getter</vh>
-<v t="ekr.20221118072830.83"><vh>_get_builtin</vh></v>
-</v>
+<v t="ekr.20221118072830.82"><vh>function: builtins._create_builtin_type_getter</vh></v>
 <v t="ekr.20221118072830.84"><vh>function: builtins._create_builtin_getter</vh></v>
 <v t="ekr.20221118072830.85"><vh>class builtins._CallContext</vh>
 <v t="ekr.20221118072830.86"><vh>_CallContext.__init__</vh></v>
@@ -253,13 +206,11 @@
 <v t="ekr.20221118072830.143"><vh>BuiltinName.get_object</vh></v>
 <v t="ekr.20221118072830.144"><vh>BuiltinName.get_definition_location</vh></v>
 </v>
-<v t="ekr.20221118072830.145"><vh>class builtins.Iterator(po.PyObject)</vh>
-<v t="ekr.20230213072454.1"><vh>Iterator.__init__</vh></v>
+<v t="ekr.20221118072830.145"><vh>class builtins.Iterator(po.PyObject) # AbstractClass</vh>
 <v t="ekr.20221118072830.147"><vh>Iterator.get_attributes</vh></v>
 <v t="ekr.20221118072830.148"><vh>Iterator.get_returned_object</vh></v>
 </v>
-<v t="ekr.20221118072830.150"><vh>class builtins.Generator(po.PyObject)</vh>
-<v t="ekr.20221118072830.151"><vh>Generator.__init__</vh></v>
+<v t="ekr.20221118072830.150"><vh>class builtins.Generator(po.PyObject) # AbstractClass</vh>
 <v t="ekr.20221118072830.152"><vh>Generator.get_attributes</vh></v>
 <v t="ekr.20221118072830.153"><vh>Generator.get_returned_object</vh></v>
 </v>
@@ -271,8 +222,7 @@
 <v t="ekr.20221118072830.160"><vh>builtins.Property.get_property_object</vh></v>
 </v>
 <v t="ekr.20221118072830.161"><vh>function: builtins._property_function</vh></v>
-<v t="ekr.20221118072830.162"><vh>class builtins.Lambda(PyObject)</vh>
-<v t="ekr.20221118072830.163"><vh>Lambda.__init__</vh></v>
+<v t="ekr.20221118072830.162"><vh>class builtins.Lambda(PyObject) # AbstractFunction</vh>
 <v t="ekr.20221118072830.164"><vh>Lambda.get_returned_object</vh></v>
 <v t="ekr.20221118072830.165"><vh>Lambda.get_module</vh></v>
 <v t="ekr.20221118072830.166"><vh>Lambda.get_scope</vh></v>
@@ -283,7 +233,7 @@
 <v t="ekr.20221118072830.171"><vh>Lambda.get_param_names</vh></v>
 <v t="ekr.20221118072830.172"><vh>Lambda.parent</vh></v>
 </v>
-<v t="ekr.20221118072830.173"><vh>class builtins.BuiltinObject(BuildinClass)</vh></v>
+<v t="ekr.20221118072830.173"><vh>class builtins.BuiltinObject(BuiltinClass)</vh></v>
 <v t="ekr.20221118072830.174"><vh>class builtins.BuiltinType(BuiltinClass)</vh></v>
 <v t="ekr.20230127102529.1"><vh>functions: builtins...</vh>
 <v t="ekr.20221118072830.175"><vh>function: builtins._infer_sequence_for_pyname</vh></v>
@@ -469,9 +419,7 @@
 <v t="ekr.20221118072830.332"><vh>StatementEvaluator.__init__</vh></v>
 <v t="ekr.20221118072830.333"><vh>StatementEvaluator.Name</vh></v>
 <v t="ekr.20221118072830.334"><vh>StatementEvaluator.Attribute</vh></v>
-<v t="ekr.20221118072830.335"><vh>StatementEvaluator._Call &amp; helper</vh>
-<v t="ekr.20221118072830.353"><vh>StatementEvaluator._get_primary_and_object_for_node</vh></v>
-</v>
+<v t="ekr.20221118072830.335"><vh>StatementEvaluator._Call</vh></v>
 <v t="ekr.20221118072830.336"><vh>StatementEvaluator.Str</vh></v>
 <v t="ekr.20221118072830.337"><vh>StatementEvaluator.Num</vh></v>
 <v t="ekr.20221118072830.338"><vh>StatementEvaluator.Constant</vh></v>
@@ -489,6 +437,7 @@
 <v t="ekr.20221118072830.350"><vh>StatementEvaluator._make_comprehension_scope</vh></v>
 <v t="ekr.20221118072830.351"><vh>StatementEvaluator.Tuple</vh></v>
 <v t="ekr.20221118072830.352"><vh>StatementEvaluator._get_object_for_node</vh></v>
+<v t="ekr.20230225113443.1"><vh>StatementEvaluator._get_primary_and_object_for_node</vh></v>
 <v t="ekr.20221118072830.354"><vh>StatementEvaluator.Subscript</vh></v>
 <v t="ekr.20221118072830.355"><vh>StatementEvaluator.Slice</vh></v>
 <v t="ekr.20221118072830.356"><vh>StatementEvaluator._call_function</vh></v>
@@ -812,14 +761,10 @@
 </v>
 </v>
 <v t="ekr.20221118072830.640"><vh>@clean pyobjects.py</vh>
-<v t="ekr.20221118072830.641"><vh>class  po.PyObject (**getter class**)</vh>
-<v t="ekr.20221118072830.642"><vh>PyObject.__init__</vh></v>
+<v t="ekr.20221118072830.641"><vh>class  po.PyObject</vh>
 <v t="ekr.20221118072830.643"><vh>PyObject.get_attributes</vh></v>
 <v t="ekr.20221118072830.644"><vh>PyObject.get_attribute</vh></v>
-<v t="ekr.20230221062432.1"><vh>PyObject.get_doc</vh></v>
-<v t="ekr.20230221062433.1"><vh>PyObject.get_module</vh></v>
-<v t="ekr.20230211072805.1"><vh>PyObject.get_name</vh></v>
-<v t="ekr.20230211072840.1"><vh>PyObject.get_resource</vh></v>
+<v t="ekr.20230306034534.1"><vh>PyObject.get_module</vh></v>
 <v t="ekr.20221118072830.645"><vh>PyObject.get_type</vh></v>
 <v t="ekr.20221118072830.646"><vh>PyObject.__getitem__</vh></v>
 <v t="ekr.20221118072830.647"><vh>PyObject.__contains__</vh></v>
@@ -827,16 +772,14 @@
 <v t="ekr.20221118072830.649"><vh>PyObject.__ne__</vh></v>
 <v t="ekr.20221118072830.650"><vh>PyObject.__hash__</vh></v>
 <v t="ekr.20221118072830.651"><vh>PyObject.__iter__</vh></v>
+<v t="ekr.20230306085211.1"><vh>PyObject._get_base_type</vh></v>
 </v>
 <v t="ekr.20221118072830.654"><vh>function: po.get_base_type</vh></v>
 <v t="ekr.20221118072830.655"><vh>function: po.get_unknown</vh></v>
-<v t="ekr.20230220105715.1"><vh>function: po.is_abstract_*</vh>
-<v t="ekr.20230221062737.1"><vh>function: is_abstract_class</vh></v>
-<v t="ekr.20230221062741.1"><vh>function: is_abstract_function</vh></v>
-<v t="ekr.20230221062741.2"><vh>function: is_abstract_module</vh></v>
-</v>
-<v t="ekr.20221118072830.671"><vh>class  po.PyDefinedObject(PyObject)  (**getter class**)</vh>
-<v t="ekr.20221118072830.672"><vh>po.PyDefinedObject.__init__</vh></v>
+<v t="ekr.20230306085507.1"><vh>class  po.AbstractClass(PyObject)</vh></v>
+<v t="ekr.20230306085552.1"><vh>class  po.AbstractFunction(PyObject):</vh></v>
+<v t="ekr.20230306085552.2"><vh>class  po.AbstractModule(PyObject)</vh></v>
+<v t="ekr.20221118072830.671"><vh>class  po.PyDefinedObject:  # new: PyObject</vh>
 <v t="ekr.20221118072830.673"><vh>po.PyDefinedObject.__repr__</vh></v>
 <v t="ekr.20221118072830.674"><vh>po.PyDefinedObject.absolute_name</vh></v>
 <v t="ekr.20221118072830.676"><vh>po.PyDefinedObject._get_structural_attributes</vh></v>
@@ -845,6 +788,7 @@
 <v t="ekr.20221118072830.679"><vh>po.PyDefinedObject.get_attribute</vh></v>
 <v t="ekr.20221118072830.680"><vh>po.PyDefinedObject.get_scope (creates scope if it does not exist)</vh></v>
 <v t="ekr.20221118072830.681"><vh>po.PyDefinedObject.get_module</vh></v>
+<v t="ekr.20230306034457.1"><vh>po.PyDefinedObject.get_name</vh></v>
 <v t="ekr.20221118072830.682"><vh>po.PyDefinedObject.get_doc</vh></v>
 <v t="ekr.20221118072830.683"><vh>po.PyDefinedObject._get_defined_objects</vh></v>
 <v t="ekr.20221118072830.684"><vh>po.PyDefinedObject._create_structural_attributes</vh></v>
@@ -852,50 +796,48 @@
 <v t="ekr.20221118072830.686"><vh>po.PyDefinedObject.get_ast</vh></v>
 <v t="ekr.20221118072830.687"><vh>po.PyDefinedObject._create_scope (do-nothing)</vh></v>
 </v>
-<v t="ekr.20221118072830.688"><vh>class  po.PyFunction(PyDefinedObject)</vh></v>
-<v t="ekr.20221118072830.689"><vh>class  po.PyComprehensionBase(PyDefinedObject, PyObject)</vh></v>
-<v t="ekr.20221118072830.690"><vh>class  po.PyClass(PyDefinedObject)</vh></v>
+<v t="ekr.20221118072830.688"><vh>class  po.PyFunction(PyDefinedObject) # AbstractFunction</vh></v>
+<v t="ekr.20230306085706.1"><vh>class  po.PyComprehension(PyDefinedObject, PyObject):</vh></v>
+<v t="ekr.20221118072830.690"><vh>class  po.PyClass(PyDefinedObject) # AbstractClass</vh></v>
 <v t="ekr.20221118072830.691"><vh>class  po._ConcludedData</vh>
 <v t="ekr.20221118072830.693"><vh>po._ConcludedData.set (**trace**)</vh></v>
 <v t="ekr.20221118072830.694"><vh>po._ConcludedData.get (property)</vh></v>
 <v t="ekr.20221118072830.696"><vh>po._ConcludedData._invalidate</vh></v>
 <v t="ekr.20221118072830.697"><vh>po._ConcludedData.__str__</vh></v>
 </v>
-<v t="ekr.20221118072830.698"><vh>class  po._PyModule(PyDefinedObject)</vh>
+<v t="ekr.20221118072830.698"><vh>class  po._PyModule(PyDefinedObject, PyObject) # AbstractModule</vh>
 <v t="ekr.20230210213726.1"><vh>po._PyModule.absolute_name</vh></v>
 <v t="ekr.20221118072830.701"><vh>po._PyModule._get_concluded_data</vh></v>
 <v t="ekr.20221118072830.702"><vh>po._PyModule._forget_concluded_data</vh></v>
 <v t="ekr.20221118072830.703"><vh>po._PyModule.get_resource</vh></v>
 </v>
-<v t="ekr.20221118072830.704"><vh>class  po.PyModule(_PyModule)</vh></v>
+<v t="ekr.20221118072830.704"><vh>class  po.PyModule(_PyModule) (empty)</vh></v>
 <v t="ekr.20221118072830.705"><vh>class  po.PyPackage(_PyModule)</vh></v>
 <v t="ekr.20221118072830.706"><vh>class  po.IsBeingInferredError(exceptions.RopeError)</vh></v>
 </v>
 <v t="ekr.20221118072830.707"><vh>@clean pyobjectsdef.py</vh>
 <v t="ekr.20221118072830.708"><vh>class dpo.PyFunction(po.PyFunction)</vh>
-<v t="ekr.20221118072830.709"><vh>PyFunction.__init__</vh></v>
-<v t="ekr.20221118072830.710"><vh>PyFunction._create_structural_attributes</vh></v>
-<v t="ekr.20221118072830.711"><vh>PyFunction._create_concluded_attributes</vh></v>
-<v t="ekr.20221118072830.712"><vh>PyFunction._create_scope</vh></v>
-<v t="ekr.20221118072830.713"><vh>PyFunction._infer_parameters</vh></v>
-<v t="ekr.20221118072830.714"><vh>PyFunction._infer_returned</vh></v>
-<v t="ekr.20221118072830.715"><vh>PyFunction._handle_special_args</vh></v>
-<v t="ekr.20221118072830.716"><vh>PyFunction._set_parameter_pyobjects</vh></v>
-<v t="ekr.20221118072830.717"><vh>PyFunction.get_parameters</vh></v>
-<v t="ekr.20221118072830.718"><vh>PyFunction.get_parameter</vh></v>
-<v t="ekr.20221118072830.719"><vh>PyFunction.get_returned_object</vh></v>
-<v t="ekr.20221118072830.720"><vh>PyFunction.get_name</vh></v>
-<v t="ekr.20221118072830.721"><vh>PyFunction.get_param_names</vh></v>
-<v t="ekr.20221118072830.722"><vh>PyFunction.get_kind</vh></v>
-<v t="ekr.20221118072830.723"><vh>PyFunction.decorators</vh></v>
+<v t="ekr.20221118072830.709"><vh>dpo.PyFunction.__init__</vh></v>
+<v t="ekr.20221118072830.710"><vh>dpo.PyFunction._create_structural_attributes</vh></v>
+<v t="ekr.20221118072830.711"><vh>dpo.PyFunction._create_concluded_attributes</vh></v>
+<v t="ekr.20221118072830.712"><vh>dpo.PyFunction._create_scope</vh></v>
+<v t="ekr.20221118072830.713"><vh>dpo.PyFunction._infer_parameters</vh></v>
+<v t="ekr.20221118072830.714"><vh>dpo.PyFunction._infer_returned</vh></v>
+<v t="ekr.20221118072830.715"><vh>dpo.PyFunction._handle_special_args</vh></v>
+<v t="ekr.20221118072830.716"><vh>dpo.PyFunction._set_parameter_pyobjects</vh></v>
+<v t="ekr.20221118072830.717"><vh>dpo.PyFunction.get_parameters</vh></v>
+<v t="ekr.20221118072830.718"><vh>dpo.PyFunction.get_parameter</vh></v>
+<v t="ekr.20221118072830.719"><vh>dpo.PyFunction.get_returned_object</vh></v>
+<v t="ekr.20221118072830.720"><vh>dpo.PyFunction.get_name</vh></v>
+<v t="ekr.20221118072830.721"><vh>dpo.PyFunction.get_param_names</vh></v>
+<v t="ekr.20221118072830.722"><vh>dpo.PyFunction.get_kind</vh></v>
+<v t="ekr.20221118072830.723"><vh>dpo.PyFunction.decorators</vh></v>
 </v>
 <v t="ekr.20221118072830.724"><vh>class dpo.PyComprehension(po.PyComprehension)</vh>
 <v t="ekr.20221118072830.726"><vh>dpo.PyComprehension._create_scope</vh></v>
 <v t="ekr.20221118072830.727"><vh>dpo.PyComprehension.get_kind</vh></v>
 </v>
 <v t="ekr.20221118072830.728"><vh>class dpo.PyClass (po.PyClass)</vh>
-<v t="ekr.20221118072830.729"><vh>dpo.PyClass.__init__</vh></v>
-<v t="ekr.20230209143240.1"><vh>dpo.PyClass.__repr__  (overrides po.PyDefinedObject)</vh></v>
 <v t="ekr.20221118072830.730"><vh>dpo.PyClass.get_superclasses</vh></v>
 <v t="ekr.20221118072830.731"><vh>dpo.PyClass.get_name</vh></v>
 <v t="ekr.20221118072830.732"><vh>dpo.PyClass._create_concluded_attributes</vh></v>
@@ -912,94 +854,94 @@
 <v t="ekr.20221118072830.742"><vh>dpo.PyModule.get_name</vh></v>
 </v>
 <v t="ekr.20221118072830.743"><vh>class dpo.PyPackage(po.PyPackage)</vh>
-<v t="ekr.20221118072830.744"><vh>PyPackage.__init__</vh></v>
-<v t="ekr.20221118072830.745"><vh>PyPackage._create_structural_attributes</vh></v>
-<v t="ekr.20221118072830.746"><vh>PyPackage._create_concluded_attributes</vh></v>
-<v t="ekr.20221118072830.747"><vh>PyPackage._get_child_resources</vh></v>
-<v t="ekr.20221118072830.748"><vh>PyPackage._get_init_dot_py</vh></v>
-<v t="ekr.20221118072830.749"><vh>PyPackage._create_scope</vh></v>
-<v t="ekr.20221118072830.750"><vh>PyPackage.get_module</vh></v>
-<v t="ekr.20221118072830.751"><vh>PyPackage.get_name</vh></v>
+<v t="ekr.20221118072830.744"><vh>dpo.PyPackage.__init__</vh></v>
+<v t="ekr.20221118072830.745"><vh>dpo.PyPackage._create_structural_attributes</vh></v>
+<v t="ekr.20221118072830.746"><vh>dpo.PyPackage._create_concluded_attributes</vh></v>
+<v t="ekr.20221118072830.747"><vh>dpo.PyPackage._get_child_resources</vh></v>
+<v t="ekr.20221118072830.748"><vh>dpo.PyPackage._get_init_dot_py</vh></v>
+<v t="ekr.20221118072830.749"><vh>dpo.PyPackage._create_scope</vh></v>
+<v t="ekr.20221118072830.750"><vh>dpo.PyPackage.get_module</vh></v>
+<v t="ekr.20221118072830.751"><vh>dpo.PyPackage.get_name</vh></v>
 </v>
 <v t="ekr.20221118072830.752"><vh>class dpo._AnnAssignVisitor(RopeNodeVisitor) </vh>
-<v t="ekr.20221118072830.753"><vh>_AnnAssignVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.754"><vh>_AnnAssignVisitor.AnnAssign</vh></v>
-<v t="ekr.20221118072830.755"><vh>_AnnAssignVisitor._assigned</vh></v>
-<v t="ekr.20221118072830.756"><vh>_AnnAssignVisitor.Name</vh></v>
-<v t="ekr.20221118072830.757"><vh>_AnnAssignVisitor.Tuple</vh></v>
-<v t="ekr.20221118072830.758"><vh>_AnnAssignVisitor.Annotation</vh></v>
-<v t="ekr.20221118072830.759"><vh>_AnnAssignVisitor.Attribute</vh></v>
-<v t="ekr.20221118072830.760"><vh>_AnnAssignVisitor.Subscript</vh></v>
-<v t="ekr.20221118072830.761"><vh>_AnnAssignVisitor.Slice</vh></v>
+<v t="ekr.20221118072830.753"><vh>dpo._AnnAssignVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.754"><vh>dpo._AnnAssignVisitor.AnnAssign</vh></v>
+<v t="ekr.20221118072830.755"><vh>dpo._AnnAssignVisitor._assigned</vh></v>
+<v t="ekr.20221118072830.756"><vh>dpo._AnnAssignVisitor.Name</vh></v>
+<v t="ekr.20221118072830.757"><vh>dpo._AnnAssignVisitor.Tuple</vh></v>
+<v t="ekr.20221118072830.758"><vh>dpo._AnnAssignVisitor.Annotation</vh></v>
+<v t="ekr.20221118072830.759"><vh>dpo._AnnAssignVisitor.Attribute</vh></v>
+<v t="ekr.20221118072830.760"><vh>dpo._AnnAssignVisitor.Subscript</vh></v>
+<v t="ekr.20221118072830.761"><vh>dpo._AnnAssignVisitor.Slice</vh></v>
 </v>
 <v t="ekr.20221118072830.762"><vh>class dpo._ExpressionVisitor(RopeNodeVisitor) </vh>
-<v t="ekr.20221118072830.763"><vh>_ExpressionVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.764"><vh>_ExpressionVisitor._assigned</vh></v>
-<v t="ekr.20221118072830.765"><vh>_ExpressionVisitor.GeneratorExp</vh></v>
-<v t="ekr.20221118072830.766"><vh>_ExpressionVisitor.SetComp</vh></v>
-<v t="ekr.20221118072830.767"><vh>_ExpressionVisitor.ListComp</vh></v>
-<v t="ekr.20221118072830.768"><vh>_ExpressionVisitor.DictComp</vh></v>
-<v t="ekr.20221118072830.769"><vh>_ExpressionVisitor.NamedExpr</vh></v>
+<v t="ekr.20221118072830.763"><vh>dpo._ExpressionVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.764"><vh>dpo._ExpressionVisitor._assigned</vh></v>
+<v t="ekr.20221118072830.765"><vh>dpo._ExpressionVisitor.GeneratorExp</vh></v>
+<v t="ekr.20221118072830.766"><vh>dpo._ExpressionVisitor.SetComp</vh></v>
+<v t="ekr.20221118072830.767"><vh>dpo._ExpressionVisitor.ListComp</vh></v>
+<v t="ekr.20221118072830.768"><vh>dpo._ExpressionVisitor.DictComp</vh></v>
+<v t="ekr.20221118072830.769"><vh>dpo._ExpressionVisitor.NamedExpr</vh></v>
 </v>
 <v t="ekr.20221118072830.770"><vh>class dpo._AssignVisitor(RopeNodeVisitor) </vh>
-<v t="ekr.20221118072830.771"><vh>_AssignVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.772"><vh>_AssignVisitor.Assign</vh></v>
-<v t="ekr.20221118072830.773"><vh>_AssignVisitor._assigned</vh></v>
-<v t="ekr.20221118072830.774"><vh>_AssignVisitor.Name</vh></v>
-<v t="ekr.20221118072830.775"><vh>_AssignVisitor.Tuple</vh></v>
-<v t="ekr.20221118072830.776"><vh>_AssignVisitor.Attribute</vh></v>
-<v t="ekr.20221118072830.777"><vh>_AssignVisitor.Subscript</vh></v>
-<v t="ekr.20221118072830.778"><vh>_AssignVisitor.Slice</vh></v>
+<v t="ekr.20221118072830.771"><vh>dpo._AssignVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.772"><vh>dpo._AssignVisitor.Assign</vh></v>
+<v t="ekr.20221118072830.773"><vh>dpo._AssignVisitor._assigned</vh></v>
+<v t="ekr.20221118072830.774"><vh>dpo._AssignVisitor.Name</vh></v>
+<v t="ekr.20221118072830.775"><vh>dpo._AssignVisitor.Tuple</vh></v>
+<v t="ekr.20221118072830.776"><vh>dpo._AssignVisitor.Attribute</vh></v>
+<v t="ekr.20221118072830.777"><vh>dpo._AssignVisitor.Subscript</vh></v>
+<v t="ekr.20221118072830.778"><vh>dpo._AssignVisitor.Slice</vh></v>
 </v>
 <v t="ekr.20221118072830.779"><vh>class dpo._ScopeVisitor(_ExpressionVisitor)</vh>
-<v t="ekr.20221118072830.780"><vh>_ScopeVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.781"><vh>_ScopeVisitor.get_module</vh></v>
-<v t="ekr.20221118072830.782"><vh>_ScopeVisitor._ClassDef</vh></v>
-<v t="ekr.20221118072830.783"><vh>_ScopeVisitor._FunctionDef (dpo.py)</vh></v>
-<v t="ekr.20221118072830.784"><vh>_ScopeVisitor._AsyncFunctionDef</vh></v>
-<v t="ekr.20221118072830.785"><vh>_ScopeVisitor._Assign</vh></v>
-<v t="ekr.20221118072830.786"><vh>_ScopeVisitor._AnnAssign</vh></v>
-<v t="ekr.20221118072830.787"><vh>_ScopeVisitor._AugAssign</vh></v>
-<v t="ekr.20221118072830.788"><vh>_ScopeVisitor._For</vh></v>
-<v t="ekr.20221118072830.789"><vh>_ScopeVisitor._AsyncFor</vh></v>
-<v t="ekr.20221118072830.790"><vh>_ScopeVisitor._assigned</vh></v>
-<v t="ekr.20221118072830.791"><vh>_ScopeVisitor._update_evaluated</vh></v>
-<v t="ekr.20221118072830.792"><vh>_ScopeVisitor._With</vh></v>
-<v t="ekr.20221118072830.793"><vh>_ScopeVisitor._AsyncWith</vh></v>
-<v t="ekr.20221118072830.794"><vh>_ScopeVisitor._excepthandler</vh></v>
-<v t="ekr.20221118072830.795"><vh>_ScopeVisitor._ExceptHandler</vh></v>
-<v t="ekr.20221118072830.796"><vh>_ScopeVisitor._Import</vh></v>
-<v t="ekr.20221118072830.797"><vh>_ScopeVisitor._ImportFrom</vh></v>
-<v t="ekr.20221118072830.798"><vh>_ScopeVisitor._is_ignored_import (unique)</vh></v>
-<v t="ekr.20221118072830.799"><vh>_ScopeVisitor._Global</vh></v>
+<v t="ekr.20221118072830.780"><vh>dpo._ScopeVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.781"><vh>dpo._ScopeVisitor.get_module</vh></v>
+<v t="ekr.20221118072830.782"><vh>dpo._ScopeVisitor._ClassDef</vh></v>
+<v t="ekr.20221118072830.783"><vh>dpo._ScopeVisitor._FunctionDef (dpo.py)</vh></v>
+<v t="ekr.20221118072830.784"><vh>dpo._ScopeVisitor._AsyncFunctionDef</vh></v>
+<v t="ekr.20221118072830.785"><vh>dpo._ScopeVisitor._Assign</vh></v>
+<v t="ekr.20221118072830.786"><vh>dpo._ScopeVisitor._AnnAssign</vh></v>
+<v t="ekr.20221118072830.787"><vh>dpo._ScopeVisitor._AugAssign</vh></v>
+<v t="ekr.20221118072830.788"><vh>dpo._ScopeVisitor._For</vh></v>
+<v t="ekr.20221118072830.789"><vh>dpo._ScopeVisitor._AsyncFor</vh></v>
+<v t="ekr.20221118072830.790"><vh>dpo._ScopeVisitor._assigned</vh></v>
+<v t="ekr.20221118072830.791"><vh>dpo._ScopeVisitor._update_evaluated</vh></v>
+<v t="ekr.20221118072830.792"><vh>dpo._ScopeVisitor._With</vh></v>
+<v t="ekr.20221118072830.793"><vh>dpo._ScopeVisitor._AsyncWith</vh></v>
+<v t="ekr.20221118072830.794"><vh>dpo._ScopeVisitor._excepthandler</vh></v>
+<v t="ekr.20221118072830.795"><vh>dpo._ScopeVisitor._ExceptHandler</vh></v>
+<v t="ekr.20221118072830.796"><vh>dpo._ScopeVisitor._Import</vh></v>
+<v t="ekr.20221118072830.797"><vh>dpo._ScopeVisitor._ImportFrom</vh></v>
+<v t="ekr.20221118072830.798"><vh>dpo._ScopeVisitor._is_ignored_import (unique)</vh></v>
+<v t="ekr.20221118072830.799"><vh>dpo._ScopeVisitor._Global</vh></v>
 </v>
 <v t="ekr.20221118072830.800"><vh>class dpo._ComprehensionVisitor(_ScopeVisitor)</vh>
-<v t="ekr.20221118072830.801"><vh>_ComprehensionVisitor._comprehension</vh></v>
-<v t="ekr.20221118072830.802"><vh>_ComprehensionVisitor._Name</vh></v>
-<v t="ekr.20221118072830.803"><vh>_ComprehensionVisitor._get_pyobject</vh></v>
+<v t="ekr.20221118072830.801"><vh>dpo._ComprehensionVisitor._comprehension</vh></v>
+<v t="ekr.20221118072830.802"><vh>dpo._ComprehensionVisitor._Name</vh></v>
+<v t="ekr.20221118072830.803"><vh>dpo._ComprehensionVisitor._get_pyobject</vh></v>
 </v>
 <v t="ekr.20221118072830.804"><vh>class dpo._GlobalVisitor(_ScopeVisitor)</vh></v>
 <v t="ekr.20221118072830.805"><vh>class dpo._ClassVisitor(_ScopeVisitor) </vh>
-<v t="ekr.20221118072830.807"><vh>_ClassVisitor._FunctionDef</vh></v>
+<v t="ekr.20221118072830.807"><vh>dpo._ClassVisitor._FunctionDef</vh></v>
 </v>
 <v t="ekr.20221118072830.808"><vh>class dpo._FunctionVisitor(_ScopeVisitor)</vh>
-<v t="ekr.20221118072830.809"><vh>_FunctionVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.810"><vh>_FunctionVisitor._Return</vh></v>
-<v t="ekr.20221118072830.811"><vh>_FunctionVisitor._Yield</vh></v>
+<v t="ekr.20221118072830.809"><vh>dpo._FunctionVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.810"><vh>dpo._FunctionVisitor._Return</vh></v>
+<v t="ekr.20221118072830.811"><vh>dpo._FunctionVisitor._Yield</vh></v>
 </v>
 <v t="ekr.20221118072830.812"><vh>class dpo._ClassInitVisitor(_AssignVisitor)</vh>
-<v t="ekr.20221118072830.813"><vh>_ClassInitVisitor.__init__</vh></v>
-<v t="ekr.20221118072830.814"><vh>_ClassInitVisitor._Attribute</vh></v>
-<v t="ekr.20221118072830.815"><vh>_ClassInitVisitor._Tuple</vh></v>
-<v t="ekr.20221118072830.816"><vh>_ClassInitVisitor._Name</vh></v>
-<v t="ekr.20221118072830.817"><vh>_ClassInitVisitor._FunctionDef</vh></v>
-<v t="ekr.20221118072830.818"><vh>_ClassInitVisitor._ClassDef</vh></v>
-<v t="ekr.20221118072830.819"><vh>_ClassInitVisitor._For</vh></v>
-<v t="ekr.20221118072830.820"><vh>_ClassInitVisitor._With</vh></v>
+<v t="ekr.20221118072830.813"><vh>dpo._ClassInitVisitor.__init__</vh></v>
+<v t="ekr.20221118072830.814"><vh>dpo._ClassInitVisitor._Attribute</vh></v>
+<v t="ekr.20221118072830.815"><vh>dpo._ClassInitVisitor._Tuple</vh></v>
+<v t="ekr.20221118072830.816"><vh>dpo._ClassInitVisitor._Name</vh></v>
+<v t="ekr.20221118072830.817"><vh>dpo._ClassInitVisitor._FunctionDef</vh></v>
+<v t="ekr.20221118072830.818"><vh>dpo._ClassInitVisitor._ClassDef</vh></v>
+<v t="ekr.20221118072830.819"><vh>dpo._ClassInitVisitor._For</vh></v>
+<v t="ekr.20221118072830.820"><vh>dpo._ClassInitVisitor._With</vh></v>
 </v>
 <v t="ekr.20221118072830.821"><vh>class dpo.StarImport</vh>
-<v t="ekr.20221118072830.822"><vh>StarImport.__init__</vh></v>
-<v t="ekr.20221118072830.823"><vh>StarImport.get_names</vh></v>
+<v t="ekr.20221118072830.822"><vh>dpo.StarImport.__init__</vh></v>
+<v t="ekr.20221118072830.823"><vh>dpo.StarImport.get_names</vh></v>
 </v>
 </v>
 <v t="ekr.20221118072830.824"><vh>@clean pyscopes.py</vh>
@@ -1501,14 +1443,14 @@
 </v>
 </v>
 <v t="ekr.20221118072830.1271"><vh>@clean soi.py</vh>
-<v t="ekr.20221118072830.1272"><vh>function: soi.infer_returned_object &amp; helper</vh></v>
-<v t="ekr.20221118072830.1273"><vh>function: soi.infer_parameter_objects</vh></v>
-<v t="ekr.20221118072830.1274"><vh>function: soi._handle_first_parameter</vh></v>
-<v t="ekr.20221118072830.1275"><vh>function: soi.infer_assigned_object</vh></v>
-<v t="ekr.20221118072830.1276"><vh>function: soi.get_passed_objects</vh></v>
-<v t="ekr.20221118072830.1277"><vh>function: soi._infer_returned</vh></v>
-<v t="ekr.20221118072830.1278"><vh>function: soi._parameter_objects</vh></v>
-<v t="ekr.20221118072830.1280"><vh>function: soi._infer_assignment &amp; helpers</vh>
+<v t="ekr.20221118072830.1272"><vh>function: soi.infer_returned_object (entry)</vh></v>
+<v t="ekr.20221118072830.1273"><vh>function: soi.infer_parameter_objects (entry)</vh></v>
+<v t="ekr.20221118072830.1274"><vh>function: soi._handle_first_parameter (local)</vh></v>
+<v t="ekr.20221118072830.1275"><vh>function: soi.infer_assigned_object (entry)</vh></v>
+<v t="ekr.20221118072830.1276"><vh>function: soi.get_passed_objects (entry)</vh></v>
+<v t="ekr.20221118072830.1277"><vh>function: soi._infer_returned (local)</vh></v>
+<v t="ekr.20221118072830.1278"><vh>function: soi._parameter_objects (local)</vh></v>
+<v t="ekr.20221118072830.1280"><vh>function: soi._infer_assignment (entry!) &amp; helpers</vh>
 <v t="ekr.20221118072830.1281"><vh>function: soi._follow_levels</vh></v>
 <v t="ekr.20221118072830.1282"><vh>function: soi._follow_pyname</vh></v>
 <v t="ekr.20221118072830.1283"><vh>function: soi._follow_evaluations</vh></v>
@@ -1814,7 +1756,7 @@
 <v t="ekr.20221118072830.1494"><vh>OrderedSet.__eq__</vh></v>
 </v>
 </v>
-<v t="ekr.20230129010854.1"><vh>@clean rope/base/utils/tracing_utils.py</vh>
+<v t="ekr.20230129010854.1"><vh>@@@clean rope/base/utils/tracing_utils.py</vh>
 <v t="ekr.20230129011359.4"><vh>tracing_utils._caller_name</vh></v>
 <v t="ekr.20230129011432.1"><vh>tracing_utils.align</vh></v>
 <v t="ekr.20230129011359.5"><vh>tracing_utils.caller</vh></v>
@@ -2616,12 +2558,12 @@
 </v>
 <v t="ekr.20221118072831.589"><vh>@clean occurrences.py</vh>
 <v t="ekr.20221206092122.1"><vh>&lt;&lt; docstring: rope/refactor/occurrences.py &gt;&gt;</vh></v>
-<v t="ekr.20221118072831.590"><vh>class Finder</vh>
+<v t="ekr.20221118072831.590"><vh>class occurrences.Finder</vh>
 <v t="ekr.20221118072831.591"><vh>Finder.__init__</vh></v>
 <v t="ekr.20221118072831.592"><vh>Finder.find_occurrences</vh></v>
 </v>
-<v t="ekr.20221118072831.593"><vh>create_finder</vh></v>
-<v t="ekr.20221118072831.594"><vh>class Occurrence</vh>
+<v t="ekr.20221118072831.593"><vh>function: occurances.create_finder</vh></v>
+<v t="ekr.20221118072831.594"><vh>class occurrences.Occurrence</vh>
 <v t="ekr.20221118072831.595"><vh>Occurrence.__init__</vh></v>
 <v t="ekr.20221118072831.596"><vh>Occurrence.get_word_range</vh></v>
 <v t="ekr.20221118072831.597"><vh>Occurrence.get_primary_range</vh></v>
@@ -2636,26 +2578,26 @@
 <v t="ekr.20221118072831.606"><vh>Occurrence.is_function_keyword_parameter</vh></v>
 <v t="ekr.20221118072831.607"><vh>Occurrence.lineno</vh></v>
 </v>
-<v t="ekr.20221118072831.608"><vh>same_pyname</vh></v>
-<v t="ekr.20221118072831.609"><vh>unsure_pyname</vh></v>
-<v t="ekr.20221118072831.610"><vh>class PyNameFilter</vh>
+<v t="ekr.20221118072831.608"><vh>function: occurances.same_pyname</vh></v>
+<v t="ekr.20221118072831.609"><vh>function: occurances.unsure_pyname</vh></v>
+<v t="ekr.20221118072831.610"><vh>class occurrences.PyNameFilter</vh>
 <v t="ekr.20221118072831.611"><vh>PyNameFilter.__init__</vh></v>
 <v t="ekr.20221118072831.612"><vh>PyNameFilter.__call__</vh></v>
 </v>
-<v t="ekr.20221118072831.613"><vh>class InHierarchyFilter</vh>
+<v t="ekr.20221118072831.613"><vh>class occurrences.InHierarchyFilter</vh>
 <v t="ekr.20221118072831.614"><vh>InHierarchyFilter.__init__</vh></v>
 <v t="ekr.20221118072831.615"><vh>InHierarchyFilter.__call__</vh></v>
 <v t="ekr.20221118072831.616"><vh>InHierarchyFilter._get_containing_class</vh></v>
 <v t="ekr.20221118072831.617"><vh>InHierarchyFilter._get_root_classes</vh></v>
 </v>
-<v t="ekr.20221118072831.618"><vh>class UnsureFilter</vh>
+<v t="ekr.20221118072831.618"><vh>class occurrences.UnsureFilter</vh>
 <v t="ekr.20221118072831.619"><vh>UnsureFilter.__init__</vh></v>
 <v t="ekr.20221118072831.620"><vh>UnsureFilter.__call__</vh></v>
 </v>
-<v t="ekr.20221118072831.621"><vh>class NoImportsFilter</vh></v>
-<v t="ekr.20221118072831.622"><vh>class CallsFilter</vh></v>
-<v t="ekr.20221118072831.623"><vh>class NoKeywordsFilter</vh></v>
-<v t="ekr.20221118072831.624"><vh>class _TextualFinder</vh>
+<v t="ekr.20221118072831.621"><vh>class occurrences.NoImportsFilter</vh></v>
+<v t="ekr.20221118072831.622"><vh>class occurrences.CallsFilter</vh></v>
+<v t="ekr.20221118072831.623"><vh>class occurrences.NoKeywordsFilter</vh></v>
+<v t="ekr.20221118072831.624"><vh>class occurrences._TextualFinder</vh>
 <v t="ekr.20221118072831.625"><vh>_TextualFinder.__init__</vh></v>
 <v t="ekr.20221118072831.626"><vh>_TextualFinder.find_offsets</vh></v>
 <v t="ekr.20221118072831.627"><vh>_TextualFinder._re_search</vh></v>
@@ -2667,7 +2609,7 @@
 <v t="ekr.20221118072831.633"><vh>_TextualFinder._get_occurrence_pattern</vh></v>
 <v t="ekr.20221118072831.634"><vh>_TextualFinder.any</vh></v>
 </v>
-<v t="ekr.20221118072831.635"><vh>class _OccurrenceToolsCreator</vh>
+<v t="ekr.20221118072831.635"><vh>class occurrences._OccurrenceToolsCreator</vh>
 <v t="ekr.20221118072831.636"><vh>_OccurrenceToolsCreator.__init__</vh></v>
 <v t="ekr.20221118072831.637"><vh>_OccurrenceToolsCreator.name_finder</vh></v>
 <v t="ekr.20221118072831.638"><vh>_OccurrenceToolsCreator.source_code</vh></v>
@@ -5473,729 +5415,6 @@
 </v>
 </v>
 </v>
-<v t="ekr.20230127101717.1"><vh>--- inference files (do not delete)</vh>
-<v t="ekr.20221118072830.18"></v>
-<v t="ekr.20221118072830.55"></v>
-<v t="ekr.20221118072830.186"></v>
-<v t="ekr.20221118072830.316"></v>
-<v t="ekr.20221118072830.1401"></v>
-<v t="ekr.20221118072830.588"></v>
-<v t="ekr.20221212141427.1"></v>
-<v t="ekr.20221118072830.640"></v>
-<v t="ekr.20221118072830.707"></v>
-<v t="ekr.20221118072830.824"></v>
-<v t="ekr.20221211142245.1"></v>
-<v t="ekr.20221118072830.1254"></v>
-<v t="ekr.20221118072830.1271"></v>
-</v>
-<v t="ekr.20221230095543.1"><vh>Recent files</vh>
-<v t="ekr.20221118072830.10"></v>
-</v>
-<v t="ekr.20221230095246.1"><vh>Recent code</vh>
-<v t="ekr.20230208092216.1"><vh>---  testing (by hand)</vh>
-<v t="ekr.20230202163658.1"><vh>--- test g.trace</vh>
-<v t="ekr.20230202171613.1"><vh>result: legacy g.trace</vh></v>
-</v>
-</v>
-<v t="ekr.20230206074134.1"><vh>--- accepted PRs</vh>
-<v t="ekr.20230204064538.1"><vh>=== PR #655: clean _GlobalVisitor</vh>
-<v t="ekr.20221118072830.804"></v>
-<v t="ekr.20221118072830.736"></v>
-</v>
-<v t="ekr.20230204094629.1"><vh>=== PR #656: use black 23.1.0</vh></v>
-</v>
-<v t="ekr.20230204071113.1"><vh>--- open PRs</vh>
-<v t="ekr.20230106083448.1"><vh>=== PR #652: saveit/cacheit</vh>
-<v t="ekr.20221118072830.1500"></v>
-</v>
-<v t="ekr.20230208140908.1"><vh>=== PR #661: tracing_utils</vh>
-<v t="ekr.20230208141410.1"><vh>tracing_utils.get_ctor_name (no longer used)</vh></v>
-</v>
-<v t="ekr.20230211075518.1"><vh>=== PR #663: Fix mypy warning</vh>
-<v t="ekr.20230210210405.1"><vh>--- valid mypy warning: no get_name member</vh>
-<v t="ekr.20221118072831.1487"></v>
-<v t="ekr.20221118072830.674"></v>
-<v t="ekr.20221118072830.731"></v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.641"></v>
-</v>
-</v>
-<v t="ekr.20230211075721.1"><vh>=== PR #617: ekr-mypy</vh></v>
-</v>
-<v t="ekr.20230204215129.1"><vh>=== PR #660: Theory of operation</vh>
-<v t="ekr.20230210054447.1"><vh>To do: more</vh></v>
-<v t="ekr.20230209030735.1"><vh>To do: Answer these questions</vh></v>
-<v t="ekr.20230210054631.1"><vh>What is the unit test trying to tell me?</vh></v>
-<v t="ekr.20230205060858.1"><vh>Notes from YouTube video</vh></v>
-<v t="ekr.20230207042155.1"><vh>Recommendations</vh></v>
-<v t="ekr.20230204222405.1"></v>
-<v t="ekr.20230129234930.1"><vh>--- ivars (do not delete)</vh></v>
-<v t="ekr.20230101103406.1"><vh>--- calling sequence: analyze_module</vh>
-<v t="ekr.20221118072830.458"></v>
-<v t="ekr.20221118072830.581"></v>
-<v t="ekr.20221118072830.567"></v>
-<v t="ekr.20221118072830.457"></v>
-<v t="ekr.20221118072830.1255"></v>
-<v t="ekr.20221118072830.1256"></v>
-<v t="ekr.20221118072830.1257"></v>
-</v>
-<v t="ekr.20230101055129.1"><vh>--- docstrings</vh>
-<v t="ekr.20221118073540.1"></v>
-<v t="ekr.20230101190225.1"></v>
-<v t="ekr.20230104075047.1"></v>
-<v t="ekr.20230209133950.1"></v>
-<v t="ekr.20230209134210.1"></v>
-<v t="ekr.20230104023141.1"></v>
-</v>
-<v t="ekr.20230130094034.1"><vh>--- prevent_recursion</vh>
-<v t="ekr.20221118072830.1503"></v>
-<v t="ekr.20230130094057.1"><vh>7 calls to:prevent_recursion</vh>
-<v t="ekr.20230131064529.1"><vh>--- 3 in pynames.py</vh>
-<v t="ekr.20221118072830.625"></v>
-<v t="ekr.20221118072830.620"></v>
-<v t="ekr.20221118072830.619"></v>
-</v>
-<v t="ekr.20230131064709.1"><vh>--- 1 in pynamesdef.py</vh>
-<v t="ekr.20221217024942.3"></v>
-</v>
-<v t="ekr.20230131064552.1"><vh>--- 2 in pyobjects.py</vh>
-<v t="ekr.20221118072830.677"></v>
-<v t="ekr.20221118072830.676"></v>
-</v>
-<v t="ekr.20230131064624.1"><vh>--- 1 in pyobjectsdef.py</vh>
-<v t="ekr.20221118072830.738"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230104221451.1"><vh>--- classes (do not delete)</vh>
-<v t="ekr.20221118072830.56"></v>
-<v t="ekr.20221118072830.543"></v>
-<v t="ekr.20230127094605.1"><vh>--- po &amp; dpo classes</vh>
-<v t="ekr.20221118072830.641"></v>
-<v t="ekr.20221118072830.691"></v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.728"></v>
-<v t="ekr.20221118072830.735"></v>
-</v>
-<v t="ekr.20230104230413.1"><vh>--- PyName clases</vh>
-<v t="ekr.20230209060030.1"><vh>--- 3 in pynames.py</vh>
-<v t="ekr.20221118072830.589"></v>
-<v t="ekr.20221118072830.629"></v>
-<v t="ekr.20221118072830.592"></v>
-</v>
-<v t="ekr.20230209060055.1"><vh>--- 8 in pynamesdef.py</vh>
-<v t="ekr.20221217024942.1"></v>
-<v t="ekr.20221220042724.1"></v>
-<v t="ekr.20221220042806.1"></v>
-<v t="ekr.20221220042724.2"></v>
-<v t="ekr.20221220042724.3"></v>
-<v t="ekr.20221220042724.4"></v>
-<v t="ekr.20221216152411.1"></v>
-<v t="ekr.20230209060344.1"></v>
-</v>
-</v>
-<v t="ekr.20230129064218.1"><vh>--- Visitor classes</vh>
-<v t="ekr.20230102051545.1"></v>
-<v t="ekr.20230209021213.1"><vh>--- actions.py: 9 visitors</vh>
-<v t="ekr.20221118072831.967"></v>
-<v t="ekr.20221118072831.972"></v>
-<v t="ekr.20221118072831.959"></v>
-<v t="ekr.20221118072831.986"></v>
-<v t="ekr.20221118072831.954"></v>
-<v t="ekr.20221118072831.990"></v>
-<v t="ekr.20221118072831.964"></v>
-<v t="ekr.20221118072831.976"></v>
-<v t="ekr.20221118072831.981"></v>
-</v>
-<v t="ekr.20230209020846.1"><vh>--- extract.py: 6 visitors</vh>
-<v t="ekr.20221118072830.1587"></v>
-<v t="ekr.20221118072831.371"></v>
-<v t="ekr.20221118072831.301"></v>
-<v t="ekr.20221118072831.339"></v>
-<v t="ekr.20221118072831.389"></v>
-<v t="ekr.20221118072831.364"></v>
-</v>
-<v t="ekr.20230209021234.1"><vh>--- pyobjectsdef.py: 9 visitors</vh>
-<v t="ekr.20230209022051.1"><vh>--- 1 _AnnAssignVisitor</vh>
-<v t="ekr.20221118072830.752"></v>
-</v>
-<v t="ekr.20230209021513.1"><vh>--- 2 _AssignVisitors</vh>
-<v t="ekr.20221118072830.770"></v>
-<v t="ekr.20221118072830.812"></v>
-</v>
-<v t="ekr.20230209021534.1"><vh>--- 1 _ExpressionVisitor</vh>
-<v t="ekr.20221118072830.762"></v>
-</v>
-<v t="ekr.20230209021438.1"><vh>--- 5 _ScopeVisitors: All _ScopeVisitors are _ExpressionVistiors</vh>
-<v t="ekr.20221118072830.779"></v>
-<v t="ekr.20221118072830.805"></v>
-<v t="ekr.20221118072830.800"></v>
-<v t="ekr.20221118072830.808"></v>
-<v t="ekr.20221118072830.804"></v>
-</v>
-</v>
-<v t="ekr.20230209022510.1"><vh>--- other files: 6 visitors</vh>
-<v t="ekr.20221118072830.331"></v>
-<v t="ekr.20221118072831.1073"></v>
-<v t="ekr.20221210100142.2"></v>
-<v t="ekr.20221118072830.1257"></v>
-<v t="ekr.20221118072831.877"></v>
-<v t="ekr.20221118072831.917"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230209025936.1"><vh>--- traces (do not delete)</vh>
-<v t="ekr.20230209071315.1"><vh>--- first traces</vh>
-<v t="ekr.20221118072831.1485"></v>
-<v t="ekr.20221118072830.543"></v>
-<v t="ekr.20221118072830.57"></v>
-</v>
-<v t="ekr.20230209140339.1"><vh>--- visitor traces</vh>
-<v t="ekr.20221118072830.753"></v>
-<v t="ekr.20221118072830.771"></v>
-<v t="ekr.20221118072830.813"></v>
-<v t="ekr.20221118072830.763"></v>
-<v t="ekr.20221118072830.809"></v>
-<v t="ekr.20221118072830.780"></v>
-<v t="ekr.20230202130833.1"></v>
-</v>
-<v t="ekr.20230209140400.1"><vh>--- inferences traces</vh>
-<v t="ekr.20221118072830.589"></v>
-<v t="ekr.20230209140525.1"><vh>--- ctor traces</vh>
-<v t="ekr.20221118072830.729"></v>
-<v t="ekr.20221118072830.736"></v>
-<v t="ekr.20221118072830.672"></v>
-<v t="ekr.20221118072830.502"></v>
-<v t="ekr.20230208123900.1"></v>
-<v t="ekr.20221217024942.2"></v>
-<v t="ekr.20221216152411.2"></v>
-<v t="ekr.20221118072830.642"></v>
-</v>
-</v>
-<v t="ekr.20230209140632.1"><vh>--- _ConcludedData traces</vh>
-<v t="ekr.20221118072830.693"></v>
-</v>
-<v t="ekr.20230209135315.1"><vh>--- get_names traces</vh>
-<v t="ekr.20221118072830.862"></v>
-<v t="ekr.20221118072830.873"></v>
-<v t="ekr.20221118072830.854"></v>
-<v t="ekr.20221118072830.827"></v>
-<v t="ekr.20221118072830.823"></v>
-<v t="ekr.20221118072830.895"></v>
-</v>
-</v>
-<v t="ekr.20230209165650.1"><vh>--- names: PyName, AssignedName</vh>
-<v t="ekr.20221118072830.592"></v>
-<v t="ekr.20221217024942.1"></v>
-<v t="ekr.20221118072830.833"></v>
-<v t="ekr.20221118072830.827"></v>
-<v t="ekr.20221118072830.728"></v>
-<v t="ekr.20221118072830.673"></v>
-<v t="ekr.20230209143240.1"></v>
-</v>
-<v t="ekr.20230209165736.1"><vh>------ test visitors</vh>
-<v t="ekr.20221118072830.770"></v>
-<v t="ekr.20221118072830.790"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.592"></v>
-<v t="ekr.20221118072830.782"></v>
-<v t="ekr.20221118072830.783"></v>
-</v>
-<v t="ekr.20230210214344.1"><vh>--- Searches for annotations (do not delete)</vh>
-<v t="ekr.20230209173843.1"><vh>--- Found 78: PyObject (do not delete)</vh>
-<v t="ekr.20230210042639.1"><vh>--- wrapped calls to PyObject methods</vh>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.608"></v>
-<v t="ekr.20221217024942.6"></v>
-</v>
-<v t="ekr.20230210041939.1"><vh>--- PyObject args</vh>
-<v t="ekr.20221118072831.1084"></v>
-<v t="ekr.20221118072831.1074"></v>
-<v t="ekr.20221118072830.1432"></v>
-<v t="ekr.20221118072831.1037"></v>
-<v t="ekr.20221118072830.1289"></v>
-</v>
-<v t="ekr.20230210043703.1"><vh>--- Return PyObject dict</vh>
-<v t="ekr.20221118072831.793"></v>
-</v>
-<v t="ekr.20230210042249.1"><vh>--- Returns PyObject or PyDefinedObject</vh>
-<v t="ekr.20230210044721.1"><vh>13 __call__ methods</vh>
-<v t="ekr.20221118072830.1422"></v>
-<v t="ekr.20221118072830.1452"></v>
-<v t="ekr.20221118072830.1468"></v>
-<v t="ekr.20221118072830.1384"></v>
-<v t="ekr.20221118072830.1409"></v>
-<v t="ekr.20221118072830.1416"></v>
-<v t="ekr.20221118072830.1426"></v>
-<v t="ekr.20221118072830.1446"></v>
-<v t="ekr.20221118072830.1475"></v>
-<v t="ekr.20221118072830.1479"></v>
-<v t="ekr.20221118072830.1419"></v>
-<v t="ekr.20221118072830.1429"></v>
-<v t="ekr.20221118072830.1449"></v>
-</v>
-<v t="ekr.20230210042750.1"><vh> 3 __call__ methods raise NotImplemented</vh>
-<v t="ekr.20221118072830.1459"></v>
-<v t="ekr.20221118072830.1455"></v>
-<v t="ekr.20221118072830.1457"></v>
-</v>
-<v t="ekr.20221118072830.1407"></v>
-</v>
-<v t="ekr.20230210042043.1"><vh>--- Returns PyObject</vh>
-<v t="ekr.20221118072830.480"></v>
-<v t="ekr.20221118072830.1273"></v>
-<v t="ekr.20221118072830.1272"></v>
-<v t="ekr.20221118072830.551"></v>
-<v t="ekr.20221118072830.555"></v>
-<v t="ekr.20221118072830.590"></v>
-<v t="ekr.20221118072830.1311"></v>
-<v t="ekr.20221118072830.1327"></v>
-</v>
-<v t="ekr.20230210041856.1"><vh>--- 16 instantiates PyObject</vh>
-<v t="ekr.20230210045320.1"><vh>--- 3 ctors</vh>
-<v t="ekr.20221118072830.156"></v>
-<v t="ekr.20221118072830.138"></v>
-<v t="ekr.20221118072830.124"></v>
-</v>
-<v t="ekr.20230210045347.1"><vh>--- 3 visitors</vh>
-<v t="ekr.20221118072830.783"></v>
-<v t="ekr.20221118072830.1261"></v>
-<v t="ekr.20221118072830.335"></v>
-</v>
-<v t="ekr.20230210045623.1"><vh>--- 9 functions</vh>
-<v t="ekr.20221118072830.84"></v>
-<v t="ekr.20221118072830.161"></v>
-<v t="ekr.20221118072830.181"></v>
-<v t="ekr.20221118072830.655"></v>
-<v t="ekr.20221118072830.1283"></v>
-<v t="ekr.20221118072830.1282"></v>
-<v t="ekr.20221118072830.1274"></v>
-<v t="ekr.20221118072830.1278"></v>
-<v t="ekr.20221118072830.1275"></v>
-</v>
-<v t="ekr.20221118072830.339"></v>
-</v>
-</v>
-<v t="ekr.20230210050228.1"><vh>--- Found 49: PyFunction (do not delete)</vh>
-<v t="ekr.20230210050827.1"><vh>---  2 classes (Confusion!)</vh>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.708"></v>
-</v>
-<v t="ekr.20230210051703.1"><vh>---  2 methods instantiate PyFunction</vh>
-<v t="ekr.20221118072830.712"></v>
-<v t="ekr.20221118072830.783"></v>
-</v>
-<v t="ekr.20230210052015.1"><vh>--- 19 function/methods test isinstance(PyFunction)</vh>
-<v t="ekr.20230210052439.1"><vh>--- 8 refactoring</vh>
-<v t="ekr.20221118072831.175"></v>
-<v t="ekr.20221118072831.176"></v>
-<v t="ekr.20221118072830.1574"></v>
-<v t="ekr.20221118072830.1571"></v>
-<v t="ekr.20221118072830.1575"></v>
-<v t="ekr.20221118072830.1568"></v>
-<v t="ekr.20221118072831.777"></v>
-<v t="ekr.20221118072831.899"></v>
-</v>
-<v t="ekr.20230210055115.1"><vh>--- 7 functions</vh>
-<v t="ekr.20221118072831.513"></v>
-<v t="ekr.20221118072830.1597"></v>
-<v t="ekr.20221118072830.36"></v>
-<v t="ekr.20221118072831.420"></v>
-<v t="ekr.20221118072830.1404"></v>
-<v t="ekr.20221118072830.1402"></v>
-<v t="ekr.20221118072831.505"></v>
-</v>
-<v t="ekr.20221118072831.408"></v>
-<v t="ekr.20221118072831.407"></v>
-<v t="ekr.20221118072830.328"></v>
-<v t="ekr.20221118072830.1263"></v>
-</v>
-<v t="ekr.20230210051923.1"><vh>---  8 function/methods take pyfunction arg</vh>
-<v t="ekr.20230210053353.1"><vh>--- 6 __call__ methods ruturn PyFunction</vh>
-<v t="ekr.20221118072830.1416"></v>
-<v t="ekr.20221118072830.1426"></v>
-<v t="ekr.20221118072830.1446"></v>
-<v t="ekr.20221118072830.1419"></v>
-<v t="ekr.20221118072830.1429"></v>
-<v t="ekr.20221118072830.1449"></v>
-</v>
-<v t="ekr.20230210050856.1"><vh>--- 2 __call__ raise NotImplemented</vh>
-<v t="ekr.20221118072830.1455"></v>
-<v t="ekr.20221118072830.1457"></v>
-</v>
-<v t="ekr.20221118072830.1272"></v>
-<v t="ekr.20221118072830.1273"></v>
-</v>
-</v>
-<v t="ekr.20230210071414.1"><vh>--- Found 66:pyfunction (do not delete)</vh>
-<v t="ekr.20230210071431.1"><vh>--- don't annotate</vh>
-<v t="ekr.20221118072831.451"></v>
-<v t="ekr.20221118072831.452"></v>
-<v t="ekr.20221118072831.453"></v>
-<v t="ekr.20221118072831.454"></v>
-<v t="ekr.20221118072831.189"></v>
-<v t="ekr.20221118072831.179"></v>
-<v t="ekr.20221118072831.399"></v>
-<v t="ekr.20221118072831.400"></v>
-<v t="ekr.20221118072831.861"></v>
-<v t="ekr.20221118072831.426"></v>
-<v t="ekr.20221118072831.432"></v>
-<v t="ekr.20221118072831.430"></v>
-<v t="ekr.20221118072831.428"></v>
-<v t="ekr.20221118072831.427"></v>
-<v t="ekr.20221118072831.433"></v>
-<v t="ekr.20221118072831.490"></v>
-<v t="ekr.20221118072831.494"></v>
-<v t="ekr.20221118072831.493"></v>
-<v t="ekr.20221118072831.501"></v>
-<v t="ekr.20221118072831.505"></v>
-<v t="ekr.20221118072831.509"></v>
-<v t="ekr.20221118072831.508"></v>
-<v t="ekr.20221118072831.511"></v>
-<v t="ekr.20221118072831.507"></v>
-<v t="ekr.20221118072831.515"></v>
-<v t="ekr.20221118072831.521"></v>
-<v t="ekr.20221118072831.519"></v>
-<v t="ekr.20221118072831.526"></v>
-<v t="ekr.20221118072831.527"></v>
-<v t="ekr.20221118072831.525"></v>
-<v t="ekr.20221118072831.523"></v>
-<v t="ekr.20221118072831.518"></v>
-<v t="ekr.20221118072830.1224"></v>
-<v t="ekr.20221118072830.1228"></v>
-<v t="ekr.20221118072830.1226"></v>
-<v t="ekr.20221118072830.1570"></v>
-<v t="ekr.20221118072830.1574"></v>
-<v t="ekr.20221118072830.1576"></v>
-<v t="ekr.20221118072830.1572"></v>
-<v t="ekr.20221118072830.1571"></v>
-<v t="ekr.20221118072831.899"></v>
-<v t="ekr.20221118072831.900"></v>
-<v t="ekr.20221118072831.907"></v>
-<v t="ekr.20221118072831.910"></v>
-<v t="ekr.20221118072831.908"></v>
-<v t="ekr.20221118072831.906"></v>
-<v t="ekr.20221118072831.903"></v>
-<v t="ekr.20221118072831.901"></v>
-<v t="ekr.20221118072831.902"></v>
-</v>
-<v t="ekr.20230210071751.1"><vh>--- do annotate</vh>
-<v t="ekr.20221118072830.783"></v>
-<v t="ekr.20221118072830.36"></v>
-<v t="ekr.20221118072830.25"></v>
-<v t="ekr.20221118072830.1256"></v>
-<v t="ekr.20221118072830.1276"></v>
-<v t="ekr.20221118072830.1273"></v>
-<v t="ekr.20221118072830.1272"></v>
-<v t="ekr.20221216152411.2"></v>
-<v t="ekr.20221118072830.1262"></v>
-<v t="ekr.20221118072830.1263"></v>
-<v t="ekr.20221118072830.1261"></v>
-<v t="ekr.20221118072830.1267"></v>
-<v t="ekr.20221118072830.1264"></v>
-<v t="ekr.20221118072830.335"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230107173006.1"><vh>--- test study (do not delete)</vh>
-<v t="ekr.20230201152803.1"><vh>--- Part 1: setUp</vh>
-<v t="ekr.20230201054651.1"><vh>--- setUp: calls testutils.sample_project()</vh>
-<v t="ekr.20221118072831.1485"></v>
-</v>
-<v t="ekr.20230201054723.1"><vh>--- sample_project: instantiates rope.base.project.Project</vh>
-<v t="ekr.20221118072831.1920"></v>
-<v t="ekr.20221118072830.500"></v>
-<v t="ekr.20221118072830.501"></v>
-</v>
-</v>
-<v t="ekr.20230201152816.1"><vh>--- Part 2: the test</vh>
-<v t="ekr.20230201152705.1"><vh>--- scope = libutils.get_string_scope(...)</vh>
-<v t="ekr.20221118072830.460"></v>
-<v t="ekr.20221118072830.459"></v>
-</v>
-<v t="ekr.20230209090424.1"><vh>--- sample_scope = scope["Sample"]</vh></v>
-<v t="ekr.20230209091851.1"><vh>--- sample_scope.get_object()</vh></v>
-<v t="ekr.20230209091947.1"><vh>--- na_var_scope = scope["a_var"]</vh></v>
-<v t="ekr.20230209091852.1"><vh>--- a_var = a_var_scope.get_object()</vh></v>
-<v t="ekr.20230209092007.1"><vh>--- self.assertEqual(sample_class, a_var.get_type())</vh></v>
-</v>
-<v t="ekr.20221118072831.1487"></v>
-</v>
-<v t="ekr.20230212061721.1"><vh>--- _ignore_inferred</vh>
-<v t="ekr.20221118072830.1505"></v>
-</v>
-<v t="ekr.20230212061523.1"><vh>--- study soi.py</vh>
-<v t="ekr.20221118072830.1216"></v>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.19"></v>
-<v t="ekr.20221118072830.26"></v>
-<v t="ekr.20221118072830.1272"></v>
-</v>
-<v t="ekr.20230212062855.1"><vh>--- valid mypy complaints</vh>
-<v t="ekr.20221118072831.536"></v>
-<v t="ekr.20221118072831.1084"></v>
-<v t="ekr.20221118072831.150"></v>
-</v>
-<v t="ekr.20230212081354.1"><vh>--- Understanding the Abstract classes</vh>
-<v t="ekr.20230212080817.1"><vh>Found 21:AbstractClass</vh>
-<v t="ekr.20221118072831.938"></v>
-<v t="ekr.20221118072830.1561"></v>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.69"></v>
-<v t="ekr.20221118072830.150"></v>
-<v t="ekr.20221118072830.145"></v>
-<v t="ekr.20221118072830.1538"></v>
-<v t="ekr.20221118072830.729"></v>
-<v t="ekr.20221118072830.36"></v>
-<v t="ekr.20221118072830.181"></v>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.1568"></v>
-<v t="ekr.20221118072830.1567"></v>
-<v t="ekr.20221118072830.1291"></v>
-<v t="ekr.20221118072830.329"></v>
-<v t="ekr.20221118072830.335"></v>
-</v>
-<v t="ekr.20230212080955.1"><vh>Found 29:AbstractFunction</vh>
-<v t="ekr.20221118072830.1561"></v>
-<v t="ekr.20221118072830.74"></v>
-<v t="ekr.20221118072830.1537"></v>
-<v t="ekr.20221118072830.1538"></v>
-<v t="ekr.20221118072830.175"></v>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.1283"></v>
-<v t="ekr.20221118072830.160"></v>
-<v t="ekr.20221118072830.1569"></v>
-<v t="ekr.20221118072830.1573"></v>
-<v t="ekr.20221118072830.1568"></v>
-<v t="ekr.20221118072830.1567"></v>
-<v t="ekr.20221118072830.709"></v>
-<v t="ekr.20221118072830.329"></v>
-<v t="ekr.20221118072830.328"></v>
-<v t="ekr.20221118072830.1261"></v>
-<v t="ekr.20221118072830.335"></v>
-<v t="ekr.20221118072830.356"></v>
-</v>
-<v t="ekr.20230212081130.1"><vh>Found 14:AbstractModule</vh>
-<v t="ekr.20221118072830.798"></v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.56"></v>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.1575"></v>
-<v t="ekr.20221118072830.1567"></v>
-<v t="ekr.20221118072831.776"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230212132610.1"><vh>=== PR #664: Remove Abstract classes &amp; single inheritace</vh>
-<v t="ekr.20230212133403.1"><vh>--- Deleted 3 Abstract classes</vh>
-<v t="ekr.20221118072830.656"><vh>MASTER: class  po.AbstractClass(PyObject)</vh></v>
-<v t="ekr.20221118072830.661"><vh>MASTER: class  po.AbstractFunction(PyObject)</vh></v>
-<v t="ekr.20221118072830.667"><vh>MASTER: class  po.AbstractModule(PyObject)</vh></v>
-</v>
-<v t="ekr.20230213055315.1"><vh>COPY: class  po.PyFunction(PyDefinedObject)</vh></v>
-<v t="ekr.20230213040937.1"><vh>--- changed functions</vh>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.655"></v>
-</v>
-<v t="ekr.20230212132706.1"><vh>--- changed classes</vh>
-<v t="ekr.20221118072830.641"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.69"></v>
-<v t="ekr.20221118072830.173"></v>
-<v t="ekr.20221118072830.724"></v>
-<v t="ekr.20230212194634.1"><vh>--- Classes that were subclasses of PyDefinedObject &amp; PyObject</vh>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.698"></v>
-</v>
-<v t="ekr.20230212133223.1"><vh>--- 9 subclasses of the Abstract classes</vh>
-<v t="ekr.20230212135423.1"><vh>--- 2 module classes</vh>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.56"></v>
-</v>
-<v t="ekr.20230212135444.1"><vh>--- 4 class classes</vh>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.69"></v>
-<v t="ekr.20221118072830.150"></v>
-<v t="ekr.20221118072830.145"></v>
-</v>
-<v t="ekr.20230212135550.1"><vh>--- 3 function classes</vh>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.73"></v>
-<v t="ekr.20221118072830.162"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230213071522.1"><vh>--- Move predicates to pyobjects</vh>
-<v t="ekr.20221118072830.69"></v>
-<v t="ekr.20221118072830.145"></v>
-<v t="ekr.20221118072830.150"></v>
-</v>
-</v>
-<v t="ekr.20230212194840.1"><vh>------ name clashes (classes)</vh>
-<v t="ekr.20230212194104.1"><vh>Found 2:class PyFunction</vh>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.708"></v>
-</v>
-<v t="ekr.20230212194821.1"><vh>Found 2:class PyClass</vh>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20221118072830.728"></v>
-</v>
-<v t="ekr.20230212194835.1"><vh>Found 2:class PyModule</vh>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.735"></v>
-</v>
-<v t="ekr.20230213082600.1"><vh>changed: Found 7:PyDefinedModule</vh>
-<v t="ekr.20221118072830.575"></v>
-<v t="ekr.20221118072830.1555"></v>
-<v t="ekr.20221118072830.797"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20221118072830.459"></v>
-<v t="ekr.20221118072830.555"></v>
-<v t="ekr.20221118072830.611"></v>
-</v>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072831.1139"></v>
-<v t="ekr.20221118072830.640"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20230213085130.1"><vh>Found 8:_PyModule</vh>
-<v t="ekr.20221118072830.698"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.705"></v>
-<v t="ekr.20221118072830.702"></v>
-<v t="ekr.20221118072830.701"></v>
-<v t="ekr.20230210213726.1"></v>
-<v t="ekr.20221118072830.703"></v>
-</v>
-<v t="ekr.20221118072830.707"></v>
-<v t="ekr.20230213075008.1"><vh>Found 22:PyModule</vh>
-<v t="ekr.20221118072830.575"></v>
-<v t="ekr.20221118072830.1555"></v>
-<v t="ekr.20221118072830.797"></v>
-<v t="ekr.20221118072830.704"></v>
-<v t="ekr.20221118072830.735"></v>
-<v t="ekr.20221118072830.1333"></v>
-<v t="ekr.20221118072831.3"></v>
-<v t="ekr.20221118072831.1027"></v>
-<v t="ekr.20221118072830.459"></v>
-<v t="ekr.20221118072831.513"></v>
-<v t="ekr.20221118072830.555"></v>
-<v t="ekr.20221118072830.611"></v>
-<v t="ekr.20221118072831.979"></v>
-<v t="ekr.20221118072831.899"></v>
-</v>
-</v>
-</v>
-<v t="ekr.20230222080311.1"><vh>-------- recent</vh>
-<v t="ekr.20230213072748.1"><vh>--- recent</vh>
-<v t="ekr.20221118072830.1272"></v>
-<v t="ekr.20221118072830.1407"></v>
-<v t="ekr.20221118072830.641"></v>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.690"></v>
-<v t="ekr.20230213071125.1"><vh>Found 7:# was</vh>
-<v t="ekr.20221118072830.671"></v>
-<v t="ekr.20221118072830.69"></v>
-<v t="ekr.20221118072830.73"></v>
-<v t="ekr.20221118072830.56"></v>
-<v t="ekr.20221118072830.150"></v>
-<v t="ekr.20221118072830.145"></v>
-<v t="ekr.20221118072830.162"></v>
-</v>
-<v t="ekr.20230214112224.1"><vh>=== remove  PyObject._get_base_type</vh>
-<v t="ekr.20221118072830.654"></v>
-<v t="ekr.20221118072830.655"></v>
-</v>
-</v>
-<v t="ekr.20230222034651.1"><vh>--- to do: annotate PyName, etc</vh>
-<v t="ekr.20230221065257.1"><vh>Found 19:PyName</vh>
-<v t="ekr.20221118072830.589"></v>
-<v t="ekr.20230221065352.1"><vh>--- subclasses of PyName</vh>
-<v t="ekr.20221118072830.141"></v>
-<v t="ekr.20221118072830.629"></v>
-<v t="ekr.20221118072830.592"></v>
-<v t="ekr.20221118072830.604"></v>
-<v t="ekr.20221118072830.610"></v>
-<v t="ekr.20221118072830.616"></v>
-<v t="ekr.20221216152134.1"></v>
-<v t="ekr.20221118072830.597"></v>
-</v>
-<v t="ekr.20230221065422.1"><vh>--- instantiation of PyName</vh></v>
-<v t="ekr.20230221065442.1"><vh>--- comments re PyName</vh>
-<v t="ekr.20221118072830.319"></v>
-<v t="ekr.20221118072830.1532"></v>
-<v t="ekr.20221118072830.608"></v>
-<v t="ekr.20221118072830.590"></v>
-<v t="ekr.20221217024942.6"></v>
-<v t="ekr.20221118072830.829"></v>
-</v>
-<v t="ekr.20230221065556.1"><vh>--- annotations of PyName</vh>
-<v t="ekr.20221118072830.328"></v>
-<v t="ekr.20221118072830.1262"></v>
-</v>
-</v>
-<v t="ekr.20230221065737.1"><vh>Found 25:UnboundName (pynames &amp; pynamesdef)</vh>
-<v t="ekr.20221118072830.597"></v>
-<v t="ekr.20230209060344.1"></v>
-<v t="ekr.20230221065751.1"><vh>--- tests of UnboundName</vh>
-<v t="ekr.20221118072831.62"></v>
-<v t="ekr.20221118072831.58"></v>
-<v t="ekr.20221118072831.609"></v>
-</v>
-<v t="ekr.20230221065809.1"><vh>--- instantiation of UnboundName</vh>
-<v t="ekr.20221118072830.783"></v>
-<v t="ekr.20221118072830.1282"></v>
-<v t="ekr.20221118072830.159"></v>
-<v t="ekr.20221118072830.618"></v>
-<v t="ekr.20221118072830.1261"></v>
-<v t="ekr.20221118072830.1267"></v>
-<v t="ekr.20221118072830.335"></v>
-<v t="ekr.20221118072830.356"></v>
-<v t="ekr.20221118072830.339"></v>
-<v t="ekr.20221118072830.334"></v>
-<v t="ekr.20221118072830.340"></v>
-<v t="ekr.20221118072830.341"></v>
-<v t="ekr.20221118072830.345"></v>
-<v t="ekr.20221118072830.348"></v>
-<v t="ekr.20221118072830.357"></v>
-<v t="ekr.20221118072830.346"></v>
-<v t="ekr.20221118072830.347"></v>
-<v t="ekr.20221118072830.336"></v>
-<v t="ekr.20221118072830.351"></v>
-<v t="ekr.20221118072830.343"></v>
-</v>
-</v>
-<v t="ekr.20221118072830.335"></v>
-<v t="ekr.20221118072830.352"></v>
-</v>
-<v t="ekr.20230222034606.1"><vh>--- new annotations &amp; verify asserts</vh>
-<v t="ekr.20230221091031.1"><vh>Found 4:def get_param_names</vh>
-<v t="ekr.20221118072830.76"></v>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.171"></v>
-<v t="ekr.20221118072830.721"></v>
-</v>
-<v t="ekr.20230221082039.1"><vh>Found 6:def get_returned_object</vh>
-<v t="ekr.20221118072830.75"></v>
-<v t="ekr.20221118072830.688"></v>
-<v t="ekr.20221118072830.153"></v>
-<v t="ekr.20221118072830.148"></v>
-<v t="ekr.20221118072830.164"></v>
-<v t="ekr.20221118072830.719"></v>
-</v>
-</v>
-<v t="ekr.20230222034813.1"><vh>--- to do: revise is_abstract_*</vh></v>
-</v>
-<v t="ekr.20230222080331.1"><vh>=== PR #2: Restore do-nothing Abstract classes</vh></v>
-<v t="ekr.20230220105715.1"></v>
-<v t="ekr.20230207050236.1"></v>
-<v t="ekr.20230222081013.1"></v>
 </vnodes>
 <tnodes>
 <t tx="ekr.20221118072614.1">'''Recursively import all python files in a directory and clean the result.'''
@@ -8276,7 +7495,7 @@ if __name__ == "__main__":
     try:
         import cPickle as pickle  # type:ignore
     except ImportError:
-        import pickle  # type:ignore
+        import pickle
     import base64
     import hashlib
     import hmac
@@ -8522,34 +7741,18 @@ if __name__ == "__main__":
 
 </t>
 <t tx="ekr.20221118072830.1254">@path rope/base/oi/
-from __future__ import annotations
-import ast
-from typing import Callable, List, Tuple, Union, TYPE_CHECKING
-
-from rope.base import arguments, evaluate, nameanalyze, pyobjects
-from rope.base.ast import RopeNodeVisitor
+import rope.base.ast
 import rope.base.oi.soi
 import rope.base.pynames
-from rope.base.pyobjects import is_abstract_class, is_abstract_function
-
-if TYPE_CHECKING:
-    from rope.base.pycore import PyCore
-    from rope.base.pyobjects import PyFunction
-    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
-    from rope.base.pynames import PyName
-
-    Node = ast.AST
-    PyFunc = PyFunction
+from rope.base import arguments, evaluate, nameanalyze, pyobjects
 
 
-def analyze_module(
-    pycore, pymodule, should_analyze, search_subscopes, followed_calls: bool
-) -&gt; None:
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.1255">    """Analyze `pymodule` for static object inference
+<t tx="ekr.20221118072830.1255">def analyze_module(pycore, pymodule, should_analyze, search_subscopes, followed_calls):
+    """Analyze `pymodule` for static object inference
 
     Analyzes scopes for collecting object information.  The analysis
     starts from inner scopes.
@@ -8559,13 +7762,7 @@ def analyze_module(
 
 
 </t>
-<t tx="ekr.20221118072830.1256">def _analyze_node(
-    pycore: PyCore,
-    pydefined: DefinedPyFunction,
-    should_analyze: Callable,
-    search_subscopes: Callable,
-    followed_calls: int,
-) -&gt; None:
+<t tx="ekr.20221118072830.1256">def _analyze_node(pycore, pydefined, should_analyze, search_subscopes, followed_calls):
     if search_subscopes(pydefined):
         for scope in pydefined.get_scope().get_scopes():
             _analyze_node(
@@ -8576,19 +7773,19 @@ def analyze_module(
         return_true = lambda pydefined: True
         return_false = lambda pydefined: False
 
-        def _follow(pyfunction: DefinedPyFunction) -&gt; None:
+        def _follow(pyfunction):
             _analyze_node(
                 pycore, pyfunction, return_true, return_false, new_followed_calls
             )
 
         visitor = SOAVisitor(pycore, pydefined, _follow if followed_calls else None)
-        for child in ast.iter_child_nodes(pydefined.get_ast()):
+        for child in rope.base.ast.iter_child_nodes(pydefined.get_ast()):
             visitor.visit(child)
 
 
 </t>
-<t tx="ekr.20221118072830.1257">class SOAVisitor(RopeNodeVisitor):
-    def __init__(self, pycore, pydefined, follow_callback=None) -&gt; None:
+<t tx="ekr.20221118072830.1257">class SOAVisitor(rope.base.ast.RopeNodeVisitor):
+    def __init__(self, pycore, pydefined, follow_callback=None):
         self.pycore = pycore
         self.pymodule = pydefined.get_module()
         self.scope = pydefined.get_scope()
@@ -8596,7 +7793,7 @@ def analyze_module(
 
     @others
 </t>
-<t tx="ekr.20221118072830.1259">def _FunctionDef(self, node) -&gt; None:
+<t tx="ekr.20221118072830.1259">def _FunctionDef(self, node):
     pass
 
 </t>
@@ -8605,21 +7802,20 @@ def analyze_module(
 
 
 </t>
-<t tx="ekr.20221118072830.1260">def _ClassDef(self, node) -&gt; None:
+<t tx="ekr.20221118072830.1260">def _ClassDef(self, node):
     pass
 
 </t>
-<t tx="ekr.20221118072830.1261">def _Call(self, node: ast.Call) -&gt; None:
-    for child in ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1261">def _Call(self, node):
+    for child in rope.base.ast.iter_child_nodes(node):
         self.visit(child)
     primary, pyname = evaluate.eval_node2(self.scope, node.func)
     if pyname is None:
         return
     pyfunction = pyname.get_object()
-    if is_abstract_function(pyfunction):
+    if isinstance(pyfunction, pyobjects.AbstractFunction):
         args = arguments.create_arguments(primary, pyfunction, node, self.scope)
-    # elif isinstance(pyfunction, pyobjects.PyClass):
-    elif is_abstract_class(pyfunction):
+    elif isinstance(pyfunction, pyobjects.PyClass):
         pyclass = pyfunction
         if "__init__" in pyfunction:
             pyfunction = pyfunction["__init__"].get_object()
@@ -8633,18 +7829,12 @@ def analyze_module(
     self._call(pyfunction, args)
 
 </t>
-<t tx="ekr.20221118072830.1262">def _args_with_self(
-    self,
-    primary,
-    self_pyname: PyName,
-    pyfunction: PyFunc,
-    node: ast.Call,
-):
+<t tx="ekr.20221118072830.1262">def _args_with_self(self, primary, self_pyname, pyfunction, node):
     base_args = arguments.create_arguments(primary, pyfunction, node, self.scope)
     return arguments.MixedArguments(self_pyname, base_args, self.scope)
 
 </t>
-<t tx="ekr.20221118072830.1263">def _call(self, pyfunction: DefinedPyFunction, args):
+<t tx="ekr.20221118072830.1263">def _call(self, pyfunction, args):
     if isinstance(pyfunction, pyobjects.PyFunction):
         if self.follow is not None:
             before = self._parameter_objects(pyfunction)
@@ -8661,15 +7851,15 @@ def analyze_module(
         pyfunction.get_returned_object(args)
 
 </t>
-<t tx="ekr.20221118072830.1264">def _parameter_objects(self, pyfunction: DefinedPyFunction):
+<t tx="ekr.20221118072830.1264">def _parameter_objects(self, pyfunction):
     return [
         pyfunction.get_parameter(i)
         for i in range(len(pyfunction.get_param_names(False)))
     ]
 
 </t>
-<t tx="ekr.20221118072830.1265">def _AnnAssign(self, node) -&gt; None:
-    for child in ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1265">def _AnnAssign(self, node):
+    for child in rope.base.ast.iter_child_nodes(node):
         self.visit(child)
     visitor = _SOAAssignVisitor()
     nodes = []
@@ -8680,8 +7870,8 @@ def analyze_module(
     self._evaluate_assign_value(node, nodes, type_hint=node.annotation)
 
 </t>
-<t tx="ekr.20221118072830.1266">def _Assign(self, node) -&gt; None:
-    for child in ast.iter_child_nodes(node):
+<t tx="ekr.20221118072830.1266">def _Assign(self, node):
+    for child in rope.base.ast.iter_child_nodes(node):
         self.visit(child)
     visitor = _SOAAssignVisitor()
     nodes = []
@@ -8691,12 +7881,7 @@ def analyze_module(
     self._evaluate_assign_value(node, nodes)
 
 </t>
-<t tx="ekr.20221118072830.1267">def _evaluate_assign_value(
-    self,
-    node: Union[ast.Assign, ast.AnnAssign],
-    nodes: List,
-    type_hint: bool = False,
-) -&gt; None:
+<t tx="ekr.20221118072830.1267">def _evaluate_assign_value(self, node, nodes, type_hint=False):
     for subscript, levels in nodes:
         instance = evaluate.eval_node(self.scope, subscript.value)
         args_pynames = [evaluate.eval_node(self.scope, subscript.slice)]
@@ -8720,14 +7905,14 @@ def analyze_module(
 <t tx="ekr.20221118072830.1268">class _SOAAssignVisitor(nameanalyze._NodeNameCollector):
     @others
 </t>
-<t tx="ekr.20221118072830.1269">def __init__(self) -&gt; None:
+<t tx="ekr.20221118072830.1269">def __init__(self):
     super().__init__()
-    self.nodes: List[Tuple] = []
+    self.nodes = []
 
 </t>
-<t tx="ekr.20221118072830.1270">def _added(self, node, levels) -&gt; None:
-    if isinstance(node, ast.Subscript) and isinstance(
-        node.slice, (ast.Index, ast.expr)
+<t tx="ekr.20221118072830.1270">def _added(self, node, levels):
+    if isinstance(node, rope.base.ast.Subscript) and isinstance(
+        node.slice, (rope.base.ast.Index, rope.base.ast.expr)
     ):
         self.nodes.append((node, levels))
 </t>
@@ -8738,20 +7923,9 @@ For more information see the documentation in `rope.base.oi`
 package.
 
 """
-from __future__ import annotations
-import ast
-from typing import Any, Optional, Union, TYPE_CHECKING
 import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import arguments, evaluate, pynames, pyobjects, utils
 from rope.base.oi.type_hinting.factory import get_type_hinting_factory
-from rope.base.pyobjects import is_abstract_function
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyFunction, PyObject
-    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
-
-    Node = ast.AST
-    PyFunc = Union[PyFunction, DefinedPyFunction]
 
 _ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)
 
@@ -8761,66 +7935,32 @@ _ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.1272">@_ignore_inferred
-def infer_returned_object(pyfunction: PyFunc, args) -&gt; Optional[PyObject]:
-    """Infer the return type of a function."""
-    trace = False
-
-    def arg_to_string(arg):
-        if isinstance(arg, ast.Call):
-            return f"Call:{arg.func.id}"  # Name.id.
-        if isinstance(arg, ast.Constant):
-            return f"Constant:{arg.value}"
-        if isinstance(arg, ast.Name):
-            return f"Name:{arg.id}"
-        if isinstance(arg, ast.keyword):
-            arg2 = getattr(arg, "arg", None)
-            return f"keyword:{arg2}" if arg2 else "keyword"
-        return arg.__class__.__name__
-
-    def report(kind, result):
-        if not trace:
-            return
-        try:
-            args_s = ",".join([arg_to_string(arg) for arg in args.args])
-        except AttributeError:
-            args_s = args.__class__.__name__  # ObjectArguments have no args member.
-        print("")
-        print(
-            "soi.infer_returned_object...\n"
-            f"{pyfunction.absolute_name:&gt;15} args: {args_s:&lt;20} "
-            f"==&gt; {kind} {result.__class__.__name__}"
-        )
-
+def infer_returned_object(pyfunction, args):
+    """Infer the `PyObject` this `PyFunction` returns after calling"""
     object_info = pyfunction.pycore.object_info
     result = object_info.get_exact_returned(pyfunction, args)
     if result is not None:
-        report("Cached", result)
         return result
     result = _infer_returned(pyfunction, args)
     if result is not None:
         if args and pyfunction.get_module().get_resource() is not None:
             params = args.get_arguments(pyfunction.get_param_names(special_args=False))
             object_info.function_called(pyfunction, params, result)
-        report("_infer_returned", result)
         return result
     result = object_info.get_returned(pyfunction, args)
     if result is not None:
-        report("get_returned", result)
         return result
     hint_return = get_type_hinting_factory(
         pyfunction.pycore.project
     ).make_return_provider()
     type_ = hint_return(pyfunction)
     if type_ is not None:
-        report("hint_returned", result)
         return pyobjects.PyObject(type_)
-    report("Fail", None)
-    return None
 
 
 </t>
 <t tx="ekr.20221118072830.1273">@_ignore_inferred
-def infer_parameter_objects(pyfunction: PyFunc):
+def infer_parameter_objects(pyfunction):
     """Infer the `PyObject` of parameters of this `PyFunction`"""
     object_info = pyfunction.pycore.object_info
     result = object_info.get_parameter_objects(pyfunction)
@@ -8872,7 +8012,7 @@ def infer_assigned_object(pyname):
 
 
 </t>
-<t tx="ekr.20221118072830.1276">def get_passed_objects(pyfunction: PyFunc, parameter_index: int) -&gt; Any:
+<t tx="ekr.20221118072830.1276">def get_passed_objects(pyfunction, parameter_index):
     object_info = pyfunction.pycore.object_info
     result = object_info.get_passed_objects(pyfunction, parameter_index)
     if not result:
@@ -9003,7 +8143,7 @@ def _follow_evaluations(assignment, pyname, pyobject):
             if new_pyname is not None:
                 pyobject = new_pyname.get_object()
         if pyobject is not None and call:
-            if is_abstract_function(pyobject):
+            if isinstance(pyobject, pyobjects.AbstractFunction):
                 args = arguments.ObjectArguments([pyname])
                 pyobject = pyobject.get_returned_object(args)
             else:
@@ -9034,7 +8174,6 @@ import re
 
 import rope.base.builtins  # Use full qualification for clarity.
 from rope.base import exceptions
-from rope.base.pyobjects import is_abstract_class
 
 
 @others
@@ -9097,7 +8236,7 @@ from rope.base.pyobjects import is_abstract_class
 
 </t>
 <t tx="ekr.20221118072830.1291">def PyObject_to_textual(self, pyobject):
-    if is_abstract_class(pyobject.get_type()):
+    if isinstance(pyobject.get_type(), rope.base.pyobjects.AbstractClass):
         result = self.transform(pyobject.get_type())
         if result[0] == "defined":
             return ("instance", result)
@@ -9435,9 +8574,6 @@ from rope.base.pyobjects import is_abstract_class
 <t tx="ekr.20221118072830.1337"></t>
 <t tx="ekr.20221118072830.1338">@path rope/base/
 @nopyflakes
-# mypy reports various problems.
-# type:ignore
-
 # Based on super lightweight Simple Top-Down Parser from http://effbot.org/zone/simple-top-down-parsing.htm
 # and https://bitbucket.org/emacsway/sqlbuilder/src/default/sqlbuilder/smartsql/contrib/evaluate.py
 import re
@@ -9543,7 +8679,7 @@ evaluate = Evaluator()
     pass
 
 </t>
-<t tx="ekr.20221118072830.1353">@multi
+<t tx="ekr.20221118072830.1353">@multi  # type:ignore
 def infix(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -9554,7 +8690,7 @@ def infix(self, name, bp):
         return self
 
 </t>
-<t tx="ekr.20221118072830.1354">@multi
+<t tx="ekr.20221118072830.1354">@multi  # type:ignore
 def infix_r(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -9578,8 +8714,8 @@ def infix_r(self, name, bp):
         return self
 
 </t>
-<t tx="ekr.20221118072830.1356">@multi
-def prefix(self, name, bp):
+<t tx="ekr.20221118072830.1356">@multi  # type:ignore
+def prefix(self, name, bp):  # type:ignore
     symbol = self.symbol(name, bp)
 
     @method(symbol)
@@ -9588,7 +8724,7 @@ def prefix(self, name, bp):
         return self
 
 </t>
-<t tx="ekr.20221118072830.1357">@multi
+<t tx="ekr.20221118072830.1357">@multi  # type:ignore
 def postfix(self, name, bp):
     symbol = self.symbol(name, bp)
 
@@ -9736,20 +8872,20 @@ symbol("(end)")
 
 
 </t>
-<t tx="ekr.20221118072830.1371">@method(symbol("(name)"))
+<t tx="ekr.20221118072830.1371">@method(symbol("(name)"))  # type:ignore
 def nud(self, parser):
     return self
 
 
 </t>
-<t tx="ekr.20221118072830.1372">@method(symbol("(name)"))
+<t tx="ekr.20221118072830.1372">@method(symbol("(name)"))  # type:ignore
 def evaluate(self, pyobject):
     return utils.resolve_type(self.value, pyobject)
 
 
 </t>
 <t tx="ekr.20221118072830.1373"># Parametrized objects
-@method(symbol("["))
+@method(symbol("["))  # type:ignore
 def led(self, left, parser):
     self.first = left
     self.second = []
@@ -9766,7 +8902,7 @@ def led(self, left, parser):
 
 
 </t>
-<t tx="ekr.20221118072830.1374">@method(symbol("["))
+<t tx="ekr.20221118072830.1374">@method(symbol("["))  # type:ignore
 def evaluate(self, pyobject):
     return utils.parametrize_type(
         self.first.evaluate(pyobject), *[i.evaluate(pyobject) for i in self.second]
@@ -9775,7 +8911,7 @@ def evaluate(self, pyobject):
 
 </t>
 <t tx="ekr.20221118072830.1375"># Anonymous Function Calls
-@method(symbol("("))
+@method(symbol("("))  # type:ignore
 def nud(self, parser):
     self.second = []
     if parser.token.name != ")":
@@ -9792,7 +8928,7 @@ def nud(self, parser):
 
 </t>
 <t tx="ekr.20221118072830.1376"># Function Calls
-@method(symbol("("))
+@method(symbol("("))  # type:ignore
 def led(self, left, parser):
     self.first = left
     self.second = []
@@ -9809,14 +8945,14 @@ def led(self, left, parser):
 
 
 </t>
-<t tx="ekr.20221118072830.1377">@method(symbol("("))
+<t tx="ekr.20221118072830.1377">@method(symbol("("))  # type:ignore
 def evaluate(self, pyobject):
     # TODO: Implement me
     raise NotImplementedError
 
 
 </t>
-<t tx="ekr.20221118072830.1378">@method(symbol("or"))
+<t tx="ekr.20221118072830.1378">@method(symbol("or"))  # type:ignore
 @method(symbol("|"))
 def evaluate(self, pyobject):
     # TODO: Implement me
@@ -10048,13 +9184,14 @@ def _get_factory(self, factory_location):
 </t>
 <t tx="ekr.20221118072830.1401">@path rope/base
 from __future__ import annotations
+
 import logging
-from typing import Optional
+from typing import TYPE_CHECKING, Optional, Union
 
 import rope.base.utils as base_utils
 from rope.base import evaluate
 from rope.base.exceptions import AttributeNotFoundError
-from rope.base.pyobjects import PyClass, PyFunction, PyObject
+from rope.base.pyobjects import PyClass, PyDefinedObject, PyFunction, PyObject
 
 
 @others
@@ -10132,7 +9269,10 @@ parametrize_type = ParametrizeType()
 
 
 </t>
-<t tx="ekr.20221118072830.1407">def resolve_type(type_name: str, pyobject: PyObject) -&gt; Optional[PyObject]:
+<t tx="ekr.20221118072830.1407">def resolve_type(
+    type_name: str,
+    pyobject: Union[PyDefinedObject, PyObject],
+) -&gt; Optional[Union[PyDefinedObject, PyObject]]:
     """
     Find proper type object from its name.
     """
@@ -10141,6 +9281,9 @@ parametrize_type = ParametrizeType()
     logging.debug("Looking for %s", type_name)
     if "." not in type_name:
         try:
+            # XXX: this looks incorrect? It doesn't seem like it would work
+            # correctly if you have a type/class not defined in the
+            # module/global scope
             ret_type = (
                 pyobject.get_module().get_scope().get_name(type_name).get_object()
             )
@@ -10572,7 +9715,15 @@ from rope.base.oi.type_hinting.providers import interfaces
 
 
 </t>
-<t tx="ekr.20221118072830.145">class Iterator(pyobjects.PyObject):  # was pyobjects.AbstractClass
+<t tx="ekr.20221118072830.145">class Iterator(pyobjects.AbstractClass):
+    def __init__(self, holding=None):
+        super().__init__()
+        self.holding = holding
+        self.attributes = {
+            "next": BuiltinName(BuiltinFunction(self.holding)),
+            "__iter__": BuiltinName(BuiltinFunction(self)),
+        }
+
     @others
 get_iterator = _create_builtin_getter(Iterator)
 
@@ -10659,13 +9810,12 @@ Some code extracted (or based on code) from:
 https://github.com/davidhalter/jedi/blob/b489019f5bd5750051122b94cc767df47751ecb7/jedi/evaluate/docstrings.py
 Thanks to @davidhalter for this utils under MIT License.
 """
-import ast
 import re
 
+from rope.base.ast import literal_eval
 from rope.base.oi.type_hinting.providers import docstrings
 
 try:
-    # mypy: Cannot find implementation or library stub for module named "numpydoc.docscrape"
     from numpydoc.docscrape import NumpyDocString  # type:ignore
 except ImportError:
     NumpyDocString = None
@@ -10673,9 +9823,6 @@ except ImportError:
 
 @others
 if not NumpyDocString:
-    # mypy: Cannot assign to a type
-    # mypy: Incompatible types in assignment (expression has type "Type[_DummyParamParser]",
-    #       variable has type "Type[NumPyDocstringParamParser]")
     NumPyDocstringParamParser = _DummyParamParser  # type:ignore
 @language python
 @tabwidth -4
@@ -10695,7 +9842,7 @@ if not NumpyDocString:
                 p_type = m.group(1)
 
             if p_type.startswith("{"):
-                types = {type(x).__name__ for x in ast.literal_eval(p_type)}
+                types = {type(x).__name__ for x in literal_eval(p_type)}
                 return list(types)
             else:
                 return [p_type]
@@ -10712,6 +9859,7 @@ if not NumpyDocString:
 <t tx="ekr.20221118072830.1464">@path rope/base/oi/type_hinting/providers/
 import re
 
+from rope.base.oi.type_hinting import utils
 from rope.base.oi.type_hinting.providers import interfaces
 
 
@@ -10832,9 +9980,7 @@ from rope.base.oi.type_hinting.resolvers import interfaces
     except Exception:
         pass
 </t>
-<t tx="ekr.20221118072830.148">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-    # from rope.base.pyobjects import PyObject  # verify annotation
-    # assert isinstance(self.holding, (None.__class__, PyObject))  # verify annotation
+<t tx="ekr.20221118072830.148">def get_returned_object(self, args):
     return self.holding
 
 
@@ -10924,40 +10070,39 @@ from collections.abc import MutableSet
     return set(self) == set(other)
 </t>
 <t tx="ekr.20221118072830.1499">import sys
+import warnings
 
 
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.150">class Generator(pyobjects.PyObject):  # was pyobjects.AbstractClass.
+<t tx="ekr.20221118072830.150">class Generator(pyobjects.AbstractClass):
+    def __init__(self, holding=None):
+        super().__init__()
+        self.holding = holding
+        self.attributes = {
+            "next": BuiltinName(BuiltinFunction(self.holding)),
+            "__iter__": BuiltinName(BuiltinFunction(get_iterator(self.holding))),
+            "close": BuiltinName(BuiltinFunction()),
+            "send": BuiltinName(BuiltinFunction()),
+            "throw": BuiltinName(BuiltinFunction()),
+        }
+
     @others
 get_generator = _create_builtin_getter(Generator)
 
 
 </t>
 <t tx="ekr.20221118072830.1500">def saveit(func):
-    """
-    A decorator that injects a singleton ivar (in self) if the ivar does
-    not already exist.
+    """A decorator that caches the return value of a function"""
 
-    The ivar's name (ivar_name) is f"_{func.__name__}".
+    name = "_" + func.__name__
 
-    :param func: A function/method that instantiates an object.
-
-    :return: getattr(self, ivar_name), the value of the ivar.
-
-    """
-    # """A decorator that caches the return value of a function"""
-    ivar_name = f"_{func.__name__}"
-
-    def _wrapper(self, *args, **kwargs):
-        if not hasattr(self, ivar_name):
-            # Instantiate the singleton object.
-            obj = func(self, *args, **kwargs)
-            setattr(self, ivar_name, obj)
-        # Return the value of the ivar.
-        return getattr(self, ivar_name)
+    def _wrapper(self, *args, **kwds):
+        if not hasattr(self, name):
+            setattr(self, name, func(self, *args, **kwds))
+        return getattr(self, name)
 
     return _wrapper
 
@@ -11011,6 +10156,7 @@ cacheit = saveit
             message = "%s is deprecated" % func.__name__
 
         def newfunc(*args, **kwds):
+            warnings.warn(message, DeprecationWarning, stacklevel=2)
             return func(*args, **kwds)
 
         return newfunc
@@ -11028,18 +10174,6 @@ cacheit = saveit
 
     return decorator
 
-
-</t>
-<t tx="ekr.20221118072830.151">def __init__(self, holding=None):
-    super().__init__(get_base_type("Type"))
-    self.holding: Optional[PyObject] = holding
-    self.attributes = {
-        "next": BuiltinName(BuiltinFunction(self.holding)),
-        "__iter__": BuiltinName(BuiltinFunction(get_iterator(self.holding))),
-        "close": BuiltinName(BuiltinFunction()),
-        "send": BuiltinName(BuiltinFunction()),
-        "throw": BuiltinName(BuiltinFunction()),
-    }
 
 </t>
 <t tx="ekr.20221118072830.1511">class _Cached:
@@ -11198,11 +10332,6 @@ from rope.base import (
 )
 from rope.contrib import fixsyntax
 from rope.refactor import functionutils
-from rope.base.pyobjects import (
-    is_abstract_class,
-    is_abstract_function,
-    is_abstract_module,
-)
 
 
 @others
@@ -11318,9 +10447,7 @@ from rope.base.pyobjects import (
 
 
 </t>
-<t tx="ekr.20221118072830.153">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-    # from rope.base.pyobjects import PyObject  # verify annotation
-    # assert isinstance(self.holding, (None.__class__, PyObject))  # verify annotation
+<t tx="ekr.20221118072830.153">def get_returned_object(self, args):
     return self.holding
 
 
@@ -11465,7 +10592,7 @@ def parameters(self):
         pyname = pyname._get_imported_pyname()
     if isinstance(pyname, pynames.DefinedName):
         pyobject = pyname.get_object()
-        if is_abstract_function(pyobject):
+        if isinstance(pyobject, pyobjects.AbstractFunction):
             return pyobject.get_param_names()
 
 </t>
@@ -11488,9 +10615,9 @@ def type(self):
         pyname, pynames.DefinedName
     ):
         pyobject = pyname.get_object()
-        if is_abstract_function(pyobject):
+        if isinstance(pyobject, pyobjects.AbstractFunction):
             return "function"
-        if is_abstract_class(pyobject):
+        if isinstance(pyobject, pyobjects.AbstractClass):
             return "class"
     return "instance"
 
@@ -11792,13 +10919,16 @@ get_file_type = _create_builtin_type_getter(File)
             return {}
         if function_pyname is not None:
             pyobject = function_pyname.get_object()
-            if is_abstract_function(pyobject):
+            if isinstance(pyobject, pyobjects.AbstractFunction):
                 pass
-            elif is_abstract_class(pyobject) and "__init__" in pyobject:
+            elif (
+                isinstance(pyobject, pyobjects.AbstractClass)
+                and "__init__" in pyobject
+            ):
                 pyobject = pyobject["__init__"].get_object()
             elif "__call__" in pyobject:
                 pyobject = pyobject["__call__"].get_object()
-            if is_abstract_function(pyobject):
+            if isinstance(pyobject, pyobjects.AbstractFunction):
                 param_names = []
                 param_names.extend(pyobject.get_param_names(special_args=False))
                 result = {}
@@ -11872,26 +11002,26 @@ get_file_type = _create_builtin_type_getter(File)
     @others
 </t>
 <t tx="ekr.20221118072830.1567">def get_doc(self, pyobject):
-    if is_abstract_function(pyobject):
+    if isinstance(pyobject, pyobjects.AbstractFunction):
         return self._get_function_docstring(pyobject)
-    if is_abstract_class(pyobject):
+    elif isinstance(pyobject, pyobjects.AbstractClass):
         return self._get_class_docstring(pyobject)
-    if is_abstract_module(pyobject):
+    elif isinstance(pyobject, pyobjects.AbstractModule):
         return self._trim_docstring(pyobject.get_doc())
     return None
 
 </t>
 <t tx="ekr.20221118072830.1568">def get_calltip(self, pyobject, ignore_unknown=False, remove_self=False):
     try:
-        if is_abstract_class(pyobject):
+        if isinstance(pyobject, pyobjects.AbstractClass):
             pyobject = pyobject["__init__"].get_object()
-        if not is_abstract_function(pyobject):
+        if not isinstance(pyobject, pyobjects.AbstractFunction):
             pyobject = pyobject["__call__"].get_object()
     except exceptions.AttributeNotFoundError:
         return None
     if ignore_unknown and not isinstance(pyobject, pyobjects.PyFunction):
         return
-    if is_abstract_function(pyobject):
+    if isinstance(pyobject, pyobjects.AbstractFunction):
         result = self._get_function_signature(pyobject, add_module=True)
         if remove_self and self._is_method(pyobject):
             return result.replace("(self)", "()").replace("(self, ", "(")
@@ -11913,7 +11043,7 @@ get_file_type = _create_builtin_type_getter(File)
 
     if "__init__" in pyclass:
         init = pyclass["__init__"].get_object()
-        if is_abstract_function(init):
+        if isinstance(init, pyobjects.AbstractFunction):
             doc += "\n\n" + self._get_single_function_docstring(init)
     return doc
 
@@ -11946,7 +11076,7 @@ get_file_type = _create_builtin_type_getter(File)
     for super_class in pyclass.get_superclasses():
         if name in super_class:
             function = super_class[name].get_object()
-            if is_abstract_function(function):
+            if isinstance(function, pyobjects.AbstractFunction):
                 result.append(function)
         result.extend(self._get_super_methods(super_class, name))
     return result
@@ -11967,7 +11097,7 @@ get_file_type = _create_builtin_type_getter(File)
 <t tx="ekr.20221118072830.1575">def _location(self, pyobject, add_module=False):
     location = []
     parent = pyobject.parent
-    while parent and not is_abstract_module(parent):
+    while parent and not isinstance(parent, pyobjects.AbstractModule):
         location.append(parent.get_name())
         location.append(".")
         parent = parent.parent
@@ -12054,12 +11184,7 @@ get_file_type = _create_builtin_type_getter(File)
 </t>
 <t tx="ekr.20221118072830.1585">@path rope/contrib/
 &lt;&lt; docstring: rope/contrib/finderrors.py &gt;&gt;
-import ast
-from typing import List
-from rope.base import evaluate, pyobjects
-from rope.base.ast import RopeNodeVisitor
-from rope.base.pyobjects import PyModule
-from rope.base.pyscopes import Scope
+from rope.base import ast, evaluate, pyobjects
 
 
 @others
@@ -12078,13 +11203,13 @@ from rope.base.pyscopes import Scope
 
 
 </t>
-<t tx="ekr.20221118072830.1587">class _BadAccessFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072830.1587">class _BadAccessFinder(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.1588">def __init__(self, pymodule: PyModule):
+<t tx="ekr.20221118072830.1588">def __init__(self, pymodule):
     self.pymodule = pymodule
-    self.scope: Scope = pymodule.get_scope()
-    self.errors: List[Error] = []
+    self.scope = pymodule.get_scope()
+    self.errors = []
 
 </t>
 <t tx="ekr.20221118072830.1589">def _Name(self, node):
@@ -12273,7 +11398,7 @@ INFO = __doc__
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.160">def get_property_object(self, args):
-    if is_abstract_function(self._fget):
+    if isinstance(self._fget, pyobjects.AbstractFunction):
         return self._fget.get_returned_object(args)
 
 
@@ -12427,32 +11552,28 @@ from rope.base.codeanalyze import ArrayLinesAdapter, LogicalLineFinder
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.162">class Lambda(pyobjects.PyObject):  # was pyobjects.AbstractFunction.
+<t tx="ekr.20221118072830.162">class Lambda(pyobjects.AbstractFunction):
+    def __init__(self, node, scope):
+        super().__init__()
+        self.node = node
+        self.arguments = node.args
+        self.scope = scope
+
     @others
 </t>
-<t tx="ekr.20221118072830.163">def __init__(self, node, scope):
-    super().__init__(get_base_type("Function"))
-    self.node = node
-    self.arguments = node.args
-    self.scope = scope
-
-</t>
-<t tx="ekr.20221118072830.164">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-    # from rope.base.pyobjects import PyObject  # verify annotation
+<t tx="ekr.20221118072830.164">def get_returned_object(self, args):
     result = rope.base.evaluate.eval_node(self.scope, self.node.body)
     if result is not None:
-        # assert isinstance(result.get_object(), (None.__class__, PyObject))  # verify annotation
         return result.get_object()
     else:
-        # assert isinstance(pyobjects.get_unknown(), (None.__class__, PyObject))  # verify annotation
         return pyobjects.get_unknown()
 
 </t>
-<t tx="ekr.20221118072830.165">def get_module(self) -&gt; Any:
+<t tx="ekr.20221118072830.165">def get_module(self):
     return self.parent.get_module()
 
 </t>
-<t tx="ekr.20221118072830.166">def get_scope(self) -&gt; Scope:
+<t tx="ekr.20221118072830.166">def get_scope(self):
     return self.scope
 
 </t>
@@ -12473,17 +11594,12 @@ from rope.base.codeanalyze import ArrayLinesAdapter, LogicalLineFinder
     return "lambda"
 
 </t>
-<t tx="ekr.20221118072830.171">def get_param_names(self, special_args=True) -&gt; typing_List[str]:
-    result: typing_List[str] = [
-        node.arg  # ast.arg.arg is a str.
-        for node in self.arguments.args
-        if isinstance(node, ast.arg)
-    ]
+<t tx="ekr.20221118072830.171">def get_param_names(self, special_args=True):
+    result = [node.arg for node in self.arguments.args if isinstance(node, ast.arg)]
     if self.arguments.vararg:
         result.append("*" + self.arguments.vararg.arg)
     if self.arguments.kwarg:
         result.append("**" + self.arguments.kwarg.arg)
-    # assert all(isinstance(z, str) for z in result), repr(result)  # verify annotation
     return result
 
 </t>
@@ -12512,7 +11628,7 @@ def parent(self):
     args = arguments.ObjectArguments([pyname])
     if "__iter__" in seq:
         obj = seq["__iter__"].get_object()
-        if not is_abstract_function(obj):
+        if not isinstance(obj, pyobjects.AbstractFunction):
             return None
         iter = obj.get_returned_object(args)
         if iter is not None and "next" in iter:
@@ -12550,16 +11666,8 @@ def parent(self):
 
 </t>
 <t tx="ekr.20221118072830.18">@path rope/base/
-from __future__ import annotations
-import ast
-from typing import Any, List, TYPE_CHECKING
 import rope.base.evaluate
-from rope.base.pyobjects import is_abstract_class
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyFunction
-    from rope.base.pyscopes import Scope
-Node = ast.AST
+from rope.base import ast
 
 
 @others
@@ -12575,12 +11683,14 @@ Node = ast.AST
     passed_class, passed_self = args.get_arguments(["type", "self"])
     if passed_self is None:
         return passed_class
-    pyclass = passed_class
-    if is_abstract_class(pyclass):
-        supers = pyclass.get_superclasses()
-        if supers:
-            return pyobjects.PyObject(supers[0])
-    return passed_self
+    else:
+        # pyclass = passed_self.get_type()
+        pyclass = passed_class
+        if isinstance(pyclass, pyobjects.AbstractClass):
+            supers = pyclass.get_superclasses()
+            if supers:
+                return pyobjects.PyObject(supers[0])
+        return passed_self
 
 
 </t>
@@ -13154,13 +12264,9 @@ def undo(self):
     return (change.resource.path, change.new_resource.path)
 
 </t>
-<t tx="ekr.20221118072830.25">def create_arguments(
-    primary, pyfunction: PyFunction, call_node: ast.Call, scope: Scope
-) -&gt; Arguments:
+<t tx="ekr.20221118072830.25">def create_arguments(primary, pyfunction, call_node, scope):
     """A factory for creating `Arguments`"""
-    # Call(expr func, expr* args, keyword* keywords)
-
-    args: List = list(call_node.args)
+    args = list(call_node.args)
     args.extend(call_node.keywords)
     called = call_node.func
     # XXX: Handle constructors
@@ -13720,27 +12826,21 @@ def ends(self):
     return r"#[^\n]*"
 </t>
 <t tx="ekr.20221118072830.316">@path rope/base/
-from __future__ import annotations
-import ast
 from operator import itemgetter
-from typing import Optional, Tuple, TYPE_CHECKING
+from typing import Optional, Tuple
 
 import rope.base.builtins
 import rope.base.pynames
 import rope.base.pyobjects
 from rope.base import (
     arguments,
+    ast,
     exceptions,
     nameanalyze,
+    pyobjects,
     pyobjectsdef,
     worder,
 )
-from rope.base.ast import RopeNodeVisitor
-from rope.base.pyobjects import is_abstract_class, is_abstract_function
-
-if TYPE_CHECKING:
-    from rope.base.pyscopes import Scope
-    from rope.base.pyobjects import PyObject
 
 BadIdentifierError = exceptions.BadIdentifierError
 
@@ -13771,7 +12871,7 @@ BadIdentifierError = exceptions.BadIdentifierError
 
 
 </t>
-<t tx="ekr.20221118072830.32">def __init__(self, pyname, arguments: Arguments, scope: Scope) -&gt; None:
+<t tx="ekr.20221118072830.32">def __init__(self, pyname, arguments, scope):
     """`arguments` is an instance of `Arguments`"""
     self.pyname = pyname
     self.args = arguments
@@ -13850,7 +12950,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         if isinstance(pyobject, pyobjectsdef.PyFunction):
             parameter_name = pyobject.get_parameters().get(keyword_name, None)
             return (None, parameter_name)
-        if is_abstract_function(pyobject):
+        elif isinstance(pyobject, pyobjects.AbstractFunction):
             parameter_name = rope.base.pynames.ParameterName()
             return (None, parameter_name)
     # class body
@@ -13889,9 +12989,11 @@ BadIdentifierError = exceptions.BadIdentifierError
         function_pyname = None
     if function_pyname is not None:
         pyobject = function_pyname.get_object()
-        if is_abstract_function(pyobject):
+        if isinstance(pyobject, pyobjects.AbstractFunction):
             return pyobject
-        elif is_abstract_class(pyobject) and "__init__" in pyobject:
+        elif (
+            isinstance(pyobject, pyobjects.AbstractClass) and "__init__" in pyobject
+        ):
             return pyobject["__init__"].get_object()
         elif "__call__" in pyobject:
             return pyobject["__call__"].get_object()
@@ -13912,10 +13014,10 @@ BadIdentifierError = exceptions.BadIdentifierError
 
 
 </t>
-<t tx="ekr.20221118072830.331">class StatementEvaluator(RopeNodeVisitor):
+<t tx="ekr.20221118072830.331">class StatementEvaluator(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.332">def __init__(self, scope: Scope):
+<t tx="ekr.20221118072830.332">def __init__(self, scope):
     self.scope = scope
     self.result = None
     self.old_result = None
@@ -13946,7 +13048,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         args = arguments.create_arguments(primary, pyobject, node, self.scope)
         return pyobject.get_returned_object(args)
 
-    if is_abstract_class(pyobject):
+    if isinstance(pyobject, rope.base.pyobjects.AbstractClass):
         result = None
         if "__new__" in pyobject:
             new_function = pyobject["__new__"].get_object()
@@ -13957,7 +13059,7 @@ BadIdentifierError = exceptions.BadIdentifierError
         return
 
     pyfunction = None
-    if is_abstract_function(pyobject):
+    if isinstance(pyobject, rope.base.pyobjects.AbstractFunction):
         pyfunction = pyobject
     elif "__call__" in pyobject:
         pyfunction = pyobject["__call__"].get_object()
@@ -14104,17 +13206,12 @@ BadIdentifierError = exceptions.BadIdentifierError
     )
 
 </t>
-<t tx="ekr.20221118072830.352">def _get_object_for_node(self, stmt) -&gt; Optional[PyObject]:
+<t tx="ekr.20221118072830.352">def _get_object_for_node(self, stmt):
     pyname = eval_node(self.scope, stmt)
-    return pyname and pyname.get_object()
-
-</t>
-<t tx="ekr.20221118072830.353">def _get_primary_and_object_for_node(self, stmt):
-    primary, pyname = eval_node2(self.scope, stmt)
     pyobject = None
     if pyname is not None:
         pyobject = pyname.get_object()
-    return primary, pyobject
+    return pyobject
 
 </t>
 <t tx="ekr.20221118072830.354">def _Subscript(self, node):
@@ -14132,12 +13229,13 @@ BadIdentifierError = exceptions.BadIdentifierError
 </t>
 <t tx="ekr.20221118072830.356">def _call_function(self, node, function_name, other_args=None):
     pyname = eval_node(self.scope, node)
-    if pyname is None:
+    if pyname is not None:
+        pyobject = pyname.get_object()
+    else:
         return
-    pyobject = pyname.get_object()
     if function_name in pyobject:
         called = pyobject[function_name].get_object()
-        if not called or not is_abstract_function(called):
+        if not called or not isinstance(called, pyobjects.AbstractFunction):
             return
         args = [node]
         if other_args:
@@ -14170,7 +13268,7 @@ BadIdentifierError = exceptions.BadIdentifierError
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.36">def _is_method_call(primary: Any, pyfunction: PyFunction) -&gt; bool:
+<t tx="ekr.20221118072830.36">def _is_method_call(primary, pyfunction):
     if primary is None:
         return False
     pyobject = primary.get_object()
@@ -14180,9 +13278,9 @@ BadIdentifierError = exceptions.BadIdentifierError
         and isinstance(pyfunction.parent, rope.base.pyobjects.PyClass)
     ):
         return True
-    if is_abstract_class(pyobject.get_type()) and isinstance(
-        pyfunction, rope.base.builtins.BuiltinFunction
-    ):
+    if isinstance(
+        pyobject.get_type(), rope.base.pyobjects.AbstractClass
+    ) and isinstance(pyfunction, rope.base.builtins.BuiltinFunction):
         return True
     return False
 </t>
@@ -14975,7 +14073,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.459">def get_string_module(project, code, resource=None, force_errors=False):
-    """Instantiates a `PyModule` object for the given code.
+    """Returns a `PyObject` object for the given code
 
     If `force_errors` is `True`, `exceptions.ModuleSyntaxError` is
     raised if module has syntax errors.  This overrides
@@ -14989,7 +14087,7 @@ def relative(root, path):
 
 </t>
 <t tx="ekr.20221118072830.460">def get_string_scope(project, code, resource=None):
-    """Instantiates a `Scope` object for the given code"""
+    """Returns a `Scope` object for the given code"""
     return get_string_module(project, code, resource).get_scope()
 
 
@@ -15333,11 +14431,11 @@ Builtin and c-extension modules that are allowed to be imported and inspected by
     return config
 </t>
 <t tx="ekr.20221118072830.476">@path rope/base/
+from __future__ import annotations
 import contextlib
 import json
 import os
 import sys
-from typing import Any
 import warnings
 from contextlib import ExitStack
 from typing import Optional
@@ -15346,9 +14444,11 @@ import rope.base.fscommands  # Use full qualification for clarity.
 import rope.base.resourceobserver as resourceobserver
 from rope.base import exceptions, history, pycore, taskhandle, utils
 from rope.base.exceptions import ModuleNotFoundError
+
+# At present rope.base.prefs starts with `# type:ignore`.
+# As a result, mypy knows nothing about Prefs and get_config.
 from rope.base.prefs import Prefs, get_config  # type:ignore
 from rope.base.resources import File, Folder, _ResourceMatcher
-
 
 try:
     import cPickle as pickle  # type:ignore
@@ -15399,7 +14499,7 @@ except ImportError:
         raise exceptions.ResourceNotFoundError("Unknown resource " + resource_name)
 
 </t>
-<t tx="ekr.20221118072830.480">def get_module(self, name, folder=None) -&gt; Any:
+<t tx="ekr.20221118072830.480">def get_module(self, name, folder=None):
     """Returns a `PyObject` if the module was found."""
     # check if this is a builtin module
     pymod = self.pycore.builtin_module(name)
@@ -15595,8 +14695,7 @@ def pycore(self):
     self._init_source_folders()
 
 </t>
-<t tx="ekr.20221118072830.502">def __repr__(self) -&gt; str:
-    # Changing this will cause a unit test to fail.
+<t tx="ekr.20221118072830.502">def __repr__(self):
     return '&lt;{}.{} "{}"&gt;'.format(
         self.__class__.__module__,
         self.__class__.__name__,
@@ -15851,11 +14950,9 @@ def ropefolder(self):
             return module.get_child(packages[-1] + ".py")
 </t>
 <t tx="ekr.20221118072830.542">@path rope/base/
-from __future__ import annotations
 import bisect
 import contextlib
 import difflib
-from typing import Any, Callable, TYPE_CHECKING
 import warnings
 
 import rope.base.libutils
@@ -15865,10 +14962,6 @@ import rope.base.oi.soa
 import rope.base.resourceobserver
 import rope.base.resources
 from rope.base import builtins, exceptions, pyobjectsdef, stdmods, taskhandle, utils
-
-if TYPE_CHECKING:
-    from rope.base.pyscopes import Scope
-    from rope.base.resources import Resource
 
 
 @others
@@ -15929,24 +15022,14 @@ def automatic_soa(self):
 </t>
 <t tx="ekr.20221118072830.55">@path rope/base/
 """This module tries to support builtin types and functions."""
-from __future__ import annotations
-import ast
 import inspect
 import io
-from typing import Any, Optional, TYPE_CHECKING
-from typing import List as typing_List
 
 import rope.base.evaluate
-from rope.base import arguments, pynames, pyobjects, utils
-from rope.base.pyobjects import get_base_type
-from rope.base.pyobjects import is_abstract_class, is_abstract_function
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyObject
-    from rope.base.pyscopes import Scope
+from rope.base import arguments, ast, pynames, pyobjects, utils
 
 
-class BuiltinModule(pyobjects.PyObject):  # was pyobjects.AbstractModule.
+class BuiltinModule(pyobjects.AbstractModule):
 @others
 
 
@@ -15989,7 +15072,7 @@ builtins = BuiltinModule("builtins", initial=_initial_builtins)
 
 </t>
 <t tx="ekr.20221118072830.551">@utils.deprecated("Use `project.get_module` instead")
-def get_module(self, name, folder=None) -&gt; Any:
+def get_module(self, name, folder=None):
     """Returns a `PyObject` if the module was found."""
     return self.project.get_module(name, folder)
 
@@ -16026,7 +15109,7 @@ def get_string_module(self, code, resource=None, force_errors=False):
 
 </t>
 <t tx="ekr.20221118072830.556">@utils.deprecated("Use `libutils.get_string_scope` instead")
-def get_string_scope(self, code: str, resource: Resource = None) -&gt; Scope:
+def get_string_scope(self, code, resource=None):
     """Returns a `Scope` object for the given code"""
     return rope.base.libutils.get_string_scope(code, resource)
 
@@ -16050,7 +15133,13 @@ def find_module(self, modname, folder=None):
     return self.project.find_module(modname, folder)
 
 </t>
-<t tx="ekr.20221118072830.56">    @others
+<t tx="ekr.20221118072830.56">    def __init__(self, name, pycore=None, initial={}):
+        super().__init__()
+        self.name = name
+        self.pycore = pycore
+        self.initial = initial
+
+    @others
 </t>
 <t tx="ekr.20221118072830.560">@utils.deprecated("Use `project.find_relative_module` instead")
 def find_relative_module(self, modname, folder, level):
@@ -16122,18 +15211,17 @@ def get_python_files(self):
 <t tx="ekr.20221118072830.567">def analyze_module(
     self,
     resource,
-    should_analyze: Callable = lambda py: True,
-    search_subscopes: Callable = lambda py: True,
+    should_analyze=lambda py: True,
+    search_subscopes=lambda py: True,
     followed_calls=None,
 ):
     """Analyze `resource` module for static object inference
 
     This function forces rope to analyze this module to collect
-    information about function calls.
-
-    `should_analyze` is a function that is called with a `PyDefinedObject`
-    argument. If it returns `True` the element is analyzed. If it is `None`
-    or returns `False` the element is not analyzed.
+    information about function calls.  `should_analyze` is a
+    function that is called with a `PyDefinedObject` argument.  If
+    it returns `True` the element is analyzed.  If it is `None` or
+    returns `False` the element is not analyzed.
 
     `search_subscopes` is like `should_analyze`; The difference is
     that if it returns `False` the sub-scopes are all ignored.
@@ -16161,13 +15249,6 @@ def get_python_files(self):
 </t>
 <t tx="ekr.20221118072830.569">def __str__(self):
     return str(self.module_cache) + str(self.object_info)
-
-</t>
-<t tx="ekr.20221118072830.57">def __init__(self, name, pycore=None, initial={}):
-    super().__init__(get_base_type("Module"))
-    self.name = name
-    self.pycore = pycore
-    self.initial = initial
 
 </t>
 <t tx="ekr.20221118072830.570">@utils.deprecated("Use `libutils.modname` instead")
@@ -16331,10 +15412,9 @@ import rope.base.pyobjects
 from rope.base import exceptions, utils
 
 if typing.TYPE_CHECKING:
-    from typing import Any, Optional, Tuple, Union
+    from typing import Union
 
     from rope.base import pyobjectsdef
-    from rope.base.pyobjects import PyObject
 
 
 @others
@@ -16344,23 +15424,18 @@ if typing.TYPE_CHECKING:
 <t tx="ekr.20221118072830.589">class PyName:
     """References to `PyObject` inside python programs"""
 
-    # Holds analysis of assignments statements.
-    pass
-
     @others
 </t>
 <t tx="ekr.20221118072830.59">def get_attributes(self):
     return self.attributes
 
 </t>
-<t tx="ekr.20221118072830.590">def get_object(self) -&gt; Optional[PyObject]:
+<t tx="ekr.20221118072830.590">def get_object(self):
     """Return the `PyObject` object referenced by this `PyName`"""
-    return None
 
 </t>
-<t tx="ekr.20221118072830.591">def get_definition_location(self) -&gt; Optional[Tuple[Any, int]]:
+<t tx="ekr.20221118072830.591">def get_definition_location(self):
     """Return a (module, lineno) tuple"""
-    return None
 
 
 </t>
@@ -16631,20 +15706,16 @@ def module(self):
 
 </t>
 <t tx="ekr.20221118072830.64">class _BuiltinElement:
+    def __init__(self, builtin, parent=None):
+        self.builtin = builtin
+        self._parent = parent
+
     @others
 </t>
 <t tx="ekr.20221118072830.640">@path rope/base/
-from __future__ import annotations
-import ast
-from typing import Any, List, Optional, TYPE_CHECKING
+from typing import Optional
 
-from rope.base import exceptions, utils
-import rope.base.builtins
-
-if TYPE_CHECKING:
-    from rope.base.pycore import PyCore
-    from rope.base.resources import Resource
-    from rope.base.pyscopes import Scope
+from rope.base import ast, exceptions, utils
 
 
 @others
@@ -16652,12 +15723,12 @@ if TYPE_CHECKING:
 @tabwidth -4
 </t>
 <t tx="ekr.20221118072830.641">class PyObject:
+    def __init__(self, type_):
+        if type_ is None:
+            type_ = self
+        self.type = type_
+
     @others
-
-</t>
-<t tx="ekr.20221118072830.642">def __init__(self, type_):
-    self.type = self if type_ is None else type_
-
 </t>
 <t tx="ekr.20221118072830.643">def get_attributes(self):
     if self.type is self:
@@ -16709,11 +15780,6 @@ if TYPE_CHECKING:
     return not self.__eq__(obj)
 
 </t>
-<t tx="ekr.20221118072830.65">def __init__(self, builtin, parent=None):
-    self.builtin = builtin
-    self._parent = parent
-
-</t>
 <t tx="ekr.20221118072830.650">def __hash__(self):
     """See docs for `__eq__()` method"""
     if type(self) == PyObject and self != self.type:
@@ -16727,10 +15793,7 @@ if TYPE_CHECKING:
     return iter(self.get_attributes())
 
 </t>
-<t tx="ekr.20221118072830.654">_anchor_types = None
-
-
-def get_base_type(name: str) -&gt; PyObject:
+<t tx="ekr.20221118072830.654">def get_base_type(name):
     """Return the base type with name `name`.
 
     The base types are 'Type', 'Function', 'Module' and 'Unknown'.  It
@@ -16738,54 +15801,36 @@ def get_base_type(name: str) -&gt; PyObject:
     is discouraged.  Use classes defined in this module instead.
     For example instead of
     ``pyobject.get_type() == get_base_type('Function')`` use
-    ``is_abstract_function(pyobject)``.
+    ``isinstance(pyobject, AbstractFunction)``.
 
-    You can use `is_abstract_class` for classes, `is_abstract_functions` for
-    functions, and `is_abstract_module` for modules.
+    You can use `AbstractClass` for classes, `AbstractFunction` for
+    functions, and `AbstractModule` for modules.  You can also use
+    `PyFunction` and `PyClass` for testing if an object is
+    defined somewhere and rope can access its source.  These classes
+    provide more methods.
 
     """
-    global _anchor_types
-    if _anchor_types is None:
-        base_type = PyObject(None)
-        _anchor_types = {
-            "Function": PyObject(base_type),
-            "Module": PyObject(base_type),
-            "Type": base_type,  # a Class.
-            "Unknown": PyObject(base_type),
-        }
-    return _anchor_types[name]
+    return PyObject._get_base_type(name)
 
 
 </t>
-<t tx="ekr.20221118072830.655">def get_unknown() -&gt; PyObject:
-    """Return a pyobject whose type is unknown.
+<t tx="ekr.20221118072830.655">def get_unknown():
+    """Return a pyobject whose type is unknown
 
-    Note that two unknown objects are equal.
-
-    For example you can write::
+    Note that two unknown objects are equal.  So for example you can
+    write::
 
       if pyname.get_object() == get_unknown():
           print('cannot determine what this pyname holds')
 
     Rope could have used `None` for indicating unknown objects but
-    we had to check that in many places.
+    we had to check that in many places.  So actually this method
+    returns a null object.
+
     """
-    return get_base_type("Unknown")
-
-
-</t>
-<t tx="ekr.20221118072830.656">class AbstractClass(PyObject):
-    def __init__(self):
-        super().__init__(get_base_type("Type"))
-
-    def get_name(self):  # In PyObject.
-        pass
-
-    def get_doc(self):  # In PyObject.
-        pass
-
-    def get_superclasses(self):
-        return []
+    if PyObject._unknown is None:
+        PyObject._unknown = PyObject(get_base_type("Unknown"))
+    return PyObject._unknown
 
 
 </t>
@@ -16794,55 +15839,25 @@ def get_base_type(name: str) -&gt; PyObject:
         return getattr(self.builtin, "__doc__", None)
 
 </t>
-<t tx="ekr.20221118072830.661">class AbstractFunction(PyObject):
-    def __init__(self):
-        super().__init__(get_base_type("Function"))
-
-    def get_name(self):  # In PyObject.
-        pass
-
-    def get_doc(self):  # In PyObject.
-        pass
-
-    def get_param_names(self, special_args=True):
-        return []
-
-    def get_returned_object(self, args):
-        return get_unknown()
-
-
-</t>
-<t tx="ekr.20221118072830.667">class AbstractModule(PyObject):
-    def __init__(self, doc=None):
-        super().__init__(get_base_type("Module"))
-
-    def get_doc(self):  # In PyObject.
-        pass
-
-    def get_resource(self):  # In PyObject.
-        pass</t>
 <t tx="ekr.20221118072830.67">def get_name(self):
     if self.builtin:
         return getattr(self.builtin, "__name__", None)
 
 </t>
-<t tx="ekr.20221118072830.671">class PyDefinedObject(PyObject):  # was: had no base class.
-
+<t tx="ekr.20221118072830.671">class PyDefinedObject:
     """Python defined names that rope can access their sources"""
 
-    @others
-</t>
-<t tx="ekr.20221118072830.672">def __init__(self, pycore, ast_node, parent, type_):
-    super().__init__(type_)
-    self.pycore = pycore
-    self.ast_node = ast_node
-    self.scope = None
-    self.parent = parent
-    self.structural_attributes = None
-    self.concluded_attributes = self.get_module()._get_concluded_data()
-    self.attributes = self.get_module()._get_concluded_data()
-    self.defineds = None
+    def __init__(self, pycore, ast_node, parent):
+        self.pycore = pycore
+        self.ast_node = ast_node
+        self.scope = None
+        self.parent = parent
+        self.structural_attributes = None
+        self.concluded_attributes = self.get_module()._get_concluded_data()
+        self.attributes = self.get_module()._get_concluded_data()
+        self.defineds = None
 
+    @others
 </t>
 <t tx="ekr.20221118072830.673">def __repr__(self):
     return '&lt;{}.{} "{}" at {}&gt;'.format(
@@ -16857,6 +15872,8 @@ def get_base_type(name: str) -&gt; PyObject:
 def absolute_name(self):
     obj_name = self.get_name()
     return self.get_module().get_name() + ("::" + obj_name if obj_name else "")
+
+visitor_class = None
 
 </t>
 <t tx="ekr.20221118072830.676">@utils.prevent_recursion(lambda: {})
@@ -16898,13 +15915,13 @@ def parent(self):
 
 
 </t>
-<t tx="ekr.20221118072830.680">def get_scope(self) -&gt; Scope:
+<t tx="ekr.20221118072830.680">def get_scope(self):
     if self.scope is None:
         self.scope = self._create_scope()
     return self.scope
 
 </t>
-<t tx="ekr.20221118072830.681">def get_module(self) -&gt; Any:
+<t tx="ekr.20221118072830.681">def get_module(self):
     current_object = self
     while current_object.parent is not None:
         current_object = current_object.parent
@@ -16925,8 +15942,6 @@ def parent(self):
     if self.defineds is None:
         self._get_structural_attributes()
     return self.defineds
-
-visitor_class = None
 
 </t>
 <t tx="ekr.20221118072830.684">def _create_structural_attributes(self):
@@ -16952,51 +15967,21 @@ visitor_class = None
 
 
 </t>
-<t tx="ekr.20221118072830.688">class PyFunction(PyDefinedObject):
-    # 1. was (PyDefinedObject, AbstractFunction).
-    # 2. was (PyDefinedObject, PyObject)
-
-    def __init__(self, pycore, ast_node, parent):
-        super().__init__(pycore, ast_node, parent, get_base_type("Function"))
-
-    # From AbstractFunction.
-
-    def get_param_names(self, special_args: bool = True) -&gt; List[str]:
-        return []
-
-    def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-        return get_unknown()
-
-
-</t>
-<t tx="ekr.20221118072830.689">class PyComprehension(PyDefinedObject):
+<t tx="ekr.20221118072830.688">class PyFunction(PyDefinedObject, AbstractFunction):
     pass
 
-    def get_name(self):
-        return "&lt;comprehension&gt;"
-
 
 </t>
-<t tx="ekr.20221118072830.69">class BuiltinClass(_BuiltinElement, pyobjects.PyObject):
-    # was (_BuiltinElement, pyobjects.AbstractClass).
+<t tx="ekr.20221118072830.69">class BuiltinClass(_BuiltinElement, pyobjects.AbstractClass):
     def __init__(self, builtin, attributes, parent=None):
-        pyobjects.PyObject.__init__(self, get_base_type("Type"))
         _BuiltinElement.__init__(self, builtin, parent)
+        pyobjects.AbstractClass.__init__(self)
         self.initial = attributes
 
     @others
 </t>
-<t tx="ekr.20221118072830.690">class PyClass(PyDefinedObject):
-    # 1. Was (PyDefinedObject, AbstractClass).
-    # 2. Was (PyDefinedObject, PyObject).
-
-    def __init__(self, pycore, ast_node, parent):
-        super().__init__(pycore, ast_node, parent, get_base_type("Type"))
-
-    # From AbstractClass.
-
-    def get_superclasses(self):
-        return []
+<t tx="ekr.20221118072830.690">class PyClass(PyDefinedObject, AbstractClass):
+    pass
 
 
 </t>
@@ -17022,19 +16007,15 @@ data = property(get, set)
 
 </t>
 <t tx="ekr.20221118072830.697">def __str__(self):
-    return "pyobjects._ConcludedData&lt;" + str(self.data) + "&gt;"
+    return "&lt;" + str(self.data) + "&gt;"
 
 </t>
-<t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject):
-    """The base class for PyModule and PyPackage."""
-
-    # 1. was (PyDefinedObject, AbstractModule).
-    # 2. Was (PyDefinedObject, PyObject).
-
-    def __init__(self, pycore: PyCore, ast_node: ast.AST, resource: Resource) -&gt; None:
+<t tx="ekr.20221118072830.698">class _PyModule(PyDefinedObject, AbstractModule):
+    def __init__(self, pycore, ast_node, resource):
         self.resource = resource
-        self.concluded_data: List[PyObject] = []
-        super().__init__(pycore, ast_node, None, get_base_type("Module"))
+        self.concluded_data = []
+        AbstractModule.__init__(self)
+        PyDefinedObject.__init__(self, pycore, ast_node, None)
 
     @others
 </t>
@@ -17068,10 +16049,6 @@ data = property(get, set)
     pass
 </t>
 <t tx="ekr.20221118072830.707">@path rope/base/
-from __future__ import annotations
-import ast
-from typing import Any, List, Optional, TYPE_CHECKING
-
 import rope.base.builtins
 import rope.base.codeanalyze
 import rope.base.evaluate
@@ -17080,6 +16057,7 @@ import rope.base.oi.soi
 import rope.base.pyscopes
 from rope.base import (
     arguments,
+    ast,
     exceptions,
     fscommands,
     nameanalyze,
@@ -17087,11 +16065,6 @@ from rope.base import (
     pyobjects,
     utils,
 )
-from rope.base.ast import RopeNodeVisitor
-from rope.base.pyobjects import is_abstract_module
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyObject
 
 
 @others
@@ -17102,8 +16075,9 @@ if TYPE_CHECKING:
     @others
 </t>
 <t tx="ekr.20221118072830.709">def __init__(self, pycore, ast_node, parent):
-    super().__init__(pycore, ast_node, parent)
-    self.arguments: ast.arguments = self.ast_node.args
+    rope.base.pyobjects.AbstractFunction.__init__(self)
+    rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
+    self.arguments = self.ast_node.args
     self.parameter_pyobjects = pynamesdef._Inferred(
         self._infer_parameters, self.get_module()._get_concluded_data()
     )
@@ -17169,33 +16143,27 @@ def get_attributes(self):
         return self.parameter_pyobjects.get()[index]
 
 </t>
-<t tx="ekr.20221118072830.719">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-    # from rope.base.pyobjects import PyObject  # verify annotation
-    # assert isinstance(self.returned.get(args), (None.__class__, PyObject))  # verify annotation
+<t tx="ekr.20221118072830.719">def get_returned_object(self, args):
     return self.returned.get(args)
 
 </t>
-<t tx="ekr.20221118072830.72">def get_module(self) -&gt; BuiltinModule:
+<t tx="ekr.20221118072830.72">def get_module(self):
     return builtins
+
 
 </t>
 <t tx="ekr.20221118072830.720">def get_name(self):
     return self.get_ast().name
 
 </t>
-<t tx="ekr.20221118072830.721">def get_param_names(self, special_args=True) -&gt; List[str]:
+<t tx="ekr.20221118072830.721">def get_param_names(self, special_args=True):
     # TODO: handle tuple parameters
-    result: List[str] = [
-        node.arg  # ast.arg.arg is a str.
-        for node in self.arguments.args
-        if isinstance(node, ast.arg)
-    ]
+    result = [node.arg for node in self.arguments.args if isinstance(node, ast.arg)]
     if special_args:
         if self.arguments.vararg:
             result.append(self.arguments.vararg.arg)
         if self.arguments.kwarg:
             result.append(self.arguments.kwarg.arg)
-    # assert all(isinstance(z, str) for z in result), repr(result)  # verify annotation
     return result
 
 </t>
@@ -17230,7 +16198,8 @@ def decorators(self):
 <t tx="ekr.20221118072830.724">class PyComprehension(pyobjects.PyComprehension):
     def __init__(self, pycore, ast_node, parent):
         self.visitor_class = _ComprehensionVisitor
-        super().__init__(pycore, ast_node, parent, type_="Comp")
+        rope.base.pyobjects.PyObject.__init__(self, type_="Comp")
+        rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
 
     @others
 </t>
@@ -17246,17 +16215,24 @@ def decorators(self):
 
 </t>
 <t tx="ekr.20221118072830.728">class PyClass(pyobjects.PyClass):
+    def __init__(self, pycore, ast_node, parent):
+        self.visitor_class = _ClassVisitor
+        rope.base.pyobjects.AbstractClass.__init__(self)
+        rope.base.pyobjects.PyDefinedObject.__init__(self, pycore, ast_node, parent)
+        self.parent = parent
+        self._superclasses = self.get_module()._get_concluded_data()
+
     @others
 </t>
-<t tx="ekr.20221118072830.729">def __init__(self, pycore, ast_node, parent):
-    self.visitor_class = _ClassVisitor
-    super().__init__(pycore, ast_node, parent)
-    self.parent = parent
-    self._superclasses = self.get_module()._get_concluded_data()
-
-</t>
-<t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.PyObject):
-    # was (_BuiltinElement, pyobjects.AbstractFunction).
+<t tx="ekr.20221118072830.73">class BuiltinFunction(_BuiltinElement, pyobjects.AbstractFunction):
+    def __init__(
+        self, returned=None, function=None, builtin=None, argnames=[], parent=None
+    ):
+        _BuiltinElement.__init__(self, builtin, parent)
+        pyobjects.AbstractFunction.__init__(self)
+        self.argnames = argnames
+        self.returned = returned
+        self.function = function
 
     @others
 </t>
@@ -17310,7 +16286,7 @@ def decorators(self):
             raise
         else:
             source = "\n"
-            node = rope.base.ast.parse("\n")
+            node = ast.parse("\n")
     self.source_code = source
     self.star_imports = []
     self.visitor_class = _GlobalVisitor
@@ -17331,7 +16307,7 @@ def decorators(self):
                 source_bytes = fscommands.unicode_to_file_data(source_code)
             else:
                 source_bytes = source_code
-        ast_node = rope.base.ast.parse(source_bytes, filename=filename)
+        ast_node = ast.parse(source_bytes, filename=filename)
     except SyntaxError as e:
         raise exceptions.ModuleSyntaxError(filename, e.lineno, e.msg)
     except UnicodeDecodeError as e:
@@ -17351,16 +16327,6 @@ def _create_concluded_attributes(self):
     return rope.base.pyscopes.GlobalScope(self.pycore, self)
 
 </t>
-<t tx="ekr.20221118072830.74">def __init__(
-    self, returned=None, function=None, builtin=None, argnames: typing_List[str] = [], parent=None
-):
-    pyobjects.PyObject.__init__(self, get_base_type("Function"))
-    _BuiltinElement.__init__(self, builtin, parent)
-    self.argnames: typing_List[str] = argnames
-    self.returned = returned
-    self.function = function
-
-</t>
 <t tx="ekr.20221118072830.740">@property
 @utils.saveit
 def lines(self):
@@ -17378,9 +16344,6 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.742">def get_name(self):
     return rope.base.libutils.modname(self.resource) if self.resource else ""
 
-# PyModule = PyDefinedModule  # Fails
-# PyDefinedModule = PyModule  # Passes.
-
 
 </t>
 <t tx="ekr.20221118072830.743">class PyPackage(pyobjects.PyPackage):
@@ -17394,7 +16357,7 @@ def logical_lines(self):
             init_dot_py, force_errors=force_errors
         ).get_ast()
     else:
-        ast_node = rope.base.ast.parse("\n")
+        ast_node = ast.parse("\n")
     super().__init__(pycore, ast_node, resource)
 
 </t>
@@ -17442,16 +16405,14 @@ def logical_lines(self):
     return self.get_module().get_scope()
 
 </t>
-<t tx="ekr.20221118072830.75">def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-    # from rope.base.pyobjects import PyObject  # verify annotation
+<t tx="ekr.20221118072830.75">def get_returned_object(self, args):
     if self.function is not None:
         return self.function(_CallContext(self.argnames, args))
     else:
-        # assert isinstance(self.returned, (None.__class__, PyObject))  # verify annotation
         return self.returned
 
 </t>
-<t tx="ekr.20221118072830.750">def get_module(self) -&gt; Any:
+<t tx="ekr.20221118072830.750">def get_module(self):
     init_dot_py = self._get_init_dot_py()
     if init_dot_py:
         return self.pycore.project.get_pymodule(init_dot_py)
@@ -17463,10 +16424,10 @@ def logical_lines(self):
 
 
 </t>
-<t tx="ekr.20221118072830.752">class _AnnAssignVisitor(RopeNodeVisitor):
+<t tx="ekr.20221118072830.752">class _AnnAssignVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor: RopeNodeVisitor):
+<t tx="ekr.20221118072830.753">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
     self.type_hint = None
@@ -17507,9 +16468,9 @@ def logical_lines(self):
     pass
 
 </t>
-<t tx="ekr.20221118072830.76">def get_param_names(self, special_args=True) -&gt; typing_List[str]:
-    # assert all(isinstance(z, str) for z in self.argnames), repr(self.argnames)  # verify annotation
+<t tx="ekr.20221118072830.76">def get_param_names(self, special_args=True):
     return self.argnames
+
 
 </t>
 <t tx="ekr.20221118072830.760">def _Subscript(self, node):
@@ -17521,10 +16482,10 @@ def logical_lines(self):
 
 
 </t>
-<t tx="ekr.20221118072830.762">class _ExpressionVisitor(RopeNodeVisitor):
+<t tx="ekr.20221118072830.762">class _ExpressionVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor: RopeNodeVisitor):
+<t tx="ekr.20221118072830.763">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
 
 </t>
@@ -17558,19 +16519,22 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.77">class BuiltinUnknown(_BuiltinElement, pyobjects.PyObject):
+    def __init__(self, builtin):
+        super().__init__(pyobjects.get_unknown())
+        self.builtin = builtin
+        self.type = pyobjects.get_unknown()
+
     @others
 </t>
-<t tx="ekr.20221118072830.770">class _AssignVisitor(RopeNodeVisitor):
+<t tx="ekr.20221118072830.770">class _AssignVisitor(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor: RopeNodeVisitor):
+<t tx="ekr.20221118072830.771">def __init__(self, scope_visitor):
     self.scope_visitor = scope_visitor
     self.assigned_ast = None
 
 </t>
 <t tx="ekr.20221118072830.772">def _Assign(self, node):
-    # Assign(expr* targets, expr value, string? type_comment)
-
     self.assigned_ast = node.value
     for child_node in node.targets:
         self.visit(child_node)
@@ -17582,8 +16546,6 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.774">def _Name(self, node):
-    # Name(identifier id, expr_context ctx)
-
     assignment = None
     if self.assigned_ast is not None:
         assignment = pynamesdef.AssignmentValue(self.assigned_ast)
@@ -17591,8 +16553,6 @@ def logical_lines(self):
 
 </t>
 <t tx="ekr.20221118072830.775">def _Tuple(self, node):
-    # Tuple(expr* elts, expr_context ctx)
-
     names = nameanalyze.get_name_levels(node)
     for name, levels in names:
         assignment = None
@@ -17617,21 +16577,15 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.779">class _ScopeVisitor(_ExpressionVisitor):
     @others
 </t>
-<t tx="ekr.20221118072830.78">def __init__(self, builtin):
-    super().__init__(pyobjects.get_unknown())
-    self.builtin = builtin
-    self.type = pyobjects.get_unknown()
-
-</t>
 <t tx="ekr.20221118072830.780">def __init__(self, pycore, owner_object):
-    super().__init__(scope_visitor=self)
+    _ExpressionVisitor.__init__(self, scope_visitor=self)
     self.pycore = pycore
     self.owner_object = owner_object
     self.names = {}
     self.defineds = []
 
 </t>
-<t tx="ekr.20221118072830.781">def get_module(self) -&gt; Any:
+<t tx="ekr.20221118072830.781">def get_module(self):
     if self.owner_object is not None:
         return self.owner_object.get_module()
     else:
@@ -17644,9 +16598,8 @@ def logical_lines(self):
     self.defineds.append(pyclass)
 
 </t>
-<t tx="ekr.20221118072830.783">def _FunctionDef(self, node: ast.FunctionDef):
+<t tx="ekr.20221118072830.783">def _FunctionDef(self, node):
     pyfunction = PyFunction(self.pycore, node, self.owner_object)
-
     for decorator in pyfunction.decorators:
         if isinstance(decorator, ast.Name) and decorator.id == "property":
             if isinstance(self, _ClassVisitor):
@@ -17668,7 +16621,6 @@ def logical_lines(self):
                 break
     else:
         self.names[node.name] = pynamesdef.DefinedName(pyfunction)
-
     self.defineds.append(pyfunction)
 
 </t>
@@ -17802,7 +16754,9 @@ def logical_lines(self):
 <t tx="ekr.20221118072830.798">def _is_ignored_import(self, imported_module):
     if not self.pycore.project.prefs.get("ignore_bad_imports", False):
         return False
-    return not is_abstract_module(imported_module.get_object())
+    return not isinstance(
+        imported_module.get_object(), rope.base.pyobjects.AbstractModule
+    )
 
 </t>
 <t tx="ekr.20221118072830.799">def _Global(self, node):
@@ -17954,7 +16908,13 @@ def get_attributes(self):
 
 </t>
 <t tx="ekr.20221118072830.82">def _create_builtin_type_getter(cls):
-    @others
+    def _get_builtin(*args):
+        if not hasattr(cls, "_generated"):
+            cls._generated = {}
+        if args not in cls._generated:
+            cls._generated[args] = cls(*args)
+        return cls._generated[args]
+
     return _get_builtin
 
 
@@ -17980,9 +16940,8 @@ def get_attributes(self):
     return result
 </t>
 <t tx="ekr.20221118072830.824">@path rope/base/
-import ast
 import rope.base.builtins  # Use full qualification for clarity.
-from rope.base import codeanalyze, exceptions, pynames, utils
+from rope.base import ast, codeanalyze, exceptions, pynames, utils
 from rope.refactor import patchedast
 
 
@@ -18013,14 +16972,6 @@ from rope.refactor import patchedast
     if name not in self.get_names():
         raise exceptions.NameNotFoundError("name %s not found" % name)
     return self.get_names()[name]
-
-</t>
-<t tx="ekr.20221118072830.83">def _get_builtin(*args):
-    if not hasattr(cls, "_generated"):
-        cls._generated = {}
-    if args not in cls._generated:
-        cls._generated[args] = cls(*args)
-    return cls._generated[args]
 
 </t>
 <t tx="ekr.20221118072830.830">def __getitem__(self, key):
@@ -19716,7 +18667,7 @@ def get_empty_import():
 
 </t>
 <t tx="ekr.20221118072831.1031">class EmptyImport(ImportInfo):
-    names_and_aliases: List[str] = []
+    names_and_aliases: List[Tuple[str, str]] = []
 
     @others
 </t>
@@ -19735,16 +18686,10 @@ def get_empty_import():
         self.folder = folder
 </t>
 <t tx="ekr.20221118072831.1035">@path rope/refactor/importutils/
-from __future__ import annotations
-import ast
-from typing import Callable, List, Set, Union, TYPE_CHECKING
+from typing import List, Union
 
-from rope.base import exceptions, pynames, pynamesdef, utils
-from rope.base.ast import RopeNodeVisitor
+from rope.base import ast, exceptions, pynames, pynamesdef, utils
 from rope.refactor.importutils import actions, importinfo
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyModule, PyObject
 
 
 @others
@@ -19754,9 +18699,7 @@ if TYPE_CHECKING:
 <t tx="ekr.20221118072831.1036">class ModuleImports:
     @others
 </t>
-<t tx="ekr.20221118072831.1037">def __init__(
-    self, project: PyObject, pymodule: PyModule, import_filter: Callable = None
-):
+<t tx="ekr.20221118072831.1037">def __init__(self, project, pymodule, import_filter=None):
     self.project = project
     self.pymodule = pymodule
     self.separating_lines = 0
@@ -20243,9 +19186,9 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1068">class _OneTimeSelector:
     @others
 </t>
-<t tx="ekr.20221118072831.1069">def __init__(self, names: List[str]):
+<t tx="ekr.20221118072831.1069">def __init__(self, names):
     self.names = names
-    self.selected_names: Set = set()
+    self.selected_names = set()
 
 </t>
 <t tx="ekr.20221118072831.107">def import_assist(self, starting):
@@ -20288,10 +19231,10 @@ from rope.refactor import importutils
 
 
 </t>
-<t tx="ekr.20221118072831.1073">class _UnboundNameFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072831.1073">class _UnboundNameFinder(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221118072831.1074">def __init__(self, pyobject: PyObject):
+<t tx="ekr.20221118072831.1074">def __init__(self, pyobject):
     self.pyobject = pyobject
 
 </t>
@@ -20357,17 +19300,14 @@ from rope.refactor import importutils
 <t tx="ekr.20221118072831.1083">class _GlobalUnboundNameFinder(_UnboundNameFinder):
     @others
 </t>
-<t tx="ekr.20221118072831.1084">def __init__(self, pymodule: PyModule, wanted_pyobject: PyObject):
+<t tx="ekr.20221118072831.1084">def __init__(self, pymodule, wanted_pyobject):
     super().__init__(pymodule)
-    self.unbound: Set = set()
-    self.names: Set = set()
+    self.unbound = set()
+    self.names = set()
     for name, pyname in pymodule._get_structural_attributes().items():
         if not isinstance(pyname, (pynames.ImportedName, pynames.ImportedModule)):
             self.names.add(name)
-
-    # Valid mypy complaint: "PyObject" has no attribute "get_scope"
-
-    wanted_scope = wanted_pyobject.get_scope()  # type:ignore
+    wanted_scope = wanted_pyobject.get_scope()
     self.start = wanted_scope.get_start()
     self.end = wanted_scope.get_end() + 1
 
@@ -21015,14 +19955,9 @@ from ropetest import testutils
             return eval("arg")
         a_var = a_func(mod1)
     """)
-    # breakpoint()
     mod2.write(code)
     self.pycore.run_module(mod2).wait_process()
     pymod2 = self.project.get_pymodule(mod2)
-    if 0:  # trace
-        print('')
-        print('test_module_dti:', self.project.get_pymodule(mod1).__class__.__name__)
-        print('test_module_dti:', pymod2["a_var"].get_object().__class__.__name__)
     self.assertEqual(self.project.get_pymodule(mod1), pymod2["a_var"].get_object())
 
 </t>
@@ -25383,6 +24318,7 @@ import rope.base.builtins  # Use fully-qualified names for clarity.
 from rope.base import libutils
 from ropetest import testutils
 
+
 @others
 @language python
 @tabwidth -4
@@ -25391,13 +24327,8 @@ from ropetest import testutils
     @others
 </t>
 <t tx="ekr.20221118072831.1485">def setUp(self):
-    """
-    Init self.project to a new Project instance for this test, with default prefs.
-    self.project.fscommands manages temp files in a temp directory.
-    """
     super().setUp()
     self.project = testutils.sample_project()
-    
 
 </t>
 <t tx="ekr.20221118072831.1486">def tearDown(self):
@@ -25414,11 +24345,6 @@ from ropetest import testutils
     scope = libutils.get_string_scope(self.project, code)
     sample_class = scope["Sample"].get_object()
     a_var = scope["a_var"].get_object()
-    if 0:  # trace:
-        print('')
-        print(scope)
-        print(sample_class)
-        print(a_var)
     self.assertEqual(sample_class, a_var.get_type())
 
 </t>
@@ -25604,11 +24530,6 @@ from ropetest import testutils
 
     folders = self.project.get_python_path_folders()
     folder_paths = map(lambda folder: Path(folder.real_path), folders)
-
-    # Valid mypy complaint:
-    # error: Incompatible types in assignment
-    # (expression has type "filter[Path]", variable has type "map[Path]")
-
     folder_paths = filter(filter_folders, folder_paths)  # type:ignore
     return list(OrderedDict.fromkeys(folder_paths))
 
@@ -27011,7 +25932,7 @@ import sys
 from collections import OrderedDict
 from typing import Generator, List, Optional, Tuple
 
-from rope.base.project import Project  # type:ignore
+from rope.base.project import Project
 
 from .defs import ModuleCompiled, ModuleFile, ModuleInfo, Package, PackageType, Source
 
@@ -27479,7 +26400,7 @@ from rope.base import exceptions, libutils
 from rope.base.builtins import BuiltinClass, File
 from rope.base.pycore import _TextChangeDetector
 from rope.base.pynamesdef import AssignedName
-from rope.base.pyobjects import get_base_type
+from rope.base.pyobjects import AbstractFunction, get_base_type
 from ropetest import testutils
 
 
@@ -27628,12 +26549,11 @@ def test_global_variable_with_type_annotation(self):
             def f():
                 pass
     """)
-    from rope.base.pyobjects import is_abstract_function
     mod.write(code)
     mod_element = self.project.get_module("mod")
     sample_class = mod_element["C"].get_object()
     f = sample_class["f"].get_object()
-    self.assertTrue(is_abstract_function(f))
+    self.assertTrue(isinstance(f, AbstractFunction))
 
 </t>
 <t tx="ekr.20221118072831.1693">def test_classes_inside_other_classes(self):
@@ -27851,6 +26771,7 @@ def xxx_test_not_found_module_is_module(self):
 <t tx="ekr.20221118072831.171">@path rope/contrib/autoimport/
 """AutoImport module for rope."""
 from .pickle import AutoImport as _PickleAutoImport
+from .sqlite import AutoImport as _SqliteAutoImport
 
 AutoImport = _PickleAutoImport
 
@@ -36055,13 +34976,11 @@ def worder(self):
 </t>
 <t tx="ekr.20221118072831.239">@path rope/refactor/
 import re
-import ast
+from typing import Dict
 from contextlib import contextmanager
 from itertools import chain
-from typing import Dict
 
-from rope.base import codeanalyze
-from rope.base.ast import RopeNodeVisitor
+from rope.base import ast, codeanalyze
 from rope.base.change import ChangeContents, ChangeSet
 from rope.base.exceptions import RefactoringError
 from rope.base.utils.datastructures import OrderedSet
@@ -44572,13 +43491,12 @@ from ropetest import testutils
     )
 </t>
 <t tx="ekr.20221118072831.2853">@path ropetest/refactor/
-import ast
 import itertools
 import sys
 import unittest
 from textwrap import dedent
 
-import rope.base.ast as rast
+from rope.base import ast
 from rope.refactor import patchedast
 from ropetest import testutils
 
@@ -46403,17 +45321,17 @@ def test_match_node_with_match_mapping_match_as(self):
                 if str(node).startswith(text):
                     self.result = node
                     break
-                if rast.get_node_type_name(node).startswith(text):
+                if ast.get_node_type_name(node).startswith(text):
                     self.result = node
                     break
             return self.result is not None
 
     search = Search()
-    rast.call_for_nodes(self.ast, search)
+    ast.call_for_nodes(self.ast, search)
     return search.result
 
 </t>
-<t tx="ekr.20221118072831.301">class _ExtractMethodParts(RopeNodeVisitor):
+<t tx="ekr.20221118072831.301">class _ExtractMethodParts(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.3011">def check_children(self, text, children):
@@ -46433,9 +45351,9 @@ def test_match_node_with_match_mapping_match_as(self):
         else:
             self.test_case.assertNotEqual("", text, "probably ignoring some node")
             self.test_case.assertTrue(
-                rast.get_node_type_name(child).startswith(expected),
+                ast.get_node_type_name(child).startswith(expected),
                 msg="Expected &lt;%s&gt; but was &lt;%s&gt;"
-                % (expected, rast.get_node_type_name(child)),
+                % (expected, ast.get_node_type_name(child)),
             )
 </t>
 <t tx="ekr.20221118072831.3012">@path ropetest/refactor/
@@ -46504,7 +45422,7 @@ from ropetest import testutils
 
 </t>
 <t tx="ekr.20221118072831.302">def __init__(self, info):
-    self.info: str = info
+    self.info = info
     self.info_collector = self._create_info_collector()
     self.info.kind = self._get_kind_by_scope()
     self._check_constraints()
@@ -50899,7 +49817,7 @@ def _get_globals_in_body(unindented_body):
 
 
 </t>
-<t tx="ekr.20221118072831.339">class _FunctionInformationCollector(RopeNodeVisitor):
+<t tx="ekr.20221118072831.339">class _FunctionInformationCollector(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.34">def _get_element_kind(self):
@@ -50907,7 +49825,7 @@ def _get_globals_in_body(unindented_body):
 
 
 </t>
-<t tx="ekr.20221118072831.340">def __init__(self, start: int, end: int, is_global: bool):
+<t tx="ekr.20221118072831.340">def __init__(self, start, end, is_global):
     self.start = start
     self.end = end
     self.is_global = is_global
@@ -51129,7 +50047,7 @@ def _handle_loop_context(self, node):
 
 
 </t>
-<t tx="ekr.20221118072831.364">class _VariableReadsAndWritesFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072831.364">class _VariableReadsAndWritesFinder(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.365">def __init__(self):
@@ -51180,7 +50098,7 @@ def find_reads_for_one_liners(code):
 
 
 </t>
-<t tx="ekr.20221118072831.371">class _BaseErrorFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072831.371">class _BaseErrorFinder(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.372">@classmethod
@@ -51284,7 +50202,7 @@ def has_errors(cls, code):
 
 
 </t>
-<t tx="ekr.20221118072831.389">class _GlobalFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072831.389">class _GlobalFinder(ast.RopeNodeVisitor):
     def __init__(self):
         self.globals_ = OrderedSet()
 
@@ -52981,7 +51899,7 @@ based on inputs.
 from __future__ import annotations
 
 import typing
-from typing import Union
+from typing import Optional, List, Union
 
 from rope.base import (
     codeanalyze,
@@ -53327,8 +52245,8 @@ if typing.TYPE_CHECKING:
 </t>
 <t tx="ekr.20221118072831.536">def get_changes(
     self,
-    dest: Union[None, str, resources.Resource],
-    resources=None,
+    dest: Optional[Union[str, resources.Resource]],
+    resources: Optional[List[resources.File]] = None,
     task_handle=taskhandle.DEFAULT_TASK_HANDLE,
 ):
     """Return the changes needed for this refactoring
@@ -53341,19 +52259,20 @@ if typing.TYPE_CHECKING:
       will be applied to all python files.
 
     """
+    # To do (in another PR): Create a new var: dest_resource: resource.Reource
+    # Doing so should remove the type:ignore below.
     if isinstance(dest, str):
         dest = self.project.find_module(dest)
     if resources is None:
         resources = self.project.get_python_files()
+    # The previous guards protect against this mypy complaint:
+    # "Resource" has no attribute "has_child"
     if dest is None or not dest.exists():
         raise exceptions.RefactoringError("Move destination does not exist.")
-
-    # Valid pylint complaints:
-    #  "Resource" has no attribute "has_child"
-    # "Resource" has no attribute "get_child"
-
     if dest.is_folder() and dest.has_child("__init__.py"):  # type:ignore
         dest = dest.get_child("__init__.py")  # type:ignore
+    # The previous guards protect against this mypy complaint:
+    # Item "None" of "Union[str, Resource, None]" has no attribute "is_folder"
     if dest.is_folder():  # type:ignore
         raise exceptions.RefactoringError(
             "Move destination for non-modules should not be folders."
@@ -54078,12 +52997,13 @@ def main_refactoring(self):
 </t>
 <t tx="ekr.20221118072831.589">@path rope/refactor/
 &lt;&lt; docstring: rope/refactor/occurrences.py &gt;&gt;
-import ast
+
 
 import contextlib
 import re
 
 from rope.base import (
+    ast,
     codeanalyze,
     evaluate,
     exceptions,
@@ -54092,7 +53012,6 @@ from rope.base import (
     utils,
     worder,
 )
-import rope.base.ast as rast
 
 
 @others
@@ -54462,8 +53381,8 @@ def lineno(self):
 
 </t>
 <t tx="ekr.20221118072831.628">def _search_in_f_string(self, f_string):
-    tree = rast.parse(f_string)
-    for node in rast.ast.walk(tree):
+    tree = ast.parse(f_string)
+    for node in ast.walk(tree):
         if isinstance(node, ast.Name) and node.id == self.name:
             yield node
 
@@ -54574,14 +53493,13 @@ def pymodule(self):
     return self.project.get_pymodule(self.resource)
 </t>
 <t tx="ekr.20221118072831.642">@path rope/refactor/
-import ast
 import collections
 import numbers
 import re
 import warnings
 from itertools import chain
 
-from rope.base import codeanalyze, exceptions
+from rope.base import ast, codeanalyze, exceptions
 
 COMMA_IN_WITH_PATTERN = re.compile(r"\(.*?\)|(,)")
 
@@ -55775,7 +54693,6 @@ from rope.base import (
 )
 from rope.base.change import ChangeContents, ChangeSet, MoveResource
 from rope.refactor import occurrences
-from rope.base.pyobjects import is_abstract_module
 
 
 @others
@@ -55924,7 +54841,7 @@ from rope.base.pyobjects import is_abstract_module
 
 </t>
 <t tx="ekr.20221118072831.776">def _is_renaming_a_module(self):
-    return is_abstract_module(self.old_pyname.get_object())
+    return isinstance(self.old_pyname.get_object(), pyobjects.AbstractModule)
 
 </t>
 <t tx="ekr.20221118072831.777">def is_method(self):
@@ -56088,10 +55005,9 @@ from rope.base.pyobjects import is_abstract_module
     )
 </t>
 <t tx="ekr.20221118072831.786">@path rope/refactor/
-import ast
 import warnings
 
-from rope.base import builtins, change, codeanalyze, libutils, taskhandle
+from rope.base import ast, builtins, change, codeanalyze, libutils, taskhandle
 from rope.refactor import patchedast, similarfinder, sourceutils
 from rope.refactor.importutils import module_imports
 
@@ -56409,12 +55325,11 @@ from rope.refactor.importutils import module_imports
 </t>
 <t tx="ekr.20221118072831.805">@path rope/refactor/
 """This module can be used for finding similar code"""
-import ast
 import re
 
 import rope.base.builtins  # Use full qualification for clarity.
 import rope.refactor.wildcards  # Use full qualification for clarity.
-from rope.base import codeanalyze, exceptions, libutils
+from rope.base import ast, codeanalyze, exceptions, libutils
 from rope.refactor import patchedast
 from rope.refactor.patchedast import MismatchedTokenError
 
@@ -56605,7 +55520,7 @@ from rope.refactor.patchedast import MismatchedTokenError
         self.matches = []
         # _check_nodes always returns None, so
         # call_for_nodes traverses self.body's entire tree.
-        rope.base.ast.call_for_nodes(self.body, self._check_node)
+        ast.call_for_nodes(self.body, self._check_node)
     return self.matches
 
 </t>
@@ -56996,10 +55911,9 @@ def __repr__(self):
     return project.prefs.get("indent_size", 4)
 </t>
 <t tx="ekr.20221118072831.864">@path rope/refactor/
-import ast
 from itertools import chain
 
-from rope.base.ast import RopeNodeVisitor
+from rope.base import ast
 
 
 @others
@@ -57125,7 +56039,7 @@ from rope.base.ast import RopeNodeVisitor
 
 
 </t>
-<t tx="ekr.20221118072831.877">class _SuiteWalker(RopeNodeVisitor):
+<t tx="ekr.20221118072831.877">class _SuiteWalker(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.878">def __init__(self, suite):
@@ -57259,8 +56173,8 @@ from rope.base.change import ChangeContents, ChangeSet, CreateFolder, MoveResour
     return import_tools.relatives_to_absolutes(pymodule)
 </t>
 <t tx="ekr.20221118072831.897">@path rope/refactor/
-import ast
 from rope.base import (
+    ast,
     change,
     evaluate,
     exceptions,
@@ -57269,7 +56183,6 @@ from rope.base import (
     pyobjects,
     taskhandle,
 )
-from rope.base.ast import RopeNodeVisitor
 from rope.refactor import restructure, similarfinder, sourceutils
 
 
@@ -57485,7 +56398,7 @@ from rope.refactor import restructure, similarfinder, sourceutils
 
 
 </t>
-<t tx="ekr.20221118072831.917">class _ReturnOrYieldFinder(RopeNodeVisitor):
+<t tx="ekr.20221118072831.917">class _ReturnOrYieldFinder(ast.RopeNodeVisitor):
     @others
 </t>
 <t tx="ekr.20221118072831.918">def __init__(self):
@@ -57527,11 +56440,8 @@ from rope.refactor import restructure, similarfinder, sourceutils
         self.visit(child)
 </t>
 <t tx="ekr.20221118072831.925">@path rope/refactor/
-import ast
-
-from rope.base import builtins, evaluate, pyobjects
+from rope.base import ast, builtins, evaluate, pyobjects
 from rope.refactor import occurrences, patchedast
-from rope.base.pyobjects import is_abstract_class
 
 
 @others
@@ -57691,7 +56601,7 @@ from rope.base.pyobjects import is_abstract_class
 </t>
 <t tx="ekr.20221118072831.938">def _get_super_classes(self, pyobject):
     result = []
-    if is_abstract_class(pyobject):
+    if isinstance(pyobject, pyobjects.AbstractClass):
         for superclass in pyobject.get_superclasses():
             result.append(superclass)
             result.extend(self._get_super_classes(superclass))
@@ -57977,12 +56887,13 @@ Functions to find importable names.
 Can extract names from source code of a python file, .so object, or builtin module.
 """
 
-import ast
 import inspect
 import logging
 import pathlib
 from importlib import import_module
 from typing import Generator, List
+
+from rope.base import ast
 
 from .defs import (
     ModuleCompiled,
@@ -58322,7 +57233,7 @@ def visitNormalImport(self, import_stmt, import_info):
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072831.996">from typing import List
+<t tx="ekr.20221118072831.996">from typing import List, Tuple
 
 
 class ImportStatement:
@@ -58406,29 +57317,6 @@ For instance rope stores the object builtin containers hold.
 </t>
 <t tx="ekr.20221118105359.1"></t>
 <t tx="ekr.20221118105413.1"></t>
-<t tx="ekr.20221118105418.1">@language rest
-@wrap
-
-Rope must support Python 3.7 until 2023/6 and Python 3.8 until 2024/10.
-           
---- Undo last commit
-git reset HEAD~1
-
---- Create branch
-git push upstream &lt;branch name&gt;
-
---- Push new commit
-push-r
-
---- Install Rope
-pip install -e .[dev]
-
---- Find commits by aligrudi
-
-git log --author=aligrudi
-
-@nosearch
-</t>
 <t tx="ekr.20221118110103.1">c.backup_helper(sub_dir='rope')
 </t>
 <t tx="ekr.20221121061203.1"></t>
@@ -58616,15 +57504,15 @@ extend-ignore =
     # F841: local variable `name` is assigned to but never used
     # while useful as a warning while writing code, the workarounds to avoid
     # getting this error is often worst than the original problem
-    # F841
+    F841
 
     # E203: whitespace before ':'
     # this rule contradicts black codestyle
-    # E203
+    E203
 
     # B007: Loop control variable 'keyword' not used within the loop body.
     #       If this is intended, start the name with an underscore.
-    # B007
+    B007
 
     # B011: Do not call assert False since python -O removes these calls.
     #       Instead callers should raise AssertionError().
@@ -58672,8 +57560,8 @@ cls
 cd c:\Repos\ekr-fork-rope2
 
 call re-r.cmd
-rem call blacken-r.cmd
-call reindent-r.cmd
+call blacken-r.cmd
+rem call reindent-r.cmd
 call flake8-r.cmd
 call test-r
 
@@ -59002,10 +57890,7 @@ echo off
 cd c:\Repos\ekr-fork-rope2
 git push upstream %*</t>
 <t tx="ekr.20221210100024.1">@path rope/base/
-import ast
-from typing import List
-
-from rope.base.ast import RopeNodeVisitor
+from rope.base import ast
 
 
 @others
@@ -59037,11 +57922,11 @@ from rope.base.ast import RopeNodeVisitor
 <t tx="ekr.20221210100142.11">def _Slice(self, node):
     self._add_node(node)
 </t>
-<t tx="ekr.20221210100142.2">class _NodeNameCollector(RopeNodeVisitor):
+<t tx="ekr.20221210100142.2">class _NodeNameCollector(ast.RopeNodeVisitor):
     @others
 </t>
-<t tx="ekr.20221210100142.3">def __init__(self, levels: List[int] = None):
-    self.names: List[str] = []
+<t tx="ekr.20221210100142.3">def __init__(self, levels=None):
+    self.names = []
     self.levels = levels
     self.index = 0
 
@@ -59087,11 +57972,12 @@ from rope.base.ast import RopeNodeVisitor
 <t tx="ekr.20221211142245.1">@nopyflakes
 import ast
 import sys
+from ast import *  # noqa: F401,F403
 
 from rope.base import fscommands
 
-# Handle Python 3.7 and before.
 try:
+    # Suppress the mypy complaint: Module "ast" has no attribute "_const_node_type_names"
     from ast import _const_node_type_names  # type:ignore
 except ImportError:
     # backported from stdlib `ast`
@@ -59227,19 +58113,11 @@ def xxx_test_with_statement_variables_should_not_leak(self):
 </t>
 <t tx="ekr.20221212141427.1">@path rope/base/
 @nopyflakes
-from __future__ import annotations
 import contextlib
-from typing import Any, Union, TYPE_CHECKING
 
 import rope.base.oi.soi
 import rope.base.pyobjects
 from rope.base import pynames, utils
-
-if TYPE_CHECKING:
-    from rope.base.pyobjects import PyFunction
-    from rope.base.pyobjectsdef import PyFunction as DefinedPyFunction
-
-    PyFunc = Union[PyFunction, DefinedPyFunction]
 
 
 @others
@@ -59266,7 +58144,7 @@ cd C:\Repos\ekr-fork-rope2
 <t tx="ekr.20221216152411.1">class ParameterName(pynames.ParameterName):
     @others
 </t>
-<t tx="ekr.20221216152411.2">def __init__(self, pyfunction: PyFunc, index: int) -&gt; None:
+<t tx="ekr.20221216152411.2">def __init__(self, pyfunction, index):
     self.pyfunction = pyfunction
     self.index = index
 
@@ -59380,9 +58258,7 @@ def _get_inferred(self):
 
 
 </t>
-<t tx="ekr.20221230095246.1"></t>
-<t tx="ekr.20221230095543.1"></t>
-<t tx="ekr.20221230095613.1">def parse(source, filename="&lt;string&gt;", *args, **kwargs):
+<t tx="ekr.20221230095613.1">def parse(source, filename="&lt;string&gt;", *args, **kwargs):  # type: ignore
     if isinstance(source, str):
         source = fscommands.unicode_to_file_data(source)
     if b"\r" in source:
@@ -59399,28 +58275,6 @@ def _get_inferred(self):
         raise error
 
 
-</t>
-<t tx="ekr.20230101055129.1">@nosearch
-@language rest
-@wrap
-
-oi/__init__.py
-
-`PyName` statements handle assignments.
-
-soi analyzes function calls in a scope when:
-- Saving [the ide's?] files
-- When the user asks to analyze a module.
-
-@language python
-</t>
-<t tx="ekr.20230101103406.1">@nosearch
-@language rest
-@wrap
-
-- Only soa._analyze_node instantiates SOAVisitor
-
-@language python
 </t>
 <t tx="ekr.20230101190225.1">@nosearch
 @language rest
@@ -59473,7 +58327,6 @@ monitoring the progress of refactorings.
 """
 </t>
 <t tx="ekr.20230102051545.1">class RopeNodeVisitor(ast.NodeVisitor):
-    # This is the only visit method in Rope.
     @others
 
 
@@ -59582,22 +58435,17 @@ from and writing to the resource, moving the resource, etc.
 <t tx="ekr.20230104080535.1"></t>
 <t tx="ekr.20230104151430.1"># Additional headlines that are never considered dubious.
 
-Query.__init__ &amp; __repr__</t>
-<t tx="ekr.20230104215355.1">@language rest
-@wrap
+Query.__init__ &amp; __repr__
 
-[rope.leo](https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo) in the [leo-editor-contrib](https://github.com/leo-editor/leo-editor-contrib) contains my semi-private nodes.
-
-Rope Docs: https://rope.readthedocs.io/en/latest/index.html
-Rope overview: https://rope.readthedocs.io/en/latest/overview.html#
-Object inferences: https://rope.readthedocs.io/en/latest/overview.html#object-inference
+# class po.Abstract*
+# COPY: is_abstract* (do not remove)
+# PyObject.is_base_* (new)
 </t>
 <t tx="ekr.20230104220522.1">def setUp(self):
     super().setUp()
     self.project = testutils.sample_project()
 
 </t>
-<t tx="ekr.20230104221451.1"></t>
 <t tx="ekr.20230104221903.1">def __init__(self, project):
     self.project = project
     self.files = None
@@ -59607,31 +58455,8 @@ Object inferences: https://rope.readthedocs.io/en/latest/overview.html#object-in
     self.project.add_observer(rawobserver)
 
 </t>
-<t tx="ekr.20230104230413.1"></t>
 <t tx="ekr.20230106075205.1"></t>
-<t tx="ekr.20230106083448.1">@language rest
-@wrap
-
-https://github.com/python-rope/rope/issues/644
-PR: https://github.com/python-rope/rope/pull//652
-
-@language python
-@nosearch
-</t>
-<t tx="ekr.20230107173006.1">@language python
-</t>
-<t tx="ekr.20230127094605.1"></t>
-<t tx="ekr.20230127101717.1"></t>
 <t tx="ekr.20230127102529.1"></t>
-<t tx="ekr.20230129005206.1">@language rest
-@wrap
-@nosearch
-
-- run check-nodes command periodically.
-
-
-@language python
-</t>
 <t tx="ekr.20230129010854.1">"""
 Tracing and debugging functions from Leo.
 
@@ -59748,465 +58573,6 @@ from typing import Any, List
     args_s = " ".join(str(z) for z in args)
     print(f"{name} {args_s}")
 </t>
-<t tx="ekr.20230129064218.1">@nosearch
-
-# Search for Visitor)
-
-# Head, Body
-
-# found 37 nodes</t>
-<t tx="ekr.20230129234521.2">The [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
-is a cognitive bias that occurs when an individual assumes that other
-individuals have the background knowledge to understand their
-communication.
-
-Rope's documentation is confusing and often missing. I lament Rope's
-non-existent (afaik) Theory of Operation.
-
-The curse of knowledge likely explains these defects. Rope's devs are
-knowledgeable and dedicated. I do not believe they intend to haze potential
-new devs, but Rope's documentation is frustrating. It's a good thing I can
-be very stubborn!
-
-I am attempting to understand (in full detail) the inner workings of Rope's
-type inference machinery. All my ENB posts are pre-writing for new
-documentation.
-
-P.S. I am an ideal position to judge the clarity of Rope's documentation:
-
-- I have decades of experience with Leo, a large open-source project.
-- I have extensive experience (see leoAst.py) with Python's ast module.
-- I am the author of Leo's docs and am well aware of the difficulties.</t>
-<t tx="ekr.20230129234714.1">`ObjectInferTest.test_simple_type_inferencing` is one of Rope's simplest
-unit test. Studying this test deeply is a good way of learning how Rope
-works.
-
-**Note**: `pdb` shows file/module names in addition to line numbers.
-Several of Rope's classes have the same names, so this extra info is
-crucial!
-</t>
-<t tx="ekr.20230129234717.1">@language rest
-@wrap
-@nosearch
-
-This Engineering Notebook post examines the `@saveit` decorator.
-
-This ENB is pre-writing for issue [#644](https://github.com/python-rope/rope/issues/644).
-
-This decorator:
-
-- implements the **lazy singleton pattern**: the line `setattr(self, name,
-  func(self, *args, **kwds))` is executed once, when the decorated function
-  is first executed (*not* when the function's module is imported).
-- injects a **private helper ivar** into `self`.
-  The name of this ivar is `"_" + func.__name__`.
-- avoids having to create helper (private) ivars explicitly.
-- creates the data structures on demand, avoiding thorny issues concerning
-  when to create data during startup.
-- improves upon Leo's "finish-create" startup pattern, which I borrowed
-  from Apple's Yellowbox framework.
-
-**Creating factories**
-
-`func` could return a (Callable) factory *function* (not a value), in which case the decorator would create the infrastructure for a factory, not a singleton. If so, a *separate* `@factory` decorator might be appropriate.
-
-**Summary**
-
-I can (mostly) ignore this decorator now :-) The decorator involves startup, not type inference.
-</t>
-<t tx="ekr.20230129234718.1">My superpowers:
-
-- I do not (yet) suffer the curse of knowledge.
-  I know (or can still remember) what it is like to be ignorant about Rope's code.
-- Understanding does not come quickly for me.
-  I am not likely to skip over explanatory steps.
-- I care about writing and documentation.
-  I want to share my knowledge with others.
-- I am patient and persistent.
-  I'll write up Ahas *immediately*, before the curse of knowledge intervenes.
-- I won't settle for hand-waving.
-  I know what good documentation is (and isn't).
-- I enjoy editing.
-  I have taken great care with these ENBs. I'll do the same with later drafts.
-- I know how to pace myself.
-  I've been happily programming for 50+ years.
-
-I use the free version of [Grammarly](https://www.grammarly.com/) to check my writing. Improving Grammarly's score is a fun game. 
-
-Grammarly is not perfect:
-- It is obsessed with commas.
-- It does not catch large-scale writing blunders.</t>
-<t tx="ekr.20230129234930.1">@language python
-@nosearch
-
-# PyObject ivars:
-self.type
-
-# DefinedName ivars:
-self.pyobject
-
-# PyDefinedObject ivars:
-self.pycore = pycore
-self.ast_node
-self.scope
-self.parent
-self.structural_attributes = None
-self.concluded_attributes  # _ConcludedData
-self.attributes = self.get_module()._get_concluded_data()
-self.defineds = None
-
-# _Inferred ivars:
-self.get_inferred = get_inferred
-self.concluded # _ConcludedData
-
-# _ConcludedData
-self.data
-
-# PyCore ivars:
-self.project
-self.cache_observers
-self.module_cache
-self.extension_cache
-self.object_info # ObjectInfoManager(project)
-
-# Scope/GlobalScope ivars:
-self.pycore
-self.pyobject
-self.parent
-scope[name] # PyName
-self.names  # GlobalScope only
-
-# ObjectInfoManager ivars:
-self.project = project
-self.to_textual = transform.PyObjectToTextual(project)
-self.to_pyobject = transform.TextualToPyObject(project)
-self.doi_to_pyobject # doi only
-</t>
-<t tx="ekr.20230129235612.1">@language plain
-
-Here is the verbose version of the traces:
-
-ropetest\objectinfertest.py
-
-@saveit ivar: Project._pycore = _Project.pycore                = PyCore
- &lt;rope.base.pycore.PyCore object at 0x000002D80BCAFD00&gt;
-
-@saveit ivar: Project._history = _Project.history               = History
- &lt;rope.base.history.History object at 0x000002D80BD3CAF0&gt;
-
-@saveit ivar: CreateFolder.__operations = Change._operations             = _ResourceOperations
- &lt;rope.base.change._ResourceOperations object at 0x000002D80BD3CBB0&gt;
-
-@saveit ivar: GlobalScope.__scope_finder = GlobalScope._scope_finder      = _HoldingScopeFinder
- &lt;rope.base.pyscopes._HoldingScopeFinder object at 0x000002D80BD3CE80&gt;
-
-@saveit ivar: PyModule._lines = PyModule.lines                 = SourceLinesAdapter
- &lt;rope.base.codeanalyze.SourceLinesAdapter object at 0x000002D80BD3CB80&gt;
-
-@saveit ivar: GlobalScope._get_scopes = Scope.get_scopes               = list
-[
-         &lt;rope.base.pyscopes.ClassScope object at 0x000002D80BD3D1B0&gt;
-]
-
-@saveit ivar: PyModule._logical_lines = PyModule.logical_lines         = CachingLogicalLineFinder
- &lt;rope.base.codeanalyze.CachingLogicalLineFinder object at 0x000002D80BD3D180&gt;
-
-@saveit ivar: ClassScope._get_logical_end = Scope.get_logical_end          = int
- 2
-
-@saveit ivar: BuiltinModule._module = BuiltinModule.module           = module
- &lt;module 'builtins' (built-in)&gt;
-
-@saveit ivar: BuiltinModule._attributes = BuiltinModule.attributes       = dict
-{
-            ArithmeticError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D450&gt;,
-             AssertionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D510&gt;,
-             AttributeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D5D0&gt;,
-              BaseException:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D690&gt;,
-            BlockingIOError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D750&gt;,
-            BrokenPipeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D810&gt;,
-                BufferError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D8D0&gt;,
-               BytesWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D990&gt;,
-          ChildProcessError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DA50&gt;,
-     ConnectionAbortedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DB10&gt;,
-            ConnectionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DBD0&gt;,
-     ConnectionRefusedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DC90&gt;,
-       ConnectionResetError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DD50&gt;,
-         DeprecationWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DE10&gt;,
-                   EOFError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3DED0&gt;,
-                   Ellipsis:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E020&gt;,
-            EncodingWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E0B0&gt;,
-           EnvironmentError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E170&gt;,
-                  Exception:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E230&gt;,
-                      False:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E320&gt;,
-            FileExistsError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E3B0&gt;,
-          FileNotFoundError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E470&gt;,
-         FloatingPointError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E530&gt;,
-              FutureWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E5F0&gt;,
-              GeneratorExit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E6B0&gt;,
-                    IOError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E770&gt;,
-                ImportError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E830&gt;,
-              ImportWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E8F0&gt;,
-           IndentationError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3E9B0&gt;,
-                 IndexError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EA70&gt;,
-           InterruptedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EB30&gt;,
-          IsADirectoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EBF0&gt;,
-                   KeyError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3ECB0&gt;,
-          KeyboardInterrupt:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3ED70&gt;,
-                LookupError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EE30&gt;,
-                MemoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EEF0&gt;,
-        ModuleNotFoundError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3EFB0&gt;,
-                  NameError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F070&gt;,
-         NotADirectoryError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F130&gt;,
-             NotImplemented:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F220&gt;,
-        NotImplementedError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F2B0&gt;,
-                    OSError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F370&gt;,
-              OverflowError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F430&gt;,
-  PendingDeprecationWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F4F0&gt;,
-            PermissionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F5B0&gt;,
-         ProcessLookupError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F670&gt;,
-             RecursionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F730&gt;,
-             ReferenceError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F7F0&gt;,
-            ResourceWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F8B0&gt;,
-               RuntimeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3F970&gt;,
-             RuntimeWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FA30&gt;,
-         StopAsyncIteration:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FAF0&gt;,
-              StopIteration:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FBB0&gt;,
-                SyntaxError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FC70&gt;,
-              SyntaxWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FD30&gt;,
-                SystemError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FDF0&gt;,
-                 SystemExit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FEB0&gt;,
-                   TabError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3FF70&gt;,
-               TimeoutError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68070&gt;,
-                       True:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68160&gt;,
-                  TypeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD681F0&gt;,
-          UnboundLocalError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3CFA0&gt;,
-         UnicodeDecodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68310&gt;,
-         UnicodeEncodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD683D0&gt;,
-               UnicodeError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68490&gt;,
-      UnicodeTranslateError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68550&gt;,
-             UnicodeWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68610&gt;,
-                UserWarning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD686D0&gt;,
-                 ValueError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68790&gt;,
-                    Warning:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68850&gt;,
-               WindowsError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68910&gt;,
-          ZeroDivisionError:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD689D0&gt;,
-            __build_class__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68A90&gt;,
-                  __debug__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68B50&gt;,
-                    __doc__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68C10&gt;,
-                 __import__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68CA0&gt;,
-                 __loader__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68D30&gt;,
-                   __name__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68E20&gt;,
-                __package__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68EE0&gt;,
-                   __spec__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD68FA0&gt;,
-                        abs:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69030&gt;,
-                      aiter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD690C0&gt;,
-                        all:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69150&gt;,
-                      anext:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD691E0&gt;,
-                        any:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69270&gt;,
-                      ascii:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69300&gt;,
-                        bin:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69390&gt;,
-                       bool:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69420&gt;,
-                 breakpoint:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD694E0&gt;,
-                  bytearray:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69570&gt;,
-                      bytes:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69630&gt;,
-                   callable:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD696F0&gt;,
-                        chr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69780&gt;,
-                classmethod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69810&gt;,
-                    compile:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD698D0&gt;,
-                    complex:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69960&gt;,
-                  copyright:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69A50&gt;,
-                    credits:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69B10&gt;,
-                    delattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69BA0&gt;,
-                       dict:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E70D0&gt;,
-                        dir:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69CF0&gt;,
-                     divmod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69D80&gt;,
-                  enumerate:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9F90&gt;,
-                       eval:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69ED0&gt;,
-                       exec:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69F60&gt;,
-                       exit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A020&gt;,
-                     filter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A0B0&gt;,
-                      float:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A170&gt;,
-                     format:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A230&gt;,
-                  frozenset:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A2C0&gt;,
-                    getattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A380&gt;,
-                    globals:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A410&gt;,
-                    hasattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A4A0&gt;,
-                       hash:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A530&gt;,
-                       help:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A5F0&gt;,
-                        hex:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A680&gt;,
-                         id:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A710&gt;,
-                      input:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA230&gt;,
-                        int:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A830&gt;,
-                 isinstance:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A8F0&gt;,
-                 issubclass:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6A980&gt;,
-                       iter:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA1A0&gt;,
-                        len:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AAA0&gt;,
-                    license:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AB60&gt;,
-                       list:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E6CE0&gt;,
-                     locals:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6ACB0&gt;,
-                        map:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AD40&gt;,
-                        max:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AE00&gt;,
-                 memoryview:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AE90&gt;,
-                        min:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AF50&gt;,
-                       next:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AFE0&gt;,
-                     object:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA050&gt;,
-                        oct:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B130&gt;,
-                       open:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9BA0&gt;,
-                        ord:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B250&gt;,
-                        pow:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B2E0&gt;,
-                      print:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B370&gt;,
-                   property:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9E70&gt;,
-                       quit:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B4F0&gt;,
-                      range:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9C30&gt;,
-                       repr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B640&gt;,
-                   reversed:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9CC0&gt;,
-                      round:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B790&gt;,
-                        set:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E7FA0&gt;,
-                    setattr:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B8E0&gt;,
-                      slice:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B970&gt;,
-                     sorted:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9D50&gt;,
-               staticmethod:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BAC0&gt;,
-                        str:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D86A0&gt;,
-                        sum:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BC40&gt;,
-                      super:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9DE0&gt;,
-                      tuple:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B5E7DF0&gt;,
-                       type:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8DA110&gt;,
-                       vars:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BF10&gt;,
-                        zip:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80B8D9F00&gt;
-}
-
-@saveit ivar: BuiltinObject._get_attributes = BuiltinClass.get_attributes    = dict
-{
-          __class__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AA40&gt;,
-        __delattr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BE20&gt;,
-            __dir__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B0D0&gt;,
-            __doc__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69E70&gt;,
-             __eq__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BFA0&gt;,
-         __format__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B400&gt;,
-             __ge__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B430&gt;,
-   __getattribute__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BCA0&gt;,
-             __gt__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BA60&gt;,
-           __hash__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B730&gt;,
-           __init__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B580&gt;,
-  __init_subclass__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B5B0&gt;,
-             __le__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B190&gt;,
-             __lt__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BB50&gt;,
-             __ne__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6B880&gt;,
-            __new__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BD90&gt;,
-         __reduce__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6BDC0&gt;,
-      __reduce_ex__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD69C00&gt;,
-           __repr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD6AC50&gt;,
-        __setattr__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD3D360&gt;,
-         __sizeof__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD74040&gt;,
-            __str__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD740D0&gt;,
-   __subclasshook__:     &lt;rope.base.builtins.BuiltinName object at 0x000002D80BD74160&gt;
-}</t>
-<t tx="ekr.20230129235936.1">@language plain
-
-Here are the traces resulting from running the `test_simple_type_inferencing` test, with brief traces:
-
-ropetest\objectinfertest.py
-@saveit ivar:                Project._pycore = _Project.pycore                = PyCore
-@saveit ivar:               Project._history = _Project.history               = History
-@saveit ivar:      CreateFolder.__operations = Change._operations             = _ResourceOperations
-@saveit ivar:     GlobalScope.__scope_finder = GlobalScope._scope_finder      = _HoldingScopeFinder
-@saveit ivar:                PyModule._lines = PyModule.lines                 = SourceLinesAdapter
-@saveit ivar:        GlobalScope._get_scopes = Scope.get_scopes               = list
-@saveit ivar:        PyModule._logical_lines = PyModule.logical_lines         = CachingLogicalLineFinder
-@saveit ivar:    ClassScope._get_logical_end = Scope.get_logical_end          = int
-@saveit ivar:          BuiltinModule._module = BuiltinModule.module           = module
-@saveit ivar:      BuiltinModule._attributes = BuiltinModule.attributes       = dict
-@saveit ivar:  BuiltinObject._get_attributes = BuiltinClass.get_attributes    = dict
-
-</t>
-<t tx="ekr.20230130000046.1">@language plain
-
-The "injected" class (LHS) not be the same as the "injecting" (RHS) class:
-
-                                  class.ivar                  object::class name
-                                  ----------                  ------------------
-@saveit ivar:                Project._pycore:        _Project.pycore::PyCore
-@saveit ivar:               Project._history:       _Project.history::History
-@saveit ivar:      CreateFolder.__operations:     Change._operations::ResourceOperations
-@saveit ivar:        GlobalScope._get_scopes:       Scope.get_scopes::list
-@saveit ivar:    ClassScope._get_logical_end:  Scope.get_logical_end::int
-</t>
-<t tx="ekr.20230130001559.1">Here is the existing decorator:
-    
-@language python
-
-def saveit(func):
-    """A decorator that caches the return value of a function"""
-
-    name = "_" + func.__name__
-
-    def _wrapper(self, *args, **kwds):
-        if not hasattr(self, name):
-            setattr(self, name, func(self, *args, **kwds))
-        return getattr(self, name)
-
-    return _wrapper
-
-cacheit = saveit
-
-@language rest
-@wrap
-
-Those with the curse of knowledge (including me, now) might ask, "What's
-the big deal?" But I remember the day before yesterday when I thought this
-decorator might play a role in caching the results of type inference. That
-does not appear to be the case.
-
-</t>
-<t tx="ekr.20230130001720.1"></t>
-<t tx="ekr.20230130002237.1">@language rest
-
-`ObjectInferTest.setUp` executes a simplified version of Rope's startup logic:
-
-.. code-block:: python
-
-    def setUp(self):
-        super().setUp()
-        self.project = testutils.sample_project()
-
-sample_project() just creates a `Project` instance.
-
-Rope's actual startup code is more complex, but for now I think it's safe to ignore these details.
-
-This code falls into `pdb` only for our test:
-
-.. code-block:: python
-
-    def setUp(self):
-        super().setUp()
-        if self.id().endswith('test_simple_type_inferencing'):
-            g.pdb()
-        self.project = testutils.sample_project()
-
-Looking at the *results* of the call to `testutils.sample_project()` was good enough at first.</t>
-<t tx="ekr.20230130084456.1">@language rest
-@wrap
-
-**Pass 1**
-
-Pass1_Taverser: methods for Module, ClassDef, FunctionDef.
-
-**Pass 2**
-
-Pass2_Traverser: a subclass of the main soi traverser class.
-
-It will override the methods that infer results.
-The @prevent_recursion method is a good place to look for to-be-overridden methods.
-
-If necessary, define wrapper methods in the main soi traverser class to allow overrides in the pass 2 traverser.</t>
-<t tx="ekr.20230130094034.1">@nosearch
-</t>
-<t tx="ekr.20230130094057.1">@nosearch
-
-# Word, Head, Body
-
-# found 9 nodes</t>
 <t tx="ekr.20230130145330.2">def print_obj(obj: Any, tag: str = None, indent: int = 0) -&gt; None:
     """Pretty print any Python object."""
     print(to_string(obj, indent=indent, tag=tag))
@@ -60230,160 +58596,14 @@ If necessary, define wrapper methods in the main soi traverser class to allow ov
 
 
 </t>
-<t tx="ekr.20230130194144.1">Rope uses Sphinx, so I just need to create Theory.rst.</t>
-<t tx="ekr.20230131064529.1"></t>
-<t tx="ekr.20230131064552.1"></t>
-<t tx="ekr.20230131064624.1"></t>
-<t tx="ekr.20230131064709.1"></t>
-<t tx="ekr.20230131064900.1">@language rest
-@wrap
-
-- Create test file for AOI
-
-- What about stdlib?
-  - Use existing code?
-  - Use annotations for stlib?
-  
-@language python
-</t>
-<t tx="ekr.20230131082034.1">@language rest
-@wrap
-
-Some of the injected values are instances. Other values are ints, dicts, lists, etc.
-
-The traces don't distinguish between a class *instance* and class *name* (which might be a factory). However, I *think* all the injected values are instances, not factories.
-
-@language python
-
-
-def saveit(func):
-    """
-    A decorator that injects a singleton ivar (in self) if the ivar does
-    not already exist.
-
-    The ivar's name (ivar_name) is f"_{func.__name__}".
-
-    :param func: A function/method that instantiates an object.
-    
-    :return: getattr(self, ivar_name), the value of the ivar.
-    """
-    ivar_name = f"_{func.__name__}"
-
-    def _wrapper(self, *args, **kwargs):
-        tag = "@saveit"
-        if not hasattr(self, ivar_name):
-            # Instantiate the object.
-            obj = func(self, *args, **kwargs)
-            if 1:  # Tracing version.
-                injected_name = f"{self.__class__.__name__}.{ivar_name}"
-                func_s = repr(func).replace("&lt;function ", "")
-                i = func_s.find(" at ")
-                description = f"{func_s[:i]:30} = {obj.__class__.__name__}"
-                if 1:  # Brief
-                    print(f"{tag} ivar: {injected_name:&gt;30} = {description}")
-                else:
-                    print("")
-                    g.printObj(obj, tag=f"{tag} ivar: {injected_name} = {description}")
-            setattr(self, ivar_name, obj)
-
-        return getattr(self, ivar_name)
-
-    return _wrapper
-
-cacheit = saveit</t>
-<t tx="ekr.20230201054651.1">@nosearch
-
-       __init__      builtins.py:pyobjects.PyObject builtins
-======================================================================== test session starts ========================================================================
-# [Snip]
-
-ropetest\objectinfertest.py
-
-       __init__        pycore.py:PyCore
-
-after:  setUp</t>
-<t tx="ekr.20230201054723.1"></t>
 <t tx="ekr.20230201150627.1"></t>
 <t tx="ekr.20230201150728.1"></t>
-<t tx="ekr.20230201152705.1">@language rest
-@nosearch
-
-.. libutils.get_string_scope instantiates pyobjectsdef.PyModule.
-
--do: scope = libutils.get_string_scope(...)
-
-       __init__  pyobjectsdef.py:PyModule
-       __init__     pyobjects.py:PyObject        id: 2063136545408 pyobjectsdef:__init__, pyobjects:__init__
-       __init__     pyobjects.py:_ConcludedData  id: 2063136546128
-..                  libutils:get_string_module, pyobjectsdef:__init__, pyobjects:__init__, pyobjects:__init__
-       __init__     pyobjects.py:_ConcludedData  id: 2063136545504
-..                  libutils:get_string_module, pyobjectsdef:__init__, pyobjects:__init__, pyobjects:__init__
-       __init__     pyobjects.py:DefinedObject   &lt;ast.Module object at 0x000001E05C856200&gt;
-       __init__     pyobjects.py:PyModule
-       __init__     pyobjects.py:_ConcludedData  id: 2063136546608
-..                  libutils:get_string_scope, pyobjects:get_scope, pyobjectsdef:_create_scope, pyscopes:__init__
-
-         scope: &lt;rope.base.pyscopes.GlobalScope object at 0x000001E05C855AB0&gt;
-scope.pyobject: &lt;rope.base.pyobjectsdef.PyModule "" at 0x1e05c855a80&gt;</t>
-<t tx="ekr.20230201152803.1"></t>
-<t tx="ekr.20230201152816.1"></t>
 <t tx="ekr.20230202130833.1">def visit(self, node):
     """Modified from ast.NodeVisitor to match rope's existing Visitor implementation"""
     method = "_" + node.__class__.__name__
     visitor = getattr(self, method, self.generic_visit)
     return visitor(node)
 </t>
-<t tx="ekr.20230202163658.1">g.cls()
-
-from rope.base.utils import tracing_utils as g2
-from leo.core import leoGlobals as g
-
-def test():
-
-    table = [
-        ('a', 'b', 'c'),
-        ['d', 'e', 'f'],
-        {'g': 'g1', 'h': 'h1'},
-    ]
-    for data in table:
-        print('')
-        print('data:', data)
-        g2.trace('g2', data, g2.callers())
-        g.trace(' g', data, g.callers())
-        
-test()</t>
-<t tx="ekr.20230202171613.1">data: ('a', 'b', 'c')
-test ('a', 'b', 'c') new_cmd_wrapper,executeScript,executeScriptHelper,&lt;module&gt;
-
-data: ['d', 'e', 'f']
-test ['d', 'e', 'f'] new_cmd_wrapper,executeScript,executeScriptHelper,&lt;module&gt;
-
-data: {'g': 'g1', 'h': 'h1'}
-test {'g': 'g1', 'h': 'h1'} new_cmd_wrapper,executeScript,executeScriptHelper,&lt;module&gt;
-</t>
-<t tx="ekr.20230204064538.1">https://github.com/python-rope/rope/pull/655</t>
-<t tx="ekr.20230204071113.1"></t>
-<t tx="ekr.20230204094629.1">https://github.com/python-rope/rope/pull/656</t>
-<t tx="ekr.20230204215129.1">@language rest
-@nosearch
-@tabwidth -2
-
-PR: https://github.com/python-rope/rope/pull/660
-Doc branch:   ekr-theory-and-study
-Study branch: study
-
-Theory:
-- Overview of code: phases and files.
-  - Discuss files related to type inference.
-- What is *relevenat*, not just what to *ignore*.
-- An inference: symbol.get_type()
-  Like PyName = some_object.
-
-To do:
-- Study soi.py and evaluate.py.
-- Study @_ignore_inferred.
-
-@language python</t>
 <t tx="ekr.20230204222405.1">@language rest
 .. _`python's ast module`: https://docs.python.org/3/library/ast.html
 .. |br| raw:: html
@@ -60463,40 +58683,6 @@ repos:
   - id: isort
     name: Sort imports (Python)
 </t>
-<t tx="ekr.20230205060858.1">@language rest
-@nosearch
-
-.. https://youtu.be/NvV5OrVk24c
-
-Project: Tree of directories and files.
-         Instantiate a Project with a directory.
-         
-With a Project you can:
-- walk the resources (File or Directory).
-- get the children of a resource and continue walking.
-
-Prefs: Dictionary of keys to values (settings).
-- .ropeproject is reflected directly into the Prefs class.
-
-Resources: (File or Directory).
-Typical use:
-- Walk the resource to find specific resources you want to work with.
-- Apply refactoring to specific resources.
-
-=== How to refactor.
-
-1. Create a Rename object.
-   ren = Rename(project, resource, offset)
-   
-2. Create the changes object.
-   changes = ren.get_changes('SomeString')
-   print(changes.description)
-   print(changes.get_changed_resources()  # Files that would be changed.
-   
-3. Make the changes.
-   project.do(changes)
-   
-</t>
 <t tx="ekr.20230205062902.1">@path c:\Scripts\
 @language batch
 echo off
@@ -60508,29 +58694,10 @@ echo sphinx-build -a (make clean)
 echo.
 sphinx-build -M html . _build -a
 </t>
-<t tx="ekr.20230205085921.1">@language rest
-To do: move this to a separate document.
-
-Make sure conf.py can import rope.
-- Add rope to the path (or sitecustomize.py) if necessary.
-  
-Add necessary modules:
-- pip install sphinx_autodoc_typehints
-- pip install tabulate
-- pip install sphinx_rtd_theme
-
-Run sphinx-build from the docs directory:
-    
-    docs&gt;sphinx-build -M html . _build -a
-</t>
 <t tx="ekr.20230205090204.1"># Found 3 marked nodes</t>
 <t tx="ekr.20230205094642.1"># Lines starting with '#' are comment lines.
 # A list of command names to be pre-loaded into the history list.
-make
 contrib
-mypy-r
-test-one
-rst3
 spell-find
 pylint
 sort-lines
@@ -60557,149 +58724,12 @@ As far as type inference goes, we can (mostly) ignore:
   Despite its name, it is not directly involved in making inferences.
 - Refactoring, code completion, and utility code.
 </t>
-<t tx="ekr.20230206072607.1"></t>
-<t tx="ekr.20230206074134.1"></t>
-<t tx="ekr.20230206074243.1"></t>
-<t tx="ekr.20230207040349.1">@language rest
+<t tx="ekr.20230206074243.1">@language rest
 
-.. Answer these questions in the study branch!
+- LieRyan's description of Rope's type inference
+  https://github.com/edreamleo/ekr-fork-rope2/issues/3
 
-- Startup: What inference data (if any) does it create?
-- Preprocessing: does it exist? What does it do?
-- What is a `PyObject`? It clearly has a central role in soi.
-- What is `_Inferred`'s role?
-- What do all the data in `PyDefinedObject` mean?
-</t>
-<t tx="ekr.20230207041500.1">@language rest
-
-Here is the original unit test:
-
-.. code-block:: python
-
-    def test_simple_type_inferencing(self):
-        code = dedent("""\
-            class Sample(object):
-                pass
-            a_var = Sample()
-        """)
-        scope = libutils.get_string_scope(self.project, code)
-        sample_class = scope["Sample"].get_object()
-        a_var = scope["a_var"].get_object()
-        self.assertEqual(sample_class, a_var.get_type())
-</t>
-<t tx="ekr.20230207041506.1">@language rest
-@nosearch
-
-And here is the same test, with added trace statements and comments:
-
-.. code-block:: python
-
-    def test_simple_type_inferencing(self):
-        code = dedent("""\
-            class Sample(object):
-                pass
-            a_var = Sample()
-        """)
-
-        trace = True
-
-        def banner(s):
-            if trace:
-                print(f"\n{g._caller_name(2)}: ===== {s}")
-
-
-        banner('after setUp')
-
-        # 1. setUp creates self.project.
-
-            # setUp instantiates self.project to a Project instance.
-            # self.project = testutils.sample_project()
-
-        # 2. get_string_scope sets self.scope to the scope of the test string.
-
-            # Sets self.scope to pyobjectsdef.PyModule(project.pycore, code, ...)
-            # (code is the test string, defined above.)
-
-        # ??? Instantiating the pyobjectsdef.PyModule does all the work ???
-
-            # PyDefinedObject.__init__ calls:
-
-                # self.concluded_attributes = self.get_module()._get_concluded_data()
-                # self.attributes = self.get_module()._get_concluded_data()
-
-            # But all attributes are empty for this test.
-
-        scope = libutils.get_string_scope(self.project, code)
-
-        banner('after get_string_scope\n')
-
-            # scope is a GlobalScope.  It might be any subclass of Scope.
-            # scope.pyobject is a pyobjectsdef.PyModule.
-
-        # if trace: g.trace('*** scope.pyobject', scope.pyobject)
-
-        # *** Calling scope["Sample"] (via _ScopeVisitor._ClassDef)
-        #     instantiates pyobjects.PyClass *and* pyobjectsdef.PyClass.
-        #     (Because pyobjectsDef.PyClass is a subclass of pyobjects.PyClass.)
-        # scope["Sample"] is a pynamesdef.DefinedName.
-
-        sample_class = scope["Sample"].get_object()
-
-        banner('after sample_class = scope["Sample"].get_object()\n')
-
-
-            # sample_class is a pyobjectsdef.PyClass ("::Sample" at ...)
-            # scope["Sample"] is a DefinedName.
-            # scope["Sample"].pyobject is a pyobjectsdef.PyClass.
-
-        a_var = scope["a_var"].get_object()
-
-            # a_var is a pyobjects.PyObject
-            # a_var.get_type() is a pyobjectsdef.PyClass ("::Sample" at ...)
-
-            # scope["a_var"] is an pynamesdef.AssignedName.
-            # scope["a_var"].pyobject is a pynames._Inferred.
-            # scope["a_var"].get_object() is a pyobjects.PyObject.
-
-        if trace:
-            print('')
-            print(f"sample_class: {sample_class}")
-
-        self.assertEqual(sample_class, a_var.get_type())
-</t>
-<t tx="ekr.20230207042155.1">@language rest
-@nosearch
-
-**Clashing class names**
-
-`pyobjects.py` and `pyobjectsdef.py` contain classes with the same names,
-which was confusing. I can easily live with the present naming scheme
-because the debugger will report both the module and class names.
-
-It would be best if docstrings clearly explain the differences between
-classes with the same name! I'll say more about the costs of Rope's present
-documentation in another ENB. As a Leo-specific workaround, I'll
-disambiguate the class names in the (Leo) nodes that contain those classes.
-</t>
-<t tx="ekr.20230207042804.1">**Hello-world unit test**
-
-ObjectInferTest.test_simple_type_inferencing` is my "Hello World" unit test. This test:
-
-- makes a simple (easily understood!) inference.
-- executes much of Rope's startup and soi code.
-
-**Startup**
-
-Rope's startup logic creates Project and PyCore objects. Most classes can
-access these objects directly (through their ivars) or indirectly (through
-the ivars of other classes).
-
-**Data**
-
-Afaik, the `Scope` class contains all (most?) of the computed type inferences.
-
-If `scope` is a `Scope`, statements of the form `scope[name]`, where `name`
-(a string) is a member of the scope, provide access to all inferences!
+@language python
 </t>
 <t tx="ekr.20230207050236.1">g.cls()
 """Push docs/theory.rst to devel and open it in mozilla."""
@@ -60725,8 +58755,8 @@ else:  # Make theory.html and view it locally.
         'moz file:///C:/Repos/ekr-fork-rope2/docs/_build/html/theory.html',
     ])
 </t>
-<t tx="ekr.20230208092216.1"></t>
-<t tx="ekr.20230208122833.1">g.cls()
+<t tx="ekr.20230208122833.1">"""Run the test-r command."""
+g.cls()
 if c.isChanged():
     c.save()
 g.execute_shell_commands([
@@ -60740,94 +58770,11 @@ g.execute_shell_commands([
     self.pyobject = pyobject
 
 </t>
-<t tx="ekr.20230208140908.1">https://github.com/python-rope/rope/pull/661</t>
-<t tx="ekr.20230208141410.1">def get_ctor_name(self: Any, file_name: str, width: int = 25) -&gt; str:
-    """Return &lt;module-name&gt;.&lt;class-name&gt; padded to the given width."""
-    class_name = self.__class__.__name__
-    module_name = short_file_name(file_name).replace(".py", "")
-    combined_name = f"{module_name}.{class_name}"
-    padding = " " * max(0, 25 - len(combined_name))
-    return f"{padding}{combined_name}"
-    </t>
-<t tx="ekr.20230209020846.1"></t>
-<t tx="ekr.20230209021213.1"></t>
-<t tx="ekr.20230209021234.1"></t>
-<t tx="ekr.20230209021438.1"></t>
-<t tx="ekr.20230209021513.1"></t>
-<t tx="ekr.20230209021534.1"></t>
-<t tx="ekr.20230209022051.1"></t>
-<t tx="ekr.20230209022510.1"></t>
-<t tx="ekr.20230209025936.1">@language python
-
-# cff # trace will work.</t>
-<t tx="ekr.20230209030735.1">@language rest
-@nosearch
-
-- Startup: What inference data (if any) does it create?
-- Preprocessing: does it exist? What does it do?
-- What is a `PyObject`? It clearly has a central role in soi.
-- What is `_Inferred`'s role?
-- What do all the data in `PyDefinedObject` mean?
-* What is an inference? a `PyDefinedObject`?
-
-</t>
-<t tx="ekr.20230209060030.1"></t>
-<t tx="ekr.20230209060055.1"></t>
 <t tx="ekr.20230209060344.1">class UnboundName(pynames.UnboundName):
     pass
 
 
 </t>
-<t tx="ekr.20230209071315.1"></t>
-<t tx="ekr.20230209090424.1">@nosearch
-
-do: sample_scope = scope["Sample"]
-
-       __init__  pyobjectsdef.py:_ExpressionVisitor
-       __init__  pyobjectsdef.py:_ScopeVisitor
-       __init__     pyobjects.py:PyObject        id: 2063136546752 pyobjectsdef:_ClassDef, pyobjectsdef:__init__
-       __init__     pyobjects.py:_ConcludedData  id: 2063136546704 ast:visit, pyobjectsdef:_ClassDef, pyobjectsdef:__init__, pyobjects:__init__
-       __init__     pyobjects.py:_ConcludedData  id: 2063136546560 ast:visit, pyobjectsdef:_ClassDef, pyobjectsdef:__init__, pyobjects:__init__
-       __init__     pyobjects.py:DefinedObject   &lt;ast.ClassDef object at 0x000001E05C856230&gt;
-       __init__     pyobjects.py:_ConcludedData  id: 2063136545744 pyobjects:_create_structural_attributes, ast:visit, pyobjectsdef:_ClassDef, pyobjectsdef:__init__
-       __init__  pyobjectsdef.py:PyClass         Sample
-       __init__       pynames.py:DefinedName     &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x1e05c855fc0&gt;
-       __init__  pyobjectsdef.py:_AssignVisitor
-       __init__     pyobjects.py:_ConcludedData  id: 2063136546176 pyobjectsdef:_assigned, pyobjectsdef:_assigned, pynamesdef:__init__, pynames:_get_concluded_data
-_ConcludedData.set: 2063136546176 NoneType       pyobjectsdef:_Name, pyobjectsdef:_assigned, pyobjectsdef:_assigned, pynamesdef:__init__
-       __init__    pynamesdef.py:pynamesdef.AssignedName None
-       __init__  pyobjectsdef.py:_ExpressionVisitor
-
-sample_scope: &lt;rope.base.pynamesdef.DefinedName object at 0x000001E05C856020&gt;</t>
-<t tx="ekr.20230209091851.1">do: sample_scope.get_object()
-
-sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;
-</t>
-<t tx="ekr.20230209091852.1">@nosearch
-
-do: a_var = a_var_scope.get_object()
-
-_ConcludedData.set: 2539546288880 dict           pyobjects:get_attributes, __init__:newfunc
-_ConcludedData.set: 2539546287968 dict           pyscopes:get_names, pyscopes:get_names
-_ConcludedData.set: 2539546289360 dict           evaluate:_Name, pyscopes:lookup
-       __init__  pyobjectsdef.py:_ExpressionVisitor
-       __init__  pyobjectsdef.py:_ScopeVisitor
-_ConcludedData.set: 2539546288544 list           pyobjects:_get_concluded_attributes, pyobjectsdef:_create_concluded_attributes
-_ConcludedData.set: 2539546289168 dict           pyobjects:get_attributes, __init__:newfunc
-_ConcludedData.set: 2539546289312 dict           evaluate:_Call, pyobjects:__contains__
-       __init__     pyobjects.py:PyObject        id: 2539545936512 evaluate:eval_node2, ast:visit
-_ConcludedData.set: 2539546288928 PyObject       objectinfertest:test_simple_type_inferencing, pynamesdef:get_object, __init__:newfunc, pynames:get
-
-           a_var: &lt;rope.base.pyobjects.PyObject object at 0x0000024F48BBC280&gt;
-a_var.get_type(): &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;
-</t>
-<t tx="ekr.20230209091947.1">do: na_var_scope = scope["a_var"]
-
-a_var_scope: &lt;rope.base.pynamesdef.AssignedName object at 0x0000024F48C12710&gt;
-</t>
-<t tx="ekr.20230209092007.1">do: self.assertEqual(sample_class, a_var.get_type())
-
-sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;</t>
 <t tx="ekr.20230209133950.1">"""A class to perform python restructurings
 
 A restructuring transforms pieces of code matching `pattern` to
@@ -60920,410 +58867,139 @@ Note that the order of traversal is based on the order of ast nodes,
 which usually, but not always, match textual order.
 """
 </t>
-<t tx="ekr.20230209135315.1">@nosearch
-
-</t>
-<t tx="ekr.20230209140339.1"></t>
-<t tx="ekr.20230209140400.1"></t>
-<t tx="ekr.20230209140525.1"></t>
-<t tx="ekr.20230209140632.1"></t>
-<t tx="ekr.20230209143240.1"># Override po.PyDefinedObject.__repr__
-
-if 1:
-    # Several unit tests assume this format:
-
-    # test_repr_pyobjectsdef_pyclass:
-    #   assert repr(obj).startswith(
-    #           '&lt;rope.base.pyobjectsdef.PyClass "pkg1.mod1::MyClass" at 0x')
-
-    # test_repr_pyobjectsdef_pyclass_without_associated_resource:
-
-    #   assert repr(obj).startswith(
-    #       '&lt;rope.base.pyobjectsdef.PyClass "::MyClass" at 0x')
-
-    def __repr__(self) -&gt; str:
-        return '&lt;{}.{} "{}" at {}&gt;'.format(
-            self.__class__.__module__,
-            self.__class__.__name__,
-            self.absolute_name,
-            hex(id(self)),
-        )
-
-else:
-
-    def __repr__(self) -&gt; str:
-        return f"pyobjectsdef.PyClass: {self.absolute_name}"
-
-</t>
-<t tx="ekr.20230209165650.1"></t>
-<t tx="ekr.20230209165736.1">code = dedent("""\
-    class Sample(object):
-        pass
-    a_var = Sample()
-""")
-
-docstring: `PyName` (DefinedName??) statements handle assignments.
-
-_ScopeVisitor._assigned creates an AssignedName.
-
-Scope.get_names:
-{
-    'Sample': &lt;rope.base.pynamesdef.DefinedName object at 0x0000018E05192140&gt;,
-    'a_var': &lt;rope.base.pynamesdef.AssignedName object at 0x0000018E05192290&gt;,
-}</t>
-<t tx="ekr.20230209173843.1">@nosearch
-
-# Word, Body
-
-# found 78 nodes</t>
-<t tx="ekr.20230210041856.1"></t>
-<t tx="ekr.20230210041939.1"></t>
-<t tx="ekr.20230210042043.1"></t>
-<t tx="ekr.20230210042249.1"></t>
-<t tx="ekr.20230210042639.1"></t>
-<t tx="ekr.20230210042750.1"></t>
-<t tx="ekr.20230210043703.1"></t>
-<t tx="ekr.20230210044721.1"></t>
-<t tx="ekr.20230210045320.1"></t>
-<t tx="ekr.20230210045347.1"></t>
-<t tx="ekr.20230210045623.1"></t>
-<t tx="ekr.20230210050228.1">@nosearch
-</t>
-<t tx="ekr.20230210050827.1"></t>
-<t tx="ekr.20230210050856.1"></t>
-<t tx="ekr.20230210051703.1"></t>
-<t tx="ekr.20230210051923.1"></t>
-<t tx="ekr.20230210052015.1"></t>
-<t tx="ekr.20230210052439.1"></t>
-<t tx="ekr.20230210053353.1"></t>
-<t tx="ekr.20230210054447.1">@language rest
-@nosearch
-  
-.. To do:
-- Read inference files like a book.
-- Make inheretance diagram for all inference objects.
-? Create global list for tracing?
-  Global function to dump this list.
-? Remove do nothing classes in complex class hierarchies?
-  Search for references to these classes.</t>
-<t tx="ekr.20230210054631.1">@language rest
-@nosearch
-
-self.assertEqual(sample_class, a_var.get_type())
-1. a_var.get_type() *is the same as* sample_class.
-2. sample_class is a pyobjectsdef.PyClass.
-   sample_class: &lt;rope.base.pyobjectsdef.PyClass "::Sample" at 0x24f48c119c0&gt;</t>
-<t tx="ekr.20230210055115.1"></t>
-<t tx="ekr.20230210071414.1">@nosearch
-
-# Word, Head, Body
-
-# found 66 nodes</t>
-<t tx="ekr.20230210071431.1"></t>
-<t tx="ekr.20230210071751.1"></t>
 <t tx="ekr.20230210082003.1">g.cls()
 if c.isChanged():
     c.save()
 g.execute_shell_commands('mypy-r')
 </t>
-<t tx="ekr.20230210210405.1">@language rest
-@nosearch
-
-rope\base\pyobjects.py:304: error: "_PyModule" has no attribute "get_name"
-
-Class hierarchy:  All classes appear in pyobjects.py:
-
-class _PyModule(PyDefinedObject, AbstractModule):
-class PyDefinedObject:
-class AbstractModule(PyObject)
-class PyObject:
-
-None of these classes have a get_name member
-
-However, pyDefinedObject *does* have a absolute_name member, so 4 unit test pass.
-
-
-@language python
-</t>
 <t tx="ekr.20230210213726.1">@property
-def absolute_name(self) -&gt; Optional[str]:
+def absolute_name(self) -&gt; str:
     return self.get_name()
 
 </t>
-<t tx="ekr.20230210214344.1"></t>
-<t tx="ekr.20230211072805.1">def get_name(self) -&gt; Optional[str]:
-    return None
-
-</t>
-<t tx="ekr.20230211072840.1">def get_resource(self) -&gt; Optional[Resource]:
-    return None
-
-</t>
-<t tx="ekr.20230211075518.1">@language rest
-@nowrap
-
-PR: https://github.com/python-rope/rope/pull/663</t>
-<t tx="ekr.20230211075721.1">https://github.com/python-rope/rope/pull/617</t>
-<t tx="ekr.20230212043819.1">g.cls()
+<t tx="ekr.20230212043819.1">"""Run the test-one-r command."""
+g.cls()
 if c.isChanged():
     c.save()
 g.execute_shell_commands('test-one-r')
 </t>
-<t tx="ekr.20230212061523.1"></t>
-<t tx="ekr.20230212061721.1">@language rest
-@wrap
-
-In soi.py:
-
-_ignore_inferred = utils.ignore_exception(pyobjects.IsBeingInferredError)</t>
-<t tx="ekr.20230212062855.1">@language rest
-@wrap
-
-rope\refactor\move.py:333: error: "Resource" has no attribute "has_child"
-
-Several complaints in:
-
-- rope/base/oi/type_hinting/evaluate.py
-- rope/base.prefs.py
-  Also, a related complaint in rope.base.project.py.
-  
-
-
-</t>
-<t tx="ekr.20230212080817.1">@nosearch
-
-# Word, Head, Body
-
-# found 21 nodes</t>
-<t tx="ekr.20230212080955.1">@nosearch
-
-# Word, Head, Body
-
-# found 29 nodes</t>
-<t tx="ekr.20230212081130.1">@nosearch
-
-# Word, Head, Body
-
-# found 14 nodes</t>
-<t tx="ekr.20230212081354.1"></t>
-<t tx="ekr.20230212110559.1">def get_superclasses(self):
-    return []
-
-
-</t>
-<t tx="ekr.20230212132610.1">@language rest
-@nosearch
-
-https://github.com/python-rope/rope/pull/664
-
-Confusion: lack of clearness or distinctness.
-
-*** Rename ambiguous classes
-
-Search for @utils.saveit
-
-@language python
-</t>
-<t tx="ekr.20230212132706.1"></t>
-<t tx="ekr.20230212133223.1">@nosearch</t>
-<t tx="ekr.20230212133403.1">@nosearch</t>
-<t tx="ekr.20230212135423.1"></t>
-<t tx="ekr.20230212135444.1"></t>
-<t tx="ekr.20230212135550.1"></t>
-<t tx="ekr.20230212194104.1">@nosearch
-
-# Word, Head, Body
-
-# found 2 nodes</t>
-<t tx="ekr.20230212194634.1"># Found 4 marked nodes</t>
-<t tx="ekr.20230212194821.1">@nosearch
-
-# Word, Ignore Case, Body
-
-# found 2 nodes</t>
-<t tx="ekr.20230212194835.1">@nosearch
-
-# Word, Ignore Case, Body
-
-# found 2 nodes</t>
-<t tx="ekr.20230212194840.1"></t>
-<t tx="ekr.20230213040937.1"></t>
-<t tx="ekr.20230213055315.1">class PyFunction(PyDefinedObject):
-    # 1. was (PyDefinedObject, AbstractFunction).
-    # 2. was (PyDefinedObject, PyObject)
-
-    def __init__(self, pycore, ast_node, parent):
-        super().__init__(pycore, ast_node, parent, get_base_type("Function"))
-
-    # From AbstractFunction.
-
-    def get_param_names(self, special_args=True):
-        return []
-
-    def get_returned_object(self, args):
-        return get_unknown()
-
-
-</t>
-<t tx="ekr.20230213071125.1">@nosearch
-
-# Word, Head, Body
-
-# found 7 nodes</t>
-<t tx="ekr.20230213071522.1"></t>
-<t tx="ekr.20230213072454.1">def __init__(self, holding=None):
-    super().__init__(get_base_type("Type"))
-    self.holding: Optional[PyObject] = holding
-    self.attributes = {
-        "next": BuiltinName(BuiltinFunction(self.holding)),
-        "__iter__": BuiltinName(BuiltinFunction(self)),
-    }
-
-</t>
-<t tx="ekr.20230213072748.1"></t>
-<t tx="ekr.20230213075008.1">@nosearch
-
-# Word, Head, Body
-
-# found 22 nodes</t>
-<t tx="ekr.20230213082600.1">@nosearch
-
-# Word, Body
-
-# found 7 nodes</t>
-<t tx="ekr.20230213085130.1">@nosearch
-
-# Word, Ignore Case, Head, Body
-
-# found 8 nodes</t>
-<t tx="ekr.20230214112224.1">branch: ekr-remove-PyObject._get_base_type
-
-</t>
-<t tx="ekr.20230215071442.1">@language rest
-@wrap
-
-Precondition 1: effective tests.
-
-- Rope's unit tests seem strong enough.
-  100% test coverage of all to-be-changed code would be good,
-  but Rope isn't avionics or other mission-critical software.
-- I run pylint, flake8 and mypy routinely.
-
-Precondition 2: comfort with global searches/replaces
-- Rope's refactorings https://rope.readthedocs.io/en/latest/library.html#refactorings
-  are not enough.
-- Leo's cff command is superior to tools such as grep/gres.
-  As a result, I am comfortable with making complex changes.
-
-Strategy: focus on *small* changes and PRs.
-
-- Big collapses in code complexity come many *small*, seemingly insignifcant changes.
-  In my experience, even tiny changes have the potential for further simplifications.
-
-- For example, PR https://github.com/python-rope/rope/pull/668 lays the groundwork for
-  https://github.com/python-rope/rope/pull/664
-  
-- Prefer a sequence of small PRs to one large PR.
-  Because of Leo's cff command, I am comfortable with very large PRs.
-  I am the boss of Leo, so I routine issue huge PRs.
-  The situation is different here, and rightly so.
-  It's reasonable to break big changes into small bites.
-  
-  For example, my strategy will be to introduce other intermediate PRs that will help simply PR 664.</t>
-<t tx="ekr.20230215073300.1">@lieryan Please approve a PR (a simpler version of #632) that removes `from ast import *` from rope.base.ast. This wildcard import simplifies Rope's imports slightly but interferes with mypy. All my PRs show how to remove this import cleanly.
-
-This PR is essential:
-
-- All my work depends on full mypy checks.
-- The PR would simplify all of my other PRs.
-  
-Without this PR I have only bad choices:
-
-1. I can work in branches *without* wildcard import,
-   with little hope that my work will ever become part of Rope.
-2. I can work in branches *with* the wildcard, foregoing essential mypy checks.
-3. I can abandon work on Rope entirely.
-
-**Summary**
-
-It is straightforward to remove `from ast import *`.
-
-Approving a PR that eliminates the wildcard import will:
-- allow full mypy checks of Ropes code.
-- simplify my PRs.
-- let me work on Rope without frustration and distraction.
-
-P.S. My PRs propose the following:
-
-- Full mypy annotations for Rope's type-inference code.
-- Simplify or eliminate the three `Abstract` classes, thereby allowing simpler mypy annotations:
-  A simplified class hierarchy simplifies the key mypy annotation:
-  Union[PyObject, PyDefinedObject, AbstractX] becomes Optional[PyObject].
-</t>
-<t tx="ekr.20230215104857.1"></t>
-<t tx="ekr.20230215105110.1"></t>
-<t tx="ekr.20230216085606.1"></t>
-<t tx="ekr.20230216090152.1"></t>
-<t tx="ekr.20230217020200.1">@language rest
-@wrap
-</t>
-<t tx="ekr.20230219124550.1">@language rest
-@wrap
-
-- Focus on mypy seems petty.
-- LieRyan doesn't care about my PRs.
-
-*** Use a fork.
-- Update readme.md.
-- Be humble.
-
-*** Look at .leojs.
-</t>
 <t tx="ekr.20230219184800.1">@language rest
-.. _`Leo`: https://leo-editor.github.io/leo-editor/
-.. _`PR #1`: https://github.com/edreamleo/ekr-fork-rope2/pull/1
-.. _`Rope`: https://github.com/python-rope/rope
-.. _`Rope's readme file`: https://github.com/python-rope/rope/blob/master/README.rst
-.. _`theory.rst`: https://github.com/edreamleo/ekr-fork-rope2/blob/devel/docs/theory.rst
-.. _`rope.leo`: https://github.com/leo-editor/leo-editor-contrib/blob/master/StudyOutlines/rope.leo
-.. _`this page`: https://github.com/leo-editor/leo-editor-contrib/commits/master
 
-This is the `devel` branch of the `ekr-fork-rope2` fork of `Rope`_
+.. _GitHub python-rope / rope: https://github.com/python-rope/rope
 
-`ekr-fork-rope2` exists solely to develop a Theory of Operation for Rope.
 
-The `devel` branch contains study code. No PR (for Rope itself) will ever be based on `devel`.
+=========================================================================
+ rope -- the world's most advanced open source Python refactoring library
+=========================================================================
 
-`PR #1`_ shows shows the diffs between the `master` and `devel` branches.
+|Build status badge| |Latest version badge| |Download count badge| |ReadTheDocs status badge|
 
-See `Rope's readme file`_ for details about Rope itself.
+.. |Build status badge| image:: https://github.com/python-rope/rope/actions/workflows/main.yml/badge.svg
+   :target: https://github.com/python-rope/rope/actions/workflows/main.yml
+   :alt: Build Status
 
-`theory.rst`_ contains:
+.. |Latest version badge| image:: https://badge.fury.io/py/rope.svg
+   :target: https://badge.fury.io/py/rope
+   :alt: Latest version
 
-- The draft version of the Theory of Operation.
-- My study notes.
+.. |Download count badge| image:: https://img.shields.io/pypi/dm/rope.svg
+   :alt: Download count
 
-`rope.leo`_ contains my `Leo`_ study outline.
+.. |ReadTheDocs status badge| image:: https://readthedocs.org/projects/rope/badge/?version=latest
+   :target: https://rope.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
-`This page`_ lists shows all commits to rope.leo.
-</t>
-<t tx="ekr.20230220105715.1"></t>
-<t tx="ekr.20230221044629.1">@language rest
-@nosearch
+Overview
+========
 
-- PyName comes from ast.Name
-- The "Py" prefix distinguishes classes from python's 
+`Rope`_ is the world's most advanced open source Python refactoring library
+(yes, I totally stole that tagline from Postgres).
+
+.. _`rope`: https://github.com/python-rope/rope
+
+
+Most Python syntax up to Python 3.10 is supported. Please file bugs and contribute
+patches if you encounter gaps.
+
+Since version 1.0.0, rope no longer support running on Python 2.
+If you need Python 2 support, then check out the `python2` branch or the 0.x.x
+releases.
+
+Getting Started
+===============
+
+* `Documentation &lt;https://rope.readthedocs.io/en/latest/overview.html&gt;`_
+* `How to use Rope in my IDE or Text editor? &lt;https://github.com/python-rope/rope/wiki/How-to-use-Rope-in-my-IDE-or-Text-editor%3F&gt;`_
+* `Configuration &lt;https://rope.readthedocs.io/en/latest/configuration.html&gt;`_
+* `List of features &lt;https://rope.readthedocs.io/en/latest/rope.html&gt;`_
+* `Overview of some of rope's features &lt;https://rope.readthedocs.io/en/latest/overview.html&gt;`_
+* `Using as a library &lt;https://rope.readthedocs.io/en/latest/library.html&gt;`_
+* `Contributing &lt;https://rope.readthedocs.io/en/latest/contributing.html&gt;`_
+
+Why use Rope?
+=============
+
+- Rope aims to provide powerful and safe refactoring
+- Rope is light on dependency, Rope only depends on Python itself
+- Unlike PyRight or PyLance, Rope does not depend on Node.js
+- Unlike PyLance or PyCharm, Rope is open source.
+- Unlike PyRight and PyLance, Rope is written in Python itself, so if you experience problems, you would be able to debug and hack it yourself in a language that you are already familiar with
+- In comparison to Jedi, Rope is focused on refactoring. While Jedi provides some basic refactoring capabilities, Rope supports many more advanced refactoring operations and options that Jedi does not.
+
+
+Bug Reports
+===========
+
+Send your bug reports and feature requests at `python-rope's issue tracker`_ in GitHub.
+
+.. _`python-rope's issue tracker`: https://github.com/python-rope/rope/issues
+
+
+Maintainers
+===========
+
+Current active maintainer of Rope is Lie Ryan (`@lieryan`_).
+
+Special Thanks
+==============
+
+Many thanks the following people:
+
+- Ali Gholami Rudi (`@aligrudi`_) for initially creating the initial Rope project and most of Rope's code
+- Matej Cepl (`@mcepl`_) as former long-time Rope maintainer
+- Nick Smith &lt;nicks@fastmail.fm&gt; (`@soupytwist`_) as former Rope maintainer
+- `all of our current and former contributors`_
+- `all authors of editor integrations`_
+- all maintainers of distro/package managers
+
+.. _`@aligrudi`: https://github.com/aligrudi
+.. _`@soupytwist`: https://github.com/soupytwist
+.. _`@lieryan`: https://github.com/lieryan
+.. _`@mcepl`: https://github.com/mcepl
+.. _`all of our current and former contributors`: https://github.com/python-rope/rope/blob/master/CONTRIBUTORS.md
+.. _`all authors of editor integrations`: https://github.com/python-rope/rope/wiki/How-to-use-Rope-in-my-IDE-or-Text-editor%3F
+
+Packaging Status
+================
+
+.. image:: https://repology.org/badge/vertical-allrepos/python:rope.svg?exclude_unsupported=1
+   :target: https://repology.org/project/python:rope/versions
+   :alt: Packaging status
+
+.. image:: https://repology.org/badge/vertical-allrepos/rope.svg?exclude_unsupported=1
+   :target: https://repology.org/project/rope/versions
+   :alt: Packaging status
+
+License
+=======
+
+This program is under the terms of LGPL v3+ (GNU Lesser General Public License).
+Have a look at `COPYING`_ for more information.
+
+.. _`COPYING`: COPYING
 </t>
 <t tx="ekr.20230221061621.1"># Checks for empty nodes using Leo's check-nodes command.
 c.k.simulateCommand('check-nodes')</t>
-<t tx="ekr.20230221062432.1">def get_doc(self) -&gt; Optional[str]:
-    return None
-
-</t>
-<t tx="ekr.20230221062433.1">def get_module(self) -&gt; Any:
-    return None
-
-</t>
 <t tx="ekr.20230221062628.1">def format(caller_name: str, module: str, function: str = "") -&gt; str:
     """Format caller_name, module and optional function, aligned for traces."""
     module_s = module.replace("rope.base.", "")
@@ -61340,65 +59016,6 @@ c.k.simulateCommand('check-nodes')</t>
 
 
 </t>
-<t tx="ekr.20230221062737.1">def is_abstract_class(obj):
-    return isinstance(
-        obj,
-        (
-            rope.base.builtins.BuiltinClass,
-            rope.base.builtins.Generator,
-            rope.base.builtins.Iterator,
-            PyClass,
-        ),
-    )
-
-
-</t>
-<t tx="ekr.20230221062741.1">def is_abstract_function(obj):
-    return isinstance(
-        obj, (rope.base.builtins.BuiltinFunction, rope.base.builtins.Lambda, PyFunction)
-    )
-
-
-</t>
-<t tx="ekr.20230221062741.2">def is_abstract_module(obj):
-    return isinstance(
-        obj,
-        (rope.base.builtins.BuiltinModule, _PyModule),
-    )
-
-
-</t>
-<t tx="ekr.20230221065257.1">@nosearch
-
-# Word, Body
-
-# found 19 nodes</t>
-<t tx="ekr.20230221065352.1"></t>
-<t tx="ekr.20230221065422.1"></t>
-<t tx="ekr.20230221065442.1"></t>
-<t tx="ekr.20230221065556.1"></t>
-<t tx="ekr.20230221065737.1">@nosearch
-
-# Word, Body
-
-# found 25 nodes</t>
-<t tx="ekr.20230221065751.1"></t>
-<t tx="ekr.20230221065809.1"></t>
-<t tx="ekr.20230221082039.1">@nosearch
-
-# Word, Ignore Case, Head, Body
-
-# found 6 nodes</t>
-<t tx="ekr.20230221091031.1">@nosearch
-
-# Word, Head, Body
-
-# found 4 nodes</t>
-<t tx="ekr.20230222034606.1"></t>
-<t tx="ekr.20230222034651.1"></t>
-<t tx="ekr.20230222034813.1"># ? Revert to Empty Abstract files?</t>
-<t tx="ekr.20230222080311.1"></t>
-<t tx="ekr.20230222080331.1"></t>
 <t tx="ekr.20230222081013.1">g.cls()
 """Push rope.leo to leo-editor-contrib/StudyOutlines/rope.leo."""
 import os
@@ -61429,6 +59046,92 @@ g.execute_shell_commands([
     'explorer https://github.com/leo-editor/leo-editor-contrib/commits/master',
     'echo done',
 ])
+</t>
+<t tx="ekr.20230225113443.1">def _get_primary_and_object_for_node(self, stmt):
+    primary, pyname = eval_node2(self.scope, stmt)
+    pyobject = None
+    if pyname is not None:
+        pyobject = pyname.get_object()
+    return primary, pyobject
+
+</t>
+<t tx="ekr.20230306034457.1">def get_name(self):
+    return None
+
+</t>
+<t tx="ekr.20230306034534.1">def get_module(self):
+    return None
+
+</t>
+<t tx="ekr.20230306084839.1"></t>
+<t tx="ekr.20230306085211.1">_types = None
+_unknown = None
+
+@staticmethod
+def _get_base_type(name):
+    if PyObject._types is None:
+        PyObject._types = {}
+        base_type = PyObject(None)
+        PyObject._types["Type"] = base_type
+        PyObject._types["Module"] = PyObject(base_type)
+        PyObject._types["Function"] = PyObject(base_type)
+        PyObject._types["Unknown"] = PyObject(base_type)
+    return PyObject._types[name]
+
+
+</t>
+<t tx="ekr.20230306085507.1">class AbstractClass(PyObject):
+    def __init__(self):
+        super().__init__(get_base_type("Type"))
+
+    def get_name(self):
+        pass
+
+    def get_doc(self):
+        pass
+
+    def get_superclasses(self):
+        return []
+
+
+</t>
+<t tx="ekr.20230306085552.1">class AbstractFunction(PyObject):
+    def __init__(self):
+        super().__init__(get_base_type("Function"))
+
+    def get_name(self):
+        pass
+
+    def get_doc(self):
+        pass
+
+    def get_param_names(self, special_args=True):
+        return []
+
+    def get_returned_object(self, args):
+        return get_unknown()
+
+
+</t>
+<t tx="ekr.20230306085552.2">class AbstractModule(PyObject):
+    def __init__(self, doc=None):
+        super().__init__(get_base_type("Module"))
+
+    def get_doc(self):
+        pass
+
+    def get_resource(self):
+        pass
+
+
+</t>
+<t tx="ekr.20230306085706.1">class PyComprehension(PyDefinedObject, PyObject):
+    pass
+
+    def get_name(self):
+        return "&lt;comprehension&gt;"
+
+
 </t>
 </tnodes>
 </leo_file>
