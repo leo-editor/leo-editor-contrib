@@ -12,12 +12,10 @@
 <v t="ekr.20230222081013.1"><vh>@button contrib</vh></v>
 <v t="ekr.20221128041958.1"><vh>@button diff-master..head</vh></v>
 <v t="ekr.20230221061621.1"><vh>@button check-nodes</vh></v>
-<v t="ekr.20230306084839.1"><vh>@ignore unused buttons</vh>
-<v t="ekr.20230207050236.1"><vh>@@button make</vh></v>
-<v t="ekr.20230208122833.1"><vh>@@button test-all</vh></v>
-<v t="ekr.20230212043819.1"><vh>@@button test-one</vh></v>
-<v t="ekr.20230210082003.1"><vh>@@button mypy-r</vh></v>
-</v>
+<v t="ekr.20230207050236.1"><vh>@button make</vh></v>
+<v t="ekr.20230208122833.1"><vh>@button test-all</vh></v>
+<v t="ekr.20230212043819.1"><vh>@button test-one</vh></v>
+<v t="ekr.20230210082003.1"><vh>@button mypy-r</vh></v>
 <v t="ekr.20221121061203.1"><vh>@settings</vh>
 <v t="ekr.20221121061232.1"><vh>@bool run-pyflakes-on-write = True</vh></v>
 <v t="ekr.20221201060910.1"><vh>@bool run-flake8-on-write = False</vh></v>
@@ -42,9 +40,11 @@
 <v t="ekr.20221128034447.18"><vh>function: strip_comments</vh></v>
 </v>
 </v>
+<v t="ekr.20230205094642.1"></v>
 <v t="ekr.20230205090204.1"></v>
 </v>
-<v t="ekr.20221129082559.1"><vh> c:\Scripts</vh>
+<v t="ekr.20221118105359.1"><vh>Files</vh>
+<v t="ekr.20221129082559.1"><vh>c:\Scripts</vh>
 <v t="ekr.20221201161803.1"><vh>@clean blacken-r.cmd</vh></v>
 <v t="ekr.20221214124101.1"><vh>@clean cd-r.cmd</vh></v>
 <v t="ekr.20221129082906.1"><vh>@clean check-r.cmd</vh></v>
@@ -60,20 +60,19 @@
 <v t="ekr.20221204084958.1"><vh>@clean test-one-r.cmd</vh></v>
 <v t="ekr.20221129082621.1"><vh>@clean test-r.cmd</vh></v>
 </v>
-<v t="ekr.20221118105359.1"><vh>Files</vh>
+<v t="ekr.20230219184800.1"><vh>@clean README.rst</vh></v>
 <v t="ekr.20230201150627.1"><vh> config files</vh>
 <v t="ekr.20230205060132.1"><vh>@clean .pre-commit-config.yaml</vh></v>
 <v t="ekr.20221209061813.1"><vh>@clean .pylintrc</vh></v>
 <v t="ekr.20221201051835.1"><vh>@clean setup.cfg</vh></v>
-<v t="ekr.20221118072830.10"><vh>@clean docs/conf.py</vh></v>
 </v>
-<v t="ekr.20230206074243.1"><vh> documentation files</vh>
-<v t="ekr.20230206074301.1"><vh>@@edit docs/index.rst</vh></v>
+<v t="ekr.20230312052444.1"><vh>docs</vh>
+<v t="ekr.20221118072830.10"><vh>@clean docs/conf.py</vh></v>
+<v t="ekr.20230206074301.1"><vh>@edit docs/index.rst</vh></v>
 <v t="ekr.20230204222405.1"><vh>@rst docs/theory</vh>
 <v t="ekr.20230204224459.1"><vh>Overview of type inference</vh></v>
 <v t="ekr.20230205150939.1"><vh>Overview of the code</vh></v>
 </v>
-<v t="ekr.20230219184800.1"><vh>@@clean README.rst (devel)</vh></v>
 </v>
 <v t="ekr.20230201150728.1"><vh>rope</vh>
 <v t="ekr.20221118072830.16"><vh>@clean rope/__init__.py</vh>
@@ -131,6 +130,7 @@
 <v t="ekr.20221118072830.69"><vh>class builtins.BuiltinClass(_BuiltinElement, PyObject) # AbstractClass</vh>
 <v t="ekr.20221118072830.71"><vh>BuiltinClass.get_attributes</vh></v>
 <v t="ekr.20221118072830.72"><vh>BuiltinClass.get_module</vh></v>
+<v t="ekr.20230225102515.1"><vh>BuiltinClass.get_superclasses</vh></v>
 </v>
 <v t="ekr.20221118072830.73"><vh>class builtins.BuiltinFunction(_BuiltinElement, PyObject) # AbstractFunction</vh>
 <v t="ekr.20221118072830.75"><vh>BuiltinFunction.get_returned_object</vh></v>
@@ -141,7 +141,9 @@
 <v t="ekr.20221118072830.80"><vh>BuiltinUnknown.get_attributes</vh></v>
 </v>
 <v t="ekr.20221118072830.81"><vh>function: builtins._object_attributes</vh></v>
-<v t="ekr.20221118072830.82"><vh>function: builtins._create_builtin_type_getter</vh></v>
+<v t="ekr.20221118072830.82"><vh>function: builtins._create_builtin_type_getter</vh>
+<v t="ekr.20221118072830.83"><vh>_get_builtin</vh></v>
+</v>
 <v t="ekr.20221118072830.84"><vh>function: builtins._create_builtin_getter</vh></v>
 <v t="ekr.20221118072830.85"><vh>class builtins._CallContext</vh>
 <v t="ekr.20221118072830.86"><vh>_CallContext.__init__</vh></v>
@@ -764,7 +766,6 @@
 <v t="ekr.20221118072830.641"><vh>class  po.PyObject</vh>
 <v t="ekr.20221118072830.643"><vh>PyObject.get_attributes</vh></v>
 <v t="ekr.20221118072830.644"><vh>PyObject.get_attribute</vh></v>
-<v t="ekr.20230306034534.1"><vh>PyObject.get_module</vh></v>
 <v t="ekr.20221118072830.645"><vh>PyObject.get_type</vh></v>
 <v t="ekr.20221118072830.646"><vh>PyObject.__getitem__</vh></v>
 <v t="ekr.20221118072830.647"><vh>PyObject.__contains__</vh></v>
@@ -772,13 +773,10 @@
 <v t="ekr.20221118072830.649"><vh>PyObject.__ne__</vh></v>
 <v t="ekr.20221118072830.650"><vh>PyObject.__hash__</vh></v>
 <v t="ekr.20221118072830.651"><vh>PyObject.__iter__</vh></v>
-<v t="ekr.20230306085211.1"><vh>PyObject._get_base_type</vh></v>
 </v>
 <v t="ekr.20221118072830.654"><vh>function: po.get_base_type</vh></v>
 <v t="ekr.20221118072830.655"><vh>function: po.get_unknown</vh></v>
-<v t="ekr.20230306085507.1"><vh>class  po.AbstractClass(PyObject)</vh></v>
-<v t="ekr.20230306085552.1"><vh>class  po.AbstractFunction(PyObject):</vh></v>
-<v t="ekr.20230306085552.2"><vh>class  po.AbstractModule(PyObject)</vh></v>
+<v t="ekr.20230225095835.1"><vh>class po.Abstract*</vh></v>
 <v t="ekr.20221118072830.671"><vh>class  po.PyDefinedObject:  # new: PyObject</vh>
 <v t="ekr.20221118072830.673"><vh>po.PyDefinedObject.__repr__</vh></v>
 <v t="ekr.20221118072830.674"><vh>po.PyDefinedObject.absolute_name</vh></v>
@@ -788,7 +786,6 @@
 <v t="ekr.20221118072830.679"><vh>po.PyDefinedObject.get_attribute</vh></v>
 <v t="ekr.20221118072830.680"><vh>po.PyDefinedObject.get_scope (creates scope if it does not exist)</vh></v>
 <v t="ekr.20221118072830.681"><vh>po.PyDefinedObject.get_module</vh></v>
-<v t="ekr.20230306034457.1"><vh>po.PyDefinedObject.get_name</vh></v>
 <v t="ekr.20221118072830.682"><vh>po.PyDefinedObject.get_doc</vh></v>
 <v t="ekr.20221118072830.683"><vh>po.PyDefinedObject._get_defined_objects</vh></v>
 <v t="ekr.20221118072830.684"><vh>po.PyDefinedObject._create_structural_attributes</vh></v>
@@ -797,7 +794,7 @@
 <v t="ekr.20221118072830.687"><vh>po.PyDefinedObject._create_scope (do-nothing)</vh></v>
 </v>
 <v t="ekr.20221118072830.688"><vh>class  po.PyFunction(PyDefinedObject) # AbstractFunction</vh></v>
-<v t="ekr.20230306085706.1"><vh>class  po.PyComprehension(PyDefinedObject, PyObject):</vh></v>
+<v t="ekr.20221118072830.689"><vh>class  po.PyComprehensionBase(PyDefinedObject, PyObject)</vh></v>
 <v t="ekr.20221118072830.690"><vh>class  po.PyClass(PyDefinedObject) # AbstractClass</vh></v>
 <v t="ekr.20221118072830.691"><vh>class  po._ConcludedData</vh>
 <v t="ekr.20221118072830.693"><vh>po._ConcludedData.set (**trace**)</vh></v>
@@ -7761,14 +7758,14 @@ if TYPE_CHECKING:
     PyFunc = PyFunction
 
 
+def analyze_module(
+    pycore, pymodule, should_analyze, search_subscopes, followed_calls: bool
+) -&gt; None:
 @others
 @language python
 @tabwidth -4
 </t>
-<t tx="ekr.20221118072830.1255">def analyze_module(
-    pycore, pymodule, should_analyze, search_subscopes, followed_calls: bool
-) -&gt; None:
-    """Analyze `pymodule` for static object inference
+<t tx="ekr.20221118072830.1255">    """Analyze `pymodule` for static object inference
 
     Analyzes scopes for collecting object information.  The analysis
     starts from inner scopes.
@@ -15168,8 +15165,6 @@ if TYPE_CHECKING:
     from rope.base.pyobjects import PyObject
     from rope.base.pyscopes import Scope
 
-
-class BuiltinModule(pyobjects.PyObject):  # was pyobjects.AbstractModule.
 @others
 
 
@@ -15273,7 +15268,9 @@ def find_module(self, modname, folder=None):
     return self.project.find_module(modname, folder)
 
 </t>
-<t tx="ekr.20221118072830.56">    def __init__(self, name, pycore=None, initial={}):
+<t tx="ekr.20221118072830.56">
+class BuiltinModule(pyobjects.PyObject):  # was pyobjects.AbstractModule.
+    def __init__(self, name, pycore=None, initial={}):
         super().__init__(get_base_type("Module"))
         self.name = name
         self.pycore = pycore
@@ -15882,6 +15879,10 @@ if TYPE_CHECKING:
         self.type = self if type_ is None else type_
 
     @others
+
+_anchor_types = None
+
+
 </t>
 <t tx="ekr.20221118072830.643">def get_attributes(self):
     if self.type is self:
@@ -15894,8 +15895,20 @@ if TYPE_CHECKING:
         raise exceptions.AttributeNotFoundError("Attribute %s not found" % name)
     return self.get_attributes()[name]
 
+def get_doc(self) -&gt; Optional[str]:
+    return None
+
 </t>
-<t tx="ekr.20221118072830.645">def get_type(self):
+<t tx="ekr.20221118072830.645">def get_module(self) -&gt; Any:
+    return None
+
+def get_name(self) -&gt; Optional[str]:
+    return None
+
+def get_resource(self) -&gt; Optional[Resource]:
+    return None
+
+def get_type(self):
     return self.type
 
 </t>
@@ -15946,7 +15959,8 @@ if TYPE_CHECKING:
     return iter(self.get_attributes())
 
 </t>
-<t tx="ekr.20221118072830.654">    """Return the base type with name `name`.
+<t tx="ekr.20221118072830.654">def get_base_type(name: str) -&gt; PyObject:
+    """Return the base type with name `name`.
 
     The base types are 'Type', 'Function', 'Module' and 'Unknown'.  It
     was used to check the type of a `PyObject` but currently its use
@@ -15988,8 +16002,6 @@ def get_unknown() -&gt; PyObject:
     return get_base_type("Unknown")
 
 
-def is_abstract_class(obj):
-    return isinstance(
 </t>
 <t tx="ekr.20221118072830.66">def get_doc(self):
     if self.builtin:
@@ -16081,6 +16093,7 @@ def parent(self):
     while current_object.parent is not None:
         current_object = current_object.parent
     return current_object
+
 </t>
 <t tx="ekr.20221118072830.682">def get_doc(self) -&gt; Optional[str]:
     if len(self.get_ast().body) &gt; 0:
@@ -16126,6 +16139,26 @@ visitor_class = None
 <t tx="ekr.20221118072830.688">class PyFunction(PyDefinedObject):
     # 1. was (PyDefinedObject, AbstractFunction).
     # 2. was (PyDefinedObject, PyObject)
+
+    def __init__(self, pycore, ast_node, parent):
+        super().__init__(pycore, ast_node, parent, get_base_type("Function"))
+
+    # From AbstractFunction.
+
+    def get_param_names(self, special_args: bool = True) -&gt; List[str]:
+        return []
+
+    def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
+        return get_unknown()
+
+
+class PyComprehension(PyDefinedObject):
+</t>
+<t tx="ekr.20221118072830.689">    pass
+
+    def get_name(self):
+        return "&lt;comprehension&gt;"
+
 
 </t>
 <t tx="ekr.20221118072830.69">class BuiltinClass(_BuiltinElement, pyobjects.PyObject):
@@ -16432,8 +16465,7 @@ def decorators(self):
 
     @others
 </t>
-<t tx="ekr.20221118072830.73">    def get_superclasses(self):
-        return []
+<t tx="ekr.20221118072830.73">        return []
 
 
 class BuiltinFunction(_BuiltinElement, pyobjects.PyObject):
@@ -17133,13 +17165,7 @@ def get_attributes(self):
 
 </t>
 <t tx="ekr.20221118072830.82">def _create_builtin_type_getter(cls):
-    def _get_builtin(*args):
-        if not hasattr(cls, "_generated"):
-            cls._generated = {}
-        if args not in cls._generated:
-            cls._generated[args] = cls(*args)
-        return cls._generated[args]
-
+    @others
     return _get_builtin
 
 
@@ -17198,6 +17224,14 @@ from rope.refactor import patchedast
     if name not in self.get_names():
         raise exceptions.NameNotFoundError("name %s not found" % name)
     return self.get_names()[name]
+
+</t>
+<t tx="ekr.20221118072830.83">def _get_builtin(*args):
+    if not hasattr(cls, "_generated"):
+        cls._generated = {}
+    if args not in cls._generated:
+        cls._generated[args] = cls(*args)
+    return cls._generated[args]
 
 </t>
 <t tx="ekr.20221118072830.830">def __getitem__(self, key):
@@ -58712,12 +58746,7 @@ from and writing to the resource, moving the resource, etc.
 <t tx="ekr.20230104080535.1"></t>
 <t tx="ekr.20230104151430.1"># Additional headlines that are never considered dubious.
 
-Query.__init__ &amp; __repr__
-
-# class po.Abstract*
-# COPY: is_abstract* (do not remove)
-# PyObject.is_base_* (new)
-</t>
+Query.__init__ &amp; __repr__</t>
 <t tx="ekr.20230104220522.1">def setUp(self):
     super().setUp()
     self.project = testutils.sample_project()
@@ -58974,7 +59003,11 @@ sphinx-build -M html . _build -a
 <t tx="ekr.20230205090204.1"># Found 3 marked nodes</t>
 <t tx="ekr.20230205094642.1"># Lines starting with '#' are comment lines.
 # A list of command names to be pre-loaded into the history list.
+make
 contrib
+mypy-r
+test-one
+rst3
 spell-find
 pylint
 sort-lines
@@ -59000,44 +59033,6 @@ As far as type inference goes, we can (mostly) ignore:
 - The **codeanalyze** module.  |br|
   Despite its name, it is not directly involved in making inferences.
 - Refactoring, code completion, and utility code.
-</t>
-<t tx="ekr.20230206074243.1">@language rest
-
-- LieRyan's description of Rope's type inference
-  https://github.com/edreamleo/ekr-fork-rope2/issues/3
-
-@language python
-</t>
-<t tx="ekr.20230206074301.1">@nocolor
-.. rope documentation master file, created by
-   sphinx-quickstart on Sat May 21 18:16:44 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to rope's documentation!
-================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   overview
-   rope
-   library
-   configuration
-   contributing
-   theory
-   release-process
-   dev/issues
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 </t>
 <t tx="ekr.20230207050236.1">g.cls()
 """Push docs/theory.rst to devel and open it in mozilla."""
@@ -59269,31 +59264,9 @@ g.execute_shell_commands([
     'echo done',
 ])
 </t>
-<t tx="ekr.20230225113443.1">
-</t>
-<t tx="ekr.20230306034457.1">
-</t>
-<t tx="ekr.20230306034534.1">def get_doc(self) -&gt; Optional[str]:
-    return None
-
-def get_module(self) -&gt; Any:
-    return None
-
-def get_name(self) -&gt; Optional[str]:
-    return None
-
-def get_resource(self) -&gt; Optional[Resource]:
-    return None
-
-</t>
-<t tx="ekr.20230306084839.1"></t>
-<t tx="ekr.20230306085211.1">
-_anchor_types = None
-
-
-def get_base_type(name: str) -&gt; PyObject:
-</t>
-<t tx="ekr.20230306085507.1">        obj,
+<t tx="ekr.20230225095835.1">def is_abstract_class(obj):
+    return isinstance(
+        obj,
         (
             rope.base.builtins.BuiltinClass,
             rope.base.builtins.Generator,
@@ -59307,8 +59280,7 @@ def is_abstract_function(obj):
     return isinstance(
         obj, (rope.base.builtins.BuiltinFunction, rope.base.builtins.Lambda, PyFunction)
     )
-</t>
-<t tx="ekr.20230306085552.1">
+
 
 def is_abstract_module(obj):
     return isinstance(
@@ -59320,26 +59292,10 @@ def is_abstract_module(obj):
 class PyDefinedObject(PyObject):  # was: had no base class.
 
 </t>
-<t tx="ekr.20230306085552.2"></t>
-<t tx="ekr.20230306085706.1">    def __init__(self, pycore, ast_node, parent):
-        super().__init__(pycore, ast_node, parent, get_base_type("Function"))
-
-    # From AbstractFunction.
-
-    def get_param_names(self, special_args: bool = True) -&gt; List[str]:
-        return []
-
-    def get_returned_object(self, args: ast.arguments) -&gt; Optional[PyObject]:
-        return get_unknown()
-
-
-class PyComprehension(PyDefinedObject):
-    pass
-
-    def get_name(self):
-        return "&lt;comprehension&gt;"
-
-
+<t tx="ekr.20230225102515.1">def get_superclasses(self):
 </t>
+<t tx="ekr.20230225113443.1">
+</t>
+<t tx="ekr.20230312052444.1"></t>
 </tnodes>
 </leo_file>
