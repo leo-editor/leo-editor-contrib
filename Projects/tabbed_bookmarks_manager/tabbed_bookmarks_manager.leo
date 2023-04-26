@@ -2802,11 +2802,14 @@ def open_file(filename):
     stress_end = '&lt;/b&gt;' if bold else ''
     for n, step in enumerate(path):
         if n == 0:
+            continue
+        elif n == 1:
             context += step
         else:
             context = '/' + step
         unl += '--&gt;' + step
         unl = unl.replace('"', '%22')
+        pos = unl.find('/')
         html_ += (f'&lt;a href="{unl}"&gt;{stress}{context}{stress_end}&lt;/a&gt;\n')
     return html_
 </t>
