@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Bookmarks Manager User’s Guide &#8212; Bookmarks Manager User&#39;s Guide</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramid.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Bookmarks Manager User&#39;s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bookmarks Manager User’s Guide</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="bookmarks-manager-user-s-guide">
+<h1>Bookmarks Manager User’s Guide<a class="headerlink" href="#bookmarks-manager-user-s-guide" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<section id="the-tabbed-bookmarks-manager">
+<h3>The Tabbed Bookmarks Manager<a class="headerlink" href="#the-tabbed-bookmarks-manager" title="Permalink to this heading">¶</a></h3>
+<p>The Tabbed Bookmarks Manager (TBM) is a browser bookmarks manager that improves on the bookmark managers that come with web browsers.  It provides</p>
+<ol class="arabic simple">
+<li><p>Much better abilities for finding bookmarks;</p></li>
+<li><p>Much better ability for organizing and reorganizing your bookmarks, thanks to Leo’s tree functionality;</p></li>
+<li><p>A capability for seeing your bookmarks in context;</p></li>
+<li><p>Much better abilities for discovering bookmarks that you had forgotten about;</p></li>
+<li><p>The change to discover a relationship between various bookmarks and their categories that you had not realized.</p></li>
+<li><p>The ability to include bookmarks to files in your file system.</p></li>
+<li><p>The ability to write notes in your bookmark nodes.</p></li>
+</ol>
+<p>The TBM imports your bookmarks from your browser, and also creates new ones when you want to store them.  It has its own GUI, which opens in a new tab in Leo’s Log pane.  The TBM has search and display capabilities, and you can also also use Leo’s own search and tree organization commands.</p>
+<p>The TBM consists of a python script that creates a top-level class, a number of new Leo commands, scripts for importing bookmarks from the browser, and a tree that contains the actual bookmarks.  The entire application is contained within a single Leo outline.</p>
+<p>The outline also includes the source for this Sphinx document itself, along with code for re-creating it.</p>
+</section>
+<section id="the-bookmark-search-panel">
+<h3>The Bookmark Search Panel<a class="headerlink" href="#the-bookmark-search-panel" title="Permalink to this heading">¶</a></h3>
+<p>The node with the headline <em>Bookmark Search Panel</em> (BSP) contains the core code for the Bookmark Manager. In combination with a small set of scripts, the BSP provides a browser bookmark manager that displays inside a tab in Leo’s Log frame.</p>
+<p>When the Bookmarks outline is loaded, it creates a new menu named <em>Bookmarks</em> and a new button in the Icon bar also named <em>Bookmarks</em>. The new controls are shown in this screenshot of the BSP after activating the bookmarks tab:</p>
+<img alt="_images/bk-overall-view.png" src="_images/bk-overall-view.png" />
+<p>In addition, the typeface for Leo’s body editor changes from mono-spaced to proportional, non-monospaced.  When the <em>Bookmarks</em> tab is toggled off again, the typeface changes back to Leo’s usual monospaced font <a class="reference internal" href="#f1" id="id1"><span>[f1]</span></a>.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="f1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">f1</a><span class="fn-bracket">]</span></span>
+<p>The font change can be prevented by commenting out a few lines in the script that toggles the <em>Bookmarks</em> tab.</p>
+</div>
+</div>
+</section>
+<section id="the-bookmarks-tree">
+<h3>The Bookmarks  Tree<a class="headerlink" href="#the-bookmarks-tree" title="Permalink to this heading">¶</a></h3>
+<p>The bookmarks themselves are contained in this outline.  The top of the bookmarks tree must be a top-level node whose headline starts with <em>&#64;bookmark-collection</em>.  The bookmark code will use the first node it finds whose headline starts with the identifying string.</p>
+</section>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<p>No installation is necessary.  Just open the bookmark’s outline in Leo.</p>
+<p>To open the <em>Bookmarks</em> tab, either click the <em>Bookmarks</em> button or the <em>Bookmarks/Toggle Bookmarks Tab</em> menu item.</p>
+</section>
+<section id="bookmarks-outline-organization">
+<h2>Bookmarks Outline Organization<a class="headerlink" href="#bookmarks-outline-organization" title="Permalink to this heading">¶</a></h2>
+<p>The bookmark manager scripts, settings, and the actual bookmark collection have this organization:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">browser_bookmarks</span><span class="o">.</span><span class="n">leo</span>
+    <span class="o">-</span> <span class="nd">@settings</span>
+        <span class="o">-</span> <span class="nd">@menuat</span> <span class="n">before</span>
+            <span class="o">-</span> <span class="nd">@menu</span> <span class="o">&amp;</span><span class="n">Bookmarks</span>
+                <span class="o">-</span> <span class="nd">@item</span> <span class="n">bk</span><span class="o">-</span><span class="nb">open</span><span class="o">-</span><span class="n">tab</span>
+                <span class="o">-</span> <span class="nd">@item</span> <span class="n">bk</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">bookmark</span>
+                <span class="o">-</span> <span class="nd">@item</span> <span class="n">bk</span><span class="o">-</span><span class="n">chk</span><span class="o">-</span><span class="n">url</span>
+            <span class="o">-</span> <span class="n">Commands</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">chk</span><span class="o">-</span><span class="n">url</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">count</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">bookmark</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">delete</span><span class="o">-</span><span class="n">tab</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">find</span><span class="o">-</span><span class="n">latest</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="nb">open</span><span class="o">-</span><span class="n">tab</span>
+                <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="nb">open</span><span class="o">-</span><span class="n">docs</span>
+    <span class="o">-</span> <span class="n">Bookmark</span> <span class="n">Search</span> <span class="n">Panel</span>
+        <span class="o">-</span> <span class="nd">@command</span> <span class="n">bk</span><span class="o">-</span><span class="n">toggle</span><span class="o">-</span><span class="n">tab</span>
+    <span class="o">-</span> <span class="n">Bookmark</span> <span class="n">Import</span> <span class="n">Scripts</span>
+        <span class="o">-</span> <span class="n">Import</span> <span class="n">JSON</span> <span class="n">Bookmarks</span> <span class="n">File</span>
+        <span class="o">-</span> <span class="n">Import</span> <span class="n">Firefox</span> <span class="n">Bookmarks</span> <span class="n">File</span>
+    <span class="o">-</span> <span class="n">Docs</span>
+            <span class="o">-</span> <span class="nd">@button</span> <span class="n">Build</span> <span class="n">HTML</span>
+            <span class="o">-</span> <span class="nd">@rst</span> <span class="n">Bookmarks_manager_Users_Guide</span>
+                <span class="p">[</span><span class="n">text</span> <span class="n">source</span> <span class="k">for</span> <span class="n">the</span> <span class="n">User</span><span class="s1">&#39;s Guide]</span>
+    <span class="o">-</span> <span class="nd">@bookmark</span><span class="o">-</span><span class="n">collection</span> <span class="p">(</span><span class="n">starter</span> <span class="nb">set</span><span class="p">)</span>
+            <span class="p">[</span><span class="n">sample</span> <span class="n">organizer</span> <span class="n">nodes</span> <span class="ow">and</span> <span class="n">bookmarks</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The bookmark import scripts will create an <em>&#64;bookmark-collection</em> subtree at the end of the outline.</p>
+</section>
+<section id="bookmarks-organization">
+<h2>Bookmarks Organization<a class="headerlink" href="#bookmarks-organization" title="Permalink to this heading">¶</a></h2>
+<p>In the browser’s bookmark manager, bookmarks are organized as trees, with some nodes being the organizing nodes and the others the actual bookmark records.  After the bookmarks have been imported into your Leo outline, there will be the same organizer and URL nodes in the same order.</p>
+<p>Organizer nodes have a headline but normally the body will not contain any text. It is not harmful to have text in their bodies, but the bookmark manager will not make use of it.</p>
+<p>URL (or “resource”) nodes contain the actual bookmarks.  Their bodies contain at least a title, url, and data as in the following example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">title</span><span class="p">:</span> <span class="n">Leftover</span> <span class="n">Skillet</span> <span class="n">Turkey</span> <span class="n">Pasta</span>
+<span class="p">:</span><span class="n">ref</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">anitalianinmykitchen</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">turkey</span><span class="o">-</span><span class="n">pasta</span><span class="o">-</span><span class="n">skillet</span><span class="o">/</span>
+<span class="p">:</span><span class="n">date</span><span class="o">-</span><span class="n">added</span><span class="p">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span>
+</pre></div>
+</div>
+<p>The colons around the keywords <em>title</em> and <em>ref</em> are essential for the bookmark manager code.  They are inserted automatically when new bookmark nodes are created.  You can add any notes you like to the body as long as you leave the :title: and :ref: lines in place (although you can edit their contents).</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h3>
+<p>Here is a fragment from a bookmark tree after import into Leo.  It only shows the headlines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pasta</span>
+    <span class="n">Pasta</span> <span class="n">Alla</span> <span class="n">Gricia</span>
+        <span class="n">Pasta</span> <span class="n">Alla</span> <span class="n">Gricia</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+        <span class="n">Salami</span> <span class="n">Pasta</span> <span class="n">Alla</span> <span class="n">Gricia</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Cacio</span> <span class="n">e</span> <span class="n">Pepe</span>
+        <span class="n">Cacio</span> <span class="n">e</span> <span class="n">Pepe</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+        <span class="n">Cacio</span> <span class="n">e</span> <span class="n">Pepe</span> <span class="p">(</span><span class="n">Spaghetti</span> <span class="n">With</span> <span class="n">Black</span> <span class="n">Pepper</span> <span class="ow">and</span> <span class="n">Pecorino</span> <span class="n">Romano</span><span class="p">)</span> <span class="n">Recipe</span>
+        <span class="n">Cacio</span> <span class="n">e</span> <span class="n">Pepe</span> <span class="p">[</span><span class="n">GEOFFREY</span> <span class="n">ZAKARIAN</span><span class="p">]</span>
+        <span class="n">Farro</span> <span class="n">e</span> <span class="n">Pepe</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Leftover</span> <span class="n">Skillet</span> <span class="n">Turkey</span> <span class="n">Pasta</span>
+    <span class="n">A</span> <span class="n">French</span> <span class="n">onion</span> <span class="n">pasta</span> <span class="n">recipe</span> <span class="n">that</span> <span class="n">turns</span> <span class="n">the</span> <span class="n">soup</span> <span class="n">into</span> <span class="n">a</span> <span class="n">one</span><span class="o">-</span><span class="n">pot</span> <span class="n">meal</span> <span class="o">-</span> <span class="n">The</span> <span class="n">Washington</span> <span class="n">Post</span>
+    <span class="n">Buttery</span> <span class="n">Lemon</span> <span class="n">Pasta</span> <span class="n">With</span> <span class="n">Almonds</span> <span class="ow">and</span> <span class="n">Arugula</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Chile</span> <span class="n">Crisp</span> <span class="n">Fettuccine</span> <span class="n">Alfredo</span> <span class="n">With</span> <span class="n">Spinach</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Creamy</span> <span class="n">Asparagus</span> <span class="n">Pasta</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Seared</span> <span class="n">Scallop</span> <span class="n">Pasta</span> <span class="n">With</span> <span class="n">Burst</span> <span class="n">Tomatoes</span> <span class="ow">and</span> <span class="n">Herbs</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+    <span class="n">Crème</span> <span class="n">Fraîche</span> <span class="n">Pasta</span> <span class="n">With</span> <span class="n">Peas</span> <span class="ow">and</span> <span class="n">Scallions</span> <span class="n">Recipe</span> <span class="o">-</span> <span class="n">NYT</span> <span class="n">Cooking</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-the-bookmarks-manager">
+<h2>Using The Bookmarks Manager<a class="headerlink" href="#using-the-bookmarks-manager" title="Permalink to this heading">¶</a></h2>
+<p>&#64;nocolor</p>
+<section id="basics">
+<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">¶</a></h3>
+<p>The bookmark manager can help you find resources that you have bookmarked.  At least as important, it can help you find things you had forgotten about (or misplaced). It can help you notice connections between things that you had not realized.</p>
+<p>The bookmark manager understands <em>file:///</em> URLs, so you can have bookmarks into your file system.  Linked files will get opened by whatever application your OS thinks it should use for that file type.</p>
+<p>The bookmark manager understands Leo’s <em>unl:</em>  links, so you can have bookmarks into Leo outlines.</p>
+<section id="getting-started">
+<h4>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h4>
+<p>If you do not want to experiment with the starter set of bookmarks that came with this outline, then import your bookmarks if you haven’t already (see <a class="reference internal" href="#importing-bookmarks"><span class="std std-ref">Importing Bookmarks</span></a>). After a successful import, delete the starter set.  Otherwise walk through the examples in the <a class="reference internal" href="#finding-bookmarks"><span class="std std-ref">Finding Bookmarks</span></a> section before you import them.</p>
+<p><strong>NOTE</strong> - you can import your bookmarks now if you want.  They will be created in a top-level node below the bookmarks supplied with the outline.  The TBM will not find your bookmarks until you delete the starter set or move it below your own imported collection.</p>
+<p>Next, open the Bookmarks menu and click on <em>Toggle Bookmark Tab</em> <a class="reference internal" href="#f2" id="id2"><span>[f2]</span></a>.  A new tab labeled <em>Bookmarks</em> should appear in the Log pane.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="f2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">f2</a><span class="fn-bracket">]</span></span>
+<p>Or click on the <em>Bookmarks</em> button.</p>
+</div>
+</div>
+<p>The new tab has a text entry box for a search string, a “Search” button, a display panel, and three buttons that act like tabs although they look a little different.  You may want to enlarge the Log pane, or even change the layout.  You will not need much vertical space for the node bodies because a bookmark’s body usually has very little text.</p>
+<p>You can move around the collection using links in the Bookmarks tab, or using Leo’s own navigation commands.  You can open a bookmark’s URL in a browser, or go to its node.  From a bookmark node, you can open the link using Leo’s standard &lt;CTRL-Click&gt; on its URL.</p>
+<section id="starter-set-of-bookmarks">
+<h5>Starter Set Of Bookmarks<a class="headerlink" href="#starter-set-of-bookmarks" title="Permalink to this heading">¶</a></h5>
+<p>This outline comes with a small collection of bookmarks  that you can use to follow along with the documentation examples.  If you want to do this, don’t import your own bookmarks until you go through the section on <em>Finding Bookmarks</em>.</p>
+<p>The starter set contains some very old bookmarks.  Some of them no longer exist.  They have been left in the starter set because it is useful to see how to check and handle them.</p>
+</section>
+<section id="where-are-the-bookmarks">
+<h5>Where are the bookmarks?<a class="headerlink" href="#where-are-the-bookmarks" title="Permalink to this heading">¶</a></h5>
+<p>The bookmark collection must be stored as a subtree under a top-level node having a  headline that starts with <em>&#64;bookmark-collection</em>.  The bookmark manager will use the <strong>first</strong> node with such a headline.  If you have other top-level nodes starting with <em>&#64;bookmark-collection</em> below the first one, TBM will not search them.</p>
+</section>
+</section>
+<section id="terminology">
+<h4>Terminology<a class="headerlink" href="#terminology" title="Permalink to this heading">¶</a></h4>
+<section id="resource">
+<h5>Resource<a class="headerlink" href="#resource" title="Permalink to this heading">¶</a></h5>
+<p>A bookmark node normally does not have any children - it is a “leaf” node.  It contains the title and URL of the bookmarked page.  The bookmark manager calls a bookmark node a “resource” node.  This comes from the name _URL_, standing for <em>Uniform Resource Locator</em>.  The bookmarked page is the “resource”.</p>
+<p>A resource node <em>must</em> contain a line starting with <em>:ref:</em>, followed by a URL.</p>
+</section>
+<section id="subject-term">
+<h5>Subject Term<a class="headerlink" href="#subject-term" title="Permalink to this heading">¶</a></h5>
+<p>Resource nodes are the children of what Leo users tend to call <em>organizer</em> nodes.  They usually do not have any content, but their names are hints about what kinds of concepts their children contain.  The headline of one of these nodes is called a <em>subject Term</em>.  There are also <em>compound subject terms</em>.  These are path expressions that flatten the path to the node.  For example, a hierarchy like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Food</span>
+    <span class="n">Fruit</span>
+        <span class="n">Apples</span>
+</pre></div>
+</div>
+<p>would be flattened to <cite>Food/Fruit/Apples</cite>.  This is a compound subject term.  Each step of the path would be considered an <em>atomic</em> subject term.  Searches display both the resources and subject terms that are found.</p>
+<p>A subject term node <em>must not</em> contain a line starting with <em>:ref:</em>.  The bookmark manager discovers whether a node is a resource or a subject term node by looking for a line starting with <em>:ref:</em></p>
+</section>
+</section>
+<section id="leo-layouts">
+<h4>Leo Layouts<a class="headerlink" href="#leo-layouts" title="Permalink to this heading">¶</a></h4>
+<p>Here is a suggested layout of Leo frames that works well for using the bookmark manager (CTRL-CLICK on the link):</p>
+<img alt="_images/leo-screenshot-bookmarks.png" src="_images/leo-screenshot-bookmarks.png" />
+<p>It would be a good idea to save the layout you decide is best.</p>
+</section>
+<section id="importing-bookmarks">
+<h4>Importing Bookmarks<a class="headerlink" href="#importing-bookmarks" title="Permalink to this heading">¶</a></h4>
+<p>Import your bookmarks from the browser by using the <em>bookmarks.json</em> file that the browser can export.  They can be imported from Firefox and from the Chrome family of browser, which includes Chrome, Vivaldi, Brave and other browsers based on Chrome.</p>
+<p>The two kinds of browsers use different json formats, so there are two import scripts.  They are located in the nodes <em>Import Chrome-family JSON Bookmarks File</em> and <em>Import Firefox Bookmarks File</em>.</p>
+<p>To import your bookmarks file, select the right script for your browser type.  In the line near the top of the node, change the path to the bookmarks file to match yours:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MOZ</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\tom\Downloads\bookmarks-2023-03-27.json&quot;</span>
+</pre></div>
+</div>
+<p>Then run the script with CTRL-b. A top-level node named <em>&#64;bookmark-collection</em> will appear in a second or less.  This is the parent node of your bookmarks.</p>
+<p>DO NOT CHANGE THE NAME OF THIS NODE. The bookmarks code finds the bookmarks by looking for a node whose headline starts with <em>&#64;bookmark-collection</em>.</p>
+<p>If you run the script a second time, a new <em>&#64;bookmark-collection</em> subtree will be created after the previous one. This will not be harmful in the sense of damaging data or making the bookmark manager fail to run. But it may be confusing when you use the bookmarks manager.  If you do this, then delete one of the two <em>&#64;bookmark-collection</em> nodes.</p>
+<section id="how-to-create-the-bookmarks-json-file">
+<h5>How To Create The bookmarks.json File<a class="headerlink" href="#how-to-create-the-bookmarks-json-file" title="Permalink to this heading">¶</a></h5>
+<p>The mechanics for exporting bookmarks from the browser differ from one type to another.</p>
+</section>
+<section id="firefox">
+<h5>Firefox<a class="headerlink" href="#firefox" title="Permalink to this heading">¶</a></h5>
+<ol class="arabic simple">
+<li><p>Open the bookmarks management dialog using the <em>Bookmarks/Manage Bookmarks</em> menu item.</p></li>
+<li><p>In the dialog, select the menu item <em>Import and Backup/Backup</em></p></li>
+<li><p>In the File/save dialog that opened, navigate to the target output directory (usually <em>Downloads</em>) and save the file as a <em>.json</em> file.</p></li>
+</ol>
+</section>
+<section id="vivaldi-and-other-chrome-based-browsers">
+<h5>Vivaldi And Other Chrome-Based Browsers<a class="headerlink" href="#vivaldi-and-other-chrome-based-browsers" title="Permalink to this heading">¶</a></h5>
+<p>Vivaldi and other Chrome based browser do not have a menu item to export as JSON.  But they store a bookmark backup file in JSON format.  Normally, this file (on Windows) is <em>“%USERPROFILE%AppDataLocalVivaldiUser DataDefaultBookmarks”</em>  On Linux, the file will be <em>~/.config/vivaldi/Default/Bookmarks</em>. (It is possible that this location may differ for different Linux distributions).</p>
+<p>For other Chrome family browser types, the path is similar but with <em>vivaldi</em> replaced by the browser type. For example, the backup JSON file for the Brave browser has its Windows bookmark backup file at <em>“C:UserstomAppDataLocalBraveSoftwareBrave-BrowserUser DataDefaultBookmarks”</em>.</p>
+</section>
+</section>
+<section id="saving-a-new-bookmark">
+<h4>Saving A New Bookmark<a class="headerlink" href="#saving-a-new-bookmark" title="Permalink to this heading">¶</a></h4>
+<p>To save a new bookmark, copy its address (its URL) to the clipboard.  Navigate to where in the bookmarks collection you want to put it.  Then select the <em>Bookmarks/Create Bookmark</em> menu item.  This might take a few seconds if the page is large, since the TBM needs to download and examine the page to find its title.</p>
+<p>A new node will be created containing the title, URL, and date.  You may want to use Leo’s tree commands to move the new node to the right, depending on whether it was created indented or not.  Later you can move the node around if you decide you want it somewhere else, or you can clone it into some other location if that seems to make sense.</p>
+<p>The Bookmark Manager may be unable to find a page’s title.  This could happen because of poor page design.  It is not possible for the Bookmark Manager to find the title of a PDF file , and the TBM does not even try to download the file to find its title.</p>
+<p>If no title has been found, a dummy title will be used.  You will need to edit the title and headline to change the title to something sensible.</p>
+<p>If the string in the clipboard is not a legal URL, the TBM will try to interpret it as the path to a file in the file system.  If this succeeds, a new <a class="reference external" href="file:///">file:///</a> bookmark to the file will be created.  The bookmark will be properly URL-quoted and escaped so that it can be opened by the operating system.</p>
+</section>
+<section id="creating-a-new-bookmark-by-hand">
+<h4>Creating A New Bookmark By Hand<a class="headerlink" href="#creating-a-new-bookmark-by-hand" title="Permalink to this heading">¶</a></h4>
+<p>To create a new bookmark by hand, Create a new Leo node where you want, and add a line starting with <em>:title:</em> and another starting with <em>:ref:</em>. Type in the title and URL respectively after the two keywords, with a space after the trailing colon (:).</p>
+<p>You could do this to create a unl: link into another Leo outline.</p>
+</section>
+<section id="finding-bookmarks">
+<h4>Finding Bookmarks<a class="headerlink" href="#finding-bookmarks" title="Permalink to this heading">¶</a></h4>
+<p>This outline includes a small collection of bookmarks for you to play with and follow along with the examples to come.  Screen shots can be opened by CNTL-CLICKing on their links.  They will open in whatever file association the operating system chooses to use.</p>
+<p>Remember that some of these bookmarks are so old that they no longer exist.  This situation will be covered later.</p>
+<section id="the-search-box">
+<h5>The Search Box<a class="headerlink" href="#the-search-box" title="Permalink to this heading">¶</a></h5>
+<p>The search box with its button are marked in this image:</p>
+<img alt="_images/searchbox.png" src="_images/searchbox.png" />
+<p>Type a word or phrase in the search box.  It will be searched for when you click on the <em>Search</em> button or press the &lt;ENTER&gt; key.  The search is not case-sensitive. Normally the TBM will search for each space-separated part of the entry.   So the phrase <em>python literate</em> will find hits on both <em>python</em> and <em>literate</em>.</p>
+<p>To search for the phrase as is - verbatim - surround it with double quotes.</p>
+<p>Normally the search will find hits if the search phrase is contained in the target.  So “pyth” will also find <em>pytho</em>, <em>python</em>, and so on.  To make the TBM find matches to the exact string, prefix it with <em>w:</em> -</p>
+<p><em>w:pyth</em></p>
+<p>This will only find the word <em>pyth</em>.  The exact word prefix, <em>w:</em> can be combined with double quotes.</p>
+</section>
+<section id="search-results">
+<h5>Search Results<a class="headerlink" href="#search-results" title="Permalink to this heading">¶</a></h5>
+<section id="two-kinds-of-search-results">
+<h6>Two Kinds Of Search Results<a class="headerlink" href="#two-kinds-of-search-results" title="Permalink to this heading">¶</a></h6>
+<p>There are two kinds of nodes in a bookmark collection: <em>resources</em> and <em>subjects</em>.  These are described in the <em>Terminology</em> section.  A <em>resource</em> is a node that contains a URL (or UNL).  A <em>subject</em> refers to the concept of <em>subject terms</em>, and can either be what is called an <em>organizing node</em> in Leo, or a flattened path to one, which is called a <em>compound term</em> in the <em>Terminology</em> section.</p>
+<p>Resources and subjects are searched separately.  Resource results are displayed in the <em>Resources</em> tab and subject term results in the <em>Subjects</em> tab.</p>
+</section>
+<section id="an-search-example">
+<h6>An Search Example<a class="headerlink" href="#an-search-example" title="Permalink to this heading">¶</a></h6>
+<p>To begin, type “programming” into the search box (without the quotes), then click on the <em>Search</em> button or press the <em>&lt;Enter&gt;</em> key.  The results will look like the linked image:</p>
+<img alt="_images/search1-resources.png" src="_images/search1-resources.png" />
+<p>Notice that the <em>Resources</em> tab has been focused.  If there had been no resource hits but only subject hits, the <em>Subjects</em> tab would have been focused instead.</p>
+</section>
+<section id="resource-results">
+<h6>Resource Results.<a class="headerlink" href="#resource-results" title="Permalink to this heading">¶</a></h6>
+</section>
+<section id="the-resource-hits">
+<h6>The Resource Hits<a class="headerlink" href="#the-resource-hits" title="Permalink to this heading">¶</a></h6>
+<p>Resource results (the actual bookmarks found) display in a normal typeface, as shown below:</p>
+<img alt="_images/search1-resources-1.png" src="_images/search1-resources-1.png" />
+<p>Clicking on the name of a bookmark will open the link in the system browser or, if it is a “file:” url - pointing to a file on the computer - the operating system will open it.</p>
+<p>Clicking on the question mark <em>(?)</em> will navigate the Leo bookmarks tree to the node for that bookmark. You can make notes, correct typos, or do any other maintenance or editing you want in the body of that node.</p>
+</section>
+<section id="the-boldfaced-subject-terms">
+<h6>The Boldfaced Subject Terms<a class="headerlink" href="#the-boldfaced-subject-terms" title="Permalink to this heading">¶</a></h6>
+<p>The boldfaced lines give the names of the subject terms that the found resources are under.  Notice that one is a simple term and the other is a compound term indicating the flattened hierarchy of the subject terms leading to the resources.  Each step of the boldfaced steps can be clicked on and the tree will navigate to the corresponding node.  This is depicted below:</p>
+<img alt="_images/search1-resources-2.png" src="_images/search1-resources-2.png" />
+<p>For example, clicking on “Python” takes you to the top of the <em>Python</em> tree, and clicking on <em>Techniques</em> takes you to its node - this part of the bookmark tree has the structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Python</span>
+    <span class="o">-</span><span class="n">Techniques</span>
+</pre></div>
+</div>
+<p>This structure has been flattened to <code class="docutils literal notranslate"><span class="pre">Python/Techniques</span></code> in the search results.</p>
+<p><strong>Note</strong> The boldfaced subject headings may or may not include the search phrase - <em>Python/Techniques</em> does not include the phrase <em>programming</em>.  This is because the hits displayed here were found by searching resources, not subjects.</p>
+</section>
+<section id="subject-term-results">
+<h6>Subject Term Results<a class="headerlink" href="#subject-term-results" title="Permalink to this heading">¶</a></h6>
+<p>Now select the <em>Subjects</em> tab.  There are two results, as shown in this screen shot:</p>
+<img alt="_images/search1-subjects.png" src="_images/search1-subjects.png" />
+<p>These results are hits on simple subject nodes that contain the search phrase.  However, there might be several compound  subject terms that match.  Click on one of the results to find out</p>
+<p>In this example, click on <em>Network Programming</em>.  The <em>Related Terms</em> tab will display.</p>
+<p>There is only one result (often there will be several), and it shows the full (flattened) location in the bookmarks tree. This screen shot depicts this view of the bookmarks manager after selecting a subject term:</p>
+<img alt="_images/search1-subjects-1.png" src="_images/search1-subjects-1.png" />
+<p>The word <em>Context</em> refers to the path to the node, which is considered to be the “context” of the bookmark.  In the future other kinds of relationships may be added.</p>
+<p>Click on one of the results (this time there is only one choice).  The display will activate the <em>Resources tab</em> and list all the resources (bookmarks) under that organizing node.  These links will open when clicked.  Here is a screenshot:</p>
+<img alt="_images/search1-subjects-2.png" src="_images/search1-subjects-2.png" />
+<p>In the future, this display will be enhanced to add the <em>(?)</em> links to navigate to the actual bookmark’s node, and to make each step in the “Links For” path clickable.</p>
+</section>
+</section>
+<section id="searching-with-leo-s-search-tools">
+<h5>Searching With Leo’s Search Tools<a class="headerlink" href="#searching-with-leo-s-search-tools" title="Permalink to this heading">¶</a></h5>
+<p>You can also search the bookmark collection using Leo’s own tools.  Let’s compare the results with those of the bookmark manager’s own searches.</p>
+<p>Leo’s <em>Find</em> tab presents hits one at a time, and this is usually not very helpful because it’s usually important to be able to scan through a range of similar hits.  Stepping through one by one is not so helpful.  There is also the <em>find-all</em> command but its listing is hard to read, and ungrouped.</p>
+<p>By contrast, the <em>Nav</em> tab search is quite good.  Open the tab and type the same example search phrase, “programming”.  Do not press the &lt;ENTER&gt; key yet.  Here is a screen shot of the results:</p>
+<img alt="_images/search-1-navtab-1.png" src="_images/search-1-navtab-1.png" />
+<p>The Nav tab shows headlines of all nodes that matched the search phrase, whether they are bookmarks or subject terms.  Compare with the bookmark manager’s Resource tab display:</p>
+<img alt="_images/search1-resources.png" src="_images/search1-resources.png" />
+<p>Next, press the &lt;ENTER&gt; key in the Nav pane. The result is a listing of body lines that match, listed under their headlines in boldface, and all grouped under their nearest organizing node.  Here is a screenshot:</p>
+<img alt="_images/search-1-navtab-2.png" src="_images/search-1-navtab-2.png" />
+<p>These results are fairly useful.  To open a bookmark, we click on its link in the Nav tab to navigate to its node. Then in its node we &lt;CTRL-CLICK&gt; on the URL in the “ref” line to open it.</p>
+<p>Although this is a useful display, the bookmark manager offers these improvements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A less cluttered, more targeted display;</p></li>
+<li><p>Clicking opens the resource in the browser;</p></li>
+<li><p>Harder to navigate to the organizing nodes;</p></li>
+<li><p>Hard to find related subject terms;</p></li>
+<li><p>Harder to scan for results of interest;</p></li>
+<li><p>Harder to notice unexpected results and relationships.</p></li>
+</ul>
+</div></blockquote>
+<p>A search using the Nav panel will also find hits in the bookmark code, scripts, and this documentation material, even though they are not part of the bookmarks collection.</p>
+</section>
+</section>
+<section id="broken-bookmarks">
+<h4>Broken Bookmarks<a class="headerlink" href="#broken-bookmarks" title="Permalink to this heading">¶</a></h4>
+<p>Some bookmarks become unavailable, especially older ones.  Here is how to deal with them.</p>
+<p>A bookmark may not work because it now uses an <em>https</em> URL instead of the original <em>http</em> protocol.  To see if this is the case, navigate to the bookmark’s node and add an “s” to the “http”. TBM has a command to test a bookmark, <em>bk-chk-url</em>.  This command can be run from the <em>Bookmarks/Check Bookmark</em> URL menu item. This is shown in the screenshot:</p>
+<img alt="_images/bk-check.png" src="_images/bk-check.png" />
+<p>If changing to <em>https</em> does not work, then the page might have moved.  You will have to do internet searches to find it.  If you do, you can just edit the URL in the body of the bookmark’s node.  Otherwise you might just as well delete the node.</p>
+</section>
+<section id="commands">
+<h4>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">¶</a></h4>
+<p>The bookmark manager installs some commands that are specific to the bookmark outline.  Their names all start with <em>bk-</em>, so that you can list them all using minibuffer tab completion.  Enter the minibuffer with &lt;CTRL-x&gt; or by clicking in it.  Type “bk-”, then press the &lt;TAB&gt; key.</p>
+<p>Here are the commands:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>bk-chk-url – check a bookmark’s URL.  Available from the <em>Bookmarks</em> menu.</p></li>
+<li><p>bk-count – count the bookmarks and subject terms.  Displays counts in the Log pane.</p></li>
+<li><p>bk-create-bookmark – Create a new bookmark node at the selected tree position.  Available from the <em>Bookmarks</em> menu.</p></li>
+<li><p>bk-delete-tab – close the Bookmarks tab.  It can be reopened, and will keep its state.</p></li>
+<li><p>bk-open-tab – Open the Bookmark tab if close, close it if open.</p></li>
+<li><p>bk-find-latest – list the 30 most recent added bookmarks in the Log pane.</p></li>
+<li><p>bk-open-docs – Open the Sphinx User’s Guide in the browser.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Bookmarks Manager User’s Guide</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#the-tabbed-bookmarks-manager">The Tabbed Bookmarks Manager</a></li>
+<li><a class="reference internal" href="#the-bookmark-search-panel">The Bookmark Search Panel</a></li>
+<li><a class="reference internal" href="#the-bookmarks-tree">The Bookmarks  Tree</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#bookmarks-outline-organization">Bookmarks Outline Organization</a></li>
+<li><a class="reference internal" href="#bookmarks-organization">Bookmarks Organization</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-bookmarks-manager">Using The Bookmarks Manager</a><ul>
+<li><a class="reference internal" href="#basics">Basics</a><ul>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#terminology">Terminology</a></li>
+<li><a class="reference internal" href="#leo-layouts">Leo Layouts</a></li>
+<li><a class="reference internal" href="#importing-bookmarks">Importing Bookmarks</a></li>
+<li><a class="reference internal" href="#saving-a-new-bookmark">Saving A New Bookmark</a></li>
+<li><a class="reference internal" href="#creating-a-new-bookmark-by-hand">Creating A New Bookmark By Hand</a></li>
+<li><a class="reference internal" href="#finding-bookmarks">Finding Bookmarks</a></li>
+<li><a class="reference internal" href="#broken-bookmarks">Broken Bookmarks</a></li>
+<li><a class="reference internal" href="#commands">Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Bookmarks_manager_Users_Guide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Bookmarks Manager User&#39;s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bookmarks Manager User’s Guide</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright .
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>
