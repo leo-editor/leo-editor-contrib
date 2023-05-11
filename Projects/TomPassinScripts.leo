@@ -19,9 +19,9 @@
 <v t="tom.20230509142350.1"><vh>@command tp-outline-from-string</vh></v>
 </v>
 <v t="tom.20230509142550.1"><vh>Indented Lists</vh>
-<v t="tom.20230509142435.1"><vh>@command tp-subtree2indented</vh></v>
-<v t="tom.20230509142444.1"><vh>@command tp-outline2indented</vh></v>
-<v t="tom.20230509142930.1"><vh>@command x-tree-to-indented-list</vh></v>
+<v t="tom.20230511011156.1"><vh>@command tp-subtree2indented</vh></v>
+<v t="tom.20230511011217.1"><vh>@command tp-outline2indented</vh></v>
+<v t="tom.20230511011242.1"><vh>@command x-tree-to-indented-list</vh></v>
 <v t="tom.20230509143603.1"><vh>@command x-outline-to-indented-list</vh></v>
 </v>
 <v t="tom.20230509142632.1"><vh>@command tp-delete-tab-by-name</vh></v>
@@ -187,45 +187,6 @@ p.setDirty()
 u.afterChangeNodeContents(p, undoType, undoData)
 c.redraw()
 </t>
-<t tx="tom.20230509142435.1">@language python
-
-def subtree_to_indented_list(event = None):
-    """Create an indented list for a subtree."""
-    if event:
-        c = event.c
-    p = c.p
-
-    p = c.p
-    tree = p.self_and_subtree()
-
-    indented = ''
-    for x in tree:
-        indent = '   ' * (x.level() - 1)
-        indented += indent + x.v.h + '\n'
-    return indented
-</t>
-<t tx="tom.20230509142444.1">@language python
-TABSIZE = ' ' * 4
-
-def tree_to_indented_list(event = None):
-    """Create an indented list for a subtree, including the body."""
-    global c
-    if event:
-        c = event.c
-    #p = c.p
-    #tree = p.self_and_subtree()
-
-    indented = ''
-    for x in c.all_positions():
-        indent = TABSIZE * (x.level() - 1)
-        indented += indent + x.h + '\n' 
-        indented += indent + '=' * len(x.h) + '\n'
-        body_rows = x.b.split('\n')
-        indented += indent + f'\n{indent}'.join(body_rows) + '\n'
-    #return indented
-
-    g.app.gui.replaceClipboardWith(indented)
-tree_to_indented_list()</t>
 <t tx="tom.20230509142456.1">These commands create new outlines from the current tree or from subtrees of it.</t>
 <t tx="tom.20230509142550.1">These commands create indented lists from trees or subtrees.  Mostly these are just indented lists of the headlines, but "x-outline-to-indented-list" includes noed bodies too.
 
@@ -316,22 +277,6 @@ for n in range(REPS):
 t1 = time.time_ns()
 
 g.es((t1 - t0)/(1e6 * REPS), 'ms per rep', '# positions:', positions )</t>
-<t tx="tom.20230509142930.1">@language python
-
-"""Put an indented list of tree nodes into clipboard.
-
-The list includes the selected node and its subtree.
-Only the headlines aare copied.
-"""
-p = c.p
-tree = p.self_and_subtree()
-
-indented = ''
-for x in tree:
-    indent = '   ' * (x.level() - 1)
-    indented += indent + x.v.h + '\n'
-g.app.gui.replaceClipboardWith(indented)
-</t>
 <t tx="tom.20230509143603.1">@language python
 """Place indented list for a subtree, including the bodies, in clipboard."""
 
@@ -418,5 +363,64 @@ else:
 <t tx="tom.20230509143801.1">c.executeMinibufferCommand('vr3-toggle-tab')
 </t>
 <t tx="tom.20230509143810.1">c.executeMinibufferCommand('execute-external-file')</t>
+<t tx="tom.20230511011156.1">@language python
+
+"""Put an indented list of tree nodes into clipboard.
+
+The list includes the selected node and its subtree.
+Only the headlines are copied.
+"""
+TABSIZE = ' ' * 4
+
+p = c.p
+tree = p.self_and_subtree()
+
+indented = ''
+level0 = p.level()
+for x in tree:
+    indent = TABSIZE * (x.level() - level0)
+    indented += indent + x.v.h + '\n'
+
+g.app.gui.replaceClipboardWith(indented)
+</t>
+<t tx="tom.20230511011217.1">@language python
+
+"""Create an indented list for a subtree, including the body."""
+TABSIZE = ' ' * 4
+
+p = c.p
+tree = p.self_and_subtree()
+
+indented = ''
+level0 = p.level()
+for x in tree:
+    indent = TABSIZE * (x.level() - level0)
+    indented += indent + x.h + '\n' 
+    indented += indent + '=' * len(x.h) + '\n'
+    body_rows = x.b.split('\n')
+    indented += indent + f'\n{indent}'.join(body_rows) + '\n'
+#return indented
+
+g.app.gui.replaceClipboardWith(indented)
+</t>
+<t tx="tom.20230511011242.1">@language python
+
+"""Put an indented list of tree nodes into clipboard.
+
+The list includes the selected node and its subtree.
+Only the headlines are copied.
+"""
+TABSIZE = ' ' * 4
+
+p = c.p
+tree = p.self_and_subtree()
+
+indented = ''
+level0 = p.level()
+for x in tree:
+    indent = TABSIZE * (x.level() - level0)
+    indented += indent + x.v.h + '\n'
+g.app.gui.replaceClipboardWith(indented)
+</t>
 </tnodes>
 </leo_file>
