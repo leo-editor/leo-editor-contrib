@@ -330,7 +330,7 @@ direc = osp.normpath(direc)
 
 if g.os_path_exists(direc):
     if g.isWindows:
-        cmd = 'start cmd.exe'
+        cmd = f'start cmd.exe /K "cd {direc}"'
         run(cmd, shell=True)
     else:
         cmd = 'x-terminal-emulator'
