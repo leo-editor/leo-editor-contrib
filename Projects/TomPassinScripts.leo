@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: https://leo-editor.github.io/leo-editor/leo_toc.html -->
-<leo_file xmlns:leo="http://leo-editor.github.io/leo-editor/namespaces/leo-python-editor/1.1" >
+<leo_file xmlns:leo="https://leo-editor.github.io/leo-editor/namespaces/leo-python-editor/1.1" >
 <leo_header file_format="2"/>
 <globals/>
 <preferences/>
@@ -298,45 +298,44 @@ g.app.gui.replaceClipboardWith(text)
 <t tx="tom.20230509143713.1">@language python
 """Open directory for a node, respecting any @path directives and "~"."""
 
-import os
+from pathlib import Path
 from subprocess import run
 
-pth = g.fullPath(c, p)
-if pth:
-    direc, _ = os.path.split(pth)
+pth = Path(c.fullPath(p))
+if pth.exists():
+    if pth.is_file():
+        direc = pth.parent
+    else:
+        direc = pth
 else:
-    direc = g.scanAllAtPathDirectives(c, p)
-direc = os.path.normpath(direc)
+    direc = Path(g.scanAllAtPathDirectives(c, p))
 
-if g.os_path_exists(direc):
+if direc:
+    normdir = str(direc.resolve())
     term = 'explorer.exe' if g.isWindows else 'xdg-open'
     run([term, direc])
-else:
-    g.es(f"Path {direc} doesn't exist")
-</t>
-<t tx="tom.20230509143740.1">@language python
-"""Open command window at current directory. Expands "~"."""
 
-import os.path as osp
-from subprocess import run
-
-pth = g.fullPath(c, p)
-if pth:
-    direc, _ = osp.split(pth)
-else:
-    direc = g.scanAllAtPathDirectives(c, p)
-
-direc = osp.normpath(direc)
-
-if g.os_path_exists(direc):
-    if g.isWindows:
-        cmd = f'start cmd.exe /K "cd {direc}"'
-        run(cmd, shell=True)
-    else:
-        cmd = 'x-terminal-emulator'
-        run(cmd, cwd=direc)
 else:
     g.es(f"Path {direc} doesn't exist", color='red')
+</t>
+<t tx="tom.20230509143740.1">@language python
+"""Open command window at current directory."""
+
+from pathlib import Path
+
+pth = Path(c.fullPath(p))
+if pth.exists():
+    if pth.is_file():
+        direc = pth.parent
+    else:
+        direc = pth
+else:
+    direc = Path(g.scanAllAtPathDirectives(c, p))
+
+if direc:
+    g.app.gui.replaceClipboardWith(str(direc))
+else:
+    g.es(f"Path {direc} doesn't exist")
 </t>
 <t tx="tom.20230509143747.1">@language python
 """Copy the path of the current node to the clipboard.
