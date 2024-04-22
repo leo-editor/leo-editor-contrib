@@ -6,10 +6,12 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20240131003855.1"><vh>Python3.12/Lib/site-packages/pyflakes</vh>
+<v t="ekr.20240306055458.1"><vh>@button backup</vh></v>
+<v t="ekr.20240306055659.1"><vh>Notes</vh></v>
+<v t="ekr.20240131003855.1"><vh>@path C:\Python\Python3.12/Lib/site-packages</vh>
 <v t="ekr.20240131003855.2"><vh>pyflakes/__init__.py</vh></v>
 <v t="ekr.20240131003855.3"><vh>pyflakes/__main__.py</vh></v>
-<v t="ekr.20240131003855.4"><vh>pyflakes/api.py</vh>
+<v t="ekr.20240131003855.4"><vh>@clean pyflakes/api.py</vh>
 <v t="ekr.20240131003855.5"><vh>function: check</vh></v>
 <v t="ekr.20240131003855.6"><vh>function: checkPath</vh></v>
 <v t="ekr.20240131003855.7"><vh>function: isPythonFile</vh></v>
@@ -19,7 +21,7 @@
 <v t="ekr.20240131003855.11"><vh>function: _get_version</vh></v>
 <v t="ekr.20240131003855.12"><vh>function: main</vh></v>
 </v>
-<v t="ekr.20240131003855.240"><vh>pyflakes/reporter.py</vh>
+<v t="ekr.20240131003855.240"><vh>@clean pyflakes/reporter.py</vh>
 <v t="ekr.20240131003855.241"><vh>class Reporter</vh>
 <v t="ekr.20240131003855.242"><vh>Reporter.__init__</vh></v>
 <v t="ekr.20240131003855.243"><vh>Reporter.unexpectedError</vh></v>
@@ -28,7 +30,7 @@
 </v>
 <v t="ekr.20240131003855.246"><vh>function: _makeDefaultReporter</vh></v>
 </v>
-<v t="ekr.20240131003855.165"><vh>pyflakes/messages.py</vh>
+<v t="ekr.20240131003855.165"><vh>@clean pyflakes/messages.py</vh>
 <v t="ekr.20240131003855.166"><vh>class Message</vh>
 <v t="ekr.20240131003855.167"><vh>Message.__init__</vh></v>
 <v t="ekr.20240131003855.168"><vh>Message.__str__</vh></v>
@@ -132,7 +134,7 @@
 <v t="ekr.20240131003855.239"><vh>class PercentFormatStarRequiresSequence</vh></v>
 </v>
 </v>
-<v t="ekr.20240131003855.13"><vh>pyflakes/checker.py</vh>
+<v t="ekr.20240131003855.13"><vh>@clean C:\Python\Python3.12\Lib\site-packages\pyflakes\checker.py</vh>
 <v t="ekr.20240131004408.1"><vh>&lt;&lt; imports: checker.py &gt;&gt;</vh></v>
 <v t="ekr.20240131005639.1"><vh>predicate functions</vh>
 <v t="ekr.20240131003855.14"><vh>function: getAlternatives</vh></v>
@@ -344,6 +346,8 @@
         # It's also possible the signal is defined, but then it's invalid. In
         # this case, signal.signal raises ValueError.
         pass
+
+
 </t>
 <t tx="ekr.20240131003855.101">@property
 def annotationsFutureEnabled(self):
@@ -357,10 +361,12 @@ def annotationsFutureEnabled(self, value):
     assert value is True
     assert isinstance(self.scope, ModuleScope)
     self.scope._annotations_future_enabled = True
+
 </t>
 <t tx="ekr.20240131003855.103">@property
 def scope(self):
     return self.scopeStack[-1]
+
 </t>
 <t tx="ekr.20240131003855.104">@contextlib.contextmanager
 def in_scope(self, cls):
@@ -369,6 +375,7 @@ def in_scope(self, cls):
         yield
     finally:
         self.deadScopes.append(self.scopeStack.pop())
+
 </t>
 <t tx="ekr.20240131003855.105">def checkDeadScopes(self):
     """
@@ -435,9 +442,11 @@ def in_scope(self, cls):
                     else:
                         messg = messages.RedefinedWhileUnused
                     self.report(messg, node, value.name, value.source)
+
 </t>
 <t tx="ekr.20240131003855.106">def report(self, messageClass, *args, **kwargs):
     self.messages.append(messageClass(self.filename, *args, **kwargs))
+
 </t>
 <t tx="ekr.20240131003855.107">def getParent(self, node):
     # Lookup the first parent which is not Tuple, List or Starred
@@ -445,6 +454,7 @@ def in_scope(self, cls):
         node = node._pyflakes_parent
         if not hasattr(node, 'elts') and not hasattr(node, 'ctx'):
             return node
+
 </t>
 <t tx="ekr.20240131003855.108">def getCommonAncestor(self, lnode, rnode, stop):
     if (
@@ -467,12 +477,14 @@ def in_scope(self, cls):
         rnode._pyflakes_parent,
         stop,
     )
+
 </t>
 <t tx="ekr.20240131003855.109">def descendantOf(self, node, ancestors, stop):
     for a in ancestors:
         if self.getCommonAncestor(node, a, stop):
             return True
     return False
+
 </t>
 <t tx="ekr.20240131003855.11">def _get_version():
     """
@@ -480,6 +492,8 @@ def in_scope(self, cls):
     """
     return ('%s Python %s on %s' %
             (__version__, platform.python_version(), platform.system()))
+
+
 </t>
 <t tx="ekr.20240131003855.110">def _getAncestor(self, node, ancestor_type):
     parent = node
@@ -489,9 +503,11 @@ def in_scope(self, cls):
         parent = self.getParent(parent)
         if isinstance(parent, ancestor_type):
             return parent
+
 </t>
 <t tx="ekr.20240131003855.111">def getScopeNode(self, node):
     return self._getAncestor(node, tuple(Checker._ast_node_scope.keys()))
+
 </t>
 <t tx="ekr.20240131003855.112">def differentForks(self, lnode, rnode):
     """True, if lnode and rnode are located on different forks of IF/TRY"""
@@ -503,6 +519,7 @@ def in_scope(self, cls):
                self.descendantOf(rnode, items, ancestor):
                 return True
     return False
+
 </t>
 <t tx="ekr.20240131003855.113">def addBinding(self, node, value):
     """
@@ -552,6 +569,7 @@ def in_scope(self, cls):
         ):
             cur_scope_pos -= 1
         self.scopeStack[cur_scope_pos][value.name] = value
+
 </t>
 <t tx="ekr.20240131003855.114">def _unknown_handler(self, node):
     # this environment variable configures whether to error on unknown
@@ -568,17 +586,18 @@ def in_scope(self, cls):
         raise NotImplementedError(f'Unexpected type: {type(node)}')
     else:
         self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.115">def getNodeHandler(self, node_class):
     try:
         return self._nodeHandlers[node_class]
     except KeyError:
         nodeType = node_class.__name__.upper()
-    # EKR: Add the uppercase handler name to self._nodeHandlers.
     self._nodeHandlers[node_class] = handler = getattr(
         self, nodeType, self._unknown_handler,
     )
     return handler
+
 </t>
 <t tx="ekr.20240131003855.116">def handleNodeLoad(self, node, parent):
     name = getNodeName(node)
@@ -663,6 +682,7 @@ def in_scope(self, cls):
     # protected with a NameError handler?
     if 'NameError' not in self.exceptHandlers[-1]:
         self.report(messages.UndefinedName, node, name)
+
 </t>
 <t tx="ekr.20240131003855.117">def handleNodeStore(self, node):
     name = getNodeName(node)
@@ -705,6 +725,7 @@ def in_scope(self, cls):
     else:
         binding = Assignment(name, node)
     self.addBinding(node, binding)
+
 </t>
 <t tx="ekr.20240131003855.118">def handleNodeDelete(self, node):
 
@@ -735,6 +756,7 @@ def in_scope(self, cls):
             del self.scope[name]
         except KeyError:
             self.report(messages.UndefinedName, node, name)
+
 </t>
 <t tx="ekr.20240131003855.119">@contextlib.contextmanager
 def _enter_annotation(self, ann_type=AnnotationState.BARE):
@@ -743,6 +765,7 @@ def _enter_annotation(self, ann_type=AnnotationState.BARE):
         yield
     finally:
         self._in_annotation = orig
+
 </t>
 <t tx="ekr.20240131003855.12">def main(prog=None, args=None):
     """Entry point for the script "pyflakes"."""
@@ -771,10 +794,12 @@ def _in_postponed_annotation(self):
         self._in_annotation == AnnotationState.STRING or
         self.annotationsFutureEnabled
     )
+
 </t>
 <t tx="ekr.20240131003855.121">def handleChildren(self, tree, omit=None):
     for node in iter_child_nodes(tree, omit=omit):
         self.handleNode(node, tree)
+
 </t>
 <t tx="ekr.20240131003855.122">def isLiteralTupleUnpacking(self, node):
     if isinstance(node, ast.Assign):
@@ -782,6 +807,7 @@ def _in_postponed_annotation(self):
             if not hasattr(child, 'elts'):
                 return False
         return True
+
 </t>
 <t tx="ekr.20240131003855.123">def isDocstring(self, node):
     """
@@ -793,6 +819,7 @@ def _in_postponed_annotation(self):
         isinstance(node.value, ast.Constant) and
         isinstance(node.value.value, str)
     )
+
 </t>
 <t tx="ekr.20240131003855.124">def getDocstring(self, node):
     if (
@@ -803,6 +830,7 @@ def _in_postponed_annotation(self):
         return node.value.value, node.lineno - 1
     else:
         return None, None
+
 </t>
 <t tx="ekr.20240131003855.125">def handleNode(self, node, parent):
     if node is None:
@@ -825,6 +853,7 @@ def _in_postponed_annotation(self):
         handler(node)
     finally:
         self.nodeDepth -= 1
+
 </t>
 <t tx="ekr.20240131003855.126">_getDoctestExamples = doctest.DocTestParser().get_examples
 
@@ -859,6 +888,7 @@ def handleDoctests(self, node):
                 self.handleChildren(tree)
                 self.offset = node_offset
     self.scopeStack = saved_stack
+
 </t>
 <t tx="ekr.20240131003855.127">@in_string_annotation
 def handleStringAnnotation(self, s, node, ref_lineno, ref_col_offset, err):
@@ -883,10 +913,12 @@ def handleStringAnnotation(self, s, node, ref_lineno, ref_col_offset, err):
             descendant.col_offset = ref_col_offset
 
     self.handleNode(parsed_annotation, node)
+
 </t>
 <t tx="ekr.20240131003855.128">def handle_annotation_always_deferred(self, annotation, parent):
     fn = in_annotation(Checker.handleNode)
     self.deferFunction(lambda: fn(self, annotation, parent))
+
 </t>
 <t tx="ekr.20240131003855.129">@in_annotation
 def handleAnnotation(self, annotation, node):
@@ -907,6 +939,7 @@ def handleAnnotation(self, annotation, node):
         self.handle_annotation_always_deferred(annotation, node)
     else:
         self.handleNode(annotation, node)
+
 </t>
 <t tx="ekr.20240131003855.13">"""
 Main module.
@@ -929,6 +962,7 @@ parse_format_string = string.Formatter().parse
 </t>
 <t tx="ekr.20240131003855.130">def ignore(self, node):
     pass
+
 </t>
 <t tx="ekr.20240131003855.131"># "stmt" type nodes
 DELETE = FOR = ASYNCFOR = WHILE = WITH = WITHITEM = ASYNCWITH = \
@@ -977,6 +1011,7 @@ def SUBSCRIPT(self, node):
                 self.handleChildren(node)
         else:
             self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.132">def _handle_string_dot_format(self, node):
     try:
@@ -1092,6 +1127,7 @@ def SUBSCRIPT(self, node):
             node,
             ', '.join(sorted(str(x) for x in missing_arguments)),
         )
+
 </t>
 <t tx="ekr.20240131003855.133">def CALL(self, node):
     if (
@@ -1175,6 +1211,7 @@ def SUBSCRIPT(self, node):
                 self.handleNode(annotated_node, node)
     else:
         self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.134">def _handle_percent_format(self, node):
     try:
@@ -1281,6 +1318,7 @@ def SUBSCRIPT(self, node):
                 node,
                 ', '.join(sorted(missing_keys)),
             )
+
 </t>
 <t tx="ekr.20240131003855.135">def BINOP(self, node):
     if (
@@ -1290,6 +1328,7 @@ def SUBSCRIPT(self, node):
     ):
         self._handle_percent_format(node)
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.136">def CONSTANT(self, node):
     if isinstance(node.value, str) and self._in_annotation:
@@ -1302,6 +1341,7 @@ def SUBSCRIPT(self, node):
             messages.ForwardAnnotationSyntaxError,
         )
         self.deferFunction(fn)
+
 </t>
 <t tx="ekr.20240131003855.137"># "slice" type nodes
 SLICE = EXTSLICE = INDEX = handleChildren
@@ -1327,6 +1367,7 @@ def RAISE(self, node):
     elif is_notimplemented_name_node(arg):
         # Handle "raise NotImplemented"
         self.report(messages.RaiseNotImplemented, node)
+
 </t>
 <t tx="ekr.20240131003855.138"># additional node types
 COMPREHENSION = KEYWORD = FORMATTEDVALUE = handleChildren
@@ -1347,6 +1388,7 @@ def JOINEDSTR(self, node):
         self.handleChildren(node)
     finally:
         self._in_fstring = orig
+
 </t>
 <t tx="ekr.20240131003855.139">def DICT(self, node):
     # Complain if there are duplicate keys with different values
@@ -1383,6 +1425,7 @@ def JOINEDSTR(self, node):
                         key,
                     )
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.14">def getAlternatives(n):
     if isinstance(n, ast.If):
@@ -1391,11 +1434,14 @@ def JOINEDSTR(self, node):
         return [n.body + n.orelse] + [[hdl] for hdl in n.handlers]
     elif sys.version_info &gt;= (3, 10) and isinstance(n, ast.Match):
         return [mc.body for mc in n.cases]
+
+
 </t>
 <t tx="ekr.20240131003855.140">def IF(self, node):
     if isinstance(node.test, ast.Tuple) and node.test.elts != []:
         self.report(messages.IfTuple, node)
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.141">IFEXP = IF
 
@@ -1403,6 +1449,7 @@ def ASSERT(self, node):
     if isinstance(node.test, ast.Tuple) and node.test.elts != []:
         self.report(messages.AssertTuple, node)
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.142">def GLOBAL(self, node):
     """
@@ -1433,12 +1480,14 @@ def ASSERT(self, node):
             node_value.used = (global_scope, node)
             for scope in self.scopeStack[global_scope_index + 1:]:
                 scope[node_name] = node_value
+
 </t>
 <t tx="ekr.20240131003855.143">NONLOCAL = GLOBAL
 
 def GENERATOREXP(self, node):
     with self.in_scope(GeneratorScope):
         self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.144">LISTCOMP = DICTCOMP = SETCOMP = GENERATOREXP
 
@@ -1460,6 +1509,7 @@ def NAME(self, node):
     else:
         # Unknown context
         raise RuntimeError(f"Got impossible expression context: {node.ctx!r}")
+
 </t>
 <t tx="ekr.20240131003855.145">def CONTINUE(self, node):
     # Walk the tree up until we see a loop (OK), a function or class
@@ -1478,6 +1528,7 @@ def NAME(self, node):
         self.report(messages.ContinueOutsideLoop, node)
     else:  # ast.Break
         self.report(messages.BreakOutsideLoop, node)
+
 </t>
 <t tx="ekr.20240131003855.146">BREAK = CONTINUE
 
@@ -1493,6 +1544,7 @@ def RETURN(self, node):
     ):
         self.scope.returnValue = node.value
     self.handleNode(node.value, node)
+
 </t>
 <t tx="ekr.20240131003855.147">def YIELD(self, node):
     if isinstance(self.scope, (ClassScope, ModuleScope)):
@@ -1500,6 +1552,7 @@ def RETURN(self, node):
         return
 
     self.handleNode(node.value, node)
+
 </t>
 <t tx="ekr.20240131003855.148">AWAIT = YIELDFROM = YIELD
 
@@ -1517,6 +1570,7 @@ def FUNCTIONDEF(self, node):
             not self._in_doctest() and
             not isinstance(self.scope, FunctionScope)):
         self.deferFunction(lambda: self.handleDoctests(node))
+
 </t>
 <t tx="ekr.20240131003855.149">ASYNCFUNCTIONDEF = FUNCTIONDEF
 
@@ -1564,6 +1618,7 @@ def LAMBDA(self, node):
             )
 
     self.deferFunction(runFunction)
+
 </t>
 <t tx="ekr.20240131003855.15">FOR_TYPES = (ast.For, ast.AsyncFor)
 
@@ -1573,12 +1628,16 @@ def _is_singleton(node):  # type: (ast.AST) -&gt; bool
         isinstance(node, ast.Constant) and
         isinstance(node.value, (bool, type(Ellipsis), type(None)))
     )
+
+
 </t>
 <t tx="ekr.20240131003855.150">def ARGUMENTS(self, node):
     self.handleChildren(node, omit=('defaults', 'kw_defaults'))
+
 </t>
 <t tx="ekr.20240131003855.151">def ARG(self, node):
     self.addBinding(node, Argument(node.arg, self.getScopeNode(node)))
+
 </t>
 <t tx="ekr.20240131003855.152">def CLASSDEF(self, node):
     """
@@ -1605,11 +1664,13 @@ def _is_singleton(node):  # type: (ast.AST) -&gt; bool
                 self.handleNode(stmt, node)
 
     self.addBinding(node, ClassDefinition(node.name, node))
+
 </t>
 <t tx="ekr.20240131003855.153">def AUGASSIGN(self, node):
     self.handleNodeLoad(node.target, node)
     self.handleNode(node.value, node)
     self.handleNode(node.target, node)
+
 </t>
 <t tx="ekr.20240131003855.154">def TUPLE(self, node):
     if isinstance(node.ctx, ast.Store):
@@ -1633,6 +1694,7 @@ def _is_singleton(node):  # type: (ast.AST) -&gt; bool
         if star_loc &gt;= 1 &lt;&lt; 8 or len(node.elts) - star_loc - 1 &gt;= 1 &lt;&lt; 24:
             self.report(messages.TooManyExpressionsInStarredAssignment, node)
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.155">LIST = TUPLE
 
@@ -1644,6 +1706,7 @@ def IMPORT(self, node):
             name = alias.asname or alias.name
             importation = Importation(name, node, alias.name)
         self.addBinding(node, importation)
+
 </t>
 <t tx="ekr.20240131003855.156">def IMPORTFROM(self, node):
     if node.module == '__future__':
@@ -1676,6 +1739,7 @@ def IMPORT(self, node):
             importation = ImportationFrom(name, node,
                                           module, alias.name)
         self.addBinding(node, importation)
+
 </t>
 <t tx="ekr.20240131003855.157">def TRY(self, node):
     handler_names = []
@@ -1696,6 +1760,7 @@ def IMPORT(self, node):
     self.exceptHandlers.pop()
     # Process the other nodes: "except:", "else:", "finally:"
     self.handleChildren(node, omit='body')
+
 </t>
 <t tx="ekr.20240131003855.158">TRYSTAR = TRY
 
@@ -1743,6 +1808,7 @@ def EXCEPTHANDLER(self, node):
     # Restore.
     if prev_definition:
         self.scope[node.name] = prev_definition
+
 </t>
 <t tx="ekr.20240131003855.159">def ANNASSIGN(self, node):
     self.handleAnnotation(node.annotation, node)
@@ -1754,12 +1820,15 @@ def EXCEPTHANDLER(self, node):
         else:
             self.handleNode(node.value, node)
     self.handleNode(node.target, node)
+
 </t>
 <t tx="ekr.20240131003855.16">def _is_tuple_constant(node):  # type: (ast.AST) -&gt; bool
     return (
         isinstance(node, ast.Tuple) and
         all(_is_constant(elt) for elt in node.elts)
     )
+
+
 </t>
 <t tx="ekr.20240131003855.160">def COMPARE(self, node):
     left = node.left
@@ -1774,6 +1843,7 @@ def EXCEPTHANDLER(self, node):
         left = right
 
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.161">MATCH = MATCH_CASE = MATCHCLASS = MATCHOR = MATCHSEQUENCE = handleChildren
 MATCHSINGLETON = MATCHVALUE = handleChildren
@@ -1781,6 +1851,7 @@ MATCHSINGLETON = MATCHVALUE = handleChildren
 def _match_target(self, node):
     self.handleNodeStore(node)
     self.handleChildren(node)
+
 </t>
 <t tx="ekr.20240131003855.162">MATCHAS = MATCHMAPPING = MATCHSTAR = _match_target
 
@@ -1792,10 +1863,14 @@ def _type_param_scope(self, node):
             for param in node.type_params:
                 self.handleNode(param, node)
         yield
+
 </t>
 <t tx="ekr.20240131003855.163">def TYPEVAR(self, node):
     self.handleNodeStore(node)
     self.handle_annotation_always_deferred(node.bound, node)
+
+PARAMSPEC = TYPEVARTUPLE = handleNodeStore
+
 </t>
 <t tx="ekr.20240131003855.164">def TYPEALIAS(self, node):
     self.handleNode(node.name, node)
@@ -1821,22 +1896,29 @@ def __init__(self, filename, loc):
     self.filename = filename
     self.lineno = loc.lineno
     self.col = loc.col_offset
+
 </t>
 <t tx="ekr.20240131003855.168">def __str__(self):
     return '{}:{}:{}: {}'.format(self.filename, self.lineno, self.col+1,
                                  self.message % self.message_args)
+
+
 </t>
 <t tx="ekr.20240131003855.169">class UnusedImport(Message):
     @others
 </t>
 <t tx="ekr.20240131003855.17">def _is_constant(node):
     return isinstance(node, ast.Constant) or _is_tuple_constant(node)
+
+
 </t>
 <t tx="ekr.20240131003855.170">message = '%r imported but unused'
 
 def __init__(self, filename, loc, name):
     Message.__init__(self, filename, loc)
     self.message_args = (name,)
+
+
 </t>
 <t tx="ekr.20240131003855.171">class RedefinedWhileUnused(Message):
     @others
@@ -1846,6 +1928,8 @@ def __init__(self, filename, loc, name):
 def __init__(self, filename, loc, name, orig_loc):
     Message.__init__(self, filename, loc)
     self.message_args = (name, orig_loc.lineno)
+
+
 </t>
 <t tx="ekr.20240131003855.173">class ImportShadowedByLoopVar(Message):
     @others
@@ -1855,6 +1939,8 @@ def __init__(self, filename, loc, name, orig_loc):
 def __init__(self, filename, loc, name, orig_loc):
     Message.__init__(self, filename, loc)
     self.message_args = (name, orig_loc.lineno)
+
+
 </t>
 <t tx="ekr.20240131003855.175">class ImportStarNotPermitted(Message):
     @others
@@ -1864,6 +1950,8 @@ def __init__(self, filename, loc, name, orig_loc):
 def __init__(self, filename, loc, modname):
     Message.__init__(self, filename, loc)
     self.message_args = (modname,)
+
+
 </t>
 <t tx="ekr.20240131003855.177">class ImportStarUsed(Message):
     @others
@@ -1873,18 +1961,24 @@ def __init__(self, filename, loc, modname):
 def __init__(self, filename, loc, modname):
     Message.__init__(self, filename, loc)
     self.message_args = (modname,)
+
+
 </t>
 <t tx="ekr.20240131003855.179">class ImportStarUsage(Message):
     @others
 </t>
 <t tx="ekr.20240131003855.18">def _is_const_non_singleton(node):  # type: (ast.AST) -&gt; bool
     return _is_constant(node) and not _is_singleton(node)
+
+
 </t>
 <t tx="ekr.20240131003855.180">message = "%r may be undefined, or defined from star imports: %s"
 
 def __init__(self, filename, loc, name, from_list):
     Message.__init__(self, filename, loc)
     self.message_args = (name, from_list)
+
+
 </t>
 <t tx="ekr.20240131003855.181">class UndefinedName(Message):
     @others
@@ -1894,6 +1988,8 @@ def __init__(self, filename, loc, name, from_list):
 def __init__(self, filename, loc, name):
     Message.__init__(self, filename, loc)
     self.message_args = (name,)
+
+
 </t>
 <t tx="ekr.20240131003855.183">class DoctestSyntaxError(Message):
     @others
@@ -1905,6 +2001,8 @@ def __init__(self, filename, loc, position=None):
     if position:
         (self.lineno, self.col) = position
     self.message_args = ()
+
+
 </t>
 <t tx="ekr.20240131003855.185">class UndefinedExport(Message):
     @others
@@ -1914,6 +2012,8 @@ def __init__(self, filename, loc, position=None):
 def __init__(self, filename, loc, name):
     Message.__init__(self, filename, loc)
     self.message_args = (name,)
+
+
 </t>
 <t tx="ekr.20240131003855.187">class UndefinedLocal(Message):
     @others
@@ -1931,6 +2031,8 @@ def __init__(self, filename, loc, name, orig_loc):
     else:
         self.message = self.message.format(self.default)
         self.message_args = (name, orig_loc.lineno)
+
+
 </t>
 <t tx="ekr.20240131003855.189">class DuplicateArgument(Message):
     @others
@@ -1940,12 +2042,16 @@ def __init__(self, filename, loc, name, orig_loc):
         (isinstance(node, ast.Name) and node.id == name) or
         (isinstance(node, ast.Attribute) and node.attr == name)
     )
+
+
 </t>
 <t tx="ekr.20240131003855.190">message = 'duplicate argument %r in function definition'
 
 def __init__(self, filename, loc, name):
     Message.__init__(self, filename, loc)
     self.message_args = (name,)
+
+
 </t>
 <t tx="ekr.20240131003855.191">class MultiValueRepeatedKeyLiteral(Message):
     @others
@@ -1955,6 +2061,8 @@ def __init__(self, filename, loc, name):
 def __init__(self, filename, loc, key):
     Message.__init__(self, filename, loc)
     self.message_args = (key,)
+
+
 </t>
 <t tx="ekr.20240131003855.193">class MultiValueRepeatedKeyVariable(Message):
     @others
@@ -1964,9 +2072,13 @@ def __init__(self, filename, loc, key):
 def __init__(self, filename, loc, key):
     Message.__init__(self, filename, loc)
     self.message_args = (key,)
+
+
 </t>
 <t tx="ekr.20240131003855.195">class LateFutureImport(Message):
     message = 'from __future__ imports must occur at the beginning of the file'
+
+
 </t>
 <t tx="ekr.20240131003855.196">class FutureFeatureNotDefined(Message):
     """An undefined __future__ feature name was imported."""
@@ -1977,6 +2089,8 @@ def __init__(self, filename, loc, key):
 def __init__(self, filename, loc, name):
     Message.__init__(self, filename, loc)
     self.message_args = (name,)
+
+
 </t>
 <t tx="ekr.20240131003855.198">class UnusedVariable(Message):
     """
@@ -1990,6 +2104,8 @@ def __init__(self, filename, loc, name):
 def __init__(self, filename, loc, names):
     Message.__init__(self, filename, loc)
     self.message_args = (names,)
+
+
 </t>
 <t tx="ekr.20240131003855.2">__version__ = '3.1.0'
 @language python
@@ -2008,6 +2124,8 @@ def _must_match(regex, string, pos):
     match = regex.match(string, pos)
     assert match is not None
     return match
+
+
 </t>
 <t tx="ekr.20240131003855.200">class UnusedAnnotation(Message):
     """
@@ -2021,18 +2139,24 @@ def _must_match(regex, string, pos):
 def __init__(self, filename, loc, names):
     Message.__init__(self, filename, loc)
     self.message_args = (names,)
+
+
 </t>
 <t tx="ekr.20240131003855.202">class ReturnOutsideFunction(Message):
     """
     Indicates a return statement outside of a function/method.
     """
     message = '\'return\' outside function'
+
+
 </t>
 <t tx="ekr.20240131003855.203">class YieldOutsideFunction(Message):
     """
     Indicates a yield or yield from statement outside of a function/method.
     """
     message = '\'yield\' outside function'
+
+
 </t>
 <t tx="ekr.20240131003855.204"># For whatever reason, Python gives different error messages for these two. We
 # match the Python error message exactly.
@@ -2041,36 +2165,48 @@ class ContinueOutsideLoop(Message):
     Indicates a continue statement outside of a while or for loop.
     """
     message = '\'continue\' not properly in loop'
+
+
 </t>
 <t tx="ekr.20240131003855.205">class BreakOutsideLoop(Message):
     """
     Indicates a break statement outside of a while or for loop.
     """
     message = '\'break\' outside loop'
+
+
 </t>
 <t tx="ekr.20240131003855.206">class DefaultExceptNotLast(Message):
     """
     Indicates an except: block as not the last exception handler.
     """
     message = 'default \'except:\' must be last'
+
+
 </t>
 <t tx="ekr.20240131003855.207">class TwoStarredExpressions(Message):
     """
     Two or more starred expressions in an assignment (a, *b, *c = d).
     """
     message = 'two starred expressions in assignment'
+
+
 </t>
 <t tx="ekr.20240131003855.208">class TooManyExpressionsInStarredAssignment(Message):
     """
     Too many expressions in an assignment with star-unpacking
     """
     message = 'too many expressions in star-unpacking assignment'
+
+
 </t>
 <t tx="ekr.20240131003855.209">class IfTuple(Message):
     """
     Conditional test is a non-empty tuple literal, which are always True.
     """
     message = '\'if tuple literal\' is always true, perhaps remove accidental comma?'
+
+
 </t>
 <t tx="ekr.20240131003855.21">def parse_percent_format(s):
     """Parses the string component of a `'...' % ...` format call
@@ -2134,12 +2270,16 @@ class ContinueOutsideLoop(Message):
             raise ValueError('end-of-string while parsing format')
 
     return tuple(_parse_inner())
+
+
 </t>
 <t tx="ekr.20240131003855.210">class AssertTuple(Message):
     """
     Assertion test is a non-empty tuple literal, which are always True.
     """
     message = 'assertion is always true, perhaps remove parentheses?'
+
+
 </t>
 <t tx="ekr.20240131003855.211">class ForwardAnnotationSyntaxError(Message):
     @others
@@ -2149,18 +2289,28 @@ class ContinueOutsideLoop(Message):
 def __init__(self, filename, loc, annotation):
     Message.__init__(self, filename, loc)
     self.message_args = (annotation,)
+
+
 </t>
 <t tx="ekr.20240131003855.213">class RaiseNotImplemented(Message):
     message = "'raise NotImplemented' should be 'raise NotImplementedError'"
+
+
 </t>
 <t tx="ekr.20240131003855.214">class InvalidPrintSyntax(Message):
     message = 'use of &gt;&gt; is invalid with print function'
+
+
 </t>
 <t tx="ekr.20240131003855.215">class IsLiteral(Message):
     message = 'use ==/!= to compare constant literals (str, bytes, int, float, tuple)'
+
+
 </t>
 <t tx="ekr.20240131003855.216">class FStringMissingPlaceholders(Message):
     message = 'f-string is missing placeholders'
+
+
 </t>
 <t tx="ekr.20240131003855.217">class StringDotFormatExtraPositionalArguments(Message):
     @others
@@ -2170,12 +2320,15 @@ def __init__(self, filename, loc, annotation):
 def __init__(self, filename, loc, extra_positions):
     Message.__init__(self, filename, loc)
     self.message_args = (extra_positions,)
+
+
 </t>
 <t tx="ekr.20240131003855.219">class StringDotFormatExtraNamedArguments(Message):
     @others
 </t>
 <t tx="ekr.20240131003855.22">class _FieldsOrder(dict):
     """Fix order of AST node fields."""
+
     @others
 </t>
 <t tx="ekr.20240131003855.220">message = "'...'.format(...) has unused named argument(s): %s"
@@ -2183,6 +2336,8 @@ def __init__(self, filename, loc, extra_positions):
 def __init__(self, filename, loc, extra_keywords):
     Message.__init__(self, filename, loc)
     self.message_args = (extra_keywords,)
+
+
 </t>
 <t tx="ekr.20240131003855.221">class StringDotFormatMissingArgument(Message):
     @others
@@ -2192,9 +2347,13 @@ def __init__(self, filename, loc, extra_keywords):
 def __init__(self, filename, loc, missing_arguments):
     Message.__init__(self, filename, loc)
     self.message_args = (missing_arguments,)
+
+
 </t>
 <t tx="ekr.20240131003855.223">class StringDotFormatMixingAutomatic(Message):
     message = "'...'.format(...) mixes automatic and manual numbering"
+
+
 </t>
 <t tx="ekr.20240131003855.224">class StringDotFormatInvalidFormat(Message):
     @others
@@ -2204,6 +2363,8 @@ def __init__(self, filename, loc, missing_arguments):
 def __init__(self, filename, loc, error):
     Message.__init__(self, filename, loc)
     self.message_args = (error,)
+
+
 </t>
 <t tx="ekr.20240131003855.226">class PercentFormatInvalidFormat(Message):
     @others
@@ -2213,9 +2374,13 @@ def __init__(self, filename, loc, error):
 def __init__(self, filename, loc, error):
     Message.__init__(self, filename, loc)
     self.message_args = (error,)
+
+
 </t>
 <t tx="ekr.20240131003855.228">class PercentFormatMixedPositionalAndNamed(Message):
     message = "'...' %% ... has mixed positional and named placeholders"
+
+
 </t>
 <t tx="ekr.20240131003855.229">class PercentFormatUnsupportedFormatCharacter(Message):
     @others
@@ -2230,12 +2395,15 @@ def __init__(self, filename, loc, error):
     else:
         key_first = 'value'.find
     return tuple(sorted(fields, key=key_first, reverse=True))
+
 </t>
 <t tx="ekr.20240131003855.230">message = "'...' %% ... has unsupported format character %r"
 
 def __init__(self, filename, loc, c):
     Message.__init__(self, filename, loc)
     self.message_args = (c,)
+
+
 </t>
 <t tx="ekr.20240131003855.231">class PercentFormatPositionalCountMismatch(Message):
     @others
@@ -2245,6 +2413,8 @@ def __init__(self, filename, loc, c):
 def __init__(self, filename, loc, n_placeholders, n_substitutions):
     Message.__init__(self, filename, loc)
     self.message_args = (n_placeholders, n_substitutions)
+
+
 </t>
 <t tx="ekr.20240131003855.233">class PercentFormatExtraNamedArguments(Message):
     @others
@@ -2254,6 +2424,8 @@ def __init__(self, filename, loc, n_placeholders, n_substitutions):
 def __init__(self, filename, loc, extra_keywords):
     Message.__init__(self, filename, loc)
     self.message_args = (extra_keywords,)
+
+
 </t>
 <t tx="ekr.20240131003855.235">class PercentFormatMissingArgument(Message):
     @others
@@ -2263,12 +2435,18 @@ def __init__(self, filename, loc, extra_keywords):
 def __init__(self, filename, loc, missing_arguments):
     Message.__init__(self, filename, loc)
     self.message_args = (missing_arguments,)
+
+
 </t>
 <t tx="ekr.20240131003855.237">class PercentFormatExpectedMapping(Message):
     message = "'...' %% ... expected mapping but got sequence"
+
+
 </t>
 <t tx="ekr.20240131003855.238">class PercentFormatExpectedSequence(Message):
     message = "'...' %% ... expected sequence but got mapping"
+
+
 </t>
 <t tx="ekr.20240131003855.239">class PercentFormatStarRequiresSequence(Message):
     message = "'...' %% ... `*` specifier requires sequence"
@@ -2276,6 +2454,8 @@ def __init__(self, filename, loc, missing_arguments):
 <t tx="ekr.20240131003855.24">def __missing__(self, node_class):
     self[node_class] = fields = self._get_fields(node_class)
     return fields
+
+
 </t>
 <t tx="ekr.20240131003855.240">"""
 Provide the Reporter class.
@@ -2293,6 +2473,7 @@ import sys
     """
     Formats the results of pyflakes checks to users.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.242">def __init__(self, warningStream, errorStream):
@@ -2308,6 +2489,7 @@ import sys
     """
     self._stdout = warningStream
     self._stderr = errorStream
+
 </t>
 <t tx="ekr.20240131003855.243">def unexpectedError(self, filename, msg):
     """
@@ -2319,6 +2501,7 @@ import sys
     @ptype msg: C{unicode}
     """
     self._stderr.write(f"{filename}: {msg}\n")
+
 </t>
 <t tx="ekr.20240131003855.244">def syntaxError(self, filename, msg, lineno, offset, text):
     """
@@ -2358,6 +2541,7 @@ import sys
         if offset is not None:
             self._stderr.write(re.sub(r'\S', ' ', line[:offset - 1]) +
                                "^\n")
+
 </t>
 <t tx="ekr.20240131003855.245">def flake(self, message):
     """
@@ -2367,6 +2551,8 @@ import sys
     """
     self._stdout.write(str(message))
     self._stdout.write('\n')
+
+
 </t>
 <t tx="ekr.20240131003855.246">def _makeDefaultReporter():
     """
@@ -2383,6 +2569,8 @@ import sys
     for item in items:
         results[item] = results.get(item, 0) + 1
     return results
+
+
 </t>
 <t tx="ekr.20240131003855.26">def iter_child_nodes(node, omit=None, _fields_order=_FieldsOrder()):
     """
@@ -2405,6 +2593,8 @@ import sys
             for item in field:
                 if isinstance(item, ast.AST):
                     yield item
+
+
 </t>
 <t tx="ekr.20240131003855.27">def convert_to_value(item):
     if isinstance(item, ast.Constant):
@@ -2415,21 +2605,26 @@ import sys
         return VariableKey(item=item)
     else:
         return UnhandledKeyType()
+
+
 </t>
 <t tx="ekr.20240131003855.28">def is_notimplemented_name_node(node):
     return isinstance(node, ast.Name) and getNodeName(node) == 'NotImplemented'
+
+
 </t>
 <t tx="ekr.20240131003855.29">class Binding:
     """
     Represents the binding of a value to a name.
-    
+
     The checker uses this to keep track of which names have been bound and
     which names have not. See L{Assignment} for a special type of binding that
     is checked with stricter rules.
-    
+
     @ivar used: pair of (L{Scope}, node) indicating the scope and
                 the node that this binding was last used.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.3">from pyflakes.api import main
@@ -2444,9 +2639,11 @@ if __name__ == '__main__':
     self.name = name
     self.source = source
     self.used = False
+
 </t>
 <t tx="ekr.20240131003855.31">def __str__(self):
     return self.name
+
 </t>
 <t tx="ekr.20240131003855.32">def __repr__(self):
     return '&lt;{} object {!r} from line {!r} at 0x{:x}&gt;'.format(
@@ -2455,9 +2652,12 @@ if __name__ == '__main__':
         self.source.lineno,
         id(self),
     )
+
 </t>
 <t tx="ekr.20240131003855.33">def redefines(self, other):
     return isinstance(other, Definition) and self.name == other.name
+
+
 </t>
 <t tx="ekr.20240131003855.34">class Definition(Binding):
     """
@@ -2470,13 +2670,17 @@ if __name__ == '__main__':
         super().redefines(other) or
         (isinstance(other, Assignment) and self.name == other.name)
     )
+
+
 </t>
 <t tx="ekr.20240131003855.36">class Builtin(Definition):
     """A definition created for all Python builtins."""
+
     @others
 </t>
 <t tx="ekr.20240131003855.37">def __init__(self, name):
     super().__init__(name, None)
+
 </t>
 <t tx="ekr.20240131003855.38">def __repr__(self):
     return '&lt;{} object {!r} at 0x{:x}&gt;'.format(
@@ -2484,11 +2688,14 @@ if __name__ == '__main__':
         self.name,
         id(self)
     )
+
+
 </t>
 <t tx="ekr.20240131003855.39">class UnhandledKeyType:
     """
     A dictionary key of a type that we cannot or do not check for duplicates.
     """
+
 
 </t>
 <t tx="ekr.20240131003855.4">"""
@@ -2515,47 +2722,55 @@ PYTHON_SHEBANG_REGEX = re.compile(br'^#!.*\bpython(3(\.\d+)?|w)?[dmu]?\s')
 <t tx="ekr.20240131003855.40">class VariableKey:
     """
     A dictionary key which is a variable.
-    
+
     @ivar item: The variable AST object.
     """
     @others
 </t>
 <t tx="ekr.20240131003855.41">def __init__(self, item):
     self.name = item.id
+
 </t>
 <t tx="ekr.20240131003855.42">def __eq__(self, compare):
     return (
         compare.__class__ == self.__class__ and
         compare.name == self.name
     )
+
 </t>
 <t tx="ekr.20240131003855.43">def __hash__(self):
     return hash(self.name)
+
+
 </t>
 <t tx="ekr.20240131003855.44">class Importation(Definition):
     """
     A binding created by an import statement.
-    
+
     @ivar fullName: The complete name given to the import statement,
         possibly including multiple dotted components.
     @type fullName: C{str}
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.45">def __init__(self, name, source, full_name=None):
     self.fullName = full_name or name
     self.redefined = []
     super().__init__(name, source)
+
 </t>
 <t tx="ekr.20240131003855.46">def redefines(self, other):
     if isinstance(other, SubmoduleImportation):
         # See note in SubmoduleImportation about RedefinedWhileUnused
         return self.fullName == other.fullName
     return isinstance(other, Definition) and self.name == other.name
+
 </t>
 <t tx="ekr.20240131003855.47">def _has_alias(self):
     """Return whether importation needs an as clause."""
     return not self.fullName.split('.')[-1] == self.name
+
 </t>
 <t tx="ekr.20240131003855.48">@property
 def source_statement(self):
@@ -2564,6 +2779,7 @@ def source_statement(self):
         return f'import {self.fullName} as {self.name}'
     else:
         return 'import %s' % self.fullName
+
 </t>
 <t tx="ekr.20240131003855.49">def __str__(self):
     """Return import full name with alias."""
@@ -2571,6 +2787,8 @@ def source_statement(self):
         return self.fullName + ' as ' + self.name
     else:
         return self.fullName
+
+
 </t>
 <t tx="ekr.20240131003855.5">def check(codeString, filename, reporter=None):
     """
@@ -2606,23 +2824,26 @@ def source_statement(self):
     for warning in w.messages:
         reporter.flake(warning)
     return len(w.messages)
+
+
 </t>
 <t tx="ekr.20240131003855.50">class SubmoduleImportation(Importation):
     """
     A binding created by a submodule import statement.
-    
+
     A submodule import is a special case where the root module is implicitly
     imported, without an 'as' clause, and the submodule is also imported.
     Python does not restrict which attributes of the root module may be used.
-    
+
     This class is only used when the submodule import is without an 'as' clause.
-    
+
     pyflakes handles this case by registering the root module name in the scope,
     allowing any attribute of the root module to be accessed.
-    
+
     RedefinedWhileUnused is suppressed in `redefines` unless the submodule
     name is also the same, to avoid false positives.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.51">def __init__(self, name, source):
@@ -2631,20 +2852,26 @@ def source_statement(self):
     package_name = name.split('.')[0]
     super().__init__(package_name, source)
     self.fullName = name
+
 </t>
 <t tx="ekr.20240131003855.52">def redefines(self, other):
     if isinstance(other, Importation):
         return self.fullName == other.fullName
     return super().redefines(other)
+
 </t>
 <t tx="ekr.20240131003855.53">def __str__(self):
     return self.fullName
+
 </t>
 <t tx="ekr.20240131003855.54">@property
 def source_statement(self):
     return 'import ' + self.fullName
+
+
 </t>
 <t tx="ekr.20240131003855.55">class ImportationFrom(Importation):
+
     @others
 </t>
 <t tx="ekr.20240131003855.56">def __init__(self, name, source, module, real_name=None):
@@ -2657,6 +2884,7 @@ def source_statement(self):
         full_name = module + '.' + self.real_name
 
     super().__init__(name, source, full_name)
+
 </t>
 <t tx="ekr.20240131003855.57">def __str__(self):
     """Return import full name with alias."""
@@ -2664,6 +2892,7 @@ def source_statement(self):
         return self.fullName + ' as ' + self.name
     else:
         return self.fullName
+
 </t>
 <t tx="ekr.20240131003855.58">@property
 def source_statement(self):
@@ -2671,9 +2900,12 @@ def source_statement(self):
         return f'from {self.module} import {self.real_name} as {self.name}'
     else:
         return f'from {self.module} import {self.name}'
+
+
 </t>
 <t tx="ekr.20240131003855.59">class StarImportation(Importation):
     """A binding created by a 'from x import *' statement."""
+
     @others
 </t>
 <t tx="ekr.20240131003855.6">def checkPath(filename, reporter=None):
@@ -2694,6 +2926,8 @@ def source_statement(self):
         reporter.unexpectedError(filename, e.args[1])
         return 1
     return check(codestr, filename, reporter)
+
+
 </t>
 <t tx="ekr.20240131003855.60">def __init__(self, name, source):
     super().__init__('*', source)
@@ -2701,10 +2935,12 @@ def source_statement(self):
     # may not be the module name otherwise it will be deemed imported
     self.name = name + '.*'
     self.fullName = name
+
 </t>
 <t tx="ekr.20240131003855.61">@property
 def source_statement(self):
     return 'from ' + self.fullName + ' import *'
+
 </t>
 <t tx="ekr.20240131003855.62">def __str__(self):
     # When the module ends with a ., avoid the ambiguous '..*'
@@ -2712,23 +2948,29 @@ def source_statement(self):
         return self.source_statement
     else:
         return self.name
+
+
 </t>
 <t tx="ekr.20240131003855.63">class FutureImportation(ImportationFrom):
     """
     A binding created by a from `__future__` import statement.
-    
+
     `__future__` imports are implicitly used.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.64">def __init__(self, name, source, scope):
     super().__init__(name, source, '__future__')
     self.used = (scope, source)
+
+
 </t>
 <t tx="ekr.20240131003855.65">class Argument(Binding):
     """
     Represents binding a name as an argument.
     """
+
 
 </t>
 <t tx="ekr.20240131003855.66">class Assignment(Binding):
@@ -2752,16 +2994,19 @@ def source_statement(self):
 <t tx="ekr.20240131003855.68">class Annotation(Binding):
     """
     Represents binding a name to a type without an associated value.
-    
+
     As long as this name is not assigned a value in another binding, it is considered
     undefined for most purposes. One notable exception is using the name as a type
     annotation.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.69">def redefines(self, other):
     """An Annotation doesn't define any name, so it cannot redefine one."""
     return False
+
+
 </t>
 <t tx="ekr.20240131003855.7">def isPythonFile(filename):
     """Return True if filename points to a Python file."""
@@ -2783,27 +3028,34 @@ def source_statement(self):
         return False
 
     return PYTHON_SHEBANG_REGEX.match(text)
+
+
 </t>
 <t tx="ekr.20240131003855.70">class FunctionDefinition(Definition):
     pass
+
+
 </t>
 <t tx="ekr.20240131003855.71">class ClassDefinition(Definition):
     pass
+
+
 </t>
 <t tx="ekr.20240131003855.72">class ExportBinding(Binding):
     """
     A binding created by an C{__all__} assignment.  If the names in the list
     can be determined statically, they will be treated as names for export and
     additional checking applied to them.
-    
+
     The only recognized C{__all__} assignment via list/tuple concatenation is in the
     following format:
-    
+
         __all__ = ['a'] + ['b'] + ['c']
-    
+
     Names which are imported and not otherwise used but appear in the value of
     C{__all__} will not have an unused import warning reported for them.
     """
+
     @others
 </t>
 <t tx="ekr.20240131003855.73">def __init__(self, name, source, scope):
@@ -2838,6 +3090,8 @@ def source_statement(self):
             else:
                 break
     super().__init__(name, source)
+
+
 </t>
 <t tx="ekr.20240131003855.74">class Scope(dict):
     @others
@@ -2847,14 +3101,18 @@ def source_statement(self):
 def __repr__(self):
     scope_cls = self.__class__.__name__
     return f'&lt;{scope_cls} at 0x{id(self):x} {dict.__repr__(self)}&gt;'
+
+
 </t>
 <t tx="ekr.20240131003855.76">class ClassScope(Scope):
     pass
+
+
 </t>
 <t tx="ekr.20240131003855.77">class FunctionScope(Scope):
     """
     I represent a name scope for a function.
-    
+
     @ivar globals: Names declared 'global' in this function.
     """
     @others
@@ -2868,6 +3126,7 @@ def __init__(self):
     # Simplify: manage the special locals as globals
     self.globals = self.alwaysUsed.copy()
     self.returnValue = None     # First non-empty return
+
 </t>
 <t tx="ekr.20240131003855.79">def unused_assignments(self):
     """
@@ -2880,6 +3139,7 @@ def __init__(self):
                 not self.usesLocals and
                 isinstance(binding, Assignment)):
             yield name, binding
+
 </t>
 <t tx="ekr.20240131003855.8">def iterSourceCode(paths):
     """
@@ -2898,6 +3158,8 @@ def __init__(self):
                         yield full_path
         else:
             yield path
+
+
 </t>
 <t tx="ekr.20240131003855.80">def unused_annotations(self):
     """
@@ -2906,17 +3168,25 @@ def __init__(self):
     for name, binding in self.items():
         if not binding.used and isinstance(binding, Annotation):
             yield name, binding
+
+
 </t>
 <t tx="ekr.20240131003855.81">class TypeScope(Scope):
     pass
+
+
 </t>
 <t tx="ekr.20240131003855.82">class GeneratorScope(Scope):
     pass
+
+
 </t>
 <t tx="ekr.20240131003855.83">class ModuleScope(Scope):
     """Scope for a module."""
     _futures_allowed = True
     _annotations_future_enabled = False
+
+
 </t>
 <t tx="ekr.20240131003855.84">class DoctestScope(ModuleScope):
     """Scope for a doctest."""
@@ -2925,6 +3195,8 @@ def __init__(self):
 </t>
 <t tx="ekr.20240131003855.85">class DetectClassScopedMagic:
     names = dir()
+
+
 </t>
 <t tx="ekr.20240131003855.86"># Globally defined names which are not attributes of the builtins module, or
 # are only present on some platforms.
@@ -2939,6 +3211,8 @@ def getNodeName(node):
         return node.name
     if hasattr(node, 'rest'):   # a MatchMapping node
         return node.rest
+
+
 </t>
 <t tx="ekr.20240131003855.87">TYPING_MODULES = frozenset(('typing', 'typing_extensions'))
 
@@ -2985,6 +3259,8 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
             is_name_match_fn(node.attr)
         )
     )
+
+
 </t>
 <t tx="ekr.20240131003855.88">def _is_typing(node, typing_attr, scope_stack):
     """
@@ -2995,6 +3271,8 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
     context.
     """
     return _is_typing_helper(node, lambda x: x == typing_attr, scope_stack)
+
+
 </t>
 <t tx="ekr.20240131003855.89">def _is_any_typing_member(node, scope_stack):
     """
@@ -3004,6 +3282,8 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
     context.
     """
     return _is_typing_helper(node, lambda x: True, scope_stack)
+
+
 </t>
 <t tx="ekr.20240131003855.9">def checkRecursive(paths, reporter):
     """
@@ -3019,6 +3299,8 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
     for sourcePath in iterSourceCode(paths):
         warnings += checkPath(sourcePath, reporter)
     return warnings
+
+
 </t>
 <t tx="ekr.20240131003855.90">def is_typing_overload(value, scope_stack):
     return (
@@ -3028,11 +3310,15 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
             for dec in value.source.decorator_list
         )
     )
+
+
 </t>
 <t tx="ekr.20240131003855.91">class AnnotationState:
     NONE = 0
     STRING = 1
     BARE = 2
+
+
 </t>
 <t tx="ekr.20240131003855.92">def in_annotation(func):
     @functools.wraps(func)
@@ -3040,6 +3326,8 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
         with self._enter_annotation():
             return func(self, *args, **kwargs)
     return in_annotation_func
+
+
 </t>
 <t tx="ekr.20240131003855.93">def in_string_annotation(func):
     @functools.wraps(func)
@@ -3047,9 +3335,12 @@ def _is_typing_helper(node, is_name_match_fn, scope_stack):
         with self._enter_annotation(AnnotationState.STRING):
             return func(self, *args, **kwargs)
     return in_annotation_func
+
+
 </t>
 <t tx="ekr.20240131003855.94">class Checker:
     """I check the cleanliness and sanity of Python code."""
+
     @others
 </t>
 <t tx="ekr.20240131003855.95">_ast_node_scope = {
@@ -3106,6 +3397,7 @@ def __init__(self, tree, filename='(none)', builtins=None,
             '`file_tokens` will be removed in a future version',
             stacklevel=2,
         )
+
 </t>
 <t tx="ekr.20240131003855.96">def deferFunction(self, callable):
     """
@@ -3117,6 +3409,7 @@ def __init__(self, tree, filename='(none)', builtins=None,
     restored, however it will contain any new bindings added to it.
     """
     self._deferred.append((callable, self.scopeStack[:], self.offset))
+
 </t>
 <t tx="ekr.20240131003855.97">def _run_deferred(self):
     orig = (self.scopeStack, self.offset)
@@ -3127,10 +3420,12 @@ def __init__(self, tree, filename='(none)', builtins=None,
         handler()
 
     self.scopeStack, self.offset = orig
+
 </t>
 <t tx="ekr.20240131003855.98">def _in_doctest(self):
     return (len(self.scopeStack) &gt;= 2 and
             isinstance(self.scopeStack[1], DoctestScope))
+
 </t>
 <t tx="ekr.20240131003855.99">@property
 def futuresAllowed(self):
@@ -3145,6 +3440,7 @@ def futuresAllowed(self, value):
     assert value is False
     if isinstance(self.scope, ModuleScope):
         self.scope._futures_allowed = False
+
 </t>
 <t tx="ekr.20240131004408.1">import __future__
 import builtins
@@ -3169,5 +3465,13 @@ from pyflakes import messages
 <t tx="ekr.20240131011429.1"></t>
 <t tx="ekr.20240131011732.1"></t>
 <t tx="ekr.20240131011753.1"></t>
+<t tx="ekr.20240306055458.1">"""
+Back up this .leo file.
+
+os.environ['LEO_BACKUP'] must be the path to an existing (writable) directory.
+"""
+c.backup_helper(sub_dir='pyflakes')
+</t>
+<t tx="ekr.20240306055659.1">cd-pyflakes</t>
 </tnodes>
 </leo_file>
