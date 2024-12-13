@@ -10298,10 +10298,8 @@ Directory Structure
 
 The @button scripts in this file will work properly only if math.leo is in the proper directory.
 
-The directory structure should be that created by unpacking CODE_PYTHYON.zip and DATA_PYTHON.zip. These .zip files *were* available from the URL above, but do not seem to be available now.
-However, individual .ipynb files are still available.
+The directory structure should be that created by unpacking CODE_PYTHYON.zip and DATA_PYTHON.zip. These .zip files are available here: http://databookuw.com/ directly above the pictures of the two authors.
 
-*Contact me* if you would like a copy of these .zip files.
 
 - python folder
   - CODE_PYTHON folder
