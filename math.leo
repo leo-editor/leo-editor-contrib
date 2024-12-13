@@ -212,10 +212,11 @@
 <v t="ekr.20241212164559.305"></v>
 <v t="ekr.20241212164559.307" descendentVnodeUnknownAttributes="7d710058010000003071017d71025808000000616e6e6f7461746571037d71042858080000007072696f7269747971054d0f27580a000000707269736574646174657106580a000000323032312d30332d333071077573732e"></v>
 </v>
-<v t="ekr.20241212164526.16"><vh>Warnings</vh></v>
+<v t="ekr.20241213035513.1"><vh>Read me</vh></v>
 <v t="ekr.20241212164526.17"><vh>@button import-ipynb</vh></v>
 <v t="ekr.20241212164526.14"><vh>@button exec-py-file</vh></v>
 <v t="ekr.20241213022535.1"><vh>--- Converted ipynb files</vh>
+<v t="ekr.20241212164526.16"><vh>pyflakes warnings</vh></v>
 <v t="ekr.20241213022535.2"><vh>CH01</vh>
 <v t="ekr.20241213022535.3"><vh># @file CH01\CH01_SEC02.py</vh>
 <v t="ekr.20241213022535.5"><vh>from matplotlib.image import imread</vh></v>
@@ -954,7 +955,9 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20241212164526.14">g.cls()
+<t tx="ekr.20241212164526.14">"""Execute one .py file externally."""
+
+g.cls()
 import os
 
 # Must execute the script in the proper folder.
@@ -969,7 +972,7 @@ path = fr'{chapter}/{chapter}_{section}'
 # No need to hang Leo.
 g.execute_shell_commands(f"&amp;python {path}")
 </t>
-<t tx="ekr.20241212164526.16"># These warnings were generated when saving "live" versions of the files presented here.
+<t tx="ekr.20241212164526.16"># pyflakes generated these warnings when saving "live" versions of the converted files.
 
 tbo: beautified: CH01_SEC02.py
 tbo: beautified: CH01_SEC03_Rotation.py
@@ -1262,7 +1265,9 @@ CH12_SEC06_2_DEIM.py:23:1: 'scipy.sparse.linalg' imported but unused
 CH12_SEC06_2_DEIM.py:25:1: 'matplotlib.rcParams' imported but unused
 CH12_SEC06_2_DEIM.py:28:1: 'mpl_toolkits.mplot3d.Axes3D' imported but unused
 </t>
-<t tx="ekr.20241212164526.17">g.cls()
+<t tx="ekr.20241212164526.17">"""Convert files from .ipynb format to .py"""
+
+g.cls()
 import glob
 import os
 
@@ -10283,5 +10288,33 @@ plt.rcParams['figure.figsize'] = [10,10]
 plt.rcParams.update({'font.size': 18})
 
 </t>
+<t tx="ekr.20241213035513.1">@language rest
+@wrap
+
+This file, math.leo, contains scripts and files related to Steve Brunton's course, Mechanical Engineering 564: http://faculty.washington.edu/sbrunton/me564/
+
+Directory Structure
+===================
+
+The @button scripts in this file will work properly only if math.leo is in the proper directory.
+
+The directory structure should be that created by unpacking CODE_PYTHYON.zip and DATA_PYTHON.zip. These .zip files *were* available from the URL above, but do not seem to be available now.
+However, individual .ipynb files are still available.
+
+*Contact me* if you would like a copy of these .zip files.
+
+- python folder
+  - CODE_PYTHON folder
+    - math.leo (this file)
+    - CH01 folder
+      - various .ipynb files converted by `@button import-ipynb`.
+      ...
+    - CH12 folder
+    - UTILS folder (ignored by this file)
+  - DATA
+    - Various .csv, .data, .jpg, .csv, .mat and .mpg files.
+
+Earlier versions of `@button import-ipynb` used hard-coded paths.
+In a pinch you could do the same.</t>
 </tnodes>
 </leo_file>
