@@ -2463,7 +2463,7 @@ def walk(root, folders):
                 pu = fol.insertAsLastChild()
                 date = gnx2date(pu.v.gnx)
                 pu.h = name
-                pu.b = f':title: {name}\n:ref:{url}\n:added:{date}'
+                pu.b = f':title: {name}\n:ref: {url}\n:date-added: {date}'
             walk(fol, folder_list)
 
 target = create_head_node('@bookmark-collection')
@@ -2550,7 +2550,7 @@ def walk(root, folders):
                 pu = fol.insertAsLastChild()
                 date = gnx2date(pu.v.gnx)
                 pu.h = name
-                pu.b = f':title: {name}\n:ref:{url}\n:added:{date}'
+                pu.b = f':title: {name}\n:ref: {url}\n:date-added: {date}'
             walk(fol, folder_list)
 
 target = create_head_node('@bookmark-collection')
