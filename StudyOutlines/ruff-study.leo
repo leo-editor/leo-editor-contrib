@@ -1445,6 +1445,7 @@
 </v>
 </v>
 <v t="ekr.20231231171022.165"><vh>@@file C:/Repos/ruff/crates/ruff_linter/src/test.rs</vh>
+<v t="ekr.20250103051736.1"><vh>&lt;&lt; test.rs: imports &gt;&gt;</vh></v>
 <v t="ekr.20231231171022.166"><vh>fn test_resource_path</vh></v>
 <v t="ekr.20231231171022.167"><vh>fn test_path</vh></v>
 <v t="ekr.20231231171022.168"><vh>fn assert_notebook_path</vh></v>
@@ -10247,7 +10248,7 @@
 <v t="ekr.20231231171020.168"><vh>fn elements</vh></v>
 <v t="ekr.20231231171020.169"><vh>fn write_fmt</vh></v>
 <v t="ekr.20231231171020.170"><vh>fn state</vh></v>
-<v t="ekr.20231231171020.171"><vh>fn state_mut</vh></v>
+<v t="ekr.20231231171020.171"><vh>Buffer: state_mut</vh></v>
 <v t="ekr.20231231171020.172"><vh>fn snapshot</vh></v>
 <v t="ekr.20231231171020.173"><vh>fn restore_snapshot</vh></v>
 </v>
@@ -10265,13 +10266,13 @@
 <v t="ekr.20231231171020.152"><vh>impl DerefMut for VecBuffer</vh>
 <v t="ekr.20231231171020.180"><vh>fn deref_mut</vh></v>
 </v>
-<v t="ekr.20231231171020.153"><vh>impl Buffer for VecBuffer</vh>
+<v t="ekr.20231231171020.153"><vh>impl Buffer for VecBuffer *** Import bug</vh>
 <v t="ekr.20231231171020.181"><vh>fn write_element</vh></v>
 <v t="ekr.20231231171020.182"><vh>fn elements</vh></v>
 <v t="ekr.20231231171020.183"><vh>fn state</vh></v>
-<v t="ekr.20231231171020.184"><vh>fn state_mut</vh></v>
+<v t="ekr.20231231171020.184"><vh>Buffer for VecBuffer: fn state_mut</vh></v>
 <v t="ekr.20231231171020.185"><vh>fn snapshot</vh></v>
-<v t="ekr.20231231171020.186"><vh>fn restore_snapshot</vh></v>
+<v t="ekr.20231231171020.186"><vh>fn restore_snapshot (cause of bug)</vh></v>
 </v>
 <v t="ekr.20231231171020.154"><vh>struct Inspect</vh></v>
 <v t="ekr.20231231171020.155"><vh>impl Inspect</vh>
@@ -10281,7 +10282,7 @@
 <v t="ekr.20231231171020.188"><vh>fn write_element</vh></v>
 <v t="ekr.20231231171020.189"><vh>fn elements</vh></v>
 <v t="ekr.20231231171020.190"><vh>fn state</vh></v>
-<v t="ekr.20231231171020.191"><vh>fn state_mut</vh></v>
+<v t="ekr.20231231171020.191"><vh>Buffer for Inspect: fn state_mut</vh></v>
 <v t="ekr.20231231171020.192"><vh>fn snapshot</vh></v>
 <v t="ekr.20231231171020.193"><vh>fn restore_snapshot</vh></v>
 </v>
@@ -10295,7 +10296,7 @@
 <v t="ekr.20231231171020.196"><vh>fn write_element</vh></v>
 <v t="ekr.20231231171020.197"><vh>fn elements</vh></v>
 <v t="ekr.20231231171020.198"><vh>fn state</vh></v>
-<v t="ekr.20231231171020.199"><vh>fn state_mut</vh></v>
+<v t="ekr.20231231171020.199"><vh>Buffer for RemoveSoftLinesBuffer: fn state_mut</vh></v>
 <v t="ekr.20231231171020.200"><vh>fn snapshot</vh></v>
 <v t="ekr.20231231171020.201"><vh>fn restore_snapshot</vh></v>
 </v>
@@ -10582,30 +10583,35 @@
 </v>
 </v>
 <v t="ekr.20231231171020.402"><vh>@@file C:/Repos/ruff/crates/ruff_formatter/src/formatter.rs</vh>
-<v t="ekr.20231231171020.403"><vh>struct Formatter</vh></v>
+<v t="ekr.20231231171020.403"><vh>pub struct Formatter</vh></v>
 <v t="ekr.20231231171020.404"><vh>impl Formatter</vh>
-<v t="ekr.20231231171020.408"><vh>fn new</vh></v>
-<v t="ekr.20231231171020.409"><vh>fn options</vh></v>
-<v t="ekr.20231231171020.410"><vh>fn context</vh></v>
-<v t="ekr.20231231171020.411"><vh>fn context_mut</vh></v>
-<v t="ekr.20231231171020.412"><vh>fn group_id</vh></v>
-<v t="ekr.20231231171020.413"><vh>fn intern</vh></v>
-<v t="ekr.20231231171020.414"><vh>fn intern_vec</vh></v>
+<v t="ekr.20231231171020.408"><vh>pub fn new</vh></v>
+<v t="ekr.20231231171020.409"><vh>pub fn options</vh></v>
+<v t="ekr.20231231171020.410"><vh>pub fn context</vh></v>
+<v t="ekr.20231231171020.411"><vh>pub fn context_mut</vh></v>
+<v t="ekr.20231231171020.412"><vh>pub fn group_id</vh></v>
+<v t="ekr.20250103064507.1"><vh>pub fn join, join_with, fill, intern (*** import bug: joined with intern node below)</vh>
+<v t="ekr.20250103064231.1"><vh>pub fn join      (*** import bug: joined with intern node below)</vh></v>
+<v t="ekr.20250103064233.1"><vh>pub fn join_with (*** import bug: joined with intern node below)</vh></v>
+<v t="ekr.20250103064415.1"><vh>pub fn fill      (*** import bug: joined with intern node below)</vh></v>
+<v t="ekr.20231231171020.413"><vh>pub fn intern    (*** import bug)</vh></v>
+</v>
+<v t="ekr.20231231171020.414"><vh>pub fn intern_vec</vh></v>
 </v>
 <v t="ekr.20231231171020.405"><vh>impl Formatter</vh>
-<v t="ekr.20231231171020.415"><vh>fn state_snapshot</vh></v>
-<v t="ekr.20231231171020.416"><vh>fn restore_state_snapshot</vh></v>
+<v t="ekr.20231231171020.415"><vh>pub fn state_snapshot</vh></v>
+<v t="ekr.20231231171020.416"><vh>pub fn restore_state_snapshot</vh></v>
 </v>
 <v t="ekr.20231231171020.406"><vh>impl Buffer for Formatter</vh>
 <v t="ekr.20231231171020.417"><vh>fn write_element</vh></v>
 <v t="ekr.20231231171020.418"><vh>fn elements</vh></v>
 <v t="ekr.20231231171020.419"><vh>fn write_fmt</vh></v>
 <v t="ekr.20231231171020.420"><vh>fn state</vh></v>
-<v t="ekr.20231231171020.421"><vh>fn state_mut</vh></v>
+<v t="ekr.20231231171020.421"><vh>Buffer for Formatter: fn state_mut</vh></v>
 <v t="ekr.20231231171020.422"><vh>fn snapshot</vh></v>
 <v t="ekr.20231231171020.423"><vh>fn restore_snapshot</vh></v>
 </v>
-<v t="ekr.20231231171020.407"><vh>struct FormatterSnapshot</vh></v>
+<v t="ekr.20231231171020.407"><vh>pub struct FormatterSnapshot</vh></v>
 </v>
 <v t="ekr.20231231171020.424"><vh>@@file C:/Repos/ruff/crates/ruff_formatter/src/group_id.rs</vh>
 <v t="ekr.20231231171020.425"><vh>struct DebugGroupId</vh></v>
@@ -18796,6 +18802,69 @@
 </v>
 </v>
 </v>
+</v>
+<v t="ekr.20250103051447.1"><vh>--- tests</vh>
+<v t="ekr.20231231171022.165"></v>
+<v t="ekr.20231231171018.172"></v>
+<v t="ekr.20231231171018.173"></v>
+<v t="ekr.20231231171021.374"></v>
+<v t="ekr.20231231171021.375"></v>
+<v t="ekr.20231231171021.376"></v>
+<v t="ekr.20231231171021.379"></v>
+<v t="ekr.20231231171021.380"></v>
+<v t="ekr.20231231171021.381"></v>
+<v t="ekr.20231231171021.384"></v>
+<v t="ekr.20231231171021.386"></v>
+<v t="ekr.20231231171021.389"></v>
+<v t="ekr.20231231171021.387"></v>
+<v t="ekr.20231231171021.391"></v>
+<v t="ekr.20231231171021.392"></v>
+<v t="ekr.20231231171021.394"></v>
+<v t="ekr.20231231171021.395"></v>
+<v t="ekr.20231231171021.398"></v>
+<v t="ekr.20231231171021.400"></v>
+<v t="ekr.20231231171021.402"></v>
+<v t="ekr.20231231171021.403"></v>
+<v t="ekr.20231231171021.404"></v>
+<v t="ekr.20231231171021.406"></v>
+<v t="ekr.20231231171101.125"></v>
+<v t="ekr.20231231171101.126"></v>
+</v>
+<v t="ekr.20231231171020.109"></v>
+<v t="ekr.20250103063333.1"><vh>--- Import bugs</vh>
+<v t="ekr.20231231171020.153"></v>
+<v t="ekr.20250103064507.1"></v>
+</v>
+<v t="ekr.20250103063112.1"><vh>--- Distilling</vh>
+<v t="ekr.20250103063216.1"><vh>Found 6:fn state_mut</vh>
+<v t="ekr.20231231171020.171"></v>
+<v t="ekr.20231231171020.184"></v>
+<v t="ekr.20231231171020.191"></v>
+<v t="ekr.20231231171020.199"></v>
+<v t="ekr.20231231171020.421"></v>
+<v t="ekr.20231231171020.146"></v>
+</v>
+</v>
+<v t="ekr.20231231171020.110"></v>
+<v t="ekr.20231231171020.402"></v>
+<v t="ekr.20250103062045.1"><vh>shared_traits.rs: pub</vh>
+<v t="ekr.20231231171020.117"></v>
+<v t="ekr.20231231171020.111"></v>
+<v t="ekr.20231231171020.116"></v>
+<v t="ekr.20231231171020.113"></v>
+</v>
+<v t="ekr.20250103062828.1"><vh>formatter.rs: pub</vh>
+<v t="ekr.20231231171020.410"></v>
+<v t="ekr.20231231171020.411"></v>
+<v t="ekr.20231231171020.412"></v>
+<v t="ekr.20250103064507.1"></v>
+<v t="ekr.20231231171020.414"></v>
+<v t="ekr.20231231171020.408"></v>
+<v t="ekr.20231231171020.409"></v>
+<v t="ekr.20231231171020.416"></v>
+<v t="ekr.20231231171020.415"></v>
+<v t="ekr.20231231171020.403"></v>
+<v t="ekr.20231231171020.407"></v>
 </v>
 </vnodes>
 <tnodes>
@@ -35485,7 +35554,7 @@ pub struct VecBuffer&lt;'a, Context&gt; {
 }
 </t>
 <t tx="ekr.20231231171020.153">impl&lt;Context&gt; Buffer for VecBuffer&lt;'_, Context&gt; {
-@others
+    @others  /// EKR: no indentation in original.
 }
 </t>
 <t tx="ekr.20231231171020.154">/// Buffer that allows you inspecting elements as they get written to the formatter.
@@ -35819,27 +35888,27 @@ fn deref(&amp;self) -&gt; &amp;Self::Target {
     &amp;mut self.elements
 }
 </t>
-<t tx="ekr.20231231171020.181">    type Context = Context;
+<t tx="ekr.20231231171020.181">type Context = Context;
 
-    fn write_element(&amp;mut self, element: FormatElement) {
-        self.elements.push(element);
-    }
+fn write_element(&amp;mut self, element: FormatElement) {
+    self.elements.push(element);
+}
 </t>
-<t tx="ekr.20231231171020.182">    fn elements(&amp;self) -&gt; &amp;[FormatElement] {
-        self
-    }
+<t tx="ekr.20231231171020.182">fn elements(&amp;self) -&gt; &amp;[FormatElement] {
+    self
+}
 </t>
-<t tx="ekr.20231231171020.183">    fn state(&amp;self) -&gt; &amp;FormatState&lt;Self::Context&gt; {
-        self.state
-    }
+<t tx="ekr.20231231171020.183">fn state(&amp;self) -&gt; &amp;FormatState&lt;Self::Context&gt; {
+    self.state
+}
 </t>
-<t tx="ekr.20231231171020.184">    fn state_mut(&amp;mut self) -&gt; &amp;mut FormatState&lt;Self::Context&gt; {
-        self.state
-    }
+<t tx="ekr.20231231171020.184">fn state_mut(&amp;mut self) -&gt; &amp;mut FormatState&lt;Self::Context&gt; {
+    self.state
+}
 </t>
-<t tx="ekr.20231231171020.185">    fn snapshot(&amp;self) -&gt; BufferSnapshot {
-        BufferSnapshot::position(self.elements.len())
-    }
+<t tx="ekr.20231231171020.185">fn snapshot(&amp;self) -&gt; BufferSnapshot {
+    BufferSnapshot::position(self.elements.len())
+}
 </t>
 <t tx="ekr.20231231171020.186">    fn restore_snapshot(&amp;mut self, snapshot: BufferSnapshot) {
         let position = snapshot.unwrap_position();
@@ -40426,129 +40495,7 @@ pub fn group_id(&amp;self, debug_name: &amp;'static str) -&gt; GroupId {
     self.state().group_id(debug_name)
 }
 </t>
-<t tx="ekr.20231231171020.413">/// Joins multiple [Format] together without any separator
-///
-/// ## Examples
-///
-/// ```rust
-/// use ruff_formatter::format;
-/// use ruff_formatter::prelude::*;
-///
-/// # fn main() -&gt; FormatResult&lt;()&gt; {
-/// let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
-///     f.join()
-///         .entry(&amp;token("a"))
-///         .entry(&amp;space())
-///         .entry(&amp;token("+"))
-///         .entry(&amp;space())
-///         .entry(&amp;token("b"))
-///         .finish()
-/// })])?;
-///
-/// assert_eq!(
-///     "a + b",
-///     formatted.print()?.as_code()
-/// );
-/// # Ok(())
-/// # }
-/// ```
-pub fn join&lt;'a&gt;(&amp;'a mut self) -&gt; JoinBuilder&lt;'a, 'buf, (), Context&gt; {
-    JoinBuilder::new(self)
-}
-
-/// Joins the objects by placing the specified separator between every two items.
-///
-/// ## Examples
-///
-/// Joining different tokens by separating them with a comma and a space.
-///
-/// ```
-/// use ruff_formatter::{format, format_args};
-/// use ruff_formatter::prelude::*;
-///
-/// # fn main() -&gt; FormatResult&lt;()&gt; {
-/// let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
-///     f.join_with(&amp;format_args!(token(","), space()))
-///         .entry(&amp;token("1"))
-///         .entry(&amp;token("2"))
-///         .entry(&amp;token("3"))
-///         .entry(&amp;token("4"))
-///         .finish()
-/// })])?;
-///
-/// assert_eq!(
-///     "1, 2, 3, 4",
-///     formatted.print()?.as_code()
-/// );
-/// # Ok(())
-/// # }
-/// ```
-pub fn join_with&lt;'a, Joiner&gt;(
-    &amp;'a mut self,
-    joiner: Joiner,
-) -&gt; JoinBuilder&lt;'a, 'buf, Joiner, Context&gt;
-where
-    Joiner: Format&lt;Context&gt;,
-{
-    JoinBuilder::with_separator(self, joiner)
-}
-
-/// Concatenates a list of [`crate::Format`] objects with spaces and line breaks to fit
-/// them on as few lines as possible. Each element introduces a conceptual group. The printer
-/// first tries to print the item in flat mode but then prints it in expanded mode if it doesn't fit.
-///
-/// ## Examples
-///
-/// ```rust
-/// use ruff_formatter::prelude::*;
-/// use ruff_formatter::{format, format_args};
-///
-/// # fn main() -&gt; FormatResult&lt;()&gt; {
-/// let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
-///     f.fill()
-///         .entry(&amp;soft_line_break_or_space(), &amp;token("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"))
-///         .entry(&amp;soft_line_break_or_space(), &amp;token("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"))
-///         .entry(&amp;soft_line_break_or_space(), &amp;token("cccccccccccccccccccccccccccccc"))
-///         .entry(&amp;soft_line_break_or_space(), &amp;token("dddddddddddddddddddddddddddddd"))
-///         .finish()
-/// })])?;
-///
-/// assert_eq!(
-///     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncccccccccccccccccccccccccccccc dddddddddddddddddddddddddddddd",
-///     formatted.print()?.as_code()
-/// );
-/// # Ok(())
-/// # }
-/// ```
-///
-/// ```rust
-/// use ruff_formatter::prelude::*;
-/// use ruff_formatter::{format, format_args};
-///
-/// # fn main() -&gt; FormatResult&lt;()&gt; {
-/// let entries = vec![
-///     token("&lt;b&gt;Important: &lt;/b&gt;"),
-///     token("Please do not commit memory bugs such as segfaults, buffer overflows, etc. otherwise you "),
-///     token("&lt;em&gt;will&lt;/em&gt;"),
-///     token(" be reprimanded")
-/// ];
-///
-/// let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
-///     f.fill().entries(&amp;soft_line_break(), entries.iter()).finish()
-/// })])?;
-///
-/// assert_eq!(
-///     &amp;std::format!("&lt;b&gt;Important: &lt;/b&gt;\nPlease do not commit memory bugs such as segfaults, buffer overflows, etc. otherwise you \n&lt;em&gt;will&lt;/em&gt; be reprimanded"),
-///     formatted.print()?.as_code()
-/// );
-/// # Ok(())
-/// # }
-/// ```
-pub fn fill&lt;'a&gt;(&amp;'a mut self) -&gt; FillBuilder&lt;'a, 'buf, Context&gt; {
-    FillBuilder::new(self)
-}
-
-/// Formats `content` into an interned element without writing it to the formatter's buffer.
+<t tx="ekr.20231231171020.413">/// Formats `content` into an interned element without writing it to the formatter's buffer.
 pub fn intern(&amp;mut self, content: &amp;dyn Format&lt;Context&gt;) -&gt; FormatResult&lt;Option&lt;FormatElement&gt;&gt; {
     let mut buffer = VecBuffer::new(self.state_mut());
     crate::write!(&amp;mut buffer, [content])?;
@@ -52920,7 +52867,8 @@ pub fn diff(
     }
 }
 </t>
-<t tx="ekr.20231231171022.165">@others
+<t tx="ekr.20231231171022.165">&lt;&lt; test.rs: imports &gt;&gt;
+@others
 #[macro_export]
 macro_rules! assert_messages {
     ($value:expr, $path:expr, $notebook:expr) =&gt; {{
@@ -52949,42 +52897,7 @@ macro_rules! assert_messages {
 @language rust
 @tabwidth -4
 </t>
-<t tx="ekr.20231231171022.166">#![cfg(any(test, fuzzing))]
-//! Helper functions for the tests of rule implementations.
-
-use std::borrow::Cow;
-use std::path::Path;
-
-#[cfg(not(fuzzing))]
-use anyhow::Result;
-use itertools::Itertools;
-use rustc_hash::FxHashMap;
-
-use ruff_diagnostics::{Diagnostic, FixAvailability};
-use ruff_python_ast::PySourceType;
-use ruff_python_codegen::Stylist;
-use ruff_python_index::Indexer;
-use ruff_python_parser::lexer::LexResult;
-use ruff_python_parser::AsMode;
-use ruff_python_trivia::textwrap::dedent;
-use ruff_source_file::{Locator, SourceFileBuilder};
-use ruff_text_size::Ranged;
-
-use crate::directives;
-use crate::fix::{fix_file, FixResult};
-use crate::linter::{check_path, LinterResult, TokenSource};
-use crate::message::{Emitter, EmitterContext, Message, TextEmitter};
-use crate::packaging::detect_package_root;
-use crate::registry::AsRule;
-use crate::rules::pycodestyle::rules::syntax_error;
-use crate::settings::types::UnsafeFixes;
-use crate::settings::{flags, LinterSettings};
-use crate::source_kind::SourceKind;
-use ruff_notebook::Notebook;
-#[cfg(not(fuzzing))]
-use ruff_notebook::NotebookError;
-
-#[cfg(not(fuzzing))]
+<t tx="ekr.20231231171022.166">#[cfg(not(fuzzing))]
 pub(crate) fn test_resource_path(path: impl AsRef&lt;Path&gt;) -&gt; std::path::PathBuf {
     Path::new("./resources/test/").join(path)
 }
@@ -348639,5 +348552,196 @@ pub struct IsortOptions {
 }
 </t>
 <t tx="ekr.20231231171216.1"></t>
+<t tx="ekr.20250103051447.1"></t>
+<t tx="ekr.20250103051736.1">#![cfg(any(test, fuzzing))]
+//! Helper functions for the tests of rule implementations.
+
+use std::borrow::Cow;
+use std::path::Path;
+
+#[cfg(not(fuzzing))]
+use anyhow::Result;
+use itertools::Itertools;
+use rustc_hash::FxHashMap;
+
+use ruff_diagnostics::{Diagnostic, FixAvailability};
+use ruff_python_ast::PySourceType;
+use ruff_python_codegen::Stylist;
+use ruff_python_index::Indexer;
+use ruff_python_parser::lexer::LexResult;
+use ruff_python_parser::AsMode;
+use ruff_python_trivia::textwrap::dedent;
+use ruff_source_file::{Locator, SourceFileBuilder};
+use ruff_text_size::Ranged;
+
+use crate::directives;
+use crate::fix::{fix_file, FixResult};
+use crate::linter::{check_path, LinterResult, TokenSource};
+use crate::message::{Emitter, EmitterContext, Message, TextEmitter};
+use crate::packaging::detect_package_root;
+use crate::registry::AsRule;
+use crate::rules::pycodestyle::rules::syntax_error;
+use crate::settings::types::UnsafeFixes;
+use crate::settings::{flags, LinterSettings};
+use crate::source_kind::SourceKind;
+use ruff_notebook::Notebook;
+
+#[cfg(not(fuzzing))]
+use ruff_notebook::NotebookError;</t>
+<t tx="ekr.20250103062045.1">pub struct FormattedIter&lt;Iter, Item, Context&gt;
+
+/// Get an object that knows how to format this object.
+pub trait AsFormat&lt;Context&gt;
+
+/// Formatting specific [`Iterator`] extensions.
+pub trait FormattedIterExt {
+    /// Convert every item to an object that knows how to format it.
+    fn formatted&lt;Context&gt;(self) -&gt; FormattedIter&lt;Self, Self::Item, Context&gt;
+    ...
+}
+
+/// Convert this object into an object that can be formatted.
+/// Unlike `AsFormat`, this trait takes ownership of `self`.
+pub trait IntoFormat&lt;Context&gt;</t>
+<t tx="ekr.20250103062828.1"></t>
+<t tx="ekr.20250103063112.1"></t>
+<t tx="ekr.20250103063216.1">@nosearch
+
+# Word, Head, Body
+
+# found 6 nodes</t>
+<t tx="ekr.20250103063333.1"></t>
+<t tx="ekr.20250103064231.1">@doc
+@language rest
+
+    Joins multiple [Format] together without any separator
+    Example:
+
+@language rust
+
+    use ruff_formatter::format;
+    use ruff_formatter::prelude::*;
+    fn main() -&gt; FormatResult&lt;()&gt; {
+        let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
+            f.join()
+                .entry(&amp;token("a"))
+                .entry(&amp;space())
+                .entry(&amp;token("+"))
+                .entry(&amp;space())
+                .entry(&amp;token("b"))
+                .finish()
+        })])?;
+        assert_eq!(
+            "a + b",
+            formatted.print()?.as_code()
+        );
+        Ok(())
+    }
+@c
+pub fn join&lt;'a&gt;(&amp;'a mut self) -&gt; JoinBuilder&lt;'a, 'buf, (), Context&gt; {
+    JoinBuilder::new(self)
+}
+</t>
+<t tx="ekr.20250103064233.1">@doc
+@language rest
+
+    Joins the objects by placing the specified separator between every two items.
+    
+    Example: Joining tokens with a comma and a space.
+    
+@language rust
+
+    use ruff_formatter::{format, format_args};
+    use ruff_formatter::prelude::*;
+
+    fn main() -&gt; FormatResult&lt;()&gt; {
+        let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
+            f.join_with(&amp;format_args!(token(","), space()))
+                .entry(&amp;token("1"))
+                .entry(&amp;token("2"))
+                .entry(&amp;token("3"))
+                .entry(&amp;token("4"))
+                .finish()
+        })])?;
+        assert_eq!(
+            "1, 2, 3, 4",
+            formatted.print()?.as_code()
+        );
+        Ok(())
+    }
+@c
+pub fn join_with&lt;'a, Joiner&gt;(
+    &amp;'a mut self,
+    joiner: Joiner,
+) -&gt; JoinBuilder&lt;'a, 'buf, Joiner, Context&gt;
+where
+    Joiner: Format&lt;Context&gt;,
+{
+    JoinBuilder::with_separator(self, joiner)
+}
+    </t>
+<t tx="ekr.20250103064415.1">@doc
+@language rest
+
+    Concatenates a list of [`crate::Format`] objects with spaces and line breaks to fit
+    them on as few lines as possible. Each element introduces a conceptual group. The printer
+    first tries to print the item in flat mode but then prints it in expanded mode if it doesn't fit.
+
+    Example 1:
+    
+@language rust
+
+    use ruff_formatter::prelude::*;
+    use ruff_formatter::{format, format_args};
+    fn main() -&gt; FormatResult&lt;()&gt; {
+        let formatted = format!(SimpleFormatContext::default(), [format_with(|f| {
+            f.fill()
+                .entry(&amp;soft_line_break_or_space(), &amp;token("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"))
+                .entry(&amp;soft_line_break_or_space(), &amp;token("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"))
+                .entry(&amp;soft_line_break_or_space(), &amp;token("cccccccccccccccccccccccccccccc"))
+                .entry(&amp;soft_line_break_or_space(), &amp;token("dddddddddddddddddddddddddddddd"))
+                .finish()
+        })])?;
+        assert_eq!(
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncccccccccccccccccccccccccccccc dddddddddddddddddddddddddddddd",
+            formatted.print()?.as_code()
+        );
+        Ok(())
+    }
+@language rest
+    
+    Example 2:
+    
+@language rust
+
+    use ruff_formatter::prelude::*;
+    use ruff_formatter::{format, format_args};
+    fn main() -&gt; FormatResult&lt;()&gt; {
+        let entries = vec![
+            token("&lt;b&gt;Important: &lt;/b&gt;"),
+            token("Please do not commit memory bugs such as segfaults, buffer overflows, etc. otherwise you "),
+            token("&lt;em&gt;will&lt;/em&gt;"),
+            token(" be reprimanded")
+        ];
+        let formatted = format!(SimpleFormatContext::default(), [
+            format_with(|f| {
+                f.fill()
+                    .entries(&amp;soft_line_break(), entries.iter())
+                    .finish()
+            })
+        ])?;
+        assert_eq!(
+            &amp;std::format!("&lt;b&gt;Important: &lt;/b&gt;\n
+            Please do not commit memory bugs such as segfaults, buffer overflows, etc. otherwise you \n
+            &lt;em&gt;will&lt;/em&gt; be reprimanded"),
+            formatted.print()?.as_code()
+        );
+        Ok(())
+    }
+@c
+pub fn fill&lt;'a&gt;(&amp;'a mut self) -&gt; FillBuilder&lt;'a, 'buf, Context&gt; {
+    FillBuilder::new(self)
+}</t>
+<t tx="ekr.20250103064507.1"></t>
 </tnodes>
 </leo_file>
